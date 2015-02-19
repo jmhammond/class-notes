@@ -43,7 +43,7 @@
 
 % A list of lower-case lettered examples in rows
 \newsavebox{\selvestebox}
-\newenvironment{examples}[1][]
+\newenvironment{examples}[1]
   {
     \newcommand\ex[1]{\item ##1}
    \begin{lrbox}{\selvestebox}%
@@ -60,7 +60,7 @@
    \end{center}}
 
 % A list of lower-case lettered examples in columns
-\newenvironment{examplestwocolumns}[1][]
+\newenvironment{examplestwocolumns}[1]
   {
     \newcommand\ex[1]{\item ##1}
    \begin{lrbox}{\selvestebox}%
@@ -77,7 +77,7 @@
    \end{center}}
 
 % A list of lower-case lettered examples in columns
-\newenvironment{examplesthreecolumns}[1][]
+\newenvironment{examplesthreecolumns}[1]
   {
     \newcommand\ex[1]{\item ##1}
    \begin{lrbox}{\selvestebox}%
