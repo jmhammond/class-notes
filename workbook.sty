@@ -7,6 +7,7 @@
 \usepackage{pifont}
 \usepackage{graphicx}
 \usepackage{amsmath,amsthm,amscd,amssymb}
+\usepackage{calc}
 \usepackage{latexsym}
 \usepackage{titlesec}
 \usepackage{upref}
@@ -38,13 +39,15 @@
 % Have unnumbered sections that still appear in the TOC 
 \newcommand{\tocsection}[1]{\section*{#1} \addcontentsline{toc}{section}{#1}}
 
+%columnwidth-\leftmargin-\rightmargin-2\fboxsep-2\fboxrule-4pt
+
 % A list of lower-case lettered examples in rows
 \newsavebox{\selvestebox}
 \newenvironment{examples}[1][]
   {
     \newcommand\ex[1]{\item ##1}
    \begin{lrbox}{\selvestebox}%
-     \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}\textbf{(EX)} #1
+     \begin{minipage}{\dimexpr\columnwidth-\leftmargin-\rightmargin-2\fboxsep-2\fboxrule-4pt\relax}\textbf{(EX)} #1
        \begin{enumerate}[(a)]
   \setlength{\parskip}{0pt}
   \setlength{\itemsep}{0pt plus 1pt}
