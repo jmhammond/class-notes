@@ -1,4 +1,3 @@
-
 \textwidth 7in
 \textheight 10in
 \oddsidemargin -.25in
@@ -39,8 +38,58 @@
 % Have unnumbered sections that still appear in the TOC 
 \newcommand{\tocsection}[1]{\section*{#1} \addcontentsline{toc}{section}{#1}}
 
-
+% A list of lower-case lettered examples in rows
 \newsavebox{\selvestebox}
+\newenvironment{examples}[1][]
+  {
+    \newcommand\ex[1]{\item ##1}
+   \begin{lrbox}{\selvestebox}%
+     \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}\textbf{(EX)} #1
+       \begin{enumerate}[(a)]
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 1pt}
+     }
+     {
+     \end{enumerate}
+     \end{minipage}\end{lrbox}%
+   \begin{center}
+   \colorbox[cmyk]{0,0,0,0.1}{\usebox{\selvestebox}}
+   \end{center}}
+
+% A list of lower-case lettered examples in columns
+\newenvironment{examplestwocolumns}[1][]
+  {
+    \newcommand\ex[1]{\item ##1}
+   \begin{lrbox}{\selvestebox}%
+     \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}\textbf{(EX)} #1
+       \begin{enumerate}[(a)]
+         \vspace{-0.2in}\begin{tabular}{p{3.5in}p{3.5in}}
+     }
+     {
+                        \end{tabular}
+     \end{enumerate}
+     \end{minipage}\end{lrbox}%
+   \begin{center}
+   \colorbox[cmyk]{0,0,0,0.1}{\usebox{\selvestebox}}
+   \end{center}}
+
+% A list of lower-case lettered examples in columns
+\newenvironment{examplesthreecolumns}[1][]
+  {
+    \newcommand\ex[1]{\item ##1}
+   \begin{lrbox}{\selvestebox}%
+     \begin{minipage}{\dimexpr\columnwidth-2\fboxsep\relax}\textbf{(EX)} #1
+       \begin{enumerate}[(a)]
+         \vspace{-0.2in}\begin{tabular}{p{2.1in}p{2.1in}p{2.1in}}
+     }
+     {
+                        \end{tabular}
+     \end{enumerate}
+     \end{minipage}\end{lrbox}%
+   \begin{center}
+   \colorbox[cmyk]{0,0,0,0.1}{\usebox{\selvestebox}}
+   \end{center}}
+
 \newenvironment{colbox}[1][]
   {\newcommand\colboxcolor{yellow}%
     \newcommand\ex[1]{\item ##1}
