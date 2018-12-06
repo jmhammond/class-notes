@@ -1362,6 +1362,13 @@
         </statement>
       </example>
 
+      <example>
+        <statement>
+          Show that if <m>n</m> is an odd integer, then there exists a unique integer <m>k</m> such that <m>n = (k-2) + (k+3)</m>
+        </statement>
+      </example>
+
+
     </subsection>
 
     <subsection>
