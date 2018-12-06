@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_objects">
+  <title>Mathematical Objects</title>
+
+  <section xml:id="section-objects-sets">
+    <title> Sets </title>
+  </section>
+
+  <section xml:id="section-objects-functions">
+    <title>Functions</title>
+  </section>
+
+  <section xml:id="section-objects-seqseries">
+    <title>Sequences and Series</title>
+
+  </section>
+
+  <section xml:id="section-objects-matrices">
+    <title>Matrices</title>
+  </section>
+
+  <section id="section-objects-cardinality">
+    <title>Cardinality of Sets</title>
+
+
+    <subsection xml:id="section-objects-sets-diag">
+      <title>The uncountability of the rational numbers</title>
+
+    </subsection>
+  </section>
+
+</chapter>
+

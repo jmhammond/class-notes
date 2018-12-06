@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <book xml:id="discrete-class-notes">
+    <title>Math 321 Class Notes</title>
+
+    <xi:include href="./ch_logic.mbx"/>
+    <xi:include href="./ch_objects.mbx"/>
+    <xi:include href="./ch_numtheory.mbx"/>
+    <xi:include href="./ch_induction.mbx"/>
+    <xi:include href="./ch_counting.mbx"/>
+    <xi:include href="./ch_recurrence.mbx"/>
+
+
+</book>
+</mathbook>

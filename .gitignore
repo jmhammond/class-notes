@@ -28,7 +28,8 @@ Thumbs.db
 *.fdb*
 *.prv*
 auto
-_*_.tex
+*.tex
+*conflict*
 *.html
 .#*
 .DS_Store
