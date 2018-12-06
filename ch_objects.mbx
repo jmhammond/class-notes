@@ -4,6 +4,141 @@
 
   <section xml:id="section-objects-sets">
     <title> Sets </title>
+
+    <introduction>
+
+    </introduction>
+    <subsection>
+      <title>Basic terminology</title>
+
+      <definition>
+        <p>
+          A <term>set</term> is an unordered collection of objects called <term>elements</term> or <term>members</term> of the set.
+        </p>
+        <p>
+          If <m>A</m> is a set and <m>a</m> is an element of <m>A</m>, we write <m>a \in A</m>. If <m>b</m> isn't an element of <m>A</m>, we write <m>b \not\in A</m>.
+        </p>
+      </definition>
+      <example>
+        <statement>
+          <p>
+            Below are examples of ways of writing sets:
+            <ul>
+              <li> <term>Roster</term>: <m>A = \{0, 1, \text{cat}, 42, \tau \}</m> </li>
+              <li> <term>Set-builder</term>: <m> B=\{x \mid x \text{ is an even integer}\}</m></li>
+            </ul>
+          </p>
+          <p>
+            We have also seen intervals of real numbers in our previous courses:
+            <ul>
+              <li> <m>(a,b) = \{x \mid a \lt x \lt b \} </m></li>
+              <li> <m>[a,b) = \{x \mid a \le x \lt b \} </m></li>
+              <li> <m>(a,b] = \{x \mid a \lt x \le b \} </m></li>
+              <li> <m>[a,b] = \{x \mid a \le x \le b \} </m></li>
+            </ul>
+          </p>
+        </statement>
+      </example>
+      <definition>
+        <p>
+          Here are special sets we will visit often throughout the course and the rest of your mathematical career: 
+          <ul>
+            <li> <m>\phi = \{\}</m> is the <term>empty set</term> consisting of no elements.</li>
+            <li> <m> \mathbb{N} = \{0, 1, 2, 3, 4, \dots \}</m> is the set of <term>natural numbers</term>. </li>
+            <li> <m> \mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \}</m> is the set of <term>integers</term>. </li>
+            <li> <m> \mathbb{Z}^+ = \{1, 2, 3, \dots \}</m> is the set of <term>positive integers</term>. </li>
+            <li> <m> \mathbb{Q} = \left\{ \frac{p}{q} \mid p \in \mathbb{Z}, q \in \mathbb{Z}, \text{ and } q \not= 0 \right\}</m> is the set of <term>rational numbers</term>. </li>
+            <li> <m> \mathbb{R} </m> is the set of <term>real numbers</term> (in Calculus, we wrote the interval <m>(-\infty, \infty)</m>).</li>
+            <li> <m> \mathbb{R}^+ </m> is the set of <term>positive real numbers</term> (in Calculus, we wrote the interval <m>(0, \infty)</m>)</li>
+            <li> <m> \mathbb{C} = \{a + bi \mid a \in \mathbb{R}, b \in \mathbb{R}, i = \sqrt{-1} \} </m> is the set of <term>complex numbers</term> </li>
+          </ul>
+        </p>
+      </definition>
+
+      <definition>
+        <p>
+          We say that <m>A</m> is a <term>subset</term> of <m>B</m>, and write <m>A \subseteq B</m> if every element of <m>A</m> is an element of <m>B</m>.
+          <me>A \subseteq B \iff \forall x (x \in A \to x \in B)</me>
+          If there is an element of <m>B</m> which is not also in <m>A</m>, we say that <m>A</m> is a <term>proper subset</term> of <m>B</m> and write <m>A \subset B</m>.
+          <me>A \subset B \iff \forall x (x \in A \to x \in B) \wedge \exists y (y\in B \wedge y \not \in A) </me>
+        </p>
+        <p>
+          We say that two sets, <m>A</m> and <m>B</m> are <term>equal</term>, an write <m>A = B</m> they have exactly the same elements.
+          <me>A = B \iff (A \subseteq B \wedge B \subseteq A)</me>
+        </p>
+      </definition>
+
+      <theorem>
+        <statement>For every set <m>S</m>:
+        <ul>
+          <li>
+            <m>\phi \subseteq S</m>
+          </li>
+          <li>
+            <m>S \subseteq S</m>
+          </li>
+        </ul>
+        </statement>
+      </theorem>
+
+      <definition>
+        <p>
+          Given any set <m>S</m>, the <term>power set</term> of <m>S</m> is the set of all subsets of the set <m>S</m>. We denote the power set of <m>S</m> by <m>\mathcal{P}(S)</m>
+        </p>
+      </definition>
+      
+      <example>
+        <statement>
+          Find the power set of:
+          <ol>
+            <li>
+              <m>\{a, b, c\}</m>
+            </li>
+            <li>\{1, 2}</li>
+            <li>
+              <m>\phi</m>
+            </li>
+          </ol>
+        </statement>
+      </example>
+
+      <definition>
+        <p>
+          Let <m>S</m> be a set. If there are exactly <m>n</m> distinct elements in <m>S</m> where <m>n</m> is a nonnegative integer, then we say that <m>S</m> is a <term>finite</term> set with <term>cardinality</term> of <m>n</m>, and write <m>|S|=n</m>.
+        </p>
+        <p>
+          A set is said to be <term>infinite</term> if it is not finite.
+        </p>
+      </definition>
+
+      <example>
+        <statement>
+          Find the cardinality:
+          <ol>
+            <li>
+              <m>|\{a, b, c\}|</m>
+            </li>
+            <li>|\mathcal{P}(\{a, b, c\})|</li>
+            <li>
+              <m>|\phi|</m>
+            </li>
+          </ol>
+        </statement>
+      </example>
+
+    </subsection>
+
+    <subsection>
+      <title> Operations on sets </title>
+
+      <!-- TODO continue here with cartesian products, unions, etc //!-->
+
+    </subsection>
+
+
+
+
+
   </section>
 
   <section xml:id="section-objects-functions">
