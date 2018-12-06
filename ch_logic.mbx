@@ -784,8 +784,8 @@
           Let the domain be all real numbers. Find a counterexample to the following statements:
           <ol>
             <li><m>\forall x (x^2 \not= x)</m></li>
-            <li><m>\forall x (|x| > 0)</m></li>
-            <li><m>\forall x (x > 3 \vee x < 2)</m></li>
+            <li><m>\forall x (|x| \gt 0)</m></li>
+            <li><m>\forall x (x \gt 3 \vee x \lt 2)</m></li>
           </ol>
         </statement>
       </example>
@@ -985,13 +985,9 @@
       <statement>
         What rules of inference are being used here?
         <ul>
-          <li>Kangaroos live in Australia and are marsupials. Therefore, kangaroos are marsupials.
-          </li>
-          <li>
-            If I go swimming, then I will stay in the sun too long. If I stay in the sun too long, then I will sunburn. Therefore, if I go swimming, then I will sunburn.
-          </li>
+          <li>Kangaroos live in Australia and are marsupials. Therefore, kangaroos are marsupials. </li>
+          <li> If I go swimming, then I will stay in the sun too long. If I stay in the sun too long, then I will sunburn. Therefore, if I go swimming, then I will sunburn. </li>
           <li>I read a horror story. When I read horror stories, I have weird dreams. Therefore I had weird dreams.</li>
-          <li>
         </ul>
       </statement>
     </example>
