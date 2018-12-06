@@ -88,7 +88,7 @@
 
           <p>
 
-            TODO HERE
+            <!-- TODO Write these here!!! //-->
           </p>
         </statement>
 
@@ -358,17 +358,22 @@
 
       <example>
         <statement>
-          <p>
+          <p> Construct a truth table for each of the following statements:
             <ol>
               <li>
-                Make a truth table for <m>p \to (\neg q \vee r)</m>
+                <m>p \to (\neg q \vee r)</m>
               </li>
               <li>
-                Construct the truth table for the compound statement <m>(p \to q) \wedge (\neg p \to q)</m>
+                <m>p \wedge \neg q</m>
+              </li>
+              <li>
+                <m>(p \to q) \wedge (\neg p \to q)</m>
+              </li>
+              <li>
+                <m>(p\wedge r) \vee (q \wedge r)</m>
               </li>
             </ol>
           </p>
-
         </statement>
       </example>
 
@@ -470,6 +475,16 @@
           </p>
         </statement>
       </example>
+      <exercise>
+        <statement>
+          <p>
+          This is a favorite of my daughter. You encounter a guard standing at a fork in the road. It is not known whether the guard will tell the truth or lie. One of the paths leads to great treasure, the other leads to a violent and scary death. You are allowed to ask one and only one question to the guard.
+          </p>
+          <p>
+            What can you ask the guard in order to ensure you go on the path towards the treasure?
+          </p>
+        </statement>
+      </exercise>
     </subsection>
   </section>
 
@@ -766,6 +781,17 @@
 
       <example>
         <statement>
+          Let the domain be all real numbers. Find a counterexample to the following statements:
+          <ol>
+            <li><m>\forall x (x^2 \not= x)</m></li>
+            <li><m>\forall x (|x| > 0)</m></li>
+            <li><m>\forall x (x > 3 \vee x < 2)</m></li>
+          </ol>
+        </statement>
+      </example>
+
+      <example>
+        <statement>
           <p> We can combine quantifers, where each variable might come from a different domain. Precedence of quantifiers is left to right.
           </p>
           <p>
@@ -787,11 +813,17 @@
           </md>
         </p>
         <p>
+          It might help to think <q>not all...</q> is equivalent to <q>some... do</q>. While <q>there isn't one who...</q> is the same as <q>no one does...</q>.
           <!--
               The negation of <q>for all</q> is <q>there is one that doesn't<q>, while the negation of <q>there exists one</q> is <q>none do</q>
               //-->
         </p>
       </definition>
+      <note>
+        <p>
+          Counterexamples to universal statements work because if <m>\exists x \neg P(x)</m> is true, then <m>\neg \forall x P(x)</m> is also true, that is, <m>\forall x P(x)</m> is false!
+        </p>
+      </note>
 
       <example>
         <statement>
@@ -807,38 +839,25 @@
               <li>
                 The negation of <q>Nobody loves math</q> is <q>Someone does love math</q>.
               </li>
+              <li>
+                Find the negation of <q>some drivers don't obey the speed limit.</q>.
+              </li>
             </ol>
           </p>
         </statement>
       </example>
       
-      <example>
-        <statement>
-          <p>
-            TODO
-          </p>
-        </statement>
-      </example>
+      <!-- <p> -->
+      <!--   TODO -->
 
-      <p>
-        TODO
-
-        TODO: do a lot on converting english to logical expressions
-      </p>
+      <!--   TODO: do a lot on converting english to logical expressions -->
+      <!-- </p> -->
 
 
-      <p>
-        We can negate quantified expressions by (basically) applying De Morgan's laws.
-        TODO
-      </p>
-
-
-
-
-
-      <p>
-        TODO
-      </p>
+      <!-- <p> -->
+      <!--   We can negate quantified expressions by (basically) applying De Morgan's laws. -->
+      <!--   TODO -->
+      <!-- </p> -->
 
       <example>
         <statement>
