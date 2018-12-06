@@ -94,7 +94,7 @@
             <li>
               <m>\{a, b, c\}</m>
             </li>
-            <li>\{1, 2}</li>
+            <li>\{1, 2\}</li>
             <li>
               <m>\phi</m>
             </li>
@@ -118,7 +118,7 @@
             <li>
               <m>|\{a, b, c\}|</m>
             </li>
-            <li>|\mathcal{P}(\{a, b, c\})|</li>
+            <li><m>|\mathcal{P}(\{a, b, c \})|</m></li>
             <li>
               <m>|\phi|</m>
             </li>
