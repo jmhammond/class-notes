@@ -3,6 +3,9 @@
   <title>Symbolic Logic and Proofs</title>
 
   <section xml:id="section-prop-logic">
+    <introduction>
+      <!-- TODO: write a little introduction to the logic material //!-->
+    </introduction>
     <title>Propositional Logic</title>
     <subsection>
       <title>The Basics</title>
