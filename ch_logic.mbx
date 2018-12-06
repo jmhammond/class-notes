@@ -1285,6 +1285,12 @@
         </statement>
       </example>
 
+      <example>
+        <statement>
+          Show that between any two rational numbers is another rational number.
+        </statement>
+      </example>
+
     </subsection>
 
     <subsection>
@@ -1302,7 +1308,12 @@
         </ul>
       </p>
 
-      <!-- TODO: GET AN EXAMPLE!!!! //!-->
+
+      <example>
+        <statement>
+          Show that if <m>a, b, c</m> are real numbers, then thare is a unique solution to the algebraic equation <m>ax+b=c</m>.
+        </statement>
+      </example>
 
     </subsection>
 
