@@ -520,10 +520,9 @@
           <ol>
             <li> <m>p \vee (p \wedge q) \equiv p </m></li>
             <li> <m>p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)</m>
+            <li><m>( \neg p \to (q \wedge \neg q)  )\to p</m></li>
             </li>
-            <li>
-              <m>p \to q \equiv \neg p \vee q</m> 
-            </li>
+            <li> <m>p \to q \equiv \neg p \vee q</m> </li>
           </ol>
         </p>
         <p>
@@ -1164,7 +1163,6 @@
         <p> Therefore <m>q</m> is true.</p>
       </proof>
 
-
       <example>
         <statement>
           Prove that the sum of two odd numbers is even.
@@ -1201,6 +1199,9 @@
           <p> ... use logical equivalences (and/or mathematics) ... </p>
           <p> Show <m>\neg p</m> is true. Therefore, <m>p \to q</m> is true by contraposition. </p>
         </proof>
+        <p>
+          Remember that <m>\neg q \to \neg p \equiv p \to q</m>, so this is a valid argument.
+        </p>
         <example>
           <statement>
             Show that if <m>n</m> is an integer and <m>n^3 + 5</m> is odd, then <m>n</m> is even.
