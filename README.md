@@ -10,3 +10,7 @@ Build Directions (in case someone is just getting started with PreText)
 - Install xsltproc
 - Run commands like the ones you see in my Makefile. It's as easy as: 
   `xsltproc $(location of mathbook-html.xsl) $(location of your xml file)`
+  
+Acknowledgements: 
+- Using the table format (and later on, likely some exercises from) [Alan Doerr & Kenneth Levasseur's Applied Discrete Structures](https://github.com/klevasseur/ads)
+- This is being written in the [PreText](https://github.com/rbeezer/mathbook.git) markup language.
