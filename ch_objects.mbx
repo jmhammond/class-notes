@@ -122,15 +122,31 @@
       </statement>
     </example>
 
-    <subsection>
-      <title>Some important functions</title>
+      <definition>
+        <p>
+          If <m>f_1:A \to \mathbb{R}</m> and <m>f_2:A \to \mathbb{R}</m>, then for any <m>x\in A</m>:
+          <ul>
+            <li><m>(f_1 + f_2)(x) = f_1(x) + f_2(x)</m>, and </li>
+            <li><m>(f_1 \cdot f_2)(x) = f_1(x) \cdot f_2(x)</m></li>
+          </ul>
+          which is what you'd expect from high school.
+        </p>
+      </definition>
+
+
+
+      <definition>
+        <p>
+          The <term>floor</term> function assigns to every real number <m>x</m> the largest integer than is less than or equal to <m>x</m>. We denote by this <m>\lfloor x \rfloor</m>
+          <me>\lfloor \cdot \rfloor : \mathbb{R}\to \mathbb{Z} \text{ with } \lfloor x \rfloor = n \equiv n \le x \lt n + 1)</me>
+        </p>
+      </definition>
 
       <!-- todo write up about floor and ceiling functions //-->
       
 
       <!-- maybe note why the greatest int and floor functions are different //-->
 
-    </subsection>
         
 
     </section>
