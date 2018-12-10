@@ -2,6 +2,10 @@ STYLESHEETS_DIR = ~/src/mathbook/xsl
 
 all: html pdf
 
+colorscheme:
+	xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.css.file "mathbook-manitoba.css" $(STYLESHEETS_DIR)/mathbook-html.xsl class-notes.mbx
+
+
 html:
 	xsltproc --xinclude --stringparam html.knowl.example no  $(STYLESHEETS_DIR)/mathbook-html.xsl class-notes.mbx
 
