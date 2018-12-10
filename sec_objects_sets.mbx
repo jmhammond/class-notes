@@ -1,242 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_objects_sets">
-    <title> Sets </title>
+  <title> Sets </title>
 
-    <introduction>
-      Sets are the core building block of mathematics. This section defines basic terms and explores how we can these objects to build new ones.
-    </introduction>
+  <introduction>
+    Sets are the core building block of mathematics. This section defines basic terms and explores how we can these objects to build new ones.
+  </introduction>
 
-    <subsection>
-      <title>Basic terminology</title>
+  <subsection>
+    <title>Basic terminology</title>
 
-      <definition>
+    <definition>
+      <p>
+        A <term>set</term> is an unordered collection of objects called <term>elements</term> or <term>members</term> of the set.
+      </p>
+      <p>
+        If <m>A</m> is a set and <m>a</m> is an element of <m>A</m>, we write <m>a \in A</m>. If <m>b</m> isn't an element of <m>A</m>, we write <m>b \not\in A</m>.
+      </p>
+    </definition>
+    <example>
+      <statement>
         <p>
-          A <term>set</term> is an unordered collection of objects called <term>elements</term> or <term>members</term> of the set.
-        </p>
-        <p>
-          If <m>A</m> is a set and <m>a</m> is an element of <m>A</m>, we write <m>a \in A</m>. If <m>b</m> isn't an element of <m>A</m>, we write <m>b \not\in A</m>.
-        </p>
-      </definition>
-      <example>
-        <statement>
-          <p>
-            Below are examples of ways of writing sets:
-            <ul>
-              <li> <term>Roster</term>: <m>A = \{0, 1, \text{cat}, 42, \tau \}</m> </li>
-              <li> <term>Set-builder</term>: <m> B=\{x \mid x \text{ is an even integer}\}</m></li>
-            </ul>
-          </p>
-          <p>
-            We have also seen intervals of real numbers in our previous courses:
-            <ul>
-              <li> <m>(a,b) = \{x \mid a \lt x \lt b \} </m></li>
-              <li> <m>[a,b) = \{x \mid a \le x \lt b \} </m></li>
-              <li> <m>(a,b] = \{x \mid a \lt x \le b \} </m></li>
-              <li> <m>[a,b] = \{x \mid a \le x \le b \} </m></li>
-            </ul>
-          </p>
-        </statement>
-      </example>
-      <definition>
-        <p>
-          Here are special sets we will visit often throughout the course and the rest of your mathematical career: 
+          Below are examples of ways of writing sets:
           <ul>
-            <li> <m>\phi = \{\}</m> is the <term>empty set</term> consisting of no elements.</li>
-            <li> <m> \mathbb{N} = \{0, 1, 2, 3, 4, \dots \}</m> is the set of <term>natural numbers</term>. </li>
-            <li> <m> \mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \}</m> is the set of <term>integers</term>. </li>
-            <li> <m> \mathbb{Z}^+ = \{1, 2, 3, \dots \}</m> is the set of <term>positive integers</term>. </li>
-            <li> <m> \mathbb{Q} = \left\{ \frac{p}{q} \mid p \in \mathbb{Z}, q \in \mathbb{Z}, \text{ and } q \not= 0 \right\}</m> is the set of <term>rational numbers</term>. </li>
-            <li> <m> \mathbb{R} </m> is the set of <term>real numbers</term> (in Calculus, we wrote the interval <m>(-\infty, \infty)</m>).</li>
-            <li> <m> \mathbb{R}^+ </m> is the set of <term>positive real numbers</term> (in Calculus, we wrote the interval <m>(0, \infty)</m>)</li>
-            <li> <m> \mathbb{C} = \{a + bi \mid a \in \mathbb{R}, b \in \mathbb{R}, i = \sqrt{-1} \} </m> is the set of <term>complex numbers</term> </li>
+            <li> <term>Roster</term>: <m>A = \{0, 1, \text{cat}, 42, \tau \}</m> </li>
+            <li> <term>Set-builder</term>: <m> B=\{x \mid x \text{ is an even integer}\}</m></li>
           </ul>
         </p>
-      </definition>
-
-      <definition>
         <p>
-          We say that <m>A</m> is a <term>subset</term> of <m>B</m>, and write <m>A \subseteq B</m> if every element of <m>A</m> is an element of <m>B</m>.
-          <me>A \subseteq B \iff \forall x (x \in A \to x \in B)</me>
-          If there is an element of <m>B</m> which is not also in <m>A</m>, we say that <m>A</m> is a <term>proper subset</term> of <m>B</m> and write <m>A \subset B</m>.
-          <me>A \subset B \iff \forall x (x \in A \to x \in B) \wedge \exists y (y\in B \wedge y \not \in A) </me>
+          We have also seen intervals of real numbers in our previous courses:
+          <ul>
+            <li> <m>(a,b) = \{x \mid a \lt x \lt b \} </m></li>
+            <li> <m>[a,b) = \{x \mid a \le x \lt b \} </m></li>
+            <li> <m>(a,b] = \{x \mid a \lt x \le b \} </m></li>
+            <li> <m>[a,b] = \{x \mid a \le x \le b \} </m></li>
+          </ul>
         </p>
-        <p>
-          We say that two sets, <m>A</m> and <m>B</m> are <term>equal</term>, an write <m>A = B</m> they have exactly the same elements.
-          <me>A = B \iff (A \subseteq B \wedge B \subseteq A)</me>
-        </p>
-      </definition>
-
-      <theorem>
-        <statement>For every set <m>S</m>:
+      </statement>
+    </example>
+    <definition>
+      <p>
+        Here are special sets we will visit often throughout the course and the rest of your mathematical career: 
         <ul>
-          <li>
-            <m>\phi \subseteq S</m>
-          </li>
-          <li>
-            <m>S \subseteq S</m>
-          </li>
+          <li> <m>\phi = \{\}</m> is the <term>empty set</term> consisting of no elements.</li>
+          <li> <m> \mathbb{N} = \{0, 1, 2, 3, 4, \dots \}</m> is the set of <term>natural numbers</term>. </li>
+          <li> <m> \mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \}</m> is the set of <term>integers</term>. </li>
+          <li> <m> \mathbb{Z}^+ = \{1, 2, 3, \dots \}</m> is the set of <term>positive integers</term>. </li>
+          <li> <m> \mathbb{Q} = \left\{ \frac{p}{q} \mid p \in \mathbb{Z}, q \in \mathbb{Z}, \text{ and } q \not= 0 \right\}</m> is the set of <term>rational numbers</term>. </li>
+          <li> <m> \mathbb{R} </m> is the set of <term>real numbers</term> (in Calculus, we wrote the interval <m>(-\infty, \infty)</m>).</li>
+          <li> <m> \mathbb{R}^+ </m> is the set of <term>positive real numbers</term> (in Calculus, we wrote the interval <m>(0, \infty)</m>)</li>
+          <li> <m> \mathbb{C} = \{a + bi \mid a \in \mathbb{R}, b \in \mathbb{R}, i = \sqrt{-1} \} </m> is the set of <term>complex numbers</term> </li>
         </ul>
-        </statement>
-      </theorem>
+      </p>
+    </definition>
 
-      <definition>
-        <p>
-          Given any set <m>S</m>, the <term>power set</term> of <m>S</m> is the set of all subsets of the set <m>S</m>. We denote the power set of <m>S</m> by <m>\mathcal{P}(S)</m>
-        </p>
-      </definition>
-      
-      <example>
-        <statement>
-          Find the power set of:
-          <ol>
-            <li>
-              <m>\{a, b, c\}</m>
-            </li>
-            <li><m>\{1, 2\}</m></li>
-            <li>
-              <m>\phi</m>
-            </li>
-          </ol>
-        </statement>
-      </example>
+    <definition>
+      <p>
+        We say that <m>A</m> is a <term>subset</term> of <m>B</m>, and write <m>A \subseteq B</m> if every element of <m>A</m> is an element of <m>B</m>.
+        <me>A \subseteq B \iff \forall x (x \in A \to x \in B)</me>
+        If there is an element of <m>B</m> which is not also in <m>A</m>, we say that <m>A</m> is a <term>proper subset</term> of <m>B</m> and write <m>A \subset B</m>.
+        <me>A \subset B \iff \forall x (x \in A \to x \in B) \wedge \exists y (y\in B \wedge y \not \in A) </me>
+      </p>
+      <p>
+        We say that two sets, <m>A</m> and <m>B</m> are <term>equal</term>, an write <m>A = B</m> they have exactly the same elements.
+        <me>A = B \iff (A \subseteq B \wedge B \subseteq A)</me>
+      </p>
+    </definition>
 
-      <definition>
-        <p>
-          Let <m>S</m> be a set. If there are exactly <m>n</m> distinct elements in <m>S</m> where <m>n</m> is a nonnegative integer, then we say that <m>S</m> is a <term>finite</term> set with <term>cardinality</term> of <m>n</m>, and write <m>|S|=n</m>.
-        </p>
-        <p>
-          A set is said to be <term>infinite</term> if it is not finite.
-        </p>
-      </definition>
+    <theorem>
+      <statement>For every set <m>S</m>:
+      <ul>
+        <li>
+          <m>\phi \subseteq S</m>
+        </li>
+        <li>
+          <m>S \subseteq S</m>
+        </li>
+      </ul>
+      </statement>
+    </theorem>
 
-      <example>
-        <statement>
-          Find the cardinality:
-          <ol>
-            <li>
-              <m>|\{a, b, c\}|</m>
-            </li>
-            <li><m>|\mathcal{P}(\{a, b, c \})|</m></li>
-            <li>
-              <m>|\phi|</m>
-            </li>
-          </ol>
-        </statement>
-      </example>
+    <definition>
+      <p>
+        Given any set <m>S</m>, the <term>power set</term> of <m>S</m> is the set of all subsets of the set <m>S</m>. We denote the power set of <m>S</m> by <m>\mathcal{P}(S)</m>
+      </p>
+    </definition>
+    
+    <example>
+      <statement>
+        Find the power set of:
+        <ol>
+          <li>
+            <m>\{a, b, c\}</m>
+          </li>
+          <li><m>\{1, 2\}</m></li>
+          <li>
+            <m>\phi</m>
+          </li>
+        </ol>
+      </statement>
+    </example>
 
-    </subsection>
+    <definition>
+      <p>
+        Let <m>S</m> be a set. If there are exactly <m>n</m> distinct elements in <m>S</m> where <m>n</m> is a nonnegative integer, then we say that <m>S</m> is a <term>finite</term> set with <term>cardinality</term> of <m>n</m>, and write <m>|S|=n</m>.
+      </p>
+      <p>
+        A set is said to be <term>infinite</term> if it is not finite.
+      </p>
+    </definition>
 
-    <subsection>
-      <title> Operations on sets </title>
+    <example>
+      <statement>
+        Find the cardinality:
+        <ol>
+          <li>
+            <m>|\{a, b, c\}|</m>
+          </li>
+          <li><m>|\mathcal{P}(\{a, b, c \})|</m></li>
+          <li>
+            <m>|\phi|</m>
+          </li>
+        </ol>
+      </statement>
+    </example>
 
-      <definition>
-        <p>
-          We define an <term>ordered <m>n-</m>tuple</term> to be an ordered collection of the form <m>(a_1, a_2, \dots, a_n)</m>.
-        </p>
-        <p>
-          We call the <m>2-</m>tuple <m>(a_1, a_2)</m> an ordered pair, and the <m>3-</m>tuple <m>(a_1, a_2, a_3)</m> an ordered triple.
-        </p>
-      </definition>
+  </subsection>
 
-      <definition>
-        <p>
-          Let <m>A</m> and <m>B</m> be sets. The <term>Cartesian Product</term> of <m>A</m> and <m>B</m>, denoted by <m>A\times B</m>, is the set of all ordered pairs <m>(a,b)</m> where <m>a\in A</m> and <m>b \in B</m>. That is,
-          <me>A \times B = \{ (a,b) \mid a\in A \wedge b \in B\}</me>
-        </p>
-        <p>
-          We also denote the Cartesian product of a set with itself by the superscript <m>A^2 = A \times A</m>.
-        </p>
-      </definition>
+  <subsection>
+    <title> Operations on sets </title>
 
-      <example>
-        <statement>
-          Let <m>A=\{1, 2\}</m> and <m>B = \{x, y , z\}</m>, find:
-          <ol>
-            <li><m>A \times B</m></li>
-            <li><m>B \times A</m></li>
-            <li><m>A^2</m></li>
-          </ol>
-        </statement>
-      </example>
+    <definition>
+      <p>
+        We define an <term>ordered <m>n-</m>tuple</term> to be an ordered collection of the form <m>(a_1, a_2, \dots, a_n)</m>.
+      </p>
+      <p>
+        We call the <m>2-</m>tuple <m>(a_1, a_2)</m> an ordered pair, and the <m>3-</m>tuple <m>(a_1, a_2, a_3)</m> an ordered triple.
+      </p>
+    </definition>
 
-      
-      <definition>
-        <p>
-          If <m>A</m> and <m>B</m> are two sets, we define the <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A \cup B</m> to be the set of all elements that are in <m>A</m> or <m>B</m>, or both.
-          <me>A \cup B = \{ x \mid x \in A \vee x \in B\}</me>
-        </p>
+    <definition>
+      <p>
+        Let <m>A</m> and <m>B</m> be sets. The <term>Cartesian Product</term> of <m>A</m> and <m>B</m>, denoted by <m>A\times B</m>, is the set of all ordered pairs <m>(a,b)</m> where <m>a\in A</m> and <m>b \in B</m>. That is,
+        <me>A \times B = \{ (a,b) \mid a\in A \wedge b \in B\}</me>
+      </p>
+      <p>
+        We also denote the Cartesian product of a set with itself by the superscript <m>A^2 = A \times A</m>.
+      </p>
+    </definition>
 
-        <p>
-          As a Venn diagram (<m>A</m> the left circle):
-          <image source="images/Venn0111.png" width="25%">
-            <description>Venn diagram for set union</description>
-          </image>
-        </p>
+    <example>
+      <statement>
+        Let <m>A=\{1, 2\}</m> and <m>B = \{x, y , z\}</m>, find:
+        <ol>
+          <li><m>A \times B</m></li>
+          <li><m>B \times A</m></li>
+          <li><m>A^2</m></li>
+        </ol>
+      </statement>
+    </example>
 
-        <p>
-          If <m>A</m> and <m>B</m> are two sets, we define the <term>intersection</term> of <m>A</m> and <m>B</m>, denoted <m>A \cap B</m> to be the set of only elements that are in both <m>A</m> and <m>B</m>.
-          <me>A \cap B = \{ x \mid x \in A \wedge x \in B\}</me>
-        </p>
+    
+    <definition>
+      <p>
+        If <m>A</m> and <m>B</m> are two sets, we define the <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A \cup B</m> to be the set of all elements that are in <m>A</m> or <m>B</m>, or both.
+        <me>A \cup B = \{ x \mid x \in A \vee x \in B\}</me>
+      </p>
 
-        <p>
-          As a Venn diagram (<m>A</m> the left circle):
-          <image source="images/Venn0001.png" width="25%">
-            <description>Venn diagram for set intersection</description>
-          </image>
-        </p>
+      <p>
+        As a Venn diagram (<m>A</m> the left circle):
+        <image source="images/Venn0111.png" width="25%">
+          <description>Venn diagram for set union</description>
+        </image>
+      </p>
 
-        <p>
-          If <m>A</m> and <m>B</m> are two sets, we define the <term>difference</term> of <m>A</m> and <m>B</m>, denoted <m>A - B</m> to be the set of only elements that are only in <m>A</m> and not in <m>B</m>.
-          <me>A - B = \{ x \mid x \in A \wedge x \not\in B\}</me>
-        </p>
+      <p>
+        If <m>A</m> and <m>B</m> are two sets, we define the <term>intersection</term> of <m>A</m> and <m>B</m>, denoted <m>A \cap B</m> to be the set of only elements that are in both <m>A</m> and <m>B</m>.
+        <me>A \cap B = \{ x \mid x \in A \wedge x \in B\}</me>
+      </p>
 
-        <p>
-          As a Venn diagram (<m>A</m> the left circle):
-          <image source="images/Venn0100.png" width="25%">
-            <description>Venn diagram for set intersection</description>
-          </image>
-        </p>
-      </definition>
+      <p>
+        As a Venn diagram (<m>A</m> the left circle):
+        <image source="images/Venn0001.png" width="25%">
+          <description>Venn diagram for set intersection</description>
+        </image>
+      </p>
 
-      <definition>
-        <p>
-          Let <m>U</m> be the <term>universal set</term>, that is the set of all possible objects in consideration.
+      <p>
+        If <m>A</m> and <m>B</m> are two sets, we define the <term>difference</term> of <m>A</m> and <m>B</m>, denoted <m>A - B</m> to be the set of only elements that are only in <m>A</m> and not in <m>B</m>.
+        <me>A - B = \{ x \mid x \in A \wedge x \not\in B\}</me>
+      </p>
 
-          <image source="images/Venn1111.png" width="25%">
-            <description>Venn diagram for the universal set </description>
-          </image>
-        </p>
+      <p>
+        As a Venn diagram (<m>A</m> the left circle):
+        <image source="images/Venn0100.png" width="25%">
+          <description>Venn diagram for set intersection</description>
+        </image>
+      </p>
+    </definition>
 
-        <p>
-          If <m>A</m> is a set, the <term>complement</term> of <m>A</m>, denoted <m>\overline{A}</m>, the set difference <m>\overline{A} = U - A</m>.
-          <image source="images/Venn1010.png" width="25%">
-            <description>Venn diagram for the universal set </description>
-          </image>
-        </p>
-      </definition>
+    <definition>
+      <p>
+        Let <m>U</m> be the <term>universal set</term>, that is the set of all possible objects in consideration.
 
-    </subsection>
+        <image source="images/Venn1111.png" width="25%">
+          <description>Venn diagram for the universal set </description>
+        </image>
+      </p>
 
-    <subsection>
-      <title>Verifying Set Identities</title>
+      <p>
+        If <m>A</m> is a set, the <term>complement</term> of <m>A</m>, denoted <m>\overline{A}</m>, the set difference <m>\overline{A} = U - A</m>.
+        <image source="images/Venn1010.png" width="25%">
+          <description>Venn diagram for the universal set </description>
+        </image>
+      </p>
+    </definition>
 
+  </subsection>
 
-      <example>
-        <statement>
-          Verify the following identities by using a membership table. It's like a truth table, except 1 means <q>T</q> and 0 means <q>F</q>
-
-          <ol>
-            <li><m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m></li> 
-            <li><m>A \cup(B \cap C) = (A \cup B) \cap (A \cup C)</m></li>
-          </ol>
-        </statement>
+  <subsection>
+    <title>Verifying Set Identities</title>
 
 
-      <note>
-        <p>
+    <example>
+      <statement>
+        Verify the following identities by using a membership table. It's like a truth table, except 1 means <q>T</q> and 0 means <q>F</q>
+
+        <ol>
+          <li><m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m></li> 
+          <li><m>A \cup(B \cap C) = (A \cup B) \cap (A \cup C)</m></li>
+        </ol>
+      </statement>
+
+    </example>
+
+    <note>
+      <p>
         The following table of common set identities should look very familiar!
-        </p>
-      </note>
+      </p>
+    </note>
 
     <table xml:id="table-setidentities">
       <!-- table modified from https://github.com/klevasseur/ads //-->
@@ -350,7 +351,7 @@
         Confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities to see they represent the same shaded regions or by using a membership table!
       </statement>
     </exercise>
-        
+    
     <example>
       <statement>
         Verify the following set identities by using the basic identities in the table above.
@@ -361,6 +362,6 @@
       </statement>
     </example>
 
-    </subsection>
+  </subsection>
 
-  </section>
+</section>
