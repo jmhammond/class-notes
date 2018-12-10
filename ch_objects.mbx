@@ -67,7 +67,7 @@
         Determine if the following functions are one-to-one. If so, prove it. If not, provide a specific counterexample showing that it is not.
         <ol>
           <li>Let <m>f:\mathbb{R} \to \mathbb{R}</m> be defined by <m>f(x) = 2x-1</m>.</li>
-          <li>Let <m>g(x) = x^2</m> by the mapping from <m>\mathbb{R} \to \mathbb{R}</m>.</li>
+          <li>Let <m>g(x) = x^2</m> be the mapping from <m>\mathbb{R} \to \mathbb{R}</m>.</li>
         </ol>
       </statement>
     </example>
@@ -76,7 +76,7 @@
       <p>
         A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>onto</term> or <term>surjective</term> if and only if for every eleement <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = B</m>. 
         <me>
-          \forall y\in B \exists x\in A ( y = f(x) )
+          \forall y\in B\, \exists x\in A ( y = f(x) )
         </me>
       </p>
     </definition>
@@ -86,8 +86,8 @@
         Determine if the following functions are onto. If so, prove it. If not, provide a specific counterexample showing that it is not.
         <ol>
           <li>Let <m>f:\mathbb{R} \to \mathbb{R}</m> be defined by <m>f(x) = 2x-1</m>.</li>
-          <li>Let <m>g(x) = x^2</m> by the mapping from <m>\mathbb{R} \to \mathbb{R}</m>.</li>
-          <li>Let <m>g(x) = x^3</m> by the mapping from <m>\mathbb{Z} \to \mathbb{Z}</m>.</li>
+          <li>Let <m>g(x) = x^2</m> be the mapping from <m>\mathbb{R} \to \mathbb{R}</m>.</li>
+          <li>Let <m>g(x) = x^3</m> be the mapping from <m>\mathbb{Z} \to \mathbb{Z}</m>.</li>
         </ol>
       </statement>
     </example>
@@ -113,7 +113,7 @@
         Let <m>f:\mathbb{A} \to \mathbb{B}</m> be a bijection. The <term>inverse function</term> of <m>f</m> is the unique function that assigns to each element <m>b\in B</m> a unique element <m>a \in A</m> such that <m>f(a) = b</m>. We denote the inverse by <m>f^{-1}</m> so that
         <ul>
           <li><m>f^{-1} B \to A</m> </li>
-          <li><m>f^{-1}(b) = a \equiv f(a) = b</m> </li>
+          <li><m>f^{-1}(b) = a \iff f(a) = b</m> </li>
         </ul>
       </p>
     </definition>
@@ -139,15 +139,32 @@
 
     <definition>
       <p>
-        The <term>floor</term> function assigns to every real number <m>x</m> the largest integer than is less than or equal to <m>x</m>. We denote by this <m>\lfloor x \rfloor</m>
-        <me>\lfloor \cdot \rfloor : \mathbb{R}\to \mathbb{Z} \text{ with } \lfloor x \rfloor = n \equiv n \le x \lt n + 1)</me>
+        The <term>floor</term> function assigns to every real number <m>x</m> the largest integer that is less than or equal to <m>x</m>. We denote by this <m>\lfloor x \rfloor</m>
+        <me>\lfloor \cdot \rfloor : \mathbb{R}\to \mathbb{Z} \text{ with } (\lfloor x \rfloor = n) \iff (n \le x \lt n + 1)</me>
+      </p>
+      <p>
+        The <term>ceiling</term> function assigns to every real number <m>x</m> the smallest integer that is greater than or equal to <m>x</m>. We denote by this <m>\lceil x \rceil</m>
+        <me>\lceil \cdot \rceil : \mathbb{R}\to \mathbb{Z} \text{ with } (\lceil x \rceil = n) \iff (n + 1 \lt x \le n)</me>
       </p>
     </definition>
 
-    <!-- todo write up about floor and ceiling functions //-->
-    
+    <example>
+      <statement>
+        Find the floor and ceiling of each of the following real numbers:
+        <ol>
+          <li>8.675309</li>
+          <li><m>\pi</m></li>
+          <li><m>-2.1</m></li>
+          <li><m>7</m></li>
+        </ol>
+      </statement>
+    </example>
 
-    <!-- maybe note why the greatest int and floor functions are different //-->
+    <example>
+      <statement>
+        Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.
+      </statement>
+    </example>
 
   </section>
 
