@@ -2,6 +2,20 @@
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
   <book xml:id="discrete-class-notes">
     <title>Math 321 Class Notes</title>
+    <frontmatter>
+      <colophon>
+        <copyright>
+          <holder>John Hammond</holder>
+          <year>2018-2019</year>
+          <minilicense>Creative Commons BY-SA</minilicense>
+        </copyright>
+      </colophon>
+      <preface>
+        <p>
+          If you're reading this, I forgot to write the preface. Whoopsie-doodle.
+        </p>
+      </preface>
+    </frontmatter>
 
     <xi:include href="./ch_logic.mbx"/>
     <xi:include href="./ch_objects.mbx"/>
