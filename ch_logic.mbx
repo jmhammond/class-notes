@@ -98,12 +98,32 @@
         <statement>
           These examples, illustrating the truth and false of conditionals, are from my daughter Penny:
           <ul>
-            <li>True <m>\to</m>True is True:  If Pikachu is an electric type, he can use thunderbolt.</li>
-            <li>True <m>\to</m>False is False: If Pikachu is an electric type, he can use hydro pump.</li>
-            <li>False <m>\to</m>True is True: If Pikachu is a duck, he can use thunder shock.</li>
-            <li>False <m>\to</m>False is True: If Pikachu is a grass type, he can use petal storm.</li>
+            <li>
+              <p>
+                If Pikachu is an electric type, he can use thunderbolt.
+                <ul><li>True <m>\to</m>True is True</li></ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                If Pikachu is an electric type, he can use hydro pump.
+                <ul><li>True <m>\to</m>False is False</li></ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                If Pikachu is a duck, he can use thunder shock.
+                <ul><li>False <m>\to</m>True is True</li></ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                If Pikachu is a grass type, he can use petal storm.
+                <ul><li>False <m>\to</m>False is True</li></ul>
+              </p>
+            </li>
           </ul>
-        </statement>
+          </statement>
       </example>
 
       <note xml:id="conditional-phrases">
