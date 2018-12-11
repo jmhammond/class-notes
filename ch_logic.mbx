@@ -94,6 +94,18 @@
 
       </example>
 
+      <example>
+        <statement>
+          These examples, illustrating the truth and false of conditionals, are from my daughter Penny:
+          <ul>
+            <li>True <m>\to</m>True is True:  If Pikachu is an electric type, he can use thunderbolt.</li>
+            <li>True <m>\to</m>False is False: If Pikachu is an electric type, he can use hydro pump.</li>
+            <li>False <m>\to</m>True is True: If Pikachu is a duck, he can use thunder shock.</li>
+            <li>False <m>\to</m>False is True: If Pikachu is a grass type, he can use petal storm.</li>
+          </ul>
+        </statement>
+      </example>
+
       <note xml:id="conditional-phrases">
         <p>
           There are many ways to phrase the conditional statement <m>p \to q</m>. Here are just a few common ones:
