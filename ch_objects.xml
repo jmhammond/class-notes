@@ -100,7 +100,7 @@
         </ol>
     
         <p>
-          In case it might be helpful, here's a fancy calulator (available on the web-based version of these notes). You can type what you want to compute and press 'Evaluate (Sage).' To compute powers, just like your graphing calculator, you'll use ^.
+          In case it might be helpful, here's a fancy calulator (available on the web-based version of these notes). You can type what you want to compute and press 'Evaluate (Sage).' For more information, refer to the <xref ref="sec_sage_howto">Sage appendix</xref>
         </p>
         <sage>
           <input>

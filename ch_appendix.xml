@@ -2,13 +2,57 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_appendix">
   <title>Appendices</title>
 
-
   <section xml:id="sec_sage_howto">
-    <p>
-      This will be a quick how to use sage
-      I'm thinking basic arithmetic, enough to do the chapter 4 exercises
-      <!-- todo: write a how to... //-->
-    </p>
+    <introduction>
+      <p>
+        This will be a quick how to use sage
+        I'm thinking basic arithmetic, enough to do the chapter 4 exercises
+        <!-- todo: write a how to... //-->
+      </p>
+    </introduction>
+    <subsection>
+      <title>
+        Basic Arithmetic
+      </title>
+
+      <p>
+        To do addition, subtraction, multiplication, and division, just type what you want to get:
+        <sage>
+          <input>
+            1 + 1 
+          </input>
+          <output>
+            2
+          </output>
+        </sage>
+      </p>
+      <p>
+        If you want to do powers, you type the caret, ^.
+        <sage>
+          <input>
+            2^3 
+          </input>
+          <output>
+            8
+          </output>
+        </sage>
+      </p>
+      <p>
+        And always remember to use many parentheses as grouping symbols for fractions or exponents with more than one number, in order to ensure the computer understands what you typed. For example, to do the calculation:
+        <me> \frac{-3 - \sqrt{9 + 4\cdot 2\cdot 5}}{4}</me>
+        we need to type (noting that the square root is sqrt()):
+        <sage>
+          <input>
+            (-3 - sqrt(9 + 4*2*5))/(4)
+          </input>
+          <output>
+            -5/2
+          </output>
+        </sage>
+
+      </p>
+    </subsection>
+
   </section>
 
 </chapter>
