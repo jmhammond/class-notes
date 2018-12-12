@@ -13,7 +13,7 @@
 
     <definition>
       <p>
-        A <term>sequence</term> is a function from a subset of the integers (usually <m>\{0, 1,2,3 \dots\}</m>) to a set <m>S</m>. We use the notation <m>a_n</m> to denote the image of the integer <m>n</m> and we call <m>a_n</m> the <term><m>n</m>-th term</term> of the sequence.
+        A <term>sequence</term> is a function from a subset of the integers (usually <m>\{0, 1,2,3 \dots\}</m>) to a set <m>S</m>. We use the notation <m>a_n</m> to denote the image of the integer <m>n</m>, and we call <m>a_n</m> the <term><m>n</m>-th term</term> of the sequence.
       </p>
       <p>
         Notationally, we will often write the shorthand <m>\{a_n\}</m> to denote the complete sequence where <m>n\in \mathbb{N}</m>.
@@ -98,10 +98,34 @@
           <li><m>1,2,2,2,3,3,3,3,3, 5,5,5,5,5,5,5,\dots</m></li>
           <li><m>2,4,16,256,65536, 4294957296, \dots</m></li>
         </ol>
+    
+        <p>
+          In case it might be helpful, here's a fancy calulator (available on the web-based version of these notes). You can type what you want to compute and press 'Evaluate (Sage).' To compute powers, just like your graphing calculator, you'll use ^.
+        </p>
+        <sage>
+          <input>
+            16^2
+          </input>
+          <output>
+            256
+          </output>
+        </sage>
       </statement>
     </example>
 
 
+
+
+    <definition>
+      <p>
+        Let <m>\{a_n\}</m> be a sequence. We define a <term>series</term> of the sequence to be the summation of some subset of the terms of the sequence. We denote the sum by a capital sigma with sub- and superscript information in the following conventional way:
+        <me>\sum_{\text{index variable, lower bound}}^{\text{upper bound}} \text{(sequence rule in terms of index variable)}</me>
+      </p>
+      <p>
+        For example, the summation of terms from 0 to <m>n</m> is expressed:
+        <me>\sum_{i=0}^n a_i = a_0 + a_1 + a_2 + \dots + a_{n-1} + a_n</me>
+      </p>
+    </definition>
 
 
   </section>
