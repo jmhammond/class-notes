@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_objects_matrices">
+  <title>Matrices</title>
+  
+  <definition>
+    <p>
+      A <term>matrix</term> is a rectangular array of numbers. A matrix with <m>m</m> rows and <m>n</m> columns is called an <m>m \times n</m> matrix.
+    </p>
+    <p>
+      A matrix with the same number of rows and columns is called a <term>square matrix</term>.
+    </p>
+
+    <p>
+      We can represent a matrix in the following way:
+      <ul>
+        <li>
+          <m>A = \begin{bmatrix}
+          a_{11} &amp; a_{12} &amp; \dots &amp; a_{1n} \\
+          a_{21} &amp; a_{22} &amp; \dots &amp; a_{2n} \\
+          \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+          a_{m1} &amp; a_{m2} &amp; \dots &amp; a_{mn} \\
+          \end{bmatrix} </m>
+        </li>
+        <li>
+          The <m>i</m>th row is <m>\begin{bmatrix}
+          a_{i1} &amp; a_{i2} &amp; \dots &amp; a_{in} \\
+          \end{bmatrix} </m>, a <m>1\times n</m> <term>row matrix</term>.
+        </li>
+        <li>
+          The <m>j</m>th column is <m>\begin{bmatrix}
+          a_{1j} \\ a_{2j} \\ \vdots \\ a_{mj} \\
+          \end{bmatrix} </m>, an <m>m\times 1</m> <term>column matrix</term>.
+        </li>
+        <li>
+          The <m>ij</m>th term of the matrix is denoted <m>a_{ij}</m>
+        </li>
+        <li>
+          We will often write <m>A = \begin{bmatrix} a_{ij} \end{bmatrix} </m> and give a rule for <m>a_{ij}</m> in order to conserve space.
+        </li>
+      </ul>
+    </p>
+  </definition>
+
+  <example>
+    <statement>
+      For the following matrix, find:
+      <me> A = \begin{bmatrix} 1 &amp; 1 &amp; 2 &amp; 5 \\ 2 &amp; -6 &amp; 0 &amp; 1 \\ 3 &amp; -1 &amp; 4 &amp; 7 \end{bmatrix}</me>
+      <ol>
+        <li>What are the dimensions of <m>A</m>?</li>
+        <li>What is the third column of <m>A</m>?</li>
+        <li>What is the second row of <m>A</m>?</li>
+        <li>What is the element <m>a_{23}</m>?</li>
+      </ol>
+    </statement>
+  </example>
+
+  <definition>
+    <p>
+      Let <m>A = \begin{bmatrix} a_{ij} \end{bmatrix}</m> and <m>B = \begin{bmatrix} b_{ij} \end{bmatrix}</m> be two <m>m\times n</m> matrices. We define their sum by:
+      <me> A + B = \begin{bmatrix} a_{ij} + b_{ij} \end{bmatrix} </me>
+      That is, we add the corresponding entries together. The result is also an <m>m\times n</m> matrix.
+    </p>
+    <p>
+      Let <m>A</m> be an <m>m\times k</m> matrix, and let <m>B</m> be a <m>k\times n</m> matrix. Then the product <m>AB = \begin{bmatrix}c_{ij} \end{bmatrix}</m> is defined by:
+      <me>c_{ij} = a_{i1}\cdot b_{1j} + a_{i2}\cdot b_{2j} + \dots + a_{ik}\cdot b_{kj}</me>
+    </p>
+  </definition>
+
+  <example>
+    <statement>
+      Let <m>A = \begin{bmatrix} 1 &amp; 3 \\ 4 &amp; 2 \end{bmatrix}</m> and <m>B = \begin{bmatrix} 0&amp; 5 \\ -1 &amp; 4 \end{bmatrix}</m>. Find:
+      <ol>
+        <li><m>A + B</m></li>
+        <li><m>B + A</m></li>
+        <li><m>A  B</m></li>
+        <li><m>B  A</m></li>
+      </ol>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      Find <m>AB</m> if <m>A = \begin{bmatrix} 4 &amp; -3 \\ 3 &amp; -1 \\ 0 &amp; -2 \\ -1 &amp; 5 \end{bmatrix}</m> and <m>B =  \begin{bmatrix} -1 &amp; 3 &amp; 2 &amp; -2 \\ 0 &amp; -1 &amp; 4 &amp; -3 \end{bmatrix}</m>
+    </statement>
+  </example>
+
+  <definition>
+    <p>
+      The <term>identity matrix of order <m>n</m></term> is the <m>n \times n</m> matrix:
+      <me>I_n = \begin{bmatrix} \delta_{ij} \end{bmatrix} \text{ where } \delta_{ij} = \left\{ \begin{array}{lr} 1 &amp; i = j \\ 0 &amp; i \not= j \end{array} \right. </me>
+    </p>
+    <p>
+      I'll refer to this as the <term><m>n\times n</m> identity matrix</term>, but to be clear, an identity matrix is always square.
+    </p>
+  </definition>
+
+  <note>
+    <p>
+      If <m>A</m> is an <m>m \times n</m> matrix, then:
+      <me> A  I_n = I_m  A = A</me>
+    </p>
+  </note>
+
+  <definition>
+    <p>
+      If <m>A</m> is a square, <m>n\times n</m> matrix, we define <m>A^r = A A  A \dots  A</m>, the product of <m>A</m> with itself <m>r</m> times. Further, <m>A^0 = I_n</m>.
+    </p>
+  </definition>
+
+  <definition>
+    <p>
+      Let <m>A</m> be an <m>m \times n</m> matrix. We define the <term>transpose of <m>A</m></term>, denoted <m>A^t</m> to be the <m>n\times m</m> matrix obtained by interchanging the rows and columns of <m>A</m>.
+    </p>
+  </definition>
+
+  <definition>
+    <p>
+      A square matrix is called <term>symmetric</term> if <m>A = A^t</m>.
+    </p>
+  </definition>
+
+  <subsection>
+    <title>
+      Doing Matrix Arithmetic with SageMath
+    </title>
+
+    <p>
+      We can check our work using Sage, and later we can do really large matrix operations.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          First, let's see how to write a matrix in Sage. The following code represents the matrix <m>\begin{bmatrix} 3 &amp; 1 \\ 5 &amp; 2\end{bmatrix}</m> and then displays it:
+          <sage>
+            <input>
+              A = matrix([[3, 1], [5,2]]);
+              A
+            </input>
+            <output>
+              [3 1]
+              [5 2]
+            </output>
+          </sage>
+        </p>
+        <p>
+          Now let's use Sage to multiply matrices:
+          <sage>
+            <input>
+              A = matrix([[3, 1], [5,2], [1, 1]]);
+              B = matrix([[1, 2, 0], [4,0, 1]]);
+              A*B
+            </input>
+            <output>
+              [ 7  6  1]
+              [13 10  2]
+              [ 5  2  1]
+            </output>
+          </sage>
+        </p>
+        <p>
+          ... and if we try to multiply something that doesn't work, we will get an error:
+          <sage doctest="not tested">
+            <input>
+              A = matrix([[3, 1, 2], [5,2, 1], [1, 1, 0]]);
+              B = matrix([[1, 2, 0], [4,0, 1]]);
+              A*B
+            </input>
+          </sage>
+          DON'T PANIC! We'll look through the error and see information that will help us understand. 
+        </p>
+        <p>
+          First, I see <q>----&gt; 3 A*B</q> in error, the arrow telling us what line had the error. The error happened when I was multiplying.
+        </p>
+        <p>
+          Then, scrolling to the end, we see
+          <q>
+            TypeError: unsupported operand parent(s) for *: 'Full MatrixSpace of 3 by 3 dense matrices over Integer Ring' and 'Full MatrixSpace of 2 by 3 dense matrices over Integer Ring'
+          </q>
+          That's a lot information, but look what we have:
+          <ol>
+            <li><q>Unsupported operand parent(s) for *</q> tells us that we have a problem with our multiplication</li>
+            <li>My eyes caught <q>... 3 by 3 ... 2 by 3...</q> which tells me I'm trying to multiply incompatible matrices</li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+
+</section>
