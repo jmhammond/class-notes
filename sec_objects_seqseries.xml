@@ -185,10 +185,10 @@
         Find the first five terms of the sequence <m>\{a_n\}</m>, beginning with <m>n=0</m>:
         <ol>
           <li><m>a_n = 2^n + 3</m></li>
-          <li><m>n^n</m></li>
-          <li><m>\lfloor n/2\rfloor + \lceil n/2 \rceil</m></li>
-          <li><m>a_n = 6a_{n-1}, a_0 = 2</m></li>
-          <li><m>a_n = a_{n-1} + 3 a_{n-2}, a_0 = 1, a_1 = 2</m></li>
+          <li><m>a_n = n^n</m></li>
+          <li><m>a_n = \lfloor n/2\rfloor + \lceil n/2 \rceil</m></li>
+          <li><m>a_n = a_n = 6a_{n-1},\, a_0 = 2</m></li>
+          <li><m>a_n = a_{n-1} + 3 a_{n-2},\, a_0 = 1, a_1 = 2</m></li>
         </ol>
       </statement>
     </exercise>
@@ -197,9 +197,9 @@
       <statement>
         Find a solution to the recurrence relation
         <ol>
-          <li><m>a_n = 3_{n-1}, a_0 = 2</m></li>
-          <li><m>a_n = a{n-1} + n, a_0 = 1</m></li>
-          <li><m>a_n = na{n-1}, a_0 = 1</m></li>
+          <li><m>a_n = 3_{n-1},\, a_0 = 2</m></li>
+          <li><m>a_n = a_{n-1} + n,\, a_0 = 1</m></li>
+          <li><m>a_n = na_{n-1},\, a_0 = 1</m></li>
         </ol>
       </statement>
     </exercise>
