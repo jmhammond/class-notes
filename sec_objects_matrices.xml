@@ -78,9 +78,22 @@
     </statement>
   </example>
 
-  <example>
+  <example ref="example-theyreinversematrices">
     <statement>
       Find <m>AB</m> if <m>A = \begin{bmatrix} 4 &amp; -3 \\ 3 &amp; -1 \\ 0 &amp; -2 \\ -1 &amp; 5 \end{bmatrix}</m> and <m>B =  \begin{bmatrix} -1 &amp; 3 &amp; 2 &amp; -2 \\ 0 &amp; -1 &amp; 4 &amp; -3 \end{bmatrix}</m>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      Find the product:
+      <me> \begin{bmatrix} 2 &amp; 3 &amp; -1 \\ 1 &amp; 2 &amp; 1 \\ -1 &amp; -1 &amp; 3 \end{bmatrix} \begin{bmatrix} 7 &amp; -8 &amp; 5 \\ -4 &amp; 5 &amp; -3 \\ 1 &amp; -1 &amp; 1 \end{bmatrix}</me>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      Let <m>A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}</m>. Find a formula for <m>A^n, n\in \mathbb{Z}^+</m>
     </statement>
   </example>
 
@@ -109,6 +122,24 @@
 
   <definition>
     <p>
+      If <m>M</m> and <m>B</m> are square, <m>n \times n</m> matrices such that <m>AB = BA = I_n</m>, then <m>B</m> is called the <term>inverse</term>, of <m>A</m> and <m>A</m> is said to be <term>inververtible</term>. We write <m>B = A^{-1}</m> to denote the inverse matrix. 
+    </p>
+  </definition>
+
+  <example>
+    <statement>
+      Let <m>A = \begin{bmatrix} -1 &amp; 2 \\ 1 &amp; 3 \end{bmatrix}</m>:
+      <ol>
+        <li>Using the formula in <xref ref="homework-2x2inverse">homework</xref>, find <m>A^{-1}</m></li>
+        <li>Find <m>A^3</m></li>
+        <li>Find <m>(A^{-1})^3</m></li>
+        <li>Using the matrices above and matrix multiplication, show that <m>A^3</m> and <m>(A^{-1})^3</m> are inverses.</li>
+      </ol>
+    </statement>
+  </example>
+
+  <definition>
+    <p>
       Let <m>A</m> be an <m>m \times n</m> matrix. We define the <term>transpose of <m>A</m></term>, denoted <m>A^t</m> to be the <m>n\times m</m> matrix obtained by interchanging the rows and columns of <m>A</m>.
     </p>
   </definition>
@@ -118,6 +149,10 @@
       A square matrix is called <term>symmetric</term> if <m>A = A^t</m>.
     </p>
   </definition>
+
+
+
+
 
   <subsection>
     <title>
@@ -186,6 +221,65 @@
       </statement>
     </example>
   </subsection>
+
+
+  <exercises>
+
+    <exercise>
+      <statement>
+        Let <m>A = \begin{bmatrix} 1 &amp; 0 &amp; 4 \\ -3 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 2 \end{bmatrix}</m> and let <m>B = \begin{bmatrix} 5 &amp; 2 &amp; 1 \\ -1 &amp; 0 &amp; 0 \\ 1 &amp; 2 &amp; 1 \end{bmatrix}</m>, find:
+        <ol>
+          <li><m>A + B</m></li>
+          <li><m>B - A</m></li>
+          <li><m>AB</m></li>
+          <li><m>A^t</m></li>
+          <li><m>B^t</m></li>
+          <li><m>B^t A^t</m></li>
+          <li><m>(AB)^t</m></li>
+        </ol>
+        <p>
+          You can check your work with Sage. If you want to find the transpose of a matrix named <m>A</m>, you type <code>A.transpose()</code>. But remember, you can't use the computer or a fancy calculator on the test. 
+        </p>
+      </statement>
+    </exercise>
+
+
+    <exercise xml:id="homework-2x2inverse">
+      <statement>
+        Show that if:
+        <ul>
+          <li><m>A = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix} </m>, and </li>
+          <li><m>ad - bc \not= 0</m>, then</li>
+        </ul>
+        <m>\displaystyle A^{-1} = \begin{bmatrix} \frac{d}{ad-bc} &amp;\frac{-b}{ad-bc} \\ \frac{-c}{ad-bc} &amp; \frac{a}{ad-bc} \end{bmatrix} </m> 
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        Let <m>A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}</m> and <m>B = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}</m>. Find:
+        <ol>
+          <li><m>A \lor B</m></li>
+          <li><m>A \land B</m></li>
+          <li><m>A \odot B</m></li>
+          <li><m>A^{[2]}</m></li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        Let <m>M = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}</m>. Find:
+        <ol>
+          <li><m>M^{[2]}</m></li>
+          <li><m>M^{[3]}</m></li>
+          <li><m>M \lor M^{[2]} \lor M^{[3]}</m></li>
+        </ol>
+      </statement>
+    </exercise>
+
+
+  </exercises>
 
 
 </section>
