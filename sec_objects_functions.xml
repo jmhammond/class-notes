@@ -133,7 +133,7 @@
     <p>
       Let <m>f:\mathbb{A} \to \mathbb{B}</m> be a bijection. The <term>inverse function</term> of <m>f</m> is the unique function that assigns to each element <m>b\in B</m> a unique element <m>a \in A</m> such that <m>f(a) = b</m>. We denote the inverse by <m>f^{-1}</m> so that
       <ul>
-        <li><m>f^{-1} B \to A</m> </li>
+        <li><m>f^{-1} : B \to A</m> </li>
         <li><m>f^{-1}(b) = a \iff f(a) = b</m> </li>
       </ul>
     </p>
@@ -194,10 +194,14 @@
 
   <definition>
     <p>
-      Let <m>A</m> and <m>B</m> but subsets of <m>\mathbb{R}</m>, and let <m>x, y \in A</m> with <m>x < y</m>. A function <m>f: \A \to B</m> is called <term>increasing</term> if <m>f(x) \le f(y)</m>, and called <term>strictly increasing</term> if <m>f(x) < f(y)</m>.
-    </p>
-    <p>
-      Similarly, a function is called <term>decreasing</term> if <m>f(x) \ge f(y)</m>, and <term> strictly decreasing</term> if <m>f(x) > f(y)</m>.
+      Let <m>A</m> and <m>B</m> but subsets of <m>\mathbb{R}</m>, and let <m>x, y \in A</m> with <m>x \lt y</m>.
+      <ul>
+        <li>A function <m>f: \A \to B</m> is called <term>increasing</term> if <m>f(x) \le f(y)</m>, and called <term>strictly increasing</term> if <m>f(x) \lt f(y)</m>.
+        </li>
+        <li>
+          Similarly, a function is called <term>decreasing</term> if <m>f(x) \ge f(y)</m>, and <term> strictly decreasing</term> if <m>f(x) \gt f(y)</m>.
+        </li>
+      </ul>
     </p>
   </definition>
 
@@ -215,13 +219,13 @@
   <!--     <ol> -->
   <!--       <li> Give an example of a strictly increasing function. </li> -->
   <!--       <li> Give an example of a strictly descreasing function. </li> -->
-  <!--     </ol> -->
+  
   <!--   </statement> -->
   <!-- </example> -->
 
   <definition>
     <p>
-      Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g</m> is defined, for all <m>a \in A</m> by <m>(f \circ g)(a) = f(g(a))</m>.
+      Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
     </p>
   </definition>
 
@@ -230,5 +234,27 @@
       Let <m>f(x) = 5x-3</m> and <m>g(x) = 3x-5</m>. Find <m>f\circ g</m> and <m>g\circ f</m>
     </statement>
   </example>
+
+
+  <note>
+    <p>
+      Since given a function <m>f: A \to B</m> we define <m>f^{-1}: B \to A</m> by <m>f(a) = b \iff f^{-1}(b) = a</m> for <m>a \in A</m>, <m>b \in B</m>, then:
+      <ul>
+        <li>
+          <p> for <m>b \in B</m>, we have <me> (f \circ f^{-1})(b) = f(f^{-1}(b)) = f(a) = b \in B </me> </p>
+        </li>
+        <li>
+          <p> and for <m>a \in A</m>, we have <me>(f^{-1} \circ f)(a) = f^{-1}(f(a)) = f^{-1}(b) = a \in A</me> </p>
+        </li>
+      </ul>
+    </p>
+  </note>
+
+  <example>
+    <statement>
+      Suppose <m>f</m> and <m>f\circ g</m> are injective. Does it follow that <m>g</m> is also injective?
+    </statement>
+  </example>
+
 
 </section>
