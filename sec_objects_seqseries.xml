@@ -61,6 +61,34 @@
     </statement>
   </example>
 
+  <example>
+    <statement>
+      Consider the recurrence <m>a_n = -3 a_{n-1} + 4 a_{n-2}</m>. Are teh follow sequences solutions to the recurrence?
+      <ol>
+        <li><m>a_n = 0</m></li>
+        <li><m>a_n = 1</m></li>
+        <li><m>a_n = 2^n</m></li>
+        <li><m>a_n = (-4)^n</m></li>
+      </ol>
+    </statement>
+  </example>
+
+  <note>
+    <p>
+      A recurrence has a unique solution if it has initial data.
+    </p>
+  </note>
+
+  <example>
+    <statement>
+      The the unique solution to each recurrence:
+      <ol>
+        <li><m>a_n = 2a_{n-1} - 3</m> with <m>a_0 = -1</m></li>
+        <li><m>a_n = 2n a_n</m> with <m>a_0 = 3</m></li>
+      </ol>
+    </statement>
+  </example>
+
   <note>
     <p>
       Creativity required: finding the general form of a sequence:
@@ -104,9 +132,6 @@
     </statement>
   </example>
 
-
-
-
   <definition>
     <p>
       Let <m>\{a_n\}</m> be a sequence. We define a <term>series</term> of the sequence to be the summation of some subset of the terms of the sequence. We denote the sum by a capital sigma with sub- and superscript information in the following conventional way:
@@ -120,7 +145,85 @@
 
   <example>
     <statement>
-      Find the value of the sum <m>\sum_{j=0}^8 (1 + (-1)^j</m>
+      Find the value of the sum:
+      <ol>
+        <li><m>\displaystyle \sum_{j=0}^8 (1 + (-1)^j</m></li>
+        <li><m>\displaystyle \sum_{k \in \{1, 3, 5\}} (k^2 + 2)</m></li>
+        <li><m>\displaystyle \sum_{j=1}^2 \sum_{k=1}^5 (j-k) </m></li>
+        <li><m>\displaystyle \sum_{j=1}^2 \sum_{k=1}^5 (k-j) </m></li>
+      </ol>
     </statement>
   </example>
+
+  <example>
+    <statement>
+      Verify the following formula for the sum of a geometric sequence, if <m>r \not= 1</m>, 
+      <me>\sum_{k=0}^n ar^n = \frac{a-ar^{n+1}}{1-r}</me>.
+    </statement>
+  </example>
+
+
+  <example xml:id="example-telescoping-sum">
+    <statement>
+      Show that <m>\sum_{j=1}^n (a_j - a_{j-1}) = a_n - a_0</m>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      Find a formula for the following sums, using the <xref ref="example-telescoping-sum">telescoping example</xref>:
+      <ol>
+        <li><m>\displaystyle \sum_{k=1}^n (2k -1) </m>, the sum of the first <m>n</m> odd numbers.</li>
+        <li><m>\displaystyle \sum_{k=1}^n k</m>, the sum of the first <m>n</m> positive integers.</li>
+      </ol>
+    </statement>
+  </example>
+
+  <exercises>
+    <exercise>
+      <statement>
+        Find the first five terms of the sequence <m>\{a_n\}</m>, beginning with <m>n=0</m>:
+        <ol>
+          <li><m>a_n = 2^n + 3</m></li>
+          <li><m>n^n</m></li>
+          <li><m>\lfloor n/2\rfloor + \lceil n/2 \rceil</m></li>
+          <li><m>a_n = 6a_{n-1}, a_0 = 2</m></li>
+          <li><m>a_n = a_{n-1} + 3 a_{n-2}, a_0 = 1, a_1 = 2</m></li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        Find a solution to the recurrence relation
+        <ol>
+          <li><m>a_n = 3_{n-1}, a_0 = 2</m></li>
+          <li><m>a_n = a{n-1} + n, a_0 = 1</m></li>
+          <li><m>a_n = na{n-1}, a_0 = 1</m></li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        Find the value of each of the following sums:
+        <ol>
+          <li> <m>\displaystyle \sum_{k=0}^8 3\cdot 2^k</m> </li>
+          <li> <m>\displaystyle \sum_{k=1}^8 2^k </m> </li>
+          <li> <m>\displaystyle \sum_{k=1}^8 (1 + (-1)^k) </m> </li>
+          <li> <m>\displaystyle \sum_{k=1}^8 (2^{k+1} - 2^k) </m> </li>
+          <li><m>\displaystyle \sum_{k=50}^{100} k</m></li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        Using <xref ref="example-telescoping-sum">the telescoping example</xref>, derive a formula for <m>\displaystyle \sum_{k=1}^n k^2</m>
+      </statement>
+    </exercise>
+
+  </exercises>
+
+
 </section>
