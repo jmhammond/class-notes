@@ -158,7 +158,7 @@
 
     <definition>
       <p>
-        A <term>binary matrix</term> is one for which all of its entries are either 0 or 1.
+        A <term>binary matrix</term> (or <term>Boolean matrix</term>) is one for which all of its entries are either 0 or 1.
       </p>
       <p>
         Let <m>A = \begin{bmatrix} a_{ij} \end{bmatrix}</m> and <m>B = \begin{bmatrix} b_{ij} \end{bmatrix}</m> be two <m>m\times n</m> binary matrices. We define:
