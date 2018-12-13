@@ -58,13 +58,22 @@
 
   <example>
     <statement>
-      Determine if the following functions are one-to-one. If so, prove it. If not, provide a specific counterexample showing that it is not.
+      Determine if the following functions are injective. If so, prove it. If not, provide a specific counterexample showing that it is not.
       <ol>
         <li>Let <m>f:\mathbb{R} \to \mathbb{R}</m> be defined by <m>f(x) = 2x-1</m>.</li>
         <li>Let <m>g(x) = x^2</m> be the mapping from <m>\mathbb{R} \to \mathbb{R}</m>.</li>
       </ol>
     </statement>
   </example>
+
+  <note>
+    <p>
+      To determine if a function <m>f: A \to B</m> is injective, we show that if <m>f(x) = f(y)</m> for arbitrary values <m>x, y \in A</m> with <m>x \not= y</m>, we conclude <m>x=y</m>. (A direct proof).
+    </p>
+    <p>
+      To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (a counterexample!)
+    </p>
+  </note>
 
   <definition>
     <p>
@@ -77,7 +86,7 @@
 
   <example>
     <statement>
-      Determine if the following functions are onto. If so, prove it. If not, provide a specific counterexample showing that it is not.
+      Determine if the following functions are surjective. If so, prove it. If not, provide a specific counterexample showing that it is not.
       <ol>
         <li>Let <m>f:\mathbb{R} \to \mathbb{R}</m> be defined by <m>f(x) = 2x-1</m>.</li>
         <li>Let <m>g(x) = x^2</m> be the mapping from <m>\mathbb{R} \to \mathbb{R}</m>.</li>
@@ -88,6 +97,12 @@
 
   <note>
     <p>If a function is onto, the range is exactly the codomain </p>
+    <p>
+      To determine if a function <m>f: A \to B</m> is surjective, we show that given an arbitrary element <m>y \in B</m> we can find an element <m>x\in A</m> such that <m>f(x)=y</m>. (A direct proof).
+    </p>
+    <p>
+      To determine if a function <m>f: A \to B</m> is not surjective, we find a particular elements <m>y \in B</m> such that <m>f(x) \not= y</m> for all <m>x\in A</m> (a counterexample!)
+    </p>
   </note>
 
   <definition>
@@ -98,9 +113,21 @@
 
   <example xml:id="example-bijections">
     <statement>
-      Which of the functions we've considered so far have been bijections?
+      <p>
+        Which of the functions we've considered so far have been bijections?
+      </p>
+      <p>
+        Determine if the following are bijections from <m>\mathbb{R} \to \mathbb{R}</m>:
+        <ol>
+          <li><m>f(x) = -3x^2 + 7</m></li>
+          <li><m>f(x) = x^5 + 1</m></li>
+          <li><m>f(x) = 5^x</m></li>
+          <li><m>f(x) = \frac{x+1}{x+2}</m></li>
+        </ol>
+      </p>
     </statement>
   </example>
+
 
   <definition>
     <p>
@@ -118,6 +145,12 @@
     </statement>
   </example>
 
+  <example>
+    <statement>
+      Restrict the domain and/or codomain so that <m>f(x) = x^2 + 1</m> is invertible. Verify your answer is correct. 
+    </statement>
+  </example>
+
   <definition>
     <p>
       If <m>f_1:A \to \mathbb{R}</m> and <m>f_2:A \to \mathbb{R}</m>, then for any <m>x\in A</m>:
@@ -128,7 +161,6 @@
       which is what you'd expect from high school.
     </p>
   </definition>
-
 
 
   <definition>
@@ -157,6 +189,45 @@
   <example>
     <statement>
       Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.
+    </statement>
+  </example>
+
+  <definition>
+    <p>
+      Let <m>A</m> and <m>B</m> but subsets of <m>\mathbb{R}</m>, and let <m>x, y \in A</m> with <m>x < y</m>. A function <m>f: \A \to B</m> is called <term>increasing</term> if <m>f(x) \le f(y)</m>, and called <term>strictly increasing</term> if <m>f(x) < f(y)</m>.
+    </p>
+    <p>
+      Similarly, a function is called <term>decreasing</term> if <m>f(x) \ge f(y)</m>, and <term> strictly decreasing</term> if <m>f(x) > f(y)</m>.
+    </p>
+  </definition>
+
+  <example>
+    <statement>
+      Prove that a function <m>f: \mathbb{R} \to \mathbb{R}</m> is strictly increasing if <m>f</m> is one-to-one.
+    <p>
+      A similar statement holds for strictly decreasing functions.
+    </p>
+    </statement>
+  </example>
+
+  <!-- <example> -->
+  <!--   <statement> -->
+  <!--     <ol> -->
+  <!--       <li> Give an example of a strictly increasing function. </li> -->
+  <!--       <li> Give an example of a strictly descreasing function. </li> -->
+  <!--     </ol> -->
+  <!--   </statement> -->
+  <!-- </example> -->
+
+  <definition>
+    <p>
+      Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g</m> is defined, for all <m>a \in A</m> by <m>(f \circ g)(a) = f(g(a))</m>.
+    </p>
+  </definition>
+
+  <example>
+    <statement>
+      Let <m>f(x) = 5x-3</m> and <m>g(x) = 3x-5</m>. Find <m>f\circ g</m> and <m>g\circ f</m>
     </statement>
   </example>
 
