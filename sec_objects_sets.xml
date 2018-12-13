@@ -215,6 +215,18 @@
       </p>
     </definition>
 
+    <example>
+      <statement>
+        Let <m>A=\{a,b,c,d,e\}</m> and <m>B=\{a, b,c,d,e,f,g,h\}</m>, find
+        <ol>
+          <li><m>A\cup B</m></li>
+          <li><m>A\cap B</m></li>
+          <li><m>A-B</m></li>
+          <li><m>B-A</m></li>
+        </ol>
+      </statement>
+    </example>
+
   </subsection>
 
   <subsection>
