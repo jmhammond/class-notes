@@ -216,6 +216,146 @@
   </p>
 
 
+  <exercises>
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Determine if the following deduction rule is valid:
+        </p>
+        <sidebyside>
+          <tabular halign="center">
+            <row>
+              <cell/>
+              <cell><m>P \vee Q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>\neg P</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>Q</m></cell>
+            </row>
+          </tabular>
+        </sidebyside>
+      </statement>
+      <solution>
+        <p>
+          The deduction rule is valid. To see this, make a truth table which contains <m>P \vee Q</m> and <m>\neg P</m> (and <m>P</m> and <m>Q</m> of course). Look at the truth value of <m>Q</m> in each of the rows that have <m>P \vee Q</m> and <m>\neg P</m> true.
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Determine if the following is a valid deduction rule:
+        </p>
+        <sidebyside>
+          <tabular halign="center">
+            <row>
+              <cell/>
+              <cell><m>P \to (Q \vee R)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>\neg(P \to Q)</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>R</m></cell>
+            </row>
+          </tabular>
+        </sidebyside>
+      </statement>
+
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Determine if the following is a valid deduction rule:
+        </p>
+        <sidebyside>
+          <tabular halign="center">
+            <row>
+              <cell/>
+              <cell><m>(P \wedge Q) \to R</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>\neg P \vee \neg Q</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>\neg R</m></cell>
+            </row>
+          </tabular>
+        </sidebyside>
+      </statement>
+
+    </exercise>
+
+
+
+    <exercise>
+      <statement>
+        <p>
+          Prove that the following is a valid deduction rule:
+        </p>
+        <p>
+          <sidebyside>
+            <tabular halign="center">
+              <row>
+                <cell/>
+                <cell><m>p \to q</m></cell>
+              </row>
+              <row bottom="minor">
+                <cell/>
+                <cell><m>q \to r</m></cell>
+              </row>
+              <row>
+                <cell><m>\therefore</m></cell>
+                <cell><m>p \to r</m></cell>
+              </row>
+            </tabular>
+          </sidebyside>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        Come with with all valid conclusions for this set of premises: <q>If you get out the leash, the dog wants to go for a walk,</q> <q>the dog wants to go for a  walk if you put on shoes,</q> <q>the dog wanting to go for a walk is sufficient for me to want a cat.</q> Explain your answer noting each step of the argument.
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        Consider the statement <q>Superman saves the day or Lois Lane dies. Superman saved the day, therefore Lois didn't die.</q> Is the argument valid? Explain your answer.
+      </statement>
+    </exercise>
+
+
+    TODO do more exercises!
+    <exercise>
+      <statement>
+
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+
+      </statement>
+    </exercise>
+
+  </exercises>
+
 
 
 </section>

@@ -233,7 +233,7 @@
     <exercise>
       <statement>
         <p>
-      Consider the statement, <q>There is a building on the campus of some college in the United States in which every room is painted white.</q>
+          Consider the statement, <q>There is a building on the campus of some college in the United States in which every room is painted white.</q>
         </p>
         <p>
           <ol>
@@ -268,7 +268,30 @@
         </ol>
       </statement>
     </exercise>
+
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p> Simplify the statements below so that negations are only directly next to the predicates.
+          <ol>
+            <li><m>\neg \exists x \forall y (\neg O(x) \vee E(y))</m>.</li>
+            <li><m>\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))</m>.</li>
+            <li>
+              <p>
+                There is a number <m>n</m> for which no other number is either less <m>n</m> than or equal to <m>n</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                It is false that for every number <m>n</m> there are two other numbers which <m>n</m> is between.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+    </exercise>
   </exercises>
 
-
+  
 </section>
