@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-logic-proofs">
+  <title>An introduction to proofs</title>
+  
+  <definition>
+    <ul>
+      <li> A <term>theorem</term> is a statement can be shown to be true. (an important statement)
+      </li>
+      <li>
+        A <term>proposition</term> is a "less important" theorem.
+      </li>
+      <li> The tools we use to prove a theorem are <term>axioms</term> (or <term>postulates</term>) which are basic assumptions we make, as well as other theorems we've already proven.
+      </li>
+      <li>
+        A less important theorem that will be helpful in proving others is called a <term>lemma</term>.
+      </li>
+      <li>
+      A <term>corollary</term> is a theorem that follows directly from a theorem just proved.</li>
+      <li>
+        A <term>conjecture</term> is a statement that we think my be true (our intuition suggests it)
+      </li>
+    </ul>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        "If <m>n</m> is an odd integer, then <m>n^2</m> is odd."
+      </p>
+      <p>
+        This means for the universe of discourse of all integers:
+        <m> \forall n ((n </m> is odd <m>) \to (n^2 </m> is odd<m>)))</m>
+      </p>
+    </statement>
+  </example>
+  <note>
+    <statement>
+      The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words "for all."
+    </statement>
+  </note>
+
+  <subsection>
+    <title>Direct Proof</title>
+
+    <p>A direct proof is used when proving a proposition of the form <m>p \to q</m>. The goal is to show <m>q</m> is true when we assume <m>p</m> is true. Here's the model:</p>
+    <proof>
+      <p> Assume <m>p</m> is true. </p>
+      <p> ... use logical equivalences (and/or mathematics) ... </p>
+      <p> Therefore <m>q</m> is true.</p>
+    </proof>
+
+    <example>
+      <statement>
+        Prove that the sum of two odd numbers is even.
+      </statement>
+    </example>
+
+
+    <example xml:id="example-neven">
+      <statement>
+        Prove that if <m>n</m> is even, then <m>n^2</m> is even.
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        Prove that if <m>m+n</m> and <m>n + p</m> are even integers, then <m>m+p</m> is even.
+      </statement>
+    </example>
+    
+  </subsection>
+
+  <subsection>
+    <title>Indirect Proofs</title>
+
+    <introduction>
+      <p>We still want to show <m>p \to q</m> is true, but perhaps that's difficult to approach directly. There are several different indirect proofs. The most frequent are approaches are proofs by contraposition and proofs by contradication.</p>
+    </introduction>
+
+    <subsubsection>
+      <title>Proof by Contraposition</title>
+      <p>. A proof by contraposition is a direct proof of <m>\neg q \to \neg p</m>. Here's the model:</p>
+      <proof>
+        <p> Assume <m>\neg q</m> is true. </p>
+        <p> ... use logical equivalences (and/or mathematics) ... </p>
+        <p> Show <m>\neg p</m> is true. Therefore, <m>p \to q</m> is true by contraposition. </p>
+      </proof>
+      <p>
+        Remember that <m>\neg q \to \neg p \equiv p \to q</m>, so this is a valid argument.
+      </p>
+      <example>
+        <statement>
+          Show that if <m>n</m> is an integer and <m>n^3 + 5</m> is odd, then <m>n</m> is even.
+        </statement>
+      </example>
+      <example xml:id="example-n2even">
+        <statement>
+          Prove that if <m>n^2</m> is even, then <m>n</m> is even.
+        </statement>
+      </example>
+    </subsubsection>
+
+    <subsubsection>
+      <title>Proof by Contradiction</title>
+      <p>A proof by contradiction relies on the fact that <m>\neg (p \wedge \neg q) \equiv (p \to q)</m>. We'll assume both that <m>p</m> is true, and we assume the opposite or <m>q</m> is true. Here's the model:</p>
+      <proof>
+        <p> Assume <m>p</m> is true, and further assume that <m>\neg q</m> is true</p> 
+        <p> ... use logical equivalences (and/or mathematics) ... </p>
+        <p> Arrive at a logical contradiction. Some impossibility. Therefore, <m>p \to q</m> is true by contradiction.</p>
+      </proof>
+
+      <example>
+        <statement>
+          Prove that <m>\sqrt{2}</m> is irrational
+        </statement>
+      </example>
+
+      <!-- <example> -->
+      <!--   <title>Proof of the infinitude of primes</title> -->
+      <!--   <statement> -->
+      <!--     Prove that there are infinitely prime numbers. -->
+      <!--   </statement> -->
+      <!--   <proof> -->
+
+      <!--   </proof> -->
+
+      <!-- </example> -->
+    </subsubsection>
+  </subsection>
+
+  <subsection>
+    <title>
+      Proofs of equivalence
+    </title>
+
+    <p>
+      For statements which are "if an only if:" <m>p \iff q</m> we need to prove both <m>p \to q</m> and its converse <m>q \to p</m>.
+    </p>
+    <example>
+      <statement>
+        Prove that <m>n</m> is even if and only if <m>n^2</m> is even.
+      </statement>
+      <solution>
+        <p>We actually did this in the two previous subsections. The <xref ref="example-neven">forward direction</xref> and <xref ref="example-n2even">the converse</xref>.</p>
+      </solution>
+    </example>
+
+    <example>
+      <statement>
+        Prove that <m>n</m> is even if and only if <m>7n+4</m> is even.
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        Prove the following are equivalent:
+        <ol>
+          <li><m>a\lt b</m></li>
+          <li>The average of <m>a</m> and <m>b</m> is greater than <m>a</m> </li>
+          <li>The average of <m>a</m> and <m>b</m> is less than <m>b</m> </li>
+        </ol>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>
+      Proof by cases
+    </title>
+
+    <p>
+      Split an argument into completely separate pieces. In the example below we have two cases. Either <m>x \ge y</m> or <m>x \lt y</m>:
+      <example>
+        <statement>
+          Show that if <m>x</m> and <m>y</m> are real numbers, then:
+          <ul>
+            <li>
+              max(<m>x,y</m>) = <m>\dfrac{x+y + |x-y|)}{2}</m>
+            </li>
+            <li>
+              min(<m>x,y</m>) = <m>\dfrac{x+y - |x-y|)}{2}</m>
+            </li>
+          </ul>
+        </statement>
+      </example>
+      <note>
+        <statement>
+          We need to prove each claim separately for each case!
+        </statement>
+      </note>
+    </p>
+    <p>
+      What if the cases might be the same? Below, we have two cases, either <m>x</m> is odd and <m>y</m> is even, or <m>x</m> is even and <m>y</m> is odd:
+      <example>
+        <statement>
+          Prove that <m>5x + 5y</m> is an odd integer when <m>x</m> and <m>y</m> are integers of opposite parity (not both even, not both odd). 
+        </statement>
+      </example>
+    </p>
+
+  </subsection>
+
+  <subsection>
+    <title>
+      Existence Proofs
+    </title>
+
+    <p>
+      The claim of an existence theorem is that there is some object that has a property. A <term>constructive proof</term> is one which, during the argumentation, tells the reader specifically how to come up with the object in question. A <term>nonconstructive proof</term> merely confirms the existence of an object, but doesn't give any detail as to how to find it.
+    </p>
+
+    <example>
+      <statement>
+        Prove that either <m>2 \cdot 10^{500} + 15</m> or <m>2 \cdot 10^{500} + 16</m> is not a perfect square. 
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        Show that between any two rational numbers is another rational number.
+      </statement>
+    </example>
+
+  </subsection>
+
+  <subsection>
+    <title>
+      Uniqueness proofs
+    </title>
+
+    <p>
+      The claim of a uniqueness theorem is that there exists an element that has a desired property, and that no other element has this property.
+      The outline of our proof is often:
+      <ul>
+        <li>Prove the existence of <m>x</m>, some element that has the property we want.</li>
+        <li>Assume that a second element, <m>y</m> also has that property.</li>
+        <li>Conclude that <m>x = y</m> </li>
+      </ul>
+    </p>
+
+
+    <example>
+      <statement>
+        Show that if <m>a, b, c</m> are real numbers, then thare is a unique solution to the algebraic equation <m>ax+b=c</m>.
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        Show that if <m>n</m> is an odd integer, then there exists a unique integer <m>k</m> such that <m>n = (k-2) + (k+3)</m>
+      </statement>
+    </example>
+
+
+  </subsection>
+
+  <subsection>
+    <title>Vacuous and Trivial Proofs</title>
+    <definition>
+      <p>A <term>vacuous statement</term> is one that is true because the hypothesis is false. You can <q>prove</q> a statement is true immediately.
+      <example>
+        <statement>
+          If I play in the Super Bowl, I will throw the game winning touchdown.
+        </statement>
+        <solution>
+          <p>
+            Vacuous statements are kind of annoying... since I won't ever play in the Super Bowl, it doesn't matter what the truth value of the touchdown statement is. <m>F\to T \equiv T</m> and <m>F \to F \equiv T</m> just the same.
+          </p>
+        </solution>
+      </example>
+      </p>
+    </definition>
+
+    <definition>
+      
+      <p>
+        If we know that the conclusion of a statement is true, then the statement has a <term>trivial</term> proof.
+
+        <example>
+          <statement>
+            Let <m>P(x)</m> be the statement <q>If <m>x\in \mathbb{R}</m> and <m>x \gt 0</m> , then <m>x^2 + 1 \ge 0</m></q>.
+          </statement>
+          <solution>
+            <p>
+              Since we know that <m>x^2 \ge 0</m> for any real number, <m>x^2 + 1 \ge x^2 \ge 0</m>. We didn't need the hypothesis <m>x \gt 0</m>. This is a trivial proof.
+            </p>
+          </solution>
+
+        </example>
+      </p>
+    </definition>
+
+  </subsection>
+  <subsection>
+    <title>Counterexamples Revisited</title>
+    <p>
+      <!-- Counterexamples are important in mathematics and reasoning in general. It helps you demonstrate  -->
+      Recall in math propositions, the universal quantifier is implied and is usually omitted. 
+    </p>
+    <example>
+      <statement>
+        Each of the following statements is false. Find a specific counterexample and explain why.
+        <ol>
+          <li>If <m>n</m> is a real number, then <m>(n+4)^2 = n^2 + 16</m>.</li>
+          <li>Every integer is the sum of the squares of two integers.</li>
+          <li><m>\forall x \forall y (x^2 = y^2 \to x = y)</m> where the domain of all variables is the set of all integers. </li>
+          <li>The product of two irrational numbers is irrational.</li>
+          <li>The sum of two irrational numbers is irrational.</li>
+        </ol>
+      </statement>
+    </example>
+
+  </subsection>
+
+
+
+</section>

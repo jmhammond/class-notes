@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-logic-arguments">
+  <title>Logical Arguments</title>
+
+  <definition>
+    <p>
+      An <term>argument</term> is a sequence of statements (<term>premises</term>) that ends with a conclusion.
+    </p>
+    <p>
+      A <term>valid argument</term> is one where the conclusion follows from the truth of the premises.
+    </p>
+    <p>
+      For the sequence of premises <m>p_1, p_2, \dots, p_n</m> and conclusion <m>q</m>, an argument is valid if:
+      <me>p_1 \wedge p_2 \wedge \dots \wedge p_n \to q</me> is a tautology.
+    </p>
+    <p>
+      A <term>fallacy</term> is a form of incorrect reasoning that leads to an invalid argument.
+    </p>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Consider the following argument:
+        <ul>
+          <li> If your inbox is full, then you can't receive emails. </li>
+          <li>Your inbox is full.</li>
+          <li>Therefore you can't receive emails.</li>
+        </ul>
+      </p>
+      <p>
+        This argument is of the form:
+        <ul>
+          <li><m> p \to q</m> </li>
+          <li><m> p</m></li>
+          <li><m> \therefore q</m></li>
+        </ul>
+        and is valid since <m> ((p \to q) \wedge p) \to q</m> is a tautology.
+      </p>
+    </statement>
+  </example>
+
+  <p> Below is a table of common argument forms, also known as rules of inference </p>
+
+  <table xml:id="table-implications">
+    <!-- table modified from https://github.com/klevasseur/ads //-->
+    <caption>Basic Logical Laws - Common Implications and Equivalences</caption>
+    <tabular  halign="center">
+
+      <row bottom="medium"><cell>Modus Ponens / Detachment</cell><cell>
+      <m>(p \rightarrow  q) \land  p\Rightarrow  q</m></cell></row>
+
+      <row bottom="medium"><cell>Modus Tollens / Indirect Reasoning</cell><cell>
+      <m>(p \to  q) \land  \neg q \Rightarrow  \neg p</m></cell></row>
+
+      <row bottom="medium"><cell>Disjunctive Addition</cell><cell>
+      <m>p\Rightarrow (p\lor q)</m></cell></row>
+
+      <row bottom="medium"><cell>Conjunctive Simplification</cell><cell>
+      <m>(p \land  q) \Rightarrow  p</m> and <m>(p \land  q) \Rightarrow  q</m></cell></row>
+
+      <row bottom="medium"><cell>Disjunctive Simplification</cell><cell>
+      <m>(p \lor  q) \land  \neg p \Rightarrow  q</m> and <m>(p \lor q) \land \neg q\Rightarrow p</m></cell></row>
+
+      <row bottom="medium"><cell>Chain Rule</cell><cell>
+      <m>(p \to  q) \land  ( q \rightarrow  r) \Rightarrow  (p\to  r)</m>
+      </cell></row>
+      <row bottom="medium"><cell>Conditional Equivalence</cell><cell>
+      <m>p \rightarrow  q \Leftrightarrow  \neg p \lor  q</m></cell></row>
+
+      <row bottom="medium"><cell>Biconditional Equivalences</cell><cell>
+      <m>(p \leftrightarrow  q) \Leftrightarrow  (p\rightarrow q) \land  (q \rightarrow  p)\Leftrightarrow (p \land  q) \lor  (\neg p \land  \neg q)</m></cell></row>
+
+      <row><cell>Contrapositive</cell><cell>
+      <m>(p\to q) \Leftrightarrow (\neg q \to \neg p)</m></cell></row> 
+    </tabular>
+  </table>
+
+
+  <!-- todo I don't know where to put this, but I want it somewhere! //!-->
+
+  <exercise>
+    <statement>
+      <p>
+        Verify that each of the arguments in table <xref ref="table-implications"/> is a tautology.
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <statement>
+      What rules of inference are being used here?
+      <ul>
+        <li>Kangaroos live in Australia and are marsupials. Therefore, kangaroos are marsupials. </li>
+        <li> If I go swimming, then I will stay in the sun too long. If I stay in the sun too long, then I will sunburn. Therefore, if I go swimming, then I will sunburn. </li>
+        <li>I read a horror story. When I read horror stories, I have weird dreams. Therefore I had weird dreams.</li>
+      </ul>
+    </statement>
+  </example>
+
+
+  <p>
+    Rules of inference for quantified statements
+    <definition>
+      <p>
+        <term>Existential instantiation</term> describes the argument:
+        <m> \exists x P(x) \implies P(c) </m> for some <m>c</m> in the domain.
+      </p>
+      <p>
+        <term>Existential generalization</term> describes the argument:
+        <m> P(c) \implies \exists x P(x) </m>.
+      </p>
+      <p>
+        <term>Universal modus ponens</term> describes the argument:
+        <m>\forall x (P(x) \to Q(x)) \wedge P(a) \implies Q(a)</m> where <m>a</m> is a particular element in the domain.
+      </p>
+      <p>
+        <term>Universal modus tollens</term> describes the argument:
+        <m>\forall x (P(x) \to Q(x)) \wedge \neg Q(a) \implies \neg P(a)</m> where <m>a</m> is a particular element in the domain.
+      </p>
+      
+    </definition>
+  </p>
+
+  <example>
+    <statement>
+      Show that the premises, "A student in this class has not read the book," and "Everyone in this class passed the first exam" imply the conclusion "Someone who passed the first exam has not read the book." Let <m>C(x)</m> be "<m>x</m> is in this class", <m>B(x)</m> "x has read the book", and <m>P(x)</m> "<m>x</m> passed the first exam."
+    </statement>
+    <solution>
+      <p> The statment, "someone who passed the first exam has not read the book" means there is someone in class did those things. <m>\exists x (P(x) \wedge \neg B(x))</m></p>
+      <table>
+        <caption>Argument step-by-step</caption>
+        <tabular>
+          <col right="minor"/>
+          <col right="medium"/>
+          <row>
+            <cell> Step</cell> 
+            <cell> Reason </cell>
+          </row>
+          <row>
+            <cell> 1. <m>\exists x(C(x) \wedge \neg B(x))</m> </cell>
+            <cell> Premise </cell>
+          </row>
+          <row>
+            <cell> 2. <m>C(a) \wedge \neg B(a) </m> </cell>
+            <cell> Existential instantiation  </cell>
+          </row>
+          <row>
+            <cell> 3. <m>C(a)</m> </cell>
+            <cell> Simplification of 2</cell>
+          </row>
+          <row>
+            <cell> 4. <m>\forall x (C(x) \to P(x))</m> </cell>
+            <cell> Premise </cell>
+          </row>
+          <row>
+            <cell> 5. <m>C(a) \to P(a)</m> </cell>
+            <cell> Universal instantiation </cell>
+          </row>
+          <row>
+            <cell> 6. <m>P(a)</m> </cell>
+            <cell> Modus ponens -- 3 and 5 </cell>
+          </row>
+          <row>
+            <cell> 7. <m>\neg B(a)</m> </cell>
+            <cell> simplification of 2 a different way</cell>
+          </row>
+          <row>
+            <cell> 8. <m>P(a) \wedge \neg B(a)</m> </cell>
+            <cell> Conjunction of 6 and 7</cell>
+          </row>
+          <row>
+            <cell> 9 . <m>\exists x (P(x) \wedge \neg B(x))</m> </cell>
+            <cell> Existential generalization from 8.</cell>
+          </row>
+        </tabular>
+      </table>
+    </solution>
+  </example>
+
+  <example>
+    <statement>
+      For the following argument, explain the rules of inference for each step leading the the conclusion:
+      <p>
+        Linda, a student in this class owns a red convertible. Everyone who owns a red convertible has gotten at least one speeding ticket. Therefore, someone in this class has gotten at least one speeding ticket.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Here are some common fallacies. They're not typeset in a table because although you should be aware of what they are, they are not valid arguments!
+    <ul>
+      <li>
+        <p>Fallacy of affirming the conclusion:
+        <ul>
+          <li>"If you get an A, you pass this class. You passed the class, therefore you got an A."   (not valid!)
+          </li>
+          <li>"If an animal is a type of cat, it has hair. I have hair. Therefore, I must be some kind of cat." (not valid!) </li>
+          <li> <m> ((p \to q) \wedge q \to p)</m> is not a tautology! </li>
+        </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          Fallacy of denying the hypothesis
+          <ul>
+            <li>"If you get an A, you pass this class. You didn't get an A. Oh no! You must not have passed this class!" (still not valid!)</li>
+            <li>"If an animal is a type of cat, it has hair. My dog Ruby isn't a cat. Therefore she must not have hair." (nope) </li>
+            <li> <m> ((p\to q) \wedge \neg p \to q)</m> is not a tautology!</li>
+          </ul>
+        </p>
+
+        <!-- TODO maybe include a picture from that comic -->
+      </li>
+    </ul>
+  </p>
+
+
+
+
+</section>

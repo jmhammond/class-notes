@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-logic-equivalences">
+    <title>Logical Equivalences</title>
+
+    <definition>
+      <p>
+        An expression involving logical variables that is true for all values is called a <term>tautology</term>.
+      </p>
+    </definition>
+
+    <definition>
+      <p>
+        An expression involving logical variables that is false for all values is called a <term>contradiction</term>.
+      </p>
+    </definition>
+
+    <p>
+      Statements that are not tautologies or contradictions are called <term>contingencies</term>. Tautologies and contradictions are special, so they get special defined names.
+    </p>
+
+    <definition>
+      <p>
+        We say two propositions <m>p</m> and <m>q</m> are <term>logically equivalent</term> if <m>p \leftrightarrow q</m> is a tautology. We denote this by <m>p \equiv q</m>.
+      </p>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Prove the following are equivalent using a truth table.
+          <ol>
+            <li> <m>p \vee (p \wedge q) \equiv p </m></li>
+            <li> <m>p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)</m>
+            <li><m>( \neg p \to (q \wedge \neg q)  )\to p</m></li>
+            </li>
+            <li> <m>p \to q \equiv \neg p \vee q</m> </li>
+          </ol>
+        </p>
+        <p>
+          <note>
+            <p>
+              We use <m>p \to q \equiv \neg p \vee q</m> often enough that this has a name. Those from WSU's intro to logic class call it <term>implication</term>
+            </p>
+          </note>
+        </p>
+      </statement>
+      <solution>
+        Here's the solution for <m>(\neg p \to (q \wedge \neg q)) \to p</m>:
+        <table xml:id="table-contradiction-valid">
+          <caption>Showing <m>( \neg p \to (q \wedge \neg q)  )\to p</m> is a tautology</caption>
+          <tabular  halign="center">
+            <row>
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\neg p</m></cell>
+              <cell><m>q \wedge \neg q</m></cell>
+              <cell><m>p \to (q \wedge \neg q)</m></cell>
+              <cell><m>(p \to (q \wedge \neg q)) \to p</m></cell>
+            </row>
+
+            <row>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+
+            <row>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+
+            <row>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+
+            <row>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+          </tabular>
+        </table>
+      </solution>
+    </example>
+
+    <p>
+      The following is a collection of very useful tautologies. Do you need to memorize them? Absolutely!
+    </p>
+    <table xml:id="table-equivalences">
+      <!-- table modified from https://github.com/klevasseur/ads //-->
+      <caption>Logical Equivalences</caption>
+      <tabular  halign="center">
+        <row>	
+          <cell></cell>
+          <cell>Commutative Laws</cell>
+          <cell></cell>
+        </row>
+        <row bottom="medium">
+          <cell> <m>p \lor  q\equiv q\lor p</m>  </cell>
+          <cell></cell>
+          <cell> <m>p \land q\equiv q \land p</m></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Associative Laws</cell>
+          <cell></cell>
+        </row>
+        <row bottom="medium">
+          <cell><m>(p \lor  q) \lor r \equiv  p \lor  (q \lor  r)</m></cell>
+          <cell></cell>
+          <cell>(<m>p \land q) \land r\equiv p \land  (q \land  r)</m></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Distributive Laws</cell>
+          <cell></cell>
+        </row>
+        <row bottom="medium">
+          <cell><m>p \land  (q \lor  r) \equiv  (p \land  q ) \lor  (p \land  r)</m></cell>
+          <cell></cell>
+          <cell><m>p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r)</m> </cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Identity Laws</cell>
+          <cell></cell>
+        </row>
+        <row bottom="medium">
+          <cell><m>p \lor  F\equiv p</m></cell>
+          <cell></cell>
+          <cell> <m>p \land  T \equiv p</m></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Negation Laws</cell>
+          <cell></cell>
+        </row>
+        <row bottom="medium">
+          <cell><m>p\land \neg p\equiv F</m></cell>
+          <cell></cell>
+          <cell> <m>p\lor \neg p\equiv T</m></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Idempotent Laws</cell>
+          <cell></cell>
+        </row>
+        <row bottom="medium">
+          <cell><m>p \lor  p \equiv p</m> </cell>
+          <cell></cell>
+          <cell>  <m>p\land p \equiv p</m></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Domination Laws</cell>
+          <cell></cell>
+        </row>
+        <row bottom="medium">
+          <cell><m>p \land F \equiv F</m> </cell>
+          <cell></cell>
+          <cell> <m>p \lor  T \equiv T</m></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Absorption Laws</cell>
+          <cell></cell>
+        </row>
+        <row bottom="medium">
+          <cell><m>p \land (p\lor  q)\equiv p</m></cell>
+          <cell></cell>
+          <cell><m>p \lor  (p \land  q) \equiv  p</m></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>DeMorgan's Laws</cell>
+          <cell></cell>
+        </row>
+        <row bottom="medium">
+          <cell><m>\neg (p \lor  q) \equiv  (\neg p) \land  (\neg q)</m></cell>
+          <cell></cell>
+          <cell><m>\neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)</m></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Double Negation Law</cell>
+          <cell></cell>
+        </row>
+        <row bottom="medium">
+          <cell></cell>
+          <cell> <m>\neg (\neg p)\equiv p</m></cell>
+          <cell></cell>
+        </row>
+      </tabular>
+    </table>
+
+    <example>
+      <statement>
+        <p>
+          Use existing logical equivalences from <xref ref="table-equivalences"/> to show the following are equivalent.
+          <ol>
+            <li>
+              <m>p \wedge q \equiv \neg(p \to \neg q)</m>
+            </li>
+            <li>
+              <m>(p \to r) \vee (q \to r)</m> and <m>(p \wedge q) \to r</m> 
+            </li>
+            <li>
+              <m>q \to p \equiv \neg p \to \neg q</m>
+            </li>
+            <li>
+              <m>\neg(p \to q) \equiv  p \wedge \neg q</m>
+            </li>
+          </ol>
+        </p>
+        <p><note>
+          <p>
+            This is your first experience with logical proof! It won't be your last. Much of this class is about learning to understand and argue rigorously.
+          </p>
+        </note>
+        </p>
+      </statement>
+    </example>
+
+  </section>

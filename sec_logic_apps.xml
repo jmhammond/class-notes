@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- I think this should be included with the logic props section, not on its own. //-->
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-prop-apps">
+  <title>Applications of Propositional Logic</title>
+
+  <subsection>
+    <title> Translating English Sentences</title>
+
+    <example>
+      <statement>
+        <p>
+          Decompose each part of the statement into individual propositional variables and write as a compound proposition:
+          <ol>
+            <li> You drink coffee only if you put the ground coffee into the maker and don't forget to press brew. </li>
+            <li> TODO </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p> Answering the coffee question, we let: 
+        <ul>
+          <li><m>d</m>: You can drink coffee.</li>
+          <li><m>g</m>: You put ground coffee into the maker</li>
+          <li><m>f</m>: You forgot to press brew.</li>
+        </ul>
+        Then the statement is <m>d \to (g \wedge \neg f)</m>
+        </p>
+      </solution>
+    </example>
+
+  </subsection>
+  <subsection>
+    <title>Boolean Searches</title>
+    <p>
+      Search engines using Boolean searches use logical connectives. 
+      <ul>
+        <li> AND requires records match both terms </li>
+        <li> OR returns records that match one or both of the terms </li>
+        <li> NOT (or sometimes AND NOT) excludes a term </li>
+      </ul>
+    </p>
+    <p>
+      For example, if I wanted to search the WSU library catalog to learn about Georg Cantor's diagonalization argument <xref ref="section-objects-sets-diag"/>, but I want to exclude anything about computability, I could do the following search: 
+      <image source="images/library-catalog.png"/>
+
+      <note>
+        <p>
+          Remember that <q>but</q> is a conjunction!
+        </p>
+      </note>
+
+    </p>
+  </subsection>
+  <subsection>
+    <title>Logic Puzzles</title>
+    <p>
+      A classic example is that we're on the island of knights and knaves. Knights always tell the truth. Knaves always lie.
+    </p>
+    <example>
+      <statement>
+        <p>
+          We encounter two people A and B.
+          <ul>
+            <li>
+              A says: <q>B is a knight.</q>
+            </li>
+            <li>
+              B says: <q>The two of us are opposite types.</q>
+            </li>
+          </ul>
+          What is the conclusion?
+        </p>
+      </statement>
+    </example>
+    <exercise>
+      <statement>
+        <p>
+          This is a favorite of my daughter. You encounter a guard standing at a fork in the road. It is not known whether the guard will tell the truth or lie. One of the paths leads to great treasure, the other leads to a violent and scary death. You are allowed to ask one and only one question to the guard.
+        </p>
+        <p>
+          What can you ask the guard in order to ensure you go on the path towards the treasure?
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+</section>

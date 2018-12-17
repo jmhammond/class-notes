@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-logic-quantifiers">
+  <title>Predicates and Logical Quantifiers</title>
+  <subsection>
+    <title>Predicates</title>
+    <p>
+      Consider this mathematical sentence: <q> <m> x \lt 5 </m></q>.
+      <ul>
+        <li><m>x</m> is a variable, the subject of the sentence.</li>
+        <li> <q>is less than five</q> is the <term> predicate</term></li>
+        <ul>
+          <li> A predicate is a property that a subject can have.</li>
+        </ul>
+        <li> <m>P(x) :=</m> <q><m> x \lt 5 </m></q>
+        <ul>
+          <li> The value of <m>P(x)</m> is the value of the <term>propositional function</term> P at <m>x</m>. </li>
+          <li>Assigning a value to <m>x</m> makes <m>P</m> a proposition (it then has a truth value)</li>
+        </ul>
+        </li>
+      </ul>
+    </p>
+
+    <definition>
+      <p>
+        The <term>domain of discourse</term> (or <term>universe of discourse</term>) is the collection from which variables can take values.
+      </p>
+      <p> For example, if my predicate function is <q><m>x</m> is a student at WSU</q>, the function has a different meaning if my universe of discourse is <q>all college students</q> versus <q>all powers of 5</q>
+      </p>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Determine the truth values of the following:
+          <ol>
+            <li>
+              <p>
+                Let <m>P(x)</m> be the statement <q>The word <m>x </m> contains the letter a</q>.
+                <ol>
+                  <li> P(elephant)</li>
+                  <li>
+                    P(purple)
+                  </li>
+                  <li>
+                    P(true)
+                  </li>
+                  <li>
+                    P(false)
+                  </li>
+                </ol>
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>Q(x,y)</m> be the statement <q><m>x^2 + y^2 = 25</m></q>.
+                <ol>
+                  <li><m>Q(4,5)</m></li>
+                  <li><m>Q(3,4)</m></li>
+                </ol>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Logical Quantifiers</title>
+
+    <definition>
+      <p>
+        The <term>universal quantification</term> of <m>P(x)</m> is the statement that <m>P(x)</m> is true for all values of <m>x</m> in the domain of discourse. We write <m> \forall x P(x)</m>
+      </p>
+      <p>
+        An <m>x</m> value for which <m>P(x)</m> is false is called a <term>counterexample</term>
+      </p>
+    </definition>
+    <definition>
+      <p>
+        The <term>existential quantification</term> of <m>P(x)</m> is the statement that there is some value <m>x</m> in the universe of discourse for which <m>P(x)</m> is true. We write <m> \exists x P(x)</m>
+      </p>
+    </definition>
+
+
+    <example>
+      <statement>
+        Let <m>P(x)</m> be <q><m>x^2 \ge 0</m></q>. What is the truth value of <m>\forall x P(x)</m> if the domain is:
+        <ol>
+          <li> All real numbers </li>
+          <li> All complex numbers </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li> Since <m>x^2 \ge 0</m> for all real numbers (what you learned in Algebra is true), this statement is true.</li>
+          <li> This is false. Let <m> x = \sqrt{-1}</m>. Then <m>(\sqrt{-1})^2 = -1 \not\ge 0</m>.</li>
+        </ol>
+        <p>
+          We showed that <m>\sqrt{-1}</m> is a counterexample to the universal quanfication.
+        </p>
+      </answer>
+    </example>
+
+    <example>
+      <statement>
+        Let the domain be all real numbers. Find a counterexample to the following statements:
+        <ol>
+          <li><m>\forall x (x^2 \not= x)</m></li>
+          <li><m>\forall x (|x| \gt 0)</m></li>
+          <li><m>\forall x (x \gt 3 \vee x \lt 2)</m></li>
+        </ol>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p> We can combine quantifers, where each variable might come from a different domain. Precedence of quantifiers is left to right.
+        </p>
+        <p>
+          What is the truth value of the following expressions where the domain is all real numbers:
+          <ol>
+            <li><m>\forall x \exists y ( xy = 5)</m></li>
+            <li><m>\exists x \forall y ( xy = 5)</m></li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+    <definition>
+      <p>
+        The negation of quantifiers is found as follows: 
+        <md>
+          <mrow>\neg \forall P(x) \amp\equiv \exists x \neg P(x) </mrow>
+          <mrow> \neg \exists P(x) \amp\equiv \forall x \neg P(x)  </mrow>
+        </md>
+      </p>
+      <p>
+        It might help to think <q>not all...</q> is equivalent to <q>some... do</q>. While <q>there isn't one who...</q> is the same as <q>no one does...</q>.
+      </p>
+    </definition>
+    <note>
+      <p>
+        Counterexamples to universal statements work because if <m>\exists x \neg P(x)</m> is true, then <m>\neg \forall x P(x)</m> is also true, that is, <m>\forall x P(x)</m> is false!
+      </p>
+    </note>
+
+    <example>
+      <statement>
+        <p>
+          For each negation below, write the statement using quantifiers to confirm each is correct.
+          <ol>
+            <li>
+              The negation of <q>There exists a green horse</q> is <q>No horse is green</q>.
+            </li>
+            <li>
+              The negation of <q>All people wear hats</q> is the statement <q>Some person doesn't wear hats</q>.
+            </li>
+            <li>
+              The negation of <q>Nobody loves math</q> is <q>Someone does love math</q>.
+            </li>
+            <li>
+              Find the negation of <q>some drivers don't obey the speed limit.</q>.
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    
+    <!-- <p> -->
+    <!--   TODO -->
+
+    <!--   TODO: do a lot on converting english to logical expressions -->
+    <!-- </p> -->
+
+
+    <!-- <p> -->
+    <!--   We can negate quantified expressions by (basically) applying De Morgan's laws. -->
+    <!--   TODO -->
+    <!-- </p> -->
+
+    <example>
+      <statement>
+        <p>
+          If the universe of discourse is all people at the university, and <m>P(x)</m> is the statement <q><m>x</m> loves to drink coffee,</q> express each statement in plain English:
+
+          <ol>
+            <li> <m>\forall x P(x)</m></li>
+            <li>
+              <m>\exists x P(x)</m>
+            </li>
+            <li>
+              <m>\forall x \neg P(x)</m>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Translate the statement into logical expressions using predicates, quantifiers, and logical connectives.
+
+          <ol>
+            <li> All of your friends are perfect.</li>
+            <li>  Not everybody is your friend or someone is not perfect.</li>
+          </ol>
+
+        </p>
+      </statement>
+    </example>
+
+
+  </subsection>
+
+</section>
