@@ -62,7 +62,7 @@
       <row bottom="medium"><cell>Disjunctive Simplification</cell><cell>
       <m>(p \lor  q) \land  \neg p \Rightarrow  q</m> and <m>(p \lor q) \land \neg q\Rightarrow p</m></cell></row>
 
-      <row bottom="medium"><cell>Chain Rule</cell><cell>
+      <row bottom="medium"><cell>Chain Argument / Syllogism</cell><cell>
       <m>(p \to  q) \land  ( q \rightarrow  r) \Rightarrow  (p\to  r)</m>
       </cell></row>
       <row bottom="medium"><cell>Conditional Equivalence</cell><cell>
@@ -75,9 +75,6 @@
       <m>(p\to q) \Leftrightarrow (\neg q \to \neg p)</m></cell></row> 
     </tabular>
   </table>
-
-
-  <!-- todo I don't know where to put this, but I want it somewhere! //!-->
 
   <exercise>
     <statement>
