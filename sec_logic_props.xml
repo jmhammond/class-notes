@@ -430,4 +430,235 @@
       </answer>
     </example>
   </subsection>
+
+  <exercises>
+    <exercise>
+      <statement>
+        Construct a truth table for the compound statement <m>((p \to q) \land \neg p) \to \neg q</m>
+      </statement>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Consider the statement about a party, <q>If it's your birthday or there will be cake, then there will be cake.</q>
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                Translate the above statement into symbols. Clearly state which statement is <m>P</m> and which is <m>Q</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Make a truth table for the statement.
+              </p>
+            </li>
+            <li>
+              <p>
+                Assuming the statement is true, what (if anything) can you conclude if there will be cake?
+              </p>
+            </li>
+            <li>
+              <p>
+                Assuming the statement is true, what (if anything) can you conclude if there will not be cake?
+              </p>
+            </li>
+            <li>
+              <p>
+                Suppose you found out that the statement was a lie. What can you conclude?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li><m>P</m>: it's your birthday; <m>Q</m>: there will be cake. <m>(P \vee Q) \to Q</m></li>
+            <li>
+              <p>
+                Hint: you should get three T's and one F.
+              </p>
+            </li>
+            <li>
+              <p>
+                Only that there will be cake.
+              </p>
+            </li>
+            <li>
+              <p>
+                It's NOT your birthday!
+              </p>
+            </li>
+            <li>
+              <p>
+                It's your birthday, but the cake is a lie.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Make a truth table for the statement <m>(P \vee Q) \to (P \wedge Q)</m>.
+        </p>
+      </statement>
+      <solution>
+        <sidebyside>
+          <tabular halign="center">
+            <col right="minor"/>
+            <col right="medium"/>
+            <col/>
+            <row bottom="minor">
+              <cell><m>P</m></cell>
+              <cell><m>Q</m></cell>
+              <cell><m>(P \vee Q) \to (P \wedge Q)</m></cell>
+            </row>
+
+            <row>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+          </tabular>
+        </sidebyside>
+      </solution>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Make a truth table for the statement <m>\neg P \wedge (Q \to P)</m>. What can you conclude about <m>P</m> and <m>Q</m> if you know the statement is true?
+        </p>
+      </statement>
+      <solution>
+        <sidebyside>
+          <tabular halign="center">
+            <col right="minor"/>
+            <col right="medium"/>
+            <col/>
+            <row bottom="minor">
+              <cell><m>P</m></cell>
+              <cell><m>Q</m></cell>
+              <cell><m>\neg P \wedge (Q \to P)</m></cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+          </tabular>
+        </sidebyside>
+        <p>
+          If the statement is true, then both <m>P</m> and <m>Q</m> are false.
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Make a truth table for the statement <m>\neg P \to (Q \wedge R)</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Like above, only now you will need 8 rows instead of just 4.
+        </p>
+      </hint>
+    </exercise>
+
+
+    <exercise>
+      <statement>
+        State the converse, inverse, and contrapositive of each of the following conditional statements:
+        <ol>
+          <li>If it rains today, then I will bring an umbrella.</li>
+          <li>Whenever I drive my car, I do not use my phone.</li>
+          <li>When I stay up too late, it's necessary that I sleep until noon.</li>
+        </ol>
+      </statement>
+    </exercise>
+
+
+
+    <exercise>
+      <statement>
+        <p>
+          A classic example is that we're on the island of knights and knaves. Knights always tell the truth. Knaves always lie.
+        </p>
+        <p>
+          We encounter two people A and B.
+          <ul>
+            <li>
+              A says: <q>B is a knight.</q>
+            </li>
+            <li>
+              B says: <q>The two of us are opposite types.</q>
+            </li>
+          </ul>
+          What is the conclusion?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          This time you encounter two people, A, and B, and A says "I am a knave or B is a knight," and B says nothing. What can you conclude?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          This is a favorite of my daughter. You encounter a guard standing at a fork in the road. It is not known whether the guard will tell the truth or lie. One of the paths leads to great treasure, the other leads to a violent and scary death. You are allowed to ask one and only one question to the guard.
+        </p>
+        <p>
+          What can you ask the guard in order to ensure you go on the path towards the treasure?
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
+
 </section>

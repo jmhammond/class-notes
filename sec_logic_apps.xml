@@ -54,34 +54,5 @@
   </subsection>
   <subsection>
     <title>Logic Puzzles</title>
-    <p>
-      A classic example is that we're on the island of knights and knaves. Knights always tell the truth. Knaves always lie.
-    </p>
-    <example>
-      <statement>
-        <p>
-          We encounter two people A and B.
-          <ul>
-            <li>
-              A says: <q>B is a knight.</q>
-            </li>
-            <li>
-              B says: <q>The two of us are opposite types.</q>
-            </li>
-          </ul>
-          What is the conclusion?
-        </p>
-      </statement>
-    </example>
-    <exercise>
-      <statement>
-        <p>
-          This is a favorite of my daughter. You encounter a guard standing at a fork in the road. It is not known whether the guard will tell the truth or lie. One of the paths leads to great treasure, the other leads to a violent and scary death. You are allowed to ask one and only one question to the guard.
-        </p>
-        <p>
-          What can you ask the guard in order to ensure you go on the path towards the treasure?
-        </p>
-      </statement>
-    </exercise>
   </subsection>
 </section>

@@ -34,12 +34,20 @@
       </titlepage>
 
       <website>
+        <p>
+
         <name>Class Notes Website</name>
         <address>http://www.math.wichita.edu/discrete-book</address>
+        </p>
       </website>
 
       <acknowledgement>
-        This book borrows heavily from the exercises of Oscar Levin's <a href="https://github.com/oscarlevin/discrete-book">Discrete Mathematics: An Open Introduction</a>.
+        <p>
+        This book borrows heavily from the exercises of Oscar Levin's <url href="https://github.com/oscarlevin/discrete-book">Discrete Mathematics: An Open Introduction</url>.
+        </p>
+        <p>
+          I'm also grateful for you, reader, as we go on this journey of mathematics together. This is going to be fun.
+        </p>
       </acknowledgement>
     </frontmatter>
 
