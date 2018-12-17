@@ -260,7 +260,7 @@
 
     <exercise>
       <statement>
-        Let <m>C(x)</m> denote the predicate <q><m>x</m> is in the correct place</q>, let <m>E(x)</m> denote <q><m>x is in excellent condition</m></q>, and let <m>T(x)</m> denote <q><m>x</m> is a tool</q> where the domain of each predicate is the set of objects in a garage. Translate each into plain English:
+        Let <m>C(x)</m> denote the predicate <q><m>x</m> is in the correct place</q>, let <m>E(x)</m> denote <q><m>x</m> is in excellent condition</q>, and let <m>T(x)</m> denote <q><m>x</m> is a tool</q> where the domain of each predicate is the set of objects in a garage. Translate each into plain English:
         <ol>
           <li> <m>\exists x \neg C(x)</m></li>
           <li> <m>\exists x (T(x) \land \neg C(x))</m></li>
