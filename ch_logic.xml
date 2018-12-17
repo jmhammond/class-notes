@@ -4,16 +4,23 @@
 
   <xi:include href="./sec_logic_props.xml"/>
 
-  <!-- I don't really want to include this separately... -->
-  <!-- I have a todo item to merge them as examples / exercises -->
-  <!-- <xi:include href="./sec_logic_apps.xml"/> -->
-
-
   <xi:include href="./sec_logic_equivalences.xml"/>
   <xi:include href="./sec_logic_quantifiers.xml"/>
   <xi:include href="./sec_logic_arguments.xml"/>
   <xi:include href="./sec_logic_proofs.xml"/>
   
+  <section>
+    <title>
+      Supplemental Exercises
+    </title>
+
+    <p>
+      Here are some additional exercises for practice.
+    </p>
+
+    <xi:include href="./sec_logic_supplemental.xml"/>
+
+  </section>
 
 
 </chapter>
