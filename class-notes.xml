@@ -24,7 +24,25 @@
           If you're reading this, I forgot to write the preface. Whoopsie-doodle.
         </p>
       </preface>
+
+      <titlepage>
+      <author>
+        <personname>John Hammond</personname>
+        <department>Department of Mathematics and Statistics</department>
+        <institution>Wichita State University</institution>
+      </author>
+      </titlepage>
+
+      <website>
+        <name>Class Notes Website</name>
+        <address>http://www.math.wichita.edu/discrete-book</address>
+      </website>
+
+      <acknowledgement>
+        This book borrows heavily from the exercises of Oscar Levin's <a href="https://github.com/oscarlevin/discrete-book">Discrete Mathematics: An Open Introduction</a>.
+      </acknowledgement>
     </frontmatter>
+
 
     <xi:include href="./ch_logic.xml"/>
     <xi:include href="./ch_objects.xml"/>
