@@ -206,6 +206,32 @@
 
     <exercise>
       <statement>
+        Determine the truth value of the each of these statements if the domain consists of all integers
+        <ol>
+          <li><m>\forall n (n+1 > n)</m></li>
+          <li><m>\exists n (n^3 = -1)</m></li>
+          <li><m>\exists n (2n = 5n)</m></li>
+          <li><m>\forall n (3n \le 4n)</m></li>
+          <li><m>\forall x \forall y ((x^2 = y^2) \to (x = y))</m></li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        Deterine the truth value of each of the following statements if the domain consists of all real numbers.
+        <ol>
+          <li><m>\exists x(x^2 = 2)</m></li>
+          <li><m>\exists x (x^2 = -1)</m></li>
+          <li><m>\forall x (x^2 + 2 \ge 1)</m></li>
+          <li><m>\forall x (2x > 2)</m></li>
+          <li><m>\forall x (x+4)^2 = x^2 + 16</m></li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
         <p>
       Consider the statement, <q>There is a building on the campus of some college in the United States in which every room is painted white.</q>
         </p>
