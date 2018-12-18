@@ -81,7 +81,7 @@
 
     <definition>
       <p>
-        Given any set <m>S</m>, the <term>power set</term> of <m>S</m> is the set of all subsets of the set <m>S</m>. We denote the power set of <m>S</m> by <m>\mathcal{P}(S)</m>
+        Given any set <m>S</m>, the <term>power set</term> of <m>S</m> is the set of all subsets of the set <m>S</m>. We denote the power set of <m>S</m> by <m>\pow(S)</m>
       </p>
     </definition>
     
@@ -116,7 +116,7 @@
           <li>
             <m>|\{a, b, c\}|</m>
           </li>
-          <li><m>|\mathcal{P}(\{a, b, c \})|</m></li>
+          <li><m>|\pow(\{a, b, c \})|</m></li>
           <li>
             <m>|\phi|</m>
           </li>
@@ -152,6 +152,9 @@
       <statement>
         Let <m>A=\{1, 2\}</m> and <m>B = \{x, y , z\}</m>, find:
         <ol>
+          <li><m>|A|</m></li>
+          <li><m>|B|</m></li>
+          <li>How many elements do you expect in <m>A \times B</m>?</li>
           <li><m>A \times B</m></li>
           <li><m>B \times A</m></li>
           <li><m>A^2</m></li>
@@ -227,13 +230,22 @@
       <statement>
         Let <m>A=\{a,b,c,d,e\}</m> and <m>B=\{a, b,c,d,e,f,g,h\}</m>, find
         <ol>
+          <li><m>|A|</m></li>
+          <li><m>|B|</m></li>
           <li><m>A\cup B</m></li>
           <li><m>A\cap B</m></li>
+          <li><m>|A\cup B|</m></li>
+          <li><m>|A\cap B|</m></li>
           <li><m>A\setminus B</m></li>
           <li><m>B\setminus A</m></li>
         </ol>
       </statement>
     </example>
+    <note>
+      <statement>
+        What do you observe about some combination of the cardinalities above?
+      </statement>
+    </note>
 
   </subsection>
 
@@ -822,10 +834,87 @@
       <statement>
 
         <p>
+          Let <m>A = \{a, b, c, d\}</m>. Find <m>\pow(A)</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          We are looking for a set containing 16 sets.
+        </p>
+      </hint>
+
+    </exercise>
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+
+        <p>
+          Let <m>A = \{1,2,3,4,5,6\}</m>. Find all sets <m>B \in \pow(A)</m> which have the property <m>\{2,3,5\} \subseteq B</m>.
+        </p>
+      </statement>
+
+
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Find an example of sets <m>A</m> and <m>B</m> such that <m>|A| = 4</m>, <m>|B| = 5</m>, and <m>|A \cup B| = 9</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          For example, <m>A = \{1,2,3,4\}</m> and <m>B = \{5,6,7,8,9\}</m> gives <m>A \cup B = \{1,2,3,4,5,6,7,8,9\}</m>.
+        </p>
+      </solution>
+    </exercise>
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+
+        <p>
           Let <m>A = \{1,2,\ldots, 10\}</m>. How many subsets of <m>A</m> contain exactly one element (i.e., how many <term>singleton</term> subsets are there)? How many <term>doubleton</term> subsets (containing exactly two elements) are there?
         </p>
       </statement>
 
+    </exercise>
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Find an example of sets <m>A</m> and <m>B</m> such that <m>|A| = 3</m>, <m>|B| = 4</m>, and <m>|A \cup B| = 5</m>.
+        </p>
+      </statement>
+
+
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Are there sets <m>A</m> and <m>B</m> such that <m>|A| = |B|</m>, <m>|A\cup B| = 10</m>, and <m>|A\cap B| = 5</m>? Explain.
+        </p>
+      </statement>
+    </exercise>
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+
+        <p>
+          In a regular deck of playing cards there are 26 red cards and 12 face cards. Explain, using sets and what you have learned about cardinalities, why there are only 32 cards which are either red or a face card.
+        </p>
+      </statement>
     </exercise>
 
   </exercises>
