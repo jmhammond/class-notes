@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
 
-  <docinfo>
-    <brandlogo url="" source="./images/WSULogo.png" />
-    <!--
-        note this is where latex headers will go later
-        see the pretext sample-book.xml file for ideas: https://github.com/rbeezer/mathbook/blob/56f24c8392c6ae45e9330433fda6d28232760dfc/examples/sample-book/bookinfo.xml
-        //-->
-  </docinfo>
+  <xi:include href="./bookinfo.xml"/>
 
   <book xml:id="discrete-class-notes">
     <title>Math 321 Class Notes</title>
