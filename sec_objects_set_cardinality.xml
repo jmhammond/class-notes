@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_objects_set_cardinality">
+
+
+  <title>
+    Cardinality
+  </title>
+
+
+
+
+<exercises>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+
+        <p>
+          Let <m>A = \{a, b, c, d\}</m>. Find <m>\pow(A)</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          We are looking for a set containing 16 sets.
+        </p>
+      </hint>
+
+    </exercise>
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+
+        <p>
+          Let <m>A = \{1,2,3,4,5,6\}</m>. Find all sets <m>B \in \pow(A)</m> which have the property <m>\{2,3,5\} \subseteq B</m>.
+        </p>
+      </statement>
+
+
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Find an example of sets <m>A</m> and <m>B</m> such that <m>|A| = 4</m>, <m>|B| = 5</m>, and <m>|A \cup B| = 9</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          For example, <m>A = \{1,2,3,4\}</m> and <m>B = \{5,6,7,8,9\}</m> gives <m>A \cup B = \{1,2,3,4,5,6,7,8,9\}</m>.
+        </p>
+      </solution>
+    </exercise>
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Find an example of sets <m>A</m> and <m>B</m> such that <m>|A| = 3</m>, <m>|B| = 4</m>, and <m>|A \cup B| = 5</m>.
+        </p>
+      </statement>
+
+
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Are there sets <m>A</m> and <m>B</m> such that <m>|A| = |B|</m>, <m>|A\cup B| = 10</m>, and <m>|A\cap B| = 5</m>? Explain.
+        </p>
+      </statement>
+    </exercise>
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+
+        <p>
+          In a regular deck of playing cards there are 26 red cards and 12 face cards. Explain, using sets and what you have learned about cardinalities, why there are only 32 cards which are either red or a face card.
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
+
+</section>
