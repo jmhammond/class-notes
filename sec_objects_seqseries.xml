@@ -195,6 +195,20 @@
 
     <exercise>
       <statement>
+        <p>
+          Is the sequence <m>\{a_n\}</m> a solution of the recurrence relation <m>a_n = 8a_{n-1}-16a_{n-2}</m> if
+          <ol>
+            <li><m>a_n = 0</m></li>
+            <li><m>a_n = 2n</m></li>
+            <li><m>a_n = 2^n</m> </li>
+            <li><m>a_n = 4^n</m> </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
         Find a solution to the recurrence relation
         <ol>
           <li><m>a_n = 3_{n-1},\, a_0 = 2</m></li>
@@ -224,6 +238,4 @@
     </exercise>
 
   </exercises>
-
-
 </section>

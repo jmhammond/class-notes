@@ -329,6 +329,22 @@
       </statement>
     </exercise>
 
+    
+    <exercise>
+      <statement>
+        <p>Let M = \begin{bmatrix}
+          0 & 1 & 1 & 0 \\
+          1 & 1 & 0 & 1 \\
+          1 & 0 & 1 & 0 \\
+          0 & 1 & 0 & 1 
+          \end{bmatrix}<m>. Find:
+        </p>
+        <ol>
+          <li><m>M^2</m>, the standard matrix product</li>
+          <li><m>M^{[2]}</m>, the boolean matrix product</li>
+        </ol>
+      </statement>
+    </exercise>
 
   </exercises>
 
