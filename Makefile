@@ -18,7 +18,7 @@ pdf: tex
 clean:
 	rm -f *.out *.toc *.html *.aux *.log discrete-class-notes.pdf discrete-class-notes.tex
 
-publish:
+publish: html
 	cp *.html ~/public_html/class-notes
 	cp knowl/*.html ~/public_html/class-notes/knowl
 	cp images/* ~/public_html/class-notes/images
