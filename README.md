@@ -18,7 +18,7 @@ Build Directions (in case someone is just getting started with PreText)
   `xsltproc $(location of mathbook-html.xsl) $(location of your xml file)`
   
 Image building dependencies
-- In addition to a basic latex distribution, the /mbx/ script from pretext requires xetex
+- In addition to a basic latex distribution, the *mbx* script from pretext requires xetex
 - the images require the texlive-games package for the skak.sty style file.
 - To build the svg images from the latex code, run: 
 ```bash
