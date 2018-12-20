@@ -332,12 +332,12 @@
     
     <exercise>
       <statement>
-        <p>Let M = \begin{bmatrix}
-          0 & 1 & 1 & 0 \\
-          1 & 1 & 0 & 1 \\
-          1 & 0 & 1 & 0 \\
-          0 & 1 & 0 & 1 
-          \end{bmatrix}<m>. Find:
+        <p>Let <m>M = \begin{bmatrix}
+          0 &amp; 1 &amp; 1 &amp; 0 \\
+          1 &amp; 1 &amp; 0 &amp; 1 \\
+          1 &amp; 0 &amp; 1 &amp; 0 \\
+          0 &amp; 1 &amp; 0 &amp; 1 
+          \end{bmatrix}</m>. Find:
         </p>
         <ol>
           <li><m>M^2</m>, the standard matrix product</li>
