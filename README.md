@@ -17,6 +17,16 @@ Build Directions (in case someone is just getting started with PreText)
 - Run commands like the ones you see in my Makefile. It's as easy as: 
   `xsltproc $(location of mathbook-html.xsl) $(location of your xml file)`
   
+Image building dependencies
+- In addition to a basic latex distribution, the /mbx/ script from pretext requires xetex
+- the images require the texlive-games package for the skak.sty style file.
+- To build the svg images from the latex code, run: 
+```bash
+~/src/mathbook/script/mbx -vv -c latex-image -f svg -d ~/Documents/class-notes/images ~/Documents/class-notes/class-notes.xml
+```
+(where the location of the pretext /mathbook/ folder and this set of class notes would depend on your own machine)
+
+  
 Acknowledgements: 
 - I was inspired to write my notes when I encounted [Alan Doerr & Kenneth Levasseur's Applied Discrete Structures](https://github.com/klevasseur/ads) which I used as a supplemental text for my computer science based mathematical structures course (Math 322).
 - I borrow heavily from the exercises of Oscar Levin's [Discrete Mathematics: An Open Introduction](https://github.com/oscarlevin/discrete-book).
