@@ -30,11 +30,22 @@
       </p>
       <p>
         This argument is of the form:
-        <ul>
-          <li><m> p \to q</m> </li>
-          <li><m> p</m></li>
-          <li><m> \therefore q</m></li>
-        </ul>
+        <sidebyside>
+          <tabular halign="center">
+            <row>
+              <cell/>
+              <cell><m>p \to q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m> p</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>q</m></cell>
+            </row>
+          </tabular>
+        </sidebyside>
         and is valid since <m> ((p \to q) \wedge p) \to q</m> is a tautology.
       </p>
     </statement>
@@ -134,7 +145,7 @@
         <tabular>
           <col right="minor"/>
           <col right="medium"/>
-          <row>
+          <row bottom="minor">
             <cell> Step</cell> 
             <cell> Reason </cell>
           </row>

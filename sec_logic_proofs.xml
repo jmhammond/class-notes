@@ -529,9 +529,6 @@
           </blockquote>
         <p>
           Write out the beginning and end of the argument if you were to prove the statement,
-        </p>
-
-        <p>
           <ol>
             <li>
               <p>
@@ -620,9 +617,6 @@
       <statement>
         <p>
           Consider the statement: for all integers <m>a</m> and <m>b</m>, if <m>a</m> is even and <m>b</m> is a multiple of 3, then <m>ab</m> is a multiple of 6.
-        </p>
-
-        <p>
           <ol>
             <li>
               <p>
@@ -796,14 +790,11 @@
     </exercise>
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
-          For each of the statements below, say what method of proof you should use to prove them. Then say how the proof starts and how it ends. Bonus points for filling in the middle.
-        </p>
-
-        <p>
+          For each of the statements below, say what method of proof you should use to prove them. Then say how the proof starts and how it ends. Pretend bonus points for filling in the middle.
           <ol>
             <li>
               <p>

@@ -321,9 +321,6 @@
     <statement>
       <p>
         Consider the statement: for all integers <m>n</m>, if <m>n</m> is even and <m>n \le 7</m> then <m>n</m> is negative or <m>n \in \{0,2,4,6\}</m>.
-      </p>
-
-      <p>
         <ol>
           <li>
             <p>
@@ -380,9 +377,6 @@
     <statement>
       <p>
         Consider the statement: <m>\forall x (\forall y (x + y = y) \to \forall z (x\cdot z = 0))</m>.
-      </p>
-
-      <p>
         <ol>
           <li>
             <p>
@@ -439,9 +433,6 @@
     <statement>
       <p>
         Write each of the following statements in the form, <q>if <ellipsis/>, then <ellipsis/>.</q> Careful, some of the statements might be false (which is alright for the purposes of this question).
-      </p>
-
-      <p>
         <ol>
           <li>
             <p>
@@ -551,9 +542,6 @@
     <statement>
       <p>
         Consider the statement: for all integers <m>n</m>, if <m>n</m> is odd, then <m>7n</m> is odd.
-      </p>
-
-      <p>
         <ol>
           <li>
             <p>

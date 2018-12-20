@@ -543,9 +543,6 @@
       <statement>
         <p>
           Let <m>A = \{1,2,3,4,5\}</m>, <m>B = \{3,4,5,6,7\}</m>, and <m>C = \{2,3,5\}</m>.
-        </p>
-
-        <p>
           <ol>
             <li> <p> Find <m>A \cap B</m>. </p> </li>
             <li> <p> Find <m>A \cup B</m>. </p> </li>
@@ -581,9 +578,6 @@
 
         <p>
           Let <m>A = \{x \in \N \st 3 \le x \le 13\}</m>, <m>B = \{x \in \N \st x \mbox{ is even} \}</m>, and <m>C = \{x \in \N \st x \mbox{ is odd} \}</m>.
-        </p>
-
-        <p>
           <ol>
             <li> <p> Find <m>A \cap B</m>. </p> </li>
             <li> <p> Find <m>A \cup B</m>. </p> </li>
@@ -628,9 +622,6 @@
       <statement>
         <p>
           Recall <m>\Z = \{\ldots,-2,-1,0, 1,2,\ldots\}</m> (the integers). Let <m>\Z^+ = \{1, 2, 3, \ldots\}</m> be the positive integers. Let <m>2\Z</m> be the even integers, <m>3\Z</m> be the multiples of 3, and so on.
-        </p>
-
-        <p>
           <ol> <li> <p> Is <m>\Z^+ \subseteq 2\Z</m>? Explain. </p> </li>
             <li> <p> Is <m>2\Z \subseteq \Z^+</m>? Explain. </p> </li>
             <li> <p> Find <m>2\Z \cap 3\Z</m>. Describe the set in words, and using set notation. </p> </li>

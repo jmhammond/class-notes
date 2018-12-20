@@ -229,31 +229,37 @@
 
     <exercise>
       <statement>
-        Find a solution to the recurrence relation
-        <ol>
-          <li><m>a_n = 3_{n-1},\, a_0 = 2</m></li>
-          <li><m>a_n = a_{n-1} + n,\, a_0 = 1</m></li>
-          <li><m>a_n = na_{n-1},\, a_0 = 1</m></li>
-        </ol>
+        <p>
+          Find a solution to the recurrence relation
+          <ol>
+            <li><m>a_n = 3_{n-1},\, a_0 = 2</m></li>
+            <li><m>a_n = a_{n-1} + n,\, a_0 = 1</m></li>
+            <li><m>a_n = na_{n-1},\, a_0 = 1</m></li>
+          </ol>
+        </p>
       </statement>
     </exercise>
 
     <exercise>
       <statement>
-        Find the value of each of the following sums:
-        <ol>
-          <li> <m>\displaystyle \sum_{k=0}^8 3\cdot 2^k</m> </li>
-          <li> <m>\displaystyle \sum_{k=1}^8 2^k </m> </li>
-          <li> <m>\displaystyle \sum_{k=1}^8 (1 + (-1)^k) </m> </li>
-          <li> <m>\displaystyle \sum_{k=1}^8 (2^{k+1} - 2^k) </m> </li>
-          <li><m>\displaystyle \sum_{k=50}^{100} k</m></li>
-        </ol>
+        <p>
+          Find the value of each of the following sums:
+          <ol>
+            <li> <m>\displaystyle \sum_{k=0}^8 3\cdot 2^k</m> </li>
+            <li> <m>\displaystyle \sum_{k=1}^8 2^k </m> </li>
+            <li> <m>\displaystyle \sum_{k=1}^8 (1 + (-1)^k) </m> </li>
+            <li> <m>\displaystyle \sum_{k=1}^8 (2^{k+1} - 2^k) </m> </li>
+            <li><m>\displaystyle \sum_{k=50}^{100} k</m></li>
+          </ol>
+        </p>
       </statement>
     </exercise>
 
     <exercise>
       <statement>
-        Using <xref ref="example-telescoping-sum">the telescoping example</xref>, derive a formula for <m>\displaystyle \sum_{k=1}^n k^2</m>
+        <p>
+          Using <xref ref="example-telescoping-sum">the telescoping example</xref>, derive a formula for <m>\displaystyle \sum_{k=1}^n k^2</m>
+        </p>
       </statement>
     </exercise>
 

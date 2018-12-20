@@ -177,7 +177,7 @@
         <tabular>
           <col right="minor"/>
           <col right="medium"/>
-          <row>
+          <row bottom="minor">
             <cell>Operator </cell>
             <cell>Precedence</cell>
           </row>
@@ -195,11 +195,12 @@
           </row>
         </tabular>
         <p>
+          <line/>
           For example:
-          <m>
+          <me>
             \neg p \vee q \wedge r \to p \wedge q \\
             \equiv \left(\left(\left(\neg p\right)\vee q\right) \wedge r\right) \to \left(p \wedge q \right)
-          </m>
+          </me>
         </p>
       </sidebyside>
 
