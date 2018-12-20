@@ -98,9 +98,12 @@
     </solution>
   </example>
 
-  <p>
-    The following is a collection of very useful tautologies. Do you need to memorize them? Absolutely!
-  </p>
+  <note>
+    <p>
+      The following is a collection of very useful tautologies. Do you need to memorize them? Absolutely!
+    </p>
+  </note>
+
   <table xml:id="table-equivalences">
     <!-- table modified from https://github.com/klevasseur/ads //-->
     <caption>Logical Equivalences</caption>
@@ -263,15 +266,17 @@
 
     <exercise>
       <statement>
-        Use a truth table to show that <m>p \to q) \land (p \to r)</m> and <m>p \to (q \to r)</m> are logically equivalent.
+        <p>
+          Use a truth table to show that <m>p \to q) \land (p \to r)</m> and <m>p \to (q \to r)</m> are logically equivalent.
+        </p>
       </statement>
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
-        <p> Simplify the following statements (so that negation only appears right before variables). </p>
         <p>
+          Simplify the following statements (so that negation only appears right before variables).
           <ol> <li><m>\neg(P \to \neg Q)</m>.</li>
           <li><m>(\neg P \vee \neg Q) \to \neg (\neg Q \wedge R)</m>.</li> <li><m>\neg((P \to \neg Q) \vee \neg (R \wedge \neg R))</m>.</li>
           <li> <p> It is false that if Sam is not a man then Chris is a woman, and that Chris is not a woman. </p> </li> </ol>
@@ -295,9 +300,6 @@
       <statement>
         <p>
           Use De Morgan's Laws, and any other logical equivalence facts you know to simplify the following statements. Show all your steps. Your final statements should have negations only appear directly next to the sentence variables or predicates (<m>P</m>, <m>Q</m>, <m>E(x)</m>, etc.), and no double negations. It would be a good idea to use only conjunctions, disjunctions, and negations.
-        </p>
-
-        <p>
           <ol>
             <li><m>\neg((\neg P \wedge Q) \vee \neg(R \vee \neg S))</m>.
 

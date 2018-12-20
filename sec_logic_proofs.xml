@@ -35,7 +35,9 @@
   </example>
   <note>
     <statement>
-      The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words "for all."
+      <p>
+        The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words "for all."
+      </p>
     </statement>
   </note>
 
@@ -51,20 +53,26 @@
 
     <example>
       <statement>
-        Prove that the sum of two odd numbers is even.
+        <p>
+          Prove that the sum of two odd numbers is even.
+        </p>
       </statement>
     </example>
 
 
     <example xml:id="example-neven">
       <statement>
-        Prove that if <m>n</m> is even, then <m>n^2</m> is even.
+        <p>
+          Prove that if <m>n</m> is even, then <m>n^2</m> is even.
+        </p>
       </statement>
     </example>
 
     <example>
       <statement>
-        Prove that if <m>m+n</m> and <m>n + p</m> are even integers, then <m>m+p</m> is even.
+        <p>
+          Prove that if <m>m+n</m> and <m>n + p</m> are even integers, then <m>m+p</m> is even.
+        </p>
       </statement>
     </example>
     
@@ -90,12 +98,16 @@
       </p>
       <example>
         <statement>
-          Show that if <m>n</m> is an integer and <m>n^3 + 5</m> is odd, then <m>n</m> is even.
+          <p>
+            Show that if <m>n</m> is an integer and <m>n^3 + 5</m> is odd, then <m>n</m> is even.
+          </p>
         </statement>
       </example>
       <example xml:id="example-n2even">
         <statement>
-          Prove that if <m>n^2</m> is even, then <m>n</m> is even.
+          <p>
+            Prove that if <m>n^2</m> is even, then <m>n</m> is even.
+          </p>
         </statement>
       </example>
     </subsubsection>
@@ -111,7 +123,9 @@
 
       <example>
         <statement>
-          Prove that <m>\sqrt{2}</m> is irrational
+          <p>
+            Prove that <m>\sqrt{2}</m> is irrational
+          </p>
         </statement>
       </example>
 
@@ -138,7 +152,9 @@
     </p>
     <example>
       <statement>
-        Prove that <m>n</m> is even if and only if <m>n^2</m> is even.
+        <p>
+          Prove that <m>n</m> is even if and only if <m>n^2</m> is even.
+        </p>
       </statement>
       <solution>
         <p>We actually did this in the two previous subsections. The <xref ref="example-neven">forward direction</xref> and <xref ref="example-n2even">the converse</xref>.</p>
@@ -147,13 +163,17 @@
 
     <example>
       <statement>
-        Prove that <m>n</m> is even if and only if <m>7n+4</m> is even.
+        <p>
+          Prove that <m>n</m> is even if and only if <m>7n+4</m> is even.
+        </p>
       </statement>
     </example>
 
     <example>
       <statement>
-        Prove the following are equivalent:
+        <p>
+          Prove the following are equivalent:
+        </p>
         <ol>
           <li><m>a\lt b</m></li>
           <li>The average of <m>a</m> and <m>b</m> is greater than <m>a</m> </li>
@@ -172,7 +192,9 @@
       Split an argument into completely separate pieces. In the example below we have two cases. Either <m>x \ge y</m> or <m>x \lt y</m>:
       <example>
         <statement>
-          Show that if <m>x</m> and <m>y</m> are real numbers, then:
+          <p>
+            Show that if <m>x</m> and <m>y</m> are real numbers, then:
+          </p>
           <ul>
             <li>
               max(<m>x,y</m>) = <m>\dfrac{x+y + |x-y|)}{2}</m>
@@ -185,7 +207,9 @@
       </example>
       <note>
         <statement>
-          We need to prove each claim separately for each case!
+          <p>
+            We need to prove each claim separately for each case!
+          </p>
         </statement>
       </note>
     </p>
@@ -193,7 +217,9 @@
       What if the cases might be the same? Below, we have two cases, either <m>x</m> is odd and <m>y</m> is even, or <m>x</m> is even and <m>y</m> is odd:
       <example>
         <statement>
-          Prove that <m>5x + 5y</m> is an odd integer when <m>x</m> and <m>y</m> are integers of opposite parity (not both even, not both odd). 
+          <p>
+            Prove that <m>5x + 5y</m> is an odd integer when <m>x</m> and <m>y</m> are integers of opposite parity (not both even, not both odd).
+          </p>
         </statement>
       </example>
     </p>
@@ -211,13 +237,17 @@
 
     <example>
       <statement>
-        Prove that either <m>2 \cdot 10^{500} + 15</m> or <m>2 \cdot 10^{500} + 16</m> is not a perfect square. 
+        <p>
+          Prove that either <m>2 \cdot 10^{500} + 15</m> or <m>2 \cdot 10^{500} + 16</m> is not a perfect square.
+        </p>
       </statement>
     </example>
 
     <example>
       <statement>
-        Show that between any two rational numbers is another rational number.
+        <p>
+          Show that between any two rational numbers is another rational number.
+        </p>
       </statement>
     </example>
 
@@ -241,13 +271,17 @@
 
     <example>
       <statement>
-        Show that if <m>a, b, c</m> are real numbers, then thare is a unique solution to the algebraic equation <m>ax+b=c</m>.
+        <p>
+          Show that if <m>a, b, c</m> are real numbers, then thare is a unique solution to the algebraic equation <m>ax+b=c</m>.
+        </p>
       </statement>
     </example>
 
     <example>
       <statement>
-        Show that if <m>n</m> is an odd integer, then there exists a unique integer <m>k</m> such that <m>n = (k-2) + (k+3)</m>
+        <p>
+          Show that if <m>n</m> is an odd integer, then there exists a unique integer <m>k</m> such that <m>n = (k-2) + (k+3)</m>
+        </p>
       </statement>
     </example>
 
@@ -260,7 +294,9 @@
       <p>A <term>vacuous statement</term> is one that is true because the hypothesis is false. You can <q>prove</q> a statement is true immediately.
       <example>
         <statement>
-          If I play in the Super Bowl, I will throw the game winning touchdown.
+          <p>
+            If I play in the Super Bowl, I will throw the game winning touchdown.
+          </p>
         </statement>
         <solution>
           <p>
@@ -278,7 +314,9 @@
 
         <example>
           <statement>
-            Let <m>P(x)</m> be the statement <q>If <m>x\in \mathbb{R}</m> and <m>x \gt 0</m> , then <m>x^2 + 1 \ge 0</m></q>.
+            <p>
+              Let <m>P(x)</m> be the statement <q>If <m>x\in \mathbb{R}</m> and <m>x \gt 0</m> , then <m>x^2 + 1 \ge 0</m></q>.
+            </p>
           </statement>
           <solution>
             <p>
@@ -299,7 +337,9 @@
     </p>
     <example>
       <statement>
-        Each of the following statements is false. Find a specific counterexample and explain why.
+        <p>
+          Each of the following statements is false. Find a specific counterexample and explain why.
+        </p>
         <ol>
           <li>If <m>n</m> is a real number, then <m>(n+4)^2 = n^2 + 16</m>.</li>
           <li>Every integer is the sum of the squares of two integers.</li>

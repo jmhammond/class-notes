@@ -24,11 +24,13 @@
 
   <example>
     <statement>
-      Find the domain, codomain, and range of the following functions: 
-      <ol>
-        <li>Let <m>f: \mathbb{Z} \to \mathbb{Z}</m> be defined by <m>f(x)=x^2</m></li>
-        <li>Let <m>g: \mathbb{R} \to \mathbb{R}</m> be defined by <m>g(x)=x^2</m></li>
-      </ol>
+      <p>
+        Find the domain, codomain, and range of the following functions:
+        <ol>
+          <li>Let <m>f: \mathbb{Z} \to \mathbb{Z}</m> be defined by <m>f(x)=x^2</m></li>
+          <li>Let <m>g: \mathbb{R} \to \mathbb{R}</m> be defined by <m>g(x)=x^2</m></li>
+        </ol>
+      </p>
     </statement>
   </example>
 
@@ -58,11 +60,13 @@
 
   <example>
     <statement>
-      Determine if the following functions are injective. If so, prove it. If not, provide a specific counterexample showing that it is not.
+      <p>
+        Determine if the following functions are injective. If so, prove it. If not, provide a specific counterexample showing that it is not.
       <ol>
         <li>Let <m>f:\mathbb{R} \to \mathbb{R}</m> be defined by <m>f(x) = 2x-1</m>.</li>
         <li>Let <m>g(x) = x^2</m> be the mapping from <m>\mathbb{R} \to \mathbb{R}</m>.</li>
       </ol>
+      </p>
     </statement>
   </example>
 
@@ -86,12 +90,14 @@
 
   <example>
     <statement>
-      Determine if the following functions are surjective. If so, prove it. If not, provide a specific counterexample showing that it is not.
+      <p>
+        Determine if the following functions are surjective. If so, prove it. If not, provide a specific counterexample showing that it is not.
       <ol>
         <li>Let <m>f:\mathbb{R} \to \mathbb{R}</m> be defined by <m>f(x) = 2x-1</m>.</li>
         <li>Let <m>g(x) = x^2</m> be the mapping from <m>\mathbb{R} \to \mathbb{R}</m>.</li>
         <li>Let <m>g(x) = x^3</m> be the mapping from <m>\mathbb{Z} \to \mathbb{Z}</m>.</li>
       </ol>
+      </p>
     </statement>
   </example>
 
@@ -141,13 +147,17 @@
 
   <example>
     <statement>
-      For the bijection(s) found in example <xref ref="example-bijections"/>, find the inverse function.
+      <p>
+        For the bijection(s) found in example <xref ref="example-bijections"/>, find the inverse function.
+      </p>
     </statement>
   </example>
 
   <example>
     <statement>
-      Restrict the domain and/or codomain so that <m>f(x) = x^2 + 1</m> is invertible. Verify your answer is correct. 
+      <p>
+        Restrict the domain and/or codomain so that <m>f(x) = x^2 + 1</m> is invertible. Verify your answer is correct.
+      </p>
     </statement>
   </example>
 
@@ -176,19 +186,23 @@
 
   <example>
     <statement>
-      Find the floor and ceiling of each of the following real numbers:
+      <p>
+        Find the floor and ceiling of each of the following real numbers:
       <ol>
         <li>8.675309</li>
         <li><m>\pi</m></li>
         <li><m>-2.1</m></li>
         <li><m>7</m></li>
       </ol>
+      </p>
     </statement>
   </example>
 
   <example>
     <statement>
-      Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.
+      <p>
+        Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.
+      </p>
     </statement>
   </example>
 
@@ -207,8 +221,10 @@
 
   <example>
     <statement>
-      Prove that a function <m>f: \mathbb{R} \to \mathbb{R}</m> is strictly increasing if <m>f</m> is one-to-one.
-    <p>
+      <p>
+        Prove that a function <m>f: \mathbb{R} \to \mathbb{R}</m> is strictly increasing if <m>f</m> is one-to-one.
+      </p>
+      <p>
       A similar statement holds for strictly decreasing functions.
     </p>
     </statement>
@@ -231,7 +247,9 @@
 
   <example>
     <statement>
-      Let <m>f(x) = 5x-3</m> and <m>g(x) = 3x-5</m>. Find <m>f\circ g</m> and <m>g\circ f</m>
+      <p>
+        Let <m>f(x) = 5x-3</m> and <m>g(x) = 3x-5</m>. Find <m>f\circ g</m> and <m>g\circ f</m>
+      </p>
     </statement>
   </example>
 
@@ -252,7 +270,9 @@
 
   <example>
     <statement>
-      Suppose <m>f</m> and <m>f\circ g</m> are injective. Does it follow that <m>g</m> is also injective?
+      <p>
+        Suppose <m>f</m> and <m>f\circ g</m> are injective. Does it follow that <m>g</m> is also injective?
+      </p>
     </statement>
   </example>
 

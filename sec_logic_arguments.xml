@@ -86,7 +86,9 @@
 
   <example>
     <statement>
-      What rules of inference are being used here?
+      <p>
+        What rules of inference are being used here?
+      </p>
       <ul>
         <li>Kangaroos live in Australia and are marsupials. Therefore, kangaroos are marsupials. </li>
         <li> If I go swimming, then I will stay in the sun too long. If I stay in the sun too long, then I will sunburn. Therefore, if I go swimming, then I will sunburn. </li>
@@ -101,19 +103,19 @@
     <definition>
       <p>
         <term>Existential instantiation</term> describes the argument:
-        <m> \exists x P(x) \implies P(c) </m> for some <m>c</m> in the domain.
+        <me> \exists x P(x) \implies P(c) </me> for some <m>c</m> in the domain.
       </p>
       <p>
         <term>Existential generalization</term> describes the argument:
-        <m> P(c) \implies \exists x P(x) </m>.
+        <me> P(c) \implies \exists x P(x) </me>.
       </p>
       <p>
         <term>Universal modus ponens</term> describes the argument:
-        <m>\forall x (P(x) \to Q(x)) \wedge P(a) \implies Q(a)</m> where <m>a</m> is a particular element in the domain.
+        <me>\forall x (P(x) \to Q(x)) \wedge P(a) \implies Q(a)</me> where <m>a</m> is a particular element in the domain.
       </p>
       <p>
         <term>Universal modus tollens</term> describes the argument:
-        <m>\forall x (P(x) \to Q(x)) \wedge \neg Q(a) \implies \neg P(a)</m> where <m>a</m> is a particular element in the domain.
+        <me>\forall x (P(x) \to Q(x)) \wedge \neg Q(a) \implies \neg P(a)</me> where <m>a</m> is a particular element in the domain.
       </p>
       
     </definition>
@@ -121,7 +123,9 @@
 
   <example>
     <statement>
-      Show that the premises, "A student in this class has not read the book," and "Everyone in this class passed the first exam" imply the conclusion "Someone who passed the first exam has not read the book." Let <m>C(x)</m> be "<m>x</m> is in this class", <m>B(x)</m> "x has read the book", and <m>P(x)</m> "<m>x</m> passed the first exam."
+      <p>
+        Show that the premises, "A student in this class has not read the book," and "Everyone in this class passed the first exam" imply the conclusion "Someone who passed the first exam has not read the book." Let <m>C(x)</m> be "<m>x</m> is in this class", <m>B(x)</m> "x has read the book", and <m>P(x)</m> "<m>x</m> passed the first exam."
+      </p>
     </statement>
     <solution>
       <p> The statment, "someone who passed the first exam has not read the book" means there is someone in class did those things. <m>\exists x (P(x) \wedge \neg B(x))</m></p>
@@ -177,7 +181,9 @@
 
   <example>
     <statement>
-      For the following argument, explain the rules of inference for each step leading the the conclusion:
+      <p>
+        For the following argument, explain the rules of inference for each step leading the the conclusion:
+      </p>
       <p>
         Linda, a student in this class owns a red convertible. Everyone who owns a red convertible has gotten at least one speeding ticket. Therefore, someone in this class has gotten at least one speeding ticket.
       </p>
@@ -328,13 +334,17 @@
 
     <exercise>
       <statement>
-        Come with with all valid conclusions for this set of premises: <q>If you get out the leash, the dog wants to go for a walk,</q> <q>the dog wants to go for a  walk if you put on shoes,</q> <q>the dog wanting to go for a walk is sufficient for me to want a cat.</q> Explain your answer noting each step of the argument.
+        <p>
+          Come with with all valid conclusions for this set of premises: <q>If you get out the leash, the dog wants to go for a walk,</q> <q>the dog wants to go for a  walk if you put on shoes,</q> <q>the dog wanting to go for a walk is sufficient for me to want a cat.</q> Explain your answer noting each step of the argument.
+        </p>
       </statement>
     </exercise>
 
     <exercise>
       <statement>
-        Consider the statement <q>Superman saves the day or Lois Lane dies. Superman saved the day, therefore Lois didn't die.</q> Is the argument valid? Explain your answer.
+        <p>
+          Consider the statement <q>Superman saves the day or Lois Lane dies. Superman saved the day, therefore Lois didn't die.</q> Is the argument valid? Explain your answer.
+        </p>
       </statement>
     </exercise>
 

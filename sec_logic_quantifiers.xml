@@ -85,26 +85,30 @@
 
     <example>
       <statement>
-        Let <m>P(x)</m> be <q><m>x^2 \ge 0</m></q>. What is the truth value of <m>\forall x P(x)</m> if the domain is:
+        <p>
+          Let <m>P(x)</m> be <q><m>x^2 \ge 0</m></q>. What is the truth value of <m>\forall x P(x)</m> if the domain is:
+        </p>
         <ol>
           <li> All real numbers </li>
           <li> All complex numbers </li>
         </ol>
       </statement>
-      <answer>
-        <ol>
-          <li> Since <m>x^2 \ge 0</m> for all real numbers (what you learned in Algebra is true), this statement is true.</li>
-          <li> This is false. Let <m> x = \sqrt{-1}</m>. Then <m>(\sqrt{-1})^2 = -1 \not\ge 0</m>.</li>
-        </ol>
-        <p>
-          We showed that <m>\sqrt{-1}</m> is a counterexample to the universal quanfication.
-        </p>
-      </answer>
+      <!-- <answer> -->
+      <!--   <ol> -->
+      <!--     <li> Since <m>x^2 \ge 0</m> for all real numbers (what you learned in Algebra is true), this statement is true.</li> -->
+      <!--     <li> This is false. Let <m> x = \sqrt{-1}</m>. Then <m>(\sqrt{-1})^2 = -1 \not\ge 0</m>.</li> -->
+      <!--   </ol> -->
+      <!--   <p> -->
+      <!--     We showed that <m>\sqrt{-1}</m> is a counterexample to the universal quanfication. -->
+      <!--   </p> -->
+      <!-- </answer> -->
     </example>
 
     <example>
       <statement>
-        Let the domain be all real numbers. Find a counterexample to the following statements:
+        <p>
+          Let the domain be all real numbers. Find a counterexample to the following statements:
+        </p>
         <ol>
           <li><m>\forall x (x^2 \not= x)</m></li>
           <li><m>\forall x (|x| \gt 0)</m></li>
@@ -206,7 +210,9 @@
 
     <exercise>
       <statement>
-        Determine the truth value of the each of these statements if the domain consists of all integers
+        <p>
+          Determine the truth value of the each of these statements if the domain consists of all integers
+        </p>
         <ol>
           <li><m>\forall n (n+1 > n)</m></li>
           <li><m>\exists n (n^3 = -1)</m></li>
@@ -219,7 +225,9 @@
 
     <exercise>
       <statement>
-        Deterine the truth value of each of the following statements if the domain consists of all real numbers.
+        <p>
+          Deterine the truth value of each of the following statements if the domain consists of all real numbers.
+        </p>
         <ol>
           <li><m>\exists x(x^2 = 2)</m></li>
           <li><m>\exists x (x^2 = -1)</m></li>
@@ -234,8 +242,6 @@
       <statement>
         <p>
           Consider the statement, <q>There is a building on the campus of some college in the United States in which every room is painted white.</q>
-        </p>
-        <p>
           <ol>
             <li>Express the statement using quantifiers. Be sure to define your predicate functions and specify the domain of each variable.</li>
             <li>Express the negation of the above logical quantified statement so that no negation is to the left of a quantifier.</li>
@@ -248,7 +254,9 @@
 
     <exercise>
       <statement>
-        Translate these statements into English where <m>F(x)</m> is <q><m>x</m> is fast</q> and <m>A(x)</m> is <q><m>x</m> is an athlete.</q>.
+        <p>
+          Translate these statements into English where <m>F(x)</m> is <q><m>x</m> is fast</q> and <m>A(x)</m> is <q><m>x</m> is an athlete.</q>.
+        </p>
         <ol>
           <li><m>\forall x (A(x) \to F(x)</m></li>
           <li><m>\forall x (F(x) \land A(x)</m></li>
@@ -260,7 +268,9 @@
 
     <exercise>
       <statement>
-        Let <m>C(x)</m> denote the predicate <q><m>x</m> is in the correct place</q>, let <m>E(x)</m> denote <q><m>x</m> is in excellent condition</q>, and let <m>T(x)</m> denote <q><m>x</m> is a tool</q> where the domain of each predicate is the set of objects in a garage. Translate each into plain English:
+        <p>
+          Let <m>C(x)</m> denote the predicate <q><m>x</m> is in the correct place</q>, let <m>E(x)</m> denote <q><m>x</m> is in excellent condition</q>, and let <m>T(x)</m> denote <q><m>x</m> is a tool</q> where the domain of each predicate is the set of objects in a garage. Translate each into plain English:
+        </p>
         <ol>
           <li> <m>\exists x \neg C(x)</m></li>
           <li> <m>\exists x (T(x) \land \neg C(x))</m></li>

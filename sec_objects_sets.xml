@@ -67,8 +67,11 @@
     </definition>
 
     <theorem>
-      <statement>For every set <m>S</m>:
-      <ul>
+      <statement>
+        <p>
+          For every set <m>S</m>:
+        </p>
+        <ul>
         <li>
           <m>\phi \subseteq S</m>
         </li>
@@ -87,7 +90,9 @@
     
     <example>
       <statement>
-        Find the power set of:
+        <p>
+          Find the power set of:
+        </p>
         <ol>
           <li>
             <m>\{a, b, c\}</m>
@@ -111,7 +116,9 @@
 
     <example>
       <statement>
-        Find the cardinality:
+        <p>
+          Find the cardinality:
+        </p>
         <ol>
           <li>
             <m>|\{a, b, c\}|</m>
@@ -150,7 +157,9 @@
 
     <example>
       <statement>
-        Let <m>A=\{1, 2\}</m> and <m>B = \{x, y , z\}</m>, find:
+        <p>
+          Let <m>A=\{1, 2\}</m> and <m>B = \{x, y , z\}</m>, find:
+        </p>
         <ol>
           <li><m>|A|</m></li>
           <li><m>|B|</m></li>
@@ -228,7 +237,9 @@
 
     <example>
       <statement>
-        Let <m>A=\{a,b,c,d,e\}</m> and <m>B=\{a, b,c,d,e,f,g,h\}</m>, find
+        <p>
+          Let <m>A=\{a,b,c,d,e\}</m> and <m>B=\{a, b,c,d,e,f,g,h\}</m>, find
+        </p>
         <ol>
           <li><m>|A|</m></li>
           <li><m>|B|</m></li>
@@ -243,7 +254,9 @@
     </example>
     <note>
       <statement>
-        What do you observe about some combination of the cardinalities above?
+        <p>
+          What do you observe about some combination of the cardinalities above?
+        </p>
       </statement>
     </note>
 
@@ -255,7 +268,9 @@
 
     <example>
       <statement>
-        Verify the following identities by using a membership table. It's like a truth table, except 1 means <q>T</q> and 0 means <q>F</q>
+        <p>
+          Verify the following identities by using a membership table. It's like a truth table, except 1 means <q>T</q> and 0 means <q>F</q>
+        </p>
 
         <ol>
           <li><m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m></li> 
@@ -380,13 +395,17 @@
 
     <exercise>
       <statement>
-        Confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities to see they represent the same shaded regions or by using a membership table!
+        <p>
+          Confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities to see they represent the same shaded regions or by using a membership table!
+        </p>
       </statement>
     </exercise>
     
     <example>
       <statement>
-        Verify the following set identities by using the basic identities in the table above.
+        <p>
+          Verify the following set identities by using the basic identities in the table above.
+        </p>
         <ol>
           <li><m>A \cap (A \cup B) = A</m></li>
           <!--  TODO do another example!  <li> -->
