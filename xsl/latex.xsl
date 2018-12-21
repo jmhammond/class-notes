@@ -204,6 +204,8 @@ and using it for discovery of what features I actually want to modify in my own.
 <!-- Lists themselves -->
 <!-- If columns are specified, we        -->
 <!-- wrap in the multicolumn environment -->
+<!-- using the starred multicol* and \raggedcolumns -->
+<!-- from the solution on https://tex.stackexchange.com/questions/116577/enumerate-in-multicols-how-to-move-the-last-element-upwards -->
 <!-- Test for first node of "p", then test for the   -->
 <!-- "p" being first node of some sectioning element -->
 <xsl:template match="ol">
@@ -216,7 +218,7 @@ and using it for discovery of what features I actually want to modify in my own.
         </xsl:otherwise>
     </xsl:choose>
     <xsl:if test="@cols">
-        <xsl:text>\begin{multicols}{</xsl:text>
+        <xsl:text>\raggedcolumns&#xa;\begin{multicols*}{</xsl:text>
         <xsl:value-of select="@cols" />
         <xsl:text>}&#xa;</xsl:text>
     </xsl:if>
@@ -231,7 +233,7 @@ and using it for discovery of what features I actually want to modify in my own.
      <xsl:apply-templates />
     <xsl:text>\end{enumerate}&#xa;</xsl:text>
     <xsl:if test="@cols">
-        <xsl:text>\end{multicols}&#xa;</xsl:text>
+        <xsl:text>\fixspacing&#xa;\end{multicols*}&#xa;</xsl:text>
     </xsl:if>
 </xsl:template>
 
@@ -245,7 +247,7 @@ and using it for discovery of what features I actually want to modify in my own.
         </xsl:otherwise>
     </xsl:choose>
     <xsl:if test="@cols">
-        <xsl:text>\begin{multicols}{</xsl:text>
+        <xsl:text>\raggedcolumns&#xa;\begin{multicols*}{</xsl:text>
         <xsl:value-of select="@cols" />
         <xsl:text>}&#xa;</xsl:text>
     </xsl:if>
@@ -255,7 +257,7 @@ and using it for discovery of what features I actually want to modify in my own.
     <xsl:apply-templates />
     <xsl:text>\end{itemize}&#xa;</xsl:text>
     <xsl:if test="@cols">
-        <xsl:text>\end{multicols}&#xa;</xsl:text>
+        <xsl:text>\fixspacing&#xa;\end{multicols*}&#xa;</xsl:text>
     </xsl:if>
 </xsl:template>
 
@@ -269,7 +271,7 @@ and using it for discovery of what features I actually want to modify in my own.
         </xsl:otherwise>
     </xsl:choose>
     <xsl:if test="@cols">
-        <xsl:text>\begin{multicols}{</xsl:text>
+        <xsl:text>\raggedcolumns&#xa;\begin{multicols*}{</xsl:text>
         <xsl:value-of select="@cols" />
         <xsl:text>}&#xa;</xsl:text>
     </xsl:if>
@@ -277,7 +279,7 @@ and using it for discovery of what features I actually want to modify in my own.
     <xsl:apply-templates />
     <xsl:text>\end{description}&#xa;</xsl:text>
     <xsl:if test="@cols">
-        <xsl:text>\end{multicols}&#xa;</xsl:text>
+        <xsl:text>\fixspacing&#xa;\end{multicols*}&#xa;</xsl:text>
     </xsl:if>
 </xsl:template>
 

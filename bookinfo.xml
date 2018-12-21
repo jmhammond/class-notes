@@ -61,6 +61,7 @@
     \renewcommand{\bar}{\overline}
     \newcommand{\card}[1]{\left| #1 \right|}
     \newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+    \newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
   </macros>
 
   <latex-image-preamble>
