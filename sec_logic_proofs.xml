@@ -114,9 +114,12 @@
 
     <subsubsection>
       <title>Proof by Contradiction</title>
-      <p>A proof by contradiction relies on the fact that <m>\neg (p \wedge \neg q) \equiv (p \to q)</m>. We'll assume both that <m>p</m> is true, and we assume the opposite or <m>q</m> is true. Here's the model:</p>
+      <p>
+        A proof by contradiction allows us to prove a statement <m>p</m> which is not necessarily conditional. We accomplish this by assuming <m>\neg p</m> is true, and finding a contradiction. This works because <me> \neg p \to (q \wedge \neg q) \equiv p</me> as we showed in <xref ref="example-contradiction-logic">example</xref>. Here's the model:
+      </p>`
+
       <proof>
-        <p> Assume <m>p</m> is true, and further assume that <m>\neg q</m> is true</p> 
+        <p> Assume, to the contrary, that <m>p</m> is false, that is <m>\neg p</m> is true.</p> 
         <p> ... use logical equivalences (and/or mathematics) ... </p>
         <p> Arrive at a logical contradiction. Some impossibility. Therefore, <m>p \to q</m> is true by contradiction.</p>
       </proof>

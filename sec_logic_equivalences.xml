@@ -235,7 +235,7 @@
           <li>
             <m>q \to p \equiv \neg p \to \neg q</m>
           </li>
-          <li><m>( \neg p \to (q \wedge \neg q)  ) \equiv p</m></li>
+          <li xml:id="example-contradiction-logic"><m>( \neg p \to (q \wedge \neg q)  ) \equiv p</m></li>
         </ol>
       </p>
       <p><note>
