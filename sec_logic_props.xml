@@ -24,7 +24,8 @@
             <li> Wichita is the capitol of Kansas </li>
             <li> What are you doing? </li>
           </ol>
-        </statement>
+        </p>
+      </statement>
     </example>
 
     <definition>
@@ -651,7 +652,7 @@
     <exercise>
       <statement>
         <p>
-          This time you encounter two people, A, and B, and A says "I am a knave or B is a knight," and B says nothing. What can you conclude?
+          This time you encounter two people, A, and B, and A says <q>I am a knave or B is a knight,</q> and B says nothing. What can you conclude?
         </p>
       </statement>
     </exercise>

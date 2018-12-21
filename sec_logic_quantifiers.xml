@@ -11,11 +11,14 @@
         <ul>
           <li> A predicate is a property that a subject can have.</li>
         </ul>
-        <li> <m>P(x) :=</m> <q><m> x \lt 5 </m></q>
-        <ul>
-          <li> The value of <m>P(x)</m> is the value of the <term>propositional function</term> P at <m>x</m>. </li>
-          <li>Assigning a value to <m>x</m> makes <m>P</m> a proposition (it then has a truth value)</li>
-        </ul>
+        <li>
+          <p>
+            We can write <m>P(x) :=</m> <q><m> x \lt 5 </m>, where</q>h
+            <ul>
+              <li> the value of <m>P(x)</m> is the value of the <term>propositional function</term> P at <m>x</m>. </li>
+              <li>Assigning a value to <m>x</m> makes <m>P</m> a proposition (it then has a truth value)</li>
+            </ul>
+          </p>
         </li>
       </ul>
     </p>
@@ -24,7 +27,7 @@
       <p>
         The <term>domain of discourse</term> (or <term>universe of discourse</term>) is the collection from which variables can take values.
       </p>
-      <p> For example, if my predicate function is <q><m>x</m> is a student at WSU</q>, the function has a different meaning if my universe of discourse is <q>all college students</q> versus <q>all powers of 5</q>
+      <p> For example, if my predicate function is <q><m>x</m> is sharp</q>, the function has a different meaning if my universe of discourse is <q>all college students</q> versus <q>all tools</q>
       </p>
     </definition>
 
@@ -35,7 +38,7 @@
           <ol>
             <li>
               <p>
-                Let <m>P(x)</m> be the statement <q>The word <m>x </m> contains the letter a</q>.
+                If <m>P(x):=</m> <q>The word <m>x </m> contains the letter a</q>.
                 <ol>
                   <li> P(elephant)</li>
                   <li>
@@ -52,7 +55,7 @@
             </li>
             <li>
               <p>
-                Let <m>Q(x,y)</m> be the statement <q><m>x^2 + y^2 = 25</m></q>.
+                If <m>Q(x,y):=</m> <q><m>x^2 + y^2 = 25</m></q>.
                 <ol>
                   <li><m>Q(4,5)</m></li>
                   <li><m>Q(3,4)</m></li>
@@ -73,7 +76,7 @@
         The <term>universal quantification</term> of <m>P(x)</m> is the statement that <m>P(x)</m> is true for all values of <m>x</m> in the domain of discourse. We write <m> \forall x P(x)</m>
       </p>
       <p>
-        An <m>x</m> value for which <m>P(x)</m> is false is called a <term>counterexample</term>
+        A <term>counterexample</term> is an <m>x</m> value for which <m>P(x)</m> is false.
       </p>
     </definition>
     <definition>
@@ -212,14 +215,14 @@
       <statement>
         <p>
           Determine the truth value of the each of these statements if the domain consists of all integers
+          <ol cols="2">
+            <li><m>\forall n (n+1 > n)</m></li>
+            <li><m>\exists n (n^3 = -1)</m></li>
+            <li><m>\exists n (2n = 5n)</m></li>
+            <li><m>\forall n (3n \le 4n)</m></li>
+            <li><m>\forall x \forall y ((x^2 = y^2) \to (x = y))</m></li>
+          </ol>
         </p>
-        <ol>
-          <li><m>\forall n (n+1 > n)</m></li>
-          <li><m>\exists n (n^3 = -1)</m></li>
-          <li><m>\exists n (2n = 5n)</m></li>
-          <li><m>\forall n (3n \le 4n)</m></li>
-          <li><m>\forall x \forall y ((x^2 = y^2) \to (x = y))</m></li>
-        </ol>
       </statement>
     </exercise>
 
@@ -227,14 +230,14 @@
       <statement>
         <p>
           Deterine the truth value of each of the following statements if the domain consists of all real numbers.
+          <ol cols="2">
+            <li><m>\exists x(x^2 = 2)</m></li>
+            <li><m>\exists x (x^2 = -1)</m></li>
+            <li><m>\forall x (x^2 + 2 \ge 1)</m></li>
+            <li><m>\forall x (2x > 2)</m></li>
+            <li><m>\forall x (x+4)^2 = x^2 + 16</m></li>
+          </ol>
         </p>
-        <ol>
-          <li><m>\exists x(x^2 = 2)</m></li>
-          <li><m>\exists x (x^2 = -1)</m></li>
-          <li><m>\forall x (x^2 + 2 \ge 1)</m></li>
-          <li><m>\forall x (2x > 2)</m></li>
-          <li><m>\forall x (x+4)^2 = x^2 + 16</m></li>
-        </ol>
       </statement>
     </exercise>
 
@@ -256,13 +259,13 @@
       <statement>
         <p>
           Translate these statements into English where <m>F(x)</m> is <q><m>x</m> is fast</q> and <m>A(x)</m> is <q><m>x</m> is an athlete.</q>.
+          <ol cols="2">
+            <li><m>\forall x (A(x) \to F(x)</m></li>
+            <li><m>\forall x (F(x) \land A(x)</m></li>
+            <li><m>\exists x (F(x) \to A(x)</m></li>
+            <li><m>\exists x (A(x) \land \neg F(x)</m></li>
+          </ol>
         </p>
-        <ol>
-          <li><m>\forall x (A(x) \to F(x)</m></li>
-          <li><m>\forall x (F(x) \land A(x)</m></li>
-          <li><m>\exists x (F(x) \to A(x)</m></li>
-          <li><m>\exists x (A(x) \land \neg F(x)</m></li>
-        </ol>
       </statement>
     </exercise>
 
