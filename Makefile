@@ -10,7 +10,7 @@ colorscheme:
 
 
 tex:
-	xsltproc --xinclude --stringparam exercise.divisional.solution no --stringparam exercise.divisional.answer no $(STYLESHEETS_DIR)/mathbook-latex.xsl class-notes.xml
+	xsltproc --xinclude --stringparam exercise.divisional.solution no --stringparam exercise.divisional.answer no ./xsl/latex.xsl class-notes.xml
 
 pdf: tex
 	pdflatex discrete-class-notes.tex && pdflatex discrete-class-notes.tex
