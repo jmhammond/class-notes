@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-prop-logic">
   <introduction>
-    <!-- TODO: write a little introduction to the logic material //!-->
+    <!-- intentionally left blank -->
   </introduction>
   <title>Propositional Logic</title>
   <subsection>
@@ -17,15 +17,14 @@
       <statement>
         <p>
           Which of the following are logical propositions?
-        </p>
-        <ol>
-          <li>This is a course in discrete mathematics</li>
-          <li> Chocolate cupcakes are the best </li>
-          <li> 1 - 3 = 4</li>
-          <li> Wichita is the capitol of Kansas </li>
-          <li> What are you doing? </li>
-        </ol>
-      </statement>
+          <ol>
+            <li>This is a course in discrete mathematics</li>
+            <li> Chocolate cupcakes are the best </li>
+            <li> 1 - 3 = 4</li>
+            <li> Wichita is the capitol of Kansas </li>
+            <li> What are you doing? </li>
+          </ol>
+        </statement>
     </example>
 
     <definition>
@@ -58,8 +57,10 @@
 
     <definition>
       <p>
-        Let <m>p</m> and <m>q</m> be propositions. The <term>conjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \wedge q</m> is the proposition <q> <m>p</m> and <m>q</m> </q>.
-        The <term> disjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \vee q</m> is the proposition <q> <m>p</m> or <m>q</m>  (or both)</q>.
+        Let <m>p</m> and <m>q</m> be propositions. The <term>conjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \wedge q</m>, is the proposition <q> <m>p</m> and <m>q</m> </q>.
+      </p>
+      <p>
+        The <term> disjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \vee q</m>, is the proposition <q> <m>p</m> or <m>q</m>  (or both)</q>.
       </p>
 
       <p>
@@ -91,57 +92,21 @@
 
     </example>
 
-    <example>
-      <statement>
-        <p>
-          These examples, illustrating the truth and false of conditionals, are from my daughter Penny:
-          <ul>
-            <li>
-              <p>
-                If Pikachu is an electric type, he can use thunderbolt.
-                <ul><li>True <m>\to</m>True is True</li></ul>
-              </p>
-            </li>
-            <li>
-              <p>
-                If Pikachu is an electric type, he can use hydro pump.
-                <ul><li>True <m>\to</m>False is False</li></ul>
-              </p>
-            </li>
-            <li>
-              <p>
-                If Pikachu is a duck, he can use thunder shock.
-                <ul><li>False <m>\to</m>True is True</li></ul>
-              </p>
-            </li>
-            <li>
-              <p>
-                If Pikachu is a grass type, he can use petal storm.
-                <ul><li>False <m>\to</m>False is True</li></ul>
-              </p>
-            </li>
-          </ul>
-        </p>
-      </statement>
-    </example>
+    
 
     <note xml:id="conditional-phrases">
       <p>
         There are many ways to phrase the conditional statement <m>p \to q</m>. Here are just a few common ones:
-        <sidebyside>
-          <ul>
+          <ul cols="2">
             <li>If <m>p</m>, then <m>q</m>. </li>
             <li><m>p</m> implies <m>q</m>. </li>
             <li><m>p</m> only if <m>q</m>. </li>
             <li><m>p</m> if sufficient for <m>q</m>. </li>
-          </ul>
-          <ul>
             <li> <m>q</m> is necessary for <m>p</m>. </li>
             <li> <m>q</m> if <m>p</m>. </li>
             <li> <m>q</m> whenever <m>p</m>. </li>
             <li> <m>q</m> unless <m>\neg p</m>. </li>
           </ul>
-        </sidebyside>
       </p>
     </note>
 
@@ -210,7 +175,7 @@
   <subsection xml:id="subsec-truthtables">
     <title>Truth Tables for Logical Connectives</title>
     <p>
-      <term>Truth tables</term> allow us to uniquely determine the truth value of a compound proposition, based on the truth values of the simple statements from which it is made. Below are the truth tables for conjunction <m>\wedge</m>, disjunction <m>\wedge</m>, conditional <m>\vee</m>, biconditional <m>\leftrightarrow</m>, exclusive or <m>\oplus</m>, and negation <m>\neg</m>.
+      <term>Truth tables</term> allow us to uniquely determine the truth value of a compound proposition, based on the truth values of the simple statements from which it is made. Below are the truth tables for conjunction <m>\wedge</m>, disjunction <m>\lor</m>, conditional <m>\to</m>, biconditional <m>\leftrightarrow</m>, exclusive or <m>\oplus</m>, and negation <m>\neg</m>.
       <sbsgroup>
         <sidebyside width="20%" margins="auto">
           <tabular halign="center">
@@ -409,6 +374,43 @@
       </statement>
     </example>
 
+    <example>
+      <statement>
+        <p>
+          These examples, illustrating the truth and false of conditionals, are from my daughter Penny:
+          <ul>
+            <li>
+              <p>
+                If Pikachu is an electric type, he can use thunderbolt.
+                <ul><li>True <m>\to</m>True is True</li></ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                If Pikachu is an electric type, he can use hydro pump.
+                <ul><li>True <m>\to</m>False is False</li></ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                If Pikachu is a duck, he can use thunder shock.
+                <ul><li>False <m>\to</m>True is True</li></ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                If Pikachu is a grass type, he can use petal storm.
+                <ul><li>False <m>\to</m>False is True</li></ul>
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          ... of course, if you don't know about Pokemon, it may help to consider <m>p\to q</m> where <m>p</m> is the statement <q>you ace all the tests</q> and <m>q</m> is the statement <q>you pass the class</q>.
+        </p>
+      </statement>
+    </example>
+
     <p>
       Occassionally through this course, we will be working with bit objects. A <term>bit</term> is a number which has values of either 1 or 0. We can operate with bits the same way we operate with propositions: 0 is false and 1 is true. The truth tables for the operations <m>\vee, \wedge, \oplus</m> all apply.
     </p>
@@ -510,7 +512,7 @@
     <exercise>
       <statement>
         <p>
-          Make a truth table for the statement <m>(P \vee Q) \to (P \wedge Q)</m>.
+          Make a truth table for the statement <m>(p \vee q) \to (p \wedge q)</m>.
         </p>
       </statement>
       <solution>
@@ -520,9 +522,9 @@
             <col right="medium"/>
             <col/>
             <row bottom="minor">
-              <cell><m>P</m></cell>
-              <cell><m>Q</m></cell>
-              <cell><m>(P \vee Q) \to (P \wedge Q)</m></cell>
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>(p \vee q) \to (p \wedge q)</m></cell>
             </row>
 
             <row>
@@ -554,7 +556,7 @@
     <exercise>
       <statement>
         <p>
-          Make a truth table for the statement <m>\neg P \wedge (Q \to P)</m>. What can you conclude about <m>P</m> and <m>Q</m> if you know the statement is true?
+          Make a truth table for the statement <m>\neg p \wedge (q \to p)</m>. What can you conclude about <m>p</m> and <m>q</m> if you know the statement is true?
         </p>
       </statement>
       <solution>
@@ -564,9 +566,9 @@
             <col right="medium"/>
             <col/>
             <row bottom="minor">
-              <cell><m>P</m></cell>
-              <cell><m>Q</m></cell>
-              <cell><m>\neg P \wedge (Q \to P)</m></cell>
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\neg p \wedge (q \to p)</m></cell>
             </row>
             <row>
               <cell>T</cell>
@@ -591,7 +593,7 @@
           </tabular>
         </sidebyside>
         <p>
-          If the statement is true, then both <m>P</m> and <m>Q</m> are false.
+          If the statement is true, then both <m>p</m> and <m>q</m> are false.
         </p>
       </solution>
     </exercise>
@@ -600,7 +602,7 @@
     <exercise>
       <statement>
         <p>
-          Make a truth table for the statement <m>\neg P \to (Q \wedge R)</m>.
+          Make a truth table for the statement <m>\neg p \to (q \wedge r)</m>.
         </p>
       </statement>
       <hint>

@@ -15,7 +15,7 @@
   </definition>
 
   <p>
-    Statements that are not tautologies or contradictions are called <term>contingencies</term>. Tautologies and contradictions are special, so they get special defined names.
+    Statements that are not tautologies or contradictions are called <term>contingencies</term>. 
   </p>
 
   <definition>
@@ -49,7 +49,7 @@
       <table xml:id="table-contradiction-valid">
         <caption>Showing <m>( \neg p \to (q \wedge \neg q)  )\to p</m> is a tautology</caption>
         <tabular  halign="center">
-          <row>
+          <row bottom="minor">
             <cell><m>p</m></cell>
             <cell><m>q</m></cell>
             <cell><m>\neg p</m></cell>
@@ -252,7 +252,7 @@
     <exercise>
       <statement>
         <p>
-          Determine whether the following two statements are logically equivalent:  <m>\neg(P \to Q)</m> and <m>P \wedge \neg Q</m>. Explain how you know you are correct.
+          Determine whether the following two statements are logically equivalent:  <m>\neg(p \to q)</m> and <m>p \wedge \neg q</m>. Explain how you know you are correct.
         </p>
       </statement>
       <solution>
@@ -266,7 +266,7 @@
     <exercise>
       <statement>
         <p>
-          Are the statements <m>P \to (Q\vee R)</m> and <m>(P \to Q) \vee (P \to R)</m> logically equivalent?
+          Are the statements <m>p \to (q\vee r)</m> and <m>(p \to q) \vee (p \to r)</m> logically equivalent?
         </p>
       </statement>
 
@@ -285,17 +285,17 @@
       <statement>
         <p>
           Simplify the following statements (so that negation only appears right before variables).
-          <ol> <li><m>\neg(P \to \neg Q)</m>.</li>
-          <li><m>(\neg P \vee \neg Q) \to \neg (\neg Q \wedge R)</m>.</li> <li><m>\neg((P \to \neg Q) \vee \neg (R \wedge \neg R))</m>.</li>
+          <ol> <li><m>\neg(p \to \neg q)</m>.</li>
+          <li><m>(\neg p \vee \neg q) \to \neg (\neg q \wedge r)</m>.</li> <li><m>\neg((p \to \neg q) \vee \neg (r \wedge \neg r))</m>.</li>
           <li> <p> It is false that if Sam is not a man then Chris is a woman, and that Chris is not a woman. </p> </li> </ol>
         </p>
       </statement>
       <answer>
         <p>
           <ol>
-            <li><m>P \wedge Q</m>.</li>
-            <li><m>(\neg P \vee \neg R) \to (Q \vee \neg R)</m> or, replacing the implication with a disjunction first: <m>(P \wedge Q) \vee (Q \vee \neg R)</m>.</li>
-            <li> <p><m>(P \wedge Q) \wedge (R \wedge \neg R)</m>. This is necessarily false, so it is also equivalent to <m>P \wedge \neg P</m>.</p> </li>
+            <li><m>p \wedge q</m>.</li>
+            <li><m>(\neg p \vee \neg r) \to (q \vee \neg r)</m> or, replacing the implication with a disjunction first: <m>(p \wedge q) \vee (q \vee \neg r)</m>.</li>
+            <li> <p><m>(p \wedge q) \wedge (r \wedge \neg r)</m>. This is necessarily false, so it is also equivalent to <m>p \wedge \neg p</m>.</p> </li>
             <li> <p> Either Sam is a woman and Chris is a man, or Chris is a woman. </p> </li>
           </ol>
         </p>
@@ -307,18 +307,18 @@
     <exercise>
       <statement>
         <p>
-          Use De Morgan's Laws, and any other logical equivalence facts you know to simplify the following statements. Show all your steps. Your final statements should have negations only appear directly next to the sentence variables or predicates (<m>P</m>, <m>Q</m>, <m>E(x)</m>, etc.), and no double negations. It would be a good idea to use only conjunctions, disjunctions, and negations.
+          Use De Morgan's Laws, and any other logical equivalence facts you know to simplify the following statements. Show all your steps. Your final statements should have negations only appear directly next to the sentence variables or predicates (<m>p</m>, <m>q</m>, <m>E(x)</m>, etc.), and no double negations. It would be a good idea to use only conjunctions, disjunctions, and negations.
           <ol>
-            <li><m>\neg((\neg P \wedge Q) \vee \neg(R \vee \neg S))</m>.
+            <li><m>\neg((\neg p \wedge q) \vee \neg(r \vee \neg s))</m>.
 
 
             </li>
-            <li><m>\neg((\neg P \to \neg Q) \wedge (\neg Q \to R))</m> (careful with the implications).
+            <li><m>\neg((\neg p \to \neg q) \wedge (\neg q \to k))</m> (careful with the implications).
 
 
             </li>
 
-            <li>(p\land q) \to (p \lor q)</li>
+            <m><li>(p\land q) \to (p \lor q)</m></li>
 
           </ol>
         </p>
