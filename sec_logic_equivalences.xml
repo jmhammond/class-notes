@@ -29,10 +29,10 @@
       <p>
         Prove the following are equivalent using a truth table.
         <ol>
+          <li><m>( \neg p \to (q \wedge \neg q)  ) \equiv p</m></li>
           <li> <m>p \vee (p \wedge q) \equiv p </m></li>
-          <li> <m>p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)</m>
-          <li><m>( \neg p \to (q \wedge \neg q)  )\to p</m></li>
-          </li>
+          <li> <m>p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)</m></li>
+          <li> <m>\neg(p \to q) \equiv  p \wedge \neg q</m> </li>
           <li> <m>p \to q \equiv \neg p \vee q</m> </li>
         </ol>
       </p>
@@ -208,6 +208,16 @@
         <cell> <m>\neg (\neg p)\equiv p</m></cell>
         <cell></cell>
       </row>
+      <row>
+        <cell></cell>
+        <cell>Implication</cell>
+        <cell></cell>
+      </row>
+      <row bottom="medium">
+        <cell></cell>
+        <cell> <m>p \to q \equiv \neg p \lor q</m></cell>
+        <cell></cell>
+      </row>
     </tabular>
   </table>
 
@@ -225,9 +235,7 @@
           <li>
             <m>q \to p \equiv \neg p \to \neg q</m>
           </li>
-          <li>
-            <m>\neg(p \to q) \equiv  p \wedge \neg q</m>
-          </li>
+          <li><m>( \neg p \to (q \wedge \neg q)  ) \equiv p</m></li>
         </ol>
       </p>
       <p><note>
