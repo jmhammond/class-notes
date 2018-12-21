@@ -179,10 +179,19 @@
       </p>
 
       <p>
-        As a Venn diagram (<m>A</m> the left circle):
-        <image source="images/Venn0111.png" width="25%">
-          <description>Venn diagram for set union</description>
-        </image>
+        As a Venn diagram:
+        <sidebyside width="20%">
+          <image xml:id="A-or-B">
+            <latex-image>
+              \begin{tikzpicture}[scale=.75]
+              \fill[color=gray] \circleA;
+              \fill[color=gray] \circleB;
+              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+              \end{tikzpicture}
+            </latex-image>
+            <description>Venn diagram for set union</description>
+          </image>
+        </sidebyside>
       </p>
 
       <p>
@@ -191,10 +200,20 @@
       </p>
 
       <p>
-        As a Venn diagram (<m>A</m> the left circle):
-        <image source="images/Venn0001.png" width="25%">
-          <description>Venn diagram for set intersection</description>
-        </image>
+        As a Venn diagram:
+        <sidebyside width="20%">
+          <image xml:id="A-and-B">
+            <latex-image>
+              \begin{tikzpicture}[scale=.75]
+              \fill[color=gray] \circleA;
+              \fill[color=gray] \circleB;
+              \fill[even odd rule, color=white] \circleA \circleB;
+              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+              \end{tikzpicture}
+            </latex-image>
+            <description>Venn diagram for set intersection</description>
+          </image>
+        </sidebyside>
       </p>
 
       <p>
@@ -203,10 +222,19 @@
       </p>
 
       <p>
-        As a Venn diagram (<m>A</m> the left circle):
-        <image source="images/Venn0100.png" width="25%">
-          <description>Venn diagram for set intersection</description>
-        </image>
+        As a Venn diagram:
+        <sidebyside width="20%">
+          <image xml:id="A-minus-B">
+            <latex-image>
+              \begin{tikzpicture}[scale=.75]
+              \fill[color=gray] \circleA;
+              \fill[color=white] \circleB;
+              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+              \end{tikzpicture}
+            </latex-image>
+            <description>Venn diagram for set difference <m>A \setminus B</m></description>
+          </image>
+        </sidebyside>
       </p>
 
       <note>
@@ -222,16 +250,34 @@
       <p>
         Let <m>U</m> be the <term>universal set</term>, that is the set of all possible objects in consideration.
 
-        <image source="images/Venn1111.png" width="25%">
+        <sidebyside width="20%">
+          <image xml:id="universal-set">
+            <latex-image>
+              \begin{tikzpicture}[scale=.75]
+              \fill[color=gray] \twosetbox;
+              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+              \end{tikzpicture}
+            </latex-image>
           <description>Venn diagram for the universal set </description>
-        </image>
+          </image>
+        </sidebyside>
       </p>
 
       <p>
         If <m>A</m> is a set, the <term>complement</term> of <m>A</m>, denoted <m>\overline{A}</m>, the set difference <m>\overline{A} = U \setminus A</m>.
-        <image source="images/Venn1010.png" width="25%">
-          <description>Venn diagram for the universal set </description>
-        </image>
+
+        <sidebyside width="20%">
+          <image xml:id="A-complement">
+            <latex-image>
+              \begin{tikzpicture}[scale=.75]
+              \fill[color=gray] \twosetbox;
+              \fill[color=white] \circleA;
+              \draw[thick] \circleA \circleAlabel \twosetbox;
+              \end{tikzpicture}
+            </latex-image>
+          <description>Venn diagram for the complement of <m>A</m></description>
+          </image>
+        </sidebyside>
       </p>
     </definition>
 
