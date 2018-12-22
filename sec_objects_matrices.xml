@@ -35,7 +35,7 @@
           The <m>ij</m>th term of the matrix is denoted <m>a_{ij}</m>
         </li>
         <li>
-          We will often write <m>A = \begin{bmatrix} a_{ij} \end{bmatrix} </m> and give a rule for <m>a_{ij}</m> in order to conserve space.
+          We will often write <m>A = \begin{bmatrix} a_{ij} \end{bmatrix} </m> and give a rule for <m>a_{ij}</m> in order to conserve space when relevant.
         </li>
       </ul>
     </p>
@@ -44,13 +44,14 @@
   <example>
     <statement>
       <p>
-        For the following matrix, find:
+        For the given matrix, answer the following questions:
         <me> A = \begin{bmatrix} 1 &amp; 1 &amp; 2 &amp; 5 \\ 2 &amp; -6 &amp; 0 &amp; 1 \\ 3 &amp; -1 &amp; 4 &amp; 7 \end{bmatrix}</me>
         <ol>
           <li>What are the dimensions of <m>A</m>?</li>
           <li>What is the third column of <m>A</m>?</li>
           <li>What is the second row of <m>A</m>?</li>
           <li>What is the element <m>a_{23}</m>?</li>
+          <li>What is the element <m>a_{32}</m>?</li>
         </ol>
       </p>
     </statement>
@@ -73,7 +74,7 @@
       <p>
         Let <m>A = \begin{bmatrix} 1 &amp; 3 \\ 4 &amp; 2 \end{bmatrix}</m> and <m>B = \begin{bmatrix} 0&amp; 5 \\ -1 &amp; 4 \end{bmatrix}</m>. Find:
       </p>
-      <ol>
+      <ol cols="2">
         <li><m>A + B</m></li>
         <li><m>B + A</m></li>
         <li><m>A  B</m></li>
@@ -95,14 +96,6 @@
       <p>
         Find the product:
         <me> \begin{bmatrix} 2 &amp; 3 &amp; -1 \\ 1 &amp; 2 &amp; 1 \\ -1 &amp; -1 &amp; 3 \end{bmatrix} \begin{bmatrix} 7 &amp; -8 &amp; 5 \\ -4 &amp; 5 &amp; -3 \\ 1 &amp; -1 &amp; 1 \end{bmatrix}</me>
-      </p>
-    </statement>
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        Let <m>A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}</m>. Find a formula for <m>A^n, n\in \mathbb{Z}^+</m>
       </p>
     </statement>
   </example>
@@ -130,9 +123,18 @@
     </p>
   </definition>
 
+  <example>
+    <statement>
+      <p>
+        Let <m>A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}</m>. Find a formula for <m>A^n, n\in \mathbb{Z}^+</m>
+      </p>
+    </statement>
+  </example>
+
+
   <definition>
     <p>
-      If <m>M</m> and <m>B</m> are square, <m>n \times n</m> matrices such that <m>AB = BA = I_n</m>, then <m>B</m> is called the <term>inverse</term>, of <m>A</m> and <m>A</m> is said to be <term>inververtible</term>. We write <m>B = A^{-1}</m> to denote the inverse matrix. 
+      If <m>A</m> and <m>B</m> are square, <m>n \times n</m> matrices such that <m>AB = BA = I_n</m>, then <m>B</m> is called the <term>inverse</term> of <m>A</m>, and <m>A</m> is said to be <term>invertible</term>. We write <m>B = A^{-1}</m> to denote the inverse matrix. 
     </p>
   </definition>
 
@@ -227,7 +229,7 @@
     </title>
 
     <p>
-      We can check our work using Sage, and later we can do really large matrix operations.
+      We can check our work using Sage, which will let us do really large matrix operations.
     </p>
 
     <example>
@@ -272,18 +274,24 @@
           DON'T PANIC! We'll look through the error and see information that will help us understand. 
         </p>
         <p>
-          First, I see <q>----&gt; 3 A*B</q> in error, the arrow telling us what line had the error. The error happened when I was multiplying.
-        </p>
-        <p>
-          Then, scrolling to the end, we see
-          <q>
-            TypeError: unsupported operand parent(s) for *: 'Full MatrixSpace of 3 by 3 dense matrices over Integer Ring' and 'Full MatrixSpace of 2 by 3 dense matrices over Integer Ring'
-          </q>
-          That's a lot information, but look what we have:
-          <ol>
-            <li><q>Unsupported operand parent(s) for *</q> tells us that we have a problem with our multiplication</li>
-            <li>My eyes caught <q>... 3 by 3 ... 2 by 3...</q> which tells me I'm trying to multiply incompatible matrices</li>
-          </ol>
+          <ul>
+            <li> First, I see <q>----&gt; 3 A*B</q> in error, the arrow telling us what line had the error. The error happened when I was multiplying.</li>
+            <li>
+              <p>
+                Then, scrolling to the end, we see:
+                <blockquote>
+                  <p>
+                  TypeError: unsupported operand parent(s) for *: 'Full MatrixSpace of 3 by 3 dense matrices over Integer Ring' and 'Full MatrixSpace of 2 by 3 dense matrices over Integer Ring'
+                  </p>
+                </blockquote>
+                That's a lot information, but look what we have:
+                <ol>
+                  <li><q>Unsupported operand parent(s) for *</q> tells us that we have a problem with our multiplication.</li>
+                  <li>My eyes caught <q>... 3 by 3 ... 2 by 3...</q> which tells me I'm trying to multiply incompatible matrices.</li>
+                </ol>
+              </p>
+            </li>
+          </ul>
         </p>
       </statement>
     </example>
@@ -296,16 +304,16 @@
       <statement>
         <p>
           Let <m>A = \begin{bmatrix} 1 &amp; 0 &amp; 4 \\ -3 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 2 \end{bmatrix}</m> and let <m>B = \begin{bmatrix} 5 &amp; 2 &amp; 1 \\ -1 &amp; 0 &amp; 0 \\ 1 &amp; 2 &amp; 1 \end{bmatrix}</m>, find:
+          <ol cols="2">
+            <li><m>A + B</m></li>
+            <li><m>B - A</m></li>
+            <li><m>AB</m></li>
+            <li><m>A^t</m></li>
+            <li><m>B^t</m></li>
+            <li><m>B^t A^t</m></li>
+            <li><m>(AB)^t</m></li>
+          </ol>
         </p>
-        <ol>
-          <li><m>A + B</m></li>
-          <li><m>B - A</m></li>
-          <li><m>AB</m></li>
-          <li><m>A^t</m></li>
-          <li><m>B^t</m></li>
-          <li><m>B^t A^t</m></li>
-          <li><m>(AB)^t</m></li>
-        </ol>
         <p>
           You can check your work with Sage. If you want to find the transpose of a matrix named <m>A</m>, you type <code>A.transpose()</code>. But remember, you can't use the computer or a fancy calculator on the test. 
         </p>
@@ -316,13 +324,9 @@
     <exercise xml:id="homework-2x2inverse">
       <statement>
         <p>
-          Show that if:
+          Show that if <m>A = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix} </m> and <m>ad - bc \not= 0</m>, then
+          <me>\displaystyle A^{-1} = \begin{bmatrix} \frac{d}{ad-bc} &amp;\frac{-b}{ad-bc} \\ \frac{-c}{ad-bc} &amp; \frac{a}{ad-bc} \end{bmatrix} </me> 
         </p>
-        <ul>
-          <li><m>A = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix} </m>, and </li>
-          <li><m>ad - bc \not= 0</m>, then</li>
-        </ul>
-        <m>\displaystyle A^{-1} = \begin{bmatrix} \frac{d}{ad-bc} &amp;\frac{-b}{ad-bc} \\ \frac{-c}{ad-bc} &amp; \frac{a}{ad-bc} \end{bmatrix} </m> 
       </statement>
     </exercise>
 
@@ -331,7 +335,7 @@
         <p>
           Let <m>A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}</m> and <m>B = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}</m>. Find:
         </p>
-        <ol>
+        <ol cols="2">
           <li><m>A \lor B</m></li>
           <li><m>A \land B</m></li>
           <li><m>A \odot B</m></li>

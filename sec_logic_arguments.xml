@@ -191,7 +191,10 @@
         For the following argument, explain the rules of inference for each step leading the the conclusion:
       </p>
       <p>
-        <blockquote>Linda, a student in this class owns a red convertible. Everyone who owns a red convertible has gotten at least one speeding ticket. Therefore, someone in this class has gotten at least one speeding ticket.</blockquote>
+        <blockquote>
+          <p>Linda, a student in this class owns a red convertible. Everyone who owns a red convertible has gotten at least one speeding ticket. Therefore, someone in this class has gotten at least one speeding ticket.
+          </p>
+        </blockquote>
       </p>
     </statement>
   </example>

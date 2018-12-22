@@ -7,7 +7,7 @@
       A <term>sequence</term> is a function from a subset of the integers (usually <m>\{0, 1,2,3 \dots\}</m>) to a set <m>S</m>. We use the notation <m>a_n</m> to denote the image of the integer <m>n</m>, and we call <m>a_n</m> the <term><m>n</m>-th term</term> of the sequence.
     </p>
     <p>
-      Notationally, we will often write the shorthand <m>\{a_n\}</m> to denote the complete sequence where <m>n\in \mathbb{N}</m>.
+      We will often write the shorthand <m>\{a_n\}</m> to denote the complete sequence where <m>n\in \mathbb{N}</m>.
     </p>
   </definition>
 
@@ -33,7 +33,7 @@
     <p>
       A <term>arithmetic progression</term> is a sequence of the form:
       <me>a, a+d, a+2d, a+3d, \dots, a+nd, \dots </me>
-      with the <term>initial term</term> <m>a</m> and the <term>common difference</term> <m>r</m>.
+      with the <term>initial term</term> <m>a</m> and the <term>common difference</term> <m>d</m>.
     </p>
   </definition>
 
@@ -48,7 +48,7 @@
       A <term>recurrence relation</term> for a sequence <m>\{a_n\}</m> is an equation that expressions <m>a_n</m> in terms of previous terms.
     </p>
     <p>
-      A sequence is called a <m>solution</m> of a recurrence relation if its terms satisfy the recurrence relation.
+      A sequence is called a <term>solution</term> of a recurrence relation if its terms satisfy the recurrence relation.
     </p>
   </definition>
 
@@ -57,11 +57,11 @@
       <p>
         The <term>Fibonacci sequence</term> <m>f_0, f_1, f_2, \dots</m> is defined by the recurrence:
       </p>
-      <ul>
+      <dl>
         <li><m>f_0 = 0</m></li>
         <li><m>f_1 = 1</m></li>
         <li><m>f_n = f_{n-1} + f_{n-2} \text{ for } n \ge 2</m></li>
-      </ul>
+      </dl>
     </statement>
   </example>
 
@@ -70,7 +70,7 @@
       <p>
         Consider the recurrence <m>a_n = -3 a_{n-1} + 4 a_{n-2}</m>. Are the follow sequences solutions to the recurrence?
       </p>
-      <ol>
+      <ol cols="2">
         <li><m>a_n = 0</m></li>
         <li><m>a_n = 1</m></li>
         <li><m>a_n = 2^n</m></li>
@@ -99,7 +99,7 @@
 
   <note>
     <p>
-      Creativity required: finding the general form of a sequence:
+      When finding the general form of a sequence, creativity is required.
     </p>
     <p>
       Look for patterns within the sequence
@@ -124,12 +124,12 @@
         <li><m>7, 11, 15, 19, 23, 27, 31, \dots</m></li>
         <li><m>1, 10, 100, 101, 110, 111, 1000, \dots</m></li>
         <li><m>1, 3, 15, 105, 945, 10395, 135135, \dots</m></li>
-        <li><m>1,2,2,2,3,3,3,3,3, 5,5,5,5,5,5,5,\dots</m></li>
+        <li><m>2,2,2,3,3,3,3,3, 5,5,5,5,5,5,5,\dots</m></li>
         <li><m>2,4,16,256,65536, 4294957296, \dots</m></li>
       </ol>
       
       <p>
-        In case it might be helpful, here's a fancy calulator (available on the web-based version of these notes). You can type what you want to compute and press 'Evaluate (Sage).' For more information, refer to the <xref ref="sec_sage_howto">Sage appendix</xref>
+        For this last example, the numbers are huge. If you're reading on the web-based version of this book, this is an interactive calulator. You can type what you want to compute and press 'Evaluate (Sage).' For more information, refer to the <xref ref="sec_sage_howto">Sage appendix</xref>
       </p>
       <sage>
         <input>
@@ -158,8 +158,8 @@
       <p>
         Find the value of the sum:
       </p>
-      <ol>
-        <li><m>\displaystyle \sum_{j=0}^8 (1 + (-1)^j</m></li>
+      <ol cols="2">
+        <li><m>\displaystyle \sum_{j=0}^8 (1 + (-1)^j)</m></li>
         <li><m>\displaystyle \sum_{k \in \{1, 3, 5\}} (k^2 + 2)</m></li>
         <li><m>\displaystyle \sum_{j=1}^2 \sum_{k=1}^5 (j-k) </m></li>
         <li><m>\displaystyle \sum_{j=1}^2 \sum_{k=1}^5 (k-j) </m></li>
@@ -180,7 +180,7 @@
   <example xml:id="example-telescoping-sum">
     <statement>
       <p>
-        Show that <m>\sum_{j=1}^n (a_j - a_{j-1}) = a_n - a_0</m>
+        Show that <me>\sum_{j=1}^n (a_j - a_{j-1}) = a_n - a_0</me>
       </p>
     </statement>
   </example>
@@ -203,12 +203,12 @@
         <p>
           Find the first five terms of the sequence <m>\{a_n\}</m>, beginning with <m>n=0</m>:
         </p>
-        <ol>
+        <ol cols="2">
           <li><m>a_n = 2^n + 3</m></li>
           <li><m>a_n = n^n</m></li>
           <li><m>a_n = \lfloor n/2\rfloor + \lceil n/2 \rceil</m></li>
-          <li><m>a_n = a_n = 6a_{n-1},\, a_0 = 2</m></li>
-          <li><m>a_n = a_{n-1} + 3 a_{n-2},\, a_0 = 1, a_1 = 2</m></li>
+          <li><m>a_n = a_n = 6a_{n-1},\hspace{1em} a_0 = 2</m></li>
+          <li><m>a_n = a_{n-1} + 3 a_{n-2},\hspace{1em} a_0 = 1, a_1 = 2</m></li>
         </ol>
       </statement>
     </exercise>
@@ -217,7 +217,7 @@
       <statement>
         <p>
           Is the sequence <m>\{a_n\}</m> a solution of the recurrence relation <m>a_n = 8a_{n-1}-16a_{n-2}</m> if
-          <ol>
+          <ol cols="2">
             <li><m>a_n = 0</m></li>
             <li><m>a_n = 2n</m></li>
             <li><m>a_n = 2^n</m> </li>
@@ -232,9 +232,9 @@
         <p>
           Find a solution to the recurrence relation
           <ol>
-            <li><m>a_n = 3_{n-1},\, a_0 = 2</m></li>
-            <li><m>a_n = a_{n-1} + n,\, a_0 = 1</m></li>
-            <li><m>a_n = na_{n-1},\, a_0 = 1</m></li>
+            <li><m>a_n = 3_{n-1},\hspace{1em} a_0 = 2</m></li>
+            <li><m>a_n = a_{n-1} + n,\hspace{1em} a_0 = 1</m></li>
+            <li><m>a_n = na_{n-1},\hspace{1em} a_0 = 1</m></li>
           </ol>
         </p>
       </statement>
@@ -244,7 +244,7 @@
       <statement>
         <p>
           Find the value of each of the following sums:
-          <ol>
+          <ol cols="2">
             <li> <m>\displaystyle \sum_{k=0}^8 3\cdot 2^k</m> </li>
             <li> <m>\displaystyle \sum_{k=1}^8 2^k </m> </li>
             <li> <m>\displaystyle \sum_{k=1}^8 (1 + (-1)^k) </m> </li>

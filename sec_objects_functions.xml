@@ -4,7 +4,7 @@
 
   <definition>
     <p>
-      Let <m>A</m> and <m>B</m> be two non-empty sets. A <term>function</term> from the set <m>A</m> to the set <m>B</m> is an assignment of exactly one element from <m>B</m> all elements of the set <m>A</m>. 
+      Let <m>A</m> and <m>B</m> be two non-empty sets. A <term>function from the set <m>A</m> to the set <m>B</m></term> is an assignment of exactly one element from <m>B</m> all elements of the set <m>A</m>. 
       <ul>
         <li>We denote this by <m>f:A\to B</m></li>
         <li>If <m>b\in B</m> is the unique element assigned to <m>a\in A</m>, we write <m>f(a)=b</m></li>
@@ -42,16 +42,16 @@
         <li> A mapping between those two sets </li>
       </ol>
 
-      I'm trying to call attention that up until this course, in calculus and algebra, we have always assumed  our functions, <m>f</m>, were mappings from their implied domains into their range. 
+      I'm trying to call attention that up until this course, in calculus and algebra, we have always assumed  our functions, <m>f</m>, were mappings from their implied domains into their range. We will be more precise from now on.  
     </p>
     <p>
-      I will be using a variety of ways of describing the domain and codomain of a function, from writing <m>f:A \to B</m> to describing them in words.
+      In this class, we will be using a variety of ways of describing the domain and codomain of a function, from writing <m>f:A \to B</m> to describing them in words.
     </p>
   </note>
 
   <definition>
     <p>
-      A function <m>f</m> is said to be <term>one-to-one</term> or <term>injective</term> if and only if <m>f(a) = f(b)</m> means that <m>a = b</m> for all <m>a \text{ and } b</m> in the domain of <m>f</m>. 
+      A function <m>f</m> is said to be  <term>injective</term> or <term>one-to-one</term> if and only if <m>f(a) = f(b)</m> means that <m>a = b</m> for all <m>a \text{ and } b</m> in the domain of <m>f</m>. 
       <me>
         \forall a, b ((f(a) = f(b)) \to (a = b))
       </me>
@@ -81,9 +81,9 @@
 
   <definition>
     <p>
-      A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>onto</term> or <term>surjective</term> if and only if for every eleement <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = B</m>. 
+      A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>surjective</term> or <term>onto</term> if and only if for every eleement <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = B</m>. 
       <me>
-        \forall y\in B\, \exists x\in A ( y = f(x) )
+        \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) ) 
       </me>
     </p>
   </definition>
@@ -107,7 +107,7 @@
       To determine if a function <m>f: A \to B</m> is surjective, we show that given an arbitrary element <m>y \in B</m> we can find an element <m>x\in A</m> such that <m>f(x)=y</m>. (A direct proof).
     </p>
     <p>
-      To determine if a function <m>f: A \to B</m> is not surjective, we find a particular elements <m>y \in B</m> such that <m>f(x) \not= y</m> for all <m>x\in A</m> (a counterexample!)
+      To determine if a function <m>f: A \to B</m> is not surjective, we find a particular element <m>y \in B</m> such that <m>f(x) \not= y</m> for all <m>x\in A</m> (a counterexample!)
     </p>
   </note>
 
@@ -120,15 +120,13 @@
   <example xml:id="example-bijections">
     <statement>
       <p>
-        Which of the functions we've considered so far have been bijections?
-      </p>
-      <p>
         Determine if the following are bijections from <m>\mathbb{R} \to \mathbb{R}</m>:
         <ol>
           <li><m>f(x) = -3x^2 + 7</m></li>
           <li><m>f(x) = x^5 + 1</m></li>
           <li><m>f(x) = 5^x</m></li>
-          <li><m>f(x) = \frac{x+1}{x+2}</m></li>
+          <li><m>\ds f(x) = \frac{x+1}{x+2}</m></li>
+          <li> Which of the functions we've considered so far have been bijections?</li>
         </ol>
       </p>
     </statement>
@@ -137,11 +135,8 @@
 
   <definition>
     <p>
-      Let <m>f:\mathbb{A} \to \mathbb{B}</m> be a bijection. The <term>inverse function</term> of <m>f</m> is the unique function that assigns to each element <m>b\in B</m> a unique element <m>a \in A</m> such that <m>f(a) = b</m>. We denote the inverse by <m>f^{-1}</m> so that
-      <ul>
-        <li><m>f^{-1} : B \to A</m> </li>
-        <li><m>f^{-1}(b) = a \iff f(a) = b</m> </li>
-      </ul>
+      Let <m>f:A \to B</m> be a bijection. The <term>inverse function</term> of <m>f</m> is the unique function that assigns to each element <m>b\in B</m> a unique element <m>a \in A</m> such that <m>f(a) = b</m>. We denote the inverse by <m>f^{-1}</m> so that
+        <me>f^{-1} : B \to A \hspace{2em} f^{-1}(b) = a \iff f(a) = b</me>
     </p>
   </definition>
 
@@ -568,7 +563,7 @@
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
-        <p> 
+        <p> How does composition relate to function properties?
           <ol>
             <li>If <m>f</m> and <m>g</m> are both injective, must <m>g\circ f</m> be injective?  Explain.</li>
             <li>If <m>f</m> and <m>g</m> are both surjective, must <m>g\circ f</m> be surjective?  Explain.</li>
