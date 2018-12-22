@@ -140,6 +140,7 @@
         <caption>Argument step-by-step</caption>
         <tabular>
           <col right="minor"/>
+          <col left="minor"/>
           <row bottom="minor">
             <cell> Step</cell> 
             <cell> Reason </cell>
