@@ -18,7 +18,14 @@ pdf: tex
 clean:
 	rm -f *.out *.toc *.html *.aux *.log discrete-class-notes.pdf discrete-class-notes.tex
 
-publish: html
+publish-to-web: html
 	cp *.html ~/public_html/class-notes
 	cp knowl/*.html ~/public_html/class-notes/knowl
 	cp images/* ~/public_html/class-notes/images
+
+publish:
+# note that `mathssh` is an alias in my zshrc file which to ssh into the math server.
+	mathssh 'cd src/class-notes && make publish-to-web'
+
+images:
+	~/src/mathbook/script/mbx -vv -c latex-image -f svg -d ~/Documents/class-notes/images ~/Documents/class-notes/class-notes.xml
