@@ -108,43 +108,38 @@
     </statement>
   </example>
 
-
-  <p>
-    Rules of inference for quantified statements
-    <definition>
-      <p>
-        <term>Existential instantiation</term> describes the argument:
-        <me> \exists x P(x) \implies P(c) </me> for some <m>c</m> in the domain.
-      </p>
-      <p>
-        <term>Existential generalization</term> describes the argument:
-        <me> P(c) \implies \exists x P(x) </me>.
-      </p>
-      <p>
-        <term>Universal modus ponens</term> describes the argument:
-        <me>\forall x (P(x) \to Q(x)) \wedge P(a) \implies Q(a)</me> where <m>a</m> is a particular element in the domain.
-      </p>
-      <p>
-        <term>Universal modus tollens</term> describes the argument:
-        <me>\forall x (P(x) \to Q(x)) \wedge \neg Q(a) \implies \neg P(a)</me> where <m>a</m> is a particular element in the domain.
-      </p>
-      
-    </definition>
-  </p>
+  <definition>
+    <p>
+      <term>Existential instantiation</term> describes the argument:
+      <me> \exists x P(x) \implies P(c) </me> for some <m>c</m> in the domain.
+    </p>
+    <p>
+      <term>Existential generalization</term> describes the argument:
+      <me> P(c) \implies \exists x P(x) </me>.
+    </p>
+    <p>
+      <term>Universal modus ponens</term> describes the argument:
+      <me>\forall x (P(x) \to Q(x)) \wedge P(a) \implies Q(a)</me> where <m>a</m> is a particular element in the domain.
+    </p>
+    <p>
+      <term>Universal modus tollens</term> describes the argument:
+      <me>\forall x (P(x) \to Q(x)) \wedge \neg Q(a) \implies \neg P(a)</me> where <m>a</m> is a particular element in the domain.
+    </p>
+    
+  </definition>
 
   <example>
     <statement>
       <p>
-        Show that the premises, "A student in this class has not read the book," and "Everyone in this class passed the first exam" imply the conclusion "Someone who passed the first exam has not read the book." Let <m>C(x)</m> be "<m>x</m> is in this class", <m>B(x)</m> "x has read the book", and <m>P(x)</m> "<m>x</m> passed the first exam."
+        Show that the premises, <q>A student in this class has not read the book,</q> and <q>Everyone in this class passed the first exam</q> imply the conclusion <q>Someone who passed the first exam has not read the book.</q> Let <m>C(x)</m> be <q><m>x</m> is in this class,</q> <m>B(x)</m> <q>x has read the book</q>, and <m>P(x)</m> <q><m>x</m> passed the first exam.</q>
       </p>
     </statement>
     <solution>
-      <p> The statment, "someone who passed the first exam has not read the book" means there is someone in class did those things. <m>\exists x (P(x) \wedge \neg B(x))</m></p>
+      <p> The statement, <q>someone who passed the first exam has not read the book</q> means there is someone in class did those things. <m>\exists x (P(x) \wedge \neg B(x))</m></p>
       <table>
         <caption>Argument step-by-step</caption>
         <tabular>
           <col right="minor"/>
-          <col right="medium"/>
           <row bottom="minor">
             <cell> Step</cell> 
             <cell> Reason </cell>
@@ -171,7 +166,7 @@
           </row>
           <row>
             <cell> 6. <m>P(a)</m> </cell>
-            <cell> Modus ponens -- 3 and 5 </cell>
+            <cell> Modus ponens of 3 and 5 </cell>
           </row>
           <row>
             <cell> 7. <m>\neg B(a)</m> </cell>
@@ -196,7 +191,7 @@
         For the following argument, explain the rules of inference for each step leading the the conclusion:
       </p>
       <p>
-        Linda, a student in this class owns a red convertible. Everyone who owns a red convertible has gotten at least one speeding ticket. Therefore, someone in this class has gotten at least one speeding ticket.
+        <blockquote>Linda, a student in this class owns a red convertible. Everyone who owns a red convertible has gotten at least one speeding ticket. Therefore, someone in this class has gotten at least one speeding ticket.</blockquote>
       </p>
     </statement>
   </example>
@@ -207,9 +202,9 @@
       <li>
         <p>Fallacy of affirming the conclusion:
         <ul>
-          <li>"If you get an A, you pass this class. You passed the class, therefore you got an A."   (not valid!)
+          <li><q>If you get an A, you pass this class. You passed the class, therefore you got an A.</q>   (not valid!)
           </li>
-          <li>"If an animal is a type of cat, it has hair. I have hair. Therefore, I must be some kind of cat." (not valid!) </li>
+          <li><q>If an animal is a type of cat, it has hair. I have hair. Therefore, I must be some kind of cat.</q> (not valid!) </li>
           <li> <m> ((p \to q) \wedge q \to p)</m> is not a tautology! </li>
         </ul>
         </p>
@@ -218,8 +213,8 @@
         <p>
           Fallacy of denying the hypothesis
           <ul>
-            <li>"If you get an A, you pass this class. You didn't get an A. Oh no! You must not have passed this class!" (still not valid!)</li>
-            <li>"If an animal is a type of cat, it has hair. My dog Ruby isn't a cat. Therefore she must not have hair." (nope) </li>
+            <li><q>If you get an A, you pass this class. You didn't get an A. Oh no! You must not have passed this class!</q> (still not valid!)</li>
+            <li><q>If an animal is a type of cat, it has hair. My dog Ruby isn't a cat. Therefore she must not have hair.</q> (nope) </li>
             <li> <m> ((p\to q) \wedge \neg p \to q)</m> is not a tautology!</li>
           </ul>
         </p>
@@ -243,22 +238,22 @@
           <tabular halign="center">
             <row>
               <cell/>
-              <cell><m>P \vee Q</m></cell>
+              <cell><m>p \vee q</m></cell>
             </row>
             <row bottom="minor">
               <cell/>
-              <cell><m>\neg P</m></cell>
+              <cell><m>\neg p</m></cell>
             </row>
             <row>
               <cell><m>\therefore</m></cell>
-              <cell><m>Q</m></cell>
+              <cell><m>q</m></cell>
             </row>
           </tabular>
         </sidebyside>
       </statement>
       <solution>
         <p>
-          The deduction rule is valid. To see this, make a truth table which contains <m>P \vee Q</m> and <m>\neg P</m> (and <m>P</m> and <m>Q</m> of course). Look at the truth value of <m>Q</m> in each of the rows that have <m>P \vee Q</m> and <m>\neg P</m> true.
+          The deduction rule is valid. To see this, make a truth table which contains <m>p \vee q</m> and <m>\neg p</m> (and <m>p</m> and <m>q</m> of course). Look at the truth value of <m>q</m> in each of the rows that have <m>p \vee q</m> and <m>\neg p</m> true.
         </p>
       </solution>
     </exercise>
@@ -273,15 +268,15 @@
           <tabular halign="center">
             <row>
               <cell/>
-              <cell><m>P \to (Q \vee R)</m></cell>
+              <cell><m>p \to (q \vee r)</m></cell>
             </row>
             <row bottom="minor">
               <cell/>
-              <cell><m>\neg(P \to Q)</m></cell>
+              <cell><m>\neg(p \to q)</m></cell>
             </row>
             <row>
               <cell><m>\therefore</m></cell>
-              <cell><m>R</m></cell>
+              <cell><m>r</m></cell>
             </row>
           </tabular>
         </sidebyside>
@@ -299,15 +294,15 @@
           <tabular halign="center">
             <row>
               <cell/>
-              <cell><m>(P \wedge Q) \to R</m></cell>
+              <cell><m>(p \wedge q) \to r</m></cell>
             </row>
             <row bottom="minor">
               <cell/>
-              <cell><m>\neg P \vee \neg Q</m></cell>
+              <cell><m>\neg p \vee \neg q</m></cell>
             </row>
             <row>
               <cell><m>\therefore</m></cell>
-              <cell><m>\neg R</m></cell>
+              <cell><m>\neg r</m></cell>
             </row>
           </tabular>
         </sidebyside>
@@ -360,17 +355,17 @@
     </exercise>
 
 
-    TODO do more exercises!
-    <exercise>
-      <statement>
+    <!-- TODO do more exercises! -->
+    <!-- <exercise> -->
+    <!--   <statement> -->
 
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+    <!--   </statement> -->
+    <!-- </exercise> -->
+    <!-- <exercise> -->
+    <!--   <statement> -->
 
-      </statement>
-    </exercise>
+    <!--   </statement> -->
+    <!-- </exercise> -->
 
   </exercises>
 

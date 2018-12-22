@@ -4,10 +4,10 @@
   
   <definition>
     <ul>
-      <li> A <term>theorem</term> is a statement can be shown to be true. (an important statement)
+      <li> A <term>theorem</term> is a statement can be shown to be true. We generally research the word theorem for an important statement.
       </li>
       <li>
-        A <term>proposition</term> is a "less important" theorem.
+        A <term>proposition</term> is a <q>less important</q> theorem.
       </li>
       <li> The tools we use to prove a theorem are <term>axioms</term> (or <term>postulates</term>) which are basic assumptions we make, as well as other theorems we've already proven.
       </li>
@@ -25,18 +25,18 @@
   <example>
     <statement>
       <p>
-        "If <m>n</m> is an odd integer, then <m>n^2</m> is odd."
+        Here's a proposition: <q>If <m>n</m> is an odd integer, then <m>n^2</m> is odd.</q>
       </p>
       <p>
-        This means for the universe of discourse of all integers:
-        <m> \forall n ((n </m> is odd <m>) \to (n^2 </m> is odd<m>)))</m>
+        This statement means for the universe of discourse of all integers:
+        <me> \forall n ((n \text{ is odd } ) \to (n^2  \text{ is odd }))</me>
       </p>
     </statement>
   </example>
   <note>
     <statement>
       <p>
-        The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words "for all."
+        The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words <q>for all.</q>
       </p>
     </statement>
   </note>
@@ -82,7 +82,7 @@
     <title>Indirect Proofs</title>
 
     <introduction>
-      <p>We still want to show <m>p \to q</m> is true, but perhaps that's difficult to approach directly. There are several different indirect proofs. The most frequent are approaches are proofs by contraposition and proofs by contradication.</p>
+      <p>We still want to show a statement is true, but perhaps that's difficult to approach directly. There are several different indirect proofs. The most frequent indirect approaches are proofs by contraposition and proofs by contradication.</p>
     </introduction>
 
     <subsubsection>
@@ -151,7 +151,7 @@
     </title>
 
     <p>
-      For statements which are "if an only if:" <m>p \iff q</m> we need to prove both <m>p \to q</m> and its converse <m>q \to p</m>.
+      For statements which are <q>if an only if:</q> <m>p \iff q</m> we need to prove both <m>p \to q</m> and its converse <m>q \to p</m>.
     </p>
     <example>
       <statement>
@@ -200,10 +200,10 @@
           </p>
           <ul>
             <li>
-              max(<m>x,y</m>) = <m>\dfrac{x+y + |x-y|)}{2}</m>
+              max(<m>x,y</m>) = <m>\dfrac{x+y + |x-y|}{2}</m>
             </li>
             <li>
-              min(<m>x,y</m>) = <m>\dfrac{x+y - |x-y|)}{2}</m>
+              min(<m>x,y</m>) = <m>\dfrac{x+y - |x-y|}{2}</m>
             </li>
           </ul>
         </statement>
@@ -217,7 +217,6 @@
       </note>
     </p>
     <p>
-      What if the cases might be the same? Below, we have two cases, either <m>x</m> is odd and <m>y</m> is even, or <m>x</m> is even and <m>y</m> is odd:
       <example>
         <statement>
           <p>
@@ -303,7 +302,7 @@
         </statement>
         <solution>
           <p>
-            Vacuous statements are kind of annoying... since I won't ever play in the Super Bowl, it doesn't matter what the truth value of the touchdown statement is. <m>F\to T \equiv T</m> and <m>F \to F \equiv T</m> just the same.
+            Since I won't ever play in the Super Bowl, it doesn't matter what the truth value of the touchdown statement is. <m>F\to T \equiv T</m> and <m>F \to F \equiv T</m> just the same.
           </p>
         </solution>
       </example>
@@ -335,13 +334,12 @@
   <subsection>
     <title>Counterexamples Revisited</title>
     <p>
-      <!-- Counterexamples are important in mathematics and reasoning in general. It helps you demonstrate  -->
-      Recall in math propositions, the universal quantifier is implied and is usually omitted. 
+      Recall in math propositions, the universal quantifier is implied and is usually omitted.  To show a statement is false, we need only find a single counterexample. 
     </p>
     <example>
       <statement>
         <p>
-          Each of the following statements is false. Find a specific counterexample and explain why.
+          Each of the following statements is false. Find a specific counterexample and explain why the statement is false.
         </p>
         <ol>
           <li>If <m>n</m> is a real number, then <m>(n+4)^2 = n^2 + 16</m>.</li>
@@ -363,9 +361,6 @@
       <statement>
         <p>
           Consider the statement <q>for all integers <m>a</m> and <m>b</m>, if <m>a + b</m> is even, then <m>a</m> and <m>b</m> are even</q>
-        </p>
-
-        <p>
           <ol>
             <li>
               <p>
@@ -453,9 +448,6 @@
       <statement>
         <p>
           Consider the statement: for all integers <m>n</m>, if <m>n</m> is even then <m>8n</m> is even.
-        </p>
-
-        <p>
           <ol>
             <li>
               <p>
