@@ -24,8 +24,7 @@ publish-to-web: html
 	cp images/* ~/public_html/class-notes/images
 
 publish:
-# note that `mathssh` is an alias in my zshrc file which to ssh into the math server.
-	mathssh 'cd src/class-notes && make publish-to-web'
+	ssh hammond@alonzo.math.wichita.edu 'cd src/class-notes && git pull && make publish-to-web'
 
 images:
 	~/src/mathbook/script/mbx -vv -c latex-image -f svg -d ~/Documents/class-notes/images ~/Documents/class-notes/class-notes.xml
