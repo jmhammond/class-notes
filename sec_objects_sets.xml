@@ -28,12 +28,12 @@
         </p>
         <p>
           We have also seen intervals of real numbers in our previous courses which sets:
-          <ul cols="2">
-            <li> <m>(a,b) = \{x \mid a \lt x \lt b \} </m></li>
-            <li> <m>[a,b) = \{x \mid a \le x \lt b \} </m></li>
-            <li> <m>(a,b] = \{x \mid a \lt x \le b \} </m></li>
-            <li> <m>[a,b] = \{x \mid a \le x \le b \} </m></li>
-          </ul>
+          <dl cols="2">
+            <li><m>(a,b) = \{x \mid a \lt x \lt b \}</m></li>
+            <li><m>[a,b) = \{x \mid a \le x \lt b \}</m></li>
+            <li><m>(a,b] = \{x \mid a \lt x \le b \}</m></li>
+            <li><m>[a,b] = \{x \mid a \le x \le b \}</m></li>
+          </dl>
         </p>
       </statement>
     </example>

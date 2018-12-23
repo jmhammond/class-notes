@@ -156,16 +156,16 @@
     </statement>
   </example>
 
-  <definition>
-    <p>
-      If <m>f_1:A \to \mathbb{R}</m> and <m>f_2:A \to \mathbb{R}</m>, then for any <m>x\in A</m>:
-      <ul>
-        <li><m>(f_1 + f_2)(x) = f_1(x) + f_2(x)</m>, and </li>
-        <li><m>(f_1 \cdot f_2)(x) = f_1(x) \cdot f_2(x)</m></li>
-      </ul>
-      which is what you'd expect from high school.
-    </p>
-  </definition>
+  <!-- <definition> -->
+  <!--   <p> -->
+  <!--     If <m>f_1:A \to \mathbb{R}</m> and <m>f_2:A \to \mathbb{R}</m>, then for any <m>x\in A</m>: -->
+  <!--     <ul> -->
+  <!--       <li><m>(f_1 + f_2)(x) = f_1(x) + f_2(x)</m>, and </li> -->
+  <!--       <li><m>(f_1 \cdot f_2)(x) = f_1(x) \cdot f_2(x)</m></li> -->
+  <!--     </ul> -->
+  <!--     which is what you'd expect from high school. -->
+  <!--   </p> -->
+  <!-- </definition> -->
 
 
   <definition>
@@ -183,7 +183,7 @@
     <statement>
       <p>
         Find the floor and ceiling of each of the following real numbers:
-      <ol>
+      <ol cols="2">
         <li>8.675309</li>
         <li><m>\pi</m></li>
         <li><m>-2.1</m></li>

@@ -14,7 +14,7 @@ and using it for discovery of what features I actually want to modify in my own.
 <!-- Pass a string with any of geometry's options  -->
 <!-- Default is empty and thus ineffective         -->
 <!-- Otherwise, happens early in preamble template -->
-<xsl:param name="latex.geometry" select="'papersize={8.5in, 11in}, hmargin={1.2in, 1.0in}, twoside, ignoreheadfoot'"/>
+<!-- <xsl:param name="latex.geometry" select="'papersize={8.5in, 11in}, hmargin={1.2in, 1.0in}, twoside, ignoreheadfoot'"/> -->
 <!--  -->
 <!-- PDF Watermarking                    -->
 <!-- Non-empty string makes it happen    -->
@@ -233,7 +233,7 @@ and using it for discovery of what features I actually want to modify in my own.
      <xsl:apply-templates />
     <xsl:text>\end{enumerate}&#xa;</xsl:text>
     <xsl:if test="@cols">
-        <xsl:text>\fixspacing&#xa;\end{multicols*}&#xa;</xsl:text>
+        <xsl:text>\end{multicols*}&#xa;</xsl:text>
     </xsl:if>
 </xsl:template>
 
@@ -257,7 +257,7 @@ and using it for discovery of what features I actually want to modify in my own.
     <xsl:apply-templates />
     <xsl:text>\end{itemize}&#xa;</xsl:text>
     <xsl:if test="@cols">
-        <xsl:text>\fixspacing&#xa;\end{multicols*}&#xa;</xsl:text>
+        <xsl:text>\end{multicols*}&#xa;</xsl:text>
     </xsl:if>
 </xsl:template>
 
@@ -279,7 +279,7 @@ and using it for discovery of what features I actually want to modify in my own.
     <xsl:apply-templates />
     <xsl:text>\end{description}&#xa;</xsl:text>
     <xsl:if test="@cols">
-        <xsl:text>\fixspacing&#xa;\end{multicols*}&#xa;</xsl:text>
+        <xsl:text>\end{multicols*}&#xa;</xsl:text>
     </xsl:if>
 </xsl:template>
 
