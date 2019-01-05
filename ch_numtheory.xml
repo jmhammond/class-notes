@@ -75,6 +75,18 @@
         The <code>xgcd</code> command returns a list of the form <code>(gcd, first Bezout coefficient, second Bezout coefficient)</code>, and the code above pretty-prints this in a readable format.
       </p>
 
+      <p>
+        In order to do modular exponentiation, we use the <code>powermod</code> function. For example, to compute <m>2019^{2019} \pmod{1000}</m>:
+        <sage>
+          <input>
+            2019.powermod(2019,1000)
+          </input>
+          <output>
+            979
+          </output>
+        </sage>
+      </p>
+
     </subsection>
 
   </section>

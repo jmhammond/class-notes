@@ -11,16 +11,5 @@
 
   <xi:include href="./sec_objects_matrices.xml"/>
 
-
-  <section id="section-objects-cardinality">
-    <title>Cardinality of Sets</title>
-
-
-    <subsection xml:id="section-objects-sets-diag">
-      <title>The uncountability of the rational numbers</title>
-
-    </subsection>
-  </section>
-
 </chapter>
 
