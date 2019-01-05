@@ -25,71 +25,7 @@
   </section>
 
 
-  <section xml:id="section-numtheory-encryption">
-    <title>Application: Encryption</title>
-
-    <subsection xml:id="subsection-numtheory-sage">
-      <title>
-        Number Theory Using Sage
-      </title>
-
-      <p>
-        Sage has a convenient way of determining if a number is prime by asking if the number is in a set primes: 
-        <sage>
-          <input>
-            37 in Primes()
-          </input>
-          <output>
-            True
-          </output>
-        </sage>
-        Try testing any number in the cell above.
-      </p>
-
-      <p>
-        If you want to just want to get a prime number of some particular size (as we want with our <xref ref="rsa-activity">RSA activity</xref>), we ask sage for the <code>next_prime</code>:
-        <sage>
-          <input>
-            next_prime(123456)
-          </input>
-          <output>
-            123457
-          </output>
-        </sage>
-      </p>
-
-      <p>
-        The extended Euclidean Algorithm, to find the GCD and Bezout coefficients:
-        <sage>
-          <input>
-            # Change a and b to be any positive integers, then press Evaluate
-            a=2345
-            b = 234
-            l = a.xgcd(b)
-            pretty_print(str(l[0]) + "=" + str(a) + "*(" + str(l[1]) + ") + " + str(b) + "*(" + str(l[2]) + ")")
-          </input>
-          <output>
-            1=2345*(47) + 234*(-471)
-          </output>
-        </sage>
-        The <code>xgcd</code> command returns a list of the form <code>(gcd, first Bezout coefficient, second Bezout coefficient)</code>, and the code above pretty-prints this in a readable format.
-      </p>
-
-      <p>
-        In order to do modular exponentiation, we use the <code>powermod</code> function. For example, to compute <m>2019^{2019} \pmod{1000}</m>:
-        <sage>
-          <input>
-            2019.powermod(2019,1000)
-          </input>
-          <output>
-            979
-          </output>
-        </sage>
-      </p>
-
-    </subsection>
-
-  </section>
+  <xi:include href="./sec_numtheory_encryption.xml"/>
 
 
 </chapter>
