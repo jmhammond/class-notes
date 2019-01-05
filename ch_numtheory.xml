@@ -22,6 +22,17 @@
   <section xml:id="section-numtheory-euclid">
     <title>The Euclidean Algorithm and Applications</title>
 
+    <subsection xml:id="extended-euclidean-algorithm">
+      <title>
+        The Extended Euclidean Algorithm
+      </title>
+
+
+      <definition xml:id="def-bezout-coefficient">
+        TODO
+      </definition>
+    </subsection>
+
   </section>
 
 
