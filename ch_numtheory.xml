@@ -68,8 +68,11 @@
             l = a.xgcd(b)
             pretty_print(str(l[0]) + "=" + str(a) + "*(" + str(l[1]) + ") + " + str(b) + "*(" + str(l[2]) + ")")
           </input>
+          <output>
+            1=2345*(47) + 234*(-471)
+          </output>
         </sage>
-        The <code>xgcd</code> command returns a list of the form (gcd, first Bezout, second Bezout), and the code above pretty-prints this in a readable format.
+        The <code>xgcd</code> command returns a list of the form <code>(gcd, first Bezout coefficient, second Bezout coefficient)</code>, and the code above pretty-prints this in a readable format.
       </p>
 
     </subsection>
