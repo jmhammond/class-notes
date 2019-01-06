@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-numtheory-modularexp">
+  <title>Modular exponentiation</title>
+
+  <p>
+    We begin by finding the binary, base-2, representation of a number.  
+  </p>
+  <example>
+    <statement>
+      <p>
+        Find the binary representation of each of the following numbers:
+        <ol>
+          <li>24</li>
+          <li>255</li>
+          <li>2019</li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Now recall how exponents work. <m>(a^m)^n = a^{mn}</m> and <m>a^m \cdot a^n = a^{m+n}</m>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        <term>Modular exponentiation</term> is the process of repeated squaring and reducing a number modulo some integer, and then combining the results to find the required answer.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Here's a simple, typed example. We'll find <m>37^{82} \pmod{52}</m>
+      </p>
+    </statement>
+    <solution>
+      <ol>
+        <li>
+          <p>
+            Find the binary representation of <m>82</m>.
+          </p>
+          <me>82 = 64 + 16 + 2</me>
+        </li>
+        <li> 
+          <p>
+            Repeated square and reduce <m>37 \pmod{52}</m> six times. This works since <m>2^{64}</m>, the highest power of <m>2</m> in the binary representation of 82.
+            <ul>
+              <li><m>37^1 = 37^1 = 37 \equiv 37\pmod{52}</m></li>
+              <li><m>37^2 = 37^2 = 1369 \equiv 17\pmod{52}</m></li>
+              <li><m>37^4 = 17^2 = 289 \equiv 29 \pmod{52}</m></li>
+              <li><m>37^8 = 29^2 = 841 \equiv 9 \pmod{52}</m></li>
+              <li><m>37^16 = 9^2 = 81 \equiv 29 \pmod{52}</m></li>
+              <li><m>37^32 = 29^2 = 841 \equiv 9 \pmod{52}</m></li>
+              <li><m>37^64 = 9^2 = 81 \equiv 29 \pmod{52}</m></li>
+            </ul>
+            Note that it was a coincidence that we got into a loop of 29, 9, 29, ... But this will happen sometimes! 
+          </p>
+        </li>
+        <li>
+          <p>
+            Now pick from the values above those entries which correspond to the binary representation of our desired power, 82:
+            <md>
+              <mrow>
+                37^{82}  \pmod{52} &amp;= 37^{2 + 16 + 64} \pmod{52}
+              </mrow>
+              <mrow>
+                &amp;= 37^2 \cdot 37^{16} \cdot 37^{64} \pmod{52}
+              </mrow>
+              <mrow>
+                &amp;\equiv 17 \cdot 29 \cdot 29 \pmod{52}
+              </mrow>
+              <mrow>
+                &amp;\equiv 49 \pmod{52}
+              </mrow>
+            </md>
+            Take note of the equivalence symbols used above. We write <m>=</m> when the numbers represent equality and <m>\equiv</m> when we have reduced modulo 52.
+          </p>
+        </li>
+      </ol>
+      <p>
+        That's it!
+      </p>
+    </solution>
+  </example>
+      
+
+
+
+
+      
+
+
+
+</section>
