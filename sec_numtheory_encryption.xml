@@ -271,7 +271,17 @@
     </definition>
     <example>
       <statement>
-        The classic example  %TODO TODO
+        <p>
+          The classic example is the so-called <term>Caesar Cipher</term> which shifts the alphabet to the right three letters. A becomes D, B becomes E, etc.
+        </p>
+        <p>
+          We encrypt letter-by-letter via the function <m>e(x) = x + 3 \pmod{26}</m> and decrypt via <m>d(x) = x-3 \pmod{26}</m>. 
+        </p>
+
+        <p>
+          Decrypt the following message:
+          L FDQ DOZDBV WUXVW BRX, EUXWXV​.
+        </p>
       </statement>
     </example>
 

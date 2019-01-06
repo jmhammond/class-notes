@@ -14,10 +14,7 @@
     </subsection>
   </section>
 
-  <section xml:id="section-numtheory-modularexp">
-    <title>Modular exponentiation</title>
-
-  </section>
+  <xi:include href="./sec_numtheory_modularexp.xml"/>
 
   <section xml:id="section-numtheory-euclid">
     <title>The Euclidean Algorithm and Applications</title>
