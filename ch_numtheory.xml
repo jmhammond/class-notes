@@ -11,6 +11,28 @@
 
     <subsection xml:id="section-numtheory-cong">
       <title> Congruence </title>
+
+      <definition>
+        <statement>
+          <p>
+            We say that <term><m>a</m> is congruent to <m>b</m> modulo <m>n</m></term> if <me>n \divides (b-a)</me>
+          </p>
+        </statement>
+      </definition>
+
+      <note>
+        <p>
+          Since <m>n\divides (b-a)</m> is equivalent to the statement that there exists some integer <m>m</m> such that
+          <md>
+            <mrow> a-b &amp;= mn </mrow>
+            <mrow> a &amp;= mn + b </mrow>
+          </md>
+          we can say that <m>a</m> is congruent to <m>b</m> modulo <m>n</m> if <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>. 
+          % TODO clean up this statement and provide a proof or indicate that a proof is needed.
+        </p>
+      </note>
+
+
     </subsection>
   </section>
 

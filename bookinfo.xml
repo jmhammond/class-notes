@@ -36,6 +36,7 @@
     \def\rng{\mbox{range}}
     \def\isom{\cong}
     \def\st{\mid}
+    \def\divides{\mid}
     \newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
     \newcommand{\va}[1]{\vtx{above}{#1}}
     \newcommand{\vb}[1]{\vtx{below}{#1}}
