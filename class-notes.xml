@@ -51,7 +51,6 @@
     <xi:include href="./ch_numtheory.xml"/>
     <xi:include href="./ch_induction.xml"/>
     <xi:include href="./ch_counting.xml"/>
-    <xi:include href="./ch_recurrence.xml"/>
     <xi:include href="./ch_appendix.xml"/>
 
 
