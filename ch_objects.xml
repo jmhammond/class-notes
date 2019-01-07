@@ -2,7 +2,6 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_objects">
   <title>Mathematical Objects</title>
 
-  <!-- The sets section got too big, so I broke the secionts out into their own files. //-->
   <xi:include href="./sec_objects_sets.xml"/>
 
   <xi:include href="./sec_objects_functions.xml"/>
@@ -10,6 +9,8 @@
   <xi:include href="./sec_objects_seqseries.xml"/>
 
   <xi:include href="./sec_objects_matrices.xml"/>
+
+  <xi:include href="./sec_solvingrecurrence.xml"/>
 
 </chapter>
 

@@ -347,7 +347,7 @@
     <exercise>
       <statement>
         <p>
-          Let <m>M = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}</m>. Find:
+          Let <m>M = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 \end{bmatrix}</m>. Find:
         </p>
         <ol>
           <li><m>M^{[2]}</m></li>

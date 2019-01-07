@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-solvingrecurrences">
+  <title>
+    Solving Recurrence Relations
+  </title>
+
+  <p>
+    The Towers of Hanoi is a puzzle with the goal of moving all disks from one peg to another peg. The puzzle has the following rules:
+    <ol>
+      <li> Place all the disks on the first peg in order of size with the largest on bottom.</li>
+      <li> Move one disk at a time to any other peg. A move is valid only if a smaller disk is placed on top a larger one.</li>
+    </ol>
+    <figure>
+      <image source="./images/Tower_of_Hanoi_4.gif" width="50%">
+        <description>
+          Animation of the Towers of Hanoi puzzle by André Karwath aka Aka - Own work, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=85401
+        </description>
+      </image>
+      <caption>Animation of the Towers of Hanoi puzzle with 4 disks</caption>
+    </figure>
+  </p>
+  <example>
+    <statement>
+      <p>
+        Let <m>H_n</m> denote the number of moves to solve the puzzle with <m>n</m> disks. Our goal is to find a solution to the sequence <m>\{H_n\}</m>.
+        <ol>
+          <li>What is the recurrence relation that describes <m>H_n</m> in terms of previous values?</li>
+          <li>Solve the recurrence relation.</li>
+          <li>The story accompanying the puzzle says that monks are currently solving the puzzle with 64 golden disks, and that the world will end when they finally solve the puzzle. Should we be concerned? Why or why not?</li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+
+  <example>
+    <statement>
+      <p>
+        Recall that a bitstring is a string containing only 0's and 1's. How many bitstrings of length <m>n</m> do not contain three consecutive 0's? 
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Find a recurrence relation for <m>C_n</m>, the number of ways to parenthesize the product of <m>n+1</m> numbers
+        <me>x_0\cdot x_1 \cdot x_2 \cdot \dots \cdot x_n</me>
+        to determine the order of multiplication.
+      </p>
+      <p>
+        The sequence <m>\{C_n\}</m> is the sequence of Catalan numbers. We will revisit them in homework and again briefly in Math 322.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        A vending machine dispensing books of stamps accepts $1 coins, $1 bills, and $5 bills. Find a recurrence relation for the number of ways to deposit <m>n</m> dollars in the vending machine, where the order in which the bills are deposited matters.
+      </p>
+    </statement>
+  </example>
+
+
+</section>
