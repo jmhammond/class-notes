@@ -54,13 +54,85 @@
     </statement>
   </example>
 
-  <example>
+  <example xml:id="example-fifth-degree-recurrence">
     <statement>
       <p>
-        A vending machine dispensing books of stamps accepts $1 coins, $1 bills, and $5 bills. Find a recurrence relation for the number of ways to deposit <m>n</m> dollars in the vending machine, where the order in which the bills are deposited matters.
+        A vending machine dispensing books of stamps accepts $1 coins, $1 bills, and 5 bills. Find a recurrence relation for the number of ways to deposit <m>n</m> dollars in the vending machine, where the order in which the bills are deposited matters.
       </p>
     </statement>
   </example>
 
+  <definition>
+    <statement>
+      <p>
+        A <term>linear homogeneous recurrence relation of degree <m>k</m> with constant coefficients</term> is a recurrence relation of the form
+        <me>a_n = c_1 a_{n-1} + c_2a_{n-2} + \dots + c_k a_{n-k}</me>
+        where <m>c_1, c_2, \dots , c_k</m> are real numbers with <m>c_k \not=0</m>.
+      </p>
+
+      <example>
+        <statement>
+          <p>
+            <ol>
+              <li> The Fibonacci sequence: <m>f_n = f_{n-1} + f_{n-2}</m> is linear, and its coefficients are 1 and 1. The degree is 2. 
+              </li>
+              <li> Parenthesizing <m>n+1</m> terms, <m>C_n = \sum_{k=0}^{n-1} C_{n-k}C_k</m> is <emph>not</emph> linear. 
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+    </statement>
+  </definition>
+
+
+    <p>
+      Why do we care? We can solve them. If <m>a_n = r^n</m> is a solution to the recurrence relation, then we we can plug it in: 
+      <md>
+        <mrow> \displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} + \dots + c_k a_{n-k} </mrow>
+        <mrow> \displaystyle r^n &amp;= c_1 r^{n-1} + c_2r^{n-2} + \dots + c_k r^{n-k} </mrow>
+        <mrow> \text{ Divide both sides by } r^{n-k}</mrow>
+        <mrow>
+          \displaystyle r^k &amp;= c_1 r^{k-1} + c_2r^{k-2} + \dots + c_k
+        </mrow>
+        <mrow>\displaystyle r^k - c_1 r^{k-1} - c_2r^{k-2} - \dots - c_k &amp;= 0</mrow>
+      </md>
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          We call the equation <m>\displaystyle r^k - c_1 r^{k-1} - c_2r^{k-2} - \dots - c_k = 0</m> the <term>characteristic equation</term> of the recurrence relation. The solutions to this equation are the <term>characteristic roots</term>.
+        </p>
+      </statement>
+    </definition>
+    
+
+<!-- # Solving Linear Homogeneous Recurrence Relations  -->
+
+<!-- ## Second degree (Two roots) -->
+
+<!-- Let $c_1$ and $c_2$ be real numbers. Suppose that the characteristic equation -->
+<!-- $$r^2 - c_1r - c_2 = 0$$  -->
+<!-- has two distinct roots $r_1$ and $r_2$.  -->
+<!-- Then the sequence $\{a_n\}$ is a solution of the recurrence relation  -->
+<!-- $${a_n = c_1a_{n-1} + c_2a_{n-2}}$$  -->
+<!-- if and only if  -->
+<!-- $${a_n = \alpha_1r_1^n + \alpha_2r_2^n}$$  -->
+<!-- for $n=0, 1, 2, \dots$, where $\alpha_1$ and $\alpha_2$ are constants. -->
+
+<!-- ## Example: -->
+
+<!-- * Solve $a_n = a_{n-1} + 2a_{n-2}$ where $a_0=2$ and $a_1=7$. -->
+
+<!-- ## Second degree (One root) -->
+
+<!-- Let $c_1$ and $c_2$ be real numbers. Suppose that  -->
+<!-- $$r^2 - c_1r - c_2 = 0$$  -->
+<!-- has only one root $r_0$. Then the sequence $\{a_n\}$ is a solution of the recurrence relation  -->
+<!-- $${a_n = c_1a_{n-1} + c_2a_{n-2}}$$  -->
+<!-- if and only if  -->
+<!-- $${a_n = \alpha_1r_0^n + \alpha_2\cdot n \cdot r_0^n}$$  -->
+<!-- for $n=0, 1, 2, \dots$, where $\alpha_1$ and $\alpha_2$ are constants. -->
 
 </section>
