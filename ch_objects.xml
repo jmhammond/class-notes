@@ -6,9 +6,9 @@
 
   <xi:include href="./sec_objects_functions.xml"/>
 
-  <xi:include href="./sec_objects_seqseries.xml"/>
-
   <xi:include href="./sec_objects_matrices.xml"/>
+
+  <xi:include href="./sec_objects_seqseries.xml"/>
 
   <xi:include href="./sec_solvingrecurrence.xml"/>
 
