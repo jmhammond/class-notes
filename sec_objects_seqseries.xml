@@ -110,7 +110,7 @@
         <li>Are there cycles among the terms?</li>
         <li>...</li>
       </ul>
-      Later we can talk about second or third order differences. We'll also be revisiting recurrences in <xref ref="ch_recurrence"/>.
+      Later we can talk about second or third order differences. We'll also be revisiting recurrences in <xref ref="section-solvingrecurrences"/>.
     </p>
   </note>
 

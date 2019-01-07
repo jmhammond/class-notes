@@ -2,7 +2,36 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_counting">
   <title>Counting Techniques</title>
 
-  <p> 1, 2, 3, 4, ... </p>
+  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-basics">
+    <title>
+      Counting basics
+    </title>
 
+    <p> 1, 2, 3, 4, ... </p>
+  </section>
+
+  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-combperm">
+    <title>
+      Combinations and Permutations
+    </title>
+  </section>
+
+  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-binomial">
+    <title>
+      The Binomial Theorem and Binomial Coefficients
+    </title>
+  </section>
+
+  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-starsandbars">
+    <title>
+      Counting with Stars and Bars
+    </title>
+  </section>
+
+  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-morepie">
+    <title>
+      Counting with the Principle of Inclusion/Exclusion
+    </title>
+  </section>
 </chapter>
 
