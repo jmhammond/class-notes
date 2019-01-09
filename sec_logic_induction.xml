@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_logic_induction">
+  <title>Mathematical Induction</title>
+
+  <p> TODO - write the section about induction. </p>
+
+  <p> Write the first line. </p>
+  <p> Assume that if I write up to k lines. Prove that if I have written n lines, then I can write n+1 lines.</p>
+
+
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          What is wrong with the following <q>proof</q> that all horses are the same color?
+        </p>
+        <p>
+          Proof by induction:
+          <ul>
+            <li>
+              <p> Base step: the statement <m>P(1)</m> is the statement <q>one horse is the same color as itself</q>. This is clearly true.</p>
+            </li>
+            <li>
+              <p> Induction step: Assume that <m>P(k)</m> is true for some integer <m>k</m>. That is, any group of <m>k</m> horses are all the same color.</p>
+              <p> Consider a group of <m>k+1</m> horses. Let's line them up. If we look at first <m>k</m> horses, our induction hypothesis tells us they are the same color. Similarly, if we look at the last <m>k</m> horses, they are also the same color. This shows that all <m>k+1</m> horses are the same color.</p>
+            </li>
+          </ul>
+          Thus, by math induction, all horses are the same color.
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
+</section>
+

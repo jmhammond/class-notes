@@ -49,7 +49,6 @@
     <xi:include href="./ch_logic.xml"/>
     <xi:include href="./ch_objects.xml"/>
     <xi:include href="./ch_numtheory.xml"/>
-    <xi:include href="./ch_induction.xml"/>
     <xi:include href="./ch_counting.xml"/>
     <xi:include href="./ch_appendix.xml"/>
 
