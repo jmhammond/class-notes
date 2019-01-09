@@ -610,6 +610,50 @@
   </exercise>
 
 
-  <!-- TODO add some induction examples here. //-->
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Use the product rule for logarithms (<m>\log(ab) = \log(a) + \log(b)</m>) to prove, by induction on <m>n</m>, that <m>\log(a^n) = n \log(a)</m>, for all natural numbers <m>n \ge 2</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The idea here is that if we take the logarithm of <m>a^n</m>, we can increase <m>n</m> by 1 if we multiply by another <m>a</m> (inside the logarithm). This results in adding 1 more <m>\log(a)</m> to the total.
+        </p>
+
+        <proof>
+          <p>
+            Let <m>P(n)</m> be the statement <m>\log(a^n) = n \log(a)</m>. The base case, <m>P(2)</m> is true, because <m>\log(a^2) = \log(a\cdot a) = \log(a) + \log(a) = 2\log(a)</m>, by the product rule for logarithms. Now assume, for induction, that <m>P(k)</m> is true. That is, <m>\log(a^k) = k\log(a)</m>. Consider <m>\log(a^{k+1})</m>. We have
+            <me>
+              \log(a^{k+1}) = \log(a^k\cdot a) = \log(a^k) + \log(a) = k\log(a) + \log(a)
+            </me>
+            with the last equality due to the inductive hypothesis. But this simplifies to <m>(k+1) \log(a)</m>, establishing <m>P(k+1)</m>. Therefore by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \ge 2</m>.
+          </p>
+        </proof>
+
+      </solution>
+    </exercise>
+
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Let <m>f_1, f_2,\ldots, f_n</m> be differentiable functions. Prove, using induction, that
+          <me>
+            (f_1 + f_2 + \cdots + f_n)' = f_1' + f_2' + \cdots + f_n'
+          </me>
+        </p>
+
+        <p>
+          You may assume <m>(f+g)' = f' + g'</m> for any differentiable functions <m>f</m> and <m>g</m>. (You don't actually need to know calculus to be able to do this).
+        </p>
+      </statement>
+      <hint>
+        <p>
+          You are allowed to assume the base case. For the inductive case, group all but the last function together as one sum of functions, then apply the usual sum of derivatives rule, and then the inductive hypothesis.
+        </p>
+      </hint>
+    </exercise>
 
 </exercises>

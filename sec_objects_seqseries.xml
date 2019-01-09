@@ -263,5 +263,32 @@
       </statement>
     </exercise>
 
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Prove that <m>F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1</m> where <m>F_n</m> is the <m>n</m>th Fibonacci number.
+        </p>
+      </statement>
+      <solution>
+
+        <proof>
+          <p>
+            Let <m>P(n)</m> be the statement <m>F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1</m>. We will show that <m>P(n)</m> is true for all <m>n \ge 0</m>. First the base case is easy because <m>F_0 = 0</m> and <m>F_1 = 1</m> so <m>F_0 = F_1 - 1</m>. Now consider the inductive case. Assume <m>P(k)</m> is true, that is, assume <m>F_0 + F_2 + F_4 + \cdots + F_{2k} = F_{2k+1} - 1</m>. To establish <m>P(k+1)</m> we work from left to right:
+            <md>
+              <mrow> F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \text{by ind. hyp.}</mrow>
+              <mrow> \amp = F_{2k+1} + F_{2k+2} - 1 \amp</mrow>
+              <mrow> \amp = F_{2k+3} - 1 \amp \text{by recursive def.}</mrow>
+            </md>
+          </p>
+
+          <p>
+            Therefore <m>F_0 + F_2 + F_4 + \cdots + F_{2k+2} = F_{2k+3} - 1</m>, which is to say <m>P(k+1)</m> holds. Therefore by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \ge 0</m>.
+          </p>
+        </proof>
+
+      </solution>
+    </exercise>
+
   </exercises>
 </section>

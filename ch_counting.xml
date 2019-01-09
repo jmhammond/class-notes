@@ -20,6 +20,29 @@
     <title>
       The Binomial Theorem and Binomial Coefficients
     </title>
+
+    <exercises>
+      <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+      <exercise>
+        <statement>
+          <p>
+            Use induction to prove that <m>\d\sum_{k=0}^n {n \choose k} = 2^n</m>. That is, the sum of the <m>n</m>th row of Pascal's Triangle is <m>2^n</m>.
+          </p>
+        </statement>
+
+      </exercise>
+
+      <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+      <exercise>
+        <statement>
+          <p>
+            Use induction to prove <m>{4 \choose 0} + {5 \choose 1} + {6 \choose 2} + \cdots + {4+n \choose n} = {5+n \choose n}</m>. (This is an example of the hockey stick theorem.)
+          </p>
+        </statement>
+
+      </exercise>
+    </exercises>
+
   </section>
 
   <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-starsandbars">
