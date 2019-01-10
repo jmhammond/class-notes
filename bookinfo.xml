@@ -5,6 +5,7 @@
 
   <macros> 
     \def\ds{\displaystyle}
+    \def\d{\displaystyle}
     \def\N{\mathbb N}
     \def\B{\mathbf{B}}
     \def\Z{\mathbb Z}
