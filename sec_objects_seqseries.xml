@@ -267,6 +267,17 @@
     <exercise>
       <statement>
         <p>
+          Prove, by mathematical induction, that <m>F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1</m>, where <m>F_n</m> is the <m>n</m>th Fibonacci number (<m>F_0 = 0</m>, <m>F_1 = 1</m> and <m>F_n = F_{n-1} + F_{n-2}</m>).
+        </p>
+      </statement>
+
+    </exercise>
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
           Prove that <m>F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1</m> where <m>F_n</m> is the <m>n</m>th Fibonacci number.
         </p>
       </statement>
@@ -289,6 +300,17 @@
 
       </solution>
     </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+      <exercise>
+        <statement>
+          <p>
+            Prove, using strong induction, that every natural number is either a Fibonacci number or can be written as the <em>sum</em> of <em>distinct</em> Fibonacci numbers.
+          </p>
+        </statement>
+
+      </exercise>
+
 
   </exercises>
 </section>

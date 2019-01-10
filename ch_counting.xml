@@ -56,5 +56,26 @@
       Counting with the Principle of Inclusion/Exclusion
     </title>
   </section>
+
+  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-morecounting">
+
+    <title>
+
+    </title>
+
+    <exercises>
+
+      <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+      <exercise>
+        <statement>
+          <p>
+            Find the largest number of points which a football team cannot get exactly using just 3-point field goals and 7-point touchdowns (ignore the possibilities of safeties, missed extra points, and two point conversions). Prove your answer is correct by mathematical induction.
+          </p>
+        </statement>
+
+      </exercise>
+
+    </exercises>
+  </section>
 </chapter>
 
