@@ -15,7 +15,22 @@
       </colophon>
       <preface>
         <p>
-          If you're reading this, I forgot to write the preface. Whoopsie-doodle.
+          The WSU Catalog says of this course: 
+          <blockquote>
+            <p>
+              MATH 321.  Discrete Structures I
+            </p>
+            <p>
+            Cross-listed as CS 321. Provides a mathematical foundation essential to the entire computer science curriculum. Includes propositional and predicate logic, induction, recursion and counting techniques. Prerequisite: MATH 242 or equivalent with a grade point of 2.000 or better.
+            </p>
+          </blockquote>
+        </p>
+
+        <p>
+          We'll be exploring these areas, along with enough number theory to do an interesting application to encryption. 
+        </p>
+        <p>
+          This course is very different that your past math courses. Keep an open mind, and as my son has said, <q>try. Fail. Try. Fail. Try. Succeed!</q> And please ask questions. This might be the <q>hardest</q> math class you take, but it can also be one of the most rewarding.
         </p>
       </preface>
 
