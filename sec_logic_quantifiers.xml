@@ -13,7 +13,7 @@
         </ul>
         <li>
           <p>
-            We can write <m>P(x) :=</m> <q><m> x \lt 5 </m>, where</q>h
+            We can write <m>P(x) :=</m> <q><m> x \lt 5 </m>,</q> where
             <ul>
               <li> the value of <m>P(x)</m> is the value of the <term>propositional function</term> P at <m>x</m>. </li>
               <li>Assigning a value to <m>x</m> makes <m>P</m> a proposition (it then has a truth value)</li>
