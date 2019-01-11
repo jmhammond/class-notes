@@ -24,8 +24,6 @@
       <p>
         The model of induction will always follow the following structure:
       </p>
-    </statement>
-    <solution>
       <proof>
         <p>
           Proof by math induction.
@@ -44,7 +42,7 @@
           </ol>
         </p>
       </proof>
-    </solution>
+    </statement>
   </example>
 
   <example>
