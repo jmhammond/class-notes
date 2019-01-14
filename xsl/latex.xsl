@@ -6,7 +6,7 @@ and using it for discovery of what features I actually want to modify in my own.
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-<xsl:import href="../../../../src/mathbook/xsl/mathbook-latex.xsl" />
+<xsl:import href="../../mathbook/xsl/mathbook-latex.xsl" />
 
 
 <!--  -->
@@ -116,6 +116,28 @@ and using it for discovery of what features I actually want to modify in my own.
 <!--     <xsl:text>\end{flushright}&#xa;</xsl:text> -->
 <!-- </xsl:template> -->
 
+<!-- If gif is specified, substitute a png image -->
+<xsl:template match="image[@source]" mode="image-inclusion">
+    <xsl:variable name="extension">
+        <xsl:call-template name="file-extension">
+            <xsl:with-param name="filename" select="@source" />
+        </xsl:call-template>
+    </xsl:variable>
+    <xsl:text>\includegraphics[width=</xsl:text>
+    <xsl:apply-templates select="." mode="get-width-fraction" />
+    <xsl:text>\linewidth]</xsl:text>
+    <xsl:text>{</xsl:text>
+    <xsl:choose>
+      <xsl:when test="$extension!='gif'">
+        <xsl:apply-templates select="@source" mode="internal-id" />
+      </xsl:when>
+      <xsl:otherwise>
+        <!-- <xsl:apply-templates select="@source" mode="internal-id" /> -->
+        <xsl:value-of select="substring-before(@source, '.')"/>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:text>}&#xa;</xsl:text>
+</xsl:template>
 
 <!-- Create a heading for each non-empty collection of solutions -->
 <!-- Format as appropriate LaTeX subdivision for this level      -->
