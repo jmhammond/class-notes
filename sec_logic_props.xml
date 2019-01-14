@@ -82,12 +82,18 @@
     <example>
       <statement>
         <p>
-          Write the following as a simple English expression:
+          Write the following as a simple English expression, letting <m>p</m> be the statement <q>it rains</q> and <m>q</m> be the statement <q>I complain about the weather</q>.
         </p>
-
         <p>
-
-          <!-- TODO Write these here!!! //-->
+          <ol>
+            <li><m>p\to q</m></li>
+            <li><m>p \vee q</m> </li>
+            <li><m>q \to p</m></li>
+            <li><m>\neg q \to \neg p </m></li>
+          </ol>
+        </p>
+        <p>
+          What is the logical negation of <m>p \to q</m> in simple English? 
         </p>
       </statement>
 
