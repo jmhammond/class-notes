@@ -222,8 +222,6 @@
             <li> <m> ((p\to q) \wedge \neg p \to q)</m> is not a tautology!</li>
           </ul>
         </p>
-
-        <!-- TODO maybe include a picture from that comic -->
       </li>
     </ul>
   </p>
