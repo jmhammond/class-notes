@@ -357,17 +357,43 @@
     </exercise>
 
 
-    <!-- TODO do more exercises! -->
-    <!-- <exercise> -->
-    <!--   <statement> -->
+    <exercise>
+      <statement>
+        <p>
+          Prove that the folowing is a valid argument, explaining each rule of inference used to arrive at the conclusion.
+        </p>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <q>I take the bus or I walk. If I walk I get tired. I do not get tired. Therefore I take the bus. </q>
+              </p>
+            </li>
+            <li>
+              <p>
+                <q>All lions are fierce. Some lions do not drink coffee. Therefore, some fierce creatures to not drink coffee.</q>
+              </p>
+            </li>
+          </p>
+      </statement>
+    </exercise>
 
-    <!--   </statement> -->
-    <!-- </exercise> -->
-    <!-- <exercise> -->
-    <!--   <statement> -->
-
-    <!--   </statement> -->
-    <!-- </exercise> -->
+    <!-- This exercise is from Al Doerr, Ken Levasseur, Applied Discrete Structures -->
+    <exercise>
+      <statement>
+        <p>
+          Show that the following argument is invalid.
+        </p>
+        <p>
+          If wages increase, then there will be inflation. The cost of living will not increase if there is no inflation. Wages will increase. Therefore, the cost of living will increase.
+        </p>
+        <hint>
+          <p>
+            Make a truth table.
+          </p>
+        </hint>
+      </statement>
+    </exercise>
 
   </exercises>
 
