@@ -4,17 +4,19 @@
 
   <definition>
     <statement>
-      To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the principal of <term>math induction</term>. The process has two core steps:
-      <ol>
-        <li>Basis step: Prove that <m>P(0)</m> is true.</li>
-        <li>Inductive step: Assume that <m>P(k)</m> is true for some value of <m>k \ge 0</m> and show that <m>P(k+1)</m> is true. </li>
-      </ol>
+      <p>
+        To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the principal of <term>math induction</term>. The process has two core steps:
+        <ol>
+          <li>Basis step: Prove that <m>P(0)</m> is true.</li>
+          <li>Inductive step: Assume that <m>P(k)</m> is true for some value of <m>k \ge 0</m> and show that <m>P(k+1)</m> is true. </li>
+        </ol>
+      </p>
     </statement>
   </definition>
 
   <note>
     <p>
-      You can think of math induction like an infinite ladder. First, you put your foot on the first rung. If you're able to go from the <m>k</m>-th rung to the <m>k+1</m>-st rung, you'll be able to climb forever.
+      You can think of math induction like an infinite ladder. First, you put your foot on the bottom rung. If you're able to go from the <m>k</m>-th rung to the <m>k+1</m>-st rung, you'll be able to climb forever.
     </p>
   </note>
 
@@ -33,7 +35,7 @@
             </li>
             <li>
               <p>
-                Inductive step. Assume <m>P(k)</m> is true for some <m>k\ge 0</m> [explicitly say what this statement is. This is called the <term>inductive hypothesis</term>. We will show <m>P(k+1)</m> is true.
+                Inductive step. Assume <m>P(k)</m> is true for some <m>k\ge 0</m> [explicitly say what this statement is. This is called the <term>inductive hypothesis</term>]. We will show <m>P(k+1)</m> is true.
               </p>
               <p>
                 [here you actually prove <m>P(k+1)</m> is true. You should use the inductive hypothesis. If you didn't, you've made an error somewhere]
@@ -115,7 +117,7 @@
   <definition>
     <statement>
       <p>
-        The principal of <term>strong math induction</term> is like the so-called weak induction, except instead of proving <m>P(k) \to P(k+1)</m>, we assume that <m>P(m)</m> is true for all values of <m>m</m> such that <m>0 \le m \lt k</m>, and we show that <m>P(k)</m> is true.
+        The principal of <term>strong math induction</term> is like the so-called weak induction, except instead of proving <m>P(k) \to P(k+1)</m>, we assume that <m>P(m)</m> is true for all values of <m>m</m> such that <m>0 \le m \le k</m>, and we show that the next statement, <m>P(k+1)</m>, is true.
       </p>
     </statement>
   </definition>
@@ -132,7 +134,7 @@
   <example>
     <statement>
       <p>
-        Prove that every positive integer has a binary expansion, that is it is either a power of two or it is a sum of distinct powers of two.
+        Prove that every positive integer has a binary expansion, that is, it is either a power of two or it is a sum of distinct powers of two.
       </p>
     </statement>
   </example>
