@@ -20,7 +20,7 @@
           <ol>
             <li>This is a course in discrete mathematics</li>
             <li> Chocolate cupcakes are the best </li>
-            <li> 1 - 3 = 4</li>
+            <li><m> 1 - 3 = 4</m></li>
             <li> Wichita is the capitol of Kansas </li>
             <li> What are you doing? </li>
           </ol>
@@ -38,11 +38,9 @@
       <statement>
         <p>
           What are the logical negations of each of the following?
-        </p>
-        <p>
           <ol>
             <li> This is a course in discrete mathematics</li>
-            <li> 1- 3 = 4 </li>
+            <li> <m>1- 3 = 4</m> </li>
             <li> Wichita is the capitol of Kansas</li>
           </ol>
           <!-- <answer> -->
@@ -83,8 +81,6 @@
       <statement>
         <p>
           Write the following as a simple English expression, letting <m>p</m> be the statement <q>it rains</q> and <m>q</m> be the statement <q>I complain about the weather</q>.
-        </p>
-        <p>
           <ol>
             <li><m>p\to q</m></li>
             <li><m>p \vee q</m> </li>
