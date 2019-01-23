@@ -229,7 +229,7 @@
     <exercise>
       <statement>
         <p>
-          Deterine the truth value of each of the following statements if the domain consists of all real numbers.
+          Determine the truth value of each of the following statements if the domain consists of all real numbers.
           <ol cols="2">
             <li><m>\exists x(x^2 = 2)</m></li>
             <li><m>\exists x (x^2 = -1)</m></li>

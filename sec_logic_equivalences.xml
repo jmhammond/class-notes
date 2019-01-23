@@ -275,7 +275,7 @@
     <exercise>
       <statement>
         <p>
-          Use a truth table to show that <m>p \to q) \land (p \to r)</m> and <m>p \to (q \to r)</m> are logically equivalent.
+          Use a truth table to show that <m>(p \to q) \land (p \to r)</m> and <m>p \to (q \to r)</m> are logically equivalent.
         </p>
       </statement>
     </exercise>
