@@ -45,9 +45,9 @@
       </p>
     </statement>
     <solution>
-      Here's the solution for <m>(\neg p \to (q \wedge \neg q)) \to p</m>:
+      Here's the solution for <m>(\neg p \to (q \wedge \neg q)) \equiv p</m>:
       <table xml:id="table-contradiction-valid">
-        <caption>Showing <m>( \neg p \to (q \wedge \neg q)  )\to p</m> is a tautology</caption>
+        <caption>Showing <m>( \neg p \to (q \wedge \neg q)  )\leftrightarrow p</m> is a tautology</caption>
         <tabular  halign="center">
           <row bottom="medium">
             <cell><m>p</m></cell>
@@ -55,7 +55,7 @@
             <cell><m>\neg p</m></cell>
             <cell><m>q \wedge \neg q</m></cell>
             <cell><m>p \to (q \wedge \neg q)</m></cell>
-            <cell><m>(p \to (q \wedge \neg q)) \to p</m></cell>
+            <cell><m>(p \to (q \wedge \neg q)) \leftrightarrow p</m></cell>
           </row>
 
           <row>
