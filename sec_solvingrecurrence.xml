@@ -5,6 +5,52 @@
   </title>
 
   <p>
+    Why would I want to find an explicit solution to a recurrence relation?
+  </p>
+  <p>
+    Let's imagine that we wanted (for some reason) to find the 10,000th term of the sequence <m>a_n = a_{n-2}</m> with <m>a_0 =1, a_1 = 3</m>. The sequence is very simple: <m>\{1, 3, 1, 3, 1, 3, \dots\}</m>.
+  </p>
+  <p>
+    It turns out that the solution to this recurrence is <m>a_n = 2+(-1)^{n+1}</m>. We can directly compute the value, and it takes SageMath about 150 microseconds to give us the answer:
+    <sage>
+      <input>
+        %%time
+        def nonrec(x): return 2 + pow(-1, x+1);
+        print(nonrec(10000))
+      </input>
+      <output>
+        1
+        CPU times: user 111 µs, sys: 57 µs, total: 168 µs
+        Wall time: 144 µs
+      </output>
+    </sage>
+  </p>
+
+  <p>
+    But if we wanted to actually have the computer find the 10,000th value via the recursive definition, Sage (computing via Python) can't even do it:
+    <sage>
+      <input>
+        %%time
+        def recursive(x):
+            if x == 0:
+                return 1;
+            elif x == 1:
+                return 3;
+            else:
+                return recursive(x-2)
+            
+        print(recursive(10000))
+      </input>
+      <output>
+        RuntimeError: maximum recursion depth exceeded while calling a Python object
+      </output>
+    </sage>
+  </p>
+  <p>
+    Explicit solutions are better when we want to be able to actually determine specific values of a recurrence.
+  </p>
+
+  <p>
     The Towers of Hanoi is a puzzle with the goal of moving all disks from one peg to another peg. The puzzle has the following rules:
     <ol>
       <li> Place all the disks on the first peg in order of size with the largest on bottom.</li>
