@@ -269,7 +269,6 @@
           Are the statements <m>p \to (q\vee r)</m> and <m>(p \to q) \vee (p \to r)</m> logically equivalent?
         </p>
       </statement>
-
     </exercise>
 
     <exercise>
@@ -278,6 +277,20 @@
           Use a truth table to show that <m>(p \to q) \land (p \to r)</m> and <m>p \to (q \land r)</m> are logically equivalent.
         </p>
       </statement>
+      <solution>
+        <p>
+          Here's an alternative solution using previous equivalences (not a truth table): 
+          <md>
+            <mrow> (p \to q) \land (p \to r) &amp; = (\neg p \lor q) \land (\neg p \lor r) </mrow>
+            <mrow>
+              &amp;= \neg p \lor (q \land r)
+            </mrow>
+            <mrow>
+              &amp;= p \to (q \land r)
+            </mrow>
+          </md>
+        </p>
+      </solution>
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
