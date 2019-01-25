@@ -54,8 +54,8 @@
             <cell><m>q</m></cell>
             <cell><m>\neg p</m></cell>
             <cell><m>q \wedge \neg q</m></cell>
-            <cell><m>p \to (q \wedge \neg q)</m></cell>
-            <cell><m>(p \to (q \wedge \neg q)) \leftrightarrow p</m></cell>
+            <cell><m>\neg p \to (q \wedge \neg q)</m></cell>
+            <cell><m>(\neg p \to (q \wedge \neg q)) \leftrightarrow p</m></cell>
           </row>
 
           <row>
