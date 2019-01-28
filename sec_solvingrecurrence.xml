@@ -141,19 +141,30 @@
       </statement>
     </definition>
 
+    <note>
+      <statement>
+        <p>
+          For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward, and takes away from focusing on the new material.
+        </p>
+      </statement>
+    </note>
 
-    <p>
-      Why do we care? We can solve them. If <m>a_n = r^n</m> is a solution to the recurrence relation, then we we can plug it in: 
-      <md>
-        <mrow> \displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} + \dots + c_k a_{n-k} </mrow>
-        <mrow> \displaystyle r^n &amp;= c_1 r^{n-1} + c_2r^{n-2} + \dots + c_k r^{n-k} </mrow>
-        <mrow> \text{ Divide both sides by } r^{n-k}</mrow>
-        <mrow>
-          \displaystyle r^k &amp;= c_1 r^{k-1} + c_2r^{k-2} + \dots + c_k
-        </mrow>
-        <mrow>\displaystyle r^k - c_1 r^{k-1} - c_2r^{k-2} - \dots - c_k &amp;= 0</mrow>
-      </md>
-    </p>
+    <note>
+      <statement>
+        <p>
+          If <m>a_n = r^n</m> is a solution to the recurrence relation, then we we can plug it in: 
+          <md>
+            <mrow> \displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} + \dots + c_k a_{n-k} </mrow>
+            <mrow> \displaystyle r^n &amp;= c_1 r^{n-1} + c_2r^{n-2} + \dots + c_k r^{n-k} </mrow>
+            <mrow> \text{ Divide both sides by } r^{n-k}</mrow>
+            <mrow>
+              \displaystyle r^k &amp;= c_1 r^{k-1} + c_2r^{k-2} + \dots + c_k
+            </mrow>
+            <mrow>\displaystyle r^k - c_1 r^{k-1} - c_2r^{k-2} - \dots - c_k &amp;= 0</mrow>
+          </md>
+        </p>
+      </statement>
+    </note>
 
     <definition>
       <statement>
@@ -162,35 +173,82 @@
         </p>
       </statement>
     </definition>
+
     
+    <theorem>
+      <statement>
+        <p>
+          Let <m>c_1</m> and <m>c_2</m> be real numbers. Suppose that the characteristic equation
+          <me>r^2 - c_1 r - c_2 = 0</me>
+          has two distinct roots <m>r_1</m> and <m>r_2</m>. Then the sequence <m>\{a_n\}</m> is a solution to the recurrence relation
+          <me> a_n = c_1 a_{n-1} + c_2 a_{n-2}</me>
+          if, and only if
+          <me> a_n = \alpha_1 r_1^n + \alpha_2 r_2^n</me>
+          for <m>n = 0, 1, 2, \dots</m> and <m>\alpha_1</m> and <m>\alpha_2</m> are constants.
+        </p>
+      </statement>
+    </theorem>
 
-<!-- # Solving Linear Homogeneous Recurrence Relations  -->
+    <example>
+      <statement>
+        <p>
+          Solve <m>a_n = a_{n-1} + 2a_{n-2}</m> where <m>a_0=2</m> and <m>a_1=7</m>.
+        </p>
+      </statement>
+    </example>
 
-<!-- ## Second degree (Two roots) -->
+    <theorem>
+      <statement>
+        <p>
+          Let <m>c_1</m> and <m>c_2</m> be real numbers. Suppose that the characteristic equation
+          <me>r^2 - c_1 r - c_2 = 0</me>
+          has one and only one root <m>r_1</m>. Then the sequence <m>\{a_n\}</m> is a solution to the recurrence relation
+          <me> a_n = c_1 a_{n-1} + c_2 a_{n-2}</me>
+          if, and only if
+          <me> a_n = \alpha_1 r_1^n + \alpha_2 n r_1^n</me>
+          for <m>n = 0, 1, 2, \dots</m> and <m>\alpha_1</m> and <m>\alpha_2</m> are constants.
+        </p>
+      </statement>
+    </theorem>
 
-<!-- Let $c_1$ and $c_2$ be real numbers. Suppose that the characteristic equation -->
-<!-- $$r^2 - c_1r - c_2 = 0$$  -->
-<!-- has two distinct roots $r_1$ and $r_2$.  -->
-<!-- Then the sequence $\{a_n\}$ is a solution of the recurrence relation  -->
-<!-- $${a_n = c_1a_{n-1} + c_2a_{n-2}}$$  -->
-<!-- if and only if  -->
-<!-- $${a_n = \alpha_1r_1^n + \alpha_2r_2^n}$$  -->
-<!-- for $n=0, 1, 2, \dots$, where $\alpha_1$ and $\alpha_2$ are constants. -->
+    <note>
+      <statement>
+        <p>
+          Note the subtle differences between these statements. It is significant with respect to how you solve the sequence.
+        </p>
+      </statement>
+    </note>
 
-<!-- ## Example: -->
+    <example>
+      <statement>
+        <p>
+          Solve <m>a_n = 4a_{n-1} - 4a_{n-2}</m> where <m>a_0=6</m> and <m>a_1=8</m>.
+        </p>
+      </statement>
+    </example>
 
-<!-- * Solve $a_n = a_{n-1} + 2a_{n-2}$ where $a_0=2$ and $a_1=7$. -->
+    <example>
+      <statement>
+        <p>
+          Find an explicit formula for the Fibonacci numbers, <m>F_n = F_{n_1} + F_{n-2}</m> with <m>F_0 = 0</m> and <m>F_1 = 1</m>.
+        </p>
+      </statement>
+    </example>
 
-<!-- ## Second degree (One root) -->
 
-<!-- Let $c_1$ and $c_2$ be real numbers. Suppose that  -->
-<!-- $$r^2 - c_1r - c_2 = 0$$  -->
-<!-- has only one root $r_0$. Then the sequence $\{a_n\}$ is a solution of the recurrence relation  -->
-<!-- $${a_n = c_1a_{n-1} + c_2a_{n-2}}$$  -->
-<!-- if and only if  -->
-<!-- $${a_n = \alpha_1r_0^n + \alpha_2\cdot n \cdot r_0^n}$$  -->
-<!-- for $n=0, 1, 2, \dots$, where $\alpha_1$ and $\alpha_2$ are constants. -->
-
+    <example>
+      <statement>
+        <p>
+          Solve <m>a_n = 7a_{n-1} - 12a_{n-2}</m> with <m>a_0 = 12</m> and <m>a_1 = 48</m>
+        </p>
+      </statement>
+    </example>
   </subsection>
+    
+  <exercises>
+
+
+  </exercises>
+
 
 </section>
