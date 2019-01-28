@@ -248,6 +248,22 @@
   <exercises>
 
 
+    <exercise>
+      <statement>
+        <p>
+          Find a recurrence relation for the number of ways to give someone $n$ dollars if you have 1 dollar coins, 2 dollar coins, 2 dollar bills, and 4 dollar bills where the order in which the coins and bills are paid matters.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          While walking up stairs you notice that you have a habit of using 3 ways of taking one step and 4 ways of taking two steps at a time. Find a recurrence relation for the number of ways to go up $n$ steps. Solve the recurrence relation along with all constants give the initial conditions of $a_0 = 1$ and $a_1 = 3$. 
+        </p>
+      </statement>
+    </exercise>
+
 
     <exercise>
       <statement>
