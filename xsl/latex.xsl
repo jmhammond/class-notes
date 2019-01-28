@@ -133,7 +133,7 @@ and using it for discovery of what features I actually want to modify in my own.
       </xsl:when>
       <xsl:otherwise>
         <!-- <xsl:apply-templates select="@source" mode="internal-id" /> -->
-        <xsl:value-of select="substring-before(@source, '.')"/>
+        <xsl:apply-templates select="substring-before(@source, '.')" mode="internal-id" />
       </xsl:otherwise>
     </xsl:choose>
     <xsl:text>}&#xa;</xsl:text>

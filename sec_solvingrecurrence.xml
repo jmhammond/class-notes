@@ -248,6 +248,23 @@
   <exercises>
 
 
+
+    <exercise>
+      <statement>
+        <p>
+          Solve the recurrence <m>a_n = 3a_{n-1} + 40a_{n-2}</m> where <m>a_0 = 5</m> and <m>a_1 = 14</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Solve the recurrence <m>a_n = 4a_{n-1} + 21a_{n-2}</m> where <m>a_0 = 18</m> and <m>a_1 = 366</m>.
+        </p>
+      </statement>
+    </exercise>
+
   </exercises>
 
 
