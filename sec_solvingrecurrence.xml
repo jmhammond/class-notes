@@ -319,7 +319,7 @@
     <exercise>
       <statement>
         <p>
-          While walking up stairs you notice that you have a habit of using 3 ways of taking one step and 4 ways of taking two steps at a time. Find a recurrence relation for the number of ways to go up $n$ steps. Solve the recurrence relation given the initial conditions of <m>a_0 = 1</m> and <m>a_1 = 3</m>. 
+          While walking up stairs you notice that you have a habit of using 3 ways of taking one step and 4 ways of taking two steps at a time. Find a recurrence relation for the number of ways to go up <m>n</m> steps. Solve the recurrence relation given the initial conditions of <m>a_0 = 1</m> and <m>a_1 = 3</m>. 
         </p>
       </statement>
     </exercise>

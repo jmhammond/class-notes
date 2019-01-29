@@ -27,7 +27,7 @@
       <p>
         The <term>domain of discourse</term> (or <term>universe of discourse</term>) is the collection from which variables can take values.
       </p>
-      <p> For example, if my predicate function is <q><m>x</m> is sharp</q>, the function has a different meaning if my universe of discourse is <q>all college students</q> versus <q>all tools</q>
+      <p> For example, if my predicate function is <q><m>x</m> is sharp</q>, the function has a different meaning if my universe of discourse is <q>all college students</q> versus <q>all tools.</q>
       </p>
     </definition>
 
