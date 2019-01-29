@@ -51,7 +51,7 @@
     </statement>
   </example>
 
-  <p> Below is a table of common argument forms, also known as rules of inference </p>
+  <p> Below is a table of common argument forms, also known as rules of inference. Observe that we're using <m>\Leftrightarrow</m> and <m>\Rightarrow</m> to show <q>if and only if</q> and <q>if, then</q>. This symbolic choice is to highlight the difference between the hypotheses and conclusion of the argument, and carries no additional meaning for the purposes of this course.</p>
 
   <table xml:id="table-implications">
     <!-- table modified from https://github.com/klevasseur/ads //-->
