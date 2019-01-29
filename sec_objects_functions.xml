@@ -4,7 +4,8 @@
 
   <definition>
     <p>
-      Let <m>A</m> and <m>B</m> be two non-empty sets. A <term>function from the set <m>A</m> to the set <m>B</m></term> is an assignment of exactly one element from <m>B</m> all elements of the set <m>A</m>. 
+      Let <m>A</m> and <m>B</m> be two non-empty sets. A <term>function (or mapping) from the set <m>A</m> to the set <m>B</m></term> is an assignment of exactly one element from <m>B</m> each element of the set <m>A</m>. 
+      <!-- Note: wrestled with the definition being as written vs being a subset of AxB.  I decided the definition as written is preferable in so far as we're transitioning our students from calculus where this definition is the most familiar. -->
       <ul>
         <li>We denote this by <m>f:A\to B</m></li>
         <li>If <m>b\in B</m> is the unique element assigned to <m>a\in A</m>, we write <m>f(a)=b</m></li>
@@ -15,12 +16,24 @@
       If <m>f(a) = b</m>, we call
       <ul>
         <li><m>b</m> is the <term>image</term> of <m>a</m> under the mapping</li>
-        <li><m>a</m> is the <term>preimage</term> of <m>b</m> undder the mapping</li>
+        <li><m>a</m> is the <term>preimage</term> of <m>b</m> under the mapping</li>
       </ul>
       and we define the <term>range</term> of the function <m>f</m> to be the set of images of every element in the domain, <m>A</m>, and often write the range by <m>f(A)</m>. Note that the range is a subset of the codomain, <m>f(A)\subseteq B</m>.
     </p>
   </definition>
 
+  <note>
+    <p>
+      A function has two pieces of information:
+      <ol>
+        <li> Specification of two sets, the domain and codomain </li>
+        <li> A mapping between those two sets </li>
+      </ol>
+    </p>
+    <p>
+      In this class, we will be using a variety of ways of describing the domain and codomain of a function, from writing <m>f:A \to B</m> to describing them in words.
+    </p>
+  </note>
 
   <example>
     <statement>
@@ -34,29 +47,23 @@
     </statement>
   </example>
 
-  <note>
-    <p>
-      A <term>function</term> has two pieces of information:
-      <ol>
-        <li> Specification of two sets, the <term>domain</term> and <term>codomain</term> </li>
-        <li> A mapping between those two sets </li>
-      </ol>
-
-      I'm trying to call attention that up until this course, in calculus and algebra, we have always assumed  our functions, <m>f</m>, were mappings from their implied domains into their range. We will be more precise from now on.  
-    </p>
-    <p>
-      In this class, we will be using a variety of ways of describing the domain and codomain of a function, from writing <m>f:A \to B</m> to describing them in words.
-    </p>
-  </note>
-
   <definition>
     <p>
       A function <m>f</m> is said to be  <term>injective</term> or <term>one-to-one</term> if and only if <m>f(a) = f(b)</m> means that <m>a = b</m> for all <m>a \text{ and } b</m> in the domain of <m>f</m>. 
       <me>
-        \forall a, b ((f(a) = f(b)) \to (a = b))
+        f \text{ is injective means }  \forall a, b ((f(a) = f(b)) \to (a = b))
       </me>
     </p>
   </definition>
+
+  <note>
+    <p>
+      To determine if a function <m>f: A \to B</m> is injective, we show that if <m>f(x) = f(y)</m> for arbitrary values <m>x, y \in A</m> with <m>x \not= y</m>, we conclude <m>x=y</m>. (A direct proof).
+    </p>
+    <p>
+      To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (a counterexample!)
+    </p>
+  </note>
 
   <example>
     <statement>
@@ -70,20 +77,11 @@
     </statement>
   </example>
 
-  <note>
-    <p>
-      To determine if a function <m>f: A \to B</m> is injective, we show that if <m>f(x) = f(y)</m> for arbitrary values <m>x, y \in A</m> with <m>x \not= y</m>, we conclude <m>x=y</m>. (A direct proof).
-    </p>
-    <p>
-      To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (a counterexample!)
-    </p>
-  </note>
-
   <definition>
     <p>
-      A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>surjective</term> or <term>onto</term> if and only if for every eleement <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = B</m>. 
+      A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>surjective</term> or <term>onto</term> if and only if for every element <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = B</m>. 
       <me>
-        \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) ) 
+        f \text{ is surjective means } \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) ) 
       </me>
     </p>
   </definition>
@@ -136,7 +134,7 @@
   <definition>
     <p>
       Let <m>f:A \to B</m> be a bijection. The <term>inverse function</term> of <m>f</m> is the unique function that assigns to each element <m>b\in B</m> a unique element <m>a \in A</m> such that <m>f(a) = b</m>. We denote the inverse by <m>f^{-1}</m> so that
-        <me>f^{-1} : B \to A \hspace{2em} f^{-1}(b) = a \iff f(a) = b</me>
+        <me>f^{-1} : B \to A \text{ where }  f^{-1}(b) = a \iff f(a) = b</me>
     </p>
   </definition>
 
@@ -175,7 +173,7 @@
     </p>
     <p>
       The <term>ceiling</term> function assigns to every real number <m>x</m> the smallest integer that is greater than or equal to <m>x</m>. We denote by this <m>\lceil x \rceil</m>
-      <me>\lceil \cdot \rceil : \mathbb{R}\to \mathbb{Z} \text{ with } (\lceil x \rceil = n) \iff (n + 1 \lt x \le n)</me>
+      <me>\lceil \cdot \rceil : \mathbb{R}\to \mathbb{Z} \text{ with } (\lceil x \rceil = n) \iff (n - 1 \lt x \le n)</me>
     </p>
   </definition>
 
@@ -201,29 +199,32 @@
     </statement>
   </example>
 
-  <definition>
-    <p>
-      Let <m>A</m> and <m>B</m> but subsets of <m>\mathbb{R}</m>, and let <m>x, y \in A</m> with <m>x \lt y</m>.
-      <ul>
-        <li>A function <m>f: A \to B</m> is called <term>increasing</term> if <m>f(x) \le f(y)</m>, and called <term>strictly increasing</term> if <m>f(x) \lt f(y)</m>.
-        </li>
-        <li>
-          Similarly, a function is called <term>decreasing</term> if <m>f(x) \ge f(y)</m>, and <term> strictly decreasing</term> if <m>f(x) \gt f(y)</m>.
-        </li>
-      </ul>
-    </p>
-  </definition>
 
-  <example>
-    <statement>
-      <p>
-        Prove that a function <m>f: \mathbb{R} \to \mathbb{R}</m> is strictly increasing if <m>f</m> is one-to-one.
-      </p>
-      <p>
-      A similar statement holds for strictly decreasing functions.
-    </p>
-    </statement>
-  </example>
+  <!-- I don't think this added much to the discussion; -->
+  <!-- <definition> -->
+  <!--   <p> -->
+  <!--     Let <m>A</m> and <m>B</m> but subsets of <m>\mathbb{R}</m>, and let <m>x, y \in A</m> with <m>x \lt y</m>. -->
+  <!--     <ul> -->
+  <!--       <li>A function <m>f: A \to B</m> is called <term>increasing</term> if <m>f(x) \le f(y)</m>, and called <term>strictly increasing</term> if <m>f(x) \lt f(y)</m>. -->
+  <!--       </li> -->
+  <!--       <li> -->
+  <!--         Similarly, a function is called <term>decreasing</term> if <m>f(x) \ge f(y)</m>, and <term> strictly decreasing</term> if <m>f(x) \gt f(y)</m>. -->
+  <!--       </li> -->
+  <!--     </ul> -->
+  <!--   </p> -->
+  <!-- </definition> -->
+
+  <!-- first, this is wrong as written; second, it doesn't add much. -->
+  <!-- <example> -->
+  <!--   <statement> -->
+  <!--     <p> -->
+  <!--       Prove that a function <m>f: \mathbb{R} \to \mathbb{R}</m> is strictly increasing if <m>f</m> is one-to-one. -->
+  <!--     </p> -->
+  <!--     <p> -->
+  <!--     A similar statement holds for strictly decreasing functions. -->
+  <!--   </p> -->
+  <!--   </statement> -->
+  <!-- </example> -->
 
   <!-- <example> -->
   <!--   <statement> -->
@@ -240,18 +241,26 @@
     </p>
   </definition>
 
+  <!-- meh; this is basic algebra -->
+  <!-- <example> -->
+  <!--   <statement> -->
+  <!--     <p> -->
+  <!--       Let <m>f(x) = 5x-3</m> and <m>g(x) = 3x-5</m>. Find <m>f\circ g</m> and <m>g\circ f</m> -->
+  <!--     </p> -->
+  <!--   </statement> -->
+  <!-- </example> -->
+
   <example>
     <statement>
       <p>
-        Let <m>f(x) = 5x-3</m> and <m>g(x) = 3x-5</m>. Find <m>f\circ g</m> and <m>g\circ f</m>
+        Suppose <m>f</m> and <m>f\circ g</m> are injective. Does it follow that <m>g</m> is also injective?
       </p>
     </statement>
   </example>
 
-
   <note>
     <p>
-      Since given a function <m>f: A \to B</m> we define <m>f^{-1}: B \to A</m> by <m>f(a) = b \iff f^{-1}(b) = a</m> for <m>a \in A</m>, <m>b \in B</m>, then:
+      Since given a function <m>f: A \to B</m> we define <m>f^{-1}: B \to A</m> by <m>f(a) = b \iff f^{-1}(b) = a</m> for <m>a \in A</m>, <m>b \in B</m>, we have:
       <ul>
         <li>
           <p> for <m>b \in B</m>, we have <me> (f \circ f^{-1})(b) = f(f^{-1}(b)) = f(a) = b \in B </me> </p>
@@ -263,13 +272,6 @@
     </p>
   </note>
 
-  <example>
-    <statement>
-      <p>
-        Suppose <m>f</m> and <m>f\circ g</m> are injective. Does it follow that <m>g</m> is also injective?
-      </p>
-    </statement>
-  </example>
 
 
   <exercises>

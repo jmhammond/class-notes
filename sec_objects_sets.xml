@@ -27,19 +27,19 @@
           </dl>
         </p>
         <p>
-          We have also seen intervals of real numbers in our previous courses which sets:
+          We have also seen intervals of real numbers in our previous courses which are the sets:
           <dl cols="2">
-            <li><m>(a,b) = \{x \mid a \lt x \lt b \}</m></li>
-            <li><m>[a,b) = \{x \mid a \le x \lt b \}</m></li>
-            <li><m>(a,b] = \{x \mid a \lt x \le b \}</m></li>
-            <li><m>[a,b] = \{x \mid a \le x \le b \}</m></li>
+            <li><m>(a,b) = \{x \mid a \lt x \lt b, x\in \R \}</m></li>
+            <li><m>[a,b) = \{x \mid a \le x \lt b, x\in \R \}</m></li>
+            <li><m>(a,b] = \{x \mid a \lt x \le b, x\in \R \}</m></li>
+            <li><m>[a,b] = \{x \mid a \le x \le b, x\in \R \}</m></li>
           </dl>
         </p>
       </statement>
     </example>
     <definition>
       <p>
-        Here are special sets we will visit often throughout the course and the rest of your mathematical career: 
+        Here are some special sets we will visit often throughout the course and the rest of your mathematical career: 
         <dl>
           <li> <m>\phi = \{\}</m> is the <term>empty set</term> consisting of no elements.</li>
           <li> <m> \mathbb{N} = \{0, 1, 2, 3, 4, \dots \}</m> is the set of <term>natural numbers</term>. </li>
@@ -65,6 +65,16 @@
         <me>A = B \iff (A \subseteq B \wedge B \subseteq A)</me>
       </p>
     </definition>
+
+    <!-- I wrote this example, but I don't think it adds anything to the conversation. -->
+    <!-- <example> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       Put the following sets in order: <m>\N, \C, \Q, \Z, \Z^+, \R</m>. -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!-- </example> -->
+
 
     <theorem>
       <statement>
@@ -442,12 +452,22 @@
     <example>
       <statement>
         <p>
-          Verify the following set identities by using the basic identities in the table above.
+          Verify the following set identity by using the basic identities in the table above: <m>A \cap (A \cup B) = A</m>.
         </p>
-        <ol>
-          <li><m>A \cap (A \cup B) = A</m></li>
-          <!--  TODO do another example!  <li> -->
-        </ol>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          The set identities are true as an extension of logic. For example, the identity <m>A \cup \phi = A</m> is:
+          <md>
+            <mrow>A \cup \phi &amp;= \{ x \mid x \in A \lor x \in \phi\} </mrow>
+            <mrow>&amp;= \{x \in A \lor F \} </mrow>
+            <mrow>&amp;= \{x \in A\} </mrow>
+            <mrow>&amp;= A </mrow>
+          </md>
+        </p>
       </statement>
     </example>
 
