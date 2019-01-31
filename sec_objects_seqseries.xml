@@ -37,12 +37,6 @@
     </p>
   </definition>
 
-  <example>
-    <statement>
-      <!-- TODO: make some example for finding explicit formulas -->
-    </statement>
-  </example>
-
   <definition>
     <p>
       A <term>recurrence relation</term> for a sequence <m>\{a_n\}</m> is an equation that expressions <m>a_n</m> in terms of previous terms.
@@ -55,13 +49,9 @@
   <example>
     <statement>
       <p>
-        The <term>Fibonacci sequence</term> <m>f_0, f_1, f_2, \dots</m> is defined by the recurrence:
+        The <term>Fibonacci sequence</term> <m>F_0, F_1, F_2, \dots</m> is defined by the recurrence:
+        <me>F_n = F_{n-1} + F_{n-2} \text{ For } n \ge 2, \text{ where } F_0 = 0, F_1 = 1 </me>
       </p>
-      <dl>
-        <li><m>f_0 = 0</m></li>
-        <li><m>f_1 = 1</m></li>
-        <li><m>f_n = f_{n-1} + f_{n-2} \text{ for } n \ge 2</m></li>
-      </dl>
     </statement>
   </example>
 
@@ -110,7 +100,6 @@
         <li>Are there cycles among the terms?</li>
         <li>...</li>
       </ul>
-      Later we can talk about second or third order differences. We'll also be revisiting recurrences in <xref ref="section-solvingrecurrences"/>.
     </p>
   </note>
 

@@ -52,24 +52,24 @@
 
   <subsection>
     <title>Solving recurrence relations</title>
-    <p>
-      The Towers of Hanoi is a puzzle with the goal of moving all disks from one peg to another peg. The puzzle has the following rules:
-      <ol>
-        <li> Place all the disks on the first peg in order of size with the largest on bottom.</li>
-        <li> Move one disk at a time to any other peg. A move is valid only if a smaller disk is placed on top a larger one.</li>
-      </ol>
-      <figure>
-        <image source="./images/Tower_of_Hanoi_4.png" width="50%">
-          <description>
-            The Animation of the Towers of Hanoi puzzle by André Karwath aka Aka - Own work, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=85401
-            The static image is public domain, CC-0.
-          </description>
-        </image>
-        <caption>Animation of the Towers of Hanoi puzzle with 4 disks</caption>
-      </figure>
-    </p>
     <example>
       <statement>
+        <p>
+          The Towers of Hanoi is a puzzle with the goal of moving all disks from one peg to another peg. The puzzle has the following rules:
+          <ol>
+            <li> Place all the disks on the first peg in order of size with the largest on bottom.</li>
+            <li> Move one disk at a time to any other peg. A move is valid only if a smaller disk is placed on top a larger one.</li>
+          </ol>
+          <figure>
+            <image source="./images/Tower_of_Hanoi_4.png" width="50%">
+              <description>
+                The Animation of the Towers of Hanoi puzzle by André Karwath aka Aka - Own work, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=85401
+                The static image is public domain, CC-0.
+              </description>
+            </image>
+            <caption>Animation of the Towers of Hanoi puzzle with 4 disks</caption>
+          </figure>
+        </p>
         <p>
           Let <m>H_n</m> denote the number of moves to solve the puzzle with <m>n</m> disks. Our goal is to find a solution to the sequence <m>\{H_n\}</m>.
           <ol>
@@ -90,18 +90,19 @@
       </statement>
     </example>
 
-    <example>
-      <statement>
-        <p>
-          Find a recurrence relation for <m>C_n</m>, the number of ways to parenthesize the product of <m>n+1</m> numbers
-          <me>x_0\cdot x_1 \cdot x_2 \cdot \dots \cdot x_n</me>
-          to determine the order of multiplication.
-        </p>
-        <p>
-          The sequence <m>\{C_n\}</m> is the sequence of Catalan numbers. We will revisit them in homework and again briefly in Math 322.
-        </p>
-      </statement>
-    </example>
+    <!-- I don't think this adds anything -->
+    <!-- <example> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       Find a recurrence relation for <m>C_n</m>, the number of ways to parenthesize the product of <m>n+1</m> numbers -->
+    <!--       <me>x_0\cdot x_1 \cdot x_2 \cdot \dots \cdot x_n</me> -->
+    <!--       to determine the order of multiplication. -->
+    <!--     </p> -->
+    <!--     <p> -->
+    <!--       The sequence <m>\{C_n\}</m> is the sequence of Catalan numbers. We will revisit them in homework and again briefly in Math 322. -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!-- </example> -->
 
     <example xml:id="example-fifth-degree-recurrence">
       <statement>
@@ -132,8 +133,8 @@
               <ol>
                 <li> The Fibonacci sequence: <m>F_n = F_{n-1} + F_{n-2}</m> is linear, and its coefficients are 1 and 1. The degree is 2. 
                 </li>
-                <li> Parenthesizing <m>n+1</m> terms, <m>C_n = \sum_{k=0}^{n-1} C_{n-k}C_k</m> is <emph>not</emph> linear. 
-                </li>
+                <li> <m>D_n = 2D_{n-1} + D_{n-5}</m> is linear, and it coefficients are 2, 0, 0, 0, 1. Its degree is 5.  </li>
+                <!-- <li> Parenthesizing <m>n+1</m> terms, <m>C_n = \sum_{k=0}^{n-1} C_{n-k}C_k</m> is <emph>not</emph> linear.  -->
               </ol>
             </p>
           </statement>
@@ -144,7 +145,7 @@
     <note>
       <statement>
         <p>
-          For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward, and takes away from focusing on the new material.
+          For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward and takes away from focusing on the new material.
         </p>
       </statement>
     </note>
@@ -214,7 +215,7 @@
     <note>
       <statement>
         <p>
-          Note the subtle differences between these statements. It is significant with respect to how you solve the sequence.
+          Note the small differences between these statements. It is significant with respect to how you solve the sequence.
         </p>
       </statement>
     </note>
@@ -251,7 +252,7 @@
     <exercise>
       <statement>
         <p>
-          Find a recurrence relation for the number of ways to give someone $n$ dollars if you have 1 dollar coins, 2 dollar coins, 2 dollar bills, and 4 dollar bills where the order in which the coins and bills are paid matters.
+          Find a recurrence relation for the number of ways to give someone <m>n</m> dollars if you have 1 dollar coins, 2 dollar coins, 2 dollar bills, and 4 dollar bills where the order in which the coins and bills are paid matters.
         </p>
       </statement>
     </exercise>

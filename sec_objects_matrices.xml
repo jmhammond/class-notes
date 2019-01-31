@@ -106,7 +106,7 @@
       <me>I_n = \begin{bmatrix} \delta_{ij} \end{bmatrix} \text{ where } \delta_{ij} = \left\{ \begin{array}{lr} 1 &amp; i = j \\ 0 &amp; i \not= j \end{array} \right. </me>
     </p>
     <p>
-      I'll refer to this as the <term><m>n\times n</m> identity matrix</term>, but to be clear, an identity matrix is always square.
+      I'll refer to this as the <term><m>n\times n</m> identity matrix</term>.
     </p>
   </definition>
 
@@ -134,7 +134,7 @@
 
   <definition>
     <p>
-      If <m>A</m> and <m>B</m> are square, <m>n \times n</m> matrices such that <m>AB = BA = I_n</m>, then <m>B</m> is called the <term>inverse</term> of <m>A</m>, and <m>A</m> is said to be <term>invertible</term>. We write <m>B = A^{-1}</m> to denote the inverse matrix. 
+      If <m>A</m> and <m>B</m> are square, <m>n \times n</m> matrices such that <m>{ AB = BA = I_n }</m>, then <m>B</m> is called the <term>inverse</term> of <m>A</m>, and <m>A</m> is said to be <term>invertible</term>. We write <m>B = A^{-1}</m> to denote the inverse matrix. 
     </p>
   </definition>
 
@@ -189,8 +189,8 @@
           If <m>A = \begin{bmatrix} 1 &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 1 \end{bmatrix}</m> and <m>B=\begin{bmatrix} 0 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; 1 \end{bmatrix}</m>, find:
         </p>
         <ol>
-          <li><m>A \land B</m></li>
-          <li><m>A \lor B</m></li>
+          <li>Find the meet <m>A \land B</m></li>
+          <li>Find the join <m>A \lor B</m></li>
         </ol>
       </statement>
     </example>
@@ -198,7 +198,7 @@
     <definition>
       <p>
         Let <m>A</m> be an <m>m\times k</m> matrix, and let <m>B</m> be a <m>k\times n</m> matrix. Then the <term>Boolean product</term> <m>A\odot B = \begin{bmatrix}c_{ij} \end{bmatrix}</m> is defined by:
-        <me>c_{ij} = a_{i1}\land b_{1j} \lor a_{i2}\land b_{2j} \lor \dots \lor a_{ik}\land b_{kj}</me>
+        <me>c_{ij} = ( a_{i1}\land b_{1j} ) \lor ( a_{i2}\land b_{2j} ) \lor \dots \lor ( a_{ik}\land b_{kj} )</me>
       </p>
     </definition>
 
@@ -216,7 +216,7 @@
 
     <definition>
       <p>
-        If <m>A</m> is a square, <m>n\times n</m> binary matrix, we define <m>A^{[r]} = A\odot A\odot A\odot \dots \odot A</m>, the Boolean product of <m>A</m> with itself <m>r</m> times. Further, <m>A^{[0]} = I_n</m>.
+        If <m>A</m> is a square, <m>n\times n</m> binary matrix, we define <m>{ A^{[r]} = A\odot A\odot A\odot \dots \odot A }</m>, the Boolean product of <m>A</m> with itself <m>r</m> times. Further, <m>A^{[0]} = I_n</m>.
       </p>
     </definition>
   </subsection>
@@ -369,7 +369,7 @@
         </p>
         <ol>
           <li><m>M^2</m>, the standard matrix product</li>
-          <li><m>M^{[2]}</m>, the boolean matrix product</li>
+          <li><m>M^{[2]}</m>, the Boolean matrix product</li>
         </ol>
       </statement>
     </exercise>
