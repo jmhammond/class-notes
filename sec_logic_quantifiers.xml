@@ -260,10 +260,10 @@
         <p>
           Translate these statements into English where <m>F(x)</m> is <q><m>x</m> is fast</q> and <m>A(x)</m> is <q><m>x</m> is an athlete.</q>.
           <ol cols="2">
-            <li><m>\forall x (A(x) \to F(x)</m></li>
-            <li><m>\forall x (F(x) \land A(x)</m></li>
-            <li><m>\exists x (F(x) \to A(x)</m></li>
-            <li><m>\exists x (A(x) \land \neg F(x)</m></li>
+            <li><m>\forall x (A(x) \to F(x))</m></li>
+            <li><m>\forall x (F(x) \land A(x))</m></li>
+            <li><m>\exists x (F(x) \to A(x))</m></li>
+            <li><m>\exists x (A(x) \land \neg F(x))</m></li>
           </ol>
         </p>
       </statement>
@@ -277,7 +277,7 @@
         <ol>
           <li> <m>\exists x \neg C(x)</m></li>
           <li> <m>\exists x (T(x) \land \neg C(x))</m></li>
-          <li> <m>\forall x (T(x) \to (C(x) \land E(x))</m></li>
+          <li> <m>\forall x (T(x) \to (C(x) \land E(x)))</m></li>
         </ol>
       </statement>
     </exercise>
