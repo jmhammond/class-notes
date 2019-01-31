@@ -138,8 +138,8 @@
       <p>
         The negation of quantifiers is found as follows: 
         <md>
-          <mrow>\neg \forall P(x) \amp\equiv \exists x \neg P(x) </mrow>
-          <mrow> \neg \exists P(x) \amp\equiv \forall x \neg P(x)  </mrow>
+          <mrow>\neg \forall x P(x) \amp\equiv \exists x \neg P(x) </mrow>
+          <mrow> \neg \exists x P(x) \amp\equiv \forall x \neg P(x)  </mrow>
         </md>
       </p>
       <p>
