@@ -246,7 +246,7 @@
         <p>
           Consider the statement, <q>There is a building on the campus of some college in the United States in which every room is painted white.</q>
           <ol>
-            <li>Express the statement using quantifiers. Be sure to define your predicate functions and specify the domain of each variable.</li>
+            <li>Express the statement using quantifiers. Be sure to define your predicate function and specify the domain of each of the three variables.</li>
             <li>Express the negation of the above logical quantified statement so that no negation is to the left of a quantifier.</li>
             <li>Write the negation of the statement in plain English.</li>
           </ol>
@@ -258,7 +258,7 @@
     <exercise>
       <statement>
         <p>
-          Translate these statements into English where <m>F(x)</m> is <q><m>x</m> is fast</q> and <m>A(x)</m> is <q><m>x</m> is an athlete.</q>.
+          Translate these statements into English where <m>F(x)</m> is <q><m>x</m> is fast</q> and <m>A(x)</m> is <q><m>x</m> is an athlete</q>, here the domain is the set of people.
           <ol cols="2">
             <li><m>\forall x (A(x) \to F(x))</m></li>
             <li><m>\forall x (F(x) \land A(x))</m></li>
@@ -267,6 +267,17 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          Your answer shouldn't have <m>x</m> in it anywhere! Regular people don't say <q>For all x if x is fast, then...</q> Here some some ideas (your answer may very)
+          <ol cols="2">
+            <li>All athletes are fast.</li>
+            <li>Everyone is a fast athlete.</li>
+            <li>Some fast person is is an athlete.</li>
+            <li>There is a slow athlete.</li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -291,7 +302,7 @@
             <li><m>\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))</m>.</li>
             <li>
               <p>
-                There is a number <m>n</m> for which no other number is either less <m>n</m> than or equal to <m>n</m>.
+                There is a number <m>n</m> for which no other number is either less than or equal to <m>n</m>.
               </p>
             </li>
             <li>
