@@ -198,6 +198,27 @@
         </blockquote>
       </p>
     </statement>
+    <!--
+        Let $C(X)$ be the statement ``$x$ is in this class.'' 
+    
+    Let $R(X)$ be the statement ``$x$ has a red convertible.''
+    
+    Let $S(X)$ be the statement ``$x$ has gotten at least one speeding ticket.''
+    
+    \hspace{1em}
+    
+    \begin{tabular}{l|l}  % a fill in the blank table 
+         Step & Reason  \\
+         \hline 
+         1. $C(\mbox{Linda}) \land R(\mbox{Linda})$& \\
+         2. $R(\mbox{Linda})$ & \\
+         3. $\forall x (R(x) \to S(x)$  & \\ 
+         4. $R(\mbox{Linda}) \to S(\mbox{Linda})$ & \\
+         5. $S(\mbox{Linda})$ & \\
+         6. $C(\mbox{Linda}) \land S(\mbox{Linda})$ & \\
+         7. $\exists x (C(x) \land S(x)) $ & \\
+    \end{tabular}  
+        //-->
   </example>
 
   <p>
