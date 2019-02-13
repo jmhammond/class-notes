@@ -657,14 +657,18 @@
     </exercise>
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
           Prove the statement: For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a^2 + b^2 = c^2</m>, then <m>a</m> or <m>b</m> is even.
         </p>
       </statement>
-
+      <hint>
+        <p>
+          Try a proof by contradiction. What is the negation of this statement?
+        </p>
+      </hint>
     </exercise>
 
 
