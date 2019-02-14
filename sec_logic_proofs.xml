@@ -735,6 +735,7 @@
 
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- TODO NOTE: This might be better in the primes chapter --> 
     <exercise>
       <statement>
         <p>
