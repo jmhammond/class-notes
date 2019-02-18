@@ -22,7 +22,7 @@ Image building dependencies
 - the images require the texlive-games package for the skak.sty style file.
 - To build the svg images from the latex code, run: 
 ```bash
-~/src/mathbook/script/mbx -vv -c latex-image -f svg -d ~/Documents/class-notes/images ~/Documents/class-notes/class-notes.xml
+~/src/mathbook/script/mbx -vv -c latex-image -f svg -d ~/src/class-notes/images ~/src/class-notes/class-notes.xml
 ```
 (where the location of the pretext /mathbook/ folder and this set of class notes would depend on your own machine)
 
