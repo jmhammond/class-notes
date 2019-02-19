@@ -184,10 +184,10 @@
       </statement>
       <solution>
         <p>
-          Let's turn this into an easier problem. We know that a 5-board is just a 4-board with an extra space. How many ways are there to tile this? We know that there are 5 ways to tile a 4-board, so add an extra square. There's 5 ways to do this. 
+          We know that a 5-board is just a 4-board with an extra space. How many ways are there to tile this? There are 5 ways to tile a 4-board and all we're doing is adding an extra square. There's <m>5\cdot1 = 1</m> ways to do this. 
         </p>
         <p>
-          ... but a 5-board is also a 3-board with an extra two spaces at the end. How many ways can we tile this? Well, there are 3 ways to tile the three board, and we just add a domino. 
+          ... but a 5-board is also a 3-board with an extra two spaces at the end. How many ways can we tile this? Well, there are 3 ways to tile the three board, and we just add a domino.
         </p>
         <p>
           These two subdivisions are mutually exclusive (if we added a square to the 3-board, that's turned it into the 4-board case above). So we can conclude the number of ways to tile a 5-board is 5+3 = 8.
@@ -234,7 +234,7 @@
         </p>
       </solution>
     </example>
-   
+    
     <theorem>
       <statement>
         <p>
@@ -265,28 +265,137 @@
       Let's put this to use to verify some Fibonacci identities using combinatorial proof
     </p>
 
+      <!-- This exercise comes from an identity in Proofs that Really Count -->
     <example>
       <statement>
         <p>
-          Prove that <m>f_1 + f_3 + f_5 + \dots + f_{2n-1} = f_{2n} - 1</m> using a combinatorial argument.
+          For <m>n\ge 0, f_0 + f1 + f_2 + \dots + f_n = f_{n+2} - 1</m>.
         </p>
       </statement>
       <hint>
-        Condition on the location of the last square.
+        <p>
+          Condition on the location of the last domino.
+        </p>
       </hint>
     </example>
 
+      <!-- This exercise comes from an identity in Proofs that Really Count -->
     <example>
       <statement>
         <p>
-          Prove that <m>f_n^2 + f_{n+1}^2 = f_{2n+2}</m> using a combinatorial argument.
+          For <m>n\ge 0, f_0 + f_2 + f_4 + \dots + f_{2n} = f_{2n+1}</m>.
         </p>
       </statement>
       <hint>
-        Condition on the breakability of the <m>n+1</m>st space.
+        <p>
+          Condition on the location of the last square.
+        </p>
       </hint>
     </example>
 
+    <p>
+      We say that a tiling of an <m>n</m>-board is <term>breakable at cell <m>k</m></term>, if the tiling can be decomposed into two tilings, one covering cells 1 through <m>k</m>, the other <m>k+1</m> through <m>n</m>. It is said to be <term>unbreakable at <m>k</m></term> otherwise. 
+    </p>
+
+      <!-- This exercise comes from an identity in Proofs that Really Count -->
+    <example>
+      <statement>
+        <p>
+          For <m>m, n \ge 0, f_{m+n} = f_m f_n + f_{m-1}f_{n-1}</m>. 
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Condition on the breakability at cell <m>m</m>.
+        </p>
+      </hint>
+    </example>
+
+
+
+
+      <!-- This exercise comes from an identity in Proofs that Really Count -->
+    <example>
+      <statement>
+        <p>
+          For <m>n\ge 0, f_0 + f_2 + f_4 + \dots + f_{2n} = f_{2n+1}</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Condition on the location of the last square.
+        </p>
+      </hint>
+    </example>
+
+
+      <!-- This exercise comes from an identity in Proofs that Really Count -->
+    <example>
+      <statement>
+        <p>
+          For <m>n \ge 0, \binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \dots + \binom{n-n}{n} = f_n</m>. 
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Condition on the number of dominoes.
+        </p>
+      </hint>
+      <solution>
+        <p>
+          Question: <q>How many tilings of an <m>n</m>-board exist?</q>
+        </p>
+        <p>
+          Answer 1: There are <m>f_n</m> tilings.
+        </p>
+        <p>
+          Answer 2: Condition on the number of dominoes. If there are no dominoes, then from <m>n</m> cells, we have 0 choices for where to put the domino: <m>\binom{n}{0}</m>. For 1 domino, we will be using a total of <m>n-2</m> squares and domino which will span the remaining two locations. That means that we are using a total of <m>n-1</m> tiles, and so we have <m>\binom{n-1}{1}</m> possibilities. 
+        </p>
+        <p>
+          For the case where we are using <m>i</m> dominoes, with <m>0\le i \le n/2</m>, we will be using  <m>n-2i</m> squares, or a total of <m>n-2i + i = n-i</m> tiles. To choose where to place the <m>i</m> dominoes, we'll have <m>\binom{n-i}{i}</m> ways to do this.
+        </p>
+        <p>
+          Thus, there are a total of <m>n \ge 0, \binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \dots + \binom{n-n}{n}</m> tilings of an <m>n</m> board.
+        </p>
+      </solution>
+    </example>
+
+    <exercises>
+      
+      <!-- This exercise comes from an identity in Proofs that Really Count -->
+      <example>
+        <statement>
+          <p>
+            Prove that <m>f_1 + f_3 + f_5 + \dots + f_{2n-1} = f_{2n} - 1</m> using a combinatorial argument.
+          </p>
+        </statement>
+        <hint>
+          Condition on the location of the last square.
+        </hint>
+      </example>
+
+      <!-- This exercise comes from an identity in Proofs that Really Count -->
+      <example>
+        <statement>
+          <p>
+            Prove that <m>f_n^2 + f_{n+1}^2 = f_{2n+2}</m> using a combinatorial argument.
+          </p>
+        </statement>
+        <hint>
+          Condition on the breakability of the <m>n+1</m>st space.
+        </hint>
+      </example>
+
+      <!-- This exercise comes from an identity in Proofs that Really Count -->
+      <exercise>
+        <statement>
+          <p>
+            For <m>n\ge 0, f_{2n+2} = f_{n+1}f_{n+2} - f_{n-1}f_n</m>.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
 
 
   </section>
