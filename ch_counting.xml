@@ -274,7 +274,7 @@
       </statement>
       <hint>
         <p>
-          Condition on the location of the last domino.
+          Question: <q>How many tilings of an <m>n+2</m>-board use at least one domino?</q> Condition on the location of the last domino.
         </p>
       </hint>
     </example>
@@ -310,8 +310,6 @@
         </p>
       </hint>
     </example>
-
-
 
 
       <!-- This exercise comes from an identity in Proofs that Really Count -->
@@ -363,37 +361,32 @@
     <exercises>
       
       <!-- This exercise comes from an identity in Proofs that Really Count -->
-      <example>
-        <statement>
-          <p>
-            Prove that <m>f_1 + f_3 + f_5 + \dots + f_{2n-1} = f_{2n} - 1</m> using a combinatorial argument.
-          </p>
-        </statement>
-        <hint>
+    <exercise>
+      <statement>
+        <p>
+          Prove that <m>f_1 + f_3 + f_5 + \dots + f_{2n-1} = f_{2n} - 1</m> using a combinatorial argument.
+        </p>
+      </statement>
+      <hint>
+        <p>
           Condition on the location of the last square.
-        </hint>
-      </example>
+        </p>
+      </hint>
+    </exercise>
 
-      <!-- This exercise comes from an identity in Proofs that Really Count -->
-      <example>
-        <statement>
-          <p>
-            Prove that <m>f_n^2 + f_{n+1}^2 = f_{2n+2}</m> using a combinatorial argument.
-          </p>
-        </statement>
-        <hint>
+    <!-- This exercise comes from an identity in Proofs that Really Count -->
+    <exercise>
+      <statement>
+        <p>
+          Prove that <m>f_n^2 + f_{n+1}^2 = f_{2n+2}</m> using a combinatorial argument.
+        </p>
+      </statement>
+      <hint>
+        <p>
           Condition on the breakability of the <m>n+1</m>st space.
-        </hint>
-      </example>
-
-      <!-- This exercise comes from an identity in Proofs that Really Count -->
-      <exercise>
-        <statement>
-          <p>
-            For <m>n\ge 0, f_{2n+2} = f_{n+1}f_{n+2} - f_{n-1}f_n</m>.
-          </p>
-        </statement>
-      </exercise>
+        </p>
+      </hint>
+    </exercise>
 
     </exercises>
 
