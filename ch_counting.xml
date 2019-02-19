@@ -190,7 +190,7 @@
           ... but a 5-board is also a 3-board with an extra two spaces at the end. How many ways can we tile this? Well, there are 3 ways to tile the three board, and we just add a domino.
         </p>
         <p>
-          These two subdivisions are mutually exclusive (if we added a square to the 3-board, that's turned it into the 4-board case above). So we can conclude the number of ways to tile a 5-board is 5+3 = 8.
+          These two subdivisions are mutually exclusive (if we added a square to the 3-board, that's turned it into the 4-board, which was already counted above). So we can conclude the number of ways to tile a 5-board is 5+3 = 8.
         </p>
         
         <p>
