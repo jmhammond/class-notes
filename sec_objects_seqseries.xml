@@ -251,28 +251,16 @@
         </p>
       </statement>
     </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Prove, by mathematical induction, that <m>F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1</m>.
+        </p>
+      </statement>
+    </exercise>
+
     
-    <exercise xml:id="fibonacci-sum-of-odds">
-      <statement>
-        <p>
-          Prove, by mathematical induction, that <m>F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}</m>, where <m>F_n</m> is the <m>n</m>th Fibonacci number.
-        </p>
-      </statement>
-
-    </exercise>
-
-    <exercise xml:id="fibonacci-sum_of_squares">
-      <statement>
-        <p>
-          Prove, by mathematical induction, that <m>F_1^2 + F_2^2 + F_3^2 + \dots + F_n^2 = F_n \cdot F_{n+1}</m>, where <m>F_n</m> is the <m>n</m>th Fibonacci number.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          <m>F_{k+1}\left(F_{k} + F_{k+1}\right) = F_{k+1}F_{k+2} </m>
-        </p>
-      </hint>
-    </exercise>
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise xml:id="fibonacci-sum-of-evens">
@@ -329,5 +317,26 @@
       </solution>
     </exercise>
 
+    <exercise xml:id="fibonacci-sum-of-odds">
+      <statement>
+        <p>
+          Prove, by mathematical induction, that <m>F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}</m>, where <m>F_n</m> is the <m>n</m>th Fibonacci number.
+        </p>
+      </statement>
+
+    </exercise>
+
+    <exercise xml:id="fibonacci-sum_of_squares">
+      <statement>
+        <p>
+          Prove, by mathematical induction, that <m>F_1^2 + F_2^2 + F_3^2 + \dots + F_n^2 = F_n \cdot F_{n+1}</m>, where <m>F_n</m> is the <m>n</m>th Fibonacci number.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          <m>F_{k+1}\left(F_{k} + F_{k+1}\right) = F_{k+1}F_{k+2} </m>
+        </p>
+      </hint>
+    </exercise>
   </exercises>
 </section>
