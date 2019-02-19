@@ -238,7 +238,7 @@
     <theorem>
       <statement>
         <p>
-          Let <m>f_n</m> denote the number of tilings for an <m>n</m>-board.  Then <m>f_0=1</m> (there is one way to tile a 0 board - you don't do it), and <m>f_1=1</m>, and for <m>n \ge 2</m>
+          Let <m>f_n</m> denote the number of tilings for an <m>n</m>-board.  Then <m>f_0=1</m> (there is one way to tile a 0 board), and <m>f_1=1</m>, and for <m>n \ge 2</m>
           <me>
             f_{n+1} = f_{n} + f_{n-1}
           </me>
@@ -255,7 +255,7 @@
     <corollary>
       <statement>
         <p>
-          Let <m>F_n</m> by the <m>n</m>th Fibonacci number. Then <m>f_n = F_{n-1}</m> (where we'll make the notational convention that <m>F_{-1}=0</m> so our positive indices can match).
+          Let <m>F_n</m> by the <m>n</m>th Fibonacci number. Then <m>f_n = F_{n+1}</m> (where we'll make the notational convention that <m>f_{-1}=0</m> so our indices can match).
         </p>
       </statement>
     </corollary>
@@ -274,7 +274,8 @@
       </statement>
       <hint>
         <p>
-          Question: <q>How many tilings of an <m>n+2</m>-board use at least one domino?</q> Condition on the location of the last domino.
+          Question: <q>How many tilings of an <m>n+2</m>-board use at least one domino?</q>
+          Condition on the location of the last domino.
         </p>
       </hint>
     </example>
