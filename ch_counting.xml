@@ -262,14 +262,15 @@
 
 
     <p>
-      Let's put this to use to verify some Fibonacci identities using combinatorial proof
+      Let's put this to use to verify some Fibonacci identities using combinatorial proof. 
     </p>
+
 
       <!-- This exercise comes from an identity in Proofs that Really Count -->
     <example>
       <statement>
         <p>
-          For <m>n\ge 0, f_0 + f1 + f_2 + \dots + f_n = f_{n+2} - 1</m>.
+          For <m>n\ge 0,\, f_0 + f1 + f_2 + \dots + f_n = f_{n+2} - 1</m>.
         </p>
       </statement>
       <hint>
@@ -284,7 +285,7 @@
     <example>
       <statement>
         <p>
-          For <m>n\ge 0, f_0 + f_2 + f_4 + \dots + f_{2n} = f_{2n+1}</m>.
+          For <m>n\ge 0,\, f_0 + f_2 + f_4 + \dots + f_{2n} = f_{2n+1}</m>.
         </p>
       </statement>
       <hint>
@@ -302,7 +303,7 @@
     <example>
       <statement>
         <p>
-          For <m>m, n \ge 0, f_{m+n} = f_m f_n + f_{m-1}f_{n-1}</m>. 
+          For <m>m, n \ge 0,\, f_{m+n} = f_m f_n + f_{m-1}f_{n-1}</m>. 
         </p>
       </statement>
       <hint>
@@ -317,7 +318,7 @@
     <example>
       <statement>
         <p>
-          For <m>n\ge 0, f_0 + f_2 + f_4 + \dots + f_{2n} = f_{2n+1}</m>.
+          For <m>n\ge 0,\, f_0 + f_2 + f_4 + \dots + f_{2n} = f_{2n+1}</m>.
         </p>
       </statement>
       <hint>
@@ -332,7 +333,7 @@
     <example>
       <statement>
         <p>
-          For <m>n \ge 0, \binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \dots + \binom{n-n}{n} = f_n</m>. 
+          For <m>n \ge 0,\, \binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \dots + \binom{n-n}{n} = f_n</m>. 
         </p>
       </statement>
       <hint>
