@@ -81,7 +81,7 @@
   <example>
     <statement>
       <p>
-        Prove that <m>2^n \lt n^2</m> for <m>n > 4</m>
+        Prove that <m>2^n \gt n^2</m> for <m>n > 4</m>
       </p>
     </statement>
   </example>
