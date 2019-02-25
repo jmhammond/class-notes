@@ -5,8 +5,48 @@
   <section xml:id="section-numtheory-divcong">
     <title> Divisibility and Congruences </title>
 
+    <note>
+      <statement>
+        <p>
+          Any time we say <q>number</q> in the context of divides, congruence, or <q>number theory</q> we mean integer.
+        </p>
+      </statement>
+    </note>
+
     <subsection xml:id="section-numtheory-div">
-      <title>The divisibility relation</title>
+      <title>The Divisibility Relation</title>
+
+      <definition>
+        <statement>
+          <p>
+            Let <m>a \and b</m> be two integers. We say <term><m>a</m> divides <m>b</m></term> and write <m>a \divides b</m> if there exists an integer <m>m</m> such that <m>b = am</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <example>
+        <statement>
+          <p>
+            The following are examples of the divides relation:
+            <ol>
+              <li> <m>3 \divides 6</m> since <m>6 = 3\cdot 2</m> </li>
+              <li> <m>4 \divides 100</m> since <m>100 = 4 \cdot 25</m></li>
+            </ol>
+          </p>
+          <p>
+            Here are some non-examples:
+            <ol>
+              <li> <m>4 \not \divides 10</m> since there is no integer <m>m</m> for which <m>10 = 4m</m>.</li>
+              <li><m> 6 \not \divides 3 </m>. Order matters.</li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+
+
+
+
+
 
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
