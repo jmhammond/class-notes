@@ -19,7 +19,10 @@
       <definition>
         <statement>
           <p>
-            Let <m>a \and b</m> be two integers. We say <term><m>a</m> divides <m>b</m></term> and write <m>a \divides b</m> if there exists an integer <m>m</m> such that <m>b = am</m>.
+            Let <m>a \and b</m> be two integers with <m>a \not= 0</m>. We say <term><m>a</m> divides <m>b</m></term> and write <m>a \divides b</m> if there exists an integer <m>m</m> such that <m>b = am</m>.
+          </p>
+          <p>
+            We say that <m>a</m> is a <term>factor</term> of <m>b</m>, and <m>b</m> is a <term>multiple</term> of <m>a</m>.
           </p>
         </statement>
       </definition>
@@ -44,39 +47,53 @@
       </example>
 
 
-
-
-
-
-
-    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
-      <statement>
-        <p>
-          Prove that 6 divides <m>7^n - 1</m> for all <m>n \in \N</m>.
-        </p>
-      </statement>
-      <solution>
-
-        <proof>
+      <theorem>
+        <title> Properties of divisibility</title>
+        <statement>
           <p>
-            Let <m>P(n)</m> be the statement <q>6 divides <m>7^n - 1</m>.</q> We will show <m>P(n)</m> is true for all <m>n \in \N</m>. First we establish the base case, <m>P(0)</m>. Since <m>7^0 - 1 = 0</m>, and <m>0</m> is a multiple of 6, <m>P(0)</m> is true. Now for the inductive case. Assume <m>P(k)</m> holds for an arbitrary <m>k \in \N</m>. That is, 6 divides <m>7^k - 1</m>, or in other words, <m>7^k - 1 = 6j</m> for some integer <m>j</m>. Now consider <m>7^{k+1} - 1</m>:
-            <md>
-              <mrow> 7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6</mrow>
-              <mrow> \amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}</mrow>
-              <mrow> \amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}</mrow>
-              <mrow> \amp = 6(7j + 1) \amp \text{factor out a 6}</mrow>
-            </md>
+            Let <m>a, b, c \in \Z</m> with <m>a \not= 0</m>. Then:
+            <ol>
+              <li> If <m>a \divides b</m> and <m>a \divides c</m> then <m>a \divides ( b + c ) </m>. </li>
+              <li> If <m>a \divides b</m> then <m>a \divides bc</m> for all <m>c\in \Z</m>. </li>
+              <li> If <m>a \divides b</m> and <m>b \divides c</m> then <m>a \divides c </m>. </li>
+            </ol>
           </p>
+        </statement>
+      </theorem>
 
+
+      <corollary>
+        <statement>
           <p>
-            Therefore 6 divides <m>7^{k+1} - 1</m>, or in other words, <m>P(k+1)</m> is true. Therefore by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \in \N</m>.
+            If <m>a, b, c\in \Z</m> with <m>a\not= 0</m> such that <m>a\divides b</m> and <m>a \divides c</m>, then <m>{ a\divides (bm+cn)}</m> where <m>m \and n</m> are some integers.
           </p>
-        </proof>
+        </statement>
+      </corollary>
 
-      </solution>
-    </exercise>
 
+
+      <theorem>
+        <title>The Division Algorithm</title>
+        <statement>
+          <p>
+            Let <m>a</m> be an integer and <m>d</m> be a positive integer.  Then there exist unique integers <m>q \and r</m> such that
+            <me>a = dq + r \hspace{1em} \text{with} \hspace{1em} 0\le r \lt d</me>
+          </p>
+        </statement>
+      </theorem>
+
+
+      <example>
+        <statement>
+          <p>
+            Use the Division Algorithm to write each division as <m>a = dq +r</m> with <m>0 \le r \lt d</m>, with the variables defined in the statement above.
+            <ol>
+              <li> <m>543 \div 7</m> </li>
+              <li> <m>-42 \div 13</m> </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
 
 
     </subsection>
@@ -87,10 +104,61 @@
       <definition>
         <statement>
           <p>
-            We say that <term><m>a</m> is congruent to <m>b</m> modulo <m>n</m></term> if <me>n \divides (b-a)</me>
+            Let <m>a \and b</m> be two integers and <m>m</m> be a positive integer. We say that <term><m>a</m> is congruent to <m>b</m> modulo <m>n</m></term> if <me>n \divides (b-a)</me>
+          </p>
+          <p>
+            We write <m>a \equiv b \pmod m</m>
+          </p>
+          <p>
+            We call <m>m</m> the <term>modulus</term>.
           </p>
         </statement>
       </definition>
+
+      <example>
+        <statement>
+          <p>
+            <ol>
+              <li> <m>13 \equiv 6 \pmod 7 </m> </li>
+              <li> <m>-8 \equiv 6 \pmod 7 </m> </li>
+              <li> <m>7 \equiv 0 \pmod 7</m></li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+
+      <definition>
+        <statement>
+          <p>
+            If <m>a</m> is an integer and <m>m</m> is a positive integer, we define the <term>congruence class of <m>a</m> modulo <m>m</m></term> to be the set of all integers congruent to <m>a</m> modulo <m>m</m>. 
+            <me> \left[ a \right]_m = \left\{ b \mid b \equiv a \pmod m \right\}</me>
+          </p>
+        </statement>
+      </definition>
+
+      <example>
+        <statement>
+          <p>
+            What congruence class is indicated by the set:
+            <ol>
+              <li> <m>\left{\dots, -6, -1, 4, 9, 14, \dots\} </li>
+              <li> <m>\left{\dots, -13, 20, 53, 86, \dots \} </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+
+
+      <example>
+        <statement>
+          <p>
+            Find all congruence classes modulo 5.
+          </p>
+        </statement>
+      </example>
+
+
+
 
       <note>
         <p>
@@ -109,28 +177,65 @@
 
 
     </subsection>
-  </section>
-
-  <xi:include href="./sec_numtheory_modularexp.xml"/>
-
-  <section xml:id="section-numtheory-euclid">
-    <title>The Euclidean Algorithm and Applications</title>
-
-    <subsection xml:id="extended-euclidean-algorithm">
-      <title>
-        The Extended Euclidean Algorithm
-      </title>
 
 
-      <definition xml:id="def-bezout-coefficient">
-        TODO
-      </definition>
-    </subsection>
+    <exercises>
 
-  </section>
+      <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+      <exercise>
+        <statement>
+          <p>
+            Prove that 6 divides <m>7^n - 1</m> for all <m>n \in \N</m>.
+          </p>
+        </statement>
+        <hint>
+          Use induction
+        </hint>
+        <solution>
+
+          <proof>
+            <p>
+              Let <m>P(n)</m> be the statement <q>6 divides <m>7^n - 1</m>.</q> We will show <m>P(n)</m> is true for all <m>n \in \N</m>. First we establish the base case, <m>P(0)</m>. Since <m>7^0 - 1 = 0</m>, and <m>0</m> is a multiple of 6, <m>P(0)</m> is true. Now for the inductive case. Assume <m>P(k)</m> holds for an arbitrary <m>k \in \N</m>. That is, 6 divides <m>7^k - 1</m>, or in other words, <m>7^k - 1 = 6j</m> for some integer <m>j</m>. Now consider <m>7^{k+1} - 1</m>:
+              <md>
+                <mrow> 7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6</mrow>
+                <mrow> \amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}</mrow>
+                <mrow> \amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}</mrow>
+                <mrow> \amp = 6(7j + 1) \amp \text{factor out a 6}</mrow>
+              </md>
+            </p>
+
+            <p>
+              Therefore 6 divides <m>7^{k+1} - 1</m>, or in other words, <m>P(k+1)</m> is true. Therefore by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \in \N</m>.
+            </p>
+          </proof>
+
+        </solution>
+      </exercise>
+
+    </exercises>
+
+</section>
+
+<xi:include href="./sec_numtheory_modularexp.xml"/>
+
+<section xml:id="section-numtheory-euclid">
+  <title>The Euclidean Algorithm and Applications</title>
+
+  <subsection xml:id="extended-euclidean-algorithm">
+    <title>
+      The Extended Euclidean Algorithm
+    </title>
 
 
-  <xi:include href="./sec_numtheory_encryption.xml"/>
+    <definition xml:id="def-bezout-coefficient">
+      TODO
+    </definition>
+  </subsection>
+
+</section>
+
+
+<xi:include href="./sec_numtheory_encryption.xml"/>
 
 
 </chapter>
