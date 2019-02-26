@@ -269,9 +269,11 @@
             <li> If <m>a \equiv b \pmod m</m> and <m>c \equiv d \pmod m</m> where <m>a, b, c, m \in \Z</m> with <m>m \ge 2</m>, then <m>a^c \equiv b^d \pmod m</m>. </li>
           </ol>
         </p>
+        <p>
+          The first part of this exercise should convince you: you cannot <q>divide</q> both sides by <m>c</m> in modular arithmetic! 
+        </p>
       </statement>
     </exercise>
-
   </exercises>
 
 </section>

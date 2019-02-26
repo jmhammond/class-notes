@@ -7,7 +7,67 @@
   <xi:include href="./sec_numtheory_modularexp.xml"/>
 
   <section xml:id="section-numtheory-euclid">
-  <title>The Euclidean Algorithm and Applications</title>
+  <title>Prime Numbers and Greatest Common Divisors</title>
+
+  <definition>
+    <statement>
+      <p>
+        A positive integer <m>p</m> is called <term>prime</term> if the only positive factors of <m>p</m> are <m>1 \and p</m> itself.
+      </p>
+      <p>
+        A positive integer which is not prime is called <m>composite</m>
+      </p>
+    </statement>
+  </definition>
+
+  <note>
+    <statement>
+      <p>
+        1 is neither prime nor composite. It's called a <term>unit</term>.
+      </p>
+    </statement>
+  </note>
+
+
+  <theorem>
+    <statement>
+      <p>
+        If <m>n</m> is a composite number, then <m>n</m> has a prime divisor less than or equal to <m>\sqrt{n}</m>.
+      </p>
+    </statement>
+    <proof>
+      <statement>
+        <p>
+          Assume, to the contrary, that every prime divisor of <m>n</m> is greater than <m>\sqrt{n}</m>. Since <m>n</m> is composite, it has at least two prime factors, <m>p_1, p_2</m> so that <m>n = p_1 p_2 b</m> where <m>b</m> is positive integer. But since <m>p_1 \and p_2</m> are a prime divisors of <m>n</m>, they are necessarily larger than  <m>\sqrt{n}</m>. So:
+          <me> n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb</me>
+          But since <m>n</m> is composite and <m>b\in \Z^+</m>, <m>n\gt nb</m> is a contradiction.
+        </p>
+      </statement>
+    </proof>
+  </theorem>
+
+  <example>
+    <title>Brute Force Trial Division</title>
+    <statement>
+      <p>
+        To determine if a number <m>n</m> is prime, one only needs to test all prime divisors up to <m>\sqrt{n}</m>.
+      </p>
+      <p>
+        Use trial division to determine that 251 is prime.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Sieve of Eratosthenes</title>
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </example>
+
+
 
   <subsection xml:id="extended-euclidean-algorithm">
     <title>
