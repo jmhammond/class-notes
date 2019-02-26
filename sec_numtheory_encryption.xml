@@ -395,6 +395,63 @@
       The RSA Activity
     </title>
 
+
+    <sage language="python">
+      <input>
+##### ENTER YOUR INFORMATION IN THE VARIABLES BELOW: ######
+
+m = "KEEP IT SECRET KEEP IT SAFE"
+n = 1234567
+e = 751
+
+
+##### LEAVE THIS PART BELOW ALONE  ######
+
+#####... unless you want to tinker with it. Please do!
+
+
+import re, string, math
+
+from itertools import izip_longest
+
+def grouper(iterable, n, fillvalue=None):
+    args = [iter(iterable)] * n
+    return izip_longest(*args, fillvalue=fillvalue)
+
+stripped_string = re.sub(r"\W|\d","", m.strip()).upper()
+
+""" Convert each character to 00, 01, ... 24, 25
+""" 
+
+int_string = ""
+for i in range(0,len(stripped_string)):
+    the_int = string.ascii_uppercase.index(stripped_string[i])
+    if the_int &lt; 10:
+        int_string += "0" + str(the_int)
+    else:
+        int_string += str(the_int)
+
+half_num_digits = (ceil(log(n,10))//2)
+block_size = (half_num_digits-1)*2 if (int(half_num_digits*"25") &gt; n) else half_num_digits*2        
+        
+# append the string with x's to fill the pad size.
+if (len(int_string) % block_size &gt; 0):
+    int_string += "23"*((block_size-(len(int_string) % block_size))//2)
+       
+# Chunk the message into block_size chunks; a list of string representations 
+blocks = [("".join(x)) for x in grouper(int_string, block_size)]
+
+cipher_blocks = []
+for block in blocks:
+    cipher_blocks.append(pow(int(block), e, n))
+
+print(cipher_blocks)
+      </input>
+      <output>
+[347306, 945459, 293142, 584584, 347306, 945459, 1025846, 601607]
+      </output>
+    </sage>
+
   </subsection>
 
 </section>
