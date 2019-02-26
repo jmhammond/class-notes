@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-numtheory-divcong">
+  <title> Divisibility and Congruences </title>
+
+  <note>
+    <statement>
+      <p>
+        Any time we say <q>number</q> in the context of divides, congruence, or <q>number theory</q> we mean integer.
+      </p>
+    </statement>
+  </note>
+
+  <subsection xml:id="section-numtheory-div">
+    <title>The Divides Relation</title>
+
+    <definition>
+      <statement>
+        <p>
+          Let <m>a \and b</m> be two integers with <m>a \not= 0</m>. We say <term><m>a</m> divides <m>b</m></term> and write <m>a \divides b</m> if there exists an integer <m>m</m> such that <m>b = am</m>.
+        </p>
+        <p>
+          We say that <m>a</m> is a <term>factor</term> of <m>b</m>, and <m>b</m> is a <term>multiple</term> of <m>a</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          The following are examples of the divides relation:
+          <ol>
+            <li> <m>3 \divides 6</m> since <m>6 = 3\cdot 2</m> </li>
+            <li> <m>4 \divides 100</m> since <m>100 = 4 \cdot 25</m></li>
+          </ol>
+        </p>
+        <p>
+          Here are some non-examples:
+          <ol>
+            <li> <m>4 \not \divides 10</m> since there is no integer <m>m</m> for which <m>10 = 4m</m>.</li>
+            <li><m> 6 \not \divides 3 </m>. Order matters.</li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+
+    <theorem>
+      <title> Properties of divisibility</title>
+      <statement>
+        <p>
+          Let <m>a, b, c \in \Z</m> with <m>a \not= 0</m>. Then:
+          <ol>
+            <li> If <m>a \divides b</m> and <m>a \divides c</m> then <m>a \divides ( b + c ) </m>. </li>
+            <li> If <m>a \divides b</m> then <m>a \divides bc</m> for all <m>c\in \Z</m>. </li>
+            <li> If <m>a \divides b</m> and <m>b \divides c</m> then <m>a \divides c </m>. </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+
+
+    <corollary>
+      <statement>
+        <p>
+          If <m>a, b, c\in \Z</m> with <m>a\not= 0</m> such that <m>a\divides b</m> and <m>a \divides c</m>, then <m>{ a\divides (bm+cn)}</m> where <m>m \and n</m> are some integers.
+        </p>
+      </statement>
+    </corollary>
+
+
+
+    <theorem>
+      <title>The Division Algorithm</title>
+      <statement>
+        <p>
+          Let <m>a</m> be an integer and <m>d</m> be a positive integer.  Then there exist unique integers <m>q \and r</m> such that
+          <me>a = dq + r \hspace{1em} \text{with} \hspace{1em} 0\le r \lt d</me>
+        </p>
+      </statement>
+    </theorem>
+
+
+    <example>
+      <statement>
+        <p>
+          Use the Division Algorithm to write each division as <m>a = dq +r</m> with <m>0 \le r \lt d</m>, with the variables defined in the statement above.
+          <ol>
+            <li> <m>543 \div 7</m> </li>
+            <li> <m>-42 \div 13</m> </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+
+  </subsection>
+
+  <subsection xml:id="section-numtheory-cong">
+    <title> The Congruence Relation </title>
+
+    <definition>
+      <statement>
+        <p>
+          Let <m>a \and b</m> be two integers and <m>m</m> be a positive integer. We say that <term><m>a</m> is congruent to <m>b</m> modulo <m>m</m></term> if <me>m \divides (b-a)</me>
+        </p>
+        <p>
+          We write <m>a \equiv b \pmod m</m>
+        </p>
+        <p>
+          We call <m>m</m> the <term>modulus</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          <ol>
+            <li> <m>13 \equiv 6 \pmod 7 </m> </li>
+            <li> <m>-8 \equiv 6 \pmod 7 </m> </li>
+            <li> <m>7 \equiv 0 \pmod 7</m></li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>a</m> is an integer and <m>m</m> is a positive integer, we define the <term>congruence class of <m>a</m> modulo <m>m</m></term> to be the set of all integers congruent to <m>a</m> modulo <m>m</m>. 
+          <me> \left[ a \right]_m = \left\{ b \mid b \equiv a \pmod m \right\}</me>
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          What congruence class is indicated by the set:
+          <ol>
+            <li> <m>\left\{\dots, -6, -1, 4, 9, 14, \dots\right\}</m> </li>
+            <li> <m>\left\{\dots, -13, 20, 53, 86, \dots \right\}</m> </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+
+    <example>
+      <statement>
+        <p>
+          Find all congruence classes modulo 5.
+        </p>
+      </statement>
+    </example>
+
+
+    <theorem>
+      <statement>
+        <p>
+          Let <m>m</m> be a positive integer. Then integers <m>a \and b</m> are congruent modulo <m>m</m> if and only if there exists and integer <m>k</m> such that <m>a = b + km</m>.
+        </p>
+      </statement>
+    </theorem>
+
+
+    <theorem>
+      <statement>
+        <p>
+          Let <m>m</m> be a positive integer. If <m>a \equiv b \pmod m \and c \equiv d \pmod m</m> then
+          <me>a + c \equiv b + d \pmod m  \hspace{1em} \and \hspace{1em} ac \equiv bd \pmod m</me>
+        </p>
+      </statement>
+    </theorem>
+
+    <note>
+      <statement>
+        <p>
+          For modular arithmetic, we have addition and multiplication. Subtraction is done via additive inverses, but division is not a thing! We'll discuss multiplicative inverses in a future section.  <!-- todo xref this -->
+        </p>
+      </statement>
+    </note>
+
+
+
+    <!-- TODO include a proof by induction of the division algorithm by induction -->
+
+
+  </subsection>
+
+
+  <exercises>
+
+    <exercise>
+      <statement>
+        <p>
+          Show that if <m>a, b, \and c</m> are integers with <m>a\not=0 \and c \not= 0</m> such that <m>ac \divides bc</m> then <m>a\divides b</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Prove that 6 divides <m>7^n - 1</m> for all <m>n \in \N</m>.
+        </p>
+      </statement>
+      <hint>
+        Use induction
+      </hint>
+      <solution>
+
+        <proof>
+          <p>
+            Let <m>P(n)</m> be the statement <q>6 divides <m>7^n - 1</m>.</q> We will show <m>P(n)</m> is true for all <m>n \in \N</m>. First we establish the base case, <m>P(0)</m>. Since <m>7^0 - 1 = 0</m>, and <m>0</m> is a multiple of 6, <m>P(0)</m> is true. Now for the inductive case. Assume <m>P(k)</m> holds for an arbitrary <m>k \in \N</m>. That is, 6 divides <m>7^k - 1</m>, or in other words, <m>7^k - 1 = 6j</m> for some integer <m>j</m>. Now consider <m>7^{k+1} - 1</m>:
+            <md>
+              <mrow> 7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6</mrow>
+              <mrow> \amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}</mrow>
+              <mrow> \amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}</mrow>
+              <mrow> \amp = 6(7j + 1) \amp \text{factor out a 6}</mrow>
+            </md>
+          </p>
+
+          <p>
+            Therefore 6 divides <m>7^{k+1} - 1</m>, or in other words, <m>P(k+1)</m> is true. Therefore by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \in \N</m>.
+          </p>
+        </proof>
+
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Use the division algorithm to write the following divisions as <m>a = dq + r</m> with the variables defined in the theorem:
+          <ol>
+            <li> 17 is divided by 9 </li>
+            <li> 1234 is divided by 23 </li>
+            <li> 0 is divided by 13 </li>
+            <li> 8 is divided by 1</li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Determine whether the following integers are congruent to 3 modulo 7:
+          <ol>
+            <li> 37 </li>
+            <li> 66 </li>
+            <li> -17 </li>
+            <li> -67 </li>
+            <li> 80 </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+
+    <exercise>
+      <statement>
+        <p>
+          Find counterexamples to the following statements:
+          <ol>
+            <li> If <m>ac \equiv bc \pmod m</m> where <m>a, b, c, m \in \Z</m> with <m>m \ge 2</m>, then <m>a \equiv b \pmod m</m>. </li>
+            <li> If <m>a \equiv b \pmod m</m> and <m>c \equiv d \pmod m</m> where <m>a, b, c, m \in \Z</m> with <m>m \ge 2</m>, then <m>a^c \equiv b^d \pmod m</m>. </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+  </exercises>
+
+</section>
