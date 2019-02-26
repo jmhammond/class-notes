@@ -401,9 +401,11 @@
 ##### ENTER YOUR INFORMATION IN THE VARIABLES BELOW: ######
 
 m = "KEEP IT SECRET KEEP IT SAFE"
-n = 1234567
+n = 15244346903
 e = 751
+d = 8545627279
 
+c = [971896385L, 3249912096L, 4079022731L, 8771096382L, 10148198704L]
 
 ##### LEAVE THIS PART BELOW ALONE  ######
 
@@ -445,7 +447,20 @@ cipher_blocks = []
 for block in blocks:
     cipher_blocks.append(pow(int(block), e, n))
 
-print(cipher_blocks)
+plain_blocks = []
+for block in c:
+    plain_block = pow(int(block), d, n) 
+    plain_blocks.append(("0"*(10 - len(str(plain_block))))+ str(plain_block))
+
+plaintext_message="".join(plain_blocks)
+print(plaintext_message) 
+
+message = ""
+ind = 0    
+while ind &lt; len(plaintext_message):
+    message += string.ascii_uppercase[ int(plaintext_message[ind:ind+2]) ]
+    ind += 2
+print(message) 
       </input>
       <output>
 [347306, 945459, 293142, 584584, 347306, 945459, 1025846, 601607]
