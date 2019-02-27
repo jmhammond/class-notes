@@ -358,7 +358,7 @@
       </sage>
     </p>
 
-    <p>
+    <p xml:id="bezout-gcd">
       The following Sage code allows us to find the GCD and Bezout coefficients via the <code>xgcd</code> command:
       <sage>
         <input>
@@ -395,7 +395,44 @@
       The RSA Activity
     </title>
 
+    <example>
+      <statement>
+        <p>
+          In this activity, you will generate a public/private key-pair. You will send me the public key and keep your private key secret (but don't lose it! If you lose your private key, you won't be able to complete the assignment and will receive no credit).
 
+          <ol>
+            <li> Pick two prime numbers <m>p \and q</m> of some interesting side. Make them at least six or seven digits long (use Sage's <c>next_prime</c>). </li>
+            <li> Let <m>m=(p-1)(q-1)</m>, and pick any number <m>e</m> relatively prime to <m>m</m>. </li>
+            <li> Find the inverse of <m>d</m> of <m>e</m> modulo <m>m</m>. You can use the Sage cell to do this.</li>
+            <li> Let <m>n = pq</m>. </li>
+            <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
+            <li>
+              <p>
+                Send me your public key on Slack as:
+                <cd>
+                  n = 15244346903
+                  e = 751 
+                </cd>
+              </p>
+            </li>
+            <li>
+              <p>
+                I'll send you an encrypted message which will look like:
+                <c>
+                  [971896385L, 3249912096L, 4079022731L, 8771096382L, 10148198704L]   
+                </c>
+
+                (ignore the <sq>L</sq> at the end of each number, it's python2 saying it's a <q>long</q> integer)
+              </p>
+            </li>
+            <li> Enter this information into the Sage cell below to decrypt it (using your <m>n, d, \and c</m>. </li>
+            <li> Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example <q>KEEPITSECRETKEEPITSAFEXX</q> will not receive full credit. </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+    <p xml:id="rsa-code">
     <sage language="python">
       <input>
 ##### ENTER YOUR INFORMATION IN THE VARIABLES BELOW: ######
@@ -408,7 +445,7 @@ m = "KEEP IT SECRET KEEP IT SAFE"   # A message to encrypt
 n = 15244346903    # Value of n = p*q
 e = 751 # Public encryption exponent
 d = 8545627279 # Private decryption exponent 
-c = [971896385, 3249912096, 4079022731, 8771096382, 10148198704]   # The ciphertext as a comma separated list (formatting matters)
+c = [971896385L, 3249912096L, 4079022731L, 8771096382L, 10148198704L]   # The ciphertext as a comma separated list (formatting matters)
 
 ##### LEAVE EVERYTHING ELSE BELOW ALONE  ######
 #####... unless you want to tinker with it. Please do!
@@ -463,22 +500,17 @@ def decrypt():
         ind += 2
     print(message) 
 
-which_function = {
-    "encrypt" : encrypt,
-    "decrypt" : decrypt
-}
 
-# Execute the desired action
+# ... pretend python has forward-declaration
+which_function = {"encrypt" : encrypt, "decrypt" : decrypt}
+
 try:
     which_function[what_to_do]()
 except KeyError:
     print("Please set the variable what_to_do to either 'encrypt' or 'decrypt'.")
-
-## By the way, I decided to do the execution this way because:
-# 1: Python doesn't have forward-declaration, but I want the user to be able to only change a couple values at the top, and
-# 2: I don't want to require that the user knows anything about programming 
       </input>
     </sage>
+    </p>
 
   </subsection>
 
