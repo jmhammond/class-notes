@@ -400,17 +400,18 @@
       <input>
 ##### ENTER YOUR INFORMATION IN THE VARIABLES BELOW: ######
 
-m = "KEEP IT SECRET KEEP IT SAFE"
-n = 15244346903
-e = 751
-d = 8545627279
+# If encrypting, set values for m, n, and e.
+# If decrypting, set values for c, n, and d.
 
-c = [971896385L, 3249912096L, 4079022731L, 8771096382L, 10148198704L]
+what_to_do = "encrypt" # Set what_to_do to either "encrypt" or "decrypt" (quotes matter)
+m = "KEEP IT SECRET KEEP IT SAFE"   # A message to encrypt 
+n = 15244346903    # Value of n = p*q
+e = 751 # Public encryption exponent
+d = 8545627279 # Private decryption exponent 
+c = [971896385, 3249912096, 4079022731, 8771096382, 10148198704]   # The ciphertext as a comma separated list (formatting matters)
 
-##### LEAVE THIS PART BELOW ALONE  ######
-
+##### LEAVE EVERYTHING ELSE BELOW ALONE  ######
 #####... unless you want to tinker with it. Please do!
-
 
 import re, string, math
 
@@ -420,51 +421,63 @@ def grouper(iterable, n, fillvalue=None):
     args = [iter(iterable)] * n
     return izip_longest(*args, fillvalue=fillvalue)
 
-stripped_string = re.sub(r"\W|\d","", m.strip()).upper()
+def encrypt():
+    stripped_string = re.sub(r"\W|\d","", m.strip()).upper()
 
-""" Convert each character to 00, 01, ... 24, 25
-""" 
+    int_string = ""
+    for i in range(0,len(stripped_string)):
+        the_int = string.ascii_uppercase.index(stripped_string[i])
+        if the_int &lt; 10:
+            int_string += "0" + str(the_int)
+        else:
+            int_string += str(the_int)
 
-int_string = ""
-for i in range(0,len(stripped_string)):
-    the_int = string.ascii_uppercase.index(stripped_string[i])
-    if the_int &lt; 10:
-        int_string += "0" + str(the_int)
-    else:
-        int_string += str(the_int)
+    half_num_digits = (ceil(log(n,10))//2)
+    block_size = (half_num_digits-1)*2 if (int(half_num_digits*"25") &gt; n) else half_num_digits*2        
 
-half_num_digits = (ceil(log(n,10))//2)
-block_size = (half_num_digits-1)*2 if (int(half_num_digits*"25") &gt; n) else half_num_digits*2        
-        
-# append the string with x's to fill the pad size.
-if (len(int_string) % block_size &gt; 0):
-    int_string += "23"*((block_size-(len(int_string) % block_size))//2)
-       
-# Chunk the message into block_size chunks; a list of string representations 
-blocks = [("".join(x)) for x in grouper(int_string, block_size)]
+    # append the string with x's to fill the block size.
+    if (len(int_string) % block_size &gt; 0):
+        int_string += "23"*((block_size-(len(int_string) % block_size))//2)
 
-cipher_blocks = []
-for block in blocks:
-    cipher_blocks.append(pow(int(block), e, n))
+    # Chunk the message into block_size chunks; a list of string representations 
+    blocks = [("".join(x)) for x in grouper(int_string, block_size)]
 
-plain_blocks = []
-for block in c:
-    plain_block = pow(int(block), d, n) 
-    plain_blocks.append(("0"*(10 - len(str(plain_block))))+ str(plain_block))
+    cipher_blocks = []
+    for block in blocks:
+        cipher_blocks.append(pow(int(block), e, n))
 
-plaintext_message="".join(plain_blocks)
-print(plaintext_message) 
+    print(cipher_blocks)
 
-message = ""
-ind = 0    
-while ind &lt; len(plaintext_message):
-    message += string.ascii_uppercase[ int(plaintext_message[ind:ind+2]) ]
-    ind += 2
-print(message) 
+def decrypt():
+    plain_blocks = []
+    for block in c:
+        plain_block = pow(int(block), d, n) 
+        plain_blocks.append(("0"*(10 - len(str(plain_block))))+ str(plain_block))
+
+    plaintext_message="".join(plain_blocks)
+
+    message = ""
+    ind = 0    
+    while ind &lt; len(plaintext_message):
+        message += string.ascii_uppercase[ int(plaintext_message[ind:ind+2]) ]
+        ind += 2
+    print(message) 
+
+which_function = {
+    "encrypt" : encrypt,
+    "decrypt" : decrypt
+}
+
+# Execute the desired action
+try:
+    which_function[what_to_do]()
+except KeyError:
+    print("Please set the variable what_to_do to either 'encrypt' or 'decrypt'.")
+
+## By the way, I decided to do the execution this way because:
+# 1: Python doesn't have forward-declaration, but I want the user to be able to only change a couple values at the top, and
+# 2: I don't want to require that the user knows anything about programming 
       </input>
-      <output>
-[347306, 945459, 293142, 584584, 347306, 945459, 1025846, 601607]
-      </output>
     </sage>
 
   </subsection>
