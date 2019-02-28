@@ -425,7 +425,7 @@
                 (ignore the <sq>L</sq> at the end of each number, it's python2 saying it's a <q>long</q> integer)
               </p>
             </li>
-            <li> Enter this information into the Sage cell below to decrypt it (using your <m>n, d, \and c</m>. </li>
+            <li> Enter this information into the Sage cell below to decrypt it (using your <m>n, d, \and c</m>), change <c>what_to_do</c> to <q>decrypt</q>, and then press Evaluate(Python). </li>
             <li> Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example <q>KEEPITSECRETKEEPITSAFEXX</q> will not receive full credit. </li>
           </ol>
         </p>
@@ -469,7 +469,7 @@ def encrypt():
         else:
             int_string += str(the_int)
 
-    half_num_digits = (ceil(log(n,10))//2)
+    half_num_digits = (ceil(math.log10(n))//2)
     block_size = (half_num_digits-1)*2 if (int(half_num_digits*"25") &gt; n) else half_num_digits*2        
 
     # append the string with x's to fill the block size.
@@ -481,15 +481,18 @@ def encrypt():
 
     cipher_blocks = []
     for block in blocks:
-        cipher_blocks.append(pow(int(block), e, n))
+        cipher_blocks.append(pow(long(block), e, n))
 
     print(cipher_blocks)
 
 def decrypt():
+    half_num_digits = (ceil(math.log10(n))//2)
+    block_size = (half_num_digits-1)*2 if (int(half_num_digits*"25") &gt; n) else half_num_digits*2        
+
     plain_blocks = []
     for block in c:
-        plain_block = pow(int(block), d, n) 
-        plain_blocks.append(("0"*(10 - len(str(plain_block))))+ str(plain_block))
+        plain_block = pow(long(block), d, n) 
+        plain_blocks.append(("0"*(block_size - len(str(plain_block))))+ str(plain_block))
 
     plaintext_message="".join(plain_blocks)
 
