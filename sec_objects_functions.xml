@@ -65,6 +65,7 @@
     </p>
   </note>
 
+  <!-- TODO: Next time have finite set examples (with different size sets to illustrate this better --> 
   <example>
     <statement>
       <p>
@@ -86,6 +87,7 @@
     </p>
   </definition>
 
+  <!-- TODO: Next time have finite set examples (with different size sets to illustrate this better --> 
   <example>
     <statement>
       <p>
@@ -276,7 +278,7 @@
 
   <exercises>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -317,6 +319,15 @@
         </p>
       </statement>
 
+      <solution>
+        <p>
+          <ol>
+            <li> No, the function is no injective. <m>2 = f(2) = f(5) = 2</m> but clearly <m>2 \not= 5</m> </li>
+            <li> Yes, the function is surjective. The codomain is <m>\{1, 2, 3, 4\}</m> and each element of the codomain is mapped (the range equals the codomain) </li>
+            
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
