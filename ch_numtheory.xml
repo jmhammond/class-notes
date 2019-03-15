@@ -597,13 +597,16 @@
       <example xml:id="multiplication-table">
         <statement>
           <p>
-            Let's create a multiplication table modulo 9. The following Sage code does it for us. You can change the variable <c>modulus</c> to other numbers to quickly generate other multiplication tables.
+            Let's create a multiplication table modulo 9. The following Sage code does it for us. You can change the variable <c>n</c> to other numbers to quickly generate other multiplication tables.
+          </p>
+          <p>
+            The output is a table/matrix whose <m>i, j</m>th entry is <m>i \cdot j \mod \text{n}</m>.
             <sage>
               <input>
-                modulus = 9
+                n = 9
                 rows = []
-                for i in range(1, modulus):
-                    rows.append( map((lambda x: (i*x)%modulus), [x for x in range(1,modulus)]))
+                for i in range(1, n):
+                    rows.append( map((lambda x: (i*x)%n), [x for x in range(1,n)]))
 
                 table(rows)
               </input>
@@ -645,6 +648,34 @@
     </subsection>
 
     <exercises>
+
+      <exercise>
+        <statement>
+          <p>
+            Solve the congruence:
+            <ol>
+              <li><m> 3x + 4 = 7 \pmod 8 </m></li>
+              <li><m> 9x = 4 \pmod{22}</m></li>
+              <li><m> 5x + 14 = 0 \pmod{26}</m></li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+
+      <exercise>
+        <statement>
+          <p>
+            Find all solutions to the congruence (there could be more than one):
+            <ol>
+              <li> <m>3x =6 \pmod 9 </m></li>
+              <li> <m>4x = 3 \pmod 8 </m></li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+
       <exercise>
         <statement>
           <p>
@@ -656,7 +687,6 @@
           </p>
         </statement>
       </exercise>
-
 
     </exercises>
 
