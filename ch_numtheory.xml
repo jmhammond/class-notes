@@ -443,180 +443,19 @@
       </statement>
     </theorem>
 
-    <subsection xml:id="sec_numtheory_gcds">
-      <title>
-        GCDs and the Euclidean Algorithm
-      </title>
-
-    <definition>
-      <statement>
-        <p>
-          Let <m>a \and b</m> be integers, not both zero. The largest integer <m>d</m> such that <m>d\divides a</m> and <m>d \divides b</m> is called the <term>greatest common divisor of <m>a \and b</m></term> which we denote by <m>\gcd(a,b)</m>.
-        </p>
-        <p>
-          We say <m>a \and b</m> are <term>relatively prime </term> if <m>\gcd(a,b)=1</m>.
-        </p>
-      </statement>
-    </definition>
-
-    <example>
-      <statement>
-        <p>
-          Find the following (by listing prime factors):
-          <ol>
-            <li> <m>\gcd(36, 69)</m> </li>
-            <li> <m>\gcd(10, 27)</m> </li>
-            <li> <m>\gcd(360, 1000)</m> </li>
-          </ol>
-        </p>
-      </statement>
-    </example>
-
-    <definition>
-      <statement>
-        <p>
-          Let <m>a \and b</m> be integers, not both zero. The smallest integer <m>m</m> such that <m>a\divides m</m> and <m>b \divides m</m> is called the <term>least common multiple of <m>a \and b</m></term> which we denote by <m>\lcm(a,b)</m>.
-        </p>
-      </statement>
-    </definition>
-
-
-    <example>
-      <statement>
-        <p>
-          Find the following:
-          <ol>
-            <li> <m>\lcm(36, 69)</m> </li>
-            <li> <m>\lcm(10, 27)</m> </li>
-            <li> <m>\lcm(360, 1000)</m> </li>
-          </ol>
-        </p>
-      </statement>
-    </example>
-
-    <theorem>
-      <statement>
-        <p>
-          Let <m>a \and b</m> be two positive integers. Then
-          <me>ab = \gcd(a,b)\cdot \lcm(a,b)</me>
-        </p>
-      </statement>
-    </theorem>
-
-
-    <theorem xml:id="euclidean-algorithm">
-      <title>The Euclidean Algorithm</title>
-      <statement>
-        <p>
-          Let <m>a=r_0</m> and <m>b=r_1</m> be two positive integers where <m>a \ge b</m>. If we apply the division algorithm recursively so that
-          <me> r_j = r_{j+1} q_{j+1} + r_{j+2} \text{ where } 0 \le r_{j+2} \lt r_{j+1}</me>
-          for all <m>j = 0, 1, 2, \dots, n-2</m>, and <m>r_{n+1} = 0</m>, then <m>\gcd(a,b) = r_n</m>.
-        </p>
-      </statement>
-    </theorem>
-
-    <example>
-      <statement>
-        <p>
-          Here's a fully worked out example showing how to run the algorithm to find <m>\gcd(7592, 5913)</m>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          <md>
-            <mrow>7592 &amp;= 5913 \cdot 1 + 1679</mrow>
-            <mrow>5913 &amp;= 1679 \cdot 3 + 876</mrow>
-            <mrow>1679 &amp;= 876 \cdot 1 + 803 </mrow>
-            <mrow>876 &amp;= 803 \cdot 1 + 73 </mrow>
-            <mrow>803 &amp;= 73 \cdot 11 + 0 </mrow>
-          </md>
-          According to the Euclidean Algorithm, the last non-zero remainder is the gcd, and so <m>\gcd(7592, 5913) = 73</m>.
-        </p>
-      </solution>
-    </example>
-    
-    <theorem>
-      <!-- TODO, give him a grave accent -->
-      <title>Bezout's Theorem</title>
-      <statement>
-        <p>
-          If <m>a \and b</m> are positive integers, then there exist integers <m>s \and t</m> such that <m>{\gcd(a,b) = as + bt}</m>
-        </p>
-      </statement>
-    </theorem>
-
-    <definition>
-      <statement>
-        <p>
-          We call <m>s \and t</m> in the theorem above the <term>Bezout coefficients</term> of <m>a \and b</m>. 
-        </p>
-      </statement>
-    </definition>
-
-    <example>
-      <title>Back Substition</title>
-      <statement>
-        <p>
-          We can reverse the Euclidean Algorithm to find the Bezout coefficients, a process that we'll call <term>back substitution</term>. We solve each equation in the Euclidean Algorithm for the remainder, and repeatedly substitute and combine like terms until we arrive at the gcd written as a <term>linear combination</term> of the original two numbers, in this case, <m>73 = 7592s + 5913t</m>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          <sidebyside widths="45% 45%">
-            <p>
-              The remainders:
-              <md>
-                <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
-                <mrow>803 &amp;= 1679 - 876 \cdot 1 </mrow>
-                <mrow>876 &amp;= 5913 - 1679 \cdot 3 </mrow>
-                <mrow>1679 &amp;= 7592 - 5913 \cdot 1</mrow>
-              </md>
-            </p>
-            <p>
-              Substition and combining like terms:
-              <md>
-                <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
-                <mrow> &amp;= 876 - (1679 - 876 \cdot 1) \cdot 1</mrow>
-                <mrow> &amp;= 876\cdot 2 - 1679 \cdot 1</mrow>
-                <mrow> &amp;= (5913 - 1679\cdot 3) \cdot 2 - 1679 \cdot 1</mrow>
-                <mrow> &amp;= 5913\cdot 2 - 1679 \cdot 7</mrow>
-                <mrow> &amp;= 5913\cdot 2 - (7592 - 5913 \cdot 1) \cdot 7</mrow>
-                <mrow> &amp;= 5913\cdot 9 - 7592 \cdot 7</mrow>
-                <mrow> &amp;= 5913\cdot 9 + 7592 \cdot (-7)</mrow>
-              </md>
-            </p>
-          </sidebyside>
-          So <m>73 = 5913 \cdot 9 + 7592 \cdot(-7)</m> is the linear combination we desired.
-        </p>
-      </solution>
-    </example>
-
-
-    <example>
-      <statement>
-        <p>
-          <ol>
-            <li>
-              Use the Euclidean algorithm to find <m>\gcd(4147, 10672)</m>.
-            </li>
-            <li>
-              Use back-substitution (reverse the steps of the Euclidean Algorithm) to write the greatest common divisor of 4147 and 10672 as a linear combination of those numbers.
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </example>
-
     <exercises>
+
       <exercise>
         <statement>
           <p>
-            Find the gcd via the Euclidean Algorithm and then use back-substitution to write the gcd as a linear combination of those numbers:
+            Find the prime factorization of each of the following integers:
             <ol>
-              <li><m> \gcd(36, 48) </m></li>
-              <li><m> \gcd(21, 724) </m></li>
-              <li><m> \gcd(60, 97) </m></li>
-              <li><m> \gcd(5, 26) </m></li>
+              <li>39  </li>
+              <li>125  </li>
+              <li>101  </li>
+              <li>143  </li>
+              <li>289  </li>
+              <li>899  </li>
             </ol>
           </p>
         </statement>
@@ -625,29 +464,218 @@
       <exercise>
         <statement>
           <p>
-            Use any method to find the greatest common divisor of 412 and 32.
+            Find the prime factorization of <m>10!</m>
           </p>
         </statement>
       </exercise>
 
-      <exercise>
-        <statement>
-          <p>
-            Use any method to find the greatest common divisor of 780 and 150.
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise>
-        <statement>
-          <p>
-            Find the greatest common divisor of 70, 98, 108.
-          </p>
-        </statement>
-      </exercise>
     </exercises>
 
-  </subsection>
+    <subsection xml:id="sec_numtheory_gcds">
+      <title>
+        GCDs and the Euclidean Algorithm
+      </title>
+
+      <definition>
+        <statement>
+          <p>
+            Let <m>a \and b</m> be integers, not both zero. The largest integer <m>d</m> such that <m>d\divides a</m> and <m>d \divides b</m> is called the <term>greatest common divisor of <m>a \and b</m></term> which we denote by <m>\gcd(a,b)</m>.
+          </p>
+          <p>
+            We say <m>a \and b</m> are <term>relatively prime </term> if <m>\gcd(a,b)=1</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <example>
+        <statement>
+          <p>
+            Find the following (by listing prime factors):
+            <ol>
+              <li> <m>\gcd(36, 69)</m> </li>
+              <li> <m>\gcd(10, 27)</m> </li>
+              <li> <m>\gcd(360, 1000)</m> </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+
+      <definition>
+        <statement>
+          <p>
+            Let <m>a \and b</m> be integers, not both zero. The smallest integer <m>m</m> such that <m>a\divides m</m> and <m>b \divides m</m> is called the <term>least common multiple of <m>a \and b</m></term> which we denote by <m>\lcm(a,b)</m>.
+          </p>
+        </statement>
+      </definition>
+
+
+      <example>
+        <statement>
+          <p>
+            Find the following:
+            <ol>
+              <li> <m>\lcm(36, 69)</m> </li>
+              <li> <m>\lcm(10, 27)</m> </li>
+              <li> <m>\lcm(360, 1000)</m> </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+
+      <theorem>
+        <statement>
+          <p>
+            Let <m>a \and b</m> be two positive integers. Then
+            <me>ab = \gcd(a,b)\cdot \lcm(a,b)</me>
+          </p>
+        </statement>
+      </theorem>
+
+
+      <theorem xml:id="euclidean-algorithm">
+        <title>The Euclidean Algorithm</title>
+        <statement>
+          <p>
+            Let <m>a=r_0</m> and <m>b=r_1</m> be two positive integers where <m>a \ge b</m>. If we apply the division algorithm recursively so that
+            <me> r_j = r_{j+1} q_{j+1} + r_{j+2} \text{ where } 0 \le r_{j+2} \lt r_{j+1}</me>
+            for all <m>j = 0, 1, 2, \dots, n-2</m>, and <m>r_{n+1} = 0</m>, then <m>\gcd(a,b) = r_n</m>.
+          </p>
+        </statement>
+      </theorem>
+
+      <example>
+        <statement>
+          <p>
+            Here's a fully worked out example showing how to run the algorithm to find <m>\gcd(7592, 5913)</m>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <md>
+              <mrow>7592 &amp;= 5913 \cdot 1 + 1679</mrow>
+              <mrow>5913 &amp;= 1679 \cdot 3 + 876</mrow>
+              <mrow>1679 &amp;= 876 \cdot 1 + 803 </mrow>
+              <mrow>876 &amp;= 803 \cdot 1 + 73 </mrow>
+              <mrow>803 &amp;= 73 \cdot 11 + 0 </mrow>
+            </md>
+            According to the Euclidean Algorithm, the last non-zero remainder is the gcd, and so <m>\gcd(7592, 5913) = 73</m>.
+          </p>
+        </solution>
+      </example>
+      
+      <theorem>
+        <!-- TODO, give him a grave accent -->
+        <title>Bezout's Theorem</title>
+        <statement>
+          <p>
+            If <m>a \and b</m> are positive integers, then there exist integers <m>s \and t</m> such that <m>{\gcd(a,b) = as + bt}</m>
+          </p>
+        </statement>
+      </theorem>
+
+      <definition>
+        <statement>
+          <p>
+            We call <m>s \and t</m> in the theorem above the <term>Bezout coefficients</term> of <m>a \and b</m>. 
+          </p>
+        </statement>
+      </definition>
+
+      <example>
+        <title>Back Substition</title>
+        <statement>
+          <p>
+            We can reverse the Euclidean Algorithm to find the Bezout coefficients, a process that we'll call <term>back substitution</term>. We solve each equation in the Euclidean Algorithm for the remainder, and repeatedly substitute and combine like terms until we arrive at the gcd written as a <term>linear combination</term> of the original two numbers, in this case, <m>73 = 7592s + 5913t</m>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <sidebyside widths="45% 45%">
+              <p>
+                The remainders:
+                <md>
+                  <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
+                  <mrow>803 &amp;= 1679 - 876 \cdot 1 </mrow>
+                  <mrow>876 &amp;= 5913 - 1679 \cdot 3 </mrow>
+                  <mrow>1679 &amp;= 7592 - 5913 \cdot 1</mrow>
+                </md>
+              </p>
+              <p>
+                Substition and combining like terms:
+                <md>
+                  <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
+                  <mrow> &amp;= 876 - (1679 - 876 \cdot 1) \cdot 1</mrow>
+                  <mrow> &amp;= 876\cdot 2 - 1679 \cdot 1</mrow>
+                  <mrow> &amp;= (5913 - 1679\cdot 3) \cdot 2 - 1679 \cdot 1</mrow>
+                  <mrow> &amp;= 5913\cdot 2 - 1679 \cdot 7</mrow>
+                  <mrow> &amp;= 5913\cdot 2 - (7592 - 5913 \cdot 1) \cdot 7</mrow>
+                  <mrow> &amp;= 5913\cdot 9 - 7592 \cdot 7</mrow>
+                  <mrow> &amp;= 5913\cdot 9 + 7592 \cdot (-7)</mrow>
+                </md>
+              </p>
+            </sidebyside>
+            So <m>73 = 5913 \cdot 9 + 7592 \cdot(-7)</m> is the linear combination we desired.
+          </p>
+        </solution>
+      </example>
+
+
+      <example>
+        <statement>
+          <p>
+            <ol>
+              <li>
+                Use the Euclidean algorithm to find <m>\gcd(4147, 10672)</m>.
+              </li>
+              <li>
+                Use back-substitution (reverse the steps of the Euclidean Algorithm) to write the greatest common divisor of 4147 and 10672 as a linear combination of those numbers.
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+
+      <exercises>
+        <exercise>
+          <statement>
+            <p>
+              Find the gcd via the Euclidean Algorithm and then use back-substitution to write the gcd as a linear combination of those numbers:
+              <ol>
+                <li><m> \gcd(36, 48) </m></li>
+                <li><m> \gcd(21, 724) </m></li>
+                <li><m> \gcd(60, 97) </m></li>
+                <li><m> \gcd(5, 26) </m></li>
+              </ol>
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Use any method to find the greatest common divisor of 412 and 32.
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Use any method to find the greatest common divisor of 780 and 150.
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Find the greatest common divisor of 70, 98, 108.
+            </p>
+          </statement>
+        </exercise>
+      </exercises>
+
+    </subsection>
     <subsection xml:id="numtheory_inverses">
       <title>
         Inverses
@@ -766,7 +794,7 @@
                 n = 9
                 rows = []
                 for i in range(1, n):
-                    rows.append( map((lambda x: (i*x)%n), [x for x in range(1,n)]))
+                rows.append( map((lambda x: (i*x)%n), [x for x in range(1,n)]))
 
                 table(rows)
               </input>

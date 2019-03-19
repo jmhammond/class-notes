@@ -295,7 +295,7 @@
 
     <note>
       <p>
-        To be able to decrypt an affine function, we need <m>\gcd(a,n)=1</m> in order that <m>a</m> is an invertible element. We can find the inverse via the <xref ref="euclidean-algorithm"> Euclidean Algorithm with back-substitution</xref>. Recall, the inverse of an invertible element is its <xref ref="def-bezout-coefficient">Bezout coefficient</xref>.
+        To be able to decrypt an affine function, we need <m>\gcd(a,n)=1</m> in order that <m>a</m> is an invertible element. We can find the inverse via the <xref ref="euclidean-algorithm"> Euclidean Algorithm with back-substitution</xref>. Recall, the inverse of an invertible element is its Bezout coefficient.
       </p>
     </note>
 

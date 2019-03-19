@@ -203,7 +203,7 @@
     <exercise>
       <statement>
         <p>
-          Use the division algorithm to write the following divisions as <m>a = dq + r</m> with the variables defined in the theorem:
+          Use the division algorithm to write the following divisions as <m>n = dq + r</m> with the variables defined in the theorem:
           <ol>
             <li> 17 is divided by 9 </li>
             <li> 1234 is divided by 23 </li>
@@ -227,6 +227,42 @@
           </ol>
         </p>
       </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          List all integers between -100 and 100 that are congruent to -1 modulo 25
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Suppose that <m>a \and b</m> are integers, <m>a \equiv 4 \pmod{13}</m> and <m>b \equiv 9\pmod{13}</m>. Find the integer <m>c</m> with <m>0 \le c \le 12</m> such that:
+          <ol>
+            <li> c \equiv 9a \pmod{13} </li>
+            <li> c \equiv 11b \pmod{13} </li>
+            <li> c \equiv a+b \pmod{13} </li>
+            <li> c \equiv a^2 + b^2 \pmod{13} </li>
+            <li> c \equiv a^2 - b^2 \pmod{13} </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <statement>
+          <p>
+            <ol>
+              <li> 10 </li>
+              <li> 8 </li>
+              <li> 0 </li>
+              <li> 6 </li>
+              <li> 11 </li>
+            </ol>
+          </p>
+        </statement>
+      </solution>
     </exercise>
 
     <exercise>
@@ -274,6 +310,22 @@
 
       </solution>
     </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          In each polynomial below, assume <m>x</m> is some variable. Use the binomial theorem to expand and reduce modulo the appropriate number:
+          <ol>
+            <li> (x+1)^2 \pmod 2 </li>
+            <li> (x+1)^5 \pmod 5 </li>
+            <li> (x+1)^7 \pmod 7 </li>
+          </ol>
+          Prove that <m>(x+1)^p \equiv x^p + 1 \pmod p</m> for any prime <m>p</m>.
+        </p>
+      </statement>
+    </exercise>
+
+
   </exercises>
 
 </section>
