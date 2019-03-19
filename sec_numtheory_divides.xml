@@ -5,7 +5,7 @@
   <note>
     <statement>
       <p>
-        Any time we say <q>number</q> in the context of divides, congruence, or <q>number theory</q> we mean integer.
+        Any time we say <q>number</q> in the context of divides, congruence, or number theory we mean integer.
       </p>
     </statement>
   </note>
@@ -36,8 +36,8 @@
         <p>
           Here are some non-examples:
           <ol>
-            <li> <m>4 \not \divides 10</m> since there is no integer <m>m</m> for which <m>10 = 4m</m>.</li>
-            <li><m> 6 \not \divides 3 </m>. Order matters.</li>
+            <li> <m>4 \not\divides 10</m> since there is no integer <m>m</m> for which <m>10 = 4m</m>.</li>
+            <li><m> 6 \not\divides 3 </m>. Order matters.</li>
           </ol>
         </p>
       </statement>
@@ -73,8 +73,8 @@
       <title>The Division Algorithm</title>
       <statement>
         <p>
-          Let <m>a</m> be an integer and <m>d</m> be a positive integer.  Then there exist unique integers <m>q \and r</m> such that
-          <me>a = dq + r \hspace{1em} \text{with} \hspace{1em} 0\le r \lt d</me>
+          Let <m>n</m> be an integer and <m>d</m> be a positive integer.  Then there exist unique integers <m>q \and r</m> such that
+          <me>n = dq + r \hspace{1em} \text{with} \hspace{1em} 0\le r \lt d</me>
         </p>
       </statement>
     </theorem>
@@ -83,7 +83,7 @@
     <example>
       <statement>
         <p>
-          Use the Division Algorithm to write each division as <m>a = dq +r</m> with <m>0 \le r \lt d</m>, with the variables defined in the statement above.
+          Use the Division Algorithm to write each division as <m>n = dq +r</m> with <m>0 \le r \lt d</m>, with the variables defined in the statement above.
           <ol>
             <li> <m>543 \div 7</m> </li>
             <li> <m>-42 \div 13</m> </li>
@@ -128,7 +128,7 @@
       <statement>
         <p>
           If <m>a</m> is an integer and <m>m</m> is a positive integer, we define the <term>congruence class of <m>a</m> modulo <m>m</m></term> to be the set of all integers congruent to <m>a</m> modulo <m>m</m>. 
-          <me> \left[ a \right]_m = \left\{ b \mid b \equiv a \pmod m \right\}</me>
+          <me> \left[ a \right]_m = \left\{ b \mid b \equiv a\pmod{m} \right\}</me>
         </p>
       </statement>
     </definition>
@@ -199,36 +199,6 @@
       </statement>
     </exercise>
 
-    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
-      <statement>
-        <p>
-          Prove that 6 divides <m>7^n - 1</m> for all <m>n \in \N</m>.
-        </p>
-      </statement>
-      <hint>
-        Use induction
-      </hint>
-      <solution>
-
-        <proof>
-          <p>
-            Let <m>P(n)</m> be the statement <q>6 divides <m>7^n - 1</m>.</q> We will show <m>P(n)</m> is true for all <m>n \in \N</m>. First we establish the base case, <m>P(0)</m>. Since <m>7^0 - 1 = 0</m>, and <m>0</m> is a multiple of 6, <m>P(0)</m> is true. Now for the inductive case. Assume <m>P(k)</m> holds for an arbitrary <m>k \in \N</m>. That is, 6 divides <m>7^k - 1</m>, or in other words, <m>7^k - 1 = 6j</m> for some integer <m>j</m>. Now consider <m>7^{k+1} - 1</m>:
-            <md>
-              <mrow> 7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6</mrow>
-              <mrow> \amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}</mrow>
-              <mrow> \amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}</mrow>
-              <mrow> \amp = 6(7j + 1) \amp \text{factor out a 6}</mrow>
-            </md>
-          </p>
-
-          <p>
-            Therefore 6 divides <m>7^{k+1} - 1</m>, or in other words, <m>P(k+1)</m> is true. Therefore by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \in \N</m>.
-          </p>
-        </proof>
-
-      </solution>
-    </exercise>
 
     <exercise>
       <statement>
@@ -259,7 +229,6 @@
       </statement>
     </exercise>
 
-
     <exercise>
       <statement>
         <p>
@@ -273,6 +242,37 @@
           The first part of this exercise should convince you: you cannot <q>divide</q> both sides by <m>c</m> in modular arithmetic! 
         </p>
       </statement>
+    </exercise>
+
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Prove that 6 divides <m>7^n - 1</m> for all <m>n \in \N</m>.
+        </p>
+      </statement>
+      <hint>
+        Use induction
+      </hint>
+      <solution>
+
+        <proof>
+          <p>
+            Let <m>P(n)</m> be the statement <q>6 divides <m>7^n - 1</m>.</q> We will show <m>P(n)</m> is true for all <m>n \in \N</m>. First we establish the base case, <m>P(0)</m>. Since <m>7^0 - 1 = 0</m>, and <m>0</m> is a multiple of 6, <m>P(0)</m> is true. Now for the inductive case. Assume <m>P(k)</m> holds for an arbitrary <m>k \in \N</m>. That is, 6 divides <m>7^k - 1</m>, or in other words, <m>7^k - 1 = 6j</m> for some integer <m>j</m>. Now consider <m>7^{k+1} - 1</m>:
+            <md>
+              <mrow> 7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6</mrow>
+              <mrow> \amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}</mrow>
+              <mrow> \amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}</mrow>
+              <mrow> \amp = 6(7j + 1) \amp \text{factor out a 6}</mrow>
+            </md>
+          </p>
+
+          <p>
+            Therefore 6 divides <m>7^{k+1} - 1</m>, or in other words, <m>P(k+1)</m> is true. Therefore by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \in \N</m>.
+          </p>
+        </proof>
+
+      </solution>
     </exercise>
   </exercises>
 

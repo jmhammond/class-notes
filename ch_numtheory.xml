@@ -39,6 +39,20 @@
       </statement>
     </theorem>
 
+    <example>
+      <statement>
+        <p>
+          Find the prime factorization of the following:
+          <ol>
+            <li> 124 </li>
+            <li> 81 </li>
+            <li> 941 </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+
     <theorem>
       <statement>
         <p>
@@ -60,7 +74,7 @@
       <title>Brute Force Trial Division</title>
       <statement>
         <p>
-          To determine if a number <m>n</m> is prime, one only needs to test all prime divisors up to <m>\sqrt{n}</m>.
+          To determine if a number <m>n</m> is prime, one only needs to test all possible prime divisors up to <m>\sqrt{n}</m>.
         </p>
         <p>
           Use trial division to determine that 251 is prime.
@@ -72,12 +86,12 @@
       <title>Sieve of Eratosthenes</title>
       <statement>
         <p>
-          Given a tabular listing  of integers from 1 to as large as you'd like:
+          In order to generate a list of all prime numbers less than or equal to <m>n</m>, start with a tabular listing  of integers from 1 to <m>n</m>:
           <ol>
             <li> Cross off the number 1. </li>
             <li>
               <p>
-                Continuing until you have all the primes you could want:
+                Continuing until you reach <m>\sqrt{n}</m>:
                 <ol>
                   <li> Circle the next, non-crossed out number. It's prime. </li>
                   <li> Cross out every multiple of this number. </li>
@@ -429,6 +443,10 @@
       </statement>
     </theorem>
 
+    <subsection xml:id="sec_numtheory_gcds">
+      <title>
+        GCDs and the Euclidean Algorithm
+      </title>
 
     <definition>
       <statement>
@@ -444,7 +462,7 @@
     <example>
       <statement>
         <p>
-          Find the following (by listing factors):
+          Find the following (by listing prime factors):
           <ol>
             <li> <m>\gcd(36, 69)</m> </li>
             <li> <m>\gcd(10, 27)</m> </li>
@@ -500,20 +518,136 @@
     <example>
       <statement>
         <p>
-          Use the Euclidean algorithm to find <m>\gcd(4147, 10672)</m>.
+          Here's a fully worked out example showing how to run the algorithm to find <m>\gcd(7592, 5913)</m>
         </p>
       </statement>
+      <solution>
+        <p>
+          <md>
+            <mrow>7592 &amp;= 5913 \cdot 1 + 1679</mrow>
+            <mrow>5913 &amp;= 1679 \cdot 3 + 876</mrow>
+            <mrow>1679 &amp;= 876 \cdot 1 + 803 </mrow>
+            <mrow>876 &amp;= 803 \cdot 1 + 73 </mrow>
+            <mrow>803 &amp;= 73 \cdot 11 + 0 </mrow>
+          </md>
+          According to the Euclidean Algorithm, the last non-zero remainder is the gcd, and so <m>\gcd(7592, 5913) = 73</m>.
+        </p>
+      </solution>
     </example>
+    
+    <theorem>
+      <!-- TODO, give him a grave accent -->
+      <title>Bezout's Theorem</title>
+      <statement>
+        <p>
+          If <m>a \and b</m> are positive integers, then there exist integers <m>s \and t</m> such that <m>{\gcd(a,b) = as + bt}</m>
+        </p>
+      </statement>
+    </theorem>
+
+    <definition>
+      <statement>
+        <p>
+          We call <m>s \and t</m> in the theorem above the <term>Bezout coefficients</term> of <m>a \and b</m>. 
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <title>Back Substition</title>
+      <statement>
+        <p>
+          We can reverse the Euclidean Algorithm to find the Bezout coefficients, a process that we'll call <term>back substitution</term>. We solve each equation in the Euclidean Algorithm for the remainder, and repeatedly substitute and combine like terms until we arrive at the gcd written as a <term>linear combination</term> of the original two numbers, in this case, <m>73 = 7592s + 5913t</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <sidebyside widths="45% 45%">
+            <p>
+              The remainders:
+              <md>
+                <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
+                <mrow>803 &amp;= 1679 - 876 \cdot 1 </mrow>
+                <mrow>876 &amp;= 5913 - 1679 \cdot 3 </mrow>
+                <mrow>1679 &amp;= 7592 - 5913 \cdot 1</mrow>
+              </md>
+            </p>
+            <p>
+              Substition and combining like terms:
+              <md>
+                <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
+                <mrow> &amp;= 876 - (1679 - 876 \cdot 1) \cdot 1</mrow>
+                <mrow> &amp;= 876\cdot 2 - 1679 \cdot 1</mrow>
+                <mrow> &amp;= (5913 - 1679\cdot 3) \cdot 2 - 1679 \cdot 1</mrow>
+                <mrow> &amp;= 5913\cdot 2 - 1679 \cdot 7</mrow>
+                <mrow> &amp;= 5913\cdot 2 - (7592 - 5913 \cdot 1) \cdot 7</mrow>
+                <mrow> &amp;= 5913\cdot 9 - 7592 \cdot 7</mrow>
+                <mrow> &amp;= 5913\cdot 9 + 7592 \cdot (-7)</mrow>
+              </md>
+            </p>
+          </sidebyside>
+          So <m>73 = 5913 \cdot 9 + 7592 \cdot(-7)</m> is the linear combination we desired.
+        </p>
+      </solution>
+    </example>
+
 
     <example>
       <statement>
         <p>
-          Use back-substitution (reverse the steps of the Euclidean Algorithm) to write the greatest common divisor of 4147 and 10672 as a linear combination of those numbers.
+          <ol>
+            <li>
+              Use the Euclidean algorithm to find <m>\gcd(4147, 10672)</m>.
+            </li>
+            <li>
+              Use back-substitution (reverse the steps of the Euclidean Algorithm) to write the greatest common divisor of 4147 and 10672 as a linear combination of those numbers.
+            </li>
+          </ol>
         </p>
       </statement>
     </example>
 
+    <exercises>
+      <exercise>
+        <statement>
+          <p>
+            Find the gcd via the Euclidean Algorithm and then use back-substitution to write the gcd as a linear combination of those numbers:
+            <ol>
+              <li><m> \gcd(36, 48) </m></li>
+              <li><m> \gcd(21, 724) </m></li>
+              <li><m> \gcd(60, 97) </m></li>
+              <li><m> \gcd(5, 26) </m></li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
 
+      <exercise>
+        <statement>
+          <p>
+            Use any method to find the greatest common divisor of 412 and 32.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Use any method to find the greatest common divisor of 780 and 150.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Find the greatest common divisor of 70, 98, 108.
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+
+  </subsection>
     <subsection xml:id="numtheory_inverses">
       <title>
         Inverses
@@ -626,7 +760,7 @@
             Let's create a multiplication table modulo 9. The following Sage code does it for us. You can change the variable <c>n</c> to other numbers to quickly generate other multiplication tables.
           </p>
           <p>
-            The output is a table/matrix whose <m>i, j</m>th entry is <m>i \cdot j \mod \text{n}</m>.
+            The output is a table/matrix whose <m>i, j</m>th entry is <m>i \cdot j \pmod \text{n}</m>.
             <sage>
               <input>
                 n = 9
@@ -657,80 +791,68 @@
         </statement>
       </example>
 
+      <theorem>
+        <statement>
+          <p>
+            If <m>a \and m</m> are relatively prime integers and <m>m \gt 1</m>, then an inverse of <m>a</m> modulo <m>m</m> exists.
+          </p>
+        </statement>
+      </theorem>
+
+      <note>
+        <statement>
+          <p>
+            <ol>
+              <li> The inverse of <m>a \text{ modulo } m</m> is its Bezout coefficient in <m>{\gcd(a,m) = as + mt}</m> </li>
+              <li> The inverse is unique, but we won't prove that here.</li>
+            </ol>
+          </p>
+        </statement>
+      </note>
+
+      <exercises>
+        <exercise>
+          <statement>
+            <p>
+              Solve the congruence:
+              <ol>
+                <li><m> 3x + 4 = 7 \pmod 8 </m></li>
+                <li><m> 9x = 4 \pmod{22}</m></li>
+                <li><m> 5x + 14 = 0 \pmod{26}</m></li>
+              </ol>
+            </p>
+          </statement>
+        </exercise>
 
 
+        <exercise>
+          <statement>
+            <p>
+              Find all solutions to the congruence (there could be more than one):
+              <ol>
+                <li> <m>3x =6 \pmod 9 </m></li>
+                <li> <m>4x = 3 \pmod 8 </m></li>
+              </ol>
+            </p>
+          </statement>
+        </exercise>
 
-      <definition xml:id="def-bezout-coefficient">
-        TODO
-      </definition>
+
+        <exercise>
+          <statement>
+            <p>
+              Play around with making <xref ref="multiplication-table">multiplication tables of various moduli in the Sage code in example</xref>.
+              <ol>
+                <li> What condition is required for a number <m>a</m> to have an inverse modulo <m>n</m>? </li>
+                <li> What is a condition on <m>n</m> for every element to have an inverse modulo <m>n</m>?</li>
+              </ol>
+            </p>
+          </statement>
+        </exercise>
+
+      </exercises>
     </subsection>
 
-    <exercises>
-
-      <exercise>
-        <statement>
-          <p>
-            Use the Euclidean algorithm to find the greatest common divisor of 412 and 32 and express it in terms of the two integers.
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise>
-        <statement>
-          <p>
-            Use the Euclidean algorithm to find the greatest common divisor of 780 and 150 and express it in terms of the two integers.
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise>
-        <statement>
-          <p>
-            Find the greatest common divisor of 70, 98, 108.
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise>
-        <statement>
-          <p>
-            Solve the congruence:
-            <ol>
-              <li><m> 3x + 4 = 7 \pmod 8 </m></li>
-              <li><m> 9x = 4 \pmod{22}</m></li>
-              <li><m> 5x + 14 = 0 \pmod{26}</m></li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-
-
-      <exercise>
-        <statement>
-          <p>
-            Find all solutions to the congruence (there could be more than one):
-            <ol>
-              <li> <m>3x =6 \pmod 9 </m></li>
-              <li> <m>4x = 3 \pmod 8 </m></li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-
-
-      <exercise>
-        <statement>
-          <p>
-            Play around with making <xref ref="multiplication-table">multiplication tables of various moduli</xref>.
-            <ol>
-              <li> What condition is required for a number <m>a</m> to have an inverse modulo <m>n</m>? </li>
-              <li> What is a condition on <m>n</m> for every element to have an inverse modulo <m>n</m>?</li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
-
-    </exercises>
 
   </section>
 

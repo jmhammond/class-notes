@@ -52,9 +52,9 @@
               <li><m>37^2 = 37^2 = 1369 \equiv 17\pmod{52}</m></li>
               <li><m>37^4 = 17^2 = 289 \equiv 29 \pmod{52}</m></li>
               <li><m>37^8 = 29^2 = 841 \equiv 9 \pmod{52}</m></li>
-              <li><m>37^16 = 9^2 = 81 \equiv 29 \pmod{52}</m></li>
-              <li><m>37^32 = 29^2 = 841 \equiv 9 \pmod{52}</m></li>
-              <li><m>37^64 = 9^2 = 81 \equiv 29 \pmod{52}</m></li>
+              <li><m>37^{16} = 9^2 = 81 \equiv 29 \pmod{52}</m></li>
+              <li><m>37^{32} = 29^2 = 841 \equiv 9 \pmod{52}</m></li>
+              <li><m>37^{64} = 9^2 = 81 \equiv 29 \pmod{52}</m></li>
             </ul>
             Note that it was a coincidence that we got into a loop of 29, 9, 29, ... But this will happen sometimes! 
           </p>
@@ -116,11 +116,4 @@
 
 
   </exercises>
-
-
-
-      
-
-
-
 </section>

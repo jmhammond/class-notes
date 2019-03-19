@@ -315,7 +315,7 @@
             </li>
             <li>
               <p>
-                Given that <m>a^{-1}=-5\equiv 21\pmod{26}</m>, find the inverse of <m>f(x)=5x+14\pmod{26}</m>. Please ensure your coefficients are reduced modulo <m>26</m>.
+                Given that <m>5^{-1} \equiv 21\pmod{26}</m>, find the inverse of <m>f(x)=5x+14\pmod{26}</m>. Please ensure your coefficients are reduced modulo <m>26</m>.
               </p>
             </li>
             <li>
