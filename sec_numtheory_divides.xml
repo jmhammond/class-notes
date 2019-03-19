@@ -242,11 +242,11 @@
         <p>
           Suppose that <m>a \and b</m> are integers, <m>a \equiv 4 \pmod{13}</m> and <m>b \equiv 9\pmod{13}</m>. Find the integer <m>c</m> with <m>0 \le c \le 12</m> such that:
           <ol>
-            <li> c \equiv 9a \pmod{13} </li>
-            <li> c \equiv 11b \pmod{13} </li>
-            <li> c \equiv a+b \pmod{13} </li>
-            <li> c \equiv a^2 + b^2 \pmod{13} </li>
-            <li> c \equiv a^2 - b^2 \pmod{13} </li>
+            <li><m> c \equiv 9a \pmod{13} </m></li>
+            <li><m> c \equiv 11b \pmod{13} </m></li>
+            <li><m> c \equiv a+b \pmod{13} </m></li>
+            <li><m> c \equiv a^2 + b^2 \pmod{13} </m></li>
+            <li><m> c \equiv a^2 - b^2 \pmod{13} </m></li>
           </ol>
         </p>
       </statement>
@@ -316,13 +316,23 @@
         <p>
           In each polynomial below, assume <m>x</m> is some variable. Use the binomial theorem to expand and reduce modulo the appropriate number:
           <ol>
-            <li> (x+1)^2 \pmod 2 </li>
-            <li> (x+1)^5 \pmod 5 </li>
-            <li> (x+1)^7 \pmod 7 </li>
+            <li><m> (x+1)^2 \pmod 2 </m></li>
+            <li><m> (x+1)^5 \pmod 5 </m></li>
+            <li><m> (x+1)^7 \pmod 7 </m></li>
           </ol>
           Prove that <m>(x+1)^p \equiv x^p + 1 \pmod p</m> for any prime <m>p</m>.
         </p>
       </statement>
+      <solution>
+        <statement>
+          Here's a partial solution:
+          <ol>
+            <li> <m>(x+1)^2 = x^2 + 2x + 1 \equiv x^2 + 1 \pmod 2 </m></li>
+            <li> <m>(x+1)^5 = x^5 + 5x^4 + 10x^3 + 10x^2 + 5x + 1 \equiv x^5 + 1 \pmod 5 </m></li>
+          </ol>
+          What can be said about each each binomial coefficient except the first and the last? Why?
+        </statement>
+      </solution>
     </exercise>
 
 
