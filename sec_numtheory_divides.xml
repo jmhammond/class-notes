@@ -36,15 +36,15 @@
         <p>
           Here are some non-examples:
           <ol>
-            <li> <m>4 \not\divides 10</m> since there is no integer <m>m</m> for which <m>10 = 4m</m>.</li>
-            <li><m> 6 \not\divides 3 </m>. Order matters.</li>
+            <li> <m>4 \nmid 10</m> since there is no integer <m>m</m> for which <m>10 = 4m</m>.</li>
+            <li><m> 6 \nmid 3 </m>. Order matters.</li>
           </ol>
         </p>
       </statement>
     </example>
 
 
-    <theorem>
+    <proposition>
       <title> Properties of divisibility</title>
       <statement>
         <p>
@@ -56,7 +56,7 @@
           </ol>
         </p>
       </statement>
-    </theorem>
+    </proposition>
 
 
     <corollary>
@@ -155,23 +155,23 @@
     </example>
 
 
-    <theorem>
+    <proposition>
       <statement>
         <p>
           Let <m>m</m> be a positive integer. Then integers <m>a \and b</m> are congruent modulo <m>m</m> if and only if there exists and integer <m>k</m> such that <m>a = b + km</m>.
         </p>
       </statement>
-    </theorem>
+    </proposition>
 
 
-    <theorem>
+    <proposition>
       <statement>
         <p>
           Let <m>m</m> be a positive integer. If <m>a \equiv b \pmod m \and c \equiv d \pmod m</m> then
           <me>a + c \equiv b + d \pmod m  \hspace{1em} \and \hspace{1em} ac \equiv bd \pmod m</me>
         </p>
       </statement>
-    </theorem>
+    </proposition>
 
     <note>
       <statement>

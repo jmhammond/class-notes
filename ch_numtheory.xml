@@ -435,13 +435,13 @@
     </example>
 
 
-    <theorem>
+    <proposition>
       <statement>
         <p>
           There are infinitely many primes.
         </p>
       </statement>
-    </theorem>
+    </proposition>
 
     <exercises>
 
@@ -526,7 +526,7 @@
         <statement>
           <p>
             Let <m>a \and b</m> be two positive integers. Then
-            <me>ab = \gcd(a,b)\cdot \lcm(a,b)</me>
+            <me>ab = \gcd(a,b) \cdot \text{lcm}(a,b)</me> <!-- \lcm in <me> was wrong. quick fix. -->
           </p>
         </statement>
       </theorem>
@@ -563,7 +563,7 @@
         </solution>
       </example>
       
-      <theorem>
+      <proposition>
         <!-- TODO, give him a grave accent -->
         <title>Bezout's Theorem</title>
         <statement>
@@ -571,7 +571,7 @@
             If <m>a \and b</m> are positive integers, then there exist integers <m>s \and t</m> such that <m>{\gcd(a,b) = as + bt}</m>
           </p>
         </statement>
-      </theorem>
+      </proposition>
 
       <definition>
         <statement>
@@ -819,13 +819,13 @@
         </statement>
       </example>
 
-      <theorem>
+      <proposition>
         <statement>
           <p>
             If <m>a \and m</m> are relatively prime integers and <m>m \gt 1</m>, then an inverse of <m>a</m> modulo <m>m</m> exists.
           </p>
         </statement>
-      </theorem>
+      </proposition>
 
       <note>
         <statement>
