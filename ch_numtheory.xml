@@ -39,8 +39,6 @@
       </statement>
     </theorem>
 
-
-
     <theorem>
       <statement>
         <p>
@@ -446,7 +444,7 @@
     <example>
       <statement>
         <p>
-          Find the following:
+          Find the following (by listing factors):
           <ol>
             <li> <m>\gcd(36, 69)</m> </li>
             <li> <m>\gcd(10, 27)</m> </li>
@@ -486,6 +484,34 @@
         </p>
       </statement>
     </theorem>
+
+
+    <theorem xml:id="euclidean-algorithm">
+      <title>The Euclidean Algorithm</title>
+      <statement>
+        <p>
+          Let <m>a=r_0</m> and <m>b=r_1</m> be two positive integers where <m>a \ge b</m>. If we apply the division algorithm recursively so that
+          <me> r_j = r_{j+1} q_{j+1} + r_{j+2} \text{ where } 0 \le r_{j+2} \lt r_{j+1}</me>
+          for all <m>j = 0, 1, 2, \dots, n-2</m>, and <m>r_{n+1} = 0</m>, then <m>\gcd(a,b) = r_n</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Use the Euclidean algorithm to find <m>\gcd(4147, 10672)</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Use back-substitution (reverse the steps of the Euclidean Algorithm) to write the greatest common divisor of 4147 and 10672 as a linear combination of those numbers.
+        </p>
+      </statement>
+    </example>
 
 
     <subsection xml:id="numtheory_inverses">
@@ -633,14 +659,6 @@
 
 
 
-      <theorem>
-        <title>The Extended Euclidean Algorithm</title>
-        <statement>
-          <p>
-          </p>
-        </statement>
-      </theorem>
-
 
       <definition xml:id="def-bezout-coefficient">
         TODO
@@ -648,6 +666,30 @@
     </subsection>
 
     <exercises>
+
+      <exercise>
+        <statement>
+          <p>
+            Use the Euclidean algorithm to find the greatest common divisor of 412 and 32 and express it in terms of the two integers.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Use the Euclidean algorithm to find the greatest common divisor of 780 and 150 and express it in terms of the two integers.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Find the greatest common divisor of 70, 98, 108.
+          </p>
+        </statement>
+      </exercise>
 
       <exercise>
         <statement>
