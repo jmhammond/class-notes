@@ -19,9 +19,7 @@ clean:
 	rm -f *.out *.toc *.html *.aux *.log discrete-class-notes.pdf discrete-class-notes.tex
 
 publish-to-web: html
-	mv *.html ~/public_html/class-notes  
-	mv knowl/*.html ~/public_html/class-notes/knowl
-	cp images/* ~/public_html/class-notes/images
+	rsync -zartv --include "*/" --include="*.html" --exclude="*" ./  ~/public_html/class-notes
 
 publish:
 	ssh hammond@alonzo.math.wichita.edu 'cd src/class-notes && git pull && make publish-to-web'
