@@ -205,7 +205,7 @@
     <exercise>
       <statement>
         <p>
-          Is the sequence <m>\{a_n\}</m> a solution of the recurrence relation <m>a_n = 8a_{n-1}-16a_{n-2}</m> if
+          Is the sequence <m>\{a_n\}</m> a solution of the recurrence relation <m>{a_n = 8a_{n-1}-16a_{n-2}}</m> if
           <ol cols="2">
             <li><m>a_n = 0</m></li>
             <li><m>a_n = 2n</m></li>
@@ -221,7 +221,7 @@
         <p>
           Find a solution to the recurrence relation
           <ol>
-            <li><m>a_n = 3_{n-1},\hspace{1em} a_0 = 2</m></li>
+            <li><m>a_n = 3a_{n-1},\hspace{1em} a_0 = 2</m></li>
             <li><m>a_n = a_{n-1} + n,\hspace{1em} a_0 = 1</m></li>
             <li><m>a_n = na_{n-1},\hspace{1em} a_0 = 1</m></li>
           </ol>
