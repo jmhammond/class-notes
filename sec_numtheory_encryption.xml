@@ -343,7 +343,7 @@
       <exercise>
         <statement>
           <p>
-            Decrypt the text which was encrypted via the affine shift <m>e(x) = 7x + 11 \pmod{ 26 }</m>: <q> RJNHFRN</q>
+            Decrypt the text which was encrypted via the affine shift <m>e(x) = 7x + 11 \pmod{ 26 }</m>: <q> LJNHFRN</q>
           </p>
         </statement>
       </exercise>
