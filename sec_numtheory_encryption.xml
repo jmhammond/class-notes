@@ -14,16 +14,16 @@
         <tabular>
           <col right="minor"/>
           <col left="minor"/>
-          <col />
+          <col right="major"/>
           <col right="minor"/>
           <col left="minor"/>
-          <col />
+          <col right="major"/>
           <col right="minor"/>
           <col left="minor"/>
-          <col />
+          <col right="major"/>
           <col right="minor"/>
           <col left="minor"/>
-          <col />
+          <col right="major"/>
           <col right="minor"/>
           <col left="minor"/>
           <row bottom="minor">
@@ -348,9 +348,7 @@
         </statement>
       </exercise>
 
-       
-
-
+    </exercises>
   </subsection>
 
   <subsection xml:id="subsection-numtheory-sage">
