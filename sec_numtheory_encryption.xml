@@ -278,9 +278,6 @@
           We encrypt letter-by-letter via the function <m>e(x) = x + 3 \pmod{26}</m> and decrypt via <m>d(x) = x-3 \pmod{26}</m>. 
         </p>
 
-        <p>
-          Decrypt the following message: L FDQ DOZDBV WUXVM BRX, EUXWXV.
-        </p>
       </statement>
     </example>
 
@@ -325,6 +322,34 @@
         </p>
       </statement>
     </example>
+
+    <exercises>
+      <exercise>
+        <statement>
+          <p>
+            Decrypt the following message, which was encrypted by the standard Caesar cipher: <q>L FDQ DOZDBV WUXVM BRX, EUXWXV.</q>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Apply the affine shift <m>e(x) = 7x + 11 \pmod{ 26 }</m> to the string, <q>Encrypt me.</q>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Decrypt the text which was encrypted via the affine shift <m>e(x) = 7x + 11 \pmod{ 26 }</m>: <q> RJNHFRN</q>
+          </p>
+        </statement>
+      </exercise>
+
+       
+
 
   </subsection>
 
