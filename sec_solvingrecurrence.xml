@@ -196,6 +196,33 @@
           Solve <m>a_n = a_{n-1} + 2a_{n-2}</m> where <m>a_0=2</m> and <m>a_1=7</m>.
         </p>
       </statement>
+      <solution>
+        <sage>
+          <input>
+v=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+def f(n):
+    return 3*pow(2,n)+pow(-1, n+1)
+
+def recur(n):
+    if n==0:
+        return 2
+    elif n==1:
+        return 7
+    else:
+        return recur(n-1) + 2*recur(n-2)
+
+print("Explicit solution: " + str(map(f,v)))
+print("\n")
+print("Recursive sequence: " + str(map(recur,v)))
+          </input>
+          <output>
+Explicit solution: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
+
+Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
+          </output>
+        </sage>
+      </solution>
     </example>
 
     <theorem>
