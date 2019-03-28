@@ -197,8 +197,9 @@
         </p>
       </statement>
       <solution>
-        <sage>
-          <input>
+        <p>
+          <sage>
+            <input>
 v=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 def f(n):
@@ -215,13 +216,14 @@ def recur(n):
 print("Explicit solution: " + str(map(f,v)))
 print("\n")
 print("Recursive sequence: " + str(map(recur,v)))
-          </input>
-          <output>
+            </input>
+            <output>
 Explicit solution: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
 
 Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
-          </output>
-        </sage>
+            </output>
+          </sage>
+        </p>
       </solution>
     </example>
 
