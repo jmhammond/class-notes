@@ -180,8 +180,8 @@
         Find a formula for the following sums, using the <xref ref="example-telescoping-sum">telescoping example</xref>:
       </p>
       <ol>
-        <li><m>\displaystyle \sum_{k=1}^n (2k -1) </m>, the sum of the first <m>n</m> odd numbers.</li>
-        <li><m>\displaystyle \sum_{k=1}^n k</m>, the sum of the first <m>n</m> positive integers.</li>
+        <!-- <li><m>\displaystyle \sum_{k=1}^n (2k -1) </m>, the sum of the first <m>n</m> odd numbers.</li> -->
+        <li>Using the sequence <m>a_n=n^2</m>, find a formula for the sum <m>\displaystyle \sum_{k=1}^n k</m> by the finding the sum two ways.</li>
       </ol>
     </statement>
   </example>
@@ -247,7 +247,7 @@
     <exercise>
       <statement>
         <p>
-          Using <xref ref="example-telescoping-sum">the telescoping example</xref>, derive a formula for <m>\displaystyle \sum_{k=1}^n k^2</m>
+          Using <xref ref="example-telescoping-sum">the telescoping example</xref> with the sequence <m>a_n=(n+1)^3</m>, derive a formula for <m>\displaystyle \sum_{k=1}^n k^2</m>
         </p>
       </statement>
     </exercise>

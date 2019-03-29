@@ -260,7 +260,7 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
     <example>
       <statement>
         <p>
-          Find an explicit formula for the Fibonacci numbers, <m>F_n = F_{n_1} + F_{n-2}</m> with <m>F_0 = 0</m> and <m>F_1 = 1</m>.
+          Find an explicit formula for the Fibonacci numbers, <m>F_n = F_{n-1} + F_{n-2}</m> with <m>F_0 = 0</m> and <m>F_1 = 1</m>.
         </p>
       </statement>
     </example>
