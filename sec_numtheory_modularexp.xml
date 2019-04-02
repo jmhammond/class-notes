@@ -25,7 +25,7 @@
   <definition>
     <statement>
       <p>
-        <term>Modular exponentiation</term> is the process of repeated squaring and reducing a number modulo some integer, and then combining the results to find the required answer.
+        <term>Modular exponentiation</term> is the process of repeatedly squaring and reducing a number modulo some integer, and then combining the results to find the required answer.
       </p>
     </statement>
   </definition>
@@ -46,7 +46,7 @@
         </li>
         <li> 
           <p>
-            Repeated square and reduce <m>37 \pmod{52}</m> six times. This works since <m>2^{64}</m>, the highest power of <m>2</m> in the binary representation of 82.
+            Repeatedly square and reduce <m>37 \pmod{52}</m> six times. This works since <m>2^{64}</m>, the highest power of <m>2</m> in the binary representation of 82.
             <ul>
               <li><m>37^1 = 37^1 = 37 \equiv 37\pmod{52}</m></li>
               <li><m>37^2 = 37^2 = 1369 \equiv 17\pmod{52}</m></li>

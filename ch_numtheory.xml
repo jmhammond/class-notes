@@ -537,9 +537,17 @@
       <title>The Euclidean Algorithm</title>
       <statement>
         <p>
-          Let <m>a=r_0</m> and <m>b=r_1</m> be two positive integers where <m>a \ge b</m>. If we apply the division algorithm recursively so that
-          <me> r_j = r_{j+1} q_{j+1} + r_{j+2} \text{ where } 0 \le r_{j+2} \lt r_{j+1}</me>
-          for all <m>j = 0, 1, 2, \dots, n-2</m>, and <m>r_{n+1} = 0</m>, then <m>\gcd(a,b) = r_n</m>.
+          Let <m>a</m> and <m>b</m> be two positive integers where <m>a \ge b</m>. If we apply the division algorithm recursively so that
+          <md>
+            <mrow>a = bq_1 + r_1 \text{ where } 0 \le r_1 \lt b</mrow>
+            <mrow>b = r_1q_2 + r_2 \text{ where } 0 \le r_2 \lt r_1</mrow>
+            <mrow>r_1 = r_2q_3 + r_3 \text{ where } 0 \le r_3 \lt r_2</mrow>
+            <mrow>r_2 = r_3q_4 + r_4 \text{ where } 0 \le r_4 \lt r_3</mrow>
+            <mrow> \dots </mrow>
+            <mrow>r_{n-2} = r_{n-1}q_{n-1} + r_n \text{ where } 0 \le r_n \lt r_{n-1}</mrow>
+            <mrow>r_{n-1} = r_{n}q_{n} + 0 </mrow>
+          </md>
+          Then <m>\gcd(a,b) = r_n</m>, the last non-zero remainder.
         </p>
       </statement>
     </theorem>
@@ -563,6 +571,15 @@
         </p>
       </solution>
     </example>
+
+    <example>
+      <statement>
+        <p>
+          Find <m>\gcd(5040, 4704)</m>.
+        </p>
+      </statement>
+    </example>
+
     
     <proposition>
       <!-- TODO, give him a grave accent -->
@@ -618,6 +635,14 @@
           So <m>73 = 5913 \cdot 9 + 7592 \cdot(-7)</m> is the linear combination we desired.
         </p>
       </solution>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Express the gcd of 168 and 525 as a linear combination of those numbers.
+        </p>
+      </statement>
     </example>
 
 

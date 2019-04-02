@@ -158,7 +158,7 @@
     <proposition>
       <statement>
         <p>
-          Let <m>m</m> be a positive integer. Then integers <m>a \and b</m> are congruent modulo <m>m</m> if and only if there exists and integer <m>k</m> such that <m>a = b + km</m>.
+          Let <m>m</m> be a positive integer. Then integers <m>a \and b</m> are congruent modulo <m>m</m> if and only if there exists and integer <m>k</m> such that <m>{a = b + km}</m>.
         </p>
       </statement>
     </proposition>
@@ -167,7 +167,7 @@
     <proposition>
       <statement>
         <p>
-          Let <m>m</m> be a positive integer. If <m>a \equiv b \pmod m \and c \equiv d \pmod m</m> then
+          Let <m>m</m> be a positive integer. If <m>{ a \equiv b \pmod m}</m> and <m>{c \equiv d \pmod m }</m> then
           <me>a + c \equiv b + d \pmod m  \hspace{1em} \and \hspace{1em} ac \equiv bd \pmod m</me>
         </p>
       </statement>

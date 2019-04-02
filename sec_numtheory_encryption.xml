@@ -354,11 +354,11 @@
                   <li> If <m>25252525 \lt n \lt 2525252525</m>, then the blocks will be length 8  </li>
                   <li> and so on... </li>
                 </ol>
-                if the message doesn't fit the appropropriate block size, append a number of 23's at the end. (Padding with an X).
+                if the message doesn't fit the appropropriate block size, append a number of 23's at the end. (padding the message with X's).
               </p>
             </li>
-            <li> Encryption occurs my taking a numeric message block <m>M</m> and computing <m>M^e\pmod{n}</m></li>
-            <li> Decryption occurs my taking a numeric cipher block <m>C</m> and computing <m>C^d\pmod{n}</m></li>
+            <li> Encryption occurs my taking each numeric message block <m>M</m> and computing <m>M^e\pmod{n}</m></li>
+            <li> Decryption occurs my taking each numeric cipher block <m>C</m> and computing <m>C^d\pmod{n}</m></li>
           </ol>
           This works because <m>(M^e)^d = M^{ed} = M^1 \pmod{n}</m>. Although we haven't proven this, it's a result of Euler's Totient Theorem which you'll revisit in Number Theory.
         </p>
