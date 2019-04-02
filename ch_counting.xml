@@ -115,17 +115,17 @@
 
   </section>
 
-  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-starsandbars">
-    <title>
-      Counting with Stars and Bars
-    </title>
-  </section>
+  <!-- <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-starsandbars"> -->
+  <!--   <title> -->
+  <!--     Counting with Stars and Bars -->
+  <!--   </title> -->
+  <!-- </section> -->
 
-  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-morepie">
-    <title>
-      Counting with the Principle of Inclusion/Exclusion
-    </title>
-  </section>
+  <!-- <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-morepie"> -->
+  <!--   <title> -->
+  <!--     Counting with the Principle of Inclusion/Exclusion -->
+  <!--   </title> -->
+  <!-- </section> -->
 
 
   <section xml:id="section-counting-fib">
