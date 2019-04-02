@@ -4,8 +4,80 @@
 
   <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-basics">
     <title>
-      Counting basics
+      The Multiplicative and Additive Principles
     </title>
+
+    <definition>
+      <statement>
+        <p>
+          The <term>multiplicative principle</term>
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          If in your closet you have five ironic t-shirts, three pairs of pants, and three collegiate hats, how many different outfits do you have? Here an outfit is pants, shirt, hat.
+        </p>
+      </statement>
+    </example>
+
+
+    <example>
+      <statement>
+        <p>
+          There are 30 people in a club. Assuming everyone is qualified to serve in any position, how many different ways are there to assign a president, vice-president, secretary, and treasurer?
+        </p>
+      </statement>
+    </example>
+
+
+    <definition>
+      <statement>
+        <p>
+          The <term>additive principle</term>
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          If in your closet you have five ironic t-shirts, three pairs of pants, and three collegiate hats, how many different items do you have in your closet? 
+        </p>
+      </statement>
+    </example>
+
+
+    <definition>
+      <title>The Principle of Inclusion-Exclusion</title>
+      <statement>
+        <p>
+          If <m>A \and B</m> are two sets, then <m>|A \cup B| = |A| + |B| - |A \cap B|
+        </p>
+      </statement>
+    </definition>
+
+
+    <example>
+      <statement>
+        <p>
+           Suppose a company receives 350 applications from college graduates for a job. Suppose 220 of these applicants majored in computer science, 147 majored in business, and 51 majored in both computer science and business. How many majored in neither computer science nor business? 
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          How many bit strings of length eight either start with a 1 bit or end with two bits 00? 
+        </p>
+      </statement>
+    </example>
+
+
+      
 
     <p> 1, 2, 3, 4, ... </p>
 
