@@ -323,11 +323,11 @@
       </statement>
     </example>
 
-    <example>
+    <definition>
       <title>The RSA Algorithm</title>
       <statement>
         <p>
-          RSA is an example of a public-key algorithm. Its security is based on the fact that factoring integers is <a href="https://en.wikipedia.org/wiki/Integer_factorization">a hard problem</a>. The process: %TODO DISCUSS
+          RSA is an example of a public-key algorithm. Its security is based on the fact that factoring integers is <a href="https://en.wikipedia.org/wiki/Integer_factorization">a hard problem</a>. The process is outlined below: 
         </p>
           
         <p>
@@ -344,18 +344,31 @@
         <p>
           To encrypt/decrypt:
           <ol>
+            <li> Convert our message (plaintext or ciphertext) to numeric values, each letter taking up two digits: A is 00, B is 01, ... Z = 25. </li>
+            <li>
+              <p>
+                Using the chosen <m>n</m> value, we split the message into blocks of even length according to the following scheme:
+                <ol>
+                  <li> If <m>2525 \lt n \lt 252525</m>, then the blocks will be length 4  </li>
+                  <li> If <m>252525 \lt n \lt 25252525</m>, then the blocks will be length 6  </li>
+                  <li> If <m>25252525 \lt n \lt 2525252525</m>, then the blocks will be length 8  </li>
+                  <li> and so on... </li>
+                </ol>
+                if the message doesn't fit the appropropriate block size, append a number of 23's at the end. (Padding with an X).
+              </p>
+            </li>
             <li> Encryption occurs my taking a numeric message block <m>M</m> and computing <m>M^e\pmod{n}</m></li>
             <li> Decryption occurs my taking a numeric cipher block <m>C</m> and computing <m>C^d\pmod{n}</m></li>
           </ol>
           This works because <m>(M^e)^d = M^{ed} = M^1 \pmod{n}</m>. Although we haven't proven this, it's a result of Euler's Totient Theorem which you'll revisit in Number Theory.
         </p>
-        
-        <p>
-          Now let's see the algorithm in action.
-          <ol>
-            <li> Convert our message to numeric blocks, each letter taking up two digits: A is 00, B is 01, ... Z = 25. </li>
+      </statement>
+    </definition>
 
-          </ol>
+    <example>
+      <statement>
+        <p>
+          Let <m>p = 59, q=83</m>. Choose <m>e=15</m> Encrypt <q>WHATS UP</q> and then decrypt the result to confirm it worked. Do this by hand (with the help of a calculator). 
         </p>
       </statement>
     </example>
@@ -456,42 +469,44 @@
       The RSA Activity
     </title>
 
-    <example>
-      <statement>
-        <p>
-          In this activity, you will generate a public/private key-pair. You will send me the public key and keep your private key secret (but don't lose it! If you lose your private key, you won't be able to complete the assignment and will receive no credit).
+    <exercises>
+      <exercise>
+        <statement>
+          <p>
+            In this activity, you will generate a public/private key-pair. You will send me the public key and keep your private key secret (but don't lose it! If you lose your private key, you won't be able to complete the assignment and will receive no credit).
 
-          <ol>
-            <li> Pick two prime numbers <m>p \and q</m> of some interesting side. Make them at least six or seven digits long (use Sage's <c>next_prime</c>). </li>
-            <li> Let <m>m=(p-1)(q-1)</m>, and pick any number <m>e</m> relatively prime to <m>m</m>. </li>
-            <li> Find the inverse of <m>d</m> of <m>e</m> modulo <m>m</m>. You can use the Sage cell to do this.</li>
-            <li> Let <m>n = pq</m>. </li>
-            <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
-            <li>
-              <p>
-                Send me your public key on Slack as:
-                <cd>
-                  n = 15244346903
-                  e = 751 
-                </cd>
-              </p>
-            </li>
-            <li>
-              <p>
-                I'll send you an encrypted message which will look like:
-                <c>
-                  [971896385L, 3249912096L, 4079022731L, 8771096382L, 10148198704L]   
-                </c>
+            <ol>
+              <li> Pick two prime numbers <m>p \and q</m> of some interesting side. Make them at least six or seven digits long (use Sage's <c>next_prime</c>). </li>
+              <li> Let <m>m=(p-1)(q-1)</m>, and pick any number <m>e</m> relatively prime to <m>m</m>. </li>
+              <li> Find the inverse of <m>d</m> of <m>e</m> modulo <m>m</m>. You can use the Sage cell to do this.</li>
+              <li> Let <m>n = pq</m>. </li>
+              <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
+              <li>
+                <p>
+                  Send me your public key on Slack as:
+                  <cd>
+                    n = 15244346903
+                    e = 751 
+                  </cd>
+                </p>
+              </li>
+              <li>
+                <p>
+                  I'll send you an encrypted message which will look like:
+                  <c>
+                    [971896385L, 3249912096L, 4079022731L, 8771096382L, 10148198704L]   
+                  </c>
 
-                (ignore the <sq>L</sq> at the end of each number, it's python2 saying it's a <q>long</q> integer)
-              </p>
-            </li>
-            <li> Enter this information into the Sage cell below to decrypt it (using your <m>n, d, \and c</m>), change <c>what_to_do</c> to <q>decrypt</q>, and then press Evaluate(Python). </li>
-            <li> Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example <q>KEEPITSECRETKEEPITSAFEXX</q> will not receive full credit. </li>
-          </ol>
-        </p>
-      </statement>
-    </example>
+                  (ignore the <sq>L</sq> at the end of each number, it's python2 saying it's a <q>long</q> integer)
+                </p>
+              </li>
+              <li> Enter this information into the Sage cell below to decrypt it (using your <m>n, d, \and c</m>), change <c>what_to_do</c> to <q>decrypt</q>, and then press Evaluate(Python). </li>
+              <li> Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example <q>KEEPITSECRETKEEPITSAFEXX</q> will not receive full credit. </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
 
     <p xml:id="rsa-code">
     <sage language="python">
