@@ -288,7 +288,9 @@
         </p>
       </statement>
       <hint>
-         In the inductive step add and subtract <m>7^k</m>. That is, you'll have <m>7\cdot 7^{k} - 1 - 7^k + 7^k</m>. Now algebra.
+        <p>
+         (Alternative idea to the below proof) In the inductive step add and subtract <m>7^k</m>. That is, you'll have <m>7\cdot 7^{k} - 1 - 7^k + 7^k</m>. Now algebra.
+        </p>
       </hint>
       <solution>
 
