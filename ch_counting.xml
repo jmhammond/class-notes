@@ -7,10 +7,22 @@
       The Multiplicative and Additive Principles
     </title>
 
+    <note>
+      <statement>
+        <p>
+          A standard deck of playing cards contains four <term>suits</term> (spade, heart, club, diamond). There are 13 cards in each suit (2,3,4,5,6,7,8,9,10, Jack, Queen, King, Ace). <term>Face cards</term> refers to jacks, queens, and kings</p>. Spades and clubs are black and hearts and diamonds are red.
+        </p>
+      </statement>
+    </note>
+
+
     <definition>
       <statement>
         <p>
-          The <term>multiplicative principle</term>
+          The <term>multiplicative principle</term> states that if an event <m>A</m> can occur <m>m</m> ways and an event <m>n</m> can occur <n>n</n> ways, then the event <q><m>A \and B</m></q> can occur <m>m\cdot n</m> ways.
+        </p>
+        <p>
+          The multiplicative principle generalizes to more than two events.
         </p>
       </statement>
     </definition>
@@ -27,7 +39,15 @@
     <example>
       <statement>
         <p>
-          There are 30 people in a club. Assuming everyone is qualified to serve in any position, how many different ways are there to assign a president, vice-president, secretary, and treasurer?
+          How many six character license plates can there be if the first three characters are letters and the second three characters are numbers? 
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          How many playing cards in a standard deck are both red and face cards? 
         </p>
       </statement>
     </example>
@@ -36,7 +56,7 @@
     <definition>
       <statement>
         <p>
-          The <term>additive principle</term>
+          The <term>additive principle</term> states that if event <m>A</m> can occur <m>m</m> ways and event <m>B</m> can occur <m>n</m> ways and the two events are disjoint, then the event <q><m>A \text{ or } B</m></q> can occur <m>m + n</m> ways.
         </p>
       </statement>
     </definition>
@@ -49,12 +69,14 @@
       </statement>
     </example>
 
-
     <definition>
       <title>The Principle of Inclusion-Exclusion</title>
       <statement>
         <p>
           If <m>A \and B</m> are two sets, then <m>|A \cup B| = |A| + |B| - |A \cap B|
+        </p>
+        <p>
+          Note that this is like the additive principle, except we're removing the occurances that are in common between <m>A</m> and <m>B</m>.
         </p>
       </statement>
     </definition>
@@ -77,9 +99,14 @@
     </example>
 
 
-      
 
-    <p> 1, 2, 3, 4, ... </p>
+    <exercise>
+      <statement>
+        <p>
+          There are 30 people in a club. Assuming everyone is qualified to serve in any position, how many different ways are there to assign a president, vice-president, secretary, and treasurer?
+        </p>
+      </statement>
+    </exercise>
 
     <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
     <!-- <exercise> -->
