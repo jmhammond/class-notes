@@ -10,7 +10,7 @@
     <note>
       <statement>
         <p>
-          A standard deck of playing cards contains four <term>suits</term> (spade, heart, club, diamond). There are 13 cards in each suit (2,3,4,5,6,7,8,9,10, Jack, Queen, King, Ace). <term>Face cards</term> refers to jacks, queens, and kings</p>. Spades and clubs are black and hearts and diamonds are red.
+          A standard deck of playing cards contains four <term>suits</term> (spade, heart, club, diamond). There are 13 cards in each suit (2,3,4,5,6,7,8,9,10, Jack, Queen, King, Ace). <term>Face cards</term> refers to jacks, queens, and kings. Spades and clubs are black and hearts and diamonds are red.
         </p>
       </statement>
     </note>
@@ -73,7 +73,7 @@
       <title>The Principle of Inclusion-Exclusion</title>
       <statement>
         <p>
-          If <m>A \and B</m> are two sets, then <m>|A \cup B| = |A| + |B| - |A \cap B|
+          If <m>A \and B</m> are two sets, then <m>|A \cup B| = |A| + |B| - |A \cap B|</m>
         </p>
         <p>
           Note that this is like the additive principle, except we're removing the occurances that are in common between <m>A</m> and <m>B</m>.
