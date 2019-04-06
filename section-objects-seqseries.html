@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-04T17:11:25-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sequences and Series</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script>(function() {
+  var cx = '
+        015422183392601792159:vae7vvmmczm
+      ';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle;
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<a id="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="./images/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Math 321 Class Notes</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_objects_matrices.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_objects.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-solvingrecurrences.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_objects_matrices.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_objects.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-solvingrecurrences.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="ch_logic"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="section-prop-logic.html" data-scroll="section-prop-logic">Propositional Logic</a></li>
+<li><a href="section-logic-equivalences.html" data-scroll="section-logic-equivalences">Logical Equivalences</a></li>
+<li><a href="section-logic-quantifiers.html" data-scroll="section-logic-quantifiers">Predicates and Logical Quantifiers</a></li>
+<li><a href="section-logic-arguments.html" data-scroll="section-logic-arguments">Logical Arguments</a></li>
+<li><a href="section-logic-proofs.html" data-scroll="section-logic-proofs">An introduction to proofs</a></li>
+<li><a href="sec_logic_induction.html" data-scroll="sec_logic_induction">Mathematical Induction</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Supplemental Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_objects.html" data-scroll="ch_objects"><span class="codenumber">2</span> <span class="title">Mathematical Objects</span></a><ul>
+<li><a href="sec_objects_sets.html" data-scroll="sec_objects_sets">Sets</a></li>
+<li><a href="section-objects-functions.html" data-scroll="section-objects-functions">Functions</a></li>
+<li><a href="sec_objects_matrices.html" data-scroll="sec_objects_matrices">Matrices</a></li>
+<li><a href="section-objects-seqseries.html" data-scroll="section-objects-seqseries" class="active">Sequences and Series</a></li>
+<li><a href="section-solvingrecurrences.html" data-scroll="section-solvingrecurrences">Solving Recurrence Relations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_numtheory.html" data-scroll="ch_numtheory"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a><ul>
+<li><a href="section-numtheory-divcong.html" data-scroll="section-numtheory-divcong">Divisibility and Congruences</a></li>
+<li><a href="section-numtheory-modularexp.html" data-scroll="section-numtheory-modularexp">Modular exponentiation</a></li>
+<li><a href="section-numtheory-euclid.html" data-scroll="section-numtheory-euclid">Prime Numbers</a></li>
+<li><a href="sec_numtheory_gcds.html" data-scroll="sec_numtheory_gcds">Greatest Common Divisors and the Euclidean Algorithm</a></li>
+<li><a href="numtheory_inverses.html" data-scroll="numtheory_inverses">Multiplicative Inverses</a></li>
+<li><a href="section-numtheory-encryption.html" data-scroll="section-numtheory-encryption">Application: Encryption</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="ch_counting"><span class="codenumber">4</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-counting-basics.html" data-scroll="section-counting-basics">The Multiplicative and Additive Principles</a></li>
+<li><a href="section-counting-combperm.html" data-scroll="section-counting-combperm">Combinations and Permutations</a></li>
+<li><a href="section-counting-binomial.html" data-scroll="section-counting-binomial">The Binomial Theorem and Binomial Coefficients</a></li>
+<li><a href="section-counting-fib.html" data-scroll="section-counting-fib">A surprise connection - Counting Fibonacci numbers</a></li>
+<li><a href="section-counting-morecounting.html" data-scroll="section-counting-morecounting"></a></li>
+</ul>
+</li>
+<li class="link"><a href="ch_appendix.html" data-scroll="ch_appendix"><span class="codenumber">5</span> <span class="title">Appendices</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-objects-seqseries"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Sequences and Series</span>
+</h2>
+<a href="section-objects-seqseries.html" class="permalink">¶</a><article class="definition-like" id="definition-47"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.4.1</span>.</h6>
+<p id="p-618">A <dfn class="terminology">sequence</dfn> is a function from a subset of the integers (usually \(\{0, 1,2,3 \dots\}\)) to a set \(S\text{.}\) We use the notation \(a_n\) to denote the image of the integer \(n\text{,}\) and we call \(a_n\) the <dfn class="terminology">\(n\)-th term</dfn> of the sequence.</p>
+<p id="p-619">We will often write the shorthand \(\{a_n\}\) to denote the complete sequence where \(n\in \mathbb{N}\text{.}\)</p></article><article class="example-like" id="example-73"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.2</span>.</h6>
+<p id="p-620">Find \(a_1, a_2, a_3, a_4\) for the sequences:</p>
+<ol class="decimal">
+<li id="li-506">\(a_n = \frac{1}{n^2}\)</li>
+<li id="li-507">\(a_n = 3\cdot 2^n\)</li>
+<li id="li-508">\(a_n = -5 + 3n\)</li>
+</ol></article><article class="definition-like" id="definition-48"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.4.3</span>.</h6>
+<p id="p-621">A <dfn class="terminology">geometric progression</dfn> is a sequence of the form:</p>
+<div class="displaymath">
+\begin{equation*}
+a, ar, ar^2, ar^3, \dots, ar^n, \dots 
+\end{equation*}
+</div>
+<p>with the <dfn class="terminology">initial term</dfn> \(a\) and the <dfn class="terminology">common ratio</dfn> \(r\text{.}\)</p>
+<p id="p-622">A <dfn class="terminology">arithmetic progression</dfn> is a sequence of the form:</p>
+<div class="displaymath">
+\begin{equation*}
+a, a+d, a+2d, a+3d, \dots, a+nd, \dots 
+\end{equation*}
+</div>
+<p>with the <dfn class="terminology">initial term</dfn> \(a\) and the <dfn class="terminology">common difference</dfn> \(d\text{.}\)</p></article><article class="definition-like" id="definition-49"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.4.4</span>.</h6>
+<p id="p-623">A <dfn class="terminology">recurrence relation</dfn> for a sequence \(\{a_n\}\) is an equation that expressions \(a_n\) in terms of previous terms.</p>
+<p id="p-624">A sequence is called a <dfn class="terminology">solution</dfn> of a recurrence relation if its terms satisfy the recurrence relation.</p></article><article class="example-like" id="example-74"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.5</span>.</h6>
+<p id="p-625">The <dfn class="terminology">Fibonacci sequence</dfn> \(F_0, F_1, F_2, \dots\) is defined by the recurrence:</p>
+<div class="displaymath">
+\begin{equation*}
+F_n = F_{n-1} + F_{n-2} \text{ For } n \ge 2, \text{ where } F_0 = 0, F_1 = 1 
+\end{equation*}
+</div></article><article class="example-like" id="example-75"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.6</span>.</h6>
+<p id="p-626">Consider the recurrence \(a_n = -3 a_{n-1} + 4 a_{n-2}\text{.}\) Are the following sequences solutions to the recurrence?</p>
+<ol class="decimal cols2">
+<li id="li-509">\(a_n = 0\)</li>
+<li id="li-510">\(a_n = 1\)</li>
+<li id="li-511">\(a_n = 2^n\)</li>
+<li id="li-512">\(a_n = (-4)^n\)</li>
+</ol></article><article class="remark-like" id="note-18"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">2.4.7</span>.</h6>
+<p id="p-627">A recurrence has a unique solution if it has initial data.</p></article><article class="example-like" id="example-76"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.8</span>.</h6>
+<p id="p-628">Find the unique solution to each recurrence:</p>
+<ol class="decimal">
+<li id="li-513">\(a_n = 2a_{n-1} - 3\) with \(a_0 = -1\)</li>
+<li id="li-514">\(a_n = 2n a_{n-1}\) with \(a_0 = 3\)</li>
+</ol></article><article class="remark-like" id="note-19"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">2.4.9</span>.</h6>
+<p id="p-629">When finding the general form of a sequence, creativity is required.</p>
+<p id="p-630">Look for patterns within the sequence</p>
+<ul class="disc">
+<li id="li-515">Look for a common difference (arithmetic)</li>
+<li id="li-516">Look for a common ratio (geometric)</li>
+<li id="li-517">Do later terms depend on previous terms in a recursive way?</li>
+<li id="li-518">Are there cycles among the terms?</li>
+<li id="li-519">...</li>
+</ul></article><article class="example-like" id="example-77"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.10</span>.</h6>
+<p id="p-631">Find a simple formula or rule that generates the terms of the sequence, and give the next three terms of the sequence.</p>
+<ol class="decimal">
+<li id="li-520">\(7, 11, 15, 19, 23, 27, 31, \dots\)</li>
+<li id="li-521">\(1, 10, 11, 100, 101, 110, 111, 1000, \dots\)</li>
+<li id="li-522">\(1, 3, 15, 105, 945, 10395, 135135, \dots\)</li>
+<li id="li-523">\(2,2,2,3,3,3,3,3, 5,5,5,5,5,5,5,\dots\)</li>
+<li id="li-524">\(2,4,16,256,65536, 4294957296, \dots\)</li>
+</ol>
+<p id="p-632">For this last example, the numbers are huge. If you're reading on the web-based version of this book, this is an interactive calulator. You can type what you want to compute and press 'Evaluate (Sage).' For more information, refer to the <a href="sec_sage_howto.html" class="internal" title="Section 5.1">Sage appendix 5.1</a></p>
+<div class="sagecell-sage" id="sage-4"><script type="text/x-sage">16^2
+</script></div></article><article class="definition-like" id="definition-50"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.4.11</span>.</h6>
+<p id="p-633">Let \(\{a_n\}\) be a sequence. We define a <dfn class="terminology">series</dfn> of the sequence to be the summation of some subset of the terms of the sequence. We denote the sum by a capital sigma with sub- and superscript information in the following conventional way:</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{\text{index variable, lower bound}}^{\text{upper bound}} \text{(sequence rule in terms of index variable)}
+\end{equation*}
+</div>
+<p id="p-634">For example, the summation of terms from 0 to \(n\) is expressed:</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=0}^n a_i = a_0 + a_1 + a_2 + \dots + a_{n-1} + a_n
+\end{equation*}
+</div></article><article class="example-like" id="example-78"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.12</span>.</h6>
+<p id="p-635">Find the value of the sum:</p>
+<ol class="decimal cols2">
+<li id="li-525">\(\displaystyle \sum_{j=0}^8 (1 + (-1)^j)\)</li>
+<li id="li-526">\(\displaystyle \sum_{k \in \{1, 3, 5\}} (k^2 + 2)\)</li>
+<li id="li-527">\(\displaystyle \sum_{j=1}^2 \sum_{k=1}^5 (j-k) \)</li>
+<li id="li-528">\(\displaystyle \sum_{j=1}^2 \sum_{k=1}^5 (k-j) \)</li>
+</ol></article><article class="example-like" id="example-79"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.13</span>.</h6>
+<p id="p-636">Verify the following formula for the sum of a geometric sequence, if \(r \not= 1\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=0}^n ar^n = \frac{a-ar^{n+1}}{1-r}\text{.}
+\end{equation*}
+</div></article><article class="example-like" id="example-telescoping-sum"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.14</span>.</h6>
+<p id="p-637">Show that</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{j=1}^n (a_j - a_{j-1}) = a_n - a_0
+\end{equation*}
+</div></article><article class="example-like" id="example-81"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.15</span>.</h6>
+<p id="p-638">Find a formula for the following sums, using the <a data-knowl="./knowl/example-telescoping-sum.html" title="Example 2.4.14">telescoping example 2.4.14</a>:</p>
+<ol class="decimal"><li id="li-529">Using the sequence \(a_n=n^2\text{,}\) find a formula for the sum \(\displaystyle \sum_{k=1}^n k\) by the finding the sum two ways.</li></ol></article><section class="exercises" id="exercises-11"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise-like" id="exercise-104"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-639">Find the first five terms of the sequence \(\{a_n\}\text{,}\) beginning with \(n=0\text{:}\)</p>
+<ol class="lower-alpha cols2">
+<li id="li-530">\(a_n = 2^n + 3\)</li>
+<li id="li-531">\(a_n = n^{n+1}\)</li>
+<li id="li-532">\(a_n = \lfloor n/2\rfloor + \lceil n/2 \rceil\)</li>
+<li id="li-533">\(a_n = 6a_{n-1},\hspace{1em} a_0 = 2\)</li>
+<li id="li-534">\(a_n = a_{n-1} + 3 a_{n-2},\hspace{1em} a_0 = 1, a_1 = 2\)</li>
+</ol></article><article class="exercise-like" id="exercise-105"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-640">Is the sequence \(\{a_n\}\) a solution of the recurrence relation \({a_n = 8a_{n-1}-16a_{n-2}}\) if</p>
+<ol class="lower-alpha cols2">
+<li id="li-535">\(a_n = 0\)</li>
+<li id="li-536">\(a_n = 2n\)</li>
+<li id="li-537">\(a_n = 2^n\)</li>
+<li id="li-538">\(a_n = 4^n\)</li>
+</ol></article><article class="exercise-like" id="exercise-106"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-641">Find a solution to the recurrence relation</p>
+<ol class="lower-alpha">
+<li id="li-539">\(a_n = 3a_{n-1},\hspace{1em} a_0 = 2\)</li>
+<li id="li-540">\(a_n = a_{n-1} + n,\hspace{1em} a_0 = 1\)</li>
+<li id="li-541">\(a_n = na_{n-1},\hspace{1em} a_0 = 1\)</li>
+</ol></article><article class="exercise-like" id="exercise-107"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-642">Find the value of each of the following sums:</p>
+<ol class="lower-alpha cols2">
+<li id="li-542">\(\displaystyle \sum_{k=0}^8 3\cdot 2^k\)</li>
+<li id="li-543">\(\displaystyle \sum_{k=1}^8 2^k \)</li>
+<li id="li-544">\(\displaystyle \sum_{k=1}^8 (1 + (-1)^k) \)</li>
+<li id="li-545">\(\displaystyle \sum_{k=1}^8 (2^{k+1} - 2^k) \)</li>
+<li id="li-546">\(\displaystyle \sum_{k=50}^{100} k\)</li>
+</ol></article><article class="exercise-like" id="exercise-108"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-643">Using <a data-knowl="./knowl/example-telescoping-sum.html" title="Example 2.4.14">the telescoping example 2.4.14</a> with the sequence \(a_n=(n+1)^3\text{,}\) derive a formula for \(\displaystyle \sum_{k=1}^n k^2\)</p></article><article class="exercise-like" id="exercise-109"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-644">Prove, by mathematical induction, that \(F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1\text{.}\)</p></article><article class="exercise-like" id="fibonacci-sum-of-evens"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-645">Prove that \(F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1\) where \(F_n\) is the \(n\)th Fibonacci number.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-51" id="solution-51"><span class="type">Solution</span></a><div id="hk-solution-51" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="proof-23"><h6 class="heading"><span class="type">Proof.</span></h6>
+<p id="p-646">Let \(P(n)\) be the statement \(F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1\text{.}\) We will show that \(P(n)\) is true for all \(n \ge 0\text{.}\) First the base case is easy because \(F_0 = 0\) and \(F_1 = 1\) so \(F_0 = F_1 - 1\text{.}\) Now consider the inductive case. Assume \(P(k)\) is true, that is, assume \(F_0 + F_2 + F_4 + \cdots + F_{2k} = F_{2k+1} - 1\text{.}\) To establish \(P(k+1)\) we work from left to right:</p>
+<div class="displaymath">
+\begin{align*}
+F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \text{by ind. hyp.}\\
+\amp = F_{2k+1} + F_{2k+2} - 1 \amp\\
+\amp = F_{2k+3} - 1 \amp \text{by recursive def.}
+\end{align*}
+</div>
+<p id="p-647">Therefore \(F_0 + F_2 + F_4 + \cdots + F_{2k+2} = F_{2k+3} - 1\text{,}\) which is to say \(P(k+1)\) holds. Therefore by the principle of mathematical induction, \(P(n)\) is true for all \(n \ge 0\text{.}\)</p></article></div></div>
+</div></article><article class="exercise-like" id="exercise-111"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<p id="p-648">Prove, using strong induction, that every natural number is either a Fibonacci number or can be written as the <em class="emphasis">sum</em> of <em class="emphasis">distinct</em> Fibonacci numbers.</p></article><article class="exercise-like" id="exercise-112"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<p id="p-649">Prove that there is a strictly increasing sequence \(a_1, a_2, a_3, \ldots\) of numbers (not necessarily integers) such that \(a_n \lt  100\) for all \(n \in \N\text{.}\) (By <dfn class="terminology">strictly increasing</dfn> we mean \(a_n \lt  a_{n+1}\) for all \(n\text{.}\) So each term must be larger than the last.)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-52" id="solution-52"><span class="type">Solution</span></a><div id="hk-solution-52" class="hidden-content tex2jax_ignore"><div class="solution"><article class="proof" id="proof-24"><h6 class="heading"><span class="type">Proof.</span></h6>
+<p id="p-650">Let \(P(n)\) be the statement “there is a strictly increasing sequence \(a_1, a_2, \ldots, a_n\) with \(a_n \lt  100\text{.}\)” We will prove \(P(n)\) is true for all \(n \ge 1\text{.}\) First we establish the base case: \(P(1)\) says there is a single number \(a_1\) with \(a_1 \lt  100\text{.}\) This is true – take \(a_1 = 0\text{.}\) Now for the inductive step, assume \(P(k)\) is true. That is there exists a strictly increasing sequence \(a_1, a_2, a_3, \ldots, a_k\) with \(a_k \lt  100\text{.}\) Now consider this sequence, plus one more term, \(a_{k+1}\) which is greater than \(a_k\) but less than \(100\text{.}\) Such a number exists, for example, the average between \(a_k\) and 100. So then \(P(k+1)\) is true, so we have shown that \(P(k) \imp P(k+1)\text{.}\) Thus by the principle of mathematical induction, \(P(n)\) is true for all \(n \in \N\text{.}\)</p></article></div></div>
+</div></article><article class="exercise-like" id="fibonacci-sum-of-odds"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<p id="p-651">Prove, by mathematical induction, that \(F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}\text{,}\) where \(F_n\) is the \(n\)th Fibonacci number.</p></article><article class="exercise-like" id="fibonacci-sum_of_squares"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<p id="p-652">Prove, by mathematical induction, that \(F_1^2 + F_2^2 + F_3^2 + \dots + F_n^2 = F_n \cdot F_{n+1}\text{,}\) where \(F_n\) is the \(n\)th Fibonacci number.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span></a><div id="hk-hint-9" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-653">\(F_{k+1}\left(F_{k} + F_{k+1}\right) = F_{k+1}F_{k+2} \)</p></div></div>
+</div></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

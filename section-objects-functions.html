@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-04T17:11:25-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
+  var cx = '
+        015422183392601792159:vae7vvmmczm
+      ';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle;
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<a id="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="./images/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Math 321 Class Notes</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_objects_sets.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_objects.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_objects_matrices.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_objects_sets.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_objects.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_objects_matrices.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="ch_logic"><span class="codenumber">1</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="section-prop-logic.html" data-scroll="section-prop-logic">Propositional Logic</a></li>
+<li><a href="section-logic-equivalences.html" data-scroll="section-logic-equivalences">Logical Equivalences</a></li>
+<li><a href="section-logic-quantifiers.html" data-scroll="section-logic-quantifiers">Predicates and Logical Quantifiers</a></li>
+<li><a href="section-logic-arguments.html" data-scroll="section-logic-arguments">Logical Arguments</a></li>
+<li><a href="section-logic-proofs.html" data-scroll="section-logic-proofs">An introduction to proofs</a></li>
+<li><a href="sec_logic_induction.html" data-scroll="sec_logic_induction">Mathematical Induction</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Supplemental Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_objects.html" data-scroll="ch_objects"><span class="codenumber">2</span> <span class="title">Mathematical Objects</span></a><ul>
+<li><a href="sec_objects_sets.html" data-scroll="sec_objects_sets">Sets</a></li>
+<li><a href="section-objects-functions.html" data-scroll="section-objects-functions" class="active">Functions</a></li>
+<li><a href="sec_objects_matrices.html" data-scroll="sec_objects_matrices">Matrices</a></li>
+<li><a href="section-objects-seqseries.html" data-scroll="section-objects-seqseries">Sequences and Series</a></li>
+<li><a href="section-solvingrecurrences.html" data-scroll="section-solvingrecurrences">Solving Recurrence Relations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_numtheory.html" data-scroll="ch_numtheory"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a><ul>
+<li><a href="section-numtheory-divcong.html" data-scroll="section-numtheory-divcong">Divisibility and Congruences</a></li>
+<li><a href="section-numtheory-modularexp.html" data-scroll="section-numtheory-modularexp">Modular exponentiation</a></li>
+<li><a href="section-numtheory-euclid.html" data-scroll="section-numtheory-euclid">Prime Numbers</a></li>
+<li><a href="sec_numtheory_gcds.html" data-scroll="sec_numtheory_gcds">Greatest Common Divisors and the Euclidean Algorithm</a></li>
+<li><a href="numtheory_inverses.html" data-scroll="numtheory_inverses">Multiplicative Inverses</a></li>
+<li><a href="section-numtheory-encryption.html" data-scroll="section-numtheory-encryption">Application: Encryption</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="ch_counting"><span class="codenumber">4</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-counting-basics.html" data-scroll="section-counting-basics">The Multiplicative and Additive Principles</a></li>
+<li><a href="section-counting-combperm.html" data-scroll="section-counting-combperm">Combinations and Permutations</a></li>
+<li><a href="section-counting-binomial.html" data-scroll="section-counting-binomial">The Binomial Theorem and Binomial Coefficients</a></li>
+<li><a href="section-counting-fib.html" data-scroll="section-counting-fib">A surprise connection - Counting Fibonacci numbers</a></li>
+<li><a href="section-counting-morecounting.html" data-scroll="section-counting-morecounting"></a></li>
+</ul>
+</li>
+<li class="link"><a href="ch_appendix.html" data-scroll="ch_appendix"><span class="codenumber">5</span> <span class="title">Appendices</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-objects-functions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Functions</span>
+</h2>
+<a href="section-objects-functions.html" class="permalink">¶</a><article class="definition-like" id="definition-30"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2.1</span>.</h6>
+<p id="p-508">Let \(A\) and \(B\) be two non-empty sets. A <dfn class="terminology">function (or mapping) from the set \(A\) to the set \(B\)</dfn> is an assignment of exactly one element from \(B\) each element of the set \(A\text{.}\) </p>
+<ul class="disc">
+<li id="li-381">We denote this by \(f:A\to B\)</li>
+<li id="li-382">If \(b\in B\) is the unique element assigned to \(a\in A\text{,}\) we write \(f(a)=b\)</li>
+<li id="li-383">We call the set \(A\) the <dfn class="terminology">domain</dfn> of the function, and the set \(B\) the <dfn class="terminology">codomain</dfn> of the function.</li>
+</ul>
+<p id="p-509">If \(f(a) = b\text{,}\) we call</p>
+<ul class="disc">
+<li id="li-384">\(b\) is the <dfn class="terminology">image</dfn> of \(a\) under the mapping</li>
+<li id="li-385">\(a\) is the <dfn class="terminology">preimage</dfn> of \(b\) under the mapping</li>
+</ul>
+<p>and we define the <dfn class="terminology">range</dfn> of the function \(f\) to be the set of images of every element in the domain, \(A\text{,}\) and often write the range by \(f(A)\text{.}\) Note that the range is a subset of the codomain, \(f(A)\subseteq B\text{.}\)</p></article><article class="remark-like" id="note-13"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">2.2.2</span>.</h6>
+<p id="p-510">A function has two pieces of information:</p>
+<ol class="decimal">
+<li id="li-386">Specification of two sets, the domain and codomain</li>
+<li id="li-387">A mapping between those two sets</li>
+</ol>
+<p id="p-511">In this class, we will be using a variety of ways of describing the domain and codomain of a function, from writing \(f:A \to B\) to describing them in words.</p></article><article class="example-like" id="example-55"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.3</span>.</h6>
+<p id="p-512">Find the domain, codomain, and range of the following functions:</p>
+<ol class="decimal">
+<li id="li-388">Let \(f: \mathbb{Z} \to \mathbb{Z}\) be defined by \(f(x)=x^2\)</li>
+<li id="li-389">Let \(g: \mathbb{R} \to \mathbb{R}\) be defined by \(g(x)=x^2\)</li>
+</ol></article><article class="definition-like" id="definition-31"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2.4</span>.</h6>
+<p id="p-513">A function \(f\) is said to be  <dfn class="terminology">injective</dfn> or <dfn class="terminology">one-to-one</dfn> if and only if \(f(a) = f(b)\) means that \(a = b\) for all \(a \text{ and } b\) in the domain of \(f\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+f \text{ is injective means }  \forall a, b ((f(a) = f(b)) \to (a = b))
+\end{equation*}
+</div></article><article class="remark-like" id="note-14"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">2.2.5</span>.</h6>
+<p id="p-514">To determine if a function \(f: A \to B\) is injective, we show that if \(f(x) = f(y)\) for arbitrary values \(x, y \in A\) with \(x \not= y\text{,}\) we conclude \(x=y\text{.}\) (A direct proof).</p>
+<p id="p-515">To determine if a function \(f: A \to B\) is not injective, we find particular elements \(x, y \in A\) such that \(x \not= y\) but \(f(x) = f(y)\) (a counterexample!)</p></article><article class="example-like" id="example-56"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.6</span>.</h6>
+<p id="p-516">Determine if the following functions are injective. If so, prove it. If not, provide a specific counterexample showing that it is not.</p>
+<ol class="decimal">
+<li id="li-390">Let \(f:\mathbb{R} \to \mathbb{R}\) be defined by \(f(x) = 2x-1\text{.}\)</li>
+<li id="li-391">Let \(g(x) = x^2\) be the mapping from \(\mathbb{R} \to \mathbb{R}\text{.}\)</li>
+</ol></article><article class="definition-like" id="definition-32"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2.7</span>.</h6>
+<p id="p-517">A function \(f\) from \(A\) to \(B\) is said to be <dfn class="terminology">surjective</dfn> or <dfn class="terminology">onto</dfn> if and only if for every element \(b \in B\text{,}\) there is an element \(a \in A\) such that \(f(a) = B\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+f \text{ is surjective means } \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) ) 
+\end{equation*}
+</div></article><article class="example-like" id="example-57"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.8</span>.</h6>
+<p id="p-518">Determine if the following functions are surjective. If so, prove it. If not, provide a specific counterexample showing that it is not.</p>
+<ol class="decimal">
+<li id="li-392">Let \(f:\mathbb{R} \to \mathbb{R}\) be defined by \(f(x) = 2x-1\text{.}\)</li>
+<li id="li-393">Let \(g(x) = x^2\) be the mapping from \(\mathbb{R} \to \mathbb{R}\text{.}\)</li>
+<li id="li-394">Let \(g(x) = x^3\) be the mapping from \(\mathbb{Z} \to \mathbb{Z}\text{.}\)</li>
+</ol></article><article class="remark-like" id="note-15"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">2.2.9</span>.</h6>
+<p id="p-519">If a function is onto, the range is exactly the codomain</p>
+<p id="p-520">To determine if a function \(f: A \to B\) is surjective, we show that given an arbitrary element \(y \in B\) we can find an element \(x\in A\) such that \(f(x)=y\text{.}\) (A direct proof).</p>
+<p id="p-521">To determine if a function \(f: A \to B\) is not surjective, we find a particular element \(y \in B\) such that \(f(x) \not= y\) for all \(x\in A\) (a counterexample!)</p></article><article class="definition-like" id="definition-33"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2.10</span>.</h6>
+<p id="p-522">A function \(f\) from \(A\) to \(B\) is said to be a <dfn class="terminology">one-to-one correspondance</dfn> or <dfn class="terminology">bijective</dfn> if it is both injective and surjective.</p></article><article class="example-like" id="example-bijections"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.11</span>.</h6>
+<p id="p-523">Determine if the following are bijections from \(\mathbb{R} \to \mathbb{R}\text{:}\)</p>
+<ol class="decimal">
+<li id="li-395">\(f(x) = -3x^2 + 7\)</li>
+<li id="li-396">\(f(x) = x^5 + 1\)</li>
+<li id="li-397">\(f(x) = 5^x\)</li>
+<li id="li-398">\(\ds f(x) = \frac{x+1}{x+2}\)</li>
+<li id="li-399">Which of the functions we've considered so far have been bijections?</li>
+</ol></article><article class="definition-like" id="definition-34"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2.12</span>.</h6>
+<p id="p-524">Let \(f:A \to B\) be a bijection. The <dfn class="terminology">inverse function</dfn> of \(f\) is the unique function that assigns to each element \(b\in B\) a unique element \(a \in A\) such that \(f(a) = b\text{.}\) We denote the inverse by \(f^{-1}\) so that</p>
+<div class="displaymath">
+\begin{equation*}
+f^{-1} : B \to A \text{ where }  f^{-1}(b) = a \iff f(a) = b
+\end{equation*}
+</div></article><article class="example-like" id="example-59"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.13</span>.</h6>
+<p id="p-525">For the bijection(s) found in example <a data-knowl="./knowl/example-bijections.html" title="Example 2.2.11">Example 2.2.11</a>, find the inverse function.</p></article><article class="example-like" id="example-60"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.14</span>.</h6>
+<p id="p-526">Restrict the domain and/or codomain so that \(f(x) = x^2 + 1\) is invertible. Verify your answer is correct.</p></article><article class="definition-like" id="definition-35"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2.15</span>.</h6>
+<p id="p-527">The <dfn class="terminology">floor</dfn> function assigns to every real number \(x\) the largest integer that is less than or equal to \(x\text{.}\) We denote by this \(\lfloor x \rfloor\)</p>
+<div class="displaymath">
+\begin{equation*}
+\lfloor \cdot \rfloor : \mathbb{R}\to \mathbb{Z} \text{ with } (\lfloor x \rfloor = n) \iff (n \le x \lt n + 1)
+\end{equation*}
+</div>
+<p id="p-528">The <dfn class="terminology">ceiling</dfn> function assigns to every real number \(x\) the smallest integer that is greater than or equal to \(x\text{.}\) We denote by this \(\lceil x \rceil\)</p>
+<div class="displaymath">
+\begin{equation*}
+\lceil \cdot \rceil : \mathbb{R}\to \mathbb{Z} \text{ with } (\lceil x \rceil = n) \iff (n - 1 \lt x \le n)
+\end{equation*}
+</div></article><article class="example-like" id="example-61"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.16</span>.</h6>
+<p id="p-529">Find the floor and ceiling of each of the following real numbers:</p>
+<ol class="decimal cols2">
+<li id="li-400">8.675309</li>
+<li id="li-401">\(\pi\)</li>
+<li id="li-402">\(-2.1\)</li>
+<li id="li-403">\(7\)</li>
+</ol></article><article class="example-like" id="example-62"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.17</span>.</h6>
+<p id="p-530">Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.</p></article><article class="definition-like" id="definition-36"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2.18</span>.</h6>
+<p id="p-531">Let \(g:A \to B\) and let \(f:B \to C\text{.}\) The <dfn class="terminology">composition of \(f\) and \(g\)</dfn>, denoted by \(f\circ g\) is defined, for all \(a \in A\text{,}\) by \((f \circ g)(a) = f(g(a))\text{.}\)</p></article><article class="example-like" id="example-63"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.19</span>.</h6>
+<p id="p-532">Suppose \(f\) and \(f\circ g\) are injective. Does it follow that \(g\) is also injective?</p></article><article class="remark-like" id="note-16"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">2.2.20</span>.</h6>
+<p id="p-533">Since given a function \(f: A \to B\) we define \(f^{-1}: B \to A\) by \(f(a) = b \iff f^{-1}(b) = a\) for \(a \in A\text{,}\) \(b \in B\text{,}\) we have:</p>
+<ul class="disc">
+<li id="li-404">
+<p id="p-534">for \(b \in B\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+(f \circ f^{-1})(b) = f(f^{-1}(b)) = f(a) = b \in B 
+\end{equation*}
+</div>
+</li>
+<li id="li-405">
+<p id="p-535">and for \(a \in A\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+(f^{-1} \circ f)(a) = f^{-1}(f(a)) = f^{-1}(b) = a \in A
+\end{equation*}
+</div>
+</li>
+</ul></article><section class="exercises" id="exercises-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise-like" id="exercise-87"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-536">Consider the function \(f:\{1,2,3,4,5\} \to \{1,2,3,4\}\) given by the table below:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(x\)</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+<td class="l m b1 r0 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">\(f(x)\)</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+</tr>
+</table></div></div></div>
+<ol id="p-537" class="lower-alpha">
+<li id="li-406"><p id="p-538">Is \(f\) injective? Explain.</p></li>
+<li id="li-407"><p id="p-539">Is \(f\) surjective? Explain.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-45" id="solution-45"><span class="type">Solution</span></a><div id="hk-solution-45" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-540" class="lower-alpha">
+<li id="li-408">No, the function is no injective. \(2 = f(2) = f(5) = 2\) but clearly \(2 \not= 5\)</li>
+<li id="li-409">Yes, the function is surjective. The codomain is \(\{1, 2, 3, 4\}\) and each element of the codomain is mapped (the range equals the codomain)</li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="exercise-88"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-541">Consider the function \(f:\{1,2,3,4\} \to \{1,2,3,4\}\) given by the graph below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/graph-function-ques.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ol id="p-542" class="lower-alpha">
+<li id="li-410"><p id="p-543">Is \(f\) injective? Explain.</p></li>
+<li id="li-411"><p id="p-544">Is \(f\) surjective? Explain.</p></li>
+</ol></article><article class="exercise-like" id="exercise-89"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-545">For each function given below, determine whether or not the function is injective and whether or not the function is surjective.</p>
+<ol class="lower-alpha">
+<li id="li-412">\(f:\N \to \N\) given by \(f(n) = n+4\text{.}\)</li>
+<li id="li-413">\(f:\Z \to \Z\) given by \(f(n) = n+4\text{.}\)</li>
+<li id="li-414">\(f:\Z \to \Z\) given by \(f(n) = 5n - 8\text{.}\)</li>
+<li id="li-415">\(f:\Z \to \Z\) given by \(f(n) = \begin{cases}n/2 \amp  \text{ if } n \text{ is even} \\ (n+1)/2 \amp \text{ if } n \text{ is odd} . \end{cases}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span></a><div id="hk-solution-46" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-546" class="lower-alpha">
+<li id="li-416">\(f\) is injective, but not surjective (since 0, for example, is never an output).</li>
+<li id="li-417">\(f\) is injective and surjective. Unlike in the previous question, every integers is an output (of the integer 4 less than it).</li>
+<li id="li-418">\(f\) is injective, but not surjective (10 is not 8 less than a multiple of 5, for example).</li>
+<li id="li-419">\(f\) is not injective, but is surjective. Every integer is an output (of twice itself, for example) but some integers are outputs of more than one input: \(f(5) = 3 = f(6)\text{.}\)</li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="exercise-90"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-547">Determine whether \(f:\Z \times \Z \to \Z\) is surjective if</p>
+<ol class="lower-alpha">
+<li id="li-420">\(f(m,n) = m + n\)</li>
+<li id="li-421">\(f(m,n) = m^2 + n^2 \)</li>
+<li id="li-422">\(f(m,n) = m\)</li>
+<li id="li-423">\(f(m,n) = m - n\)</li>
+</ol></article><article class="exercise-like" id="exercise-91"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-548">Give an explicit formula for a function from the set of integers to the set of positive integers that is</p>
+<ol class="lower-alpha">
+<li id="li-424">injective but not surjective</li>
+<li id="li-425">surjective but not injective</li>
+<li id="li-426">injective and surjective</li>
+<li id="li-427">neither injective nor surjective</li>
+</ol></article><article class="exercise-like" id="exercise-92"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-549">Let \(A = \{1,2,3,\ldots,10\}\text{.}\) Consider the function \(f:\pow(A) \to \N\) given by \(f(B) = |B|\text{.}\) That is, \(f\) takes a subset of \(A\) as an input and outputs the cardinality of that set.</p>
+<ol class="lower-alpha">
+<li id="li-428"><p id="p-550">Is \(f\) injective? Prove your answer.</p></li>
+<li id="li-429"><p id="p-551">Is \(f\) surjective? Prove your answer.</p></li>
+<li id="li-430"><p id="p-552">Find \(f\inv(1)\text{.}\)</p></li>
+<li id="li-431"><p id="p-553">Find \(f\inv(0)\text{.}\)</p></li>
+<li id="li-432"><p id="p-554">Find \(f\inv(12)\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span></a><div id="hk-solution-47" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-555" class="lower-alpha">
+<li id="li-433">\(f\) is not injective. To prove this, we must simply find two different elements of the domain which map to the same element of the codomain. Since \(f(\{1\}) = 1\) and \(f(\{2\}) = 1\text{,}\) we see that \(f\) is not injective.</li>
+<li id="li-434">\(f\) is not surjective. The largest subset of \(A\) is \(A\) itself, and \(|A| = 10\text{.}\) So no natural number greater than 10 will ever be an output.</li>
+<li id="li-435">\(f\inv(1) = \{\{1\}, \{2\}, \{3\}, \ldots \{10\}\}\) (the set of all the singleton subsets of \(A\)).</li>
+<li id="li-436">\(f\inv(0) = \{\emptyset\}\text{.}\) Note, it would be wrong to write \(f\inv(0) = \emptyset\) - that would claim that there is no input which has 0 as an output.</li>
+<li id="li-437">\(f\inv(12) = \emptyset\text{,}\) since there are no subsets of \(A\) with cardinality 12.</li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="exercise-93"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-556">Let \(A = \{n \in \N \st 0 \le n \le 999\}\) be the set of all numbers with three or fewer digits. Define the function \(f:A \to \N\) by \(f(abc) = a+b+c\text{,}\) where \(a\text{,}\) \(b\text{,}\) and \(c\) are the digits of the number in \(A\text{.}\) For example, \(f(253) = 2 + 5 + 3 =  10\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-438"><p id="p-557">Find \(f\inv(3)\text{.}\)</p></li>
+<li id="li-439"><p id="p-558">Find \(f\inv(28)\text{.}\)</p></li>
+<li id="li-440"><p id="p-559">Is \(f\) injective. Explain.</p></li>
+<li id="li-441"><p id="p-560">Is \(f\) surjective. Explain.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span></a><div id="hk-solution-48" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-561" class="lower-alpha">
+<li id="li-442">\(f\inv(3) = \{003, 030, 300, 012, 021, 102, 201, 120, 210, 111\}\)</li>
+<li id="li-443">\(f\inv(28) = \emptyset\) (since the largest sum of three digits is \(9+9+9 = 27\))</li>
+<li id="li-444"><p id="p-562">Part (a) proves that \(f\) is not injective. The output 3 is assigned to 10 different inputs.</p></li>
+<li id="li-445"><p id="p-563">Part (b) proves that \(f\) is not surjective. There is an element of the codomain (28) which is not assigned to any inputs.</p></li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="exercise-94"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<p id="p-564">What can you deduce about the sets \(X\) and \(Y\) if you know …</p>
+<ol class="lower-alpha">
+<li id="li-446"><p id="p-565">there is an injective function \(f:X \to Y\text{?}\) Explain.</p></li>
+<li id="li-447"><p id="p-566">there is a surjective function \(f:X \to Y\text{?}\) Explain.</p></li>
+<li id="li-448"><p id="p-567">there is a bijective function \(f:X \to Y\text{?}\) Explain.</p></li>
+</ol></article><article class="exercise-like" id="exercise-95"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<p id="p-568">Suppose \(f:X \to Y\) is a function. Which of the following are possible? Explain.</p>
+<ol class="lower-alpha">
+<li id="li-449">\(f\) is injective but not surjective.</li>
+<li id="li-450">\(f\) is surjective but not injective.</li>
+<li id="li-451">\(|X| = |Y|\) and \(f\) is injective but not surjective.</li>
+<li id="li-452">\(|X| = |Y|\) and \(f\) is surjective but not injective.</li>
+<li id="li-453">\(|X| = |Y|\text{,}\) \(X\) and \(Y\) are finite, and \(f\) is injective but not surjective.</li>
+<li id="li-454">\(|X| = |Y|\text{,}\) \(X\) and \(Y\) are finite, and \(f\) is surjective but not injective.</li>
+</ol></article><article class="exercise-like" id="exercise-96"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<p id="p-569">How does composition relate to function properties?</p>
+<ol class="lower-alpha">
+<li id="li-455">If \(f\) and \(g\) are both injective, must \(g\circ f\) be injective?  Explain.</li>
+<li id="li-456">If \(f\) and \(g\) are both surjective, must \(g\circ f\) be surjective?  Explain.</li>
+<li id="li-457">Suppose \(g\circ f\) is surjective.  What, if anything, can you say about \(f\) and \(g\text{?}\)  Explain.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div id="hk-hint-8" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-570">Work with some examples.</p></div></div>
+</div></article><article class="exercise-like" id="exercise-97"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<p id="p-571">Consider the function \(f:\Z \to \Z\) given by \(f(n) = \begin{cases}n+1 \amp  \text{ if }n\text{ is even} \\ n-3 \amp \text{ if }n\text{ is odd} . \end{cases}\)</p>
+<ol class="lower-alpha">
+<li id="li-458"><p id="p-572">Is \(f\) injective? Prove your answer.</p></li>
+<li id="li-459"><p id="p-573">Is \(f\) surjective? Prove your answer.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution</span></a><div id="hk-solution-49" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-574" class="lower-alpha">
+<li id="li-460">
+<p id="p-575">\(f\) is injective.</p>
+<article class="proof" id="proof-21"><h6 class="heading"><span class="type">Proof.</span></h6>
+<p id="p-576">Let \(x\) and \(y\) be elements of the domain \(\Z\text{.}\) Assume \(f(x) = f(y)\text{.}\) If \(x\) and \(y\) are both even, then \(f(x) = x+1\) and \(f(y) = y+1\text{.}\) Since \(f(x) = f(y)\text{,}\) we have \(x + 1 = y + 1\) which implies that \(x = y\text{.}\) Similarly, if \(x\) and \(y\) are both odd, then \(x - 3 = y-3\) so again \(x = y\text{.}\) The only other possibility is that \(x\) is even an \(y\) is odd (or visa-versa). But then \(x + 1\) would be odd and \(y - 3\) would be even, so it cannot be that \(f(x) = f(y)\text{.}\) Therefore if \(f(x) = f(y)\) we then have \(x = y\text{,}\) which proves that \(f\) is injective.</p></article>
+</li>
+<li id="li-461">
+<p id="p-577">\(f\) is surjective.</p>
+<article class="proof" id="proof-22"><h6 class="heading"><span class="type">Proof.</span></h6>
+<p id="p-578">Let \(y\) be an element of the codomain \(\Z\text{.}\) We will show there is an element \(n\) of the domain (\(\Z\)) such that \(f(n) = y\text{.}\) There are two cases: First, if \(y\) is even, then let \(n = y+3\text{.}\) Since \(y\) is even, \(n\) is odd, so \(f(n) = n-3 = y+3-3 = y\) as desired. Second, if \(y\) is odd, then let \(n = y-1\text{.}\) Since \(y\) is odd, \(n\) is even, so \(f(n) = n+1 = y-1+1 = y\) as needed. Therefore \(f\) is surjective.</p></article>
+</li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="exercise-98"><h6 class="heading"><span class="codenumber">12.</span></h6>
+<p id="p-579">At the end of the semester a teacher assigns letter grades to each of her students. Is this a function? If so, what sets make up the domain and codomain, and is the function injective, surjective, bijective, or neither?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-50" id="solution-50"><span class="type">Solution</span></a><div id="hk-solution-50" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-580">Yes, this is a function, if you choose the domain and codomain correctly. The domain will be the set of students, and the codomain will be the set of possible grades. The function is almost certainly not injective, because it is likely that two students will get the same grade. The function might be surjective – it will be if there is at least one student who gets each grade.</p></div></div>
+</div></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

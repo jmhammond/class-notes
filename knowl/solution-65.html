@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-04T17:11:30-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">4.4.9.1</span>.</h6>
+<p>Question: “How many tilings of an \(n\)-board exist?”</p>
+<p>Answer 1: There are \(f_n\) tilings.</p>
+<p>Answer 2: Condition on the number of dominoes. If there are no dominoes, then from \(n\) cells, we have 0 choices for where to put the domino: \(\binom{n}{0}\text{.}\) For 1 domino, we will be using a total of \(n-2\) squares and domino which will span the remaining two locations. That means that we are using a total of \(n-1\) tiles, and so we have \(\binom{n-1}{1}\) possibilities.</p>
+<p>For the case where we are using \(i\) dominoes, with \(0\le i \le n/2\text{,}\) we will be using  \(n-2i\) squares, or a total of \(n-2i + i = n-i\) tiles. To choose where to place the \(i\) dominoes, we'll have \(\binom{n-i}{i}\) ways to do this.</p>
+<p>Thus, there are a total of \(n \ge 0, \binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \dots + \binom{n-n}{n}\) tilings of an \(n\) board.</p>
+</div>
+<span class="incontext"><a href="section-counting-fib.html#solution-65">in-context</a></span>
+</body>
+</html>

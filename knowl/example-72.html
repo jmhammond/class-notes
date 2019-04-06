@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-04T17:11:28-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.20</span>.</h6>
+<p>First, let's see how to write a matrix in Sage. The following code represents the matrix \(\begin{bmatrix} 3 &amp; 1 \\ 5 &amp; 2\end{bmatrix}\) and then displays it: <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">A = matrix([[3, 1], [5,2]]);
+A
+</script></div></p>
+<p>Now let's use Sage to multiply matrices: <div class="sagecell-sage" id="sage-2"><script type="text/x-sage">A = matrix([[3, 1], [5,2], [1, 1]]);
+B = matrix([[1, 2, 0], [4,0, 1]]);
+A*B
+</script></div></p>
+<p>... and if we try to multiply something that doesn't work, we will get an error: <div class="sagecell-sage" id="sage-3"><script type="text/x-sage">A = matrix([[3, 1, 2], [5,2, 1], [1, 1, 0]]);
+B = matrix([[1, 2, 0], [4,0, 1]]);
+A*B
+</script></div> DON'T PANIC! We'll look through the error and see information that will help us understand.</p>
+<ul class="disc">
+<li>First, I see “----&gt; 3 A*B” in error, the arrow telling us what line had the error. The error happened when I was multiplying.</li>
+<li>
+<p>Then, scrolling to the end, we see: <blockquote class="blockquote"><p>TypeError: unsupported operand parent(s) for *: 'Full MatrixSpace of 3 by 3 dense matrices over Integer Ring' and 'Full MatrixSpace of 2 by 3 dense matrices over Integer Ring'</p></blockquote> That's a lot information, but look what we have:</p>
+<ol class="decimal">
+<li>“Unsupported operand parent(s) for *” tells us that we have a problem with our multiplication.</li>
+<li>My eyes caught “... 3 by 3 ... 2 by 3...” which tells me I'm trying to multiply incompatible matrices.</li>
+</ol>
+</li>
+</ul></article><span class="incontext"><a href="sec_objects_matrices.html#example-72">in-context</a></span>
+</body>
+</html>

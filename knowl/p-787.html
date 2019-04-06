@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-04T17:11:30-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>To encrypt/decrypt:</p>
+<ol class="decimal">
+<li>Convert our message (plaintext or ciphertext) to numeric values, each letter taking up two digits: A is 00, B is 01, ... Z = 25.</li>
+<li>
+<p>Using the chosen \(n\) value, we split the message into blocks of even length according to the following scheme:</p>
+<ol class="lower-alpha">
+<li>If \(2525 \lt n \lt 252525\text{,}\) then the blocks will be length 4</li>
+<li>If \(252525 \lt n \lt 25252525\text{,}\) then the blocks will be length 6</li>
+<li>If \(25252525 \lt n \lt 2525252525\text{,}\) then the blocks will be length 8</li>
+<li>and so on...</li>
+</ol>
+<p>if the message doesn't fit the appropropriate block size, append a number of 23's at the end. (padding the message with X's).</p>
+</li>
+<li>Encryption occurs my taking each numeric message block \(M\) and computing \(M^e\pmod{n}\)</li>
+<li>Decryption occurs my taking each numeric cipher block \(C\) and computing \(C^d\pmod{n}\)</li>
+</ol>
+<p>This works because \((M^e)^d = M^{ed} = M^1 \pmod{n}\text{.}\) Although we haven't proven this, it's a result of Euler's Totient Theorem which you'll revisit in Number Theory.</p>
+<span class="incontext"><a href="section-numtheory-encryption.html#p-787">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-04T17:11:29-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.2.3.1</span>.</h6>
+<ol class="decimal">
+<li>
+<p>Find the binary representation of \(82\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+82 = 64 + 16 + 2
+\end{equation*}
+</div>
+</li>
+<li>
+<p>Repeatedly square and reduce \(37 \pmod{52}\) six times. This works since \(2^{64}\text{,}\) the highest power of \(2\) in the binary representation of 82.</p>
+<ul class="disc">
+<li>\(37^1 = 37^1 = 37 \equiv 37\pmod{52}\)</li>
+<li>\(37^2 = 37^2 = 1369 \equiv 17\pmod{52}\)</li>
+<li>\(37^4 = 17^2 = 289 \equiv 29 \pmod{52}\)</li>
+<li>\(37^8 = 29^2 = 841 \equiv 9 \pmod{52}\)</li>
+<li>\(37^{16} = 9^2 = 81 \equiv 29 \pmod{52}\)</li>
+<li>\(37^{32} = 29^2 = 841 \equiv 9 \pmod{52}\)</li>
+<li>\(37^{64} = 9^2 = 81 \equiv 29 \pmod{52}\)</li>
+</ul>
+<p>Note that it was a coincidence that we got into a loop of 29, 9, 29, ... But this will happen sometimes!</p>
+</li>
+<li>
+<p>Now pick from the values above those entries which correspond to the binary representation of our desired power, 82:</p>
+<div class="displaymath">
+\begin{align*}
+37^{82}  \pmod{52} &amp;= 37^{2 + 16 + 64} \pmod{52}\\
+&amp;= 37^2 \cdot 37^{16} \cdot 37^{64} \pmod{52}\\
+&amp;\equiv 17 \cdot 29 \cdot 29 \pmod{52}\\
+&amp;\equiv 49 \pmod{52}
+\end{align*}
+</div>
+<p>Take note of the equivalence symbols used above. We write \(=\) when the numbers represent equality and \(\equiv\) when we have reduced modulo 52.</p>
+</li>
+</ol>
+<p>That's it!</p>
+</div>
+<span class="incontext"><a href="section-numtheory-modularexp.html#solution-59">in-context</a></span>
+</body>
+</html>
