@@ -820,7 +820,7 @@
               n = 9
               rows = []
               for i in range(1, n):
-              rows.append( map((lambda x: (i*x)%n), [x for x in range(1,n)]))
+                  rows.append( map((lambda x: (i*x)%n), [x for x in range(1,n)]))
 
               table(rows)
             </input>
@@ -885,7 +885,10 @@
             Find all solutions to the congruence (there could be more than one):
             <ol>
               <li> <m>3x =6 \pmod 9 </m></li>
-              <li> <m>4x = 3 \pmod 8 </m></li>
+              <li> <m>4x = 6 \pmod 9 </m></li>
+              <li> <m>5x = 6 \pmod 8 </m></li>
+              <li> <m>7x = 6 \pmod 9 </m></li>
+              <li> <m>7x = 6 \pmod 8 </m></li>
             </ol>
           </p>
         </statement>
