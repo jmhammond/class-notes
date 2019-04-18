@@ -732,7 +732,7 @@
 
 
     <p>
-      Let's put this to use to verify some Fibonacci identities using combinatorial proof. 
+      Let's put this to use to verify some Fibonacci identities using combinatorial proof. When we write <term>condition on <m>m</m></term> we mean to consider <q>breaking</q> the board at tile <m>m</m> and count the separate pieces.
     </p>
 
 
