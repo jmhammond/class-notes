@@ -121,13 +121,13 @@
 
 
 
-    <exercise>
+    <example>
       <statement>
         <p>
           There are 30 people in a club. Assuming everyone is qualified to serve in any position, how many different ways are there to assign a president, vice-president, secretary, and treasurer?
         </p>
       </statement>
-    </exercise>
+    </example>
 
 
     <note>
@@ -349,36 +349,36 @@
         </solution>
       </exercise>
 
-      <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-      <exercise>
-        <statement>
-          <p>
-            We usually write numbers in decimal form (or base 10), meaning numbers are composed using 10 different <q>digits</q> <m>\{0,1,\ldots, 9\}</m>. Sometimes though it is useful to write numbers <term>hexadecimal</term> or base 16. Now there are 16 distinct digits that can be used to form numbers: <m>\{0, 1, \ldots, 9, \mathrm{A, B, C, D, E, F}\}</m>. So for example, a 3 digit hexadecimal number might be 2B8.
-            <ol>
-              <li>
-                <p>
-                  How many 2-digit hexadecimals are there in which the first digit is E or F? Explain your answer in terms of the additive principle (using either events or sets).
-                </p>
-              </li>
-              <li>
-                <p>
-                  Explain why your answer to the previous part is correct in terms of the multiplicative principle (using either events or sets). Why do both the additive and multiplicative principles give you the same answer?
-                </p>
-              </li>
-              <li>
-                <p>
-                  How many 3-digit hexadecimals start with a letter (A-F) and end with a numeral (0-9)? Explain.
-                </p>
-              </li>
-              <li>
-                <p>
-                  How many 3-digit hexadecimals start with a letter (A-F) or end with a numeral (0-9) (or both)? Explain.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
+      <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
+      <!-- <exercise> -->
+      <!--   <statement> -->
+      <!--     <p> -->
+      <!--       We usually write numbers in decimal form (or base 10), meaning numbers are composed using 10 different <q>digits</q> <m>\{0,1,\ldots, 9\}</m>. Sometimes though it is useful to write numbers <term>hexadecimal</term> or base 16. Now there are 16 distinct digits that can be used to form numbers: <m>\{0, 1, \ldots, 9, \mathrm{A, B, C, D, E, F}\}</m>. So for example, a 3 digit hexadecimal number might be 2B8. -->
+      <!--       <ol> -->
+      <!--         <li> -->
+      <!--           <p> -->
+      <!--             How many 2-digit hexadecimals are there in which the first digit is E or F? Explain your answer in terms of the additive principle (using either events or sets). -->
+      <!--           </p> -->
+      <!--         </li> -->
+      <!--         <li> -->
+      <!--           <p> -->
+      <!--             Explain why your answer to the previous part is correct in terms of the multiplicative principle (using either events or sets). Why do both the additive and multiplicative principles give you the same answer? -->
+      <!--           </p> -->
+      <!--         </li> -->
+      <!--         <li> -->
+      <!--           <p> -->
+      <!--             How many 3-digit hexadecimals start with a letter (A-F) and end with a numeral (0-9)? Explain. -->
+      <!--           </p> -->
+      <!--         </li> -->
+      <!--         <li> -->
+      <!--           <p> -->
+      <!--             How many 3-digit hexadecimals start with a letter (A-F) or end with a numeral (0-9) (or both)? Explain. -->
+      <!--           </p> -->
+      <!--         </li> -->
+      <!--       </ol> -->
+      <!--     </p> -->
+      <!--   </statement> -->
+      <!-- </exercise> -->
 
 
 
@@ -608,7 +608,7 @@
     <example>
       <statement>
         <p>
-          How many functions <m>f: \{1,2,3\} \to \{1, 2, 3\}</m> are there? 
+          How many functions <m>f: \{1,2,3\} \to \{1, 2, 3\}</m> are bijections? 
         </p>
       </statement>
     </example>
@@ -649,14 +649,6 @@
       </statement>
     </example>
 
-    <example>
-      <statement>
-        <p>
-          How many functions <m>f: \{1,2,3,4\} \to \{1,2,3,4,5,6\}</m> are injective? [Recall a function is injective <m>\forall a, \forall b ( f(a) = f(b)) \to ( a = b )</m>]
-        </p>
-      </statement>
-    </example>
-
 
     <definition>
       <statement>
@@ -665,6 +657,14 @@
         </p>
       </statement>
     </definition>
+
+    <example>
+      <statement>
+        <p>
+          How many functions <m>f: \{1,2,3,4\} \to \{1,2,3,4,5,6\}</m> are injective? [Recall a function is injective <m>\forall a, \forall b ( f(a) = f(b)) \to ( a = b )</m>]
+        </p>
+      </statement>
+    </example>
 
 
     <example>
@@ -695,18 +695,18 @@
     <example>
       <statement>
         <p>
-          How many three element subsets from a set of five elements are there?
+          Two of your ten friends, Tim and Tammy just broke up. They can't stand to be in a room together. How many ways are there to choose five out of ten friends to invite to dinner, ensuring that Tim and Tammy are not both invited?
         </p>
       </statement>
     </example>
 
-    <!-- <example> -->
-    <!--   <statement> -->
-    <!--     <p> -->
-    <!--       Two of your ten friends, Tim and Tammy just broke up. They can't stand to be in a room together. How many ways are there to choose five out of ten friends to invite to dinner, ensuring that Tim and Tammy are not both invited? -->
-    <!--     </p> -->
-    <!--   </statement> -->
-    <!-- </example> -->
+    <example>
+      <statement>
+        <p>
+          How many three element subsets from a set of five elements are there?
+        </p>
+      </statement>
+    </example>
 
     <example>
       <statement>
@@ -770,20 +770,20 @@
         </solution>
       </exercise>
 
-      <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-      <exercise>
-        <statement>
-          <p>
-            Using the digits 2 through 8, find the number of different 5-digit numbers such that:
-            <ol>
-              <li> <p> Digits can be used more than once. </p> </li>
-              <li> <p> Digits cannot be repeated, but can come in any order. </p> </li>
-              <li> <p> Digits cannot be repeated and must be written in increasing order. </p> </li>
-              <li> <p> Which of the above counting questions is a combination and which is a permutation?  Explain why this makes sense. </p> </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
+      <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
+      <!-- <exercise> -->
+      <!--   <statement> -->
+      <!--     <p> -->
+      <!--       Using the digits 2 through 8, find the number of different 5-digit numbers such that: -->
+      <!--       <ol> -->
+      <!--         <li> <p> Digits can be used more than once. </p> </li> -->
+      <!--         <li> <p> Digits cannot be repeated, but can come in any order. </p> </li> -->
+      <!--         <li> <p> Digits cannot be repeated and must be written in increasing order. </p> </li> -->
+      <!--         <li> <p> Which of the above counting questions is a combination and which is a permutation?  Explain why this makes sense. </p> </li> -->
+      <!--       </ol> -->
+      <!--     </p> -->
+      <!--   </statement> -->
+      <!-- </exercise> -->
 
 
       <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -868,59 +868,59 @@
         </solution>
       </exercise>
 
-      <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-      <exercise>
-        <statement>
-          <p>
-            Consider functions <m>f: \{1,2,3,4\} \to \{1,2,3,4,5,6\}</m>.
-            <ol>
-              <li> <p> How many functions are there total? </p> </li>
-              <li> <p> How many functions are injective? </p> </li>
-              <li><p> How many of the injective functions are <em>increasing</em>?  To be increasing means that if <m>a \lt b</m> then <m>f(a) \lt f(b)</m>, or in other words, the outputs get larger as the inputs get larger. </p></li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
+      <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
+      <!-- <exercise> -->
+      <!--   <statement> -->
+      <!--     <p> -->
+      <!--       Consider functions <m>f: \{1,2,3,4\} \to \{1,2,3,4,5,6\}</m>. -->
+      <!--       <ol> -->
+      <!--         <li> <p> How many functions are there total? </p> </li> -->
+      <!--         <li> <p> How many functions are injective? </p> </li> -->
+      <!--         <li><p> How many of the injective functions are <em>increasing</em>?  To be increasing means that if <m>a \lt b</m> then <m>f(a) \lt f(b)</m>, or in other words, the outputs get larger as the inputs get larger. </p></li> -->
+      <!--       </ol> -->
+      <!--     </p> -->
+      <!--   </statement> -->
+      <!-- </exercise> -->
 
 
       <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-      <exercise>
-        <statement>
-          <p>
-            We have seen that the formula for <m>P(n,k)</m> is <m>\dfrac{n!}{(n-k)!}</m>. Your task here is to explain <em>why</em> this is the right formula.
-            <ol>
-              <li>
-                <p>
-                  Suppose you have 12 chips, each a different color. How many different stacks of 5 chips can you make? Explain your answer and why it is the same as using the formula for <m>P(12,5)</m>.
+      <!-- <exercise> -->
+      <!--   <statement> -->
+      <!--     <p> -->
+      <!--       We have seen that the formula for <m>P(n,k)</m> is <m>\dfrac{n!}{(n-k)!}</m>. Your task here is to explain <em>why</em> this is the right formula. -->
+      <!--       <ol> -->
+      <!--         <li> -->
+      <!--           <p> -->
+      <!--             Suppose you have 12 chips, each a different color. How many different stacks of 5 chips can you make? Explain your answer and why it is the same as using the formula for <m>P(12,5)</m>. -->
 
 
-                </p>
-              </li>
-              <li>
-                <p>
-                  Using the scenario of the 12 chips again, what does <m>12!</m> count? What does <m>7!</m> count? Explain.
+      <!--           </p> -->
+      <!--         </li> -->
+      <!--         <li> -->
+      <!--           <p> -->
+      <!--             Using the scenario of the 12 chips again, what does <m>12!</m> count? What does <m>7!</m> count? Explain. -->
 
 
-                </p>
-              </li>
-              <li>
-                <p>
-                  Explain why it makes sense to divide <m>12!</m> by <m>7!</m> when computing <m>P(12,5)</m> (in terms of the chips).
+      <!--           </p> -->
+      <!--         </li> -->
+      <!--         <li> -->
+      <!--           <p> -->
+      <!--             Explain why it makes sense to divide <m>12!</m> by <m>7!</m> when computing <m>P(12,5)</m> (in terms of the chips). -->
 
 
-                </p>
-              </li>
-              <li>
-                <p>
-                  Does your explanation work for numbers other than 12 and 5? Explain the formula <m>P(n,k) = \frac{n!}{(n-k)!}</m> using the variables <m>n</m> and <m>k</m>.
+      <!--           </p> -->
+      <!--         </li> -->
+      <!--         <li> -->
+      <!--           <p> -->
+      <!--             Does your explanation work for numbers other than 12 and 5? Explain the formula <m>P(n,k) = \frac{n!}{(n-k)!}</m> using the variables <m>n</m> and <m>k</m>. -->
 
 
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </exercise>
+      <!--           </p> -->
+      <!--         </li> -->
+      <!--       </ol> -->
+      <!--     </p> -->
+      <!--   </statement> -->
+      <!-- </exercise> -->
 
     </exercises>
   </section>
@@ -1144,6 +1144,7 @@
         </solution>
       </example>
 
+
       <note>
         <statement>
           <p>
@@ -1158,13 +1159,22 @@
         </statement>
       </note>
 
+      <example>
+        <statement>
+          <p>
+            Give a combinatorial proof of the identities <m>\binom{n}0 = 1</m>. What question should we answer?
+          </p>
+        </statement>
+      </example>
+
+
 
       <example>
         <statement>
           <p>
             Prove the binomial identity
             <me>
-              (\binom{n}{0})^2 +(\binom{n}{1})^2 +(\binom{n}{2})^2 + \dots + (\binom{n}{n})^2 = \binom{2n}{n}
+              \left(\binom{n}{0}\right)^2 +\left(\binom{n}{1}\right)^2 +\left(\binom{n}{2}\right)^2 + \dots + \left(\binom{n}{n}\right)^2 = \binom{2n}{n}
             </me>
           </p>
         </statement>
