@@ -224,7 +224,7 @@
       <title>The Generalized Pigeonhole Principal</title>
       <statement>
         <p>
-          If <m>N</m> objects are placed into <m>k</m> boxes, then there is at least one box with <m>\lceil \dfrac{N}{r} \rceil</m>. 
+          If <m>N</m> objects are placed into <m>k</m> boxes, then there is at least one box with <m>\left\lceil \dfrac{N}{r} \right\rceil</m>. 
         </p>
       </statement>
     </theorem>
@@ -232,7 +232,7 @@
     <example>
       <statement>
         <p>
-          If there are 100 people in a large lecture hall, then at least <m>\lceil \dfrac{100}{12} \rceil = 9</m> have the same birth month.
+          If there are 100 people in a large lecture hall, then at least <m>\left\lceil \dfrac{100}{12} \right\rceil = 9</m> have the same birth month.
         </p>
       </statement>
     </example>
@@ -245,7 +245,7 @@
       </statement>
       <solution>
         According to the Generalized Pigeonhole Principle, we want to determine the number of cards, <m>N</m>, that must be drawn (here <m>r = 4</m> suits:
-        <me> \lceil \dfrac{N}{4} \rceil \ge 3</me>
+        <me> \left\lceil \dfrac{N}{4} \right\rceil \ge 3</me>
         So <m>N = 9</m>.
       </solution>
     </example>
@@ -557,7 +557,7 @@
         </statement>
         <solution>
           <p>
-            <m>\lceil \dfrac{677}{38} \rceil = 18</m>  rooms.
+            <m>\left\lceil \dfrac{677}{38} \right\rceil = 18</m>  rooms.
           </p>
         </solution>
       </exercise>
@@ -577,7 +577,7 @@
         </statement>
         <solution>
           <p>
-            There are a total of four different remainders modulo 4. According to the Generalized Pigenhole Principal, if we have 5 numbers divided among four different remainders, <m>\lceil \dfrac{5}{4} \rceil = 2</m> of them have to have the same remainder. Thus they differ by a multiple of four.
+            There are a total of four different remainders modulo 4. According to the Generalized Pigenhole Principal, if we have 5 numbers divided among four different remainders, <m>\left\lceil \dfrac{5}{4} \right\rceil = 2</m> of them have to have the same remainder. Thus they differ by a multiple of four.
           </p>
         </solution>
       </exercise>
