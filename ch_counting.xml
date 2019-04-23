@@ -614,10 +614,18 @@
     <example>
       <statement>
         <p>
-          Two of your ten friends, Tim and Tammy just broke up. They can't stand to be in a room together. How many wyas are there to choose five out of ten friends to invite to dinner, ensuring that Tim and Tammy are not both invited?
+          How many three element subsets from a set of five elements are there?
         </p>
       </statement>
     </example>
+
+    <!-- <example> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       Two of your ten friends, Tim and Tammy just broke up. They can't stand to be in a room together. How many ways are there to choose five out of ten friends to invite to dinner, ensuring that Tim and Tammy are not both invited? -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!-- </example> -->
 
     <example>
       <statement>
@@ -642,8 +650,6 @@
         </p>
       </statement>
     </example>
-
-
 
     <exercises>
       <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -840,9 +846,130 @@
 
   <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-binomial">
     <title>
-      The Binomial Theorem and Binomial Coefficients
+      The Binomial Theorem and Combinatorial Proofs
     </title>
 
+    <subsection>
+      <title>The Binomial Theorem and Binomial Coefficients</title>
+
+      <example>
+        <statement>
+          <p>
+            Expand the binomial: <m>(x+y)^3</m>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Everyone and their pet cat will give the correct answer: <m>x^3 + 3x^2y + 3xy^2 + y^3</m>. 
+          </p>
+          <p>
+            Why is this the case? Each term has some amount of <m>x</m>'s and <m>y</m>'s. The coefficient of the <m>x^{3-k}y^k</m> term is counting the number of ways to choose <m>k</m> from a set of three elements:
+            <m>
+              (x+y)^3 = \binom30 x^3y^0 + \binom31 x^2y^1 + \binom32 x^1y^2 + \binom33 x^0y^3
+            </m>
+          </p>
+        </solution>
+      </example>
+
+      <theorem>
+        <title>The Binomial Theorem</title>
+        <statement>
+          <p>
+            Let <m>x \and y</m> be variables and <m>n</m> a natural number, then 
+            <me>
+              (x+y)^n = \sum_{k=0}^n \binom{n}{n-k} x^{n-k} y^k
+            </me>
+          </p>
+        </statement>
+      </theorem>
+
+      <definition>
+        <statement>
+          <p>
+            We call <m>\binom{n}{k}</m> a <term>binomial coefficient</term>.
+          </p>
+        </statement>
+      </definition>
+
+    </subsection>
+
+    <subsection>
+      <title>Combinatorial Proofs</title>
+
+      <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+      <p>
+        Let's arrange the binomial coefficients <m>{n \choose k}</m> into a triangle like follows:
+      </p>
+    <sidebyside width="80%">
+      <image xml:id="pascal-small">
+        <latex-image>
+          \begin{tikzpicture}
+  \def\r{.5}
+
+  % Pascal's triangle
+  %put row of 1's down left side:
+    \foreach \row in {0,...,7} {
+      \hexbox{\row}{0}{ 1}
+    }
+  %fill in the rest of the triangle:
+    \foreach \row in {1,...,7} {
+      \pgfmathsetmacro{\entry}{1};
+      \foreach \col in {1,...,\row} {
+        % iterative formula : val = precval * (row-col+1)/col
+        % (+ 0.5 to bypass rounding errors)
+       \pgfmathtruncatemacro{\entry}{\entry*((\row-\col+1)/\col)+0.5};
+        \global\let\entry=\entry
+        \ifnum \entry&lt;100
+  	\hexbox{\row}{\col}{\entry}
+        \else \ifnum \entry&lt;1000
+  	\hexbox{\row}{\col}{\footnotesize \entry}
+        \else \ifnum \entry&lt;10000
+  	\hexbox{\row}{\col}{\footnotesize \entry}
+  	\else
+  	\hexbox{\row}{\col}{\scriptsize \entry}
+  	\fi
+        \fi
+        \fi
+      }
+    }
+  \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+    <p>
+      There are lots of patterns hidden away in the triangle, enough to fill a reasonably sized book. Here are just a few of the most obvious ones:
+
+    <ol>
+      <li>
+        <p>
+          The entries on the border of the triangle are all 1.
+          <me>\binom{n}{0} = \binom{n}{n} = 1</me>
+        </p>
+      </li>
+      <li>
+        <p>
+        Any entry not on the border is the sum of the two entries above it.
+        <me>\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+        The triangle is symmetric.  In any row, entries on the left side are mirrored on the right side.
+        <me> \binom{n}{k} = \binom{n}{n - k}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+        The sum of all entries on a given row is a power of 2. 
+        <me> \binom{n}0 + \binom{n}1 + \binom{n}2 + \dots + \binom{n}{n} = 2^n</me>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+
+
+    </subsection>
     <exercises>
       <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
       <exercise>
@@ -854,15 +981,15 @@
 
       </exercise>
 
-      <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-      <exercise>
-        <statement>
-          <p>
-            Use induction to prove <m>{4 \choose 0} + {5 \choose 1} + {6 \choose 2} + \cdots + {4+n \choose n} = {5+n \choose n}</m>. (This is an example of the hockey stick theorem.)
-          </p>
-        </statement>
+      <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
+      <!-- <exercise> -->
+      <!--   <statement> -->
+      <!--     <p> -->
+      <!--       Use induction to prove <m>{4 \choose 0} + {5 \choose 1} + {6 \choose 2} + \cdots + {4+n \choose n} = {5+n \choose n}</m>. (This is an example of the hockey stick theorem.) -->
+      <!--     </p> -->
+      <!--   </statement> -->
 
-      </exercise>
+      <!-- </exercise> -->
 
       <exercise>
         <statement>
