@@ -199,6 +199,62 @@
     <!-- </exercise> -->
 
 
+    <definition>
+      <title>The Pigeonhole Principal</title>
+      <statement>
+        <p>
+          If <m>k</m> is a positive integer and <m>k+1</m> objects are placed into <m>k</m> boxes, then at least one box has two or more objects.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          <ol>
+            <li> If there are 13 people, at least two of them have the same birth month. </li>
+            <li> If there are 10 cars at a restaurant, but 11 people there, then at least two people car pooled.</li>
+            <li> etc...</li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+    <theorem>
+      <title>The Generalized Pigeonhole Principal</title>
+      <statement>
+        <p>
+          If <m>N</m> objects are placed into <m>k</m> boxes, then there is at least one box with <m>\lceil \dfrac{N}{r} \rceil</m>. 
+        </p>
+      </statement>
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          If there are 100 people in a large lecture hall, then at least <m>\lceil \dfrac{100}{12} \rceil = 9</m> have the same birth month.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          How many cards must be selected from a standard deck of 52 cards in order that at least three have the same suit? 
+        </p>
+      </statement>
+      <solution>
+        According to the Generalized Pigeonhole Principle, we want to determine the number of cards, <m>N</m>, that must be drawn (here <m>r = 4</m> suits:
+        <me> \lceil \dfrac{N}{4} \rceil \ge 3</me>
+        So <m>N = 9</m>.
+      </solution>
+    </example>
+
+
+
+
+
+
     <exercises>
 
       <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -368,21 +424,6 @@
       <exercise>
         <statement>
           <p>
-            A group of college students were asked about their TV watching habits. Of those surveyed, 28 students watch <em>The Walking Dead</em>, 19 watch <em>The Blacklist</em>, and 24 watch <em>Game of Thrones</em>. Additionally, 16 watch <em>The Walking Dead</em> and <em>The Blacklist</em>, 14 watch <em>The Walking Dead</em> and <em>Game of Thrones</em>, and 10 watch <em>The Blacklist</em> and <em>Game of Thrones</em>. There are 8 students who watch all three shows. How many students surveyed watched at least one of the shows?
-          </p>
-        </statement>
-        <answer>
-          <p>
-            39 students.  Use PIE or a Venn diagram.
-          </p>
-        </answer>
-      </exercise>
-
-
-      <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-      <exercise>
-        <statement>
-          <p>
             In a recent survey, 30 students reported whether they liked their potatoes Mashed, French-fried, or Twice-baked. 15 liked them mashed, 20 liked French fries, and 9 liked twice baked potatoes. Additionally, 12 students liked both mashed and fried potatoes, 5 liked French fries and twice baked potatoes, 6 liked mashed and baked, and 3 liked all three styles. How many students
             <em>hate</em> potatoes? Explain why your answer is correct.
           </p>
@@ -488,16 +529,58 @@
       </exercise>
 
 
-
-      <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
       <exercise>
         <statement>
           <p>
-            The number 735000 factors as <m>2^3 \cdot 3 \cdot 5^4 \cdot 7^2</m>. How many divisors does it have? Explain your answer using the multiplicative principle.
+            Suppose a drawer has a dozen brown socks and a dozen black socks (all thrown together).
+            <ol>
+              <li> How many socks must be taken out at random to guarantee a match (of any color)? </li>
+              <li> How many socks must be taken out at random to guarantee at least two are black socks? </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li> 3 socks. Honestly, if you don't care about color, this is an argument for never folding socks. </li>
+              <li> 14. I could have grabbed 12 brown socks in a row, so in this worst-case scenario, two black socks are the last I picked.</li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            If there are 38 different time periods during which classes can be scheduled, and there are 677 different classes, how many rooms are required?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>\lceil \dfrac{677}{38} \rceil = 18</m>  rooms.
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Assuming that no one has more than 1,000,000 hairs on their head and that the population of New York City was 8,008,278 in 2010, what is the least number of people in NYC in 2010 with the same number of hairs on their heads? 
           </p>
         </statement>
       </exercise>
 
+      <exercise>
+        <statement>
+          <p>
+            Suppose that <m>a, b, c, d, \and e </m> are five different integers. Must some pair of them differ by a multiple of four? 
+          </p>
+        </statement>
+        <solution>
+          <p>
+            There are a total of four different remainders modulo 4. According to the Generalized Pigenhole Principal, if we have 5 numbers divided among four different remainders, <m>\lceil \dfrac{5}{4} \rceil = 2</m> of them have to have the same remainder. Thus they differ by a multiple of four.
+          </p>
+        </solution>
+      </exercise>
     </exercises>
 
 
