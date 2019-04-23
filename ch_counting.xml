@@ -244,7 +244,7 @@
         </p>
       </statement>
       <solution>
-        According to the Generalized Pigeonhole Principle, we want to determine the number of cards, <m>N</m>, that must be drawn (here <m>r = 4</m> suits:
+        According to the Generalized Pigeonhole Principle, we want to determine the number of cards, <m>N</m>, that must be drawn (here <m>r = 4</m> suits):
         <me> \left\lceil \dfrac{N}{4} \right\rceil \ge 3</me>
         So <m>N = 9</m>.
       </solution>
@@ -1110,7 +1110,7 @@
       <example>
         <statement>
           <p>
-            Give a combinotorial proof of the identity:
+            Give a combinotarial proof of the identity:
             <me>
               {n \choose k} = {n-1\choose k-1} + {n-1 \choose k}.
             </me>
