@@ -142,7 +142,7 @@
     <div id='discourse-comments'></div>
     <script type="text/javascript">
       DiscourseEmbed = { discourseUrl: 'https://comp.math.wichita.edu/',
-      discourseEmbedUrl: 'https://www.math.wichita.edu:&lt;%= current_page.url %&gt;'};
+      discourseEmbedUrl: location.href };
 
       (function() {
       var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
