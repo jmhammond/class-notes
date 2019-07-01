@@ -650,14 +650,6 @@
     </example>
 
 
-    <definition>
-      <statement>
-        <p>
-          A <term>combination</term> is an unordered selection of objects.
-        </p>
-      </statement>
-    </definition>
-
     <example>
       <statement>
         <p>
@@ -665,6 +657,14 @@
         </p>
       </statement>
     </example>
+
+    <definition>
+      <statement>
+        <p>
+          A <term>combination</term> is an unordered selection of objects.
+        </p>
+      </statement>
+    </definition>
 
 
     <example>
