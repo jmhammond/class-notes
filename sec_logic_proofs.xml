@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-logic-proofs">
   <title>An introduction to proofs</title>
+
+  <subsection>
+    <title>Basic number concepts </title>
+  <p>
+    Before we start, we need to formally define some basic concepts of numbers.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A number <m>n</m> is said to be <term>even</term> if it is a multiple of 2. That is, if there exists an integer <m>k</m> such that <m>n = 2k</m>, then <m>n</m> is even.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        <ol>
+          <li> 6 is even since <m>6 = 2\cdot 3</m> </li>
+          <li> 0 is even, since <m> 0 = 2\cdot 0</m></li>
+          <li> -8 is even, since <m>-8 = 2 \cdot (-4)</m></li>
+          <li> 9 is not even, since there is no integer <m>k</m> such that <m>9=2k</m></li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        A number <m>n</m> is said to be <term>odd</term> if it is not a multiple of 2. That is, if there exists an integer <m>k</m> such that <m>n = 2k + 1</m>, then <m>n</m> is odd.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        <ol>
+          <li> 7 is odd since <m>7 = 2\cdot 3 + 1</m> </li>
+          <li> -1 is odd, since <m> -1 = 2\cdot (-1) + 1</m></li>
+          <li> 8 is not odd, since there is no integer <m>k</m> such that <m>8=2k+1</m></li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+  
+  <definition>
+    <statement>
+      <p>
+        A number <m>n</m> is said to be <term>rational</term> if there exist integers <m>a, b</m> with <m>b \not=0 </m> such that <m>n = \dfrac{a}{b}</m>. If a number is not rational, we say that it is is <term>irrational</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        <ol>
+          <li> 7 is rational since <m>7 = \dfrac{7}{1}</m> </li>
+          <li> <m>\frac12</m> is rational, since both 1 and 2 are integers, 2 is non-zero </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+  
+  </subsection>
+
+  <subsection>
+    <title>
+      Basic concepts of proof
+    </title>
   
   <definition>
     <ul>
@@ -40,6 +113,7 @@
       </p>
     </statement>
   </note>
+  </subsection>
 
   <subsection>
     <title>Direct Proof</title>

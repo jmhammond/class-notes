@@ -396,7 +396,7 @@
  <subsection>
      <title>Forum Posts about this section</title>
 
-      <slate xml:id="discourse" surface="html" >
+      <slate xml:id="discourse-induction" surface="html">
     <div id='discourse-comments'></div>
     <script type="text/javascript">
       DiscourseEmbed = { discourseUrl: 'https://comp.math.wichita.edu/',
