@@ -958,7 +958,7 @@
           <p>
             Let <m>x \and y</m> be variables and <m>n</m> a natural number, then 
             <me>
-              (x+y)^n = \sum_{k=0}^n \binom{n}{n-k} x^{n-k} y^k
+              (x+y)^n = \sum_{k=0}^n \binom{n}{k} x^{n} y^{n-k}
             </me>
           </p>
         </statement>
