@@ -14,18 +14,8 @@
   <xi:include href="./sec_logic_proofs.xml"/>
   <xi:include href="./sec_logic_induction.xml"/>
   
-  <section>
-    <title>
-      Supplemental Exercises
-    </title>
+  <xi:include href="./sec_logic_supplemental.xml"/>
 
-    <p>
-      Here are some additional exercises for practice.
-    </p>
-
-    <xi:include href="./sec_logic_supplemental.xml"/>
-
-  </section>
 
 
 </chapter>
