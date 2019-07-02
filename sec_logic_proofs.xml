@@ -878,7 +878,7 @@
       <slate xml:id="discourse" surface="html" >
     <div id='discourse-comments'></div>
     <script type="text/javascript">
-      DiscourseEmbed = { discourseUrl: 'https://comp.math.wichita.edu/',
+      DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
       discourseEmbedUrl: location.href };
 
       (function() {
