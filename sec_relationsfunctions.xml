@@ -8,6 +8,9 @@
         Let <m>A \and B</m> be any two sets. A mathematical <term>relation between the sets <m>A</m> and <m>B</m></term> is a collection of ordered pairs from the two sets. That is, if <m>R</m> is a relation of <m>A</m> to <m>B</m>, then <m>R = \{ (a,b) \mid a\in A \and b\in B\}</m>
       </p>
       <p>
+        We call set <m>A</m> the <term>domain</term> and the set <m>B</m> the <term>codomain</term>.
+      </p>
+      <p>
         Written another way, <m>R \subseteq A \times B</m>.
       </p>
       <p>
