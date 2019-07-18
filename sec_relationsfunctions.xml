@@ -4,18 +4,18 @@
 
   <subsection> 
     <title>
-      Relations
+      Relations <m>\require{cancel}</m> <!-- putting this requirement here to include \cancel in mathjax -->
     </title>
     <definition>
       <statement>
         <p>
-          A mathematical <term>relation, <m>R</m>, between two sets <m>A</m> and <m>B</m></term> is a collection of ordered pairs from the two sets. Symbollically, we write <m>R = \{ (a,b) \mid a\in A \and b\in B\}</m>, or <m>R \subseteq A \times B</m>.
+          A mathematical <term>relation, <m>\mathrel{R}</m>, between two sets <m>A</m> and <m>B</m></term> is a collection of ordered pairs from the two sets. Symbollically, we write <m>\mathrel{R} = \{ (a,b) \mid a\in A \and b\in B\}</m>, or <m>\mathrel{R} \subseteq A \times B</m>.
         </p>
         <p>
           We call set <m>A</m> the <term>domain</term> and the set <m>B</m> the <term>codomain</term>.
         </p>
         <p>
-          If <m>a</m> is related to <m>b</m> we will write <m>a R b</m> or <m>(a,b) \in R</m>. If two elements <m>c </m> and <m>d</m> are not related, we write <m>c \centernot R d</m>.
+          If <m>a</m> is related to <m>b</m> we will write <m>a \mathrel{R} b</m> or <m>(a,b) \in \mathrel{R}</m>. If two elements <m>c </m> and <m>d</m> are not related, we write <m>c \cancel{\mathrel{R}} d</m>.
         </p>
       </statement>
     </definition>
@@ -23,13 +23,13 @@
     <example xml:id="ex_sib">
       <statement>
         <p>
-          If we consider <m>A</m> and <m>B</m> to both be the set of people in your family, and let <m>R</m> be the relation <q><m>a</m> is a sibling of <m>b</m>.</q> Here's an example of my family. Note that, for example, John <m>R</m> Sarah and Sarah<m>R</m> John because she's my sibling, and I'm her sibling. What are the ordered pairs that make up the relation? Which representation do you like better? Why?
+          If we consider <m>A</m> and <m>B</m> to both be the set of people in your family, and let <m>\mathrel{R}</m> be the relation <q><m>a</m> is a sibling of <m>b</m>.</q> Here's an example of my family. Note that, for example, John <m>\mathrel{R}</m> Sarah and Sarah<m>\mathrel{R}</m> John because she's my sibling, and I'm her sibling. What are the ordered pairs that make up the relation? Which representation do you like better? Why?
         </p>
         <image width="40%" xml:id="my-family-graph">
           <latex-image>
             \begin{tikzpicture}
             \coordinate (A)  at (0,3);
-            \node at (A) [left]{Set $A$};
+            \node at (A) [below]{Set $A$};
             \coordinate (B)  at (0,2);
             \node at (B) [left]{John};
             \coordinate (C)  at (0,1);
@@ -42,7 +42,7 @@
             \coordinate (G)  at (2,1);
             \coordinate (H)  at (2,0);
 
-            \node at (E) [right]{Set $B$};
+            \node at (E) [below]{Set $B$};
             \node at (F) [right]{John};
             \node at (G) [right]{Eric};
             \node at (H) [right]{Sarah};
@@ -53,13 +53,13 @@
       </statement>
     </example>
 
-    <example>
+    <example xml:id="ex_divides_relation">
       <statement>
         <p>
-          Let <m>A</m> and <m>B</m> both be the set of integers from 1 to 10, and define the relation by <m>a R b</m> means that <m>a</m> evenly divides into <m>b</m>.
+          Let <m>A</m> and <m>B</m> both be the set of integers from 1 to 10, and define the relation by <m>a \mathrel{R} b</m> means that <m>a</m> evenly divides into <m>b</m>.
         </p>
         <p>
-          Here <m>2 R 4</m> since 2 divides into 4 evenly. Similarly <m>5 R 5</m> since it divides into itself. <m>6 \centernot R 3</m> since 6 doesn't divide into 3.
+          Here <m>2 \mathrel{R} 4</m> since 2 divides into 4 evenly. Similarly <m>5 \mathrel{R} 5</m> since it divides into itself. <m>6 \cancel{\mathrel{R}} 3</m> since 6 doesn't divide into 3.
         </p>
         <ol>
           <li>
@@ -78,7 +78,7 @@
     <example>
       <statement>
         <p>
-          The domain and codomain don't have to be the same. For example, let <m>R</m> be the relation from the set of people in discrete math class to the natural numbers which maps a person to their height in inches. In this example, <m>(\text{John}, 76) \in R</m>. What ordered pair represents you?
+          The domain and codomain don't have to be the same. For example, let <m>\mathrel{R}</m> be the relation from the set of people in discrete math class to the natural numbers which maps a person to their height in inches. In this example, <m>(\text{John}, 76) \in \mathrel{R}</m>. What ordered pair represents you?
         </p>
       </statement>
     </example>
@@ -87,12 +87,10 @@
     <example>
       <statement>
         <p>
-          Let <m>R</m> be the relation from <m>\N</m> to <m>\N</m> where we say <m>a R b</m> if <m>a^2 = b</m>. List the first few ordered pairs of the relation for <m>a = 0, 1, 2, \dots 5</m>.
+          Let <m>\mathrel{R}</m> be the relation from <m>\N</m> to <m>\N</m> where we say <m>a \mathrel{R} b</m> if <m>a^2 = b</m>. List the first few ordered pairs of the relation for <m>a = 0, 1, 2, \dots 5</m>.
         </p>
       </statement>
     </example>
-
-
 
 
   </subsection>
@@ -401,7 +399,7 @@
     <exercise>
       <statement>
         <p>
-          Let <m>R</m> be the relation between the set <m>A</m> and itself defined by <m>a R b</m> whenever <m>a \and b</m> are exactly the same object. 
+          Let <m>\mathrel{R}</m> be the relation between the set <m>A</m> and itself defined by <m>a \mathrel{R} b</m> whenever <m>a \and b</m> are exactly the same object. 
           <ol>
             <li>
               What is the familiar way we normally write this relation?
