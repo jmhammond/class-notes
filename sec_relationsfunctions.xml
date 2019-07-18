@@ -23,33 +23,53 @@
     <example xml:id="ex_sib">
       <statement>
         <p>
-          If we consider <m>A</m> and <m>B</m> to both be the set of people in your family, and let <m>\mathrel{R}</m> be the relation <q><m>a</m> is a sibling of <m>b</m>.</q> Here's an example of my family. Note that, for example, John <m>\mathrel{R}</m> Sarah and Sarah<m>\mathrel{R}</m> John because she's my sibling, and I'm her sibling. What are the ordered pairs that make up the relation? Which representation do you like better? Why?
+          If we consider <m>A</m> and <m>B</m> to both be the set of people in your family, and let <m>\mathrel{R}</m> be the relation <q><m>a</m> is a sibling of <m>b</m>.</q> Here's an example of my family in two graphical representations. What are the ordered pairs that make up the relation? 
         </p>
-        <image width="40%" xml:id="my-family-graph">
-          <latex-image>
-            \begin{tikzpicture}
-            \coordinate (A)  at (0,3);
-            \node at (A) [below]{Set $A$};
-            \coordinate (B)  at (0,2);
-            \node at (B) [left]{John};
-            \coordinate (C)  at (0,1);
-            \node at (C) [left]{Eric};
-            \coordinate (D)  at (0,0);
-            \node at (D) [left]{Sarah};
+        <p>
+        <sbsgroup>
+          <sidebyside width="50%">
+            <image xml:id="graph-sib">
+              <latex-image>
+                \begin{tikzpicture}[scale=1]
+                \draw[thin, gray!50] (0,0) grid (4, 4);
+                \draw[thick] (0,4) node[left] {Family Member} -- (0,0) -- (4,0) node[below right] {Family Member};
+                \draw (1,0) node[below] { John} (0, 1) node[left] { John};
+                \draw (2,0) node[below] { Eric} (0, 2) node[left] { Eric};
+                \draw (3,0) node[below] { Sarah} (0, 3) node[left] { Sarah};
+                \fill (1,3) circle (.1) (1,2) circle (0.1) (2,3) circle (.1) (2,1) circle (.1) (3,2) circle (.1) (3,1) circle (.1);
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
+          <sidebyside width="45%">
+            <image xml:id="my-family-graph">
+              <latex-image>
+                \begin{tikzpicture}
+                \coordinate (A)  at (0,3);
+                \node at (A) [below]{Set $A$};
+                \coordinate (B)  at (0,2);
+                \node at (B) [left]{John};
+                \coordinate (C)  at (0,1);
+                \node at (C) [left]{Eric};
+                \coordinate (D)  at (0,0);
+                \node at (D) [left]{Sarah};
 
-            \coordinate (E)  at (2,3);
-            \coordinate (F)  at (2,2);
-            \coordinate (G)  at (2,1);
-            \coordinate (H)  at (2,0);
+                \coordinate (E)  at (2,3);
+                \coordinate (F)  at (2,2);
+                \coordinate (G)  at (2,1);
+                \coordinate (H)  at (2,0);
 
-            \node at (E) [below]{Set $B$};
-            \node at (F) [right]{John};
-            \node at (G) [right]{Eric};
-            \node at (H) [right]{Sarah};
-            \draw (B) -- (G) -- (D) -- (F) -- (C) -- (H) -- (B);
-            \end{tikzpicture}
-          </latex-image>
-        </image>
+                \node at (E) [below]{Set $B$};
+                \node at (F) [right]{John};
+                \node at (G) [right]{Eric};
+                \node at (H) [right]{Sarah};
+                \draw (B) -- (G) -- (D) -- (F) -- (C) -- (H) -- (B);
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
+        </sbsgroup>
+        </p>
       </statement>
     </example>
 
@@ -63,7 +83,23 @@
         </p>
         <ol>
           <li>
-            <p> Draw a graphical representation of the divides relation as we did in the sibling example, listing elements of the two sets and drawing lines from the left set to the right where the line means <m>a</m> divides evenly into <m>b</m>.  
+            <p>
+              <!-- Draw a graphical representation of the divides relation as we did in the sibling example, listing elements of the two sets and drawing lines from the left set to the right where the line means <m>a</m> divides evenly into <m>b</m>. -->
+              Complete the following graph of the relation below, where a point on <m>(x,y)</m> means that <m>x </m> divides evenly into <m>y</m>. 
+        <sidebyside width="50%">
+          <image xml:id="graph-relation-blank">
+            <latex-image>
+              \begin{tikzpicture}[scale=1]
+              \draw[thin, gray!50] (0,0) grid (10.5, 10.5);
+              \draw[thick] (0,10.5) node[left] {\(y\)} -- (0,0) -- (10.5,0) node[below right] {\(x\)};
+              \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 , 10}
+              \draw (\x,0) node[below] { \x} (0, \x) node[left] { \x};
+              \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 , 10}
+              \fill(1,\x) circle(.1);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
             </p>
           </li>
           <li> 
@@ -87,11 +123,46 @@
     <example>
       <statement>
         <p>
-          Let <m>\mathrel{R}</m> be the relation from <m>\N</m> to <m>\N</m> where we say <m>a \mathrel{R} b</m> if <m>a^2 = b</m>. List the first few ordered pairs of the relation for <m>a = 0, 1, 2, \dots 5</m>.
+          Let <m>\mathrel{R}</m> be the relation from <m>\N</m> to <m>\N</m> where we say <m>a \mathrel{R} b</m> if <m>a^2 = b</m>.        
+          <ol>
+            <li>
+              List the first few ordered pairs of the relation for <m>a = 0, 1, 2, \dots 5</m>.
+            </li>
+            <li>
+              <p>
+                Plot points for the graph of <m>\mathrel{R}</m> for <m>a = 0, 1, 2, 3</m>.
+                <sidebyside width="20%">
+                  <image xml:id="graph-relation-squares">
+                    <latex-image>
+                      \begin{tikzpicture}[scale=1]
+                      \draw[thin, gray!50] (0,0) grid (3, 10);
+                      \draw[&lt;-&gt;, thick] (0,10) node[left] {\(b\)} -- (0,0) -- (3.5,0) node[below right] {\(a\)};
+                      \foreach \x in {0, 1,2,3,4, 5, 6, 7, 8, 9 }
+                      \draw (0, \x) node[left] { \x};
+                      \foreach \x in {1,2,3}
+                      \draw (\x,0) node[below] { \x} ;
+                      % \fill (1,1) circle(0.1) (2,4) circle(0.1) (3,9) circle(.1);
+                      \end{tikzpicture}
+                    </latex-image>
+                  </image>
+                </sidebyside>
+              </p>
+            </li>
+          </ol>
         </p>
       </statement>
     </example>
 
+
+    <!-- TODO:
+
+0. Relation graphs (points in the plane)
+1. Here, I can include relation composition
+2. Relation inverses
+a. then put it into the function sections  a function is a relation with nice property
+b. note that the inverse of a function is always a relation, but not always a function.
+
+    -->
 
   </subsection>
   <subsection>
@@ -377,6 +448,7 @@
   <exercises>
 
     <!-- TODO write some exercises for the relations section //--> 
+
 
     <exercise>
       <statement>

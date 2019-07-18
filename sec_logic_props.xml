@@ -380,63 +380,43 @@
     <example>
       <statement>
         <p>
-          These examples, illustrating the truth and false of conditionals, are from my daughter Penny:
+          Imagine your teacher makes the following (unethical) statement, <q>if you are a cat lover, then I'll give you an A in this class.</q>
           <ul>
             <li>
-              <p>
-                If Pikachu is an electric type, he can use thunderbolt.
-                <ul><li>True <m>\to</m>True is True</li></ul>
-              </p>
+              Do you not love cats? If so, it doesn't matter whether you get an A or not, what your teacher said was not a lie.
             </li>
             <li>
-              <p>
-                If Pikachu is an electric type, he can use hydro pump.
-                <ul><li>True <m>\to</m>False is False</li></ul>
-              </p>
-            </li>
-            <li>
-              <p>
-                If Pikachu is a duck, he can use thunder shock.
-                <ul><li>False <m>\to</m>True is True</li></ul>
-              </p>
-            </li>
-            <li>
-              <p>
-                If Pikachu is a grass type, he can use petal storm.
-                <ul><li>False <m>\to</m>False is True</li></ul>
-              </p>
+              Are you a cat lover? Then the only way the teacher lied to you is if you didn't get an A. 
             </li>
           </ul>
-        </p>
-        <p>
-          ... of course, if you don't know about Pokemon, it may help to consider <m>p\to q</m> where <m>p</m> is the statement <q>you ace all the tests</q> and <m>q</m> is the statement <q>you pass the class</q>.
         </p>
       </statement>
     </example>
 
-    <p>
-      Occassionally through this course, we will be working with bit objects. A <term>bit</term> is a number which has values of either 1 or 0. We can operate with bits the same way we operate with propositions: 0 is false and 1 is true. The truth tables for the operations <m>\vee, \wedge, \oplus</m> all apply.
-    </p>
-    <example>
-      <statement>
-        <p>
-          Find the bitwise OR, AND, and XOR of the pair of bitstrings:
-          <ul>
-            <li>0101 1010</li>
-            <li>1011 0110</li>
-          </ul>
-        </p>
-      </statement>
-      <answer>
-        <p>
-          <ul>
-            <li>  OR: 1111 1110</li>
-            <li>  AND: 0001 0010</li>
-            <li>  XOR: 1110 1100</li>
-          </ul>
-        </p>
-      </answer>
-    </example>
+    <!-- I don't really want to include this. I never referred to it --> 
+    <!-- <p> -->
+    <!--   Occassionally through this course, we will be working with bit objects. A <term>bit</term> is a number which has values of either 1 or 0. We can operate with bits the same way we operate with propositions: 0 is false and 1 is true. The truth tables for the operations <m>\vee, \wedge, \oplus</m> all apply. -->
+    <!-- </p> -->
+    <!-- <example> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       Find the bitwise OR, AND, and XOR of the pair of bitstrings: -->
+    <!--       <ul> -->
+    <!--         <li>0101 1010</li> -->
+    <!--         <li>1011 0110</li> -->
+    <!--       </ul> -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!--   <answer> -->
+    <!--     <p> -->
+    <!--       <ul> -->
+    <!--         <li>  OR: 1111 1110</li> -->
+    <!--         <li>  AND: 0001 0010</li> -->
+    <!--         <li>  XOR: 1110 1100</li> -->
+    <!--       </ul> -->
+    <!--     </p> -->
+    <!--   </answer> -->
+    <!-- </example> -->
   </subsection>
 
   <exercises>

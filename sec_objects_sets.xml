@@ -22,8 +22,8 @@
         <p>
           Below are examples of ways of writing sets:
           <dl>
-            <li> <term>Roster</term>: <m>A = \{0, 1, \text{cat}, 42, \tau \}</m> </li>
-            <li> <term>Set-builder</term>: <m> B=\{x \mid x \text{ is an even integer}\}</m></li>
+            <li> <term>Roster</term>: <m>A = \{\text{list, out, all, elements, in, a, comma, separated, list, \dots \}</m> For exaple: <m>A = \{2, 4, 6, 8, 10, \dots\}.</m> </li>
+            <li> <term>Set-builder</term>: <m> B=\{\text{variable} \mid \text{condition for variable to be in the set}\}</m>. For example, <m>B = \{x \mid x \gt 0 \and x \text{ is an even integer}\}</m> </li>
           </dl>
         </p>
         <p>
@@ -58,11 +58,11 @@
         We say that <m>A</m> is a <term>subset</term> of <m>B</m>, and write <m>A \subseteq B</m> if every element of <m>A</m> is an element of <m>B</m>.
         <me>A \subseteq B \iff \forall x (x \in A \to x \in B)</me>
         If there is an element of <m>B</m> which is not also in <m>A</m>, we say that <m>A</m> is a <term>proper subset</term> of <m>B</m> and write <m>A \subset B</m>.
-        <me>A \subset B \iff \forall x (x \in A \to x \in B) \wedge \exists y (y\in B \wedge y \not \in A) </me>
+        <me>A \subset B \iff \forall x (x \in A \to x \in B) \text{ and } \exists y (y\in B \text{ and } y \not \in A) </me>
       </p>
       <p>
         We say that two sets, <m>A</m> and <m>B</m> are <term>equal</term>, an write <m>A = B</m> they have exactly the same elements.
-        <me>A = B \iff (A \subseteq B \wedge B \subseteq A)</me>
+        <me>A = B \iff (A \subseteq B \text{ and } B \subseteq A)</me>
       </p>
     </definition>
 
@@ -150,7 +150,7 @@
     <definition>
       <p>
         Let <m>A</m> and <m>B</m> be sets. The <term>Cartesian Product</term> of <m>A</m> and <m>B</m>, denoted by <m>A\times B</m>, is the set of all ordered pairs <m>(a,b)</m> where <m>a\in A</m> and <m>b \in B</m>. That is,
-        <me>A \times B = \{ (a,b) \mid a\in A \wedge b \in B\}</me>
+        <me>A \times B = \{ (a,b) \mid a\in A \text{ and } b \in B\}</me>
       </p>
       <p>
         We also denote the Cartesian product of a set with itself by the superscript <m>A^2 = A \times A</m>.
@@ -177,7 +177,7 @@
     <definition>
       <p>
         If <m>A</m> and <m>B</m> are two sets, we define the <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A \cup B</m>, to be the set of all elements that are in <m>A</m> or <m>B</m>, or both.
-        <me>A \cup B = \{ x \mid x \in A \vee x \in B\}</me>
+        <me>A \cup B = \{ x \mid x \in A \text{ or } x \in B\}</me>
       </p>
 
       <p>
@@ -198,7 +198,7 @@
 
       <p>
         If <m>A</m> and <m>B</m> are two sets, we define the <term>intersection</term> of <m>A</m> and <m>B</m>, denoted <m>A \cap B</m>, to be the set of only elements that are in both <m>A</m> and <m>B</m>.
-        <me>A \cap B = \{ x \mid x \in A \wedge x \in B\}</me>
+        <me>A \cap B = \{ x \mid x \in A \text{ and } x \in B\}</me>
       </p>
 
       <p>
@@ -220,7 +220,7 @@
 
       <p>
         If <m>A</m> and <m>B</m> are two sets, we define the <term>difference</term> of <m>A</m> and <m>B</m>, denoted <m>A \setminus B</m>, to be the set of only elements that are only in <m>A</m> and not in <m>B</m>.
-        <me>A \setminus B = \{ x \mid x \in A \wedge x \not\in B\}</me>
+        <me>A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}</me>
       </p>
 
       <p>
@@ -330,7 +330,7 @@
 
     <note>
       <p>
-        The following table of common set identities should look very familiar!
+        The following is a listing of common identities for set operations. An <term>identity</term> is a statement which is true if we replace the variables with specific sets.
       </p>
     </note>
 
@@ -424,9 +424,9 @@
           <cell></cell>
         </row>
         <row bottom="medium">
-          <cell><m>\overline{(A \cup  B)} =  (\overline{A}) \cap  (\overline{B})</m></cell>
+          <cell><m>\overline{(A \cup  B)} =  \overline{A} \cap  \overline{B}</m></cell>
           <cell></cell>
-          <cell><m>\overline{(A \cap  B)} =  (\overline{A}) \cup  (\overline{B})</m></cell>
+          <cell><m>\overline{(A \cap  B)} =  \overline{A} \cup  \overline{B}</m></cell>
         </row>
         <row>
           <cell></cell>
@@ -435,7 +435,7 @@
         </row>
         <row bottom="medium">
           <cell></cell>
-          <cell> <m>\overline{(\overline{A})}= A</m></cell>
+          <cell> <m>\overline{\overline{A}}= A</m></cell>
           <cell></cell>
         </row>
       </tabular>
@@ -449,29 +449,30 @@
       </statement>
     </exercise>
     
-    <example>
-      <statement>
-        <p>
-          Verify the following set identity by using the basic identities in the table above: <m>A \cap (A \cup B) = A</m>.
-        </p>
-      </statement>
-    </example>
+    <!-- TODO move these to a different section applying logic --> 
+  <!--   <example> -->
+  <!--     <statement> -->
+  <!--       <p> -->
+  <!--         Verify the following set identity by using the basic identities in the table above: <m>A \cap (A \cup B) = A</m>. -->
+  <!--       </p> -->
+  <!--     </statement> -->
+  <!--   </example> -->
 
-    <example>
-      <statement>
-        <p>
-          The set identities are true as an extension of logic. For example, the identity <m>A \cup \phi = A</m> is:
-          <md>
-            <mrow>A \cup \phi &amp;= \{ x \mid x \in A \lor x \in \phi\} </mrow>
-            <mrow>&amp;= \{x \in A \lor F \} </mrow>
-            <mrow>&amp;= \{x \in A\} </mrow>
-            <mrow>&amp;= A </mrow>
-          </md>
-        </p>
-      </statement>
-    </example>
+  <!--   <example> -->
+  <!--     <statement> -->
+  <!--       <p> -->
+  <!--         The set identities are true as an extension of logic. For example, the identity <m>A \cup \phi = A</m> is: -->
+  <!--         <md> -->
+  <!--           <mrow>A \cup \phi &amp;= \{ x \mid x \in A \lor x \in \phi\} </mrow> -->
+  <!--           <mrow>&amp;= \{x \in A \lor F \} </mrow> -->
+  <!--           <mrow>&amp;= \{x \in A\} </mrow> -->
+  <!--           <mrow>&amp;= A </mrow> -->
+  <!--         </md> -->
+  <!--       </p> -->
+  <!--     </statement> -->
+  <!--   </example> -->
 
-  </subsection>
+  <!-- </subsection> -->
 
 
   <exercises>
@@ -632,7 +633,7 @@
       <statement>
 
         <p>
-          Let <m>A = \{x \in \N \st 3 \le x \le 13\}</m>, <m>B = \{x \in \N \st x \mbox{ is even} \}</m>, and <m>C = \{x \in \N \st x \mbox{ is odd} \}</m>.
+          Let <m>A = \{x \in \N \st 3 \le x \le 13\}</m>, <m>B = \{x \in \N \st x \mbox{ is even} \}</m>, and <m>{C = \{x \in \N \st x \mbox{ is odd} \}}</m>.
           <ol cols="2">
             <li> <p> Find <m>A \cap B</m>. </p> </li>
             <li> <p> Find <m>A \cup B</m>. </p> </li>
@@ -680,7 +681,6 @@
           <ol> <li> <p> Is <m>\Z^+ \subseteq 2\Z</m>? Explain. </p> </li>
             <li> <p> Is <m>2\Z \subseteq \Z^+</m>? Explain. </p> </li>
             <li> <p> Find <m>2\Z \cap 3\Z</m>. Describe the set in words, and using set notation. </p> </li>
-            <li> <p> Express <m>\{x \in \Z \st \exists y\in \Z (x = 2y \vee x = 3y)\}</m> as a union or intersection of two sets already described in this problem. </p> </li>
           </ol>
         </p>
       </statement>
@@ -869,7 +869,7 @@
 
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -878,7 +878,7 @@
         <ol>
           <li><m>|A|</m> when <m>A = \{4,5,6,\ldots,37\}</m></li>
           <li><m>|A|</m> when <m>A = \{x \in \Z \st -2 \le x \le 100\}</m></li>
-          <li><m>|A \cap B|</m> when <m>A = \{x \in \N \st x \le 20\}</m> and <m>B = \{x \in \N \st x \mbox{ is prime} \}</m></li>
+          <li><m>|A \cap B|</m> when <m>A = \{x \in \N \st x \le 20\}</m> and <m>B = \{x \in \N \st x \mbox{ is prime} \}</m>; note that 1 isn't prime.</li>
         </ol>
       </p>
       </statement>
