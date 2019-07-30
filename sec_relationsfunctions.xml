@@ -153,6 +153,39 @@
       </statement>
     </example>
 
+    <definition>
+      <p>
+        Let <m>R</m> be a relation between sets <m>A \and B</m>. The <term>inverse relation</term> of <m>R</m> is the relation that assigns to each element <m>b\in B</m> an element <m>a \in A</m>. We denote the inverse by <m>R^{-1}</m>, so that
+        <me>a \mathrel{R} b \iff b \mathrel{R^{-1}} a</me>
+        for <m>a \in A \and b \in B</m>.
+      </p>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          The inverse of the relation <m>R \subseteq \R \times \R</m> with <m>R = \{(x, y) \mid y = 2x + 1\}</m> has the inverse <m>R^{-1} = \{(x, y) \mid y = (x-1)/2\} \subseteq \R \times \R</m>. Use this form to give inverses of the following relations:
+          <ol>
+            <li>
+              <m>R_1 = \{ (x,y) \mid y = -3x + 2\}</m>
+            </li>
+            <li>
+              <m>R_2= \{ (x,y) \mid y = x^2 + 2\}</m>
+            </li>
+            <li>
+              <m> R_3 = \{(x,y) \mid y \gt 3x - 4\}</m>
+            </li>
+            <li>
+              <m> R_4 = \{(x,y) \mid y \text{ is the father of } x \}</m>
+            </li>
+            <li>
+              <m> R_5 = \{(x,y) \mid y \text{ is a sibling of } x \}</m>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
 
     <!-- TODO:
 
@@ -448,6 +481,26 @@ b. note that the inverse of a function is always a relation, but not always a fu
   <exercises>
 
     <!-- TODO write some exercises for the relations section //--> 
+
+    <exercise>
+      <statement>
+        <p>
+          Consider the relation <m>R = \{ (x, y) \mid y = x^2, \text{ for } x=-3, -2, -1, \dots 2, 3\}</m>.
+          <ol>
+            <li>
+              Is <m>R</m> a function?
+            </li>
+            <li>
+              Find <m>R^{-1}</m>.
+            </li>
+            <li>
+              Is <m>R^{-1}</m> a relation? Why or why not?
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
 
 
     <exercise>
