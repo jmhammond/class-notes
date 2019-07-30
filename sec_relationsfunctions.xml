@@ -27,7 +27,7 @@
         </p>
         <p>
         <sbsgroup>
-          <sidebyside width="50%">
+          <sidebyside width="60%">
             <image xml:id="graph-sib">
               <latex-image>
                 \begin{tikzpicture}[scale=1]
@@ -41,7 +41,7 @@
               </latex-image>
             </image>
           </sidebyside>
-          <sidebyside width="45%">
+          <sidebyside width="30%">
             <image xml:id="my-family-graph">
               <latex-image>
                 \begin{tikzpicture}
@@ -176,10 +176,10 @@
               <m> R_3 = \{(x,y) \mid y \gt 3x - 4\}</m>
             </li>
             <li>
-              <m> R_4 = \{(x,y) \mid y \text{ is the father of } x \}</m>
+              <m> R_4 = \{(x,y) \mid x \text{ is the parent of } y \}</m>
             </li>
             <li>
-              <m> R_5 = \{(x,y) \mid y \text{ is a sibling of } x \}</m>
+              <m> R_5 = \{(x,y) \mid x \text{ is a sibling of } y \}</m>
             </li>
           </ol>
         </p>
