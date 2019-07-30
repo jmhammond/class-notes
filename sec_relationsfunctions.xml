@@ -161,10 +161,10 @@
       </p>
     </definition>
 
-    <example>
+    <example xml:id="example-relation-inverses">
       <statement>
         <p>
-          The inverse of the relation <m>R \subseteq \R \times \R</m> with <m>R = \{(x, y) \mid y = 2x + 1\}</m> has the inverse <m>R^{-1} = \{(x, y) \mid y = (x-1)/2\} \subseteq \R \times \R</m>. Use this form to give inverses of the following relations:
+          For the purposes of this exercise, the universe of discourse for numeric sets is <m>\R</m> and the universe of discourse for <m>R_4</m> and <m>R_5</m> are the set of people. The inverse of the relation <m>R = \{(x, y) \mid y = 2x + 1\}</m> has the inverse <m>R^{-1} = \{(x, y) \mid y = (x-1)/2\}</m>. Use this form to give inverses of the following relations:
           <ol>
             <li>
               <m>R_1 = \{ (x,y) \mid y = -3x + 2\}</m>
@@ -332,13 +332,20 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </statement>
     </example>
 
-
     <definition>
       <p>
         Let <m>f:A \to B</m> be a bijection. The <term>inverse function</term> of <m>f</m> is the unique function that assigns to each element <m>b\in B</m> a unique element <m>a \in A</m> such that <m>f(a) = b</m>. We denote the inverse by <m>f^{-1}</m> so that
         <me>f^{-1} : B \to A \text{ where }  f^{-1}(b) = a \iff f(a) = b</me>
       </p>
     </definition>
+
+    <note>
+      <statement>
+        <p>
+          As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function to have an inverse, the function must be bijective.
+        </p>
+      </statement>
+    </note>
 
     <example>
       <statement>
@@ -368,38 +375,6 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <!-- </definition> -->
 
 
-    <definition>
-      <p>
-        The <term>floor</term> function assigns to every real number <m>x</m> the largest integer that is less than or equal to <m>x</m>. We denote by this <m>\lfloor x \rfloor</m>
-        <me>\lfloor \cdot \rfloor : \mathbb{R}\to \mathbb{Z} \text{ with } (\lfloor x \rfloor = n) \iff (n \le x \lt n + 1)</me>
-      </p>
-      <p>
-        The <term>ceiling</term> function assigns to every real number <m>x</m> the smallest integer that is greater than or equal to <m>x</m>. We denote by this <m>\lceil x \rceil</m>
-        <me>\lceil \cdot \rceil : \mathbb{R}\to \mathbb{Z} \text{ with } (\lceil x \rceil = n) \iff (n - 1 \lt x \le n)</me>
-      </p>
-    </definition>
-
-    <example>
-      <statement>
-        <p>
-          Find the floor and ceiling of each of the following real numbers:
-          <ol cols="2">
-            <li>8.675309</li>
-            <li><m>\pi</m></li>
-            <li><m>-2.1</m></li>
-            <li><m>7</m></li>
-          </ol>
-        </p>
-      </statement>
-    </example>
-
-    <example>
-      <statement>
-        <p>
-          Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.
-        </p>
-      </statement>
-    </example>
 
 
     <!-- I don't think this added much to the discussion; -->
@@ -437,11 +412,35 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <!--   </statement> -->
     <!-- </example> -->
 
-    <definition>
+    <definition xml:id="def-composition-of-functions">
       <p>
         Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
+    <sidebyside width="65%">
+      <image xml:id="composition-of-functions">
+        <latex-image>
+          \usetikzlibrary{calc,positioning,shapes.geometric}
+
+          \begin{tikzpicture}
+          \tikzset{
+          elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
+          node distance=3cm,
+          font=\footnotesize,
+          >=latex,
+          }
+          \node(x)[elps={1.3cm}{1cm},label={$A$}]{};
+          \node(y)[elps={2cm}{1.2cm},right=of x,label={$B$}]{};
+          \node(v)[elps={1.5cm}{.9cm},right=of y,label={$C$}]{};
+          \draw[->](x)to node[above right]{$g$}(y);
+          \draw[->](y)to node[above right]{$f$}(v);
+          \draw[->](x)to[bend left]node[above]{$g \circ f$}(v);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
       </p>
     </definition>
+
+
 
     <!-- meh; this is basic algebra -->
     <!-- <example> -->
@@ -531,6 +530,41 @@ b. note that the inverse of a function is always a relation, but not always a fu
             </li>
             <li>
               Is this relation a function? If so, what is the algebraic definition?
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+
+    <example>
+      <statement>
+        <p>
+          Reformulate the definition of function composition, <xref ref="composition-of-functions"/> in order to define composition of two relations.
+        </p>
+      </statement>
+    </example>
+
+    <exercise>
+      <statement>
+        <p>
+          Using the relations defined in <xref ref="example-relation-inverses"/>, find the following compositions: 
+          <ol>
+            <li>
+              <m>R_1 \circ R_2</m>
+            </li>
+            <li>
+              <m>R_2 \circ R_1</m>
+            </li>
+
+            <li>
+              <m>R_4 \circ R_4</m>
+            </li>
+            <li>
+              <m>R_5 \circ R_4</m>
+            </li>
+            <li>
+              <m>R_4 \circ R_5</m>
             </li>
           </ol>
         </p>
@@ -899,6 +933,39 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </solution>
+    </exercise>
+
+    <definition>
+      <p>
+        The <term>floor</term> function assigns to every real number <m>x</m> the largest integer that is less than or equal to <m>x</m>. We denote by this <m>\lfloor x \rfloor</m>
+        <me>\lfloor \cdot \rfloor : \mathbb{R}\to \mathbb{Z} \text{ with } (\lfloor x \rfloor = n) \iff (n \le x \lt n + 1)</me>
+      </p>
+      <p>
+        The <term>ceiling</term> function assigns to every real number <m>x</m> the smallest integer that is greater than or equal to <m>x</m>. We denote by this <m>\lceil x \rceil</m>
+        <me>\lceil \cdot \rceil : \mathbb{R}\to \mathbb{Z} \text{ with } (\lceil x \rceil = n) \iff (n - 1 \lt x \le n)</me>
+      </p>
+    </definition>
+
+    <exercise>
+      <statement>
+        <p>
+          Find the floor and ceiling of each of the following real numbers:
+          <ol cols="2">
+            <li>8.675309</li>
+            <li><m>\pi</m></li>
+            <li><m>-2.1</m></li>
+            <li><m>7</m></li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.
+        </p>
+      </statement>
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->

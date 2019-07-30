@@ -13,6 +13,10 @@
   <subsection xml:id="section-numtheory-div">
     <title>The Divides Relation</title>
 
+    <p>
+      In <xref ref="ex_divides_relation"/>, we saw the divides relation. Because we're going to use this relation frequently, we will introduce its own notation.
+    </p>
+
     <definition>
       <statement>
         <p>
