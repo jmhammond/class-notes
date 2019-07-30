@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_basics">
+  <title>Basic Objects and Symbols</title>
+
+  <xi:include href="./sec_logic_props.xml"/>
+
+  <xi:include href="./sec_objects_sets.xml"/>
+
+  <xi:include href="./sec_relationsfunctions.xml"/>
+
+</chapter>

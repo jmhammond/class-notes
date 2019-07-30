@@ -55,7 +55,7 @@
         This book borrows heavily from the exercises of Oscar Levin's <url href="https://github.com/oscarlevin/discrete-book">Discrete Mathematics: An Open Introduction</url>.
         </p>
         <p>
-          The material in section <xref ref="section-counting-fib"/> was first discovered in Arthur Benjamin and Jennifer's <pubtitle>Proofs that Really Count: The Art of Combinatorial Proof</pubtitle>, and the exercises in that section come from that book, and influenced every choice of Fibonacci sequence problem in the remainder of the text.
+          The material in section <xref ref="section-counting-fib"/> was first discovered in Arthur Benjamin and Quinn's <pubtitle>Proofs that Really Count: The Art of Combinatorial Proof</pubtitle>, and the exercises in that section come from that book, and influenced every choice of Fibonacci sequence problem in the remainder of the text.
         </p>
         <p>
           I'm also grateful for you, reader, as we go on this journey of mathematics together. This is going to be fun.
@@ -86,8 +86,8 @@
     -->
 
 
+    <xi:include href="./ch_basics.xml"/>
     <xi:include href="./ch_logic.xml"/>
-    <xi:include href="./ch_objects.xml"/>
     <xi:include href="./ch_numtheory.xml"/>
     <xi:include href="./ch_counting.xml"/>
     <xi:include href="./ch_appendix.xml"/>
