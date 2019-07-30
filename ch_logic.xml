@@ -9,7 +9,7 @@
   <xi:include href="./sec_logic_equivalences.xml"/>
 
 
-  <!-- <xi:include href="./sec_application_set_proofs.xml"/> -->
+  <xi:include href="./sec_application_set_proofs.xml"/>
 
   <xi:include href="./sec_logic_quantifiers.xml"/>
   <xi:include href="./sec_logic_arguments.xml"/>
