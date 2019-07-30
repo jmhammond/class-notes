@@ -540,7 +540,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <example>
       <statement>
         <p>
-          Reformulate the definition of function composition, <xref ref="composition-of-functions"/> in order to define composition of two relations.
+          Reformulate the definition of function composition, <xref ref="def-composition-of-functions"/> in order to define composition of two relations.
         </p>
       </statement>
     </example>
