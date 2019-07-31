@@ -22,7 +22,7 @@
         <p>
           Below are examples of ways of writing sets:
           <dl>
-            <li> <term>Roster</term>: <m>A = \{\text{list, out, all, elements, in, a, comma, separated, list, \dots \}</m> For exaple: <m>A = \{2, 4, 6, 8, 10, \dots\}.</m> </li>
+            <li> <term>Roster</term>: <m>A = \{\text{list, out, all, elements, in, a, comma, separated, list,} \dots\}</m> For exaple: <m>A = \{2, 4, 6, 8, 10, \dots\}.</m> </li>
             <li> <term>Set-builder</term>: <m> B=\{\text{variable} \mid \text{condition for variable to be in the set}\}</m>. For example, <m>B = \{x \mid x \gt 0 \and x \text{ is an even integer}\}</m> </li>
           </dl>
         </p>
