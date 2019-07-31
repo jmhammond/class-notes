@@ -37,3 +37,4 @@ prv_*
 ltxpng
 .directory
 temp.org
+*.listing
