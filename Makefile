@@ -21,6 +21,9 @@ clean:
 publish-to-web: html
 	rsync -zartv --include "*/" --include="*.html" --exclude="*" ./  ~/public_html/class-notes
 
+staging: html
+	rsync -zartv --include "*/" --include="*.html" --exclude="*" ./  ~/public_html/notes-staging
+
 publish:
 	ssh hammond@alonzo.math.wichita.edu 'cd src/class-notes && git pull && make publish-to-web'
 
