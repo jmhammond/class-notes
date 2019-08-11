@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_application_set_proofs">
-  <title> Application: Set Equivalences </title>
+  <title> Application: Set Properties and Equivalences </title>
 
   <definition>
     <title>Set operations defined via logic</title>
@@ -32,20 +32,6 @@
 
 
   <example>
-    <statement>
-      <p>
-        The set identities are true as an extension of logic. For example, the identity <m>A \cup \phi = A</m> is:
-        <md>
-          <mrow>A \cup \phi &amp;= \{ x \mid x \in A \lor x \in \phi\} </mrow>
-          <mrow>&amp;= \{x \in A \lor F \} </mrow>
-          <mrow>&amp;= \{x \in A\} </mrow>
-          <mrow>&amp;= A </mrow>
-        </md>
-      </p>
-    </statement>
-  </example>
-
-  <exercise>
     <statement>
       <p>
         Prove that if <m>S</m> is any set:
@@ -80,23 +66,65 @@
         </ol>
       </p>
     </solution>
-  </exercise>
+  </example>
 
+  <example>
+    <statement>
+      <p>
+        Prove the following identities:
+        <ol>
+          <li>
+            <m>
+              A \cup \phi = A
+            </m>
+          </li>
+          <li>
+            <m>A \subseteq (A \cup B)</m>
+          </li>
+          <li>
+            <m>A \cap (A \cup B) = A</m>
+          </li>
+          <li>
+            <m>\overline{A \cup B} = \overline{A} \cap \overline{B}</m>
+          </li>
+          <li>
+            <m>A \cap (A \cup B) = A</m>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
 
-    
-    <example>
-      <statement>
-        <p>
-          Verify the following set identity by using the basic identities in the table above: <m>A \cap (A \cup B) = A</m>.
-        </p>
-      </statement>
-    </example>
 
 
 
   <exercises>
-
-
+    <exercise>
+      <statement>
+        <p>
+          Let <m>A, B, \and C</m> be sets. Prove the following identities:
+          <ol>
+            <li>
+              <m>A \cup (B \cup C) = (A \cup B) \cup C</m>
+            </li>
+            <li>
+              <m>\overline{\overline{A}} = A</m>
+            </li>
+            <li>
+              <m>A \cup (A \cap B) = A</m>
+            </li>
+            <li>
+              <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>
+            <li>
+              <m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m>
+            </li>
+            <li>
+              <m>A \subseteq B</m> if and only if <m>\overline{B} \subseteq \overline{A}</m>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
   </exercises>
 
  

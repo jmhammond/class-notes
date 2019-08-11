@@ -300,7 +300,7 @@
           Simplify the following statements (so that negation only appears right before variables).
           <ol> <li><m>\neg(p \to \neg q)</m>.</li>
           <li><m>(\neg p \vee \neg q) \to \neg (\neg q \wedge r)</m>.</li> <li><m>\neg((p \to \neg q) \vee \neg (r \wedge \neg r))</m>.</li>
-          <li> <p> It is false that if Sam is not a man then Chris is a woman, and that Chris is not a woman. </p> </li> </ol>
+          <!-- <li> <p> It is false that if Sam is not a man then Chris is a woman, and that Chris is not a woman. </p> </li> </ol> -->
         </p>
       </statement>
       <answer>
@@ -332,19 +332,19 @@
 
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
-      <statement>
-        <p>
-          Tommy Flanagan was telling you what he ate yesterday afternoon. He tells you, <q>I had either popcorn or raisins. Also, if I had cucumber sandwiches, then I had soda. But I didn't drink soda or tea.</q> Of course you know that Tommy is the worlds worst liar, and everything he says is false. What did Tommy eat?
-        </p>
+    <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
+    <!-- <exercise> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       Tommy Flanagan was telling you what he ate yesterday afternoon. He tells you, <q>I had either popcorn or raisins. Also, if I had cucumber sandwiches, then I had soda. But I didn't drink soda or tea.</q> Of course you know that Tommy is the worlds worst liar, and everything he says is false. What did Tommy eat? -->
+    <!--     </p> -->
 
-        <p>
-          Justify your answer by writing all of Tommy's statements using sentence variables (<m>P, Q, R, S, T</m>), taking their negations, and using these to deduce what Tommy actually ate.
-        </p>
-      </statement>
+    <!--     <p> -->
+    <!--       Justify your answer by writing all of Tommy's statements using sentence variables (<m>P, Q, R, S, T</m>), taking their negations, and using these to deduce what Tommy actually ate. -->
+    <!--     </p> -->
+    <!--   </statement> -->
 
-    </exercise>
+    <!-- </exercise> -->
   </exercises>
 
 </section>
