@@ -2,10 +2,30 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_logic_induction">
   <title>Mathematical Induction</title>
 
+  <!-- <theorem> -->
+  <!--   <title> -->
+  <!--       The Principle of Mathematical Induction -->
+  <!--   </title> -->
+  <!--   <statement> -->
+  <!--     <p> -->
+  <!--       Let <m>S\subseteq \N</m> be a subset of the set of natural numbers with the following properties:  -->
+  <!--       <ol> -->
+  <!--         <li> -->
+  <!--           <m>1 \in S</m> -->
+  <!--         </li> -->
+  <!--         <li> -->
+  <!--           For all <m>n\in \mathbb{N}</m>, having <m>n \in S</m> implies that <m>n+1 \in S</m>. -->
+  <!--         </li> -->
+  <!--       </ol> -->
+  <!--       Then <m>S = \N</m> -->
+  <!--     </p> -->
+  <!--   </statement> -->
+  <!-- </theorem> -->
+
   <definition>
     <statement>
       <p>
-        To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the principal of <term>math induction</term>. The process has two core steps:
+        To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the <term>principal of math induction</term>. The process has two core steps:
         <ol>
           <li>Basis step: Prove that <m>P(0)</m> is true.</li>
           <li>Inductive step: Assume that <m>P(k)</m> is true for some value of <m>k \ge 0</m> and show that <m>P(k+1)</m> is true. </li>

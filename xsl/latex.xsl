@@ -70,6 +70,13 @@ and using it for discovery of what features I actually want to modify in my own.
 <xsl:param name="exercise.divisional.solution" select="'no'" />
 
 
+<!-- bury the \require{cancel} used by mathjax when compiling latex -->
+<xsl:param name="latex.preamble.late">
+  <xsl:text> \newcommand{\require}[1]{\iffalse #1 \fi}  % bury the \require{cancel} flag needed by MathJax; latex doesn't handle it </xsl:text>
+</xsl:param>
+
+
+
 <!-- Include a style file at the end of the preamble: -->
 <!-- <xsl:param name="latex.preamble.late"> -->
 <!--   <xsl:text>%This should load all the style information that mbx does not.&#xa;</xsl:text> -->

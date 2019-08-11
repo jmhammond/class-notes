@@ -66,6 +66,7 @@
     \newcommand{\card}[1]{\left| #1 \right|}
     \newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
     \newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+    \usepackage{cancel} % do include this package to allow \cancel in latex  
   </macros>
 
   <latex-image-preamble>

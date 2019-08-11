@@ -130,16 +130,16 @@
             </li>
             <li>
               <p>
-                Plot points for the graph of <m>\mathrel{R}</m> for <m>a = 0, 1, 2, 3</m>.
-                <sidebyside width="20%">
+                Plot points for the graph of <m>\mathrel{R}</m> for <m>a =-3, -2, -1, 0, 1, 2, 3</m>.
+                <sidebyside width="50%">
                   <image xml:id="graph-relation-squares">
                     <latex-image>
                       \begin{tikzpicture}[scale=1]
-                      \draw[thin, gray!50] (0,0) grid (3, 10);
-                      \draw[&lt;-&gt;, thick] (0,10) node[left] {\(b\)} -- (0,0) -- (3.5,0) node[below right] {\(a\)};
-                      \foreach \x in {0, 1,2,3,4, 5, 6, 7, 8, 9 }
+                      \draw[thin, gray!50] (-3,0) grid (3, 10);
+                      \draw[&lt;-&gt;, thick] (0,10) node[left] {\(b\)} -- (0,0) -- (-3.5,0) -- (3.5,0) node[below right] {\(a\)};
+                      \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 }
                       \draw (0, \x) node[left] { \x};
-                      \foreach \x in {1,2,3}
+                      \foreach \x in {-3, -2, -1, 0, 1,2,3}
                       \draw (\x,0) node[below] { \x} ;
                       % \fill (1,1) circle(0.1) (2,4) circle(0.1) (3,9) circle(.1);
                       \end{tikzpicture}
@@ -415,7 +415,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <definition xml:id="def-composition-of-functions">
       <p>
         Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
-    <sidebyside width="65%">
+    <sidebyside width="75%">
       <image xml:id="composition-of-functions">
         <latex-image>
           \usetikzlibrary{calc,positioning,shapes.geometric}
@@ -427,9 +427,9 @@ b. note that the inverse of a function is always a relation, but not always a fu
           font=\footnotesize,
           >=latex,
           }
-          \node(x)[elps={1.3cm}{1cm},label={$A$}]{};
-          \node(y)[elps={2cm}{1.2cm},right=of x,label={$B$}]{};
-          \node(v)[elps={1.5cm}{.9cm},right=of y,label={$C$}]{};
+          \node(x)[elps={1cm}{1cm},label={$A$}]{};
+          \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
+          \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
           \draw[->](x)to node[above right]{$g$}(y);
           \draw[->](y)to node[above right]{$f$}(v);
           \draw[->](x)to[bend left]node[above]{$g \circ f$}(v);

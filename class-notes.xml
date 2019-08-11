@@ -63,32 +63,11 @@
       </acknowledgement>
     </frontmatter>
 
-    <!--
-        I wanted to put my thoughts on the ordering of the material somewhere, so I've chosen to place it in this comment. I will likely wonder in future semesters why I ordered the material in this way, and here I hope to address future me:
-        .
-        A note on the ordering of the content:
-        1. The course begins with logic, as it underlies everything that we do
-        a. It needs to precede set theory, so that by the time they can connect set operations to the Boolean properties
-        b. It should include mathematical induction, because that technique is used frequently through the course
-        2. Mathematical objects comes second - we need things on which to operate
-        a. Sets must necessarily precede functions
-        b. Matrices don't quite make sense in the rest of the course, but it's there so we're ready for boolean matrices and relations later in Discrete 2.
-        c. Sequences come next as they're functions on a subset of N
-        d. We solve recurrences, including induction techniques as well as two-dimensional linear homogenous sequences
-        3. Number theory comes next
-        a. We're exploring properties of sets of numbers
-        b. We employ number theoretic functions
-        c. We are using general proof and induction techniques
-        4. Counting comes at the end
-        - counting could reasonably come anywhere in the course, but I've chosen to include it at the end when we can then count via basic techniques, but also via recursion (and induction).
-
-        * This follows, in some sense, an outline of the Rosen text I've used for the previous three iterations of the course. However, I chose to move around material (namely induction and solving recurrences) so that I can employ those techniques throughout the course, rather than waiting for the end (induction was chapter 5, after number theory!) 
-    -->
-
 
     <xi:include href="./ch_basics.xml"/>
     <xi:include href="./ch_logic.xml"/>
     <xi:include href="./ch_numtheory.xml"/>
+    <xi:include href="./ch_sequences.xml"/>
     <xi:include href="./ch_counting.xml"/>
     <xi:include href="./ch_appendix.xml"/>
 
