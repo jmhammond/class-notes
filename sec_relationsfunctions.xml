@@ -415,41 +415,41 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <definition xml:id="def-composition-of-functions">
       <p>
         Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
-    <sidebyside width="75%">
-      <image xml:id="composition-of-functions">
-        <latex-image>
-          \usetikzlibrary{calc,positioning,shapes.geometric}
+        <sidebyside width="75%">
+          <image xml:id="composition-of-functions">
+            <latex-image>
+              \usetikzlibrary{calc,positioning,shapes.geometric}
 
-          \begin{tikzpicture}
-          \tikzset{
-          elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
-          node distance=3cm,
-          font=\footnotesize,
-          >=latex,
-          }
-          \node(x)[elps={1cm}{1cm},label={$A$}]{};
-          \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
-          \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
-          \draw[->](x)to node[above right]{$g$}(y);
-          \draw[->](y)to node[above right]{$f$}(v);
-          \draw[->](x)to[bend left]node[above]{$g \circ f$}(v);
-          \end{tikzpicture}
-        </latex-image>
-      </image>
-    </sidebyside>
+              \begin{tikzpicture}
+              \tikzset{
+              elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
+              node distance=3cm,
+              font=\footnotesize,
+              >=latex,
+              }
+              \node(x)[elps={1cm}{1cm},label={$A$}]{};
+              \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
+              \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
+              \draw[->](x)to node[above right]{$g$}(y);
+              \draw[->](y)to node[above right]{$f$}(v);
+              \draw[->](x)to[bend left]node[above]{$g \circ f$}(v);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
       </p>
     </definition>
 
 
 
     <!-- meh; this is basic algebra -->
-    <!-- <example> -->
-    <!--   <statement> -->
-    <!--     <p> -->
-    <!--       Let <m>f(x) = 5x-3</m> and <m>g(x) = 3x-5</m>. Find <m>f\circ g</m> and <m>g\circ f</m> -->
-    <!--     </p> -->
-    <!--   </statement> -->
-    <!-- </example> -->
+    <example>
+      <statement>
+        <p>
+          Let <m>f(x) = 5x-3</m> and <m>g(x) = 3x^2-5</m>. Find <m>f\circ g</m> and <m>g\circ f</m>
+        </p>
+      </statement>
+    </example>
 
     <example>
       <statement>
@@ -537,13 +537,13 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </exercise>
 
 
-    <example>
+    <exercise>
       <statement>
         <p>
-          Reformulate the definition of function composition, <xref ref="def-composition-of-functions"/> in order to define composition of two relations.
+          Reformulate <xref ref="def-composition-of-functions"/> in order to define composition of two relations.
         </p>
       </statement>
-    </example>
+    </exercise>
 
     <exercise>
       <statement>
@@ -608,6 +608,11 @@ b. note that the inverse of a function is always a relation, but not always a fu
             <li>
               <p>
                 Is <m>f</m> surjective? Explain.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is <m>f^{-1}</m> a function? Explain.
               </p>
             </li>
           </ol>
@@ -710,6 +715,52 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </statement>
     </exercise>
 
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Consider the function <m>f:\Z \to \Z</m> given by <m>f(n) = \begin{cases}n+1 \amp  \text{ if }n\text{ is even} \\ n-3 \amp \text{ if }n\text{ is odd} . \end{cases}
+        </m>
+        <ol>
+          <li>
+            <p>
+              Is <m>f</m> injective? Prove your answer.
+            </p>
+          </li>
+          <li>
+            <p>
+              Is <m>f</m> surjective? Prove your answer.
+            </p>
+          </li>
+        </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li><p><m>f</m> is injective.</p>
+
+            <proof>
+              <p>
+                Let <m>x</m> and <m>y</m> be elements of the domain <m>\Z</m>. Assume <m>f(x) = f(y)</m>. If <m>x</m> and <m>y</m> are both even, then <m>f(x) = x+1</m> and <m>f(y) = y+1</m>. Since <m>f(x) = f(y)</m>, we have <m>x + 1 = y + 1</m> which implies that <m>x = y</m>. Similarly, if <m>x</m> and <m>y</m> are both odd, then <m>x - 3 = y-3</m> so again <m>x = y</m>. The only other possibility is that <m>x</m> is even an <m>y</m> is odd (or visa-versa). But then <m>x + 1</m> would be odd and <m>y - 3</m> would be even, so it cannot be that <m>f(x) = f(y)</m>. Therefore if <m>f(x) = f(y)</m> we then have <m>x = y</m>, which proves that <m>f</m> is injective.
+              </p>
+            </proof>
+
+            </li>
+            <li><p><m>f</m> is surjective.</p>
+
+            <proof>
+              <p>
+                Let <m>y</m> be an element of the codomain <m>\Z</m>. We will show there is an element <m>n</m> of the domain (<m>\Z</m>) such that <m>f(n) = y</m>. There are two cases: First, if <m>y</m> is even, then let <m>n = y+3</m>. Since <m>y</m> is even, <m>n</m> is odd, so <m>f(n) = n-3 = y+3-3 = y</m> as desired. Second, if <m>y</m> is odd, then let <m>n = y-1</m>. Since <m>y</m> is odd, <m>n</m> is even, so <m>f(n) = n+1 = y-1+1 = y</m> as needed. Therefore <m>f</m> is surjective.
+              </p>
+            </proof>
+
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
     <exercise>
       <statement>
         <p>
@@ -722,6 +773,9 @@ b. note that the inverse of a function is always a relation, but not always a fu
           <li>neither injective nor surjective</li>
         </ol>
       </statement>
+      <hint>
+        Most likely, your solution will be piecewise-defined. 
+      </hint>
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -889,51 +943,6 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
-      <statement>
-        <p>
-          Consider the function <m>f:\Z \to \Z</m> given by <m>f(n) = \begin{cases}n+1 \amp  \text{ if }n\text{ is even} \\ n-3 \amp \text{ if }n\text{ is odd} . \end{cases}
-        </m>
-        <ol>
-          <li>
-            <p>
-              Is <m>f</m> injective? Prove your answer.
-            </p>
-          </li>
-          <li>
-            <p>
-              Is <m>f</m> surjective? Prove your answer.
-            </p>
-          </li>
-        </ol>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          <ol>
-            <li><p><m>f</m> is injective.</p>
-
-            <proof>
-              <p>
-                Let <m>x</m> and <m>y</m> be elements of the domain <m>\Z</m>. Assume <m>f(x) = f(y)</m>. If <m>x</m> and <m>y</m> are both even, then <m>f(x) = x+1</m> and <m>f(y) = y+1</m>. Since <m>f(x) = f(y)</m>, we have <m>x + 1 = y + 1</m> which implies that <m>x = y</m>. Similarly, if <m>x</m> and <m>y</m> are both odd, then <m>x - 3 = y-3</m> so again <m>x = y</m>. The only other possibility is that <m>x</m> is even an <m>y</m> is odd (or visa-versa). But then <m>x + 1</m> would be odd and <m>y - 3</m> would be even, so it cannot be that <m>f(x) = f(y)</m>. Therefore if <m>f(x) = f(y)</m> we then have <m>x = y</m>, which proves that <m>f</m> is injective.
-              </p>
-            </proof>
-
-            </li>
-            <li><p><m>f</m> is surjective.</p>
-
-            <proof>
-              <p>
-                Let <m>y</m> be an element of the codomain <m>\Z</m>. We will show there is an element <m>n</m> of the domain (<m>\Z</m>) such that <m>f(n) = y</m>. There are two cases: First, if <m>y</m> is even, then let <m>n = y+3</m>. Since <m>y</m> is even, <m>n</m> is odd, so <m>f(n) = n-3 = y+3-3 = y</m> as desired. Second, if <m>y</m> is odd, then let <m>n = y-1</m>. Since <m>y</m> is odd, <m>n</m> is even, so <m>f(n) = n+1 = y-1+1 = y</m> as needed. Therefore <m>f</m> is surjective.
-              </p>
-            </proof>
-
-            </li>
-          </ol>
-        </p>
-      </solution>
-    </exercise>
 
     <definition>
       <p>
@@ -968,19 +977,19 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </statement>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
-      <statement>
-        <p>
-          At the end of the semester a teacher assigns letter grades to each of her students. Is this a function? If so, what sets make up the domain and codomain, and is the function injective, surjective, bijective, or neither?
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Yes, this is a function, if you choose the domain and codomain correctly. The domain will be the set of students, and the codomain will be the set of possible grades. The function is almost certainly not injective, because it is likely that two students will get the same grade. The function might be surjective <ndash/> it will be if there is at least one student who gets each grade.
-        </p>
-      </solution>
-    </exercise>
+    <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
+    <!-- <exercise> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       At the end of the semester a teacher assigns letter grades to each of her students. Is this a function? If so, what sets make up the domain and codomain, and is the function injective, surjective, bijective, or neither? -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!--   <solution> -->
+    <!--     <p> -->
+    <!--       Yes, this is a function, if you choose the domain and codomain correctly. The domain will be the set of students, and the codomain will be the set of possible grades. The function is almost certainly not injective, because it is likely that two students will get the same grade. The function might be surjective <ndash/> it will be if there is at least one student who gets each grade. -->
+    <!--     </p> -->
+    <!--   </solution> -->
+    <!-- </exercise> -->
 
     
   </exercises>

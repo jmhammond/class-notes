@@ -79,7 +79,15 @@
     <theorem>
       <statement>
         <p>
-          For every set <m>S, \phi \subseteq S</m> and <m> \subseteq S</m>.
+          For every set <m>S</m>,
+          <ul>
+            <li>
+              <m>\phi \subseteq S</m> and 
+            </li>
+            <li>
+              <m>S \subseteq S</m>.
+            </li>
+          </ul>
         </p>
       </statement>
     </theorem>
