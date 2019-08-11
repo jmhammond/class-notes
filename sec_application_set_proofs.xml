@@ -2,127 +2,87 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_application_set_proofs">
   <title> Application: Set Equivalences </title>
 
-
-    <note>
+  <definition>
+    <title>Set operations defined via logic</title>
+    <statement>
       <p>
-        The following is a listing of common identities for set operations. An <term>identity</term> is a statement which is true if we replace the variables with specific sets.
+        Let <m>A \and B</m> be sets.
+        <ol>
+          <li>
+            <m>A \subseteq B \iff (x \in A) \to (x \in B)</m>
+          </li>
+          <li>
+            <m>x \in A \cup B  \iff x \in A \lor x \in B</m>
+          </li>
+          
+          <li>
+            <m>x \in A \cap B  \iff x \in A \land x \in B</m>
+          </li>
+          
+          <li>
+            <m>x \in A \setminus B  \iff x \in A \land x \not\in B</m>
+          </li>
+          <li>
+            <m>A = B</m> if and only if <m>A \subseteq B</m> and <m>B \subseteq A</m>.
+          </li>
+        </ol>
       </p>
-    </note>
+    </statement>
+  </definition>
 
-    <table xml:id="table-setidentities">
-      <!-- table modified from https://github.com/klevasseur/ads //-->
-      <caption>Set Identities</caption>
-      <tabular  halign="center">
-        <row>	
-          <cell></cell>
-          <cell>Commutative Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell> <m>A \cup  B= B\cup A</m>  </cell>
-          <cell></cell>
-          <cell> <m>A \cap B= B \cap A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Associative Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>(A \cup  B) \cup C =  A \cup  (B \cup  C)</m></cell>
-          <cell></cell>
-          <cell>(<m>A \cap B) \cap C= A \cap  (B \cap  C)</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Distributive Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cap  (B \cup  C) =  (A \cap  B ) \cup  (A \cap  C)</m></cell>
-          <cell></cell>
-          <cell><m>A \cup  (B \cap  C) =  (A \cup  B) \cap (A \cup C)</m> </cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Identity Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cup  \phi= A</m></cell>
-          <cell></cell>
-          <cell> <m>A \cap  U = A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Negation Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A\cap \overline{A}= \phi</m></cell>
-          <cell></cell>
-          <cell> <m>A\cup \overline{A}= U</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Idempotent Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cup  A = A</m> </cell>
-          <cell></cell>
-          <cell>  <m>A\cap A = A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Domination Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cap \phi = \phi</m> </cell>
-          <cell></cell>
-          <cell> <m>A \cup  U = U</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Absorption Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cap (A\cup  B)= A</m></cell>
-          <cell></cell>
-          <cell><m>A \cup  (A \cap  B) =  A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>DeMorgan's Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>\overline{(A \cup  B)} =  \overline{A} \cap  \overline{B}</m></cell>
-          <cell></cell>
-          <cell><m>\overline{(A \cap  B)} =  \overline{A} \cup  \overline{B}</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Double Negation Law</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell></cell>
-          <cell> <m>\overline{\overline{A}}= A</m></cell>
-          <cell></cell>
-        </row>
-      </tabular>
-    </table>
 
-    <exercise>
-      <statement>
-        <p>
-          Confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.
-        </p>
-      </statement>
-    </exercise>
+  <example>
+    <statement>
+      <p>
+        The set identities are true as an extension of logic. For example, the identity <m>A \cup \phi = A</m> is:
+        <md>
+          <mrow>A \cup \phi &amp;= \{ x \mid x \in A \lor x \in \phi\} </mrow>
+          <mrow>&amp;= \{x \in A \lor F \} </mrow>
+          <mrow>&amp;= \{x \in A\} </mrow>
+          <mrow>&amp;= A </mrow>
+        </md>
+      </p>
+    </statement>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove that if <m>S</m> is any set:
+        <ol>
+          <li>
+            <m>\phi \subseteq S</m>
+          </li>
+          <li>
+            <m>S \subseteq S</m>
+          </li> 
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              The logical statement we're trying to prove is <m>(x \in phi) \to (x \in S)</m>
+            </p>
+            <p>
+              Assume that <m>x \in \phi</m>. This is false, since nothing is in the empty set. That means that the conditional statement <m>(x \in \phi) \to (x\in S)</m> is vacuously true. Thus <m>\phi \subseteq S</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The logical statement we're trying to prove is <m>(x \in S) \to (x\in S)</m>
+            </p>
+            <p>
+              Assume that <m>x \in S</m>. Then <m>x \in S</m> is trivially true. Thus <m>S \subseteq S</m>.
+            </p>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+
     
     <example>
       <statement>
@@ -132,19 +92,6 @@
       </statement>
     </example>
 
-    <example>
-      <statement>
-        <p>
-          The set identities are true as an extension of logic. For example, the identity <m>A \cup \phi = A</m> is:
-          <md>
-            <mrow>A \cup \phi &amp;= \{ x \mid x \in A \lor x \in \phi\} </mrow>
-            <mrow>&amp;= \{x \in A \lor F \} </mrow>
-            <mrow>&amp;= \{x \in A\} </mrow>
-            <mrow>&amp;= A </mrow>
-          </md>
-        </p>
-      </statement>
-    </example>
 
 
   <exercises>
