@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_sequences">
-  <title>Mathematical Objects</title>
+  <title>Sequences, Recurrence, and Induction</title>
 
   <xi:include href="./sec_objects_seqseries.xml"/>
 
