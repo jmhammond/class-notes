@@ -39,7 +39,7 @@
       <p>
         <note>
           <p>
-            We use <m>p \to q \equiv \neg p \vee q</m> often enough that this has a name. Those from WSU's intro to logic class call it <term>implication</term>
+            We use <m>p \to q \equiv \neg p \vee q</m> often enough that this has a name. We'll call it <term>implication</term>
           </p>
         </note>
       </p>
@@ -300,7 +300,8 @@
           Simplify the following statements (so that negation only appears right before variables).
           <ol> <li><m>\neg(p \to \neg q)</m>.</li>
           <li><m>(\neg p \vee \neg q) \to \neg (\neg q \wedge r)</m>.</li> <li><m>\neg((p \to \neg q) \vee \neg (r \wedge \neg r))</m>.</li>
-          <!-- <li> <p> It is false that if Sam is not a man then Chris is a woman, and that Chris is not a woman. </p> </li> </ol> -->
+          <!-- <li> <p> It is false that if Sam is not a man then Chris is a woman, and that Chris is not a woman. </p> </li>  -->
+          </ol>
         </p>
       </statement>
       <answer>

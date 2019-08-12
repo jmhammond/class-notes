@@ -23,9 +23,9 @@
       <p>
         Consider the following argument:
         <ul>
-          <li> If your inbox is full, then you can't receive emails. </li>
-          <li>Your inbox is full.</li>
-          <li>Therefore you can't receive emails.</li>
+          <li>If you give a mouse a cookie, then he'll ask for a glass of milk.</li>
+          <li>You gave a mouse a cookie.</li>
+          <li>Therefore he asked for a glass of milk.</li>
         </ul>
       </p>
       <p>
@@ -416,7 +416,5 @@
     </exercise>
 
   </exercises>
-
-
 
 </section>

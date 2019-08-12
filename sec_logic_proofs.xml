@@ -61,8 +61,8 @@
     <statement>
       <p>
         <ol>
-          <li> 7 is rational since <m>7 = \dfrac{7}{1}</m> </li>
-          <li> <m>\frac12</m> is rational, since both 1 and 2 are integers, 2 is non-zero </li>
+          <li> 7 is rational since <m>7 =  \frac71</m> </li>
+          <li> <m>\frac12</m> is rational, since both 1 and 2 are integers</li>
         </ol>
       </p>
     </statement>
@@ -871,6 +871,5 @@
       </solution>
     </exercise>
   </exercises>
-
 
 </section>
