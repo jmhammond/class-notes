@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-primes">
+  <title>Prime Numbers</title>
+
+  <definition>
+    <statement>
+      <p>
+        A positive integer <m>p</m> is called <term>prime</term> if the only positive factors of <m>p</m> are <m>1 \and p</m> itself.
+      </p>
+      <p>
+        A positive integer which is not prime is called <m>composite</m>
+      </p>
+    </statement>
+  </definition>
+
+  <note>
+    <statement>
+      <p>
+        1 is neither prime nor composite. It's called a <term>unit</term>.
+      </p>
+    </statement>
+  </note>
+
+  <theorem>
+    <title>
+      The Fundamental Theorem of Arithmetic
+    </title>
+    <statement>
+      <p>
+        Every integer greater than 1 can be written as a product of primes, and this product is unique up to the ordering of the prime factors.
+      </p>
+    </statement>
+  </theorem>
+
+  <example>
+    <statement>
+      <p>
+        Find the prime factorization of the following:
+        <ol>
+          <li> 124 </li>
+          <li> 81 </li>
+          <li> 941 </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+
+  <theorem>
+    <statement>
+      <p>
+        If <m>n</m> is a composite number, then <m>n</m> has a prime divisor less than or equal to <m>\sqrt{n}</m>.
+      </p>
+    </statement>
+    <proof>
+      <statement>
+        <p>
+          Assume, to the contrary, that every prime divisor of <m>n</m> is greater than <m>\sqrt{n}</m>. Since <m>n</m> is composite, it has at least two prime factors, <m>p_1, p_2</m> so that <m>n = p_1 p_2 b</m> where <m>b</m> is positive integer. But since <m>p_1 \and p_2</m> are a prime divisors of <m>n</m>, they are necessarily larger than  <m>\sqrt{n}</m>. So:
+          <me> n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb</me>
+          But since <m>n</m> is composite and <m>b\in \Z^+</m>, <m>n\gt nb</m> is a contradiction.
+        </p>
+      </statement>
+    </proof>
+  </theorem>
+
+  <example>
+    <title>Brute Force Trial Division</title>
+    <statement>
+      <p>
+        To determine if a number <m>n</m> is prime, one only needs to test all possible prime divisors up to <m>\sqrt{n}</m>.
+      </p>
+      <p>
+        Use trial division to determine that 251 is prime.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Sieve of Eratosthenes</title>
+    <statement>
+      <p>
+        In order to generate a list of all prime numbers less than or equal to <m>n</m>, start with a tabular listing  of integers from 1 to <m>n</m>:
+        <ol>
+          <li> Cross off the number 1. </li>
+          <li>
+            <p>
+              Continuing until you reach <m>\sqrt{n}</m>:
+              <ol>
+                <li> Circle the next, non-crossed out number. It's prime. </li>
+                <li> Cross out every multiple of this number. </li>
+                <li> Repeat. </li>
+              </ol>
+            </p>
+          </li>
+        </ol>
+
+      </p>
+      <p>
+        Run the Sieve on this table of integers from 1 to 100.
+      </p>
+
+      <table>
+        <caption>Integers from 1 to 100</caption>
+        <tabular>
+          <row>
+            <cell>
+              1
+            </cell>
+            <cell>
+              2
+            </cell>
+            <cell>
+              3
+            </cell>
+            <cell>
+              4
+            </cell>
+            <cell>
+              5
+            </cell>
+            <cell>
+              6
+            </cell>
+            <cell>
+              7
+            </cell>
+            <cell>
+              8
+            </cell>
+            <cell>
+              9
+            </cell>
+            <cell>
+              10
+            </cell>
+          </row>
+          <row>
+            <cell>
+              11
+            </cell>
+            <cell>
+              12
+            </cell>
+            <cell>
+              13
+            </cell>
+            <cell>
+              14
+            </cell>
+            <cell>
+              15
+            </cell>
+            <cell>
+              16
+            </cell>
+            <cell>
+              17
+            </cell>
+            <cell>
+              18
+            </cell>
+            <cell>
+              19
+            </cell>
+            <cell>
+              20
+            </cell>
+          </row>
+          <row>
+            <cell>
+              21
+            </cell>
+            <cell>
+              22
+            </cell>
+            <cell>
+              23
+            </cell>
+            <cell>
+              24
+            </cell>
+            <cell>
+              25
+            </cell>
+            <cell>
+              26
+            </cell>
+            <cell>
+              27
+            </cell>
+            <cell>
+              28
+            </cell>
+            <cell>
+              29
+            </cell>
+            <cell>
+              30
+            </cell>
+          </row>
+          <row>
+            <cell>
+              31
+            </cell>
+            <cell>
+              32
+            </cell>
+            <cell>
+              33
+            </cell>
+            <cell>
+              34
+            </cell>
+            <cell>
+              35
+            </cell>
+            <cell>
+              36
+            </cell>
+            <cell>
+              37
+            </cell>
+            <cell>
+              38
+            </cell>
+            <cell>
+              39
+            </cell>
+            <cell>
+              40
+            </cell>
+          </row>
+          <row>
+            <cell>
+              41
+            </cell>
+            <cell>
+              42
+            </cell>
+            <cell>
+              43
+            </cell>
+            <cell>
+              44
+            </cell>
+            <cell>
+              45
+            </cell>
+            <cell>
+              46
+            </cell>
+            <cell>
+              47
+            </cell>
+            <cell>
+              48
+            </cell>
+            <cell>
+              49
+            </cell>
+            <cell>
+              50
+            </cell>
+          </row>
+          <row>
+            <cell>
+              51
+            </cell>
+            <cell>
+              52
+            </cell>
+            <cell>
+              53
+            </cell>
+            <cell>
+              54
+            </cell>
+            <cell>
+              55
+            </cell>
+            <cell>
+              56
+            </cell>
+            <cell>
+              57
+            </cell>
+            <cell>
+              58
+            </cell>
+            <cell>
+              59
+            </cell>
+            <cell>
+              60
+            </cell>
+          </row>
+          <row>
+            <cell>
+              61
+            </cell>
+            <cell>
+              62
+            </cell>
+            <cell>
+              63
+            </cell>
+            <cell>
+              64
+            </cell>
+            <cell>
+              65
+            </cell>
+            <cell>
+              66
+            </cell>
+            <cell>
+              67
+            </cell>
+            <cell>
+              68
+            </cell>
+            <cell>
+              69
+            </cell>
+            <cell>
+              70
+            </cell>
+          </row>
+          <row>
+            <cell>
+              71
+            </cell>
+            <cell>
+              72
+            </cell>
+            <cell>
+              73
+            </cell>
+            <cell>
+              74
+            </cell>
+            <cell>
+              75
+            </cell>
+            <cell>
+              76
+            </cell>
+            <cell>
+              77
+            </cell>
+            <cell>
+              78
+            </cell>
+            <cell>
+              79
+            </cell>
+            <cell>
+              80
+            </cell>
+          </row>
+          <row>
+            <cell>
+              81
+            </cell>
+            <cell>
+              82
+            </cell>
+            <cell>
+              83
+            </cell>
+            <cell>
+              84
+            </cell>
+            <cell>
+              85
+            </cell>
+            <cell>
+              86
+            </cell>
+            <cell>
+              87
+            </cell>
+            <cell>
+              88
+            </cell>
+            <cell>
+              89
+            </cell>
+            <cell>
+              90
+            </cell>
+          </row>
+          <row>
+            <cell>
+              91
+            </cell>
+            <cell>
+              92
+            </cell>
+            <cell>
+              93
+            </cell>
+            <cell>
+              94
+            </cell>
+            <cell>
+              95
+            </cell>
+            <cell>
+              96
+            </cell>
+            <cell>
+              97
+            </cell>
+            <cell>
+              98
+            </cell>
+            <cell>
+              99
+            </cell>
+            <cell>
+              100
+            </cell>
+          </row>
+        </tabular>
+      </table>
+    </statement>
+  </example>
+
+
+  <proposition>
+    <statement>
+      <p>
+        There are infinitely many primes.
+      </p>
+    </statement>
+  </proposition>
+
+  <exercises>
+
+    <exercise>
+      <statement>
+        <p>
+          Find the prime factorization of each of the following integers:
+          <ol>
+            <li>39  </li>
+            <li>125  </li>
+            <li>101  </li>
+            <li>143  </li>
+            <li>289  </li>
+            <li>899  </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Find the prime factorization of <m>10!</m> (10 factorial, not <q>yay ten!</q>)
+        </p>
+      </statement>
+    </exercise>
+
+  </exercises>
+</section>
