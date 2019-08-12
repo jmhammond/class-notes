@@ -50,10 +50,10 @@
         <ol>
           <li>
             <p>
-              The logical statement we're trying to prove is <m>(x \in phi) \to (x \in S)</m>
+              The logical statement we're trying to prove is <m>(x \in \phi) \to (x \in S)</m>
             </p>
             <p>
-              Assume that <m>x \in \phi</m>. This is false, since nothing is in the empty set. That means that the conditional statement <m>(x \in \phi) \to (x\in S)</m> is vacuously true. Thus <m>\phi \subseteq S</m>.
+              Assume that <m>x \in \phi</m>. This is false, since nothing is in the empty set. That means that the conditional statement <m>(x \in \phi) \to (x\in S)</m> is vacuously true, since the conditional <m>F \to p</m> is always true. Thus <m>\phi \subseteq S</m>.
             </p>
           </li>
           <li>
@@ -94,6 +94,17 @@
         </ol>
       </p>
     </statement>
+    <solution>
+      <p>
+        We'll prove the first via an <q>iff</q> argument:
+        <md>
+          <mrow> x\in A \cup \phi \amp \iff x \in A \lor x\in \phi</mrow>
+          <mrow> \amp \iff x\in A \lor F</mrow>
+          <mrow> \amp \iff x\in A </mrow>
+        </md>
+        thus <m>A \cup \phi = A</m>.
+      </p>
+    </solution>
   </example>
 
 
