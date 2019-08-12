@@ -63,6 +63,7 @@
             <p>
               Assume that <m>x \in S</m>. Then <m>x \in S</m> is trivially true. Thus <m>S \subseteq S</m>.
             </p>
+          </li>
         </ol>
       </p>
     </solution>
@@ -115,6 +116,7 @@
             </li>
             <li>
               <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>
+            </li>
             <li>
               <m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m>
             </li>
