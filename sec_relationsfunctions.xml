@@ -164,7 +164,7 @@
     <example xml:id="example-relation-inverses">
       <statement>
         <p>
-          For the purposes of this exercise, the universe of discourse for numeric sets is <m>\R</m> and the universe of discourse for <m>R_4</m> and <m>R_5</m> are the set of people. The inverse of the relation <m>R = \{(x, y) \mid y = 2x + 1\}</m> has the inverse <m>R^{-1} = \{(x, y) \mid y = (x-1)/2\}</m>. Use this form to give inverses of the following relations:
+          For the purposes of this exercise, the universe of discourse for numeric sets is <m>\R</m> and the universe of discourse for <m>R_4</m> and <m>R_5</m> are the set of people. For example, the relation <m>R = \{(x, y) \mid y = 2x + 1\}</m> has the inverse <m>R^{-1} = \{(x, y) \mid y = (x-1)/2\}</m>. Use this form to give inverses of the following relations:
           <ol>
             <li>
               <m>R_1 = \{ (x,y) \mid y = -3x + 2\}</m>
@@ -342,7 +342,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <note>
       <statement>
         <p>
-          As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function to have an inverse, the function must be bijective.
+          As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function to have an inverse <em>function</em>, the function must be bijective.
         </p>
       </statement>
     </note>
@@ -350,7 +350,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <example>
       <statement>
         <p>
-          For the bijection(s) found in example <xref ref="example-bijections"/>, find the inverse function.
+          For the bijection(s) found in <xref ref="example-bijections"/>, find the inverse function.
         </p>
       </statement>
     </example>
@@ -470,6 +470,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
             <p> and for <m>a \in A</m>, we have <me>(f^{-1} \circ f)(a) = f^{-1}(f(a)) = f^{-1}(b) = a \in A</me> </p>
           </li>
         </ul>
+        That is, the inverse <q>undoes</q> a function.
       </p>
     </note>
 
@@ -478,8 +479,6 @@ b. note that the inverse of a function is always a relation, but not always a fu
   </subsection>
 
   <exercises>
-
-    <!-- TODO write some exercises for the relations section //--> 
 
     <exercise>
       <statement>
@@ -988,7 +987,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <!--     <p> -->
     <!--       Yes, this is a function, if you choose the domain and codomain correctly. The domain will be the set of students, and the codomain will be the set of possible grades. The function is almost certainly not injective, because it is likely that two students will get the same grade. The function might be surjective <ndash/> it will be if there is at least one student who gets each grade. -->
     <!--     </p> -->
-    <!--   </solution> -->
+   <!--   </solution> -->
     <!-- </exercise> -->
 
     
