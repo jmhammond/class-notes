@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-prop-supplementatal">
-    <title>Chapter Review</title>
-    <introduction>
-      <p>
-        This section includes additional practice problems for the chapter on propositional logic.
-      </p>
-    </introduction>
+  <title>Chapter Review</title>
+  <introduction>
+    <p>
+      This section includes additional practice problems for the chapter on propositional logic.
+    </p>
+  </introduction>
   <exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exercises_logic-conc">
 
     <exercise xml:id="tt">
@@ -614,5 +614,5 @@
       </statement>
 
     </exercise>
-</exercises>
+  </exercises>
 </section>
