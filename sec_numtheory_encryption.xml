@@ -10,7 +10,7 @@
     <p>
       Our convention will be to use only capital English letters, A to Z. We will identify each letter with the remainders modulo 26. We won't encrypt punctuation, either.:
       <table>
-        <caption>List of Alphabet Encoding</caption>
+        <title>List of Alphabet Encoding</title>
         <tabular>
           <col right="minor"/>
           <col left="minor"/>

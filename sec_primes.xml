@@ -100,7 +100,7 @@
       </p>
 
       <table>
-        <caption>Integers from 1 to 100</caption>
+        <title>Integers from 1 to 100</title>
         <tabular>
           <row>
             <cell>

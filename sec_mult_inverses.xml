@@ -21,7 +21,7 @@
       <p>
         Here's the multiplication table. Remember to reduce modulo 9. 
         <table>
-          <caption>Multiplication table of 4 modulo 9</caption>
+          <title>Multiplication table of 4 modulo 9</title>
           <tabular halign="center">
             <row bottom="medium">
               <cell right="medium">

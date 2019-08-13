@@ -1,7 +1,7 @@
 STYLESHEETS_DIR = ~/src/mathbook/xsl
 
 html:
-	xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.knowl.proof no   $(STYLESHEETS_DIR)/mathbook-html.xsl class-notes.xml
+	xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.knowl.proof no -stringparam html.google-search 015422183392601792159:vae7vvmmczm $(STYLESHEETS_DIR)/mathbook-html.xsl class-notes.xml
 
 all: html pdf
 

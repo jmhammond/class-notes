@@ -47,7 +47,7 @@
     <solution>
       Here's the solution for <m>(\neg p \to (q \wedge \neg q)) \equiv p</m>:
       <table xml:id="table-contradiction-valid">
-        <caption>Showing <m>( \neg p \to (q \wedge \neg q)  )\leftrightarrow p</m> is a tautology</caption>
+        <title>Showing <m>( \neg p \to (q \wedge \neg q)  )\leftrightarrow p</m> is a tautology</title>
         <tabular  halign="center">
           <row bottom="medium">
             <cell><m>p</m></cell>
@@ -106,7 +106,7 @@
 
   <table xml:id="table-equivalences">
     <!-- table modified from https://github.com/klevasseur/ads //-->
-    <caption>Logical Equivalences</caption>
+    <title>Logical Equivalences</title>
     <tabular  halign="center">
       <row>	
         <cell></cell>
