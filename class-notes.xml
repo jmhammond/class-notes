@@ -6,12 +6,25 @@
   <book xml:id="discrete-class-notes">
     <title>Math 321 Class Notes</title>
     <frontmatter>
+      <titlepage>
+        <author>
+          <personname>John Hammond</personname>
+          <email>hammond@math.wichita.edu</email>
+          <department>Department of Mathematics and Statistics</department>
+          <institution>Wichita State University</institution>
+        </author>
+      </titlepage>
+
       <colophon>
         <copyright>
           <holder>John Hammond</holder>
           <year>2018-2019</year>
           <minilicense>Creative Commons BY-SA</minilicense>
         </copyright>
+        <website>
+          <name>Class Notes Website</name>
+          <address>http://www.math.wichita.edu/discrete-book</address>
+        </website>
       </colophon>
       <preface>
         <p>
@@ -21,7 +34,7 @@
               MATH 321.  Discrete Structures I
             </p>
             <p>
-            Cross-listed as CS 321. Provides a mathematical foundation essential to the entire computer science curriculum. Includes propositional and predicate logic, induction, recursion and counting techniques. Prerequisite: MATH 242 or equivalent with a grade point of 2.000 or better.
+              Cross-listed as CS 321. Provides a mathematical foundation essential to the entire computer science curriculum. Includes propositional and predicate logic, induction, recursion and counting techniques. Prerequisite: MATH 242 or equivalent with a grade point of 2.000 or better.
             </p>
           </blockquote>
         </p>
@@ -30,29 +43,13 @@
           We'll be exploring these areas, along with enough number theory to do an interesting application to encryption. 
         </p>
         <p>
-          This course is very different that your past math courses. Keep an open mind, and as my son has said, <q>try. Fail. Try. Fail. Try. Succeed!</q> And please ask questions. This might be the <q>hardest</q> math class you take, but it can also be one of the most rewarding.
+          This course is very different that your past math courses. Keep an open mind, and please ask questions! This might be the <q>hardest</q> math class you take, but it can also be one of the most rewarding.
         </p>
       </preface>
 
-      <titlepage>
-      <author>
-        <personname>John Hammond</personname>
-        <department>Department of Mathematics and Statistics</department>
-        <institution>Wichita State University</institution>
-      </author>
-      </titlepage>
-
-      <website>
-        <p>
-
-        <name>Class Notes Website</name>
-        <address>http://www.math.wichita.edu/discrete-book</address>
-        </p>
-      </website>
-
       <acknowledgement>
         <p>
-        This book borrows heavily from the exercises of Oscar Levin's <url href="https://github.com/oscarlevin/discrete-book">Discrete Mathematics: An Open Introduction</url>.
+          This book borrows heavily from the exercises of Oscar Levin's <url href="https://github.com/oscarlevin/discrete-book">Discrete Mathematics: An Open Introduction</url>.
         </p>
         <p>
           The material in section <xref ref="section-counting-fib"/> was first discovered in Arthur Benjamin and Jennifer Quinn's <pubtitle>Proofs that Really Count: The Art of Combinatorial Proof</pubtitle>, and the exercises in that section come from that book, and influenced every choice of Fibonacci sequence problem in the remainder of the text.
