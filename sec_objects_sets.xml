@@ -56,7 +56,7 @@
     <definition>
       <p>
         We say that <m>A</m> is a <term>subset</term> of <m>B</m>, and write <m>A \subseteq B</m> if every element of <m>A</m> is an element of <m>B</m>.
-        <me>A \subseteq B \iff \forall x (x \in A \to x \in B)</me>
+        <!-- <me>A \subseteq B \iff \forall x (x \in A \to x \in B)</me> -->
         If there is an element of <m>B</m> which is not also in <m>A</m>, we say that <m>A</m> is a <term>proper subset</term> of <m>B</m> and write <m>A \subset B</m>.
         <me>A \subset B \iff \forall x (x \in A \to x \in B) \text{ and } \exists y (y\in B \text{ and } y \not \in A) </me>
       </p>
@@ -66,11 +66,12 @@
       </p>
     </definition>
 
-    <!-- I wrote this example, but I don't think it adds anything to the conversation. -->
+    <!-- todo keep working on this -->
+
     <!-- <example> -->
     <!--   <statement> -->
     <!--     <p> -->
-    <!--       Put the following sets in order: <m>\N, \C, \Q, \Z, \Z^+, \R</m>. -->
+    <!--       Make a Venn diagram of Put the following sets in order: <m>\N, \C, \Q, \Z, \Z^+, \R</m>. -->
     <!--     </p> -->
     <!--   </statement> -->
     <!-- </example> -->
@@ -681,40 +682,6 @@
       </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
-      <statement>
-        <p>
-          Recall <m>\Z = \{\ldots,-2,-1,0, 1,2,\ldots\}</m> (the integers). Let <m>\Z^+ = \{1, 2, 3, \ldots\}</m> be the positive integers. Let <m>2\Z</m> be the even integers, <m>3\Z</m> be the multiples of 3, and so on.
-          <ol> <li> <p> Is <m>\Z^+ \subseteq 2\Z</m>? Explain. </p> </li>
-            <li> <p> Is <m>2\Z \subseteq \Z^+</m>? Explain. </p> </li>
-            <li> <p> Find <m>2\Z \cap 3\Z</m>. Describe the set in words, and using set notation. </p> </li>
-          </ol>
-        </p>
-      </statement>
-
-      <solution>
-        <p>
-          <ol>
-            <li> <p> No. </p> </li>
-            <li> <p> No. </p> </li>
-            <li><m>2\Z \cap 3\Z</m> is the set of all integers which are multiples of both 2 and 3 (so multiples of 6). Therefore <m>2\Z \cap 3\Z = \{x \in \Z \st \exists y\in \Z(x = 6y)\}</m>.</li>
-            <li><m>2\Z \cup 3\Z</m>.</li>
-          </ol>
-        </p>
-      </solution>
-    </exercise>
-
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
-      <statement>
-        <p>
-          Let <m>A_2</m> be the set of all multiples of 2 except for <m>2</m>. Let <m>A_3</m> be the set of all multiples of 3 except for 3. And so on, so that <m>A_n</m> is the set of all multiple of <m>n</m> except for <m>n</m>, for any <m>n \ge 2</m>. Describe (in words) the set <m>\bar{A_2 \cup A_3 \cup A_4 \cup \cdots}</m>.
-        </p>
-      </statement>
-
-
-    </exercise>
 
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -992,6 +959,42 @@
         </p>
       </statement>
     </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Let <m>A_2</m> be the set of all multiples of 2 except for <m>2</m>. Let <m>A_3</m> be the set of all multiples of 3 except for 3. And so on, so that <m>A_n</m> is the set of all multiple of <m>n</m> except for <m>n</m>, for any <m>n \ge 2</m>. Describe (in words) the set <m>\bar{A_2 \cup A_3 \cup A_4 \cup \cdots}</m>.
+        </p>
+      </statement>
+
+
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Recall <m>\Z = \{\ldots,-2,-1,0, 1,2,\ldots\}</m> (the integers). Let <m>\Z^+ = \{1, 2, 3, \ldots\}</m> be the positive integers. Let <m>2\Z</m> be the even integers, <m>3\Z</m> be the multiples of 3, and so on.
+          <ol> <li> <p> Is <m>\Z^+ \subseteq 2\Z</m>? Explain. </p> </li>
+            <li> <p> Is <m>2\Z \subseteq \Z^+</m>? Explain. </p> </li>
+            <li> <p> Find <m>2\Z \cap 3\Z</m>. Describe the set in words, and using set notation. </p> </li>
+          </ol>
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          <ol>
+            <li> <p> No. </p> </li>
+            <li> <p> No. </p> </li>
+            <li><m>2\Z \cap 3\Z</m> is the set of all integers which are multiples of both 2 and 3 (so multiples of 6). Therefore <m>2\Z \cap 3\Z = \{x \in \Z \st \exists y\in \Z(x = 6y)\}</m>.</li>
+            <li><m>2\Z \cup 3\Z</m>.</li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
 
   </exercises>
 
