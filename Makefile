@@ -32,3 +32,11 @@ images:
 
 # Here's the rsync command that probably works for me.
 # rsync -zartv --include "*/" --include="*.html" --exclude="*" ./  ~/public_html/notes-staging
+
+update-the-webs:
+	echo "Updating wichita.edu/discretebook"
+	git checkout master
+	make publish-to-web
+	echo "Updating wichita.edu/discreteOnline"
+	git checkout onlineCourse
+	make online
