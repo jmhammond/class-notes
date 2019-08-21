@@ -247,11 +247,11 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </example>
 
     <definition>
-      <p>
+      <p><!-- TODO: a future revision, use different letters. a and b suggest particular set relationship... oops! -->
         A function <m>f</m> is said to be  <term>injective</term> or <term>one-to-one</term> if and only if <m>f(a) = f(b)</m> means that <m>a = b</m> for all <m>a \text{ and } b</m> in the domain of <m>f</m>. 
-        <me>
-          f \text{ is injective means }  \forall a, b ((f(a) = f(b)) \to (a = b))
-        </me>
+        <!-- <me> -->
+        <!--   f \text{ is injective means }  \forall a, b ((f(a) = f(b)) \to (a = b)) -->
+        <!-- </me> -->
       </p>
     </definition>
 
@@ -280,9 +280,9 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <definition>
       <p>
         A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>surjective</term> or <term>onto</term> if and only if for every element <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = B</m>. 
-        <me>
-          f \text{ is surjective means } \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) ) 
-        </me>
+        <!-- <me> -->
+        <!--   f \text{ is surjective means } \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) )  -->
+        <!-- </me> -->
       </p>
     </definition>
 
