@@ -37,7 +37,7 @@
         Prove that if <m>S</m> is any set:
         <ol>
           <li>
-            <m>\phi \subseteq S</m>
+            <m>\emptyset \subseteq S</m>
           </li>
           <li>
             <m>S \subseteq S</m>
@@ -50,10 +50,10 @@
         <ol>
           <li>
             <p>
-              The logical statement we're trying to prove is <m>(x \in \phi) \to (x \in S)</m>
+              The logical statement we're trying to prove is <m>(x \in \emptyset) \to (x \in S)</m>
             </p>
             <p>
-              Assume that <m>x \in \phi</m>. This is false, since nothing is in the empty set. That means that the conditional statement <m>(x \in \phi) \to (x\in S)</m> is vacuously true, since the conditional <m>F \to p</m> is always true. Thus <m>\phi \subseteq S</m>.
+              Assume that <m>x \in \emptyset</m>. This is false, since nothing is in the empty set. That means that the conditional statement <m>(x \in \emptyset) \to (x\in S)</m> is vacuously true, since the conditional <m>F \to p</m> is always true. Thus <m>\emptyset \subseteq S</m>.
             </p>
           </li>
           <li>
@@ -76,7 +76,7 @@
         <ol>
           <li>
             <m>
-              A \cup \phi = A
+              A \cup \emptyset = A
             </m>
           </li>
           <li>
@@ -98,11 +98,11 @@
       <p>
         We'll prove the first via an <q>iff</q> argument:
         <md>
-          <mrow> x\in A \cup \phi \amp \iff x \in A \lor x\in \phi</mrow>
+          <mrow> x\in A \cup \emptyset \amp \iff x \in A \lor x\in \emptyset</mrow>
           <mrow> \amp \iff x\in A \lor F</mrow>
           <mrow> \amp \iff x\in A </mrow>
         </md>
-        thus <m>A \cup \phi = A</m>.
+        thus <m>A \cup \emptyset = A</m>.
       </p>
     </solution>
   </example>

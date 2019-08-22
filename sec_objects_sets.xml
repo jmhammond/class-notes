@@ -41,7 +41,7 @@
       <p>
         Here are some special sets we will visit often throughout the course and the rest of your mathematical career: 
         <dl>
-          <li> <m>\phi = \{\}</m> is the <term>empty set</term> consisting of no elements.</li>
+          <li> <m>\emptyset = \{\}</m> is the <term>empty set</term> consisting of no elements.</li>
           <li> <m> \mathbb{N} = \{0, 1, 2, 3, 4, \dots \}</m> is the set of <term>natural numbers</term>. </li>
           <li> <m> \mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \}</m> is the set of <term>integers</term>. </li>
           <li> <m> \mathbb{Z}^+ = \{1, 2, 3, \dots \}</m> is the set of <term>positive integers</term>. </li>
@@ -83,7 +83,7 @@
           For every set <m>S</m>,
           <ul>
             <li>
-              <m>\phi \subseteq S</m> and 
+              <m>\emptyset \subseteq S</m> and 
             </li>
             <li>
               <m>S \subseteq S</m>.
@@ -110,7 +110,7 @@
           </li>
           <li><m>\{1, 2\}</m></li>
           <li>
-            <m>\phi</m>
+            <m>\emptyset</m>
           </li>
         </ol>
       </statement>
@@ -136,7 +136,7 @@
           </li>
           <li><m>|\pow(\{a, b, c \})|</m></li>
           <li>
-            <m>|\phi|</m>
+            <m>|\emptyset|</m>
           </li>
         </ol>
       </statement>
@@ -383,7 +383,7 @@
           <cell></cell>
         </row>
         <row bottom="medium">
-          <cell><m>A \cup  \phi= A</m></cell>
+          <cell><m>A \cup  \emptyset= A</m></cell>
           <cell></cell>
           <cell> <m>A \cap  U = A</m></cell>
         </row>
@@ -393,7 +393,7 @@
           <cell></cell>
         </row>
         <row bottom="medium">
-          <cell><m>A\cap \overline{A}= \phi</m></cell>
+          <cell><m>A\cap \overline{A}= \emptyset</m></cell>
           <cell></cell>
           <cell> <m>A\cup \overline{A}= U</m></cell>
         </row>
@@ -413,7 +413,7 @@
           <cell></cell>
         </row>
         <row bottom="medium">
-          <cell><m>A \cap \phi = \phi</m> </cell>
+          <cell><m>A \cap \emptyset = \emptyset</m> </cell>
           <cell></cell>
           <cell> <m>A \cup  U = U</m></cell>
         </row>
@@ -470,9 +470,9 @@
   <!--   <example> -->
   <!--     <statement> -->
   <!--       <p> -->
-  <!--         The set identities are true as an extension of logic. For example, the identity <m>A \cup \phi = A</m> is: -->
+  <!--         The set identities are true as an extension of logic. For example, the identity <m>A \cup \emptyset = A</m> is: -->
   <!--         <md> -->
-  <!--           <mrow>A \cup \phi &amp;= \{ x \mid x \in A \lor x \in \phi\} </mrow> -->
+  <!--           <mrow>A \cup \emptyset &amp;= \{ x \mid x \in A \lor x \in \emptyset\} </mrow> -->
   <!--           <mrow>&amp;= \{x \in A \lor F \} </mrow> -->
   <!--           <mrow>&amp;= \{x \in A\} </mrow> -->
   <!--           <mrow>&amp;= A </mrow> -->

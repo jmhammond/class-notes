@@ -82,7 +82,7 @@
             </li>
             <li>
               <p>
-                If <m>A \cap B = \phi</m>, then <m>|A\cup B| = |A| + |B|</m>
+                If <m>A \cap B = \emptyset</m>, then <m>|A\cup B| = |A| + |B|</m>
               </p>
             </li>
           </ol> 
