@@ -9,7 +9,7 @@
     <definition>
       <statement>
         <p>
-          A mathematical <term>relation, <m>\mathrel{R}</m>, between two sets <m>A</m> and <m>B</m></term> is a collection of ordered pairs from the two sets. Symbollically, we write <m>\mathrel{R} = \{ (a,b) \mid a\in A \and b\in B\}</m>, or <m>\mathrel{R} \subseteq A \times B</m>.
+          A mathematical <term>relation, <m>\mathrel{R}</m>, between two sets <m>A</m> and <m>B</m></term> is a collection of ordered pairs from the two sets. Expressed symbolically, <m>\mathrel{R} \subseteq A \times B</m>.
         </p>
         <p>
           We call set <m>A</m> the <term>domain</term> and the set <m>B</m> the <term>codomain</term>.
