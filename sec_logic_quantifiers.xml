@@ -143,7 +143,7 @@
         </md>
       </p>
       <p>
-        It might help to think <q>not all...</q> is equivalent to <q>some... do</q>. While <q>there isn't one who...</q> is the same as <q>no one does...</q>.
+        It might help to think <q>not all...</q> is equivalent to <q>some... do not</q>. While <q>there isn't one who...</q> is the same as <q>no one does...</q>.
       </p>
     </definition>
     <note>
@@ -158,7 +158,7 @@
           For each negation below, write the statement using quantifiers to confirm each is correct.
           <ol>
             <li>
-              The negation of <q>There exists a green horse</q> is <q>No horse is green</q>.
+              The negation of <q>There exists a green horse</q> is <q>No horse is green.</q>
             </li>
             <li>
               The negation of <q>All people wear hats</q> is the statement <q>Some person doesn't wear hats</q>.
