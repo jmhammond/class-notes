@@ -476,14 +476,14 @@
             In this activity, you will generate a public/private key-pair. You will send me the public key and keep your private key secret (but don't lose it! If you lose your private key, you won't be able to complete the assignment and will receive no credit).
 
             <ol>
-              <li> Pick two prime numbers <m>p \and q</m> of some interesting side. Make them at least six or seven digits long (use Sage's <c>next_prime</c>). </li>
+              <li> Pick two prime numbers <m>p \and q</m> of some interesting size. Make them at least six or seven digits long (use Sage's <c>next_prime</c>). </li>
               <li> Let <m>m=(p-1)(q-1)</m>, and pick any number <m>e</m> relatively prime to <m>m</m>. </li>
               <li> Find the multiplicative inverse of <m>d</m> of <m>e</m> modulo <m>m</m>.</li>
               <li> Let <m>n = pq</m>. </li>
               <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
               <li>
                 <p>
-                  Send me your public key on Slack as:
+                  Send me your public key on via email as:
                   <cd>
                     n = 15244346903
                     e = 751 
