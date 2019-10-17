@@ -160,7 +160,7 @@
     <statement>
       <p>
         Verify the following formula for the sum of a geometric sequence, if <m>r \not= 1</m>,
-        <me>\sum_{k=0}^n ar^n = \frac{a-ar^{n+1}}{1-r}</me>.
+        <me>\sum_{k=0}^n ar^k = \frac{a-ar^{n+1}}{1-r}</me>.
       </p>
     </statement>
   </example>
