@@ -7,7 +7,7 @@
   <subsection>
     <title>Motivation, or, why do I care?</title>
     <p>
-      Let's imagine that we wanted to find the 10,000th term of the sequence <m>a_n = a_{n-2}</m> with <m>a_0 =1, a_1 = 3</m>. The sequence is very simple: <m>\{1, 3, 1, 3, 1, 3, \dots\}</m>.
+      Let's imagine that we wanted to find the 10,000th term of the sequence <m>{ a_n = a_{n-2} }</m> with <m>{ a_0 =1, a_1 = 3 }</m>. The sequence is very simple: <m>{ \{1, 3, 1, 3, 1, 3, \dots\} }</m>.
     </p>
     <p>
       It turns out that the solution to this recurrence is <m>a_n = 2+(-1)^{n+1}</m>. We can directly compute the value, and it takes SageMath about 150 microseconds to give us the answer:

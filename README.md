@@ -5,7 +5,7 @@ The interactive version of the text is [available here](http://www.math.wichita.
 
 The objective of the project is to have a set of notes ready for my students to have with them during class. Definitions will be immediately in front of them, and examples and propositions will be already written out. My plan is that during the lecture I can address "Example 2.1.1," and we can work out the solution at that time, in their own note-taking devices. 
 
-The notes will be sell-contained in the sense that it will include all of the assigned and supplemental exercises for the course, but it is also a 'workbook' in that it will not have worked-out examples and proofs.
+The notes will be self-contained in the sense that it will include all of the assigned and supplemental exercises for the course, but it is also a 'workbook' in that it will not have worked-out examples and proofs.
 
 In the interest putting everything on the table, I've discussed this with my Math 322 students in Fall 2018, and they all indicated that they wished that I had done it for their 321 course the semester before. I just hope that my new 321 students feel the same way... :-) 
 
