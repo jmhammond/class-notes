@@ -587,6 +587,9 @@ try:
     which_function[what_to_do]()
 except KeyError:
     print("Please set the variable what_to_do to either 'encrypt' or 'decrypt'.")
+except IndexError:
+    print("There's a problem: I can't decrypt your message.")
+    print("You probably have the value of d wrong... \\nDouble check your computations of d, n, m, etc (d needs to be positive, for example)")
       </input>
     </sage>
     </p>
