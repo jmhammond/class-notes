@@ -78,7 +78,7 @@
   <example>
     <statement>
       <p>
-        Prove that <m>a + ar + ar^2 + ar^3 + \dots + ar^n = \frac{ar^{k+1}-a}{r-1}</m> if <m>r \ne 1</m>.
+        Prove that <m>a + ar + ar^2 + ar^3 + \dots + ar^n = \frac{ar^{n+1}-a}{r-1}</m> if <m>r \ne 1</m>.
       </p>
     </statement>
   </example>
