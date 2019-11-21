@@ -1682,21 +1682,6 @@
     <example>
       <statement>
         <p>
-          For <m>n\ge 0,\, f_0 + f_2 + f_4 + \dots + f_{2n} = f_{2n+1}</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Condition on the location of the last square.
-        </p>
-      </hint>
-    </example>
-
-
-    <!-- This exercise comes from an identity in Proofs that Really Count -->
-    <example>
-      <statement>
-        <p>
           For <m>n \ge 0,\, \binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \dots + \binom{n-n}{n} = f_n</m>. 
         </p>
         <p>
