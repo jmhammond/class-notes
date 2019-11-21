@@ -958,7 +958,7 @@
           <p>
             Let <m>x \and y</m> be variables and <m>n</m> a natural number, then 
             <me>
-              (x+y)^n = \sum_{k=0}^n \binom{n}{k} x^{n} y^{n-k}
+              (x+y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} y^{k}
             </me>
           </p>
         </statement>
@@ -1162,7 +1162,16 @@
       <example>
         <statement>
           <p>
-            Give a combinatorial proof of the identities <m>\binom{n}0 = 1</m>. What question should we answer?
+            Give a combinatorial proof of the identities:
+            <ol>
+              <li>
+                <m>\binom{n}0 = 1</m>.
+              </li>
+              <li>
+                <m>\binom{n}{k} = \binom{n}{n-k}</m>
+              </li>
+            </ol>
+            For each, what question should we answer?
           </p>
         </statement>
       </example>
