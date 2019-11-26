@@ -20,6 +20,10 @@
     </statement>
   </example>
 
+  <p>
+    One way in which we could determine the multiplicative inverse of a number <m>a</m> modulo <m>n</m> (if it exists), is to find every single multiple of those numbers modulo <m>n</m>. If we can find a number <m>b</m> so that <m>ab \equiv 1 \pmod{n}</m>, then we've found an inverse!
+  </p>
+
   <example>
     <statement>
       <p>
@@ -158,6 +162,10 @@
     </statement>
   </example>
 
+  <p>
+    The multiplication table might work for small values of <m>n</m>, but it is certainly tedious. We next introduce a way to determine an inverse procedurally.
+  </p>
+
   <proposition>
     <statement>
       <p>
@@ -176,6 +184,23 @@
       </p>
     </statement>
   </note>
+
+<example>
+  <statement>
+    <p>
+      <ol>
+        <li>
+          Find the inverse of <m>6</m> modulo 29
+        </li>
+        <li>
+          Use that inverse to solve the linear congruence <m>6x + 3 = 1 \pmod{29} </m>
+        </li>
+      </ol>
+    </p>
+  </statement>
+</example>
+
+
 
   <exercises>
     <exercise>
