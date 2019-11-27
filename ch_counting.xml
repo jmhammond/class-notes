@@ -449,19 +449,11 @@
 
 
 
-      <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+      <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
       <exercise>
         <statement>
-          <p> Let <m>A</m>, <m>B</m>, and <m>C</m> be sets.
-          <ol>
-            <li>
-              Find <m>\card{(A \cup C)\setminus B}</m> provided <m>\card{A} = 50</m>, <m>\card{B} = 45</m>, <m>\card{C} = 40</m>, <m>\card{A\cap B} = 20</m>, <m>\card{A \cap C} = 15</m>, <m>\card{B \cap C} = 23</m>, and <m>\card{A \cap B \cap C} = 12</m>.
-            </li>
-            <li>
-              Describe a set in terms of <m>A</m>, <m>B</m>, and <m>C</m> with cardinality 26.
-            </li>
-
-          </ol>
+          <p>
+            Let <m>A</m>, <m>B</m>, and <m>C</m> be sets. Find <m>\card{(A \cup C)\setminus B}</m> provided <m>\card{A} = 50</m>, <m>\card{B} = 45</m>, <m>\card{C} = 40</m>, <m>\card{A\cap B} = 20</m>, <m>\card{A \cap C} = 15</m>, <m>\card{B \cap C} = 23</m>, and <m>\card{A \cap B \cap C} = 12</m>.
           </p>
         </statement>
       </exercise>
