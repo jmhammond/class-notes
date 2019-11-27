@@ -998,6 +998,7 @@
       </p>
       <sidebyside width="80%">
         <image xml:id="pascal-small">
+          <description>Pascal's triangle</description>
           <latex-image>
             \begin{tikzpicture}
             \def\r{.5}
@@ -1488,6 +1489,7 @@
         </p>
         <p>
           <image xml:id="tilings-of-4board">
+            <description>Tilings of a 4-board: 4sq; 1dom, 2sq; sq, dom, sq; 2sq, 1dom; 2dom</description>
             <latex-image>
               % tilings of a 4 board:
               \begin{tikzpicture}[scale=1.0]
@@ -1559,6 +1561,7 @@
         
         <p>
           <image xml:id="tiling-5-board">
+            <description>Tiling a 5-board: The 5-board is a 4-board with square plus a 3-board plus domino</description>
             <latex-image>
               \begin{tikzpicture}[scale=1.0]
               \foreach \col in {0,2,3}{

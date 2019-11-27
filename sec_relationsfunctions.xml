@@ -29,6 +29,7 @@
         <sbsgroup>
           <sidebyside width="60%">
             <image xml:id="graph-sib">
+              <description>Standard Cartesian graph showing my siblings; dot means related</description>
               <latex-image>
                 \begin{tikzpicture}[scale=1]
                 \draw[thin, gray!50] (0,0) grid (4, 4);
@@ -43,6 +44,7 @@
           </sidebyside>
           <sidebyside width="30%">
             <image xml:id="my-family-graph">
+              <description>Graph showing lines connect each sibling; line means connected</description>
               <latex-image>
                 \begin{tikzpicture}
                 \coordinate (A)  at (0,3);
@@ -88,6 +90,7 @@
               Complete the following graph of the relation below, where a point on <m>(x,y)</m> means that <m>x </m> divides evenly into <m>y</m>. 
         <sidebyside width="50%">
           <image xml:id="graph-relation-blank">
+            <description>'blank' Cartesian graph to complete</description>
             <latex-image>
               \begin{tikzpicture}[scale=1]
               \draw[thin, gray!50] (0,0) grid (10.5, 10.5);
@@ -133,6 +136,7 @@
                 Plot points for the graph of <m>\mathrel{R}</m> for <m>a =-3, -2, -1, 0, 1, 2, 3</m>.
                 <sidebyside width="50%">
                   <image xml:id="graph-relation-squares">
+                    <description>Cartesian graph plotting squares</description>
                     <latex-image>
                       \begin{tikzpicture}[scale=1]
                       \draw[thin, gray!50] (-3,0) grid (3, 10);
@@ -417,6 +421,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
         Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
         <sidebyside width="75%">
           <image xml:id="composition-of-functions">
+            <description>Composition of functions</description>
             <latex-image>
               \usetikzlibrary{calc,positioning,shapes.geometric}
 
@@ -636,6 +641,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
         Consider the function <m>f:\{1,2,3,4\} \to \{1,2,3,4\}</m> given by the graph below.</p>
         <sidebyside width="45%">
           <image xml:id="graph-function-ques">
+            <description>Graph of the function f</description>
             <latex-image>
               \begin{tikzpicture}[scale=1]
               \draw[thin, gray!50] (0,0) grid (4.5, 4.5);
