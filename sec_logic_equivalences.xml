@@ -248,6 +248,26 @@
   </example>
 
   <exercises>
+
+    <exercise>
+      <statement>
+        <p>
+          Use a truth table to show that each of these statements are a tautology:
+          <ol>
+            <li>
+              <m>(p \land  q) \Rightarrow  q</m>
+            </li>
+            <li>
+              <m>p\Rightarrow (p\lor q)</m>
+            </li>
+            <li>
+              <m>(p \lor  q) \land  \neg p \Rightarrow  q</m>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
