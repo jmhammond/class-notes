@@ -331,13 +331,13 @@
         <p> Construct a truth table for each of the following statements:
         <ol>
           <li>
-            <m>p \to (\neg q \vee r)</m>
-          </li>
-          <li>
             <m>p \wedge \neg q</m>
           </li>
           <li>
             <m>(p \to q) \wedge (\neg p \to q)</m>
+          </li>
+          <li>
+            <m>p \to (\neg q \vee r)</m>
           </li>
           <li>
             <m>(p\wedge r) \vee (q \wedge r)</m>
