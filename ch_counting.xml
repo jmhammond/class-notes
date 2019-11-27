@@ -47,6 +47,14 @@
     <example>
       <statement>
         <p>
+          There are 30 people in a club. Assuming everyone is qualified to serve in any position, how many different ways are there to assign a president, vice-president, secretary, and treasurer?
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
           How many playing cards in a standard deck are both red and face cards? 
         </p>
       </statement>
@@ -119,15 +127,6 @@
       </statement>
     </example>
 
-
-
-    <example>
-      <statement>
-        <p>
-          There are 30 people in a club. Assuming everyone is qualified to serve in any position, how many different ways are there to assign a president, vice-president, secretary, and treasurer?
-        </p>
-      </statement>
-    </example>
 
 
     <note>
