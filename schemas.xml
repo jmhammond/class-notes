@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+  <namespace ns="http://www.w3.org/1999/xhtml" uri="xhtml.rnc"/>
+  <namespace ns="http://www.w3.org/2001/XInclude" uri="../mathbook/schemas/pretext.rnc"/>
+  <documentElement localName="chapter" uri="../mathbook/schemas/pretext.rnc"/>
+  <documentElement localName="pretext" uri="../mathbook/schemas/pretext.rnc"/>
+  <documentElement localName="section" uri="../mathbook/schemas/pretext.rnc"/>
+</locatingRules>
