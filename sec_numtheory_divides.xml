@@ -284,38 +284,6 @@
       </statement>
     </exercise>
 
-    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
-      <statement>
-        <p>
-          Prove that 6 divides <m>7^n - 1</m> for all <m>n \in \N</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-         (Alternative idea to the below proof) In the inductive step add and subtract <m>7^k</m>. That is, you'll have <m>7\cdot 7^{k} - 1 - 7^k + 7^k</m>. Now algebra.
-        </p>
-      </hint>
-      <solution>
-
-        <proof>
-          <p>
-            Let <m>P(n)</m> be the statement <q>6 divides <m>7^n - 1</m>.</q> We will show <m>P(n)</m> is true for all <m>n \in \N</m>. First we establish the base case, <m>P(0)</m>. Since <m>7^0 - 1 = 0</m>, and <m>0</m> is a multiple of 6, <m>P(0)</m> is true. Now for the inductive case. Assume <m>P(k)</m> holds for an arbitrary <m>k \in \N</m>. That is, 6 divides <m>7^k - 1</m>, or in other words, <m>7^k - 1 = 6j</m> for some integer <m>j</m>. Now consider <m>7^{k+1} - 1</m>:
-            <md>
-              <mrow> 7^{k+1} - 1 ~ \amp = 7^{k+1} - 7 + 6 \amp \text{by cleverness:} -1 = -7 + 6</mrow>
-              <mrow> \amp = 7(7^k - 1) + 6 \amp \text{factor out a 7 from the first two terms}</mrow>
-              <mrow> \amp = 7(6j) + 6 \amp \text{by the inductive hypothesis}</mrow>
-              <mrow> \amp = 6(7j + 1) \amp \text{factor out a 6}</mrow>
-            </md>
-          </p>
-
-          <p>
-            Therefore 6 divides <m>7^{k+1} - 1</m>, or in other words, <m>P(k+1)</m> is true. Therefore by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \in \N</m>.
-          </p>
-        </proof>
-
-      </solution>
-    </exercise>
 
 
 

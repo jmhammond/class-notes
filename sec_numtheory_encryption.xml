@@ -478,7 +478,7 @@
             <ol>
               <li> Pick two prime numbers <m>p \and q</m> of some interesting size. Make them at least six or seven digits long (use Sage's <c>next_prime</c>). </li>
               <li> Let <m>m=(p-1)(q-1)</m>, and pick any number <m>e</m> relatively prime to <m>m</m>. </li>
-              <li> Find the multiplicative inverse of <m>d</m> of <m>e</m> modulo <m>m</m>.</li>
+              <li> Find the multiplicative inverse, <m>d</m>, of <m>e</m> modulo <m>m</m>.</li>
               <li> Let <m>n = pq</m>. </li>
               <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
               <li>

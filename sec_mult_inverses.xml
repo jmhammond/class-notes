@@ -4,6 +4,22 @@
     Multiplicative Inverses
   </title>
 
+  <definition>
+    <statement>
+      <p>
+        Let <m>a</m> be an integer and <m>m</m> a positive integer. We define a <term>multiplicative inverse of <m>a</m> modulo <m>m</m></term> to be an integer <m>b</m> such that <m>ab \equiv 1 \pmod{m}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Since <m>5\cdot 3 \equiv 1 \pmod{7}</m>, we say that <m>3</m> is a multiplicative inverse of 5 modulo 7. Similarly, 5 is a multiplicative inverse of 3 modulo 7.
+      </p>
+    </statement>
+  </example>
+
   <example>
     <statement>
       <p>

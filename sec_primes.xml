@@ -462,5 +462,17 @@
       </statement>
     </exercise>
 
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Prove that every prime number greater than 3 is either one more or one less than a multiple of 6.
+        </p>
+      </statement>
+      <hint>
+        <p>Prove the contrapositive by cases.</p>
+      </hint>
+
+    </exercise>
   </exercises>
 </section>

@@ -808,19 +808,6 @@
     </exercise>
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-    <!-- TODO NOTE: This might be better in the primes chapter; for fall 2019, we'll move it --> 
-    <exercise>
-      <statement>
-        <p>
-          Prove that every prime number greater than 3 is either one more or one less than a multiple of 6.
-        </p>
-      </statement>
-      <hint>
-        <p>Prove the contrapositive by cases.</p>
-      </hint>
-
-    </exercise>
 
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
