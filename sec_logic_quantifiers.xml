@@ -235,7 +235,7 @@
             <li><m>\exists x (x^2 = -1)</m></li>
             <li><m>\forall x (x^2 + 2 \ge 1)</m></li>
             <li><m>\forall x (2x > 2)</m></li>
-            <li><m>\forall x (x+4)^2 = x^2 + 16</m></li>
+            <li><m>\forall x ((x+4)^2 = x^2 + 16)</m></li>
           </ol>
         </p>
       </statement>
