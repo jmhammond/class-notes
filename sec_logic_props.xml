@@ -104,7 +104,7 @@
             <li>If <m>p</m>, then <m>q</m>. </li>
             <li><m>p</m> implies <m>q</m>. </li>
             <li><m>p</m> only if <m>q</m>. </li>
-            <li><m>p</m> if sufficient for <m>q</m>. </li>
+            <li><m>p</m> is sufficient for <m>q</m>. </li>
             <li> <m>q</m> is necessary for <m>p</m>. </li>
             <li> <m>q</m> if <m>p</m>. </li>
             <li> <m>q</m> whenever <m>p</m>. </li>

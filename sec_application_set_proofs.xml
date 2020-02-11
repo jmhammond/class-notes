@@ -89,7 +89,7 @@
             <m>\overline{A \cup B} = \overline{A} \cap \overline{B}</m>
           </li>
           <li>
-            <m>A \cap (A \cup B) = A</m>
+            <m>A \cap (B \cup C) = (A \cap B) \cup (A \cap C)</m>
           </li>
         </ol>
       </p>
