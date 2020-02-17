@@ -769,13 +769,13 @@
               3 = \frac{a^2}{b^2}
             </me>
           <me>
-            b^2 3 = a^2
+            3b^2  = a^2
           </me>
         </p>
           <p>
             So <m>a^2</m> is a multiple of 3. This can only happen if <m>a</m> is a multiple of 3, so <m>a = 3k</m> for some integer <m>k</m>. Then we have
             <me>
-              b^2 3 = 9k^2
+              3b^2 = 9k^2
             </me>
           <me>
             b^2 = 3k^2
@@ -878,6 +878,35 @@
           Try a proof by contradiction. What is the negation of this statement?
         </p>
       </hint>
+      <solution>
+        <p>
+          The negation of the statement is <m>a^2 + b^2 = c^2</m> and both
+          <m>a</m> and <m>b</m> are odd.
+        </p>
+        <proof>
+          <statement>
+            <p>
+              Assume that <m>a</m> and <m>b</m> are both odd and that <m>a^2 +b^2 = c^2</m>. Then there exist integers <m>k</m> and <m>l</m> such that <m>a=2k+1</m> and <m>b=2k+1</m>.
+            </p>
+            <p>
+              First, we observe that
+              <md>
+                <mrow>a^2 + b^2 \amp= (2k+1)^2 + (2l+1)^2 </mrow>
+                <mrow> \amp = 4k^2 + 4k + 1 + 4l^2 + 4l + 1 </mrow>
+                <mrow> \amp = 4k^2 + 4k + 4l^2 + 4l + 2 </mrow>
+              </md>
+              so that <m>c^2</m> and hence <m>c</m> is even.  Let <m>c=2m</m> where <m>m</m> is some integer. Then:
+              <md>
+                <mrow>c^2 \amp = a^2 + b^2 </mrow>
+                <mrow>(2k)^2 \amp = 4k^2 + 4k + 4l^2 + 4l + 2 </mrow>
+                <mrow>4k^2 \amp = 4(k^2 + k + l^2 + l) + 2 </mrow>
+              </md>
+              This is a contradiction as we have a multiple of four being equal to something which is not a multiple of four.  Thus, our original assumption was incorrect and therefore if <m>a^2 + b^2 = c^2</m>, we conclude that one of <m>a</m> or <m>b</m> is even.
+            </p>
+          </statement>
+        </proof>
+      </solution>
+
     </exercise>
 
 
@@ -888,6 +917,36 @@
           Prove: <m>x=y</m> if and only if <m>xy=\dfrac{(x+y)^2}{4}</m>. Note, you will need to prove two <q>directions</q> here: the <q>if</q> and the <q>only if</q> part.
         </p>
       </statement>
+
+      <solution>
+        <p>
+          <proof>
+            <statement>
+              <p>
+                <q><m>\to</m></q> Assume that <m>x = y</m>, and consider:
+                <md>
+                  <mrow> \dfrac{(x+y)^2}{4} \amp=  \dfrac{(x+x)^2}{4} </mrow>
+                  <mrow> \amp=  \dfrac{(2x)^2}{4} </mrow>
+                  <mrow> \amp=  x^2 </mrow>
+                  <mrow> \amp=  xy </mrow>
+                </md>
+              </p>
+              <p>
+                <q><m>\leftarrow</m></q> Assume that <m> \dfrac{(x+y)^2}{4} =  xy</m> Then:
+                <md>
+                  <mrow> \dfrac{(x+y)^2}{4} \amp=  xy </mrow>
+                  <mrow> (x+y)^2 \amp= 4xy  </mrow>
+                  <mrow> x^2 + 2xy + y^2 \amp= 4xy  </mrow>
+                  <mrow> x^2 - 2xy + y^2 \amp= 0  </mrow>
+                  <mrow> (x-y)^2 \amp= 0  </mrow>
+                  <mrow> x \amp y </mrow>
+                </md>
+              </p>
+            </statement>
+          </proof>
+        </p>
+      </solution>
+
 
     </exercise>
 
