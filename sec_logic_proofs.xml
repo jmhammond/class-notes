@@ -999,6 +999,65 @@
         </p>
       </statement>
 
+      <solution>
+        <p>
+          <proof>
+            <statement>
+              <p>
+                Assume, to the contrary, that there is an integer solution, <m>(a, b)</m>, to the equation <m>x^2 = 4y + 3</m> We'll split this into four cases:
+                <p> Case 1: <m>x</m> is odd and <m>y</m> is even.
+                Then there exist integers <m>k</m> and <m>l</m> such that <m>x=2k+1</m> and <m>y = 2l</m>. Plugging this into the equation, we have:
+                <md>
+                  <mrow>x^2 \amp= 4y +3 </mrow>
+                  <mrow>(2k+1)^2 \amp= 4(2l) +3 </mrow>
+                  <mrow>4k^2 + 4k + 1 \amp= 8l +3 </mrow>
+                  <mrow>4k^2 + 4k - 8l \amp= 2</mrow>
+                  <mrow>4(k^2 + k - 2l) \amp= 2</mrow>
+                </md>
+                This is not possible, as 2 is not a multiple of 4.
+                </p>
+                <p> Case 2: <m>x</m> is even and <m>y</m> is odd.
+                Then there exist integers <m>k</m> and <m>l</m> such that <m>x=2k</m> and <m>y = 2l+1</m>. Plugging this into the equation, we have:
+                <md>
+                  <mrow>x^2 \amp= 4y +3 </mrow>
+                  <mrow>(2k)^2 \amp= 4(2l+1) +3 </mrow>
+                  <mrow>4k^2 \amp= 8l +4  +3 </mrow>
+                  <mrow>4k^2 - 8l \amp= 7</mrow>
+                  <mrow>4(k^2 - 2l) \amp= 7</mrow>
+                </md>
+                This is not possible, as 7 is not a multiple of 4.
+                </p>
+                <p> Case 3: <m>x</m> and <m>y</m> are both even.
+                Then there exist integers <m>k</m> and <m>l</m> such that <m>x=2k</m> and <m>y = 2l</m>. Plugging this into the equation, we have:
+                <md>
+                  <mrow>x^2 \amp= 4y +3 </mrow>
+                  <mrow>(2k)^2 \amp= 4(2l) +3 </mrow>
+                  <mrow>4k^2 \amp= 8l  +3 </mrow>
+                  <mrow>4k^2 - 8l \amp= 3</mrow>
+                  <mrow>4(k^2 - 2l) \amp= 3</mrow>
+                </md>
+                This is not possible, as 3 is not a multiple of 4.
+                </p>
+                <p> Case 4: <m>x</m> and <m>y</m> are both odd.
+                Then there exist integers <m>k</m> and <m>l</m> such that <m>x=2k</m> and <m>y = 2l</m>. Plugging this into the equation, we have:
+                <md>
+                  <mrow>x^2 \amp= 4y +3 </mrow>
+                  <mrow>(2k+1)^2 \amp= 4(2l+1) +3 </mrow>
+                  <mrow>4k^2 +4k + 1\amp= 8l + 4  +3 </mrow>
+                  <mrow>4k^2 +4k - 8l \amp= 6</mrow>
+                  <mrow>4(k^2 +k  - 2l) \amp= 6</mrow>
+                </md>
+                This is also not possible, as 6 is not a multiple of 4.
+                </p>
+                Since we've exhausted every possible combination of integer solutions, we conclude that there is no integer solution to the equation <m>x^2 = 4y+3</m>.
+              </p>
+              </statement>
+          </proof>
+
+        </p>
+      </solution>
+
+
     </exercise>
 
 
