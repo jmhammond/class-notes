@@ -170,16 +170,20 @@
           Prove that if <m>m+n</m> and <m>n + p</m> are even integers, then <m>m+p</m> is even.
         </p>
       </statement>
-        <statement>
-          Assume that <m>m + n</m> and <m>n+p</m> are even integers. Then there exist
-          integers <m>k \and l</m> such that <m>m +n = 2k</m> and <m>n + p= 2l</m>.
-          Solving for <m>m</m> in the first equation and <m>p</m> in the second,
-          we find:
-          <me> m = 2k - n \and p = 2l - n</me>.
-          Adding them together, we arrive at:
-          <me> m + p = (2k - n) + (2l -n) = 2k + 2l - 2n = 2(k + l -n)</me>
-          Therefore <m>m +p</m> is an even integer.
-        </statement>
+      <solution>
+        <proof>
+          <statement>
+            Assume that <m>m + n</m> and <m>n+p</m> are even integers. Then there exist
+            integers <m>k \and l</m> such that <m>m +n = 2k</m> and <m>n + p= 2l</m>.
+            Solving for <m>m</m> in the first equation and <m>p</m> in the second,
+            we find:
+            <me> m = 2k - n \and p = 2l - n</me>.
+            Adding them together, we arrive at:
+            <me> m + p = (2k - n) + (2l -n) = 2k + 2l - 2n = 2(k + l -n)</me>
+            Therefore <m>m +p</m> is an even integer.
+          </statement>
+        </proof>
+      </solution>
     </example>
     
   </subsection>
@@ -688,6 +692,17 @@
           You do not need to provide details for the proofs (since you do not know what solitary means). However, make sure that you provide the first few and last few lines of the proofs so that we can see that logical structure you would follow.
         </p>
       </statement>
+
+      <solution>
+        <p>
+          <ol>
+            <li>Assume that <m>n</m> is a prime number. <m>\dots</m> Therefore <m>n</m> is solitary.</li>
+            <li>Assume that <m>n</m> is solitary. <m>\dots</m> Therefore <m>n</m> is a prime number by contraposition.</li>
+            <li>Assume that <m>n</m> is a prime number and is not solitary. <m>\dots</m> This contradicts our assumption. Thus if <m>n</m> is a prime number, <m>n</m> is solitary.</li>
+          </ol>
+        </p>
+      </solution>
+
     </exercise>
 
 
@@ -702,6 +717,39 @@
           </p>
         </hint>
       </statement>
+      <solution>
+        <p>
+          <proof>
+            <statement>
+              <p>Proof by contraposition: Assume that <m>n</m> is not a multiple of three. Then:</p>
+              <p>Case 1: There exists an integer <m>k</m> such that <m>n =
+              3k+1</m>. Consider:
+              <md>
+                <mrow> n^2 \amp= (3k+1)^2 </mrow>
+                <mrow>  \amp= 9k^2 + 6k + 1</mrow>
+                <mrow>  \amp= 3(3k^2 + 2k) + 1</mrow>
+              </md>
+              Hence <m>n^2</m> is not a mulitple of three.
+              </p>
+              <p>Case 1: There exists an integer <m>l</m> such that <m>n =
+              3l+2</m>. Consider:
+              <md>
+                <mrow> n^2 \amp= (3l+2)^2 </mrow>
+                <mrow>  \amp= 9l^2 + 12l + 4</mrow>
+                <mrow>  \amp= 9l^2 + 12l + 3 + 1</mrow>
+                <mrow>  \amp= 3(3l^2 + 4l + 1) + 1</mrow>
+              </md>
+              Hence <m>n^2</m> is not a mulitple of three.
+              </p>
+              <p>
+                Thus, we have proven that if <m>n^2</m> is a multiple of three, then <m>n</m> is a multiple of three by contraposition.
+              </p>
+            </statement>
+          </proof>
+
+        </p>
+      </solution>
+
     </exercise>
 
 
