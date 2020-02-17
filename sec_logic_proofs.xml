@@ -814,6 +814,32 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <proof>
+                <statement>
+                  <p>
+                    (this is a direct proof):
+                    Assume that <m>a</m> is even <m>b</m> is a multiple of three. Then there exist integers <m>k</m> and <m>l</m> such that <m>a=2k</m> and <m>b=3l</m>.
+                    Then <m>ab = (2k)(3l) = 6kl</m>. Thus <m>ab</m> is a multiple of six.
+                  </p>
+                </statement>
+              </proof>
+            </li>
+            <li>
+              <p>
+                The converse is <q>If <m>ab</m> is a multiple of six, then <m>a</m> is even and <m>b</m> is a multiple of three. </q>
+              </p>
+              <p>
+                This is false. For example, <m>ab = 6</m> where <m>a = 6</m> and <m>b=1</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+
 
     </exercise>
 
