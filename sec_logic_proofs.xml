@@ -131,6 +131,18 @@
           Prove that the sum of two odd numbers is even.
         </p>
       </statement>
+      <!-- <solution> -->
+      <!--   <proof> -->
+      <!--     <statement> -->
+      <!--       Assume that <m>m \and n</m> are odd integers. Then there exist -->
+      <!--       integers <m>k \and l</m> such that <m>m = 2k</m> and <m>n = 2l</m>. -->
+      <!--       Adding them, we have -->
+      <!--       <me>m + n = 2k + 2l = 2(k+l)</me> -->
+      <!--       Therefore <m>m +n</m> is an even integer. -->
+      <!--     </statement> -->
+      <!--   </proof> -->
+      <!-- </solution> -->
+
     </example>
 
 
@@ -140,6 +152,16 @@
           Prove that if <m>n</m> is even, then <m>n^2</m> is even.
         </p>
       </statement>
+      <!-- <solution> -->
+      <!--   <proof> -->
+      <!--     <statement> -->
+      <!--       Assume that <m>n</m> is an even integer. Then there exists an -->
+      <!--       integer <m>k</m> such that <m>n = 2k</m>. Then -->
+      <!--       <me> n^2 = (2k)^2 = 4k^2 = 2(2k^2)</me> -->
+      <!--       Thus <m>n^2</m> is an even integer. -->
+      <!--     </statement> -->
+      <!--   </proof> -->
+      <!-- </solution> -->
     </example>
 
     <example>
@@ -148,6 +170,20 @@
           Prove that if <m>m+n</m> and <m>n + p</m> are even integers, then <m>m+p</m> is even.
         </p>
       </statement>
+      <!-- <solution> -->
+      <!--   <proof> -->
+      <!--     <statement> -->
+      <!--       Assume that <m>m + n</m> and <m>n+p</m> are even integers. Then there exist -->
+      <!--       integers <m>k \and l</m> such that <m>m +n = 2k</m> and <m>n + p= 2l</m>. -->
+      <!--       Solving for <m>m</m> in the first equation and <m>p</m> in the second, -->
+      <!--       we find: -->
+      <!--       <me> m = 2k - n \and p = 2l - n</me>. -->
+      <!--       Adding them together, we arrive at: -->
+      <!--       <me> m + p = (2k - n) + (2l -n) = 2k + 2l - 2n = 2(k + l -n)</me> -->
+      <!--       Therefore <m>m +p</m> is an even integer. -->
+      <!--     </statement> -->
+      <!--   </proof> -->
+      <!-- </solution> -->
     </example>
     
   </subsection>
@@ -176,6 +212,23 @@
             Show that if <m>n</m> is an integer and <m>n^3 + 5</m> is odd, then <m>n</m> is even.
           </p>
         </statement>
+        <!-- <solution> -->
+        <!--   <proof> -->
+        <!--     <statement> -->
+        <!--       (By contraposition) Assume that <m>n</m> is an odd integer. Then -->
+        <!--       there exists an integer <m>k</m> such that <m>n = 2k+1</m>. Then, -->
+        <!--       <md> -->
+        <!--         <mrow> n^3 + 5 \amp= (2k+1)^3 + 5 </mrow> -->
+        <!--         <mrow> \amp= 8k^3 + 12k^2 + 6k + 1 + 5 </mrow> -->
+        <!--         <mrow> \amp= 8k^3 + 12k^2 + 6k + 5 </mrow> -->
+        <!--         <mrow> \amp= 2(4k^2 + 3k + 3) </mrow> -->
+        <!--       </md> -->
+        <!--       thus <m>n^3 + 5</m> is even. Therefore, if <m>n^3 + 5</m> is odd, -->
+        <!--       <m>n</m> is even by contraposition. -->
+        <!--     </statement> -->
+        <!--   </proof> -->
+        <!-- </solution> -->
+
       </example>
       <example xml:id="example-n2even">
         <statement>
@@ -183,6 +236,18 @@
             Prove that if <m>n^2</m> is even, then <m>n</m> is even.
           </p>
         </statement>
+        <!-- <solution> -->
+        <!--   <proof> -->
+        <!--     <statement> -->
+        <!--       (By contraposition): Assume that <m>n</m> is odd. Then there -->
+        <!--       exists an integer <m>k</m> such that <m>n= 2k+1</m>. Then -->
+        <!--       <me> n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) 1 </me> -->
+        <!--       Thus <m>n^2</m> is odd. Therefore, if <m>n^2</m> is even, <m>n</m> -->
+        <!--       is even by contraposition. -->
+        <!--     </statement> -->
+        <!--   </proof> -->
+
+        <!--   </solution> -->
       </example>
     </subsubsection>
 
@@ -627,6 +692,17 @@
           You do not need to provide details for the proofs (since you do not know what solitary means). However, make sure that you provide the first few and last few lines of the proofs so that we can see that logical structure you would follow.
         </p>
       </statement>
+
+      <solution>
+        <p>
+          <ol>
+            <li>Assume that <m>n</m> is a prime number. <m>\dots</m> Therefore <m>n</m> is solitary.</li>
+            <li>Assume that <m>n</m> is solitary. <m>\dots</m> Therefore <m>n</m> is a prime number by contraposition.</li>
+            <li>Assume that <m>n</m> is a prime number and is not solitary. <m>\dots</m> This contradicts our assumption. Thus if <m>n</m> is a prime number, <m>n</m> is solitary.</li>
+          </ol>
+        </p>
+      </solution>
+
     </exercise>
 
 
@@ -641,6 +717,39 @@
           </p>
         </hint>
       </statement>
+      <solution>
+        <p>
+          <proof>
+            <statement>
+              <p>Proof by contraposition: Assume that <m>n</m> is not a multiple of three. Then:</p>
+              <p>Case 1: There exists an integer <m>k</m> such that <m>n =
+              3k+1</m>. Consider:
+              <md>
+                <mrow> n^2 \amp= (3k+1)^2 </mrow>
+                <mrow>  \amp= 9k^2 + 6k + 1</mrow>
+                <mrow>  \amp= 3(3k^2 + 2k) + 1</mrow>
+              </md>
+              Hence <m>n^2</m> is not a mulitple of three.
+              </p>
+              <p>Case 1: There exists an integer <m>l</m> such that <m>n =
+              3l+2</m>. Consider:
+              <md>
+                <mrow> n^2 \amp= (3l+2)^2 </mrow>
+                <mrow>  \amp= 9l^2 + 12l + 4</mrow>
+                <mrow>  \amp= 9l^2 + 12l + 3 + 1</mrow>
+                <mrow>  \amp= 3(3l^2 + 4l + 1) + 1</mrow>
+              </md>
+              Hence <m>n^2</m> is not a mulitple of three.
+              </p>
+              <p>
+                Thus, we have proven that if <m>n^2</m> is a multiple of three, then <m>n</m> is a multiple of three by contraposition.
+              </p>
+            </statement>
+          </proof>
+
+        </p>
+      </solution>
+
     </exercise>
 
 
@@ -660,13 +769,13 @@
               3 = \frac{a^2}{b^2}
             </me>
           <me>
-            b^2 3 = a^2
+            3b^2  = a^2
           </me>
         </p>
           <p>
             So <m>a^2</m> is a multiple of 3. This can only happen if <m>a</m> is a multiple of 3, so <m>a = 3k</m> for some integer <m>k</m>. Then we have
             <me>
-              b^2 3 = 9k^2
+              3b^2 = 9k^2
             </me>
           <me>
             b^2 = 3k^2
@@ -705,6 +814,32 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <proof>
+                <statement>
+                  <p>
+                    (this is a direct proof):
+                    Assume that <m>a</m> is even <m>b</m> is a multiple of three. Then there exist integers <m>k</m> and <m>l</m> such that <m>a=2k</m> and <m>b=3l</m>.
+                    Then <m>ab = (2k)(3l) = 6kl</m>. Thus <m>ab</m> is a multiple of six.
+                  </p>
+                </statement>
+              </proof>
+            </li>
+            <li>
+              <p>
+                The converse is <q>If <m>ab</m> is a multiple of six, then <m>a</m> is even and <m>b</m> is a multiple of three. </q>
+              </p>
+              <p>
+                This is false. For example, <m>ab = 6</m> where <m>a = 6</m> and <m>b=1</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+
 
     </exercise>
 
@@ -743,6 +878,35 @@
           Try a proof by contradiction. What is the negation of this statement?
         </p>
       </hint>
+      <solution>
+        <p>
+          The negation of the statement is <m>a^2 + b^2 = c^2</m> and both
+          <m>a</m> and <m>b</m> are odd.
+        </p>
+        <proof>
+          <statement>
+            <p>
+              Assume that <m>a</m> and <m>b</m> are both odd and that <m>a^2 +b^2 = c^2</m>. Then there exist integers <m>k</m> and <m>l</m> such that <m>a=2k+1</m> and <m>b=2k+1</m>.
+            </p>
+            <p>
+              First, we observe that
+              <md>
+                <mrow>a^2 + b^2 \amp= (2k+1)^2 + (2l+1)^2 </mrow>
+                <mrow> \amp = 4k^2 + 4k + 1 + 4l^2 + 4l + 1 </mrow>
+                <mrow> \amp = 4k^2 + 4k + 4l^2 + 4l + 2 </mrow>
+              </md>
+              so that <m>c^2</m> and hence <m>c</m> is even.  Let <m>c=2m</m> where <m>m</m> is some integer. Then:
+              <md>
+                <mrow>c^2 \amp = a^2 + b^2 </mrow>
+                <mrow>(2k)^2 \amp = 4k^2 + 4k + 4l^2 + 4l + 2 </mrow>
+                <mrow>4k^2 \amp = 4(k^2 + k + l^2 + l) + 2 </mrow>
+              </md>
+              This is a contradiction as we have a multiple of four being equal to something which is not a multiple of four.  Thus, our original assumption was incorrect and therefore if <m>a^2 + b^2 = c^2</m>, we conclude that one of <m>a</m> or <m>b</m> is even.
+            </p>
+          </statement>
+        </proof>
+      </solution>
+
     </exercise>
 
 
@@ -753,6 +917,36 @@
           Prove: <m>x=y</m> if and only if <m>xy=\dfrac{(x+y)^2}{4}</m>. Note, you will need to prove two <q>directions</q> here: the <q>if</q> and the <q>only if</q> part.
         </p>
       </statement>
+
+      <solution>
+        <p>
+          <proof>
+            <statement>
+              <p>
+                <q><m>\to</m></q> Assume that <m>x = y</m>, and consider:
+                <md>
+                  <mrow> \dfrac{(x+y)^2}{4} \amp=  \dfrac{(x+x)^2}{4} </mrow>
+                  <mrow> \amp=  \dfrac{(2x)^2}{4} </mrow>
+                  <mrow> \amp=  x^2 </mrow>
+                  <mrow> \amp=  xy </mrow>
+                </md>
+              </p>
+              <p>
+                <q><m>\leftarrow</m></q> Assume that <m> \dfrac{(x+y)^2}{4} =  xy</m> Then:
+                <md>
+                  <mrow> \dfrac{(x+y)^2}{4} \amp=  xy </mrow>
+                  <mrow> (x+y)^2 \amp= 4xy  </mrow>
+                  <mrow> x^2 + 2xy + y^2 \amp= 4xy  </mrow>
+                  <mrow> x^2 - 2xy + y^2 \amp= 0  </mrow>
+                  <mrow> (x-y)^2 \amp= 0  </mrow>
+                  <mrow> x \amp y </mrow>
+                </md>
+              </p>
+            </statement>
+          </proof>
+        </p>
+      </solution>
+
 
     </exercise>
 
@@ -804,6 +998,65 @@
           Prove that there are no integer solutions to the equation <m>x^2 = 4y + 3</m>.
         </p>
       </statement>
+
+      <solution>
+        <p>
+          <proof>
+            <statement>
+              <p>
+                Assume, to the contrary, that there is an integer solution, <m>(a, b)</m>, to the equation <m>x^2 = 4y + 3</m> We'll split this into four cases:
+                <p> Case 1: <m>x</m> is odd and <m>y</m> is even.
+                Then there exist integers <m>k</m> and <m>l</m> such that <m>x=2k+1</m> and <m>y = 2l</m>. Plugging this into the equation, we have:
+                <md>
+                  <mrow>x^2 \amp= 4y +3 </mrow>
+                  <mrow>(2k+1)^2 \amp= 4(2l) +3 </mrow>
+                  <mrow>4k^2 + 4k + 1 \amp= 8l +3 </mrow>
+                  <mrow>4k^2 + 4k - 8l \amp= 2</mrow>
+                  <mrow>4(k^2 + k - 2l) \amp= 2</mrow>
+                </md>
+                This is not possible, as 2 is not a multiple of 4.
+                </p>
+                <p> Case 2: <m>x</m> is even and <m>y</m> is odd.
+                Then there exist integers <m>k</m> and <m>l</m> such that <m>x=2k</m> and <m>y = 2l+1</m>. Plugging this into the equation, we have:
+                <md>
+                  <mrow>x^2 \amp= 4y +3 </mrow>
+                  <mrow>(2k)^2 \amp= 4(2l+1) +3 </mrow>
+                  <mrow>4k^2 \amp= 8l +4  +3 </mrow>
+                  <mrow>4k^2 - 8l \amp= 7</mrow>
+                  <mrow>4(k^2 - 2l) \amp= 7</mrow>
+                </md>
+                This is not possible, as 7 is not a multiple of 4.
+                </p>
+                <p> Case 3: <m>x</m> and <m>y</m> are both even.
+                Then there exist integers <m>k</m> and <m>l</m> such that <m>x=2k</m> and <m>y = 2l</m>. Plugging this into the equation, we have:
+                <md>
+                  <mrow>x^2 \amp= 4y +3 </mrow>
+                  <mrow>(2k)^2 \amp= 4(2l) +3 </mrow>
+                  <mrow>4k^2 \amp= 8l  +3 </mrow>
+                  <mrow>4k^2 - 8l \amp= 3</mrow>
+                  <mrow>4(k^2 - 2l) \amp= 3</mrow>
+                </md>
+                This is not possible, as 3 is not a multiple of 4.
+                </p>
+                <p> Case 4: <m>x</m> and <m>y</m> are both odd.
+                Then there exist integers <m>k</m> and <m>l</m> such that <m>x=2k</m> and <m>y = 2l</m>. Plugging this into the equation, we have:
+                <md>
+                  <mrow>x^2 \amp= 4y +3 </mrow>
+                  <mrow>(2k+1)^2 \amp= 4(2l+1) +3 </mrow>
+                  <mrow>4k^2 +4k + 1\amp= 8l + 4  +3 </mrow>
+                  <mrow>4k^2 +4k - 8l \amp= 6</mrow>
+                  <mrow>4(k^2 +k  - 2l) \amp= 6</mrow>
+                </md>
+                This is also not possible, as 6 is not a multiple of 4.
+                </p>
+                Since we've exhausted every possible combination of integer solutions, we conclude that there is no integer solution to the equation <m>x^2 = 4y+3</m>.
+              </p>
+              </statement>
+          </proof>
+
+        </p>
+      </solution>
+
 
     </exercise>
 
