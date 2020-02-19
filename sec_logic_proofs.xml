@@ -413,7 +413,7 @@
     <example>
       <statement>
         <p>
-          Show that if <m>a, b, c</m> are real numbers, then thare is a unique solution to the algebraic equation <m>ax+b=c</m>.
+          Show that if <m>a, b, c</m> are real numbers with <m>a\ne 0</m>, then there is a unique solution to the algebraic equation <m>ax+b=c</m>.
         </p>
       </statement>
     </example>
@@ -930,6 +930,7 @@
                   <mrow> \amp=  x^2 </mrow>
                   <mrow> \amp=  xy </mrow>
                 </md>
+                This shows that if <m>x=y</m> then <m>xy=\dfrac{(x+y)^2}{4}</m>.
               </p>
               <p>
                 <q><m>\leftarrow</m></q> Assume that <m> \dfrac{(x+y)^2}{4} =  xy</m> Then:
@@ -939,8 +940,9 @@
                   <mrow> x^2 + 2xy + y^2 \amp= 4xy  </mrow>
                   <mrow> x^2 - 2xy + y^2 \amp= 0  </mrow>
                   <mrow> (x-y)^2 \amp= 0  </mrow>
-                  <mrow> x \amp y </mrow>
+                  <mrow> x \amp = y </mrow>
                 </md>
+                This shows that if <m>xy=\dfrac{(x+y)^2}{4}</m>, then <m>x=y</m>.
               </p>
             </statement>
           </proof>
