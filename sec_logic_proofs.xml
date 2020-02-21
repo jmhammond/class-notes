@@ -697,7 +697,7 @@
         <p>
           <ol>
             <li>Assume that <m>n</m> is a prime number. <m>\dots</m> Therefore <m>n</m> is solitary.</li>
-            <li>Assume that <m>n</m> is solitary. <m>\dots</m> Therefore <m>n</m> is a prime number by contraposition.</li>
+            <li>Assume that <m>n</m> is not solitary. <m>\dots</m> Therefore <m>n</m> is a prime number by contraposition.</li>
             <li>Assume that <m>n</m> is a prime number and is not solitary. <m>\dots</m> This contradicts our assumption. Thus if <m>n</m> is a prime number, <m>n</m> is solitary.</li>
           </ol>
         </p>
