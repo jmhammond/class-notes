@@ -452,6 +452,19 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> <m>39 = 3\cdot 13</m> </li>
+            <li> <m>125 = 5^3 </m> </li>
+            <li> <m>101</m> is prime - trial divide by 2, 3, 5, 7</li>
+            <li> <m>143 = 11\cdot 13 </m> </li>
+            <li> <m>289 = 17^2</m> </li>
+            <li> <m>899 = 29 \cdot 31</m> </li>
+          </ol>
+        </p>
+      </solution>
+
     </exercise>
 
     <exercise>
@@ -460,6 +473,17 @@
           Find the prime factorization of <m>10!</m> (10 factorial, not <q>yay ten!</q>)
         </p>
       </statement>
+      <solution>
+        <p>
+          Recall <m>10! = 10 \cdot 9 \cdot 8 \cdot 7 \cdot \dots \cdot 2 \cdot 1</m>. So we can do the following:
+          <md>
+            <mrow> 10! \amp = 10\cdot 9 \cdot 8 \cdot 7\cdot 6 \cdot 5 \cdot 4 \ cdot 3 \cdot 2 \cdot 1 </mrow>
+            <mrow> \amp = (2\cdot 5)\cdot 3^2 \cdot 2^3 \cdot 7\cdot (2\cdot 3) \cdot 5 \cdot 2^2 \ cdot 3 \cdot 2 \cdot 1 </mrow>
+            <mrow> \amp = 7^1 \cdot 5^2 \cdot 3^4 \cdot 2^8</mrow>
+          </md>
+        </p>
+      </solution>
+
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -472,6 +496,36 @@
       <hint>
         <p>Prove the contrapositive by cases.</p>
       </hint>
+
+      <solution>
+        <p>
+          This question is of the form <q>if <m>n</m> is a prime number greater than three, then either <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m></q>.
+          <proof>
+            <statement>
+              <p>
+                (by contraposition). Assume that <m>n</m> is not a number of the form
+                <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m>. This gives us four total cases:
+              </p>
+              <p>
+                Case 1: Assume <m>n=6k</m> for some integer <m>k</m>. Then <m>n</m> is not a prime number, since <m>n</m> is divisible by both 2 and 3.
+              </p>
+              <p>
+                Case 2: Assume <m>n = 6k+2 = 2(3k+1)</m> for some integer <m>k</m>. Then <m>n</m> is divisible by 2 and is hence not prime.
+              </p>
+              <p>
+                Case 3: assume <m>n = 6k+3 = 3(2k+1)</m> for some integer <m>k</m>. then <m>n</m> is divisible by 3 and is hence not prime.
+              </p>
+              <p>
+                Case 4: assume <m>n = 6k+4 = 2(3k+2)</m> for some integer <m>k</m>. then <m>n</m> is divisible by 2 and is hence not prime.
+              </p>
+              <p>
+                Thus if <m>n</m> is not of the form <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m>, <m>n</m> is not prime. By contraposition, if <m>n</m> is a prime greater than three then <m>n</m> is of the form either <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m>.
+              </p>
+            </statement>
+          </proof>
+
+        </p>
+      </solution>
 
     </exercise>
   </exercises>
