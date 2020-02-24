@@ -201,6 +201,21 @@
           Show that if <m>a, b, \and c</m> are integers with <m>a\not=0 \and c \not= 0</m> such that <m>ac \divides bc</m> then <m>a\divides b</m>.
         </p>
       </statement>
+      <solution>
+        <p>
+          <proof>
+            <statement>
+              <p>
+                Assume that <m>a, b, c</m> are integers with <m>a \ne 0</m> and <m>c\ne 0</m> such that <m>ac \divides bc</m>. Then there exists an integer <m>m</m> such <m>bc = acm</m>
+              </p>
+              <p> Since <m>c \ne 0</m>, we can divide both sides of the equation by <m>c</m>, yieleding the equality <m>b = am</m>. Thus <m>a \divides b</m>.
+              </p>
+            </statement>
+          </proof>
+
+        </p>
+      </solution>
+
     </exercise>
 
 
@@ -216,6 +231,17 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li><m>17 = 9\cdot 1 + 8 </m></li>
+            <li><m>1234 = 23 \cdot 53 + 15</m></li>
+            <li><m>0 = 13 \cdot 0 + 0</m></li>
+            <li><m>8 = 1 \cdot 8 + 0</m></li>
+          </ol>
+        </p>
+      </solution>
+
     </exercise>
 
     <exercise>
@@ -231,6 +257,18 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> Since <m>37 - 3 = 34</m> is not divisible by 7, we conclude <m>37 \not\equiv 3\pmod 7</m></li>
+            <li> Since <m>66 - 3 = 63</m> is divisible by 7, we conclude <m>66 \equiv  3\pmod 7</m></li>
+            <li> Since <m>-17 - 3 = -20</m> is not divisible by 7, we conclude <m>-17 \not \equiv  3\pmod 7</m></li>
+            <li> Since <m>-67 - 3 = -70</m> is  divisible by 7, we conclude <m>-67  \equiv  3\pmod 7</m></li>
+            <li> Since <m>80 - 3 = 77</m> is  divisible by 7, we conclude <m>80 \equiv 3\pmod 7</m></li>
+          </ol>
+        </p>
+      </solution>
+
     </exercise>
 
     <exercise>
@@ -239,6 +277,12 @@
           List all integers between -100 and 100 that are congruent to -1 modulo 25
         </p>
       </statement>
+      <solution>
+        <p>
+          These numbers are <m>-1, -26, -51, -76, 24, 49, 74, 99,</m> all numbers that are of the form <m>-1 + 25 \cdot k</m> for integers <m>k</m>.
+        </p>
+      </solution>
+
     </exercise>
 
     <exercise>
@@ -282,10 +326,15 @@
           The first part of this exercise should convince you: you cannot <q>divide</q> both sides by <m>c</m> in modular arithmetic! 
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>One possible counterexample is <m>a = 2, b=4, c=4, and m=6</m>. Certainly <m>2\cdot 3 \equiv 4 \cdot 3 \pmod 6</m> but <m>2 \not \equiv 4 \pmod 6</m>.</li>
+            <li>One possible counterexample here is <m>a = 2, b=7, c=7, b=2, m=5</m>. Then we can see <m>2\equiv 7\pmod 5</m> satifies both parts of the hypothesis, but <m>2^7 \equiv 3 \pmod 5</m> while <m>7^2 \equiv 4 \pmod 5</m>.</li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
-
-
-
 
   </exercises>
 
