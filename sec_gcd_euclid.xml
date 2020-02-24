@@ -197,6 +197,24 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <m>12=36(-1)+48(</m>1)
+            </li>
+            <li>
+              <m>1=21(69)+724(</m>-2)
+            </li>
+            <li>
+              <m>1=60(-21)+97(</m>13)
+            </li>
+            <li>
+              <m>1=5(-5)+26(1)</m>
+            </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -205,6 +223,13 @@
           Use any method to find the greatest common divisor of 412 and 32.
         </p>
       </statement>
+      <solution>
+        <p>
+          <m>\gcd(412, 32) = 4</m>. We can right it as the linear combination:
+          <m>4=412(-1) + 32(13)</m>
+        </p>
+      </solution>
+
     </exercise>
 
     <exercise>
@@ -213,6 +238,13 @@
           Use any method to find the greatest common divisor of 780 and 150.
         </p>
       </statement>
+      <solution>
+        <p>
+          <m>\gcd(780, 150) = 30</m>. We can right the gcd as the linear combination <m>30=780(1) + 150(-5)</m>
+
+        </p>
+      </solution>
+
     </exercise>
 
     <exercise>
@@ -221,6 +253,12 @@
           Find the greatest common divisor of 70, 98, 108.
         </p>
       </statement>
+      <solution>
+        <p>
+          <m>\gcd(70, 98, 108) = 2</m>
+        </p>
+      </solution>
+
     </exercise>
   </exercises>
 </section>
