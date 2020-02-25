@@ -189,6 +189,16 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> <m>x \equiv 1 \pmod 8</m> </li>
+            <li> <m>x \equiv 20 \pmod{22}</m> </li>
+            <li> <m>x \equiv 18 \pmod{26}</m> </li>
+          </ol>
+        </p>
+      </solution>
+
     </exercise>
 
 
@@ -202,6 +212,22 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          Here, since the coefficient of <m>x</m> isn't relatively prime to the modulus there are either multiple answers per modulus or no solution.
+          <ol>
+            <li>
+              <p>
+                Each of <m>x \equiv 2 \pmod{9}</m>, <m>x\equiv 5 \pmod{9}</m>, and <m>x \equiv 8 \pmod{9}</m> satisfy the given equation. We can summarize this as <m>x \equiv 2 \pmod{3}</m>
+              </p>
+            </li>
+            <li>
+              There is no solution to this equality. No multiple of 4 will ever have a remainder of 3 modulo 8.
+            </li>
+          </ol>
+        </p>
+      </solution>
+
     </exercise>
 
 
@@ -215,6 +241,15 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> To have an inverse modulo <m>n</m>, a number <m>a</m> must be relatively prime to <m>n</m> </li>
+            <li> To have the property that every number has an inverse modulo <m>n</m>, the number <m>n</m> must be prime</li>
+          </ol>
+        </p>
+      </solution>
+
     </exercise>
 
   </exercises>
