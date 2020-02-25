@@ -380,6 +380,12 @@
           <p>
             Decrypt the following message, which was encrypted by the standard Caesar cipher: <q>L FDQ DOZDBV WUXVW BRX, EUXWXV.</q>
           </p>
+          <solution>
+            <p>
+              <q>I can always trust you, Brutus.</q>
+            </p>
+          </solution>
+
         </statement>
       </exercise>
 
@@ -389,12 +395,18 @@
             Apply the affine shift <m>e(x) = 7x + 11 \pmod{ 26 }</m> to the string, <q>Encrypt me.</q>
           </p>
         </statement>
+        <solution>
+          <p>
+            Removing spaces from the words and capitalizing everything: <q>NYZAXMOORN</q>
+          </p>
+        </solution>
+
       </exercise>
 
       <exercise>
         <statement>
           <p>
-            Decrypt the text which was encrypted via the affine shift <m>e(x) = 7x + 11 \pmod{ 26 }</m>: <q> LJNHFRN</q>
+            Decrypt the text which was encrypted via the affine shift <m>e(x) = 7x + 11 \pmod{ 26 }</m>: <q>NYZAXMOORN</q>. The integer values are 13, 24, 25, 0, 23, 12, 14, 14, 17, 13.
           </p>
         </statement>
       </exercise>
