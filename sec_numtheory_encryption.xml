@@ -397,7 +397,7 @@
         </statement>
         <solution>
           <p>
-            Removing spaces from the words and capitalizing everything: <q>NYZAXMOORN</q>
+            Removing spaces from the words and capitalizing everything: <q>NYZAXMOORN</q>. The integer values are 13, 24, 25, 0, 23, 12, 14, 14, 17, 13.
           </p>
         </solution>
 
@@ -406,9 +406,15 @@
       <exercise>
         <statement>
           <p>
-            Decrypt the text which was encrypted via the affine shift <m>e(x) = 7x + 11 \pmod{ 26 }</m>: <q>NYZAXMOORN</q>. The integer values are 13, 24, 25, 0, 23, 12, 14, 14, 17, 13.
+            Decrypt the text which was encrypted via the affine shift <m>e(x) = 7x + 11 \pmod{ 26 }</m>: <q>LJNHFRN</q>
           </p>
         </statement>
+        <solution>
+          <p>
+            <q>Awesome</q>.
+          </p>
+        </solution>
+
       </exercise>
 
     </exercises>
@@ -495,7 +501,7 @@
               <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
               <li>
                 <p>
-                  Send me your public key on via email as:
+                  Send me your public key on via <url href="mailto:hammond@math.wichita.edu?subject=My RSA Key">email (you can click this link!)</url> as:
                   <cd>
                     n = 15244346903
                     e = 751 
