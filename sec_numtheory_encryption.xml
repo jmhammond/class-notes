@@ -512,10 +512,8 @@
                 <p>
                   I'll send you an encrypted message which will look like:
                   <c>
-                    [971896385L, 3249912096L, 4079022731L, 8771096382L, 10148198704L]   
+                    [971896385, 3249912096L, 4079022731L, 8771096382L, 10148198704L]
                   </c>
-
-                  (ignore the <sq>L</sq> at the end of each number, it's python2 saying it's a <q>long</q> integer)
                 </p>
               </li>
               <li> Enter this information into the Sage cell below to decrypt it (using your <m>n, d, \and c</m>), change <c>what_to_do</c> to <q>decrypt</q>, and then press Evaluate(Python). </li>
@@ -539,18 +537,18 @@ m = "KEEP IT SECRET KEEP IT SAFE"   # A message to encrypt
 n = 15244346903    # Value of n = p*q
 e = 751 # Public encryption exponent
 d = 8545627279 # Private decryption exponent 
-c = [971896385L, 3249912096L, 4079022731L, 8771096382L, 10148198704L]   # The ciphertext as a comma separated list (formatting matters)
+c = [971896385, 3249912096, 4079022731, 8771096382, 10148198704]   # The ciphertext as a comma separated list (formatting matters)
 
 ##### LEAVE EVERYTHING ELSE BELOW ALONE  ######
 #####... unless you want to tinker with it. Please do!
 
 import re, string, math
 
-from itertools import izip_longest
+from itertools import zip_longest
 
 def grouper(iterable, n, fillvalue=None):
     args = [iter(iterable)] * n
-    return izip_longest(*args, fillvalue=fillvalue)
+    return zip_longest(*args, fillvalue=fillvalue)
 
 def encrypt():
     stripped_string = re.sub(r"\W|\d","", m.strip()).upper()
@@ -575,7 +573,7 @@ def encrypt():
 
     cipher_blocks = []
     for block in blocks:
-        cipher_blocks.append(pow(long(block), e, n))
+        cipher_blocks.append(pow(int(block), e, n))
 
     print(cipher_blocks)
 
@@ -585,7 +583,7 @@ def decrypt():
 
     plain_blocks = []
     for block in c:
-        plain_block = pow(long(block), d, n) 
+        plain_block = pow(int(block), d, n)
         plain_blocks.append(("0"*(block_size - len(str(plain_block))))+ str(plain_block))
 
     plaintext_message="".join(plain_blocks)
