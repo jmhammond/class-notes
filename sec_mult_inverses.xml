@@ -127,7 +127,7 @@
         Let's create a multiplication table modulo 9. The following Sage code does it for us. You can change the variable <c>n</c> to other numbers to quickly generate other multiplication tables.
       </p>
       <p>
-        The output is a table/matrix whose <m>i, j</m>th entry is <m>i \cdot j \pmod \text{n}</m>.
+        The output is a table/matrix whose <m>i, j</m>th entry is <m>i \cdot j \pmod{n}</m>.
         <sage>
           <input>
             n = 9
