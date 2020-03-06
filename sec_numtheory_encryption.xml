@@ -525,7 +525,7 @@
     </exercises>
 
     <p xml:id="rsa-code">
-    <sage language="python">
+    <sage>
       <input>
 ##### ENTER YOUR INFORMATION IN THE VARIABLES BELOW: ######
 
