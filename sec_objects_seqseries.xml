@@ -174,7 +174,7 @@
     </statement>
   </example>
 
-  <example>
+  <example xml:id="example-sum-of-integers">
     <statement>
       <p>
         Find a formula for the following sums, using the <xref ref="example-telescoping-sum">telescoping example</xref>:
@@ -296,7 +296,39 @@
           Using <xref ref="example-telescoping-sum">the telescoping example</xref> with the sequence <m>a_n=(n+1)^3</m>, derive a formula for <m>\displaystyle \sum_{k=1}^n k^2</m>
         </p>
       </statement>
-      TODO
+      <solution>
+      <p>
+        This one's a lot of fun, so let's do it in a lot of detail. This is approach Blaise Pascal used to discover the formula in his 1654 <pubtitle>Traité du triangle arithmétique</pubtitle>.
+      </p>
+      <p>
+        Let <m>a_n = (n+1)^3</m>. Then from <xref ref="example-telescoping-sum">example</xref>, we have that:
+        <md>
+          <mrow>\sum_{j=1}^n (j+1)^3 - j^3 &amp; = a_n - a_0</mrow>
+          <mrow>\sum_{j=1}^n (j+1)^3 - j^3 &amp; = (n+1)^3 - (0+1)^3</mrow>
+          <mrow>\sum_{j=1}^n j^3 + 3j^2 + 3j + 1 - j^3 &amp; = n^3 + 3n^2 + 3n + 1 - 1</mrow>
+          <mrow>\sum_{j=1}^n 3j^2 + 3j + 1 &amp; = n^3 + 3n^2 + 3n </mrow>
+          <mrow>\sum_{j=1}^n 3j^2 + \sum_{j=1}^n 3j + \sum_{j=1}^n 1 &amp; = n^3 + 3n^2 + 3n </mrow>
+          <mrow> 3 \sum_{j=1}^n j^2 + 3 \sum_{j=1}^n j + \sum_{j=1}^n 1 &amp; = n^3 + 3n^2 + 3n </mrow>
+          <mrow> 3 \sum_{j=1}^n j^2 &amp; = n^3 + 3n^2 + 3n - 3 \sum_{j=1}^n j - \sum_{j=1}^n 1 </mrow>
+          </md>
+
+          </p>
+          <p> We have from <xref ref="example-sum-of-integers">example</xref> that <m>\displaystyle \sum_{j=1}^n j = \dfrac{n(n+1)}{2}</m> and if we add <m>1</m> a total of <m>n</m> times, we have <m>\displaystyle \sum_{j=1}^n 1 = n</m>. Plugging these in, we find:
+          </p>
+          <p>
+            <md>
+          <mrow> 3 \sum_{j=1}^n j^2  &amp; = n^3 + 3n^2 + 3n - 3 \sum_{j=1}^n j - \sum_{j=1}^n 1 </mrow>
+          <mrow> 3 \sum_{j=1}^n j^2  &amp; = n^3 + 3n^2 + 3n - 3\left( \dfrac{n(n+1)}{2}\right) - n</mrow>
+          <mrow> 3 \sum_{j=1}^n j^2  &amp; = n^3 + 3n^2 + 2n - 3\left(\dfrac{n^2 + n}{2}\right) </mrow>
+          <mrow> 3 \sum_{j=1}^n j^2  &amp; = \frac{2n^3}{2} + \frac{6n^2}{2} + \frac{4n}{2} - \dfrac{3n^2}{2} - \frac{3n}{2}</mrow>
+          <mrow> 3 \sum_{j=1}^n j^2  &amp; = \frac{2n^3 + 3n^2 + n}{2}  </mrow>
+          <mrow> 3 \sum_{j=1}^n j^2  &amp; = \frac{n(2n+1)(n+1)}{2}  </mrow>
+          <mrow> \sum_{j=1}^n j^2  &amp; = \frac{n(2n+1)(n+1)}{6}  </mrow>
+          </md>
+
+          which is exactly the formula you learned in calculus!
+          </p>
+      </solution>
     </exercise>
 
 
@@ -309,17 +341,16 @@
       </statement>
       <solution>
         <p>
-          The original answer (being left here for now) requires math induction, which is section 4.3. I missed this when I rearranged the structure of the book.... sorry!
+          The original answer (available in the printed version) requires math induction, which is section 4.3. I missed this when I rearranged the structure of the book.... sorry!
         </p>
         <p>
-          In the mean time, here's an interesting alterative. I'll claim that $a_n = \dfrac{n}{n+1}$ works. Show that this is true.
-        </p>
+          In the mean time, here's an interesting alterative. I'll claim that <m>a_n = \dfrac{n}{n+1}</m> works. Show that this is true. </p>
 
-        <proof>
-          <p>
-            Let <m>P(n)</m> be the statement <q>there is a strictly increasing sequence <m>a_1, a_2, \ldots, a_n</m> with <m>a_n \lt  100</m>.</q> We will prove <m>P(n)</m> is true for all <m>n \ge 1</m>. First we establish the base case: <m>P(1)</m> says there is a single number <m>a_1</m> with <m>a_1 \lt  100</m>. This is true <ndash/> take <m>a_1 = 0</m>. Now for the inductive step, assume <m>P(k)</m> is true. That is there exists a strictly increasing sequence <m>a_1, a_2, a_3, \ldots, a_k</m> with <m>a_k \lt  100</m>. Now consider this sequence, plus one more term, <m>a_{k+1}</m> which is greater than <m>a_k</m> but less than <m>100</m>. Such a number exists, for example, the average between <m>a_k</m> and 100. So then <m>P(k+1)</m> is true, so we have shown that <m>P(k) \imp P(k+1)</m>. Thus by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \in \N</m>.
-          </p>
-        </proof>
+        <!-- <proof> -->
+        <!--   <p> -->
+        <!--     Let <m>P(n)</m> be the statement <q>there is a strictly increasing sequence <m>a_1, a_2, \ldots, a_n</m> with <m>a_n \lt  100</m>.</q> We will prove <m>P(n)</m> is true for all <m>n \ge 1</m>. First we establish the base case: <m>P(1)</m> says there is a single number <m>a_1</m> with <m>a_1 \lt  100</m>. This is true <ndash/> take <m>a_1 = 0</m>. Now for the inductive step, assume <m>P(k)</m> is true. That is there exists a strictly increasing sequence <m>a_1, a_2, a_3, \ldots, a_k</m> with <m>a_k \lt  100</m>. Now consider this sequence, plus one more term, <m>a_{k+1}</m> which is greater than <m>a_k</m> but less than <m>100</m>. Such a number exists, for example, the average between <m>a_k</m> and 100. So then <m>P(k+1)</m> is true, so we have shown that <m>P(k) \imp P(k+1)</m>. Thus by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \in \N</m>. -->
+        <!--   </p> -->
+        <!-- </proof> -->
 
       </solution>
     </exercise>
