@@ -283,6 +283,12 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
           Find a recurrence relation for the number of ways to give someone <m>n</m> dollars if you have 1 dollar coins, 2 dollar coins, 2 dollar bills, and 4 dollar bills where the order in which the coins and bills are paid matters.
         </p>
       </statement>
+      <solution>
+        <p>
+          <m>a_n = a_{n-1} + 2a_{n-2} + a_{n-4}</m>
+        </p>
+      </solution>
+
     </exercise>
 
 
@@ -343,6 +349,12 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
           Find the solution to the recurrence relation <m>a_n = 3a_{n-1} + 4a_{n-2}</m> with initial terms <m>a_0 = 5</m> and <m>a_1 = 8</m> using the characteristic root method..
         </p>
       </statement>
+      <solution>
+        <p>
+          <m> a_n = \frac{13}{5}(4)^n + \frac{12}{5}(-1)^n</m>
+        </p>
+      </solution>
+
     </exercise>
 
     <exercise>
@@ -351,6 +363,12 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
           While walking up stairs you notice that you have a habit of using 3 ways of taking one step and 4 ways of taking two steps at a time. Find a recurrence relation for the number of ways to go up <m>n</m> steps. Solve the recurrence relation given the initial conditions of <m>a_0 = 1</m> and <m>a_1 = 3</m> using the characteristic root method. 
         </p>
       </statement>
+      <solution>
+        <p>
+          The recurrence is <m>a_n = 3a_{n-1} + 4a_{n-2}</m>. The solution with the given initial conditions is <m>a_n = \frac{4^{n+1}}{5} + \frac{(-1)^n}{5}</m>
+        </p>
+      </solution>
+
     </exercise>
 
     <exercise>
@@ -359,6 +377,12 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
           Solve the recurrence <m>a_n = 3a_{n-1} + 40a_{n-2}</m> where <m>a_0 = 5</m> and <m>a_1 = 14</m> using the characteristic root method.
         </p>
       </statement>
+      <solution>
+        <p>
+          <m>a_n = 3(8)^n + 2(-5)^n</m>
+        </p>
+      </solution>
+
     </exercise>
 
     <exercise>
@@ -367,6 +391,12 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
           Solve the recurrence <m>a_n = 4a_{n-1} + 21a_{n-2}</m> where <m>a_0 = 18</m> and <m>a_1 = 366</m> using the characteristic root method.
         </p>
       </statement>
+      <solution>
+        <p>
+         <m>a_n = 42 (7)^n - 24(3)^n</m> you could write <m>a_n = 6(7)^{n+1} - 8(3)^{n+1}</m>
+        </p>
+      </solution>
+
     </exercise>
 
   </exercises>
