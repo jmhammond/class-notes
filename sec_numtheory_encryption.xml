@@ -285,7 +285,7 @@
     <definition>
       <statement>
         <p>
-          An <term>affine cipher</term> is one in which letters are transformed via a linear function, <m>e(x) = ax+b \pmod{n} </m> where <m>a, b\in \Z</m> and <m>n\in \Z^+</m>. If <m>a =0</m>, this is a shift cipher.
+          An <term>affine cipher</term> is one in which letters are transformed via a linear function, <m>e(x) = ax+b \pmod{n} </m> where <m>a, b\in \Z</m> and <m>n\in \Z^+</m>. If <m>a =1</m>, this is a shift cipher.
         </p>
       </statement>
     </definition>
