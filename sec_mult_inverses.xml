@@ -116,7 +116,7 @@
   <example>
     <statement>
       <p>
-        Solve the congruence <m>4x = 5 \pmod 9 </m>.
+        Solve the congruence <m>4x \equiv 5 \pmod 9 </m>.
       </p>
     </statement>
   </example>
@@ -183,9 +183,9 @@
         <p>
           Solve the congruence:
           <ol>
-            <li><m> 3x + 4 = 7 \pmod 8 </m></li>
-            <li><m> 9x = 4 \pmod{22}</m></li>
-            <li><m> 5x + 14 = 0 \pmod{26}</m></li>
+            <li><m> 3x + 4 \equiv 7 \pmod 8 </m></li>
+            <li><m> 9x \equiv 4 \pmod{22}</m></li>
+            <li><m> 5x + 14 \equiv 0 \pmod{26}</m></li>
           </ol>
         </p>
       </statement>
@@ -207,8 +207,8 @@
         <p>
           Find all solutions to the congruence (there could be more than one):
           <ol>
-            <li> <m>3x =6 \pmod 9 </m></li>
-            <li> <m>4x = 3 \pmod 8 </m></li>
+            <li> <m>3x \equiv6 \pmod 9 </m></li>
+            <li> <m>4x \equiv 3 \pmod 8 </m></li>
           </ol>
         </p>
       </statement>
