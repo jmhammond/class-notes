@@ -253,7 +253,7 @@
       <solution>
         <p>
           <ol>
-            <li><m>a_n = 3^n</m></li>
+            <li><m>a_n = 2\cdot 3^n</m></li>
             <li><m>a_n = \dfrac{n^2 + n + 2}{2}</m></li>
             <li><m>a_n = n!</m></li>
           </ol>
