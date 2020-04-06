@@ -166,7 +166,7 @@
     <note>
       <statement>
         <!-- TODO: get rid of n\in \N for all examples below //-->
-        <p> Below, when we write <m>n \in \N</m>, we mean <q>n is an integer with <m>n \ge 0</m></q></p>
+        <p> Recall, when we write <m>n \in \N</m>, we mean <q>n is an integer with <m>n \ge 0</m></q></p>
       </statement>
 
     </note>
@@ -262,7 +262,7 @@
 
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapated from from https://github.com/oscarlevin/discrete-book -->
           <exercise>
             <statement>
               <p>
@@ -272,7 +272,32 @@
                 </me>
               </p>
             </statement>
-
+            <solution>
+                <proof>
+                  <statement>
+                    <p>
+                      Let <m>P(n)</m> be the statement <q><m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m></q>. For the base case, we show that <m>P(1)</m> is true. That is:
+                      <me> P(1) := 1^2 = \frac{1(1+1)(2\cdot1+1)}{6} </me>
+                      which is true.
+                    </p>
+                    <p>
+                      For the inductive step, assume that <m>P(k)</m> is true for some integer <m>k \ge 1</m>, that is <me>
+                  1^2 +2^2 +3^2+...+k^2 = \frac{k(k+1)(2k+1)}{6}</me>
+                  and consider the statement:
+                  <md>
+                    <mrow>1^2 + 2^2 + 3^2 + \dots + k^2 + (k+1)^2 &amp;=  \frac{k(k+1)(2k+1)}{6}  + (k+1)^2 </mrow>
+                    <mrow> &amp; = \frac{k(k+1)(2k+1)}{6} \frac{6(k+1)^2}{6} </mrow>
+                    <mrow> &amp; = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6} </mrow>
+                    <mrow> &amp; = \frac{(k+1)[2k^2 + k + 6k+6]}{6} </mrow>
+                    <mrow> &amp; = \frac{(k+1)[2k^2 + 7k+6]}{6} </mrow>
+                    <mrow> &amp; = \frac{(k+1)[(2k+3)(k+2)]}{6} </mrow>
+                    <mrow> &amp; = \frac{(k+1)(2(k+1)+1)((k+1) + 1)}{6} </mrow>
+                    which is exactly what we needed to show. Thus, by the principle of mathematical induction, the original statement <m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m> is true for all integers <m>n\ge 1</m>.
+                    </md>
+                    </p>
+                  </statement>
+                </proof>
+            </solution>
           </exercise>
 
 
@@ -355,16 +380,52 @@
           </p>
         </proof>
       </statement>
-
+      <hint>
+        <p>
+          Rather than give a solution, here's just a hint. What happens if  <m>n</m> is even?
+          </p>
+        </hint>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
           Now give a valid proof (by induction, even though you might be able to do so without using induction) of the statement, <q>for all <m>n \in \N</m>, the number <m>n^2 + n</m> is even.</q>
         </p>
       </statement>
+      <solution>
+        <proof>
+          <statement>
+            <p>
+              Let <m>P(n)</m> be the statement <q><m>n^2 + n </m> is even.</q>
+            </p>
+            <p>
+              Basis step: when <m>n = 0</m> we have <m>0^0 + 0 = 0</m> which is a even.
+            </p>
+            <p>
+              Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k \ge 0</m>, that is, <m>k^2 + k</m> is even, and let's consider the following:
+              <md>
+                <mrow> (k+1)^2 + (k+1) \amp = k^2 + 2k + 1 + k + 1 </mrow>
+                <mrow> \amp = k^2 + 3k  + 2 </mrow>
+                <mrow> \amp = k^2 + k + 2k + 2 </mrow>
+              </md>
+              now <m>k^2 + k = 2l</m> for some integer <m>l</m> by inductive hypothesis, so we have:
+              <md>
+                <mrow> (k+1)^2 + (k+1) \amp =  k^2 + k + 2k + 2 </mrow>
+                <mrow> \amp =  2l + 2k + 2 </mrow>
+                <mrow> \amp =  2(l + k + 1) </mrow>
+              </md>
+              and thus <m>(k+1)^2 + (k+1)</m> is even.
+            </p>
+            <p>
+              Therefore, by math induction, <m>n^2 + n</m> is even for all natural numbers
+              </p>.
+          </statement>
+        </proof>
+
+      </solution>
+
 
     </exercise>
 
@@ -453,6 +514,31 @@
           Prove, by mathematical induction, that <m>F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1</m>.
         </p>
       </statement>
+      <solution>
+        <proof>
+          <statement>
+            <p>
+              Let <m>P(n)</m> be the statement <q><m>F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1</m>.</q>
+            </p>
+            <p>
+              Basis step: if <m>n = 0</m> then <m>F_0 = 0</m> while <m>F_{n+2} - 1 = 1 - 1 = 0</m> so the basis step is true.
+            </p>
+            <p>
+              Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k \ge 0</m>. That is, <m>F_0 + F_1 + F_2 + \cdots + F_{k} = F_{k+2} - 1</m>. Now consider
+              <md>
+                <mrow> F_0 + F_1 + F_2 + \dots F_k + F_{k+1} \amp= ( F_{k+2} - 1 ) + F_{k+1} \amp \text{by ind. hyp.}</mrow>
+                <mrow> \amp=  F_{k+2} + F_{k+1} - 1 \amp</mrow>
+                <mrow> \amp=  F_{k+3} - 1 \amp \text{by recursive def.}</mrow>
+              </md>
+              thus <m>P(k+1)</m> is true.
+            </p>
+            <p>
+              Therefore, by math induction, <m>F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1</m> for all natural numbers.
+            </p>
+          </statement>
+        </proof>
+      </solution>
+
     </exercise>
 
     
@@ -484,7 +570,7 @@
       </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
       <exercise>
         <statement>
           <p>
