@@ -594,7 +594,13 @@
                   Case 1: If <m>k+1</m> is a Fibonacci number, then we're done.
                 </p>
                 <p>
-                  Case 2: If <m>k+1</m> is not a Fibonacci number, TODO CONTINUE HERE
+                  Case 2: If <m>k+1</m> is not a Fibonacci number, then let <m>F_m</m> be the largest Fibonacci number less than <m>k+1</m>. Since <m>k+1 - F_m \le k</m> then we have that <m>k+1 - F_m</m> is the sum of distinct Fibonacci numbers, by inductive hypothesis.
+                </p>
+                <p>
+                  Adding <m>F_m</m> to this sum gives us <m>k+1 - F_m + F_m = k+1</m> which then itself a sum of distinct Fibonacci numbers.
+                </p>
+                <p>
+                  Thus, by induction, every natural number is either a Fibonacci number of the sum of distinct Fibonacci numbers.
                 </p>
               </statement>
             </proof>
