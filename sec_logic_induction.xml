@@ -578,6 +578,28 @@
           </p>
         </statement>
 
+        <solution>
+            <proof>
+              <statement>
+                <p>
+                Let <m>P(n)</m> be the statement that <m>n</m> is either a Fibonacci number of the sum of distinct Fibonacci numbers
+                </p>
+                <p>
+                  Basis step: For <m>n=0</m>, we have that <m>0 = F_0</m> is a Fibonacci number.
+                </p>
+                <p>
+                  Inductive step: Assume that there is an integer <m>k \ge 0</m> such that <m>P(m)</m> is true for all <m>0\le m \le k</m>. That is, <m>m</m> is either a Fibonacci number or the sum of distinct Fibonacci numbers. Now let's consider the next number, <m>k+1</m>:
+                </p>
+                <p>
+                  Case 1: If <m>k+1</m> is a Fibonacci number, then we're done.
+                </p>
+                <p>
+                  Case 2: If <m>k+1</m> is not a Fibonacci number, TODO CONTINUE HERE
+                </p>
+              </statement>
+            </proof>
+        </solution>
+
       </exercise>
 
     <exercise xml:id="fibonacci-sum-of-odds">
@@ -586,6 +608,33 @@
           Prove, by mathematical induction, that <m>F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}</m>, where <m>F_n</m> is the <m>n</m>th Fibonacci number.
         </p>
       </statement>
+      <solution>
+        <proof>
+          <statement>
+            <p>
+              Let <m>P(n)</m> be the statement <q><m>F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}</m></q>
+            </p>
+            <p>
+              Basis step: If <m>n =1</m> then <m>F_1 =1</m> and <m>F_{2\cdot 1} = 1</m> so that <m>P(1)</m> is true.
+            </p>
+            <p>
+              Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k\ge 1</m>. That is, <m>F_1 + F_3 + F_5 + \dots + F_{2k -1} = F_{2k}</m> and consider:
+              <md>
+                <mrow>F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2(k+1) - 1} \amp = F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2k+1} \amp </mrow>
+                <mrow> \amp = F_{2k} + F_{2k+1} \amp \text{by ind. hyp.} </mrow>
+                <mrow> \amp = F_{2k+2} \amp \text{by rec. def.}</mrow>
+                <mrow> \amp = F_{2(k+1)}\amp</mrow>
+              </md>
+              And thus <m>P(k+1)</m> is true.
+            </p>
+            <p>
+              Therefore, by math induction, <m>F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}</m> for all integers <m>n\ge 1</m>.
+            </p>
+          </statement>
+        </proof>
+
+      </solution>
+
 
     </exercise>
 
