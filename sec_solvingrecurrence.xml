@@ -393,7 +393,7 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
       </statement>
       <solution>
         <p>
-         <m>a_n = 42 (7)^n - 24(3)^n</m> you could write <m>a_n = 6(7)^{n+1} - 8(3)^{n+1}</m>
+         <m>a_n = 42 (7)^n - 24(-3)^n</m> you could write <m>a_n = 6(7)^{n+1} + 8(-3)^{n+1}</m>
         </p>
       </solution>
 
