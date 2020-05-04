@@ -9,7 +9,7 @@ The notes will be self-contained in the sense that it will include all of the as
 
 In the interest putting everything on the table, I've discussed this with my Math 322 students in Fall 2018, and they all indicated that they wished that I had done it for their 321 course the semester before. I just hope that my new 321 students feel the same way... :-) 
 
-If you catch at error, let me know and I'll make the fix. Thanks!
+If you catch an error, let me know and I'll make the fix. Thanks!
 
 Build Directions (in case someone is just getting started with PreText)
 - Clone the PreText/Mathbook repository https://github.com/rbeezer/mathbook.git
