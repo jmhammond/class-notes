@@ -1,13 +1,11 @@
 # Math 321 Workbook
-Here I'm working on a workbook / notebook for Math 321 - Discrete Mathematics at Wichita State University.
+This is the source for the class notes / workbook for Math 321 - Discrete Mathematics at Wichita State University.
 
-The interactive version of the text is [available here](http://www.math.wichita.edu/discrete-book).
+The interactive version of the text is [available here](http://wichita.edu/discreteBook).
 
-The objective of the project is to have a set of notes ready for my students to have with them during class. Definitions will be immediately in front of them, and examples and propositions will be already written out. My plan is that during the lecture I can address "Example 2.1.1," and we can work out the solution at that time, in their own note-taking devices. 
+The original objective of the project is to have a set of notes ready for my students to have with them during class. Definitions will be immediately in front of them, and examples and propositions will be already written out. My plan is that during the lecture I can address "Example 2.1.1," and we can work out the solution at that time, in their own note-taking devices. 
 
-The notes will be self-contained in the sense that it will include all of the assigned and supplemental exercises for the course, but it is also a 'workbook' in that it will not have worked-out examples and proofs.
-
-In the interest putting everything on the table, I've discussed this with my Math 322 students in Fall 2018, and they all indicated that they wished that I had done it for their 321 course the semester before. I just hope that my new 321 students feel the same way... :-) 
+My goal now (Spring 2020) is to continue to extend the text further with complete worked solutions, embedded class videos, forums, and more. This enables me to have a hybrid/flipped class environment.
 
 If you catch an error, let me know and I'll make the fix. Thanks!
 
@@ -31,5 +29,6 @@ Acknowledgements:
 - I was inspired to write my notes when I encounted [Alan Doerr & Kenneth Levasseur's Applied Discrete Structures](https://github.com/klevasseur/ads) which I used as a supplemental text for my computer science based mathematical structures course (Math 322).
 - I borrow heavily from the exercises of Oscar Levin's [Discrete Mathematics: An Open Introduction](https://github.com/oscarlevin/discrete-book).
 - The text is written in the [PreText](https://github.com/rbeezer/mathbook.git) markup language.
+- Special thanks also goes to the Wichita State Open/Alternative Textbook Initiative for their generous grant to help expand the text.
 
 ![Creative Commons - Share Alike License Logo](https://i.creativecommons.org/l/by-sa/4.0/88x31.png) These notes are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
