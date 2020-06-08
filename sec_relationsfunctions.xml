@@ -283,7 +283,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     <definition>
       <p>
-        A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>surjective</term> or <term>onto</term> if and only if for every element <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = B</m>. 
+        A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>surjective</term> or <term>onto</term> if and only if for every element <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = b</m>.
         <!-- <me> -->
         <!--   f \text{ is surjective means } \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) )  -->
         <!-- </me> -->
@@ -306,7 +306,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </example>
 
     <note>
-      <p>If a function is onto, the range is exactly the codomain </p>
+      <p>If a function is onto, the range is exactly the codomain, that is <m>f(A) = B</m></p>
       <p>
         To determine if a function <m>f: A \to B</m> is surjective, we show that given an arbitrary element <m>y \in B</m> we can find an element <m>x\in A</m> such that <m>f(x)=y</m>. (A direct proof).
       </p>
