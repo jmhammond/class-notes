@@ -15,7 +15,7 @@
           <p>
             We can write <m>P(x) :=</m> <q><m> x \lt 5 </m>,</q> where
             <ul>
-              <li> the value of <m>P(x)</m> is the value of the <term>propositional function</term> P at <m>x</m>. </li>
+              <li> the value of <m>P(x)</m> is the value of the <term>propositional function</term> <m>P</m> at <m>x</m>. </li>
               <li>Assigning a value to <m>x</m> makes <m>P</m> a proposition (it then has a truth value)</li>
             </ul>
           </p>
@@ -40,15 +40,15 @@
               <p>
                 If <m>P(x):=</m> <q>The word <m>x </m> contains the letter a</q>.
                 <ol>
-                  <li> P(elephant)</li>
+                  <li> <m>P</m>(elephant)</li>
                   <li>
-                    P(purple)
+                    <m>P</m>(purple)
                   </li>
                   <li>
-                    P(true)
+                    <m>P</m>(true)
                   </li>
                   <li>
-                    P(false)
+                    <m>P</m>(false)
                   </li>
                 </ol>
               </p>
