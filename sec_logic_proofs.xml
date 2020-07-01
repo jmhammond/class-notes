@@ -257,10 +257,10 @@
         A proof by contradiction allows us to prove a statement <m>p</m> which is not necessarily conditional. We accomplish this by assuming <m>\neg p</m> is true, and finding a contradiction. This works because <me> \neg p \to (q \wedge \neg q) \equiv p</me> as we showed in <xref ref="example-contradiction-logic">example</xref>. Here's the model:
       </p>
 
-      <proof>
+      <proof xml:id="contradiction-model">
         <p> Assume, to the contrary, that <m>p</m> is false, that is <m>\neg p</m> is true.</p> 
         <p> ... use logical equivalences (and/or mathematics) ... </p>
-        <p> Arrive at a logical contradiction. Some impossibility. Therefore, <m>p \to q</m> is true by contradiction.</p>
+        <p> Arrive at a logical contradiction. Some impossibility. Therefore, <m>p</m> is true by contradiction.</p>
       </proof>
 
       <example>
@@ -866,48 +866,6 @@
     </exercise>
 
 
-    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
-      <statement>
-        <p>
-          Prove the statement: For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a^2 + b^2 = c^2</m>, then <m>a</m> or <m>b</m> is even.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Try a proof by contradiction. What is the negation of this statement?
-        </p>
-      </hint>
-      <solution>
-        <p>
-          The negation of the statement is <m>a^2 + b^2 = c^2</m> and both
-          <m>a</m> and <m>b</m> are odd.
-        </p>
-        <proof>
-          <statement>
-            <p>
-              Assume that <m>a</m> and <m>b</m> are both odd and that <m>a^2 +b^2 = c^2</m>. Then there exist integers <m>k</m> and <m>l</m> such that <m>a=2k+1</m> and <m>b=2k+1</m>.
-            </p>
-            <p>
-              First, we observe that
-              <md>
-                <mrow>a^2 + b^2 \amp= (2k+1)^2 + (2l+1)^2 </mrow>
-                <mrow> \amp = 4k^2 + 4k + 1 + 4l^2 + 4l + 1 </mrow>
-                <mrow> \amp = 4k^2 + 4k + 4l^2 + 4l + 2 </mrow>
-              </md>
-              so that <m>c^2</m> and hence <m>c</m> is even.  Let <m>c=2m</m> where <m>m</m> is some integer. Then:
-              <md>
-                <mrow>c^2 \amp = a^2 + b^2 </mrow>
-                <mrow>(2k)^2 \amp = 4k^2 + 4k + 4l^2 + 4l + 2 </mrow>
-                <mrow>4k^2 \amp = 4(k^2 + k + l^2 + l) + 2 </mrow>
-              </md>
-              This is a contradiction as we have a multiple of four being equal to something which is not a multiple of four.  Thus, our original assumption was incorrect and therefore if <m>a^2 + b^2 = c^2</m>, we conclude that one of <m>a</m> or <m>b</m> is even.
-            </p>
-          </statement>
-        </proof>
-      </solution>
-
-    </exercise>
 
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -992,6 +950,71 @@
       </solution>
     </exercise>
 
+
+    <exercise>
+      <statement>
+        <p>
+          Let's say you are presented with a conditional statement <m>p \to q</m> that you want to prove by contradiction. This exercise has you structure a model for contradiction of conditional statements like we saw in the <xref ref="contradiction-model">model</xref>.
+          <ol>
+            <li>What is your assumption?</li>
+            <li>What is your conclusion?</li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>Assume, to the contrary that <m>p\to q</m> is false, that is, we assume that <m>\neg p\to q</m> or <m>p \land \neg q</m>.</li>
+            <li>Therefore, <m>p\to q</m> is true by contradiction.</li>
+          </ol>
+        </p>
+      </solution>
+
+    </exercise>
+  </exercises>
+
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Prove that for all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a^2 + b^2 = c^2</m>, then <m>a</m> or <m>b</m> is even.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Try a proof by contradiction.
+        </p>
+      </hint>
+      <solution>
+        <p>
+          The negation of the statement is <m>a^2 + b^2 = c^2</m> and both
+          <m>a</m> and <m>b</m> are odd.
+        </p>
+        <proof>
+          <statement>
+            <p>
+              Assume that <m>a</m> and <m>b</m> are both odd and that <m>a^2 +b^2 = c^2</m>. Then there exist integers <m>k</m> and <m>l</m> such that <m>a=2k+1</m> and <m>b=2k+1</m>.
+            </p>
+            <p>
+              First, we observe that
+              <md>
+                <mrow>a^2 + b^2 \amp= (2k+1)^2 + (2l+1)^2 </mrow>
+                <mrow> \amp = 4k^2 + 4k + 1 + 4l^2 + 4l + 1 </mrow>
+                <mrow> \amp = 4k^2 + 4k + 4l^2 + 4l + 2 </mrow>
+              </md>
+              so that <m>c^2</m> and hence <m>c</m> is even.  Let <m>c=2m</m> where <m>m</m> is some integer. Then:
+              <md>
+                <mrow>c^2 \amp = a^2 + b^2 </mrow>
+                <mrow>(2k)^2 \amp = 4k^2 + 4k + 4l^2 + 4l + 2 </mrow>
+                <mrow>4k^2 \amp = 4(k^2 + k + l^2 + l) + 2 </mrow>
+              </md>
+              This is a contradiction as we have a multiple of four being equal to something which is not a multiple of four.  Thus, our original assumption was incorrect and therefore if <m>a^2 + b^2 = c^2</m>, we conclude that one of <m>a</m> or <m>b</m> is even.
+            </p>
+          </statement>
+        </proof>
+      </solution>
+
+    </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
     <exercise>
@@ -1112,6 +1135,5 @@
         </p>
       </solution>
     </exercise>
-  </exercises>
 
 </section>
