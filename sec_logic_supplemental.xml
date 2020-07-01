@@ -95,7 +95,7 @@
     <exercise>
       <statement>
         <p>
-          Are the statements <m>p \to (q \vee r)</m> and <m>(p \to q) \vee (p \to q)</m> logically equivalent? Explain your answer.
+          Are the statements <m>p \to (q \vee r)</m> and <m>(p \to q) \vee (p \to r)</m> logically equivalent? Explain your answer.
         </p>
       </statement>
       <solution>
