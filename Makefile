@@ -1,12 +1,12 @@
 STYLESHEETS_DIR = ~/src/mathbook/xsl
 
 html:
-	xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.knowl.proof no -stringparam html.google-search 015422183392601792159:vae7vvmmczm $(STYLESHEETS_DIR)/mathbook-html.xsl class-notes.xml
+	xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.knowl.proof no -stringparam publisher pub.xml $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
 
 all: html pdf
 
 colorscheme:
-	xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.css.file "mathbook-manitoba.css" $(STYLESHEETS_DIR)/mathbook-html.xsl class-notes.xml
+	xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.css.file "pretext-manitoba.css" $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
 
 
 tex:

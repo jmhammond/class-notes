@@ -5,7 +5,7 @@
 
   <book xml:id="discrete-class-notes">
     <title>Math 321 Class Notes</title>
-    <frontmatter>
+    <frontmatter xml:id="front-matter">
       <titlepage>
         <author>
           <personname>John Hammond</personname>
