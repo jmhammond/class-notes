@@ -996,7 +996,6 @@
             <li> <p> No. </p> </li>
             <li> <p> No. </p> </li>
             <li><m>2\Z \cap 3\Z</m> is the set of all integers which are multiples of both 2 and 3 (so multiples of 6). Therefore <m>2\Z \cap 3\Z = \{x \in \Z \st \exists y\in \Z(x = 6y)\}</m>.</li>
-            <li><m>2\Z \cup 3\Z</m>.</li>
           </ol>
         </p>
       </solution>
