@@ -971,7 +971,6 @@
       </solution>
 
     </exercise>
-  </exercises>
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
@@ -1136,4 +1135,5 @@
       </solution>
     </exercise>
 
+  </exercises>
 </section>
