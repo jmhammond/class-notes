@@ -3,6 +3,11 @@ STYLESHEETS_DIR = ~/src/mathbook/xsl
 html:
 	xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.knowl.proof no -stringparam publisher pub.xml $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
 
+#
+# Still working on this; custom css in the future.
+#
+# xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.knowl.proof no -stringparam publisher pub.xml -stringparam html.css.server http://hammond.math.wichita.edu/  $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
+
 all: html pdf
 
 colorscheme:

@@ -479,7 +479,73 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </p>
     </note>
 
+    <assemblage>
+      <title>Computer Corner</title>
+      <caption>Computer Corner</caption>
+      <p>
+        C++ defines functions by specifying both the input parameters (<em>domain</em>) and return type (<em>co-domain</em>).  Here are some function examples:
+      </p>      
+      <p>
+        <sidebyside width="50%">
+          <program language="cpp">
+            <input>
+                int square(int num) {
+                    return num*num;
+                }
+            </input>
+          </program>
+          <p>
+            Here the function is <m>\text{square}: \Z \to \Z</m>.
+          </p>
+        </sidebyside>
+      </p>
+      <p>
+        Here's another sample that changes the definition of the standard square root function:
+      </p>
+      <p>
+        <sidebyside width="50%">
+          <program language="cpp">
+            <input>
+                #include &lt;math.h&gt;
+             
+                int mySqrt(int num) {
+                    return sqrt(num)
+                }
 
+                // this will return things like
+                // mySqrt(4) = 2, which you'd expect.
+                // but...
+                // mySqrt(5) = 2, also.
+            </input>
+          </program>
+          <p>
+            This function is <m>\text{mySqrt}: \Z \to \Z</m>. We <em>can</em> input negative numbers, but <c>sqrt()</c> throws an error in that case.
+          </p>
+        </sidebyside>
+      </p>
+      <p>
+        To get the correct fractional value of the square root of an integer, though, we'd need this:
+      </p>
+      <p>
+        <sidebyside width="50%">
+          <program language="cpp">
+            <input>
+                #include &lt;math.h&gt;
+
+                double mySqrt(int num) {
+                    return sqrt(num)
+                }
+
+                // Hooray!
+                // mySqrt(5) = 2.23607
+            </input>
+          </program>
+          <p>
+            This time the function is <m>\text{mySqrt}: \Z \to \Q</m>. The specification of the codomain is essential to make sure we can compute the correct value!
+          </p>
+        </sidebyside>
+      </p>
+    </assemblage>
 
   </subsection>
 
