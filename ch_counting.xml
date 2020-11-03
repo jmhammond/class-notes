@@ -19,7 +19,7 @@
     <definition>
       <statement>
         <p>
-          The <term>multiplicative principle</term> states that if an event <m>A</m> can occur <m>m</m> ways and an event <m>n</m> can occur <n>n</n> ways, then the event <q><m>A \and B</m></q> can occur <m>m\cdot n</m> ways.
+          The <term>multiplicative principle</term> states that if an event <m>A</m> can occur <m>m</m> ways and an event <m>B</m> can occur <n>n</n> ways, then the event <q><m>A \and B</m></q> can occur <m>m\cdot n</m> ways.
         </p>
         <p>
           The multiplicative principle generalizes to more than two events.
