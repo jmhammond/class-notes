@@ -160,6 +160,34 @@
   </example>
 
 
+  <note>
+    <title>The difference between 'weak' and 'strong' induction</title>
+    <p>
+      'Regular'/'weak' induction follows the pattern:
+      <ol>
+        <li>Basis step.</li>
+        <li>Inductive hypothesis is <m>P(k)</m> is true</li>
+        <li>We show that <m>P(k)</m> implies that <m>P(k+1)</m> is true</li>
+      </ol>
+      That is, we use this induction process for claims where it's convenient to show that the pattern follows sequentially in a convenient way. Straight-forward examples are the addition formulas;
+    </p>
+    <p>
+      'Strong' induction follows the pattern:
+      <ol>
+        <li>Basis step(s).   [may need more than one basis, just like some recurrence relations]</li>
+        Inductive hypothesis is that <em>all</em> of <m>P(1), P(2), P(3), \dots P(k)</m> are true.   [this is the 'strong' part; it's a larger assumption]
+        <li>We show that the hypothesis implies the next element in the sequence, <m>P(k+1)</m>, is true  [like before]</li>
+      </ol>
+      the difference between this and the previous induction process is that it's sometimes <em>not convenient</em> to prove that <m>P(k)</m> directly connects to <m>P(k+1)</m>.  Instead, we still need to show that the <em>next</em> element in the sequence <m>P(k+1)</m> is true by appealing to a previous element in the seqence.
+    </p>
+    <p>
+      Relevant examples are those like the binary representation of a number - that <m>k</m> has a binary representation doesn't immediately tell us <m>k+1</m> does, but if we can cut the number in half and use the binary representation of that number to scale-up in order to build a binary representation of <m>k+1</m>.
+    </p>
+
+    <p>
+      <b>Same thing</b> We separate 'weak' and 'strong' induction, but they're really all the same thing. It's just that when it's convenient to show <m>P(k) \to P(k+1)</m>, we write fewer words for our inductive hypothesis. Because if we don't need to use the fact that <m>P(m)</m> is true for all <m>1 \le m \le k</m>, then we just omit that. Mathematicians are lazy.
+    </p>
+  </note>
 
   <exercises>
 
@@ -172,7 +200,7 @@
     </note>
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
-     <exercise>
+    <exercise>
       <statement>
         <p>
           Use induction to prove for all <m>n \in \N</m> that <m>\d 1 + 2 + 2^2 + 2^3 + \dots + 2^n = 2^{n+1} - 1</m>.
@@ -184,8 +212,8 @@
           <p>
             We must prove that <m>1 + 2 + 2^2 + 2^3 + \cdots +2^n = 2^{n+1} - 1</m> for all <m>n \in \N</m>. Thus let <m>P(n)</m> be the statement <m>1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1</m>. We will prove that <m>P(n)</m> is true for all <m>n \in \N</m>. First we establish the base case, <m>P(0)</m>, which claims that <m>1 = 2^{0+1} -1</m>. Since <m>2^1 - 1 = 2 - 1 = 1</m>, we see that <m>P(0)</m> is true. Now for the inductive case. Assume that <m>P(k)</m> is true for an arbitrary <m>k \in \N</m>. That is, <m>1 + 2 + 2^2 + \cdots + 2^k = 2^{k+1} - 1</m>. We must show that <m>P(k+1)</m> is true (i.e., that <m>1 + 2 + 2^2 + \cdots + 2^{k+1} = 2^{k+2} - 1</m>). To do this, we start with the left-hand side of <m>P(k+1)</m> and work to the right-hand side:
             <md>
-           
-   <mrow> 1 + 2 + 2^2 + \cdots + 2^k + 2^{k+1} = \amp ~ 2^{k+1} - 1 + 2^{k+1} \amp \text{by inductive hypothesis}</mrow>
+
+              <mrow> 1 + 2 + 2^2 + \cdots + 2^k + 2^{k+1} = \amp ~ 2^{k+1} - 1 + 2^{k+1} \amp \text{by inductive hypothesis}</mrow>
               <mrow> = \amp ~2\cdot 2^{k+1} - 1 \amp</mrow>
               <mrow> = \amp ~ 2^{k+2} - 1 \amp</mrow>
             </md>
@@ -263,42 +291,42 @@
 
 
     <!-- the following is adapated from from https://github.com/oscarlevin/discrete-book -->
-          <exercise>
-            <statement>
-              <p>
-                Prove that the sum of <m>n</m> squares can be found as follows
-                <me>
-                  1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}
-                </me>
-              </p>
-            </statement>
-            <solution>
-                <proof>
-                  <statement>
-                    <p>
-                      Let <m>P(n)</m> be the statement <q><m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m></q>. For the base case, we show that <m>P(1)</m> is true. That is:
-                      <me> P(1) := 1^2 = \frac{1(1+1)(2\cdot1+1)}{6} </me>
-                      which is true.
-                    </p>
-                    <p>
-                      For the inductive step, assume that <m>P(k)</m> is true for some integer <m>k \ge 1</m>, that is <me>
-                  1^2 +2^2 +3^2+...+k^2 = \frac{k(k+1)(2k+1)}{6}</me>
-                  and consider the statement:
-                  <md>
-                    <mrow>1^2 + 2^2 + 3^2 + \dots + k^2 + (k+1)^2 &amp;=  \frac{k(k+1)(2k+1)}{6}  + (k+1)^2 </mrow>
-                    <mrow> &amp; = \frac{k(k+1)(2k+1)}{6} \frac{6(k+1)^2}{6} </mrow>
-                    <mrow> &amp; = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6} </mrow>
-                    <mrow> &amp; = \frac{(k+1)[2k^2 + k + 6k+6]}{6} </mrow>
-                    <mrow> &amp; = \frac{(k+1)[2k^2 + 7k+6]}{6} </mrow>
-                    <mrow> &amp; = \frac{(k+1)[(2k+3)(k+2)]}{6} </mrow>
-                    <mrow> &amp; = \frac{(k+1)(2(k+1)+1)((k+1) + 1)}{6} </mrow>
-                    which is exactly what we needed to show. Thus, by the principle of mathematical induction, the original statement <m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m> is true for all integers <m>n\ge 1</m>.
-                    </md>
-                    </p>
-                  </statement>
-                </proof>
-            </solution>
-          </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Prove that the sum of <m>n</m> squares can be found as follows
+          <me>
+            1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <proof>
+          <statement>
+            <p>
+              Let <m>P(n)</m> be the statement <q><m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m></q>. For the base case, we show that <m>P(1)</m> is true. That is:
+              <me> P(1) := 1^2 = \frac{1(1+1)(2\cdot1+1)}{6} </me>
+              which is true.
+            </p>
+            <p>
+              For the inductive step, assume that <m>P(k)</m> is true for some integer <m>k \ge 1</m>, that is <me>
+              1^2 +2^2 +3^2+...+k^2 = \frac{k(k+1)(2k+1)}{6}</me>
+              and consider the statement:
+              <md>
+                <mrow>1^2 + 2^2 + 3^2 + \dots + k^2 + (k+1)^2 &amp;=  \frac{k(k+1)(2k+1)}{6}  + (k+1)^2 </mrow>
+                <mrow> &amp; = \frac{k(k+1)(2k+1)}{6} \frac{6(k+1)^2}{6} </mrow>
+                <mrow> &amp; = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6} </mrow>
+                <mrow> &amp; = \frac{(k+1)[2k^2 + k + 6k+6]}{6} </mrow>
+                <mrow> &amp; = \frac{(k+1)[2k^2 + 7k+6]}{6} </mrow>
+                <mrow> &amp; = \frac{(k+1)[(2k+3)(k+2)]}{6} </mrow>
+                <mrow> &amp; = \frac{(k+1)(2(k+1)+1)((k+1) + 1)}{6} </mrow>
+                which is exactly what we needed to show. Thus, by the principle of mathematical induction, the original statement <m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m> is true for all integers <m>n\ge 1</m>.
+              </md>
+            </p>
+          </statement>
+        </proof>
+      </solution>
+    </exercise>
 
 
 
@@ -383,8 +411,8 @@
       <hint>
         <p>
           Rather than give a solution, here's just a hint. What happens if  <m>n</m> is even?
-          </p>
-        </hint>
+        </p>
+      </hint>
     </exercise>
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
@@ -446,14 +474,14 @@
           <p>
             Base case: When <m>n=2</m>, there will be one handshake, and <m>\frac{2(2-1)}{2} = 1</m>.  Thus <m>P(2)</m> is true.
           </p>
-        <p>
+          <p>
             Inductive case: Assume <m>P(k)</m> is true for arbitrary <m>k\ge 2</m> (that the number of handshakes among <m>k</m> people is <m>\frac{k(k-1)}{2}</m>.  What happens if a <m>k+1</m>st person shows up?  How many <em>new</em> handshakes take place?  The new person must shake hands with everyone there, which is <m>k</m> new  handshakes.  So the total is now <m>\frac{k(k-1)}{2} + k = \frac{(k+1)k}{2}</m>, as needed.
-        </p>
+          </p>
 
-        <p>
-          Therefore, by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \ge 2</m>.
-        </p>
-      </proof>
+          <p>
+            Therefore, by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \ge 2</m>.
+          </p>
+        </proof>
       </solution>
     </exercise>
 
@@ -571,42 +599,42 @@
     </exercise>
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
-      <exercise>
-        <statement>
-          <p>
-            Prove, using strong induction, that every natural number is either a Fibonacci number or can be written as the <em>sum</em> of <em>distinct</em> Fibonacci numbers.
-          </p>
-        </statement>
+    <exercise>
+      <statement>
+        <p>
+          Prove, using strong induction, that every natural number is either a Fibonacci number or can be written as the <em>sum</em> of <em>distinct</em> Fibonacci numbers.
+        </p>
+      </statement>
 
-        <solution>
-            <proof>
-              <statement>
-                <p>
-                Let <m>P(n)</m> be the statement that <m>n</m> is either a Fibonacci number of the sum of distinct Fibonacci numbers
-                </p>
-                <p>
-                  Basis step: For <m>n=0</m>, we have that <m>0 = F_0</m> is a Fibonacci number.
-                </p>
-                <p>
-                  Inductive step: Assume that there is an integer <m>k \ge 0</m> such that <m>P(m)</m> is true for all <m>0\le m \le k</m>. That is, <m>m</m> is either a Fibonacci number or the sum of distinct Fibonacci numbers. Now let's consider the next number, <m>k+1</m>:
-                </p>
-                <p>
-                  Case 1: If <m>k+1</m> is a Fibonacci number, then we're done.
-                </p>
-                <p>
-                  Case 2: If <m>k+1</m> is not a Fibonacci number, then let <m>F_m</m> be the largest Fibonacci number less than <m>k+1</m>. Since <m>k+1 - F_m \le k</m> then we have that <m>k+1 - F_m</m> is the sum of distinct Fibonacci numbers, by inductive hypothesis.
-                </p>
-                <p>
-                  Adding <m>F_m</m> to this sum gives us <m>k+1 - F_m + F_m = k+1</m> which then itself a sum of distinct Fibonacci numbers.
-                </p>
-                <p>
-                  Thus, by induction, every natural number is either a Fibonacci number of the sum of distinct Fibonacci numbers.
-                </p>
-              </statement>
-            </proof>
-        </solution>
+      <solution>
+        <proof>
+          <statement>
+            <p>
+              Let <m>P(n)</m> be the statement that <m>n</m> is either a Fibonacci number of the sum of distinct Fibonacci numbers
+            </p>
+            <p>
+              Basis step: For <m>n=0</m>, we have that <m>0 = F_0</m> is a Fibonacci number.
+            </p>
+            <p>
+              Inductive step: Assume that there is an integer <m>k \ge 0</m> such that <m>P(m)</m> is true for all <m>0\le m \le k</m>. That is, <m>m</m> is either a Fibonacci number or the sum of distinct Fibonacci numbers. Now let's consider the next number, <m>k+1</m>:
+            </p>
+            <p>
+              Case 1: If <m>k+1</m> is a Fibonacci number, then we're done.
+            </p>
+            <p>
+              Case 2: If <m>k+1</m> is not a Fibonacci number, then let <m>F_m</m> be the largest Fibonacci number less than <m>k+1</m>. Since <m>k+1 - F_m \le k</m> then we have that <m>k+1 - F_m</m> is the sum of distinct Fibonacci numbers, by inductive hypothesis.
+            </p>
+            <p>
+              Adding <m>F_m</m> to this sum gives us <m>k+1 - F_m + F_m = k+1</m> which then itself a sum of distinct Fibonacci numbers.
+            </p>
+            <p>
+              Thus, by induction, every natural number is either a Fibonacci number of the sum of distinct Fibonacci numbers.
+            </p>
+          </statement>
+        </proof>
+      </solution>
 
-      </exercise>
+    </exercise>
 
     <exercise xml:id="fibonacci-sum-of-odds">
       <statement>
@@ -666,7 +694,7 @@
       </statement>
       <hint>
         <p>
-         (Alternative idea to the below proof) In the inductive step add and subtract <m>7^k</m>. That is, you'll have <m>7\cdot 7^{k} - 1 - 7^k + 7^k</m>. Now algebra.
+          (Alternative idea to the below proof) In the inductive step add and subtract <m>7^k</m>. That is, you'll have <m>7\cdot 7^{k} - 1 - 7^k + 7^k</m>. Now algebra.
         </p>
       </hint>
       <solution>
