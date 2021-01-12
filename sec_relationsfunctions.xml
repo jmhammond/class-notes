@@ -647,8 +647,8 @@ b. note that the inverse of a function is always a relation, but not always a fu
         <p>
           Let <m>G:A \to B</m> and let <m>R:B \to C</m>. The <term>composition of <m>R</m> and <m>S</m></term>, denoted by <m>R\circ S</m> is defined, for all <m>a \in A</m>, by <m>(R \circ S)(a) = R(S(a))</m>.
           <sidebyside width="75%">
-            <image xml:id="composition-of-functions">
-              <description>Composition of functions</description>
+            <image xml:id="composition-of-relations">
+              <description>Composition of relations</description>
               <latex-image>
                 \usetikzlibrary{calc,positioning,shapes.geometric}
 
