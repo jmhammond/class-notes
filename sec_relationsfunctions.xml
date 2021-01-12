@@ -568,8 +568,18 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
-    </exercise>
 
+      <solution>
+        <p>
+          <ol>
+            <li> Yes </li>
+            <li> R^{-1} = \{(x, y) \mid y^2 = x, \text{ for } y = -3, -2, -1, \dots 2, 3\} </li>
+            <li> No</li>
+          </ol>
+        </p>
+      </solution>
+
+    </exercise>
 
 
     <exercise>
@@ -588,6 +598,15 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> No. </li>
+            <li> No. For example <m>(2, 2)</m> and <m>(2,4)</m> are the the relation. </li>
+            <li> Yes, each person has a unique height (at any given time). </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
     
     <exercise>
@@ -604,6 +623,14 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> We'd normally write <m>a=b</m> if <m>a \mathrel{R} B</m>. </li>
+            <li>Yes! Given a set <m>A</m>, we define the function by <m>f: A \to A</m> by <m>f(x)=x</m>.</li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
 
@@ -613,6 +640,37 @@ b. note that the inverse of a function is always a relation, but not always a fu
           Reformulate <xref ref="def-composition-of-functions"/> in order to define composition of two relations.
         </p>
       </statement>
+      <solution>
+        <p>
+          Very little needs changed - I'm simply relabling the variables. We'll explore relations (and their composition) in greater depth in Discrete 2.
+        </p>
+        <p>
+          Let <m>G:A \to B</m> and let <m>R:B \to C</m>. The <term>composition of <m>R</m> and <m>S</m></term>, denoted by <m>R\circ S</m> is defined, for all <m>a \in A</m>, by <m>(R \circ S)(a) = R(S(a))</m>.
+          <sidebyside width="75%">
+            <image xml:id="composition-of-functions">
+              <description>Composition of functions</description>
+              <latex-image>
+                \usetikzlibrary{calc,positioning,shapes.geometric}
+
+                \begin{tikzpicture}
+                \tikzset{
+                elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
+                node distance=3cm,
+                font=\footnotesize,
+                >=latex,
+                }
+                \node(x)[elps={1cm}{1cm},label={$A$}]{};
+                \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
+                \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
+                \draw[->](x)to node[above right]{$S$}(y);
+                \draw[->](y)to node[above right]{$R$}(v);
+                \draw[->](x)to[bend left]node[above]{$R \circ S$}(v);
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
