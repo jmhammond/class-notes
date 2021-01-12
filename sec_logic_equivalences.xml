@@ -262,13 +262,24 @@
       </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
           Are the statements <m>p \to (q\vee r)</m> and <m>(p \to q) \vee (p \to r)</m> logically equivalent?
         </p>
       </statement>
+      <solution>
+        <p>
+          Let's start with the left-hand side and work towards the right to find out.
+          <md>
+            <mrow> p \to (q\vee r) &amp; = \neg p \lor (q \land r)</mrow>
+            <mrow> &\amp; (\neg p \land q) \lor (\neg p \land r) </mrow>
+            <mrow> &\amp; (p \to q) \lor (p \to r)</mrow>
+          </md>
+          which was what we wanted to show.
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
