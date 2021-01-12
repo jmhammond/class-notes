@@ -951,13 +951,13 @@ b. note that the inverse of a function is always a relation, but not always a fu
         <p>
           <ol>
             <li>
-              <m>f(n) = \begin{cases} -2n \amp \text{ if } n\lt0  \\ 2n+3 \amp \text{ if } n\ge0</m>
+              <m>f(n) = \begin{cases} -2n \amp \text{ if } n\lt0  \\ 2n+3 \amp \text{ if } n\ge0\end{cases}</m>
             </li>
             <li>
-              <m>f(n) = \begin{cases} -n \amp \text{ if } n\lt0  \\ n+1 \amp \text{ if } n\ge0</m>
+              <m>f(n) = \begin{cases} -n \amp \text{ if } n\lt0  \\ n+1 \amp \text{ if } n\ge0\end{cases}</m>
             </li>
             <li>
-              <m>f(n) = \begin{cases} -2n \amp \text{ if } n\lt0  \\ 2n+1 \amp \text{ if } n\ge0</m>
+              <m>f(n) = \begin{cases} -2n \amp \text{ if } n\lt0  \\ 2n+1 \amp \text{ if } n\ge0\end{cases}</m>
             </li>
             <li>
               <m>f(n) = n^2 + 1</m>
@@ -1090,9 +1090,18 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
       </statement>
 
+      <solution>
+        <p>
+          <ol>
+            <li><m>|X| \le |Y|</m></li>
+            <li><m>|Y| \le |X|</m></li>
+            <li><m>|X| = |Y|</m> </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -1108,6 +1117,18 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
       </statement>
 
+      <solution>
+        <p>
+          <ol>
+            <li> Yes </li>
+            <li> Yes </li>
+            <li> Yes </li>
+            <li> Yes </li>
+            <li> Finally a no!  </li>
+            <li> Also a no  </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
 
@@ -1156,6 +1177,16 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> <m>\lfloor 8.675309 \rfloor = 8</m> and <m>\lceil 8.675309 \rceil = 9 </m> </li>
+            <li> <m>\lfloor \pi \rfloor = 3</m> and <m>\lceil \pi \rceil = 4</m> </li>
+            <li> <m>\lfloor -2.1 \rfloor = -3</m> and <m>\lceil -2.1 \rceil = -2</m> </li>
+            <li> <m>\lfloor 7 \rfloor = \lceil 7 \rceil = 7</m> </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -1164,6 +1195,16 @@ b. note that the inverse of a function is always a relation, but not always a fu
           Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.
         </p>
       </statement>
+      <solution>
+        <p>
+          I'm providing a solution for the floor function. The ceiling function solution can be done very similarly.
+          The floor function is not injective. Consider the two real numbers 2.1 and 2.5:
+          <m>\lfloor 2.1\rfloor = \lfloor 2.5\rfloor = 2</m>.
+        </p>
+        <p>
+          The floor function is surjective, however. Let <m>c\in \Z</m> be an integer in the codomain. Then consider <m>a = c+0.1 \in \R</m>, the domain. <m>\lfloor a \rfloor = \lfloor c+0.1 \rfloor = c.</m>
+        </p>
+      </solution>
     </exercise>
 
     <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
