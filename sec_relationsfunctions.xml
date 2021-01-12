@@ -180,7 +180,7 @@
               <m> R_3 = \{(x,y) \mid y \gt 3x - 4\}</m>
             </li>
             <li>
-              <m> R_4 = \{(x,y) \mid x \text{ is the parent of } y \}</m>
+              <m> R_4 = \{(x,y) \mid y \text{ is the parent of } x \}</m>
             </li>
             <li>
               <m> R_5 = \{(x,y) \mid x \text{ is a sibling of } y \}</m>
@@ -696,7 +696,29 @@ b. note that the inverse of a function is always a relation, but not always a fu
             </li>
           </ol>
         </p>
-      </statement>
+        </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <m>R_1 \circ R_2 = \{(x,y) \mid y = -3(x^2 + 2) + 2\} = \{(x,y) \mid y = -3x^2 -4\}</m>
+            </li>
+            <li>
+              <m>R_2 \circ R_1 = \{(x,y) \mid y = (-3x+2)^2 + 2\} = \{(x,y) \mid 9x^2 -6x + 6\}</m>
+            </li>
+
+            <li>
+              <m>R_4 \circ R_4 = \{(x,y) \mid y \text{ is a grandparent of } x \}</m>
+            </li>
+            <li>
+              <m>R_5 \circ R_4 = \{(x,y) \mid y \text{ is a sibling of a parent of x}\} = \{(x,y) \mid y \text{ is an aunt/uncle of } x \}</m>
+            </li>
+            <li>
+              <m>R_4 \circ R_5 = \{ (x,y) \mid y is the parent of the sibling of x\} = R_4</m>
+            </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
 
