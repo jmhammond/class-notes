@@ -418,7 +418,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     <definition xml:id="def-composition-of-functions">
       <p>
-        Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
+        Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g : A \to C</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
         <sidebyside width="75%">
           <image xml:id="composition-of-functions">
             <description>Composition of functions</description>
@@ -437,7 +437,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
               \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
               \draw[->](x)to node[above right]{$g$}(y);
               \draw[->](y)to node[above right]{$f$}(v);
-              \draw[->](x)to[bend left]node[above]{$g \circ f$}(v);
+              \draw[->](x)to[bend left]node[above]{$f \circ g$}(v);
               \end{tikzpicture}
             </latex-image>
           </image>
