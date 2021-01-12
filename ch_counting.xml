@@ -1690,9 +1690,6 @@
         <p>
           Note that we'll define <m>\binom{n}{k} = 0</m> if <m>n \lt k</m>. This is reasonable since, for example, if you want to choose 3 objects from a set of 1 object, there are no ways to do it: i.e. <m>\binom{1}{3} = 0</m>.
         </p>
-        <p>
-          Note that we'll define <m>\binom{n}{k} = 0</m> if <m>n \lt k</m>. This is reasonable since, for example, if you want to choose 3 objects from a set of 1 object, there are no ways to do it: i.e. <m>\binom{1}{3} = 0</m>.
-        </p>
       </statement>
       <hint>
         <p>
