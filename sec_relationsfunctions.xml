@@ -126,7 +126,7 @@
     <example>
       <statement>
         <p>
-          Let <m>\mathrel{R}</m> be the relation from <m>\N</m> to <m>\N</m> where we say <m>a \mathrel{R} b</m> if <m>a^2 = b</m>.        
+          Let <m>\mathrel{R}</m> be the relation from <m>\Z</m> to <m>\Z</m> where we say <m>a \mathrel{R} b</m> if <m>a^2 = b</m>.
           <ol>
             <li>
               List the first few ordered pairs of the relation for <m>a = 0, 1, 2, \dots 5</m>.
