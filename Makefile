@@ -33,7 +33,7 @@ publish:
 	ssh hammond@alonzo.math.wichita.edu 'cd src/class-notes && git pull && make publish-to-web'
 
 images:
-	~/src/mathbook/script/mbx -vv -c latex-image -f svg -d ~/Documents/class-notes/images ~/Documents/class-notes/class-notes.xml
+	~/src/mathbook/pretext/pretext -vv -c latex-image -f svg -d ~/src/class-notes/images ~/src/class-notes/class-notes.xml
 
 # Here's the rsync command that probably works for me.
 # rsync -zartv --include "*/" --include="*.html" --exclude="*" ./  ~/public_html/notes-staging
