@@ -4,6 +4,17 @@
     Multiplicative Inverses
   </title>
 
+  <introduction>
+    <statement>
+      <p>
+        In our algebra and calculus classes, where we worked in <m>\Q</m> and <m>\R</m>, all non-zero numbers had multiplicative inverses. For example, <m>5^{-1} = \frac15</m> since <m>5^{-1}\cdot 5 = 1</m>. But <m>\frac15 \not \in Z</m>!
+      </p>
+      <p>
+        When we're working with only integers, in particular in congruence classes modulo an integer <m>m</m>, fractions aren't a thing. Some numbers, though, do have multiplicative inverses. They're special, and we explore them in this section.
+      </p>
+    </statement>
+  </introduction>
+
   <definition>
     <statement>
       <p>
