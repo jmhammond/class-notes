@@ -372,6 +372,71 @@
           Construct a truth table for the compound statement <m>((p \to q) \land \neg p) \to \neg q</m>
         </p>
       </statement>
+      <solution>
+        <p>
+          <tabular halign="center">
+            <col right="minor"/>
+            <col right="medium"/>
+            <col/>
+            <row bottom="minor">
+              <cell>
+                <m>p</m>
+              </cell>
+              <cell>
+                <m>q</m>
+              </cell>
+              <cell>
+                <m>((p \to q) \land \neg p) \to \neg q</m>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                T
+              </cell>
+              <cell>
+                T
+              </cell>
+              <cell>
+                T
+              </cell>
+            </row>
+            <row>
+              <cell>
+                T
+              </cell>
+              <cell>
+                F
+              </cell>
+              <cell>
+                F
+              </cell>
+            </row>
+            <row>
+              <cell>
+                F
+              </cell>
+              <cell>
+                T
+              </cell>
+              <cell>
+                T
+              </cell>
+            </row>
+            <row>
+              <cell>
+                F
+              </cell>
+              <cell>
+                F
+              </cell>
+              <cell>
+                T
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </solution>
+
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -553,6 +618,16 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> Converse: <q>If I bring an umbrella then it rains today.</q>. Inverse: <q>If it doesn't rain today then I won't bring an umbrella.</q> Contrapositive: <q>If I won't bring an umbrella, then it isn't raining today</q>. </li>
+            <li> The conditional <q>Whenever I drive my car, I do not use my phone</q> is <q>If I drive my car, then I don't use my phone.</q> Now find the other statements.</li>
+            <li> The conditional <q>When I stay up too late, it's necessary that I sleep until noon</q> is <q>If I stay up too late, then it's necessary that I sleep until noon.</q> Now find the other statements.</li>
+          </ol>
+        </p>
+      </solution>
+
     </exercise>
 
 
@@ -575,6 +650,11 @@
           What is the conclusion?
         </p>
       </statement>
+      <solution>
+        <p>
+          A and B are both lying knaves.
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -583,7 +663,13 @@
           This time you encounter two people, A, and B, and A says <q>I am a knave or B is a knight,</q> and B says nothing. What can you conclude?
         </p>
       </statement>
+      <hint>
+        <p>
+          What happens if A is a knight and is telling the truth? What happens if A is lying? Which scenarios are impossible? What must the answer be?
+        </p>
+      </hint>
     </exercise>
+
     <exercise>
       <statement>
         <p>
@@ -593,6 +679,11 @@
           What can you ask the guard in order to ensure you go on the path towards the treasure?
         </p>
       </statement>
+      <hint>
+        <p>
+          The question is complicated, by not <em>too</em> complicated.
+        </p>
+      </hint>
     </exercise>
   </exercises>
 
