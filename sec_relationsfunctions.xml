@@ -780,7 +780,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -814,6 +814,14 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> No! <m>f(1) = f(4)</m> and <m>1\ne 4</m> </li>
+            <li> Also no, since there is no <m>x</m> for which <m>f(x) = 2</m>.</li>
+          </ol>
+        </p>
+      </solution>
 
     </exercise>
 
@@ -864,6 +872,18 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </li>
         </ol>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> Yes, since given any integer <m>c\in \Z</m> we can find two other integers <m>m, n</m> for which <m>f(m,n) = c</m> for example, <m>f(c,0) = c+0 = c</m>. </li>
+            <li> No, since <m>-1 \in \Z</m> and there is no integers <m>m, n</m> for which <m>m^2 + n^2 = -1</m>.</li>
+            <li> Yes, since every integer <m>m</m> in the codomain is mappsed to via <m>f(m,0) = m</m></li>
+            <li> Yes again, this will map to every possible integer.
+            For example, <m>f(m,0) = m</m> for any integer <m>m</m> in the codomain.</li>
+          </ol>
+          It's worth noting while these aren't injective, they can be surjective.
+        </p>
+      </solution>
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -927,6 +947,24 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <hint>
         Most likely, your solution will be piecewise-defined. 
       </hint>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <m>f(n) = \begin{cases} -2n \amp \text{ if } n\lt0  \\ 2n+3 \amp \text{ if } n\ge0</m>
+            </li>
+            <li>
+              <m>f(n) = \begin{cases} -n \amp \text{ if } n\lt0  \\ n+1 \amp \text{ if } n\ge0</m>
+            </li>
+            <li>
+              <m>f(n) = \begin{cases} -2n \amp \text{ if } n\lt0  \\ 2n+1 \amp \text{ if } n\ge0</m>
+            </li>
+            <li>
+              <m>f(n) = n^2 + 1</m>
+            </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
