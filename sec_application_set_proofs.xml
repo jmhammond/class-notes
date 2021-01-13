@@ -104,34 +104,49 @@
     </solution>
   </example>
 
-
-
-
   <exercises>
+    <p>
+      Let <m>A, B, \and C</m> be sets. Prove the following identities:
+    </p>
     <exercise>
       <statement>
         <p>
-          Let <m>A, B, \and C</m> be sets. Prove the following identities:
-          <ol>
-            <li>
-              <m>A \cup (B \cup C) = (A \cup B) \cup C</m>
-            </li>
-            <li>
-              <m>\overline{\overline{A}} = A</m>
-            </li>
-            <li>
-              <m>A \cup (A \cap B) = A</m>
-            </li>
-            <li>
-              <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>
-            </li>
-            <li>
-              <m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m>
-            </li>
-            <li>
-              <m>A \subseteq B</m> if and only if <m>\overline{B} \subseteq \overline{A}</m>
-            </li>
-          </ol>
+          Prove <m>A \cup (B \cup C) = (A \cup B) \cup C</m>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Prove <m>\overline{\overline{A}} = A</m>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Prove <m>A \cup (A \cap B) = A</m>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Prove <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Prove <m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Prove <m>A \subseteq B</m> if and only if <m>\overline{B} \subseteq \overline{A}</m>
         </p>
       </statement>
     </exercise>
