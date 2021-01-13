@@ -224,6 +224,17 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> True </li>
+            <li> True </li>
+            <li> True </li>
+            <li> False </li>
+            <li> False </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -239,6 +250,17 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> True </li>
+            <li>False</li>
+            <li>True</li>
+            <li>False</li>
+            <li>False</li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -273,7 +295,7 @@
           <ol cols="2">
             <li>All athletes are fast.</li>
             <li>Everyone is a fast athlete.</li>
-            <li>Some fast person is is an athlete.</li>
+            <li>Some fast person is an athlete.</li>
             <li>There is a slow athlete.</li>
           </ol>
         </p>
@@ -291,6 +313,15 @@
           <li> <m>\forall x (T(x) \to (C(x) \land E(x)))</m></li>
         </ol>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> Something in the garage is out of place.</li>
+            <li>Some tool is misplaced.</li>
+            <li>All tools are in excellent condition and in the correct place.</li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
