@@ -114,6 +114,20 @@
           Prove <m>A \cup (B \cup C) = (A \cup B) \cup C</m>
         </p>
       </statement>
+      <solution>
+        <p>
+          Assume <m>x\in A \cup (B \cup C)</m>, then:
+          <md>
+            <mrow>x\in A \cup (B \cup C) \amp\equiv (x \in A) \lor (x \in B \cup C)</mrow>
+            <mrow>\amp\equiv (x \in A) \lor ((x \in B) \lor (x \in C))</mrow>
+            <mrow>\amp\equiv x \in A \lor x \in B \lor x \in C</mrow>
+            <mrow>\amp\equiv (x \in A \lor x \in B) \lor x \in C</mrow>
+            <mrow>\amp\equiv (x \in A \cup B) \lor x \in C</mrow>
+            <mrow>\amp\equiv x \in (\in A \cup B) \cup C</mrow>
+          </md>
+          and so <m>A \cup (B\cup C) = (A \cup B) \cup C</m>.
+        </p>
+      </solution>
     </exercise>
     <exercise>
       <statement>
@@ -121,6 +135,17 @@
           Prove <m>\overline{\overline{A}} = A</m>
         </p>
       </statement>
+      <solution>
+        <p>
+          Assume <m>x \in \overline{\overline{A}}</m> then we have
+          <md>
+            <mrow>x \in \overline{\overline{A}} \amp \equiv \neg(x \in \overline{A})</mrow>
+            <mrow>\amp \equiv \neg(\neg (x \in A))</mrow>
+            <mrow>\amp \equiv x \in A</mrow>
+          </md>
+          and so <m>\overline{\overline{A}} = A</m>.
+        </p>
+      </solution>
     </exercise>
     <exercise>
       <statement>
