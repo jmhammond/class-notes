@@ -2,6 +2,14 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_application_set_proofs">
   <title> Application: Set Properties and Equivalences </title>
 
+  <introduction>
+    <statement>
+      <p>
+        This section explores how we can apply the equivalences of logical statements to the set properties we explored in <xref ref="sec_objects_sets">. It is no coincidence that those set properties look nearly identical to the logical equivalences!
+      </p>
+    </statement>
+  </introduction>
+
   <definition>
     <title>Set operations defined via logic</title>
     <statement>

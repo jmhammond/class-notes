@@ -4,12 +4,21 @@
     <!-- intentionally left blank -->
   </introduction>
   <title>Propositional Logic</title>
+
+  <!-- <introduction> -->
+  <!--   <statement> -->
+  <!--     <p> -->
+  <!--       The core mathematical object we will be exploring in this course is the <term>logical statement/proposition</term>. In this section we introduce the basic mathematical/logical operations  -->
+  <!--     </p> -->
+  <!--   </statement> -->
+  <!-- </introduction> -->
+
   <subsection>
     <title>The Basics</title>
 
     <definition>
       <p>
-        A <term>logical proposition</term> is a sentence which is either true of false, but not both.
+        A <term>logical proposition</term> or <term>logical statement</term> is a sentence which is either true of false, but not both.
       </p>
     </definition>
 
