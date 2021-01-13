@@ -147,19 +147,48 @@
         </p>
       </solution>
     </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Prove <m>A \cup (A \cap B) = A</m>
-        </p>
-      </statement>
-    </exercise>
+    <!-- <exercise> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       Prove <m>A \cup (A \cap B) = A</m> -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!--   <solution> -->
+    <!--     <p> -->
+    <!--       Assume that <m>x \in A \cup (A \cap B)</m>, then: -->
+    <!--       <md> -->
+    <!--         <mrow>x \in A \cup (A \cap B) \amp \equiv x \in A \lor x\in A \cap B</mrow> -->
+    <!--         <mrow>\amp \equiv x \in A \lor (x \in A \land x \in B)</mrow> -->
+    <!--         <mrow>\amp \equiv (x \in A \lor x \in A) \land ( x\in A  \lor x \in B )</mrow> -->
+    <!--         <mrow>\amp \equiv (x \in A \lor x \in A) \land ( x\in A  ) </mrow> -->
+    <!-- I'm getting rid of this one because I need to appeal to simplification which I don't pick up until later. -->
+    <!--       </md> -->
+    <!--     </p> -->
+    <!--   </solution> -->
+    <!-- </exercise> -->
     <exercise>
       <statement>
         <p>
           Prove <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>
         </p>
       </statement>
+      <solution>
+        <p>
+          <em>Here we convert the expression of sets into a logical statement and apply the distributive law for logical statements.
+          </em>
+        </p>
+        <p>
+          Assume that <m>x \in A \cup (B\cap C)</m>, then:
+          <md>
+            <mrow>x \in A \cup (B \cap C) \amp \equiv x \in A \lor (x \in B \cap C) </mrow>
+            <mrow>\amp \equiv x \in A \lor (x\in B \land x \in C)</mrow>
+            <mrow>\amp \equiv (x \in A \lor x\in B) \land (x \in A \lor \in C)</mrow>
+            <mrow>\amp \equiv (x \in A \cup B) \land (x \in A \cup C)</mrow>
+            <mrow>\amp \equiv x \in (A \cup B) \cap (A \cup C)</mrow>
+          </md>
+          and therefore <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>.
+        </p>
+      </solution>
     </exercise>
     <exercise>
       <statement>
@@ -167,6 +196,20 @@
           Prove <m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m>
         </p>
       </statement>
+      <solution>
+        <p>
+          <em>Our strategy is to first convert the statement into a logical statement and then apply DeMorgan's law for logical statements.</em>
+        </p>
+        <p>
+          Assume <m>x\in \overline{A \cap B}</m>. Then:
+          <md>
+            <mrow>\neg (x \in A\cap B) \amp \equiv \neg (x \in A \land x \in B) </mrow>
+            <mrow> \amp \equiv \neg (x \in A) \lor \neg (x \in B)</mrow>
+            <mrow> \amp \equiv x \in \overline{A} \lor x \in \overline{B}</mrow>
+          </md>
+          and so <m> \overline{A \cap B} = \overline{A} \cup \overline{B}</m>.
+        </p>
+      </solution>
     </exercise>
     <exercise>
       <statement>
@@ -174,6 +217,19 @@
           Prove <m>A \subseteq B</m> if and only if <m>\overline{B} \subseteq \overline{A}</m>
         </p>
       </statement>
+      <solution>
+        <p>
+          <em>Here our <q>trick</q> is to use the fact the the contrapositive is equivalent to the conditional. </em>
+        </p>
+        <p>
+          Assume <m>A \subseteq B</m>. This means that <m>x\in A \to x \in B</m>.
+          <md>
+            <mrow>x\in A \to x \in B \amp \equiv \neg(x\in B) \to \neg(x \in A) </mrow>
+            <mrow> \amp \equiv x \in \overline{B} \to x \in \overline{A}</mrow>
+          </md>
+          and thus <m>\overline{B} \subseteq \overline{A}</m>.
+        </p>
+      </solution>
     </exercise>
   </exercises>
 
