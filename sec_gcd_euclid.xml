@@ -259,6 +259,22 @@
         </p>
       </solution>
 
+
     </exercise>
+
+    <!-- <exercise> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       Prove that <m>\gcd(a, b) = \gcd(a, b-a)</m>. -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!--   <solution> -->
+    <!--     <p> -->
+    <!--       Assume that <m>d = \gcd(a,b). Then <m>d \mid a<m> and <m>d \mid b</m>. This means that <m>d \mid (b-a)</m>. -->
+    <!--     </p> -->
+    <!--   </solution> -->
+    <!-- </exercise> -->
+
+
   </exercises>
 </section>
