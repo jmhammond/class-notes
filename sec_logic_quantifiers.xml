@@ -266,20 +266,6 @@
     <exercise>
       <statement>
         <p>
-          Consider the statement, <q>There is a building on the campus of some college in the United States in which every room is painted white.</q>
-          <ol>
-            <li>Express the statement using quantifiers. Be sure to define your predicate function and specify the domain of each of the three variables.</li>
-            <li>Express the negation of the above logical quantified statement so that no negation is to the left of a quantifier.</li>
-            <li>Write the negation of the statement in plain English.</li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-
-
-    <exercise>
-      <statement>
-        <p>
           Translate these statements into English where <m>F(x)</m> is <q><m>x</m> is fast</q> and <m>A(x)</m> is <q><m>x</m> is an athlete</q>, here the domain is the set of people.
           <ol cols="2">
             <li><m>\forall x (A(x) \to F(x))</m></li>
@@ -391,6 +377,49 @@
       </solution>
 
     </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Consider the statement, <q>There is a building on the campus of some college in the United States in which every room is painted white.</q>
+          <ol>
+            <li>Express the statement using quantifiers. Be sure to define your predicate function and specify the domain of each of the three variables.</li>
+            <li>Express the negation of the above logical quantified statement so that no negation is to the left of a quantifier.</li>
+            <li>Write the negation of the statement in plain English.</li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>c</m> come from the universe of colleges in the US, <m>b</m> be from the universe of buildings on a chosen campus and <m>r</m> be the rooms in a chosen building.
+          <ol>
+            <li>
+              <p>
+                We have to first select a college, then find the building on that campus:
+              </p>
+              <p>
+                <m>\exists c \exists b \forall r (b \text{ on the campus of } c \text{ in which } r \text{ is painted white})</m>
+              </p>
+            </li>
+            <li>
+              <p>
+              <em>Start with the negation on the left and apply De Morgan's laws</em>
+                <md>
+                  <mrow>\amp \neg \exists c \exists b \forall r (b \text{ on the campus of } c \text{ in which } r \text{ is painted white})</mrow>
+                  <mrow>\amp \equiv \forall c \forall b \exists r \neg(b \text{ on the campus of } c \text{ in which } r \text{ is painted white})</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                On every campus in the US, every building has at least one room that isn't painted white.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
   </exercises>
   
 </section>
