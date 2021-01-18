@@ -180,7 +180,7 @@
               <m> R_3 = \{(x,y) \mid y \gt 3x - 4\}</m>
             </li>
             <li>
-              <m> R_4 = \{(x,y) \mid x \text{ is the parent of } y \}</m>
+              <m> R_4 = \{(x,y) \mid y \text{ is the parent of } x \}</m>
             </li>
             <li>
               <m> R_5 = \{(x,y) \mid x \text{ is a sibling of } y \}</m>
@@ -568,8 +568,18 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
-    </exercise>
 
+      <solution>
+        <p>
+          <ol>
+            <li> Yes </li>
+            <li> R^{-1} = \{(x, y) \mid y^2 = x, \text{ for } y = -3, -2, -1, \dots 2, 3\} </li>
+            <li> No</li>
+          </ol>
+        </p>
+      </solution>
+
+    </exercise>
 
 
     <exercise>
@@ -588,6 +598,15 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> No. </li>
+            <li> No. For example <m>(2, 2)</m> and <m>(2,4)</m> are the the relation. </li>
+            <li> Yes, each person has a unique height (at any given time). </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
     
     <exercise>
@@ -604,6 +623,14 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> We'd normally write <m>a=b</m> if <m>a \mathrel{R} B</m>. </li>
+            <li>Yes! Given a set <m>A</m>, we define the function by <m>f: A \to A</m> by <m>f(x)=x</m>.</li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
 
@@ -613,6 +640,37 @@ b. note that the inverse of a function is always a relation, but not always a fu
           Reformulate <xref ref="def-composition-of-functions"/> in order to define composition of two relations.
         </p>
       </statement>
+      <solution>
+        <p>
+          Very little needs changed - I'm simply relabling the variables. We'll explore relations (and their composition) in greater depth in Discrete 2.
+        </p>
+        <p>
+          Let <m>G:A \to B</m> and let <m>R:B \to C</m>. The <term>composition of <m>R</m> and <m>S</m></term>, denoted by <m>R\circ S</m> is defined, for all <m>a \in A</m>, by <m>(R \circ S)(a) = R(S(a))</m>.
+          <sidebyside width="75%">
+            <image xml:id="composition-of-relations">
+              <description>Composition of relations</description>
+              <latex-image>
+                \usetikzlibrary{calc,positioning,shapes.geometric}
+
+                \begin{tikzpicture}
+                \tikzset{
+                elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
+                node distance=3cm,
+                font=\footnotesize,
+                >=latex,
+                }
+                \node(x)[elps={1cm}{1cm},label={$A$}]{};
+                \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
+                \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
+                \draw[->](x)to node[above right]{$S$}(y);
+                \draw[->](y)to node[above right]{$R$}(v);
+                \draw[->](x)to[bend left]node[above]{$R \circ S$}(v);
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -638,7 +696,29 @@ b. note that the inverse of a function is always a relation, but not always a fu
             </li>
           </ol>
         </p>
-      </statement>
+        </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <m>R_1 \circ R_2 = \{(x,y) \mid y = -3(x^2 + 2) + 2\} = \{(x,y) \mid y = -3x^2 -4\}</m>
+            </li>
+            <li>
+              <m>R_2 \circ R_1 = \{(x,y) \mid y = (-3x+2)^2 + 2\} = \{(x,y) \mid 9x^2 -6x + 6\}</m>
+            </li>
+
+            <li>
+              <m>R_4 \circ R_4 = \{(x,y) \mid y \text{ is a grandparent of } x \}</m>
+            </li>
+            <li>
+              <m>R_5 \circ R_4 = \{(x,y) \mid y \text{ is a sibling of a parent of x}\} = \{(x,y) \mid y \text{ is an aunt/uncle of } x \}</m>
+            </li>
+            <li>
+              <m>R_4 \circ R_5 = \{ (x,y) \mid y is the parent of the sibling of x\} = R_4</m>
+            </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
 
@@ -700,7 +780,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -734,6 +814,14 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> No! <m>f(1) = f(4)</m> and <m>1\ne 4</m> </li>
+            <li> Also no, since there is no <m>x</m> for which <m>f(x) = 2</m>.</li>
+          </ol>
+        </p>
+      </solution>
 
     </exercise>
 
@@ -784,6 +872,18 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </li>
         </ol>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> Yes, since given any integer <m>c\in \Z</m> we can find two other integers <m>m, n</m> for which <m>f(m,n) = c</m> for example, <m>f(c,0) = c+0 = c</m>. </li>
+            <li> No, since <m>-1 \in \Z</m> and there is no integers <m>m, n</m> for which <m>m^2 + n^2 = -1</m>.</li>
+            <li> Yes, since every integer <m>m</m> in the codomain is mappsed to via <m>f(m,0) = m</m></li>
+            <li> Yes again, this will map to every possible integer.
+            For example, <m>f(m,0) = m</m> for any integer <m>m</m> in the codomain.</li>
+          </ol>
+          It's worth noting while these aren't injective, they can be surjective.
+        </p>
+      </solution>
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -847,6 +947,24 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <hint>
         Most likely, your solution will be piecewise-defined. 
       </hint>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <m>f(n) = \begin{cases} -2n \amp \text{ if } n\lt0  \\ 2n+3 \amp \text{ if } n\ge0\end{cases}</m>
+            </li>
+            <li>
+              <m>f(n) = \begin{cases} -n \amp \text{ if } n\lt0  \\ n+1 \amp \text{ if } n\ge0\end{cases}</m>
+            </li>
+            <li>
+              <m>f(n) = \begin{cases} -2n \amp \text{ if } n\lt0  \\ 2n+1 \amp \text{ if } n\ge0\end{cases}</m>
+            </li>
+            <li>
+              <m>f(n) = n^2 + 1</m>
+            </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -972,9 +1090,18 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
       </statement>
 
+      <solution>
+        <p>
+          <ol>
+            <li><m>|X| \le |Y|</m></li>
+            <li><m>|Y| \le |X|</m></li>
+            <li><m>|X| = |Y|</m> </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -990,6 +1117,18 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
       </statement>
 
+      <solution>
+        <p>
+          <ol>
+            <li> Yes </li>
+            <li> Yes </li>
+            <li> Yes </li>
+            <li> Yes </li>
+            <li> Finally a no!  </li>
+            <li> Also a no  </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
 
@@ -1038,6 +1177,16 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> <m>\lfloor 8.675309 \rfloor = 8</m> and <m>\lceil 8.675309 \rceil = 9 </m> </li>
+            <li> <m>\lfloor \pi \rfloor = 3</m> and <m>\lceil \pi \rceil = 4</m> </li>
+            <li> <m>\lfloor -2.1 \rfloor = -3</m> and <m>\lceil -2.1 \rceil = -2</m> </li>
+            <li> <m>\lfloor 7 \rfloor = \lceil 7 \rceil = 7</m> </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -1046,6 +1195,16 @@ b. note that the inverse of a function is always a relation, but not always a fu
           Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.
         </p>
       </statement>
+      <solution>
+        <p>
+          I'm providing a solution for the floor function. The ceiling function solution can be done very similarly.
+          The floor function is not injective. Consider the two real numbers 2.1 and 2.5:
+          <m>\lfloor 2.1\rfloor = \lfloor 2.5\rfloor = 2</m>.
+        </p>
+        <p>
+          The floor function is surjective, however. Let <m>c\in \Z</m> be an integer in the codomain. Then consider <m>a = c+0.1 \in \R</m>, the domain. <m>\lfloor a \rfloor = \lfloor c+0.1 \rfloor = c.</m>
+        </p>
+      </solution>
     </exercise>
 
     <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->

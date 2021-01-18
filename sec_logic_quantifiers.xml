@@ -224,6 +224,17 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> True </li>
+            <li> True </li>
+            <li> True </li>
+            <li> False </li>
+            <li> False </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -239,21 +250,18 @@
           </ol>
         </p>
       </statement>
-    </exercise>
-
-    <exercise>
-      <statement>
+      <solution>
         <p>
-          Consider the statement, <q>There is a building on the campus of some college in the United States in which every room is painted white.</q>
           <ol>
-            <li>Express the statement using quantifiers. Be sure to define your predicate function and specify the domain of each of the three variables.</li>
-            <li>Express the negation of the above logical quantified statement so that no negation is to the left of a quantifier.</li>
-            <li>Write the negation of the statement in plain English.</li>
+            <li> True </li>
+            <li>False</li>
+            <li>True</li>
+            <li>False</li>
+            <li>False</li>
           </ol>
         </p>
-      </statement>
+      </solution>
     </exercise>
-
 
     <exercise>
       <statement>
@@ -273,7 +281,7 @@
           <ol cols="2">
             <li>All athletes are fast.</li>
             <li>Everyone is a fast athlete.</li>
-            <li>Some fast person is is an athlete.</li>
+            <li>Some fast person is an athlete.</li>
             <li>There is a slow athlete.</li>
           </ol>
         </p>
@@ -291,6 +299,15 @@
           <li> <m>\forall x (T(x) \to (C(x) \land E(x)))</m></li>
         </ol>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> Something in the garage is out of place.</li>
+            <li>Some tool is misplaced.</li>
+            <li>All tools are in excellent condition and in the correct place.</li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
@@ -313,8 +330,96 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <md>
+                  <mrow>\neg \exists x \forall y (\neg O(x) \vee E(y)) \amp \equiv \forall x \neg \forall y (\neg O(x) \lor E(y))</mrow>
+                  <mrow>\amp \equiv \forall x \exists y \neg (\neg O(x) \lor E(y))</mrow>
+                  <mrow>\amp \equiv \forall x \exists y \neg \neg O(x) \land \neg E(y)</mrow>
+                  <mrow>\amp \equiv \forall x \exists y O(x) \land \neg E(y)</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                <em> Applying De Morgan's laws many, many times and noting that the opposite of <m>x\lt a</m> is <m>x \ge a</m>:</em>
+                <md>
+                  <mrow>\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z)) \amp \equiv \neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
+                  <mrow> \amp \equiv \exists x \neg \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
+                  <mrow> \amp \equiv \exists x \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
+                  <mrow> \amp \equiv \exists x \forall y \neg(x \lt  y ) \lor \neg ( \exists z (x \lt  z \vee y \lt  z))  ) </mrow>
+                  <mrow> \amp \equiv \exists x \forall y \neg(x \lt  y ) \lor \forall z \neg (x \lt  z \vee y \lt  z))  ) </mrow>
+                  <mrow> \amp \equiv \exists x \forall y \neg(x \lt  y ) \lor \forall z \neg (x \lt  z) \land \neg (y \lt  z))) </mrow>
+                  <mrow> \amp \equiv \exists x \forall y (x \ge  y ) \lor \forall z (x \ge  z) \land  (y \ge  z))) </mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                This statement can be written <m>\exists n \neg \exists x (x \lt n)</m>. It can be simplified as <m>\exists n \forall x \neg (x \lt n)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                This statement can be written <m>\neg \forall n \exists x \exists y (x \lt n \lt y)</m>
+                <md>
+                  <mrow>\neg \forall n \exists x \exists y (x \lt n \lt y) \amp \equiv \exists n \neg \exists x \exists y (x \lt n \lt y) </mrow>
+                  <mrow>\amp \equiv \exists n \forall x \neg \exists y (x \lt n \lt y) </mrow>
+                  <mrow>\amp \equiv \exists n \forall x \forall y \neg (x \lt n \lt y) </mrow>
+                </md>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
 
     </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Consider the statement, <q>There is a building on the campus of some college in the United States in which every room is painted white.</q>
+          <ol>
+            <li>Express the statement using quantifiers. Be sure to define your predicate function and specify the domain of each of the three variables.</li>
+            <li>Express the negation of the above logical quantified statement so that no negation is to the left of a quantifier.</li>
+            <li>Write the negation of the statement in plain English.</li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>c</m> come from the universe of colleges in the US, <m>b</m> be from the universe of buildings on a chosen campus and <m>r</m> be the rooms in a chosen building.
+          <ol>
+            <li>
+              <p>
+                We have to first select a college, then find the building on that campus:
+              </p>
+              <p>
+                <m>\exists c \exists b \forall r (b \text{ on the campus of } c \text{ in which } r \text{ is painted white})</m>
+              </p>
+            </li>
+            <li>
+              <p>
+              <em>Start with the negation on the left and apply De Morgan's laws</em>
+                <md>
+                  <mrow>\amp \neg \exists c \exists b \forall r (b \text{ on the campus of } c \text{ in which } r \text{ is painted white})</mrow>
+                  <mrow>\amp \equiv \forall c \forall b \exists r \neg(b \text{ on the campus of } c \text{ in which } r \text{ is painted white})</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                On every campus in the US, every building has at least one room that isn't painted white.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
   </exercises>
   
 </section>

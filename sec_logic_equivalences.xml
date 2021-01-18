@@ -262,13 +262,24 @@
       </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
           Are the statements <m>p \to (q\vee r)</m> and <m>(p \to q) \vee (p \to r)</m> logically equivalent?
         </p>
       </statement>
+      <solution>
+        <p>
+          Let's start with the left-hand side and work towards the right to find out.
+          <md>
+            <mrow> p \to (q\vee r) \amp= \neg p \lor (q \land r)</mrow>
+            <mrow> \amp (\neg p \land q) \lor (\neg p \land r) </mrow>
+            <mrow> \amp (p \to q) \lor (p \to r)</mrow>
+          </md>
+          which was what we wanted to show.
+        </p>
+      </solution>
     </exercise>
 
     <exercise>
@@ -329,6 +340,48 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <md>
+                  <mrow> \neg((\neg p \wedge q) \vee \neg(r \vee \neg s)) \amp\equiv \neg(\neg p \wedge q) \land \neg \neg(r \vee \neg s) </mrow>
+                  <mrow> \amp\equiv \neg(\neg p \wedge q) \land (r \vee \neg s)</mrow>
+                  <mrow> \amp\equiv (\neg\neg p \lor \neg q) \land (r \lor \neg s)</mrow>
+                  <mrow> \amp\equiv (p \lor \neg q) \land (r \lor \neg s)</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                <md>
+                  <mrow>\neg((\neg p \to \neg q) \wedge (\neg q \to k)) \amp \equiv \neg((\neg \neg p \lor \neg q) \wedge (\neg \neg q \lor k))</mrow>
+                  <mrow>\amp\equiv \neg((p \lor \neg q) \wedge (q \lor k))</mrow>
+                  <mrow>\amp \equiv \neg(p \lor \neg q) \lor \neg (q \lor k)</mrow>
+                  <mrow>\amp \equiv (\neg p \land \neg \neg q) \lor (\neg q \land \neg k)</mrow>
+                  <mrow>\amp \equiv (\neg p \land q) \lor (\neg q \land \neg k)</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                <md>
+                  <mrow>(p\land q) \to (p \lor q) \amp \equiv \neg (p\land q) \lor (p \lor q) </mrow>
+                  <mrow>\amp \equiv (\neg p \lor \neg q) \lor (p \lor q)</mrow>
+                  <mrow>\amp \equiv \neg p \lor \neg q \lor p \lor q</mrow>
+                  <mrow>\amp \equiv \neg p \lor p \lor \neg q \lor q</mrow>
+                  <mrow>\amp \equiv (\neg p \lor p) \lor ( \neg q \lor q )</mrow>
+                  <mrow>\amp \equiv (T) \lor (T)</mrow>
+                  <mrow>\amp \equiv T</mrow>
+                </md>
+                ... it's a tautology!
+              </p>
+            </li>
+          </ol>
+
+        </p>
+      </solution>
     </exercise>
 
 

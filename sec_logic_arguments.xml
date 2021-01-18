@@ -281,7 +281,7 @@
       </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -304,10 +304,15 @@
           </tabular>
         </sidebyside>
       </statement>
+      <solution>
+        <p>
+          This is valid. Make a truth table.
+        </p>
+      </solution>
 
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -330,7 +335,11 @@
           </tabular>
         </sidebyside>
       </statement>
-
+      <solution>
+        <p>
+          It isn't; make a truth table and see <m>(((p \land q) \to r) \land (\neg p \lor \neg q)) \to \neg r</m> isn't a tautology.
+        </p>
+      </solution>
     </exercise>
 
 
@@ -338,7 +347,7 @@
     <exercise>
       <statement>
         <p>
-          Using logical equivalences, prove that the following is a valid deduction rule:
+          Show that the following is a valid deduction rule by building a truth table.
         </p>
         <p>
           <sidebyside>
@@ -359,6 +368,17 @@
           </sidebyside>
         </p>
       </statement>
+      <!-- <solution> -->
+      <!--   <p> -->
+      <!--     <em>First, write the argument as the logical statement and simplify using equivalences. As usual, any time we have conditional statements, we use implication to turn them into disjunctions.</em> -->
+      <!--     <md> -->
+      <!--       <mrow>((p \to q) \land (q \to r)) \to (p \to r) \amp \equiv \neg((\neg p \lor q) \land (\neg q \lor r)) \lor (\neg p \lor r)</mrow> -->
+      <!--       <mrow>\amp \equiv \neg(\neg p \lor q) \lor \neg (\neg q \lor r) \lor (\neg p \lor r)</mrow> -->
+      <!--       <mrow>\amp \equiv (p \land \neg q) \lor (q \land \neg r) \lor (\neg p \lor r)</mrow> -->
+      <!--       <mrow> \text{ then distributive... this is a mess for intro class maybe } </mrow> -->
+      <!--     </md> -->
+      <!--   </p> -->
+      <!-- </solution> -->
     </exercise>
 
     <exercise>
@@ -375,6 +395,40 @@
           Consider the statement <q>Superman saves the day or Lois Lane dies. Superman saved the day, therefore Lois didn't die.</q> Is the argument valid? Explain your answer.
         </p>
       </statement>
+      <solution>
+        <p>
+          This is an argument of the form:
+          <tabular halign="center">
+            <row>
+              <cell/>
+              <cell><m>\text{Superman saves} \lor \text{Lois dies}</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>\text{Superman saved}</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>\neg \text{Lois didn't die}</m></cell>
+            </row>
+          </tabular>
+          This is a fallacy. In fact, it's the fallacy of denying the hypothesis in disguise. Rewrite the disjunction as an implication to see this:
+          <tabular halign="center">
+            <row>
+              <cell/>
+              <cell><m>\neg \text{Superman saves} \to \text{Lois dies}</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>\text{Superman saved}</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>\neg \text{Lois didn't die}</m></cell>
+            </row>
+          </tabular>
+        </p>
+      </solution>
     </exercise>
 
 
@@ -413,6 +467,30 @@
           </p>
         </hint>
       </statement>
+      <solution>
+        <p>
+          The argument has three propositional variables and is of the form:
+          <tabular halign="center">
+            <row>
+              <cell/>
+              <cell><m>\text{wages increase} \to \text{inflation}</m></cell>
+            </row>
+            <row>
+              <cell/>
+              <cell><m>\neg\text{inflation} \to \neg \text{cost of living increase}</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>\text{wages increase}</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>\text{cost of living increases}</m></cell>
+            </row>
+          </tabular>
+          ... now make a truth table.
+        </p>
+      </solution>
     </exercise>
 
   </exercises>

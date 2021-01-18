@@ -637,7 +637,7 @@
 
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
 
@@ -652,10 +652,21 @@
         </p>
       </statement>
 
+      <solution>
+        <p>
+          <ol>
+            <li> <m>A\cap B = \{4, 6, 8, 10, 12\}</m> </li>
+            <li> <m>A\cup B = \{3, 4, 5, \dots 12, 13, 14, 16,  18, 20, 22, 24, \dots\}</m> </li>
+            <li> <m>B\cap C = \emptyset </m> </li>
+            <li> <m>B\cup C = \N </m> </li>
+          </ol>
+        </p>
+      </solution>
+
 
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
 
@@ -664,6 +675,11 @@
         </p>
       </statement>
 
+      <solution>
+        <p>
+          There are many possible examples. Here is a simple one. Let <m>A=\{3, 5\}</m> and <m>B=\{2, 3, 5, 7, 8\}</m>
+        </p>
+      </solution>
 
     </exercise>
 
@@ -848,6 +864,11 @@
         </sidebyside>
       </statement>
 
+      <solution>
+        <p>
+          One way to answer is <m>(A\cup B) \setminus (A\cap B)</m>
+        </p>
+      </solution>
 
     </exercise>
 
@@ -896,7 +917,7 @@
     </exercise>
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
 
@@ -904,7 +925,12 @@
           Let <m>A = \{1,2,3,4,5,6\}</m>. Find all sets <m>B \in \pow(A)</m> which have the property <m>\{2,3,5\} \subseteq B</m>.
         </p>
       </statement>
-
+      <solution>
+        <p>
+          There are eight possible sets.
+          <m>B</m> can be any of <m>\{2,3,5\}</m>, <m>\{1,2,3,5\}</m>, <m>\{2,3,4, 5\}</m>, <m>\{2,3,5,6\}</m>, <m>\{1,2,3,4,5\}</m>, <m>\{1,2,3,5,6\}</m>, <m>\{2,3, 4, 5, 6\}</m>, <m>\and \{1, 2, 3, 4, 5, 6\}</m>
+        </p>
+      </solution>
 
     </exercise>
 
@@ -924,7 +950,7 @@
     </exercise>
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
 
@@ -933,10 +959,16 @@
         </p>
       </statement>
 
+      <solution>
+        <p>
+          There are 10 subsets that consist of a single element. For subsets consisting of exactly two elements, there are 90
+        </p>
+      </solution>
+
     </exercise>
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -944,20 +976,31 @@
         </p>
       </statement>
 
+      <solution>
+        <p>
+          There are many examples. Here's one possibility: <m>A = \{ a, b, c\}, B=\{b,c,d,e\}</m>. Then the union is <m>A \cup B = \{a, b, c, d, e\}</m>.
+        </p>
+      </solution>
 
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
           Are there sets <m>A</m> and <m>B</m> such that <m>|A| = |B|</m>, <m>|A\cup B| = 10</m>, and <m>|A\cap B| = 5</m>? Explain.
         </p>
       </statement>
+
+      <solution>
+        <p>
+          The answer is no. Can you explain why?
+        </p>
+      </solution>
     </exercise>
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
 
@@ -965,17 +1008,12 @@
           In a regular deck of playing cards there are 26 red cards and 12 face cards. Explain, using sets and what you have learned about cardinalities, why there are only 32 cards which are either red or a face card.
         </p>
       </statement>
-    </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
-      <statement>
+      <solution>
         <p>
-          Let <m>A_2</m> be the set of all multiples of 2 except for <m>2</m>. Let <m>A_3</m> be the set of all multiples of 3 except for 3. And so on, so that <m>A_n</m> is the set of all multiple of <m>n</m> except for <m>n</m>, for any <m>n \ge 2</m>. Describe (in words) the set <m>\bar{A_2 \cup A_3 \cup A_4 \cup \cdots}</m>.
+          The intersection of the set of red cards and the set of face cards is nonempty. It includes six cards: Jack of Hearts, Queen of Hearts, King of Hearts, Jack of Diamonds, Queen of Diamonds, and King of Diamonds.
         </p>
-      </statement>
-
-
+      </solution>
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
@@ -1001,9 +1039,6 @@
       </solution>
     </exercise>
 
-
   </exercises>
-
- 
 
 </section>
