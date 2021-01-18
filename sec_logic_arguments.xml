@@ -467,6 +467,30 @@
           </p>
         </hint>
       </statement>
+      <solution>
+        <p>
+          The argument has three propositional variables and is of the form:
+          <tabular halign="center">
+            <row>
+              <cell/>
+              <cell><m>\text{wages increase} \to \text{inflation}</m></cell>
+            </row>
+            <row>
+              <cell/>
+              <cell><m>\neg\text{inflation} \to \neg \text{cost of living increase}</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>\text{wages increase}</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>\text{cost of living increases}</m></cell>
+            </row>
+          </tabular>
+          ... now make a truth table.
+        </p>
+      </solution>
     </exercise>
 
   </exercises>
