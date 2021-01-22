@@ -25,6 +25,34 @@
         </ol>
       </p>
     </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <m>24 = 16 + 8 = 2^4 + 2^3</m> 
+          </li>
+          <li>
+            <md>
+              <mrow> 255 \amp= 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1</mrow>
+              <mrow> \amp = 2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0</mrow>
+            </md>
+          </li>
+          <li>
+            <p>
+              This one is a little more work, so I'm including my thinking as we break it down:
+              <md>
+                <mrow> 2019 \amp= 1024 + 995</mrow>
+                <mrow>  \amp= 1024 + 512 + 483 </mrow>
+                <mrow>  \amp= 1024 + 512 + 256 + 227   </mrow>
+                <mrow>  \amp= 1024 + 512 + 256 + 128 + 99   </mrow>
+                <mrow>  \amp= 1024 + 512 + 256 + 128 + 64 + 35  </mrow>
+                <mrow>  \amp= 1024 + 512 + 256 + 128 + 64 + 32 + 2 + 1   </mrow>
+              </md>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
   </example>
 
   <p>
