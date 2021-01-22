@@ -382,6 +382,15 @@
           Prove that either <m>2 \cdot 10^{500} + 15</m> or <m>2 \cdot 10^{500} + 16</m> is not a perfect square.
         </p>
       </statement>
+      <hint>
+        <p>
+          Let me get you started on it, and we can discuss below. Notice that the two numbers are one apart from eachother. They're massive, so we don't necessarily know whether they're square, but we need only show that not more than one of them is square.
+        </p>
+        <p>
+          Let's imagine that I have a square number, namely <m>n^2</m>. Is it possible that <m>n^2 - 1</m> or <m>n^2 + 1</m> is also a square number? What condition on <m>n</m> is required?
+        </p>
+      </hint>
+
     </example>
 
     <example>
@@ -390,6 +399,11 @@
           Show that between any two rational numbers is another rational number.
         </p>
       </statement>
+      <hint>
+        <p>
+          If we have two rational numbers <m>a/b</m> and <m>c/d</m> with <m>a, b, c, d \in \Z</m> and <m>b, d \ne 0</m>, then we can construct <m>\frac{a+c}{b+d}</m>. Show that this is a rational number which is contained between the two original numbers.
+        </p>
+      </hint>
     </example>
 
   </subsection>
@@ -416,6 +430,11 @@
           Show that if <m>a, b, c</m> are real numbers with <m>a\ne 0</m>, then there is a unique solution to the algebraic equation <m>ax+b=c</m>.
         </p>
       </statement>
+      <hint>
+        <p>
+          You know how to solve an algebraic equation. Now assume there's a second solution. Show that the two solutions are equal.
+        </p>
+      </hint>
     </example>
 
     <example>
@@ -424,6 +443,11 @@
           Show that if <m>n</m> is an odd integer, then there exists a unique integer <m>k</m> such that <m>n = (k-2) + (k+3)</m>
         </p>
       </statement>
+      <hint>
+        <p>
+          Similar to above, show that <m> k</m> satifies this equation, and then show that if you have another number, say <m>l</m> that also does, it must be the case that <m>k = l</m>.
+        </p>
+      </hint>
     </example>
 
 
@@ -489,6 +513,29 @@
         </ol>
       </statement>
     </example>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            For example, <m>n = 1</m> works, since <m>(1+4)^2 = 25 \ne 17 = 1+16</m>.
+          </li>
+          <li>
+            The number 7 isn't the sum of two squares. The only squares smaller than 7 are 1 and 4. They don't add to 7. 
+          </li>
+          <li>
+            Choosing <m>x=  -1 \and y = =1</m> we have <m>(-1)^2 = (1)^2</m> but certainly <m>-1 \ne 1</m>.
+          </li>
+          <li>
+            We know (from above) that <m>\sqrt{2}</m> is irrational. Multiply it by itself. You get <m>2</m> which is rational.
+          </li>
+          <li>
+            Consider <m>a = \sqrt{2}</m> and <m>b=-\sqrt{2}</m>. Then their sum, <m>a+b = 0</m>, which is rational.
+          </li>
+        </ol>
+
+      </p>
+
+    </solution>
 
   </subsection>
 

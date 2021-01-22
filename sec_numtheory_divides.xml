@@ -156,6 +156,35 @@
           Find all congruence classes modulo 5.
         </p>
       </statement>
+      <hint>
+        <p>
+          To what numbers is 0 congruent modulo 5? 1? 2? 3? 4? 5? 6? 7?... Have we covered everything?
+        </p>
+      </hint>
+      <solution>
+        <p>
+          There are a total of five congruence classes modulo 5:
+          <ol>
+            <li>
+              <m>[0]_5 = \{ \dots, -5, 0, 5, 10, \dots \}</m>
+            </li>
+            <li>
+              <m>[1]_5 = \{ \dots, -4, 1, 6, 11, \dots \}</m>
+            </li>
+            <li>
+              <m>[2]_5 = \{ \dots, -3, 2, 7, 12, \dots \}</m>
+            </li>
+            <li>
+              <m>[3]_5 = \{ \dots, -2, 3, 8, 13, \dots \}</m>
+            </li>
+            <li>
+              <m>[4]_5 = \{ \dots, -1, 4, 9, 14, \dots \}</m>
+            </li>
+          </ol>
+
+          In general, there will always be <m>m</m> distinct congruence classes modulo <m>m</m>.
+        </p>
+      </solution>
     </example>
 
 
