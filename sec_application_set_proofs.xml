@@ -36,6 +36,10 @@
         </ol>
       </p>
     </statement>
+    <answer>
+      <video youtube="gfnlEc9qxSQ"/>
+    </answer>
+
   </definition>
 
 
@@ -110,6 +114,9 @@
         thus <m>A \cup \emptyset = A</m>.
       </p>
     </solution>
+    <answer>
+      <video youtube="cNiSxQsOloI"/>
+    </answer>
   </example>
 
   <exercises>
@@ -241,6 +248,6 @@
     </exercise>
   </exercises>
 
- 
+
 
 </section>

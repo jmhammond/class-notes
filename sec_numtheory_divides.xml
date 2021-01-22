@@ -60,6 +60,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="eBcg74rjW1c"/>
+      </answer>
+
     </proposition>
 
 
@@ -69,6 +73,10 @@
           If <m>a, b, c\in \Z</m> with <m>a\not= 0</m> such that <m>a\divides b</m> and <m>a \divides c</m>, then <m>{ a\divides (bm+cn)}</m> where <m>m \and n</m> are some integers.
         </p>
       </statement>
+      <answer>
+        <video youtube="-fY3pUCbnRg"/>
+      </answer>
+
     </corollary>
 
 
@@ -94,6 +102,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="CPIzNeiOipI"/>
+      </answer>
+
     </example>
 
 
@@ -126,6 +138,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="P9NKnDxdUCw"/>
+      </answer>
+
     </example>
 
     <definition>
@@ -147,6 +163,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="5DoLEOmW3bY"/>
+      </answer>
+
     </example>
 
 
@@ -156,6 +176,35 @@
           Find all congruence classes modulo 5.
         </p>
       </statement>
+      <hint>
+        <p>
+          To what numbers is 0 congruent modulo 5? 1? 2? 3? 4? 5? 6? 7?... Have we covered everything?
+        </p>
+      </hint>
+      <solution>
+        <p>
+          There are a total of five congruence classes modulo 5:
+          <ol>
+            <li>
+              <m>[0]_5 = \{ \dots, -5, 0, 5, 10, \dots \}</m>
+            </li>
+            <li>
+              <m>[1]_5 = \{ \dots, -4, 1, 6, 11, \dots \}</m>
+            </li>
+            <li>
+              <m>[2]_5 = \{ \dots, -3, 2, 7, 12, \dots \}</m>
+            </li>
+            <li>
+              <m>[3]_5 = \{ \dots, -2, 3, 8, 13, \dots \}</m>
+            </li>
+            <li>
+              <m>[4]_5 = \{ \dots, -1, 4, 9, 14, \dots \}</m>
+            </li>
+          </ol>
+
+          In general, there will always be <m>m</m> distinct congruence classes modulo <m>m</m>.
+        </p>
+      </solution>
     </example>
 
 
@@ -165,6 +214,10 @@
           Let <m>m</m> be a positive integer. Then integers <m>a \and b</m> are congruent modulo <m>m</m> if and only if there exists and integer <m>k</m> such that <m>{a = b + km}</m>.
         </p>
       </statement>
+      <answer>
+        <video youtube="mRgZaNUB_tw"/>
+      </answer>
+
     </proposition>
 
 
@@ -175,6 +228,10 @@
           <me>a + c \equiv b + d \pmod m  \hspace{1em} \and \hspace{1em} ac \equiv bd \pmod m</me>
         </p>
       </statement>
+      <answer>
+        <video youtube="vkifZzmBHgE"/>
+      </answer>
+
     </proposition>
 
     <note>

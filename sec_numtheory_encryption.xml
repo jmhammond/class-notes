@@ -294,6 +294,10 @@
       <p>
         To be able to decrypt an affine function, we need <m>\gcd(a,n)=1</m> in order that <m>a</m> is an invertible element. We can find the inverse via the <xref ref="euclidean-algorithm"> Euclidean Algorithm with back-substitution</xref>. Recall, the inverse of an invertible element is its Bézout coefficient.
       </p>
+      <answer>
+        <video youtube="iVWyD0mvxwQ"/>
+      </answer>
+
     </note>
 
     <example>
@@ -321,6 +325,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="dRLN1bj6mTI"/>
+      </answer>
+
     </example>
 
     <definition>
@@ -371,6 +379,10 @@
           Let <m>p = 59, q=83</m>. Choose <m>e=15</m> Encrypt <q>WHATS UP</q> and then decrypt the result to confirm it worked. Do this by hand (with the help of a calculator). 
         </p>
       </statement>
+      <answer>
+        <video youtube="xEf5vBH5x_Y"/>
+      </answer>
+
     </example>
 
 
@@ -521,6 +533,10 @@
             </ol>
           </p>
         </statement>
+        <answer>
+          <video youtube="GyzmNNCsdWE"/>
+        </answer>
+
       </exercise>
     </exercises>
 

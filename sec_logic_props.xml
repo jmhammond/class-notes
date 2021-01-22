@@ -35,6 +35,9 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="zNYCHy8KUdM"/>
+      </answer>
     </example>
 
     <definition>
@@ -61,6 +64,9 @@
           <!-- </answer> -->
         </p>
       </statement>
+      <answer>
+        <video youtube="tyb4raOZwd4"/>
+      </answer>
     </example>
 
     <definition>
@@ -101,7 +107,9 @@
           What is the logical negation of <m>p \to q</m> in simple English? 
         </p>
       </statement>
-
+      <answer>
+        <video youtube="M-FfG0Per7U"/>
+      </answer>
     </example>
 
     
@@ -130,7 +138,9 @@
           <li> The <term>inverse</term> is <m>\neg p \to \neg q</m></li>
           <li> The <term>contrapositive</term> is <m>\neg q \to \neg p</m></li>
         </ul>
-      </p>
+       <answer>
+        <video youtube="hHfbI1fPIME"/>
+      </answer>     </p>
     </definition>
 
     <definition>
@@ -354,6 +364,9 @@
         </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="EG531mTSNRQ"/>
+      </answer>
     </example>
 
     <example>
@@ -370,6 +383,9 @@
           </ul>
         </p>
       </statement>
+      <answer>
+        <video youtube="wVrgQ0vN9Ho"/>
+      </answer>
     </example>
 
   </subsection>

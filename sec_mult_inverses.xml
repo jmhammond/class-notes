@@ -121,6 +121,10 @@
         The inverse of 4 modulo 9 is 7. Why?
       </p>
     </solution>
+    <answer>
+      <video youtube="MyWZyvJUlI4"/>
+    </answer>
+
   </example>
 
 
@@ -130,6 +134,10 @@
         Solve the congruence <m>4x \equiv 5 \pmod 9 </m>.
       </p>
     </statement>
+    <answer>
+      <video youtube="-_3jKc2ul4w"/>
+    </answer>
+
   </example>
 
   <example xml:id="multiplication-table">
@@ -167,6 +175,10 @@
         </ol>
       </p>
     </statement>
+    <answer>
+      <video youtube="IQ3D_dVSl9k"/>
+    </answer>
+
   </example>
 
   <proposition>
@@ -175,6 +187,10 @@
         If <m>a \and m</m> are relatively prime integers and <m>m \gt 1</m>, then an inverse of <m>a</m> modulo <m>m</m> exists.
       </p>
     </statement>
+    <answer>
+      <video youtube="R14CL5b6GjE"/>
+    </answer>
+
   </proposition>
 
   <note>
@@ -187,6 +203,14 @@
       </p>
     </statement>
   </note>
+
+  <p>
+    Here's an additional example: solve <m>5x + 3 = 0\pmod{14}</m>
+    <answer>
+      <video youtube="J-Iu16MEKeo"/>
+    </answer>
+
+  </p>
 
   <exercises>
     <exercise>

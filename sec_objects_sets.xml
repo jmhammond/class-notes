@@ -51,6 +51,9 @@
           <li> <m> \mathbb{C} = \{a + bi \mid a \in \mathbb{R}, b \in \mathbb{R}, i = \sqrt{-1} \} </m> is the set of <term>complex numbers</term> </li>
         </dl>
       </p>
+      <answer>
+        <video youtube="QyDUE4zSIEU"/>
+      </answer>
     </definition>
 
     <definition>
@@ -64,6 +67,10 @@
         We say that two sets, <m>A</m> and <m>B</m> are <term>equal</term>, an write <m>A = B</m> they have exactly the same elements.
         <me>A = B \iff (A \subseteq B \text{ and } B \subseteq A)</me>
       </p>
+
+      <answer>
+        <video youtube="cAh-4Xe7Auc"/>
+      </answer>
     </definition>
 
     <!-- todo keep working on this -->
@@ -114,6 +121,10 @@
           </li>
         </ol>
       </statement>
+
+      <answer>
+        <video youtube="Xqe7xNxH4aE"/>
+      </answer>
     </example>
 
     <definition>
@@ -140,6 +151,10 @@
           </li>
         </ol>
       </statement>
+
+      <answer>
+        <video youtube="CRqvTn3ncPY"/>
+      </answer>
     </example>
 
   </subsection>
@@ -180,6 +195,10 @@
           <li><m>A^2</m></li>
         </ol>
       </statement>
+
+      <answer>
+        <video youtube="TeCOF_lO5qU"/>
+      </answer>
     </example>
 
     
@@ -308,6 +327,10 @@
           <li><m>B\setminus A</m></li>
         </ol>
       </statement>
+
+      <answer>
+        <video youtube="aj5UcvPjCoQ"/>
+      </answer>
     </example>
     <note>
       <statement>
@@ -335,6 +358,10 @@
         </ol>
       </statement>
 
+
+      <answer>
+        <video youtube="VVXEDmYGy2s"/>
+      </answer>
     </example>
 
     <note>
