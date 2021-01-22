@@ -582,6 +582,23 @@
         </solution>
       </exercise>
     </exercises>
+  <subsection>
+    <title>Forum Posts about this section</title>
+
+    <slate xml:id="discourse1" surface="html" >
+      <div id='discourse-comments'></div>
+      <script type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 301 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script>
+    </slate>
+  </subsection>
   </section>
 
   <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-combperm">
@@ -923,6 +940,23 @@
       <!-- </exercise> -->
 
     </exercises>
+  <subsection>
+    <title>Forum Posts about this section</title>
+
+    <slate xml:id="discourse2" surface="html" >
+      <div id='discourse-comments'></div>
+      <script type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 302 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script>
+    </slate>
+  </subsection>
   </section>
 
   <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-binomial">
@@ -1468,6 +1502,23 @@
       </exercise>
     </exercises>
 
+  <subsection>
+    <title>Forum Posts about this section</title>
+
+    <slate xml:id="discourse3" surface="html" >
+      <div id='discourse-comments'></div>
+      <script type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 282 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script>
+    </slate>
+  </subsection>
   </section>
 
   <section xml:id="section-counting-fib">
@@ -1748,6 +1799,23 @@
     </exercises>
 
 
+  <subsection>
+    <title>Forum Posts about this section</title>
+
+    <slate xml:id="discourse4" surface="html" >
+      <div id='discourse-comments'></div>
+      <script type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 303 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script>
+    </slate>
+  </subsection>
   </section>
 
   <!-- <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-morecounting"> -->
