@@ -39,3 +39,4 @@ ltxpng
 temp.org
 *.listing
 /.auctex-auto/
+*.dep
