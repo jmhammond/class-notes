@@ -18,7 +18,7 @@
 
     <definition>
       <p>
-        A <term>logical proposition</term> or <term>logical statement</term> is a sentence which is either true of false, but not both.
+        A <term>logical proposition</term> or <term>logical statement</term> is a sentence which is either true or false, but not both.
       </p>
     </definition>
 
@@ -433,7 +433,7 @@
                 F
               </cell>
               <cell>
-                F
+                T
               </cell>
             </row>
             <row>
@@ -444,7 +444,7 @@
                 T
               </cell>
               <cell>
-                T
+                F
               </cell>
             </row>
             <row>
