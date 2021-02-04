@@ -656,7 +656,7 @@
         <p>
           <ol>
             <li> <m>A\cap B = \{4, 6, 8, 10, 12\}</m> </li>
-            <li> <m>A\cup B = \{3, 4, 5, \dots 12, 13, 14, 16,  18, 20, 22, 24, \dots\}</m> </li>
+            <li> <m>A\cup B = \{0, 2, 3, 4, 5, \dots 12, 13, 14, 16,  18, 20, 22, 24, \dots\}</m> </li>
             <li> <m>B\cap C = \emptyset </m> </li>
             <li> <m>B\cup C = \N </m> </li>
           </ol>
