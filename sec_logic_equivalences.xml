@@ -274,8 +274,8 @@
           Let's start with the left-hand side and work towards the right to find out.
           <md>
             <mrow> p \to (q\vee r) \amp= \neg p \lor (q \land r)</mrow>
-            <mrow> \amp (\neg p \land q) \lor (\neg p \land r) </mrow>
-            <mrow> \amp (p \to q) \lor (p \to r)</mrow>
+            <mrow> \amp= (\neg p \land q) \lor (\neg p \land r) </mrow>
+            <mrow> \amp= (p \to q) \lor (p \to r)</mrow>
           </md>
           which was what we wanted to show.
         </p>
