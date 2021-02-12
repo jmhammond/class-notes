@@ -376,10 +376,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </statement>
       <solution>
         <p>
-          In order for <m>f</m> to be injective, we can restrict the domain to just the non-negative real numbers: <m>[0, \infty)</m>. In order for <m>f</m> to be surjective, using the codomain to be the interval <m>[0, \infty)</m> works for the chosen domain.
+          In order for <m>f</m> to be injective, we can restrict the domain to just the non-negative real numbers: <m>[0, \infty)</m>. In order for <m>f</m> to be surjective, using the codomain to be the interval <m>[1, \infty)</m> works for the chosen domain.
         </p>
         <p>
-          Alternatively, if we choose the domain to be <m>\N</m>, then the range is only square numbers, so the codomain would need to be <m>\{0, 1, 4, 9, 16, \dots\}</m>.
+          Alternatively, if we choose the domain to be <m>\N</m>, then the range is only square numbers, so the codomain would need to be <m>\{1, 4, 9, 16, \dots\}</m>.
         </p>
       </solution>
     </example>

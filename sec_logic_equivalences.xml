@@ -273,9 +273,9 @@
         <p>
           Let's start with the left-hand side and work towards the right to find out.
           <md>
-            <mrow> p \to (q\vee r) \amp= \neg p \lor (q \land r)</mrow>
-            <mrow> \amp (\neg p \land q) \lor (\neg p \land r) </mrow>
-            <mrow> \amp (p \to q) \lor (p \to r)</mrow>
+            <mrow> p \to (q\vee r) \amp\equiv \neg p \lor (q \land r)</mrow>
+            <mrow> \amp\equiv (\neg p \land q) \lor (\neg p \land r) </mrow>
+            <mrow> \amp\equiv (p \to q) \lor (p \to r)</mrow>
           </md>
           which was what we wanted to show.
         </p>
@@ -292,12 +292,12 @@
         <p>
           Here's an alternative solution using previous equivalences (not a truth table): 
           <md>
-            <mrow> (p \to q) \land (p \to r) &amp; = (\neg p \lor q) \land (\neg p \lor r) </mrow>
+            <mrow> (p \to q) \land (p \to r) &amp; \equiv (\neg p \lor q) \land (\neg p \lor r) </mrow>
             <mrow>
-              &amp;= \neg p \lor (q \land r)
+              &amp;\equiv \neg p \lor (q \land r)
             </mrow>
             <mrow>
-              &amp;= p \to (q \land r)
+              &amp;\equiv p \to (q \land r)
             </mrow>
           </md>
         </p>
