@@ -683,7 +683,7 @@
         <p>
           <ol>
             <li> <m>A\cap B = \{4, 6, 8, 10, 12\}</m> </li>
-            <li> <m>A\cup B = \{3, 4, 5, \dots 12, 13, 14, 16,  18, 20, 22, 24, \dots\}</m> </li>
+            <li> <m>A\cup B = \{0, 2, 3, 4, 5, \dots 12, 13, 14, 16,  18, 20, 22, 24, \dots\}</m> </li>
             <li> <m>B\cap C = \emptyset </m> </li>
             <li> <m>B\cup C = \N </m> </li>
           </ol>
@@ -988,7 +988,7 @@
 
       <solution>
         <p>
-          There are 10 subsets that consist of a single element. For subsets consisting of exactly two elements, there are 90
+          There are 10 subsets that consist of a single element. For subsets consisting of exactly two elements, there are 45
         </p>
       </solution>
 
@@ -1043,7 +1043,7 @@
       </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -1060,7 +1060,7 @@
           <ol>
             <li> <p> No. </p> </li>
             <li> <p> No. </p> </li>
-            <li><m>2\Z \cap 3\Z</m> is the set of all integers which are multiples of both 2 and 3 (so multiples of 6). Therefore <m>2\Z \cap 3\Z = \{x \in \Z \st \exists y\in \Z(x = 6y)\}</m>.</li>
+            <li><m>2\Z \cap 3\Z</m> is the set of all integers which are multiples of both 2 and 3 (so multiples of 6). Therefore <m>2\Z \cap 3\Z = \{6y \st y \in \Z )\}</m>.</li>
           </ol>
         </p>
       </solution>
