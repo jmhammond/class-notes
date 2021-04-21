@@ -134,6 +134,9 @@
     <example>
       <statement>
         <p>
+          We will now consider <term>bit strings</term> which are strings of characters containing only <m>0</m> and <m>1</m>. For example, these are bit strings: <m>0011, 1010, 110,</m> etc.
+        </p>
+        <p>
           How many bit strings of length eight either start with a 1 bit or end with two bits 00? 
         </p>
       </statement>
@@ -1077,6 +1080,7 @@
               <li> <m>\binom{n}{k}</m> is the number of ways to select <m>k</m> objects from a set of <m>n</m> objects. </li>
               <li> <m>\binom{n}{k}</m> is the coefficient of <m>x^{n-k}y^k</m> in the expansion of <m>(x+y)^n</m> </li>
               <li> <m>\binom{n}{k}</m> is the number subsets of size <m>k</m> from a set of size <m>n</m> </li>
+              <li> <m>\binom{n}{k}</m> is the number of bit strings of length <m>n</m> with exactly <m>k</m> 1's</li>
               <li><m>\dots</m> there are many more ways of viewing binomial coefficients.</li>
             </ul>
           </p>
