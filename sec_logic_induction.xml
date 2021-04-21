@@ -191,6 +191,9 @@
 
 
   <!-- TODO: change this to something they know about  //-->
+
+  <!-- keep quick sort and change the language to this:         % http://www.math.utah.edu/mathcircle/notes/induction.pdf ?
+   -->
   <assemblage>
       <title>Computer Corner</title>
       <caption>Computer Corner</caption>
