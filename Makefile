@@ -25,7 +25,10 @@ clean:
 
 publish-to-web: html
 	rsync -zartv --include "*/" --include="*.html" --exclude="*" ./  ~/public_html/class-notes
-
+	
+publish-to-321: html
+	rsync -zartv --include "*/" --include="*.html" --exclude="*" ./  ~/public_html/math321
+	
 staging: html
 	rsync -zartv --include "*/" --include="*.html" --exclude="*" ./  ~/public_html/notes-staging
 
