@@ -374,6 +374,26 @@
 
   </subsection>
 
+  <assemblage>
+    <title>Computer Corner</title>
+    <caption>Computer Corner</caption>
+    <p>
+      The objects that are logical propositions in mathematics are <c>bool</c> Boolean datatypes in computer science.
+    </p>
+    <p>
+      For example, the clause  <c>5 &lt;= 3</c> will evaluate to <c>False</c>. This corresponds to the proposition <m>p:=</m><q>5 <m>\ge</m> 3</q><m>\equiv F</m>.
+    </p>
+
+    <p>
+      The statement <m>p \to q</m> is the code (in C-ish syntax)
+      <cd>
+        if ( p ){
+           q;
+        }
+      </cd>
+    </p>
+  </assemblage>
+
   <exercises>
     <exercise>
       <statement>
