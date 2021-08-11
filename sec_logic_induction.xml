@@ -217,6 +217,87 @@
     </p>
   </note>
 
+
+  <!-- TODO: change this to something they know about  //-->
+
+  <!-- keep quick sort and change the language to this:         % http://www.math.utah.edu/mathcircle/notes/induction.pdf ?
+   -->
+  <assemblage>
+      <title>Computer Corner</title>
+      <caption>Computer Corner</caption>
+      <p>
+        The <a href="https://en.wikipedia.org/wiki/Quicksort">Quick Sort algorithm</a> will take an array/list and will return a sorted list. The really basic idea we pick some element to be the <q>pivot</q> and then recursively sort <q>left half</q> to be smaller than the pivot and <q>right half</q> to be larger than the pivot.
+
+      </p>
+      <p>
+        Question: How can we know it correctly sorts a given array of <m>n</m> elements?
+
+      </p>
+      <p>
+        Answer: Math Induction!
+      </p>
+      <p>
+        Basis Step: Given an array with 1 element, that array is sorted.
+      </p>
+      <p>
+        Inductive step:
+        Assume that QuickSort can sort an array of <m>n</m> elements, and consider an array with <m>n+1</m> elements, let's pretend it looks like <c>a[0], a[1], [2], \dots a[n-1], a[n]</c>   (remember 0 index means there are <m>n+1</m> elements).
+        <ol>
+          <li>
+            <p>
+              Pick any element to be pivot, without loss of generality pretend it is <c>a[i]</c> for some index <m>i</m>
+              <image xml:id="np1-element-sort">
+                <description>An n+1 element set with pivot noted</description>
+            <latex-image>
+              \begin{tikzpicture}[scale=1.0]
+
+              \draw[
+              thick,
+              decoration={brace, mirror, raise=.2cm},
+              decorate
+              ] (8.1,1.2) -- node[above] {pivot} (8.9,1.2);
+              \draw[
+              thick,
+              decoration={brace, mirror, raise=.2cm},
+              decorate
+              ] (0,-0.2) -- node[below] {left $i$ terms} (8,-0.2);
+              \draw[
+              thick,
+              decoration={brace, mirror, raise=.2cm},
+              decorate
+              ] (9,-0.2) -- node[below] {right $n-i$ terms} (16.2,-0.2);
+
+              \draw[thick,fill=white!20] (0,0) rectangle (16.2,1);
+              \draw[thick] (0,0) rectangle (16.2,1);
+              \foreach \col in {0,1,2,3}{
+              \draw[thick] (\col,0) rectangle (\col+1, 1);
+              \node[thick, fill=white!20] at (\col+0.5, 0.5){a[\col]};
+              }
+              \node[thick, fill=white!20] at (4.5, 0.5){...};
+              \node[thick, fill=white!20] at (7.5, 0.5){...};
+              \node[thick, fill=white!20] at (8.5, 0.5){a[i]};
+              \node[thick, fill=white!20] at (9.5, 0.5){...};
+              \node[thick, fill=white!20] at (12.5, 0.5){...};
+              \node[thick, fill=white!20] at (13.5, 0.5){a[n-1]};
+              \node[thick, fill=white!20] at (14.5, 0.5){a[n]};
+              \node[thick, fill=white!20] at (15.6, 0.5){a[n+1]};
+              \foreach \col in {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14}{
+              \draw[thick] (\col,0) rectangle (\col+1, 1);
+              }
+              \draw[thick] (15,0) rectangle (16.2, 1);
+
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+            </p>
+          </li>
+          <li> run QuickSort on the left-partition <c>a[0], ... a[i-1]</c>  (which has necessarily no more than <m>n</m> elements). The result is the left-partition being sorted. </li>
+          <li> run QuickSort on the right-partition: <c>a[i+1], a[i+2], ..., a[n]</c> (which again has no more than <m>n</m> elements). The result is the right-partition is also sorted. </li>
+        </ol>
+        Because every element in the left-partition is correctly sorted and less than <m>a[i]</m>, and  every element in the right-partition is correctly sorted and larger than <m>a[i]</m>, QuickSort has correctly sorted the entire set of <m>n+1</m> elements, and thus, by math induction, QuickSort correctly sorts an array of any size.
+      </p>
+    </assemblage>
+
   <exercises>
 
     <note>
