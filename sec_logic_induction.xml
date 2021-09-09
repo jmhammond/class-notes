@@ -168,13 +168,60 @@
         Let <m>P(n)</m> be the statement that <q>postage of <m>n</m> cents can be formed using just 4 cent and 7 cent stamps</q>. Prove <m>P(n)</m> is true for <m>n\ge 18</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Here's one way to approach the problem. Begin by showing we can do the basis, see if we can find a pattern, then make a formal proof:
+        <ul>
+          <li> <m>18 = 7\cdot2 + 4\cdot1</m>  </li>
+          <li> <m>19 = 7\cdot1 + 4\cdot3</m>  </li>
+          <li> <m>20 = 7\cdot0 + 4\cdot5</m>  </li>
+          <li> <m>21 = 7\cdot3 + 4\cdot0</m>  </li>
+          <li> <m>22 = 7\cdot2 + 4\cdot2</m>  </li>
+          <li> <m>23 = 7\cdot1 + 4\cdot4</m>  </li>
+          <li> <m>24 = 7\cdot0 + 4\cdot6</m>  </li>
+          <li> <m>25 = 7\cdot3 + 4\cdot1</m>  </li>
+          <li> <m>26 = 7\cdot2 + 4\cdot3</m>  </li>
+          <li> <m>27 = 7\cdot1 + 4\cdot5</m>  </li>
+          <li> <m>28 = 7\cdot0 + 4\cdot7</m>  </li>
+        </ul>
+        Do you notice a pattern? Take a couple moments to think about it, then let's do the proof.
+      </p>
+      <proof>
+        <p>
+          Basis step: We can form 18 cent postage using two 7 and one 4 cent stamp.
+        </p>
+        <p>
+          Inductive step:<br/>
+          Assume that one can form postage for all values from 18 cents up to <m>k</m> cents. Now we're asked to form <m>k+1</m> cents.
+
+          we know that we can form <m>k</m> cents, so, without loss of generality, let's assume that it takes <m>s</m> 7 cent stamps and <m>t</m> 4 cent stamps. That is:
+          <me>
+            k = 7s + 4t
+          </me>
+
+          Now, if <m>s \ge 1</m>, then we can do the following, adding one to both sides in two different ways:
+          <me> k+1 = 7s + 4t - 7 + 8</me>
+          Combining like terms we have
+          <me> k+1 = 7(s-1) + 4(t+2)</me>
+
+          If, on the other hand, <m>s=0</m>, then we need to add one in a different way:
+          <me> k+1 = 7s + 4t + 21 - 20 </me>
+          or, combining like terms:
+          <me> k+1 = 7(s+3) + 4(t-5)</me>
+
+          Thus, by inductive hypothesis, if we can form <m>k</m> cents, I can form <m>k+1</m> cents postage.
+        </p>
+        <p>
+          Therefore, by mathematical induction, every postage cost greater than or equal to 18 can be formed using 4 and 7 cent stamps.
+        </p>
+      </proof>
+    </solution>
     <answer>
       <p>
         Here's a different approach to the problem. If we can construct <m>18, 19, 20, \dots k</m> postage using the four and seven cent stamps, then for the <m>k+1</m> cent postage, We'll just pretend you asked for four cents less! $k+1 -4 = k-3$. Were're guaranteed to be able to make the postage by the induction hypothesis. Imagine putting those stamps on the package. Then all we need is to glue on one four cent stamp and we're good to go!
         <video youtube="73v1BI2omjs"/>
       </p>
     </answer>
-
   </example>
 
 
