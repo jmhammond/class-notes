@@ -457,12 +457,20 @@
             </li>
             <li>
               <p>
-                <q>All lions are fierce. Some lions do not drink coffee. Therefore, some fierce creatures to not drink coffee.</q>
+                <q>All lions are fierce. Some lions do not drink coffee. Therefore, some fierce creatures do not drink coffee.</q>
               </p>
             </li>
           </ol>
         </p>
       </statement>
+      <hint>
+        <p>
+          <ol>
+            <li>Write each in terms of logical symbols.</li>
+            <li>Let the universe of discourse be all creatures, <m>L(x)</m> be the statement <q><m>x</m> is a lion,</q> <m>C(x)</m> be <q><m>x</m> drinks coffee,</q> and <m>F(x)</m> is <q><m>x</m> is fierce.</q></li>
+          </ol>
+        </p>
+      </hint>
     </exercise>
 
     <!-- This exercise is from Al Doerr, Ken Levasseur, Applied Discrete Structures -->
