@@ -162,7 +162,7 @@
     </statement>
   </definition>
 
-  <example>
+  <example xml:id="example-postage">
     <statement>
       <p>
         Let <m>P(n)</m> be the statement that <q>postage of <m>n</m> cents can be formed using just 4 cent and 7 cent stamps</q>. Prove <m>P(n)</m> is true for <m>n\ge 18</m>.
@@ -217,6 +217,44 @@
     </p>
   </note>
 
+  <assemblage>
+    <title>Computer Corner</title>
+    <caption>Computer Corner</caption>
+    <p>
+      You'll be using mathematical induction when you're designing algorithms. Let's take the example of sorting a dataset. To prove that an algorithm is correct, you need:
+      <ol>
+        <li> There is a valid base case. In our example - it can sort a set of one element) </li>
+        <li> Assume the algorithm works for <m>n</m> objects. It can sort a set of <m>n</m> objects</li>
+        <li> Show that if you have a larger set of <m>n+1</m> objects, you algorithm correctly works. It can sort a set with <m>n+1</m> objects</li>)
+      </ol>
+    </p>
+    <p>
+      For example, we proved mathematically in <xref ref="example-postage"/> that any postage over 18 cents can be made with 4 and 7 cent stamps.
+      The proof of that gives rise to an algorithm that we know must be correct:
+      <sage language="python">
+        <input>
+# input: n cents postage
+# output: A string telling you what to pay
+def payWithFourAndSevenCents(n):
+    x = 18
+    s = 2
+    t = 1  #base case with:  18 = 7s + 4t
+    while x &lt; n:
+        x +=1 #get get the "x+1" case, we need to either:
+        if s >= 1:
+            s-=1  # subtract 7
+            t+=2  # add two 4s, since -7 + 2*4 = 8, a net gain of 1
+        else:
+            s+=3  # add 7*3 = 21
+            t-=5  # remove 20: 4*5 = 20; net gain of 1 = 21 - 20
+    print("To pay %d cents, you need %d four cent and %d seven cent stamps" % (n,s,t))
+
+payWithFourAndSevenCents(25)
+        </input>
+      </sage>
+    </p>
+  </assemblage>
+
   <exercises>
 
     <note>
@@ -259,7 +297,7 @@
 
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
+    <exercise xml:id="exercise-sum-of-odds">
       <statement>
         <p>
           Prove that <m>1 + 3 + 5 + \cdots + (2n-1) = n^2</m> for all <m>n \ge 1</m>.
