@@ -55,14 +55,16 @@
 
     <definition>
       <p>
-        We say that <m>A</m> is a <term>subset</term> of <m>B</m>, and write <m>A \subseteq B</m> if every element of <m>A</m> is an element of <m>B</m>.
-        <!-- <me>A \subseteq B \iff \forall x (x \in A \to x \in B)</me> -->
-        If there is an element of <m>B</m> which is not also in <m>A</m>, we say that <m>A</m> is a <term>proper subset</term> of <m>B</m> and write <m>A \subset B</m>.
-        <!-- <me>A \subset B \iff \forall x (x \in A \to x \in B) \text{ and } \exists y (y\in B \text{ and } y \not \in A) </me> -->
+        We say that two sets, <m>A</m> and <m>B</m> are <term>equal</term>, an write <m>A = B</m> they have exactly the same elements.
       </p>
       <p>
-        We say that two sets, <m>A</m> and <m>B</m> are <term>equal</term>, an write <m>A = B</m> they have exactly the same elements.
-        <me>A = B \iff (A \subseteq B \text{ and } B \subseteq A)</me>
+        We say that <m>A</m> is a <term>subset</term> of <m>B</m>, and write <m>A \subseteq B</m> if every element of <m>A</m> is an element of <m>B</m>.
+      </p>
+      <!-- <me>A \subseteq B \iff \forall x (x \in A \to x \in B)</me> -->
+
+      <p>
+        If there is an element of <m>B</m> which is not also in <m>A</m>, we say that <m>A</m> is a <term>proper subset</term> of <m>B</m> and write <m>A \subset B</m>.
+        <!-- <me>A \subset B \iff \forall x (x \in A \to x \in B) \text{ and } \exists y (y\in B \text{ and } y \not \in A) </me> -->
       </p>
     </definition>
 
@@ -92,6 +94,15 @@
         </p>
       </statement>
     </theorem>
+
+    <note>
+      <statement>
+        <p>
+          Since a set is always a subset of itself we can say that if two sets, <m>A</m> and <m>B</m> are equal, then <m>A</m> is a subset of <m>B</m> and vice versa.
+          <me>A = B \iff (A \subseteq B \text{ and } B \subseteq A)</me>
+        </p>
+      </statement>
+    </note>
 
     <definition>
       <p>
@@ -269,7 +280,7 @@
               \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
               \end{tikzpicture}
             </latex-image>
-          <description>Venn diagram for the universal set </description>
+            <description>Venn diagram for the universal set </description>
           </image>
         </sidebyside>
       </p>
@@ -286,7 +297,7 @@
               \draw[thick] \circleA \circleAlabel \twosetbox;
               \end{tikzpicture}
             </latex-image>
-          <description>Venn diagram for the complement of <m>A</m></description>
+            <description>Venn diagram for the complement of <m>A</m></description>
           </image>
         </sidebyside>
       </p>
@@ -459,27 +470,27 @@
     </exercise>
     
     <!-- TODO move these to a different section applying logic --> 
-  <!--   <example> -->
-  <!--     <statement> -->
-  <!--       <p> -->
-  <!--         Verify the following set identity by using the basic identities in the table above: <m>A \cap (A \cup B) = A</m>. -->
-  <!--       </p> -->
-  <!--     </statement> -->
-  <!--   </example> -->
+    <!--   <example> -->
+    <!--     <statement> -->
+    <!--       <p> -->
+    <!--         Verify the following set identity by using the basic identities in the table above: <m>A \cap (A \cup B) = A</m>. -->
+    <!--       </p> -->
+    <!--     </statement> -->
+    <!--   </example> -->
 
-  <!--   <example> -->
-  <!--     <statement> -->
-  <!--       <p> -->
-  <!--         The set identities are true as an extension of logic. For example, the identity <m>A \cup \emptyset = A</m> is: -->
-  <!--         <md> -->
-  <!--           <mrow>A \cup \emptyset &amp;= \{ x \mid x \in A \lor x \in \emptyset\} </mrow> -->
-  <!--           <mrow>&amp;= \{x \in A \lor F \} </mrow> -->
-  <!--           <mrow>&amp;= \{x \in A\} </mrow> -->
-  <!--           <mrow>&amp;= A </mrow> -->
-  <!--         </md> -->
-  <!--       </p> -->
-  <!--     </statement> -->
-  <!--   </example> -->
+    <!--   <example> -->
+    <!--     <statement> -->
+    <!--       <p> -->
+    <!--         The set identities are true as an extension of logic. For example, the identity <m>A \cup \emptyset = A</m> is: -->
+    <!--         <md> -->
+    <!--           <mrow>A \cup \emptyset &amp;= \{ x \mid x \in A \lor x \in \emptyset\} </mrow> -->
+    <!--           <mrow>&amp;= \{x \in A \lor F \} </mrow> -->
+    <!--           <mrow>&amp;= \{x \in A\} </mrow> -->
+    <!--           <mrow>&amp;= A </mrow> -->
+    <!--         </md> -->
+    <!--       </p> -->
+    <!--     </statement> -->
+    <!--   </example> -->
 
   </subsection>
 
@@ -573,18 +584,18 @@
         <p>
           Let <m>A = \{1, 2, 3, 4, 5, 6\}</m>, <m>B = \{2, 4, 6\}</m>, <m>C = \{1, 2, 3\}</m> and <m>D = \{7, 8, 9\}</m>. If the universe is <m>U = \{1, 2, \ldots, 10\}</m>, find:
 
-        <ol cols="3">
-          <li><m>A \cup B</m>.</li>
-          <li><m>A \cap B</m>.</li>
-          <li><m>B \cap C</m>.</li>
-          <li><m>A \cap D</m>.</li>
-          <li><m>\bar{B \cup C}</m>.</li>
-          <li><m>A \setminus B</m>.</li>
-          <li><m>(D \cap \bar C) \cup \bar{A \cap B}</m>.</li>
-          <li><m>\emptyset \cup C</m>.</li>
-          <li><m>\emptyset \cap C</m>.</li>
-        </ol>
-      </p>
+          <ol cols="3">
+            <li><m>A \cup B</m>.</li>
+            <li><m>A \cap B</m>.</li>
+            <li><m>B \cap C</m>.</li>
+            <li><m>A \cap D</m>.</li>
+            <li><m>\bar{B \cup C}</m>.</li>
+            <li><m>A \setminus B</m>.</li>
+            <li><m>(D \cap \bar C) \cup \bar{A \cap B}</m>.</li>
+            <li><m>\emptyset \cup C</m>.</li>
+            <li><m>\emptyset \cap C</m>.</li>
+          </ol>
+        </p>
       </statement>
       <solution>
         <p>
@@ -604,7 +615,7 @@
     </exercise>
 
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
-  <exercise>
+    <exercise>
       <statement>
         <p>
           Let <m>A = \{1,2,3,4,5\}</m>, <m>B = \{3,4,5,6,7\}</m>, and <m>C = \{2,3,5\}</m>.
@@ -705,128 +716,128 @@
       <statement>
         <p>
           Draw a Venn diagram to represent each of the following:
-        <ol cols="2">
-          <li><m>A \cup \bar B</m></li>
-          <li><m>\bar{(A \cup B)}</m></li>
-          <li><m>A \cap (B \cup C)</m></li>
-          <li><m>(A \cap B) \cup C</m></li>
-          <li><m>\bar A \cap B \cap \bar C</m></li>
-          <li><m>(A \cup B) \setminus C</m></li>
-        </ol>
-      </p>
+          <ol cols="2">
+            <li><m>A \cup \bar B</m></li>
+            <li><m>\bar{(A \cup B)}</m></li>
+            <li><m>A \cap (B \cup C)</m></li>
+            <li><m>(A \cap B) \cup C</m></li>
+            <li><m>\bar A \cap B \cap \bar C</m></li>
+            <li><m>(A \cup B) \setminus C</m></li>
+          </ol>
+        </p>
       </statement>
       <solution>
         <p>
           <ol>
             <li><p>
               <m>A \cup \bar B</m>:
-              </p>
-                <sidebyside width="20%">
-                  <image xml:id="A-or-not-B">
-                    <latex-image>
-                      \begin{tikzpicture}[fill=gray!50, scale=.75]
-                          \fill \circleA;
-                            \begin{scope}
-                            \clip \circleB \twosetbox;
-                            \fill \twosetbox;
-                            \end{scope}
-                            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-                          \end{tikzpicture}
-                    </latex-image>
-                    <description>Venn diagram of <m>A\cup \bar B</m></description>
-                  </image>
-                </sidebyside>
+            </p>
+            <sidebyside width="20%">
+              <image xml:id="A-or-not-B">
+                <latex-image>
+                  \begin{tikzpicture}[fill=gray!50, scale=.75]
+                  \fill \circleA;
+                  \begin{scope}
+                  \clip \circleB \twosetbox;
+                  \fill \twosetbox;
+                  \end{scope}
+                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+                  \end{tikzpicture}
+                </latex-image>
+                <description>Venn diagram of <m>A\cup \bar B</m></description>
+              </image>
+            </sidebyside>
             </li>
             <li><p>
               <m>\bar{(A \cup B)}</m>:
             </p>
-                <sidebyside width="20%">
-                  <image xml:id="not-A-or-B">
-                    <latex-image>
-                      \begin{tikzpicture}[scale=.5, fill=gray!50]
-          \fill \twosetbox;
-          \fill[white] \circleA \circleB;
-          \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-        \end{tikzpicture}
-                    </latex-image>
-                    <description>Venn diagram of <m>\bar{(A \cup B)}</m></description>
-                  </image>
-                </sidebyside>
+            <sidebyside width="20%">
+              <image xml:id="not-A-or-B">
+                <latex-image>
+                  \begin{tikzpicture}[scale=.5, fill=gray!50]
+                  \fill \twosetbox;
+                  \fill[white] \circleA \circleB;
+                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+                  \end{tikzpicture}
+                </latex-image>
+                <description>Venn diagram of <m>\bar{(A \cup B)}</m></description>
+              </image>
+            </sidebyside>
 
             </li>
             <li><p>
               <m>A \cap (B \cup C)</m>:
             </p>
-                <sidebyside width="20%">
-                  <image xml:id="A-and-B-or-C">
-                    <latex-image>
-                      \begin{tikzpicture}[fill=gray!50, scale=.5]
-        \begin{scope}
-          \clip \circleA;
-          \fill \circleB \circleC;
-        \end{scope}
-        \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-        \end{tikzpicture}
-                    </latex-image>
-                    <description>Venn diagram of <m>A \cap (B \cup C)</m></description>
-                  </image>
-                </sidebyside>
+            <sidebyside width="20%">
+              <image xml:id="A-and-B-or-C">
+                <latex-image>
+                  \begin{tikzpicture}[fill=gray!50, scale=.5]
+                  \begin{scope}
+                  \clip \circleA;
+                  \fill \circleB \circleC;
+                  \end{scope}
+                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                  \end{tikzpicture}
+                </latex-image>
+                <description>Venn diagram of <m>A \cap (B \cup C)</m></description>
+              </image>
+            </sidebyside>
             </li>
             <li><p>
               <m>(A \cap B) \cup C</m>:
             </p>
-                <sidebyside width="20%">
-                  <image xml:id="A-and-B-cup-C">
-                    <latex-image>
-                      \begin{tikzpicture}[fill=gray!50, scale=.5]
-                        \begin{scope}
-                          \clip \circleA;
-                          \fill \circleB;
-                        \end{scope}
-                        \fill \circleC;
-                        \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                        \end{tikzpicture}
-                    </latex-image>
-                    <description> Venn diagram of <m>(A \cap B) \cup C</m></description>
-                  </image>
-                </sidebyside>
+            <sidebyside width="20%">
+              <image xml:id="A-and-B-cup-C">
+                <latex-image>
+                  \begin{tikzpicture}[fill=gray!50, scale=.5]
+                  \begin{scope}
+                  \clip \circleA;
+                  \fill \circleB;
+                  \end{scope}
+                  \fill \circleC;
+                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                  \end{tikzpicture}
+                </latex-image>
+                <description> Venn diagram of <m>(A \cap B) \cup C</m></description>
+              </image>
+            </sidebyside>
             </li>
             <li><p>
               <m>\bar A \cap B \cap \bar C</m>:
             </p>
-                <sidebyside width="20%">
-                  <image xml:id="not-A-cap-B-cap-not-C">
-                    <latex-image>
-                      \begin{tikzpicture}[fill=gray!50, scale=.5]
-                        \fill \circleB;
-                        \begin{scope}
-                          \clip \circleB;
-                          \fill[white] \circleA \circleC;
-                        \end{scope}
+            <sidebyside width="20%">
+              <image xml:id="not-A-cap-B-cap-not-C">
+                <latex-image>
+                  \begin{tikzpicture}[fill=gray!50, scale=.5]
+                  \fill \circleB;
+                  \begin{scope}
+                  \clip \circleB;
+                  \fill[white] \circleA \circleC;
+                  \end{scope}
 
-                        \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                        \end{tikzpicture}
-                    </latex-image>
-                    <description>Venn diagram of <m>\bar A \cap B \cap \bar C</m></description>
-                  </image>
-                </sidebyside>
+                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                  \end{tikzpicture}
+                </latex-image>
+                <description>Venn diagram of <m>\bar A \cap B \cap \bar C</m></description>
+              </image>
+            </sidebyside>
             </li>
             <li><p>
               <m>(A \cup B) \setminus C</m>:
             </p>
-                <sidebyside width="20%">
-                  <image xml:id="A-or-B-less-C">
-                    <latex-image>
-                      \begin{tikzpicture}[fill=gray!50, scale=.5]
-                      \fill \circleA;
-                      \fill \circleB;
-                      \fill[white] \circleC;
-                      \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                      \end{tikzpicture}
-                    </latex-image>
-                    <description>Venn diagram of <m>(A \cup B) \setminus C</m></description>
-                  </image>
-                </sidebyside>
+            <sidebyside width="20%">
+              <image xml:id="A-or-B-less-C">
+                <latex-image>
+                  \begin{tikzpicture}[fill=gray!50, scale=.5]
+                  \fill \circleA;
+                  \fill \circleB;
+                  \fill[white] \circleC;
+                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                  \end{tikzpicture}
+                </latex-image>
+                <description>Venn diagram of <m>(A \cup B) \setminus C</m></description>
+              </image>
+            </sidebyside>
             </li>
           </ol>
         </p>
@@ -846,17 +857,17 @@
               \begin{tikzpicture}[fill=gray!50, scale=0.5]
               \scope
               \clip (-2,-2) rectangle (2,2)
-                  (1,0) circle (1);
+              (1,0) circle (1);
               \fill (0,0) circle (1);
               \endscope
               \scope
               \clip (-2,-2) rectangle (2,2)
-                  (0,0) circle (1);
+              (0,0) circle (1);
               \fill (1,0) circle (1);
               \endscope
               \draw[thick] (0,0) circle (1) (-1,.7)  node [text=black,above] {\(A\)}
-                  (1,0) circle (1) (2,.7)  node [text=black,above] {\(B\)}
-                  (-1.5,-1.5) rectangle (2.5,1.5);
+              (1,0) circle (1) (2,.7)  node [text=black,above] {\(B\)}
+              (-1.5,-1.5) rectangle (2.5,1.5);
               \end{tikzpicture}
             </latex-image>
             <description>Venn diagram: A is mostly shaded, B is mostly shaded, but the area where A and B overlap is not.</description>
@@ -878,15 +889,15 @@
         <p>
           Find the following cardinalities:
 
-        <ol>
-          <li><m>|A|</m> when <m>A = \{4,5,6,\ldots,37\}</m></li>
-          <li><m>|A|</m> when <m>A = \{x \in \Z \st -2 \le x \le 100\}</m></li>
-          <li>
-            <p><m>|A \cap B|</m> when <m>A = \{x \in \N \st x \le 20\}</m> and <m>B = \{x \in \N \st x \mbox{ is prime} \}</m>; note that 1 isn't prime.
-            </p>
-          </li>
-        </ol>
-      </p>
+          <ol>
+            <li><m>|A|</m> when <m>A = \{4,5,6,\ldots,37\}</m></li>
+            <li><m>|A|</m> when <m>A = \{x \in \Z \st -2 \le x \le 100\}</m></li>
+            <li>
+              <p><m>|A \cap B|</m> when <m>A = \{x \in \N \st x \le 20\}</m> and <m>B = \{x \in \N \st x \mbox{ is prime} \}</m>; note that 1 isn't prime.
+              </p>
+            </li>
+          </ol>
+        </p>
       </statement>
 
       <solution>
@@ -1022,8 +1033,8 @@
         <p>
           Recall <m>\Z = \{\ldots,-2,-1,0, 1,2,\ldots\}</m> (the integers). Let <m>\Z^+ = \{1, 2, 3, \ldots\}</m> be the positive integers. Let <m>2\Z</m> be the even integers, <m>3\Z</m> be the multiples of 3, and so on.
           <ol> <li> <p> Is <m>\Z^+ \subseteq 2\Z</m>? Explain. </p> </li>
-            <li> <p> Is <m>2\Z \subseteq \Z^+</m>? Explain. </p> </li>
-            <li> <p> Find <m>2\Z \cap 3\Z</m>. Describe the set in words, and using set notation. </p> </li>
+          <li> <p> Is <m>2\Z \subseteq \Z^+</m>? Explain. </p> </li>
+          <li> <p> Find <m>2\Z \cap 3\Z</m>. Describe the set in words, and using set notation. </p> </li>
           </ol>
         </p>
       </statement>
