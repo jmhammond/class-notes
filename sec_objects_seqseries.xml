@@ -232,6 +232,43 @@
     </statement>
   </note>
 
+  <assemblage>
+    <title>Computer Corner</title>
+    <caption>Computer Corner</caption>
+    <p>
+      Recurrence relations are like recursive functions. For example, you can find the <m>n</m>th Fibonacci number, <m>F_n</m>, by evaluating <c>fibonacci(n)</c>
+      <sage language="python">
+        <input>
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n== 1:
+        return 1
+    return fibonacci(n-1) + fibonacci(n-2)
+
+## list out the first 21 fibonacci numbers
+print(list(map(fibonacci, range(0, 20))))
+
+## Just type fibonacci(15) to get the 15th fibonacci number.
+        </input>
+      </sage>
+    </p>
+    <p>
+      The initial conditions of a a recurrence guarantee that it has a unique solution. These initial conditions are the terminal/base conditions for the recursive functions. Because it's theoretical, math can go on forever, computers enter infinite loops:
+      <sage language="python">
+        <input>
+def forever(n):
+    # no base case; won't stop
+    return forever(n-1)
+
+forever(1)
+## press Evaluate(Python) to watch it go on forever. The algorithm won't halt until the runtime stack runs out of memory.
+        </input>
+      </sage>
+      Eventually, we'll get <c>RecursionError: maximum recursion depth exceeded while calling a Python object</c>
+    </p>
+  </assemblage>
+
   <exercises>
     <exercise>
       <statement>
