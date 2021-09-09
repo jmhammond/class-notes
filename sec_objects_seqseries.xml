@@ -186,6 +186,19 @@
     </statement>
   </example>
 
+  <note xml:id="note-some-sum-formulas">
+    <statement>
+      <p>
+        <xref ref="example-sum-of-integers"/> shows us the following formula for an arithmetic series:
+        <me> \displaystyle \sum_{k=1}^n k = \dfrac{n(n+1)}{2}</me>
+      </p>
+      <p>
+        We will verify in <xref ref="exercise-sum-of-squares"/> sum formula for the series of squares:
+        <me> \displaystyle \sum_{k=1}^n k^2 = \dfrac{n(2n+1)(n+1)}{6}</me>
+      </p>
+    </statement>
+  </note>
+
   <exercises>
     <exercise>
       <statement>
@@ -290,7 +303,7 @@
 
     </exercise>
 
-    <exercise>
+    <exercise xml:id="exercise-sum-of-squares">
       <statement>
         <p>
           Using <xref ref="example-telescoping-sum">the telescoping example</xref> with the sequence <m>a_n=(n+1)^3</m>, derive a formula for <m>\displaystyle \sum_{k=1}^n k^2</m>
