@@ -411,6 +411,7 @@
           <ol>
             <li> What condition is required for a number <m>a</m> to have an inverse modulo <m>n</m>? </li>
             <li> What is a condition on <m>n</m> for every element to have an inverse modulo <m>n</m>?</li>
+            <li> If there are more than one solution to <m>ax = b\pmod{n}</m>, what is the relationship between each solution?</li>
           </ol>
         </p>
       </statement>
@@ -419,6 +420,9 @@
           <ol>
             <li> To have an inverse modulo <m>n</m>, a number <m>a</m> must be relatively prime to <m>n</m> </li>
             <li> To have the property that every number has an inverse modulo <m>n</m>, the number <m>n</m> must be prime</li>
+            <li>
+              Not a solution, but a hint - take each example and exercise that had multiple solutions and subtract the solutions. What do you notice?
+            </li>
           </ol>
         </p>
       </solution>
