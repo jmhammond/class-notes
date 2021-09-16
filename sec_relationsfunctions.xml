@@ -214,7 +214,6 @@
       </statement>
     </example>
 
-
     <!-- TODO:
 
 0. Relation graphs (points in the plane)
@@ -370,7 +369,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <note>
       <statement>
         <p>
-          As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function to have an inverse <em>function</em>, the function must be bijective.
+          Relations always have an inverse - we interchange the domain and codomain sets.
+        </p>
+        <p>
+          As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function, <m>f</m> to have an inverse <em>function</em>, <m>f</m> must be bijective.
         </p>
       </statement>
     </note>
@@ -1193,14 +1195,16 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
 
     <definition>
-      <p>
-        The <term>floor</term> function assigns to every real number <m>x</m> the largest integer that is less than or equal to <m>x</m>. We denote by this <m>\lfloor x \rfloor</m>
-        <me>\lfloor \cdot \rfloor : \mathbb{R}\to \mathbb{Z} \text{ with } (\lfloor x \rfloor = n) \iff (n \le x \lt n + 1)</me>
-      </p>
-      <p>
-        The <term>ceiling</term> function assigns to every real number <m>x</m> the smallest integer that is greater than or equal to <m>x</m>. We denote by this <m>\lceil x \rceil</m>
-        <me>\lceil \cdot \rceil : \mathbb{R}\to \mathbb{Z} \text{ with } (\lceil x \rceil = n) \iff (n - 1 \lt x \le n)</me>
-      </p>
+      <statement>
+        <p>
+          The <term>floor</term> function assigns to every real number <m>x</m> the largest integer that is less than or equal to <m>x</m>. We denote by this <m>\lfloor x \rfloor</m>
+          <me>\lfloor \cdot \rfloor : \mathbb{R}\to \mathbb{Z} \text{ with } (\lfloor x \rfloor = n) \iff (n \le x \lt n + 1)</me>
+        </p>
+        <p>
+          The <term>ceiling</term> function assigns to every real number <m>x</m> the smallest integer that is greater than or equal to <m>x</m>. We denote by this <m>\lceil x \rceil</m>
+          <me>\lceil \cdot \rceil : \mathbb{R}\to \mathbb{Z} \text{ with } (\lceil x \rceil = n) \iff (n - 1 \lt x \le n)</me>
+        </p>
+      </statement>
     </definition>
 
     <exercise>
@@ -1230,6 +1234,56 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <exercise>
       <statement>
         <p>
+          Let <m>f:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>f(n) = \left \lfloor \dfrac{n}{2}\right \rfloor</m>. Complete the table of values:
+          <tabular>
+            <row bottom="minor">
+              <cell right="minor" halign="center"><m>x</m></cell>
+              <cell>0</cell>
+              <cell>1</cell>
+              <cell>2</cell>
+              <cell>3</cell>
+              <cell>4</cell>
+            </row>
+            <row>
+              <cell right="minor" halign="center"><m>f(x)</m></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+          </tabular>
+          Is <m>f</m> injective? surjective?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <tabular>
+            <row bottom="minor">
+              <cell right="minor" halign="center"><m>x</m></cell>
+              <cell>0</cell>
+              <cell>1</cell>
+              <cell>2</cell>
+              <cell>3</cell>
+              <cell>4</cell>
+            </row>
+            <row>
+              <cell right="minor" halign="center"><m>f(x)</m></cell>
+              <cell>0</cell>
+              <cell>0</cell>
+              <cell>1</cell>
+              <cell>1</cell>
+              <cell>2</cell>
+            </row>
+          </tabular>
+          <m>f</m> is not injective since <m>f(0) = f(1)</m>, and it is not surjective since there is no solution to <m>3=f(n)</m> in the domain.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
           Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.
         </p>
       </statement>
@@ -1241,6 +1295,133 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
         <p>
           The floor function is surjective, however. Let <m>c\in \Z</m> be an integer in the codomain. Then consider <m>a = c+0.1 \in \R</m>, the domain. <m>\lfloor a \rfloor = \lfloor c+0.1 \rfloor = c.</m>
+        </p>
+      </solution>
+    </exercise>
+
+
+    <definition>
+      <statement>
+        <p>
+          Define the <term>modulus operator</term>, <m>a \modulus m</m> on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
+        </p>
+        <p>
+          For example,
+          <ul>
+            <li><m>25 \modulus 4 = 1</m> since the remainder when dividing 25 by 4 is 1.</li>
+            <li><m>25 \modulus 5 = 0</m> since 5 divides evenly into 25.</li>
+            <li><m>14 \modulus 5 = 4</m></li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <exercise>
+      <statement>
+        <p>
+          Complete the following tables of values for each function:
+          <ol>
+            <li>
+              <p>
+                Let <m>f:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>f(n) = (n + 3)\modulus 5</m>
+                <tabular>
+                  <row bottom="minor">
+                    <cell right="minor" halign="center"><m>x</m></cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                  </row>
+                  <row>
+                    <cell right="minor" halign="center"><m>f(x)</m></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                  </row>
+                </tabular>
+                Is <m>f</m> injective? surjective?
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>g:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>g(n) = (n^2 + 1)\modulus 5</m>
+                <tabular>
+                  <row bottom="minor">
+                    <cell right="minor" halign="center"><m>x</m></cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                  </row>
+                  <row>
+                    <cell right="minor" halign="center"><m>g(x)</m></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                  </row>
+                </tabular>
+                Is <m>g</m> injective? surjective?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <tabular>
+                  <row bottom="minor">
+                    <cell right="minor" halign="center"><m>x</m></cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                  </row>
+                  <row>
+                    <cell right="minor" halign="center"><m>f(x)</m></cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                  </row>
+                </tabular>
+                <m>f</m> is both injective and surjective.
+              </p>
+            </li>
+            <li>
+              <p>
+                <tabular>
+                  <row bottom="minor">
+                    <cell right="minor" halign="center"><m>x</m></cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                  </row>
+                  <row>
+                    <cell right="minor" halign="center"><m>g(x)</m></cell>
+                    <cell>1</cell>
+                    <cell>0</cell>
+                    <cell>0</cell>
+                    <cell>2</cell>
+                    <cell>2</cell>
+                  </row>
+                </tabular>
+                <m>g</m> is not injective since <m>g(1) = g(2)</m> for example. <m>g</m> is also not surjective since there is no solution to <m>3 = g(n)</m> in the domain.
+              </p>
+            </li>
+          </ol>
         </p>
       </solution>
     </exercise>
