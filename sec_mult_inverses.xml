@@ -28,6 +28,14 @@
       <p>
         Since <m>5\cdot 3 \equiv 1 \pmod{7}</m>, we say that <m>3</m> is a multiplicative inverse of 5 modulo 7. Similarly, 5 is a multiplicative inverse of 3 modulo 7.
       </p>
+      <p>
+        We say that <m>3</m> is <i>a</i> multiplicative inverse, rather than <i>the</i> multiplicative inverse, because every number in the congruence class <m>[3]_7</m> is also an inverse!
+        <ul>
+          <li> \5\cdot 10 \equiv 1 \pmod{7} </li>
+          <li> \5\cdot (-4) \equiv 1 \pmod{7} </li>
+          <li> etc</li>
+        </ul>
+      </p>
     </statement>
   </example>
 
@@ -181,6 +189,10 @@
 
   </example>
 
+  <p>
+    Computing a multiplication table is tedious if we just want to find a multiplicative inverse to solve a linear congruence. Similarly, guess-and-check is generally inefficient. Now we turn to a powerful fact that gives rise to an algorithm to find inverses.
+  </p>
+
   <proposition>
     <statement>
       <p>
@@ -198,19 +210,145 @@
       <p>
         <ol>
           <li> The inverse of <m>a \text{ modulo } m</m> is its Bezout coefficient in <m>{\gcd(a,m) = as + mt}</m> </li>
-          <li> The inverse is unique, but we won't prove that here.</li>
+          <li> The inverse is also unique (up to congruence), but we won't prove that here.</li>
         </ol>
       </p>
     </statement>
   </note>
 
-  <p>
-    Here's an additional example: solve <m>5x + 3 = 0\pmod{14}</m>
+  <example>
+    <statement>
+      <p>
+        Solve <m>5x + 3 = 0\pmod{14}</m>
+      </p>
+    </statement>
     <answer>
       <video youtube="J-Iu16MEKeo"/>
     </answer>
+  </example>
 
-  </p>
+  <example>
+    <statement>
+      <p>
+        Solve the linear congruences, if possible. Explain if there are no solutions, one solution, or infinitely many solutions.
+        <ol>
+          <li><m> 11x \equiv 15 \pmod{20} </m></li>
+          <li><m> 6x\equiv 4 \pmod{10}</m> </li>
+          <li><m> 8x\equiv 2 \pmod{28}</m> </li>
+          <li><m> 5x\equiv 4 \pmod{25}</m> </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              First, since <m>\gcd(11,20)=1</m>, there is a unique solution to this recurrence. Using either the Euclidean Algorithm or guessing-and-checking, notice that <m>11\cdot11=121\equiv 1\pmod{20}</m>, so <m>11^{-1} \equiv 11\pmod{20}</m>.
+
+              So we have:
+              <md>
+                <mrow> 11x &amp;\equiv 15\pmod{20} </mrow>
+                <mrow> 11\cdot11x &amp;\equiv 11\cdot 15\pmod{20} </mrow>
+                <mrow> 1x &amp;\equiv 165 \pmod{20} </mrow>
+                <mrow> x &amp;\equiv 5 \pmod{20} </mrow>
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              Since <m>\gcd(6,10) =2 \ne 1</m>, there isn't a unique solution! We can't use the Euclidean Algorithm to find our inverse and instead have to rely on trial and error.
+            </p>
+            <p> Since <m>6\cdot 4 = 24 \equiv 4 \pmod{10}</m>, we have that 4 is one solution. Similarly, you can check that <m>9</m> is also a solution.
+            </p>
+            <p>
+              This congruence has two solutions modulo 10, <m>x=4</m> and <m>x=9</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              As above, since <m>\gcd(8,28) = 4 \ne 1</m>, so there isn't a unique solution. Let's see what happens when we do the multiplication:
+              <table>
+                <title>Multiplication table of 8 modulo 28</title>
+                <tabular halign="center">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      *
+                    </cell>
+                    <cell>
+                      1
+                    </cell>
+                    <cell>
+                      2
+                    </cell>
+                    <cell>
+                      3
+                    </cell>
+                    <cell>
+                      4
+                    </cell>
+                    <cell>
+                      5
+                    </cell>
+                    <cell halign="left">
+                      6
+                    </cell>
+                    <cell halign="left">
+                      7
+                    </cell>
+                    <cell halign="left">
+                      8
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      8
+                    </cell>
+                    <cell>
+                      8
+                    </cell>
+                    <cell>
+                      16
+                    </cell>
+                    <cell>
+                      24
+                    </cell>
+                    <cell>
+                      4
+                    </cell>
+                    <cell>
+                      12
+                    </cell>
+                    <cell>
+                      20
+                    </cell>
+                    <cell halign="left">
+                      0
+                    </cell>
+                    <cell halign="left">
+                      8
+                    </cell>
+                  </row>
+                </tabular>
+              </table>
+              ... we could keep going... notice that as soon as we get back to <m>8</m>, we have gone in a loop! The values will repeat.
+            </p>
+            <p>
+              Our first solution is <m>x=4</m>, then <m>x=11</m>, then <m>x=18</m>, and finally <m>m=25</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Here, since <m>\gcd(5, 25) = 5 \ne 1</m>, again, no unique solution. Take a few moments to multiply values of 5 and notice it will never reach 4.
+            </p>
+            <p>
+              There is no solution to this congruence!
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </example>
 
   <exercises>
     <exercise>

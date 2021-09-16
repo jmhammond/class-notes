@@ -395,18 +395,27 @@
     <caption>Computer Corner</caption>
     <p>
       The objects that are logical propositions in mathematics are <c>bool</c> Boolean datatypes in computer science.
-    </p>
-    <p>
-      For example, the clause  <c>5 &lt;= 3</c> will evaluate to <c>False</c>. This corresponds to the proposition <m>p:=</m><q>5 <m>\ge</m> 3</q><m>\equiv F</m>.
-    </p>
 
+      For example, the clause  <c>5 &lt;= 3</c> will evaluate to <c>False</c>. This corresponds to the proposition <m>p:=</m><q>5 <m>\le</m> 3</q><m>\equiv F</m>.
+    </p>
     <p>
-      The statement <m>p \to q</m> is the code (in C-ish syntax)
+      In C-like syntax:
+      <ul>
+        <li> Logical and, <m>p \land q</m>, is in code <c>p &amp;&amp; q</c> </li>
+        <li> Logical or, <m>p \lor q</m>, is in code <c>p || q</c> </li>
+        <li> Logical negation, <m>\neg p</m>, is the code <c>!p</c></li>
+        <li> The conditional is an <c>if...then</c> statement</li>
+      </ul>
+    </p>
+    <p>
+      So a block of code such as:
       <cd>
-        if ( p ){
-           q;
+        if (collision == 1 &amp;&amp; object==sword &amp;&amp; !blocking){
+          // hit by a sword, take damage
+          health--;
         }
       </cd>
+      corresponds to a logical statement of the form <m>(p \land q \land \neg r) \to s</m>
     </p>
   </assemblage>
 
