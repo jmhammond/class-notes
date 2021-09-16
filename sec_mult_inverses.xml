@@ -201,9 +201,11 @@
   </note>
 
   <example>
-    <p>
-      Solve <m>5x + 3 = 0\pmod{14}</m>
-    </p>
+    <statement>
+      <p>
+        Solve <m>5x + 3 = 0\pmod{14}</m>
+      </p>
+    </statement>
   </example>
 
   <example>
