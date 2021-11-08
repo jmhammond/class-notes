@@ -1257,7 +1257,7 @@
 
           <proof>
             <p>
-              Question: How many subsets of <m>A = {1,2,3, \ldots, n+1}</m> contain exactly two elements?
+              Question: How many subsets of <m>A = \{1,2,3, \ldots, n+1\}</m> contain exactly two elements?
             </p>
 
             <p>
