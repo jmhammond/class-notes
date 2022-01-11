@@ -1379,6 +1379,15 @@
         </solution>
       </exercise>
 
+      <!-- TODO: write the solution here //-->
+      <exercise>
+        <statement>
+          <p>
+            Give a combinatorial proof of the identity <m> 1 + 2 + 4 + 8 + \dots 2^{n-1} = 2^n - 1</m>
+          </p>
+        </statement>
+      </exercise>
+
 
       <exercise>
         <statement>
