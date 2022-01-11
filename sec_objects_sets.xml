@@ -940,7 +940,11 @@
           We are looking for a set containing 16 sets.
         </p>
       </hint>
-
+      <solution>
+        <p>
+          <m>\mathcal{P}(A) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{d\}, \{a,b\}, \{a,c\}, \{a,d\}, \{b,c\}, \{b,d\}, \{c,d\}, \{a,b,c\}, \{a, c,d\}, \{a, b, d\}, \{b,c,d\}, \{a, b, c, d\}\}</m>
+        </p>
+      </solution>
     </exercise>
 
 
@@ -1016,6 +1020,9 @@
       <statement>
         <p>
           Are there sets <m>A</m> and <m>B</m> such that <m>|A| = |B|</m>, <m>|A\cup B| = 10</m>, and <m>|A\cap B| = 5</m>? Explain.
+        </p>
+        <p>
+          Note that <m>|A\cup B| = |A| + |B| - |A\cap B|</m>, can you explain why?
         </p>
       </statement>
 
