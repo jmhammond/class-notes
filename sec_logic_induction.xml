@@ -805,6 +805,23 @@ payWithFourAndSevenCents(25)
     <exercise>
       <statement>
         <p>
+          Prove that there is a strictly increasing sequence <m>a_1, a_2, a_3, \ldots</m> of numbers (not necessarily integers) such that <m>a_n \lt  100</m> for all <m>n \in \N</m>. (By <term>strictly increasing</term> we mean <m>a_n \lt  a_{n+1}</m> for all <m>n</m>. So each term must be larger than the last.)
+        </p>
+      </statement>
+      <solution>
+        <proof>
+          <p>
+            Let <m>P(n)</m> be the statement <q>there is a strictly increasing sequence <m>a_1, a_2, \ldots, a_n</m> with <m>a_n \lt  100</m>.</q> We will prove <m>P(n)</m> is true for all <m>n \ge 1</m>. First we establish the base case: <m>P(1)</m> says there is a single number <m>a_1</m> with <m>a_1 \lt  100</m>. This is true <ndash/> take <m>a_1 = 0</m>. Now for the inductive step, assume <m>P(k)</m> is true. That is there exists a strictly increasing sequence <m>a_1, a_2, a_3, \ldots, a_k</m> with <m>a_k \lt  100</m>. Now consider this sequence, plus one more term, <m>a_{k+1}</m> which is greater than <m>a_k</m> but less than <m>100</m>. Such a number exists, for example, the average between <m>a_k</m> and 100. So then <m>P(k+1)</m> is true, so we have shown that <m>P(k) \imp P(k+1)</m>. Thus by the principle of mathematical induction, <m>P(n)</m> is true for all <m>n \in \N</m>.
+          </p>
+        </proof>
+
+      </solution>
+    </exercise>
+
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
           Prove that 6 divides <m>7^n - 1</m> for all <m>n \in \N</m>.
         </p>
       </statement>

@@ -513,7 +513,7 @@
               <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
               <li>
                 <p>
-                  Send me your public key on via <url href="mailto:hammond@math.wichita.edu?subject=My RSA Key">email (you can click this link!)</url> as:
+                  Send me your public key on via <url href="mailto:john.hammond@wichita.edu?subject=My RSA Key">email (you can click this link!)</url> as:
                   <cd>
                     n = 15244346903
                     e = 751 
