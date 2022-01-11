@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="section-counting-fib">
+  <title>
+    A surprise connection - Counting Fibonacci numbers
+  </title>
+
+  <example>
+    <statement>
+      <p>
+        Let's imagine that you have a rectangular grid of blank spaces. How many ways can you tile that grid using either square tiles or two-square-wide dominos.
+      </p>
+      <p>
+        We will define an <term><m>n</m>-board</term> to be a rectangular grid of <m>n</m> spaces.
+      </p>
+      <p>
+        For example, here are all of the possible tilings for a 4-board:
+      </p>
+      <p>
+        <image xml:id="tilings-of-4board">
+          <description>Tilings of a 4-board: 4sq; 1dom, 2sq; sq, dom, sq; 2sq, 1dom; 2dom</description>
+          <latex-image>
+            % tilings of a 4 board:
+            \begin{tikzpicture}[scale=1.0]
+            \foreach \col in {0,2}{
+            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+            }
+            \draw[thick] (0,0) rectangle (4,1);
+            \node[left] at (6.5,0.5) {4 sq};
+            \end{tikzpicture}
+
+            \begin{tikzpicture}[scale=1.0]
+            \foreach \col in {0,2}{
+            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+            }
+            \draw[thick,fill=gray!30] (0,0) rectangle (2,1);
+            \draw[thick] (0,0) rectangle (4,1);
+            \node[left] at (6.5,0.5) {1 dom, 2 sq};
+            \end{tikzpicture}
+
+            \begin{tikzpicture}[scale=1.0]
+            \foreach \col in {0,2}{
+            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+            }
+            \draw[thick,fill=gray!30] (1,0) rectangle (3,1);
+            \draw[thick] (0,0) rectangle (4,1);
+            \node[left] at (6.5,0.5) {sq, dom, sq};
+            \end{tikzpicture}
+
+            \begin{tikzpicture}[scale=1.0]
+            \foreach \col in {0,2}{
+            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+            }
+            \draw[thick,fill=gray!30] (2,0) rectangle (4,1);
+            \draw[thick] (0,0) rectangle (4,1);
+            \node[left] at (6.5,0.5) {2 sq, 1 dom};
+            \end{tikzpicture}
+
+            \begin{tikzpicture}[scale=1.0]
+            \foreach \col in {0,2}{
+            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+            }
+            \draw[thick,fill=gray!30] (0,0) rectangle (2,1);
+            \draw[thick,fill=gray!30] (2,0) rectangle (4,1);
+            \draw[thick] (0,0) rectangle (4,1);
+            \node[left] at (6.5,0.5) {2 dom};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        In how many ways can you tile a 5-board?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We know that a 5-board is just a 4-board with an extra space. How many ways are there to tile this? There are 5 ways to tile a 4-board and all we're doing is adding an extra square. There's <m>5\cdot1 = 1</m> ways to do this.
+      </p>
+      <p>
+        ... but a 5-board is also a 3-board with an extra two spaces at the end. How many ways can we tile this? Well, there are 3 ways to tile the three board, and we just add a domino.
+      </p>
+      <p>
+        These two subdivisions are mutually exclusive (if we added a square to the 3-board, that's turned it into the 4-board, which was already counted above). So we can conclude the number of ways to tile a 5-board is 5+3 = 8.
+      </p>
+
+      <p>
+        <image xml:id="tiling-5-board">
+          <description>Tiling a 5-board: The 5-board is a 4-board with square plus a 3-board plus domino</description>
+          <latex-image>
+            \begin{tikzpicture}[scale=1.0]
+            \foreach \col in {0,2,3}{
+            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+            }
+            \draw[thick,fill=white!20] (0,0) rectangle (5,1);
+            \node[thick,fill=white!20] at (2.5,0.5) {5-board};
+            \draw[thick] (0,0) rectangle (5,1);
+            \end{tikzpicture}
+            \begin{tikzpicture}[scale=1.0]
+            \draw[draw opacity=0, fill opacity=0] (0,0) rectangle (0.25,1);  % draw invisible box to center =
+            \node[thick] at (0.125,0.5) {$=$};
+            \end{tikzpicture}
+            \begin{tikzpicture}[scale=1.0]
+            \foreach \col in {0,2,3}{
+            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+            }
+            \draw[thick,fill=white!20] (0,0) rectangle (4,1);
+            \node[thick,fill=white!20] at (2,0.5) {4-board};
+            \draw[thick] (0,0) rectangle (5,1);
+            \end{tikzpicture}
+            \begin{tikzpicture}[scale=1.0]
+            \draw[draw opacity=0, fill opacity=0] (0,0) rectangle (0.25,1);
+            \node[thick] at (0.125,0.5) {$+$};
+            \end{tikzpicture}
+            \begin{tikzpicture}[scale=1.0]
+            \foreach \col in {0,2,3}{
+            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+            }
+            \draw[thick,fill=white!20] (0,0) rectangle (3,1);
+            \node[thick,fill=white!20] at (1.5,0.5) {3-board};
+            \draw[thick,fill=gray!30] (3,0) rectangle (5,1);
+            \draw[thick] (0,0) rectangle (5,1);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </p>
+    </solution>
+  </example>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>f_n</m> denote the number of tilings for an <m>n</m>-board.  Then <m>f_0=1</m> (there is one way to tile a 0 board), and <m>f_1=1</m>, and for <m>n \ge 2</m>
+        <me>
+          f_{n+1} = f_{n} + f_{n-1}
+        </me>
+      </p>
+    </statement>
+    <proof>
+      <p>
+        In an <m>n+1</m>-board, there are <m>f_n</m> ways to tile the first <m>n</m> tiles followed by one square, and there are <m>f_{n-1}</m> to tile the first <m>n-1</m> tiles, followed by a domino. These tilings are disjoint events, and thus <m>f_{n+1} = f_{n} + f_{n-1}</m>.
+      </p>
+    </proof>
+  </theorem>
+
+
+  <corollary>
+    <statement>
+      <p>
+        Let <m>F_n</m> by the <m>n</m>th Fibonacci number. Then <m>f_n = F_{n+1}</m> (where we'll make the notational convention that <m>f_{-1}=0</m> so our indices can match).
+      </p>
+    </statement>
+  </corollary>
+
+
+  <p>
+    Let's put this to use to verify some Fibonacci identities using combinatorial proof. When we write <term>condition on <m>m</m></term> we mean to consider <q>breaking</q> the board at tile <m>m</m> and count the separate pieces.
+  </p>
+
+
+  <!-- This exercise comes from an identity in Proofs that Really Count -->
+  <example>
+    <statement>
+      <p>
+        For <m>n\ge 0,\, f_0 + f_1 + f_2 + \dots + f_n = f_{n+2} - 1</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Question: <q>How many tilings of an <m>n+2</m>-board use at least one domino?</q>
+        Condition on the location of the last domino.
+      </p>
+    </hint>
+  </example>
+
+  <!-- This exercise comes from an identity in Proofs that Really Count -->
+  <example>
+    <statement>
+      <p>
+        For <m>n\ge 0,\, f_0 + f_2 + f_4 + \dots + f_{2n} = f_{2n+1}</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Condition on the location of the last square.
+      </p>
+    </hint>
+  </example>
+
+  <p>
+    We say that a tiling of an <m>n</m>-board is <term>breakable at cell <m>k</m></term>, if the tiling can be decomposed into two tilings, one covering cells 1 through <m>k</m>, the other <m>k+1</m> through <m>n</m>. It is said to be <term>unbreakable at <m>k</m></term> otherwise.
+  </p>
+
+  <!-- This exercise comes from an identity in Proofs that Really Count -->
+  <example>
+    <statement>
+      <p>
+        For <m>m, n \ge 0,\, f_{m+n} = f_m f_n + f_{m-1}f_{n-1}</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Condition on the breakability at cell <m>m</m>.
+      </p>
+    </hint>
+  </example>
+
+
+  <!-- This exercise comes from an identity in Proofs that Really Count -->
+  <example>
+    <statement>
+      <p>
+        For <m>n \ge 0</m>:
+        <me>\sum_{i=0}^n \binom{n-i}{i} = f_n</me>.
+      </p>
+      <p>
+        Note that we'll define <m>\binom{n}{k} = 0</m> if <m>n \lt k</m>. This is reasonable since, for example, if you want to choose 3 objects from a set of 1 object, there are no ways to do it: i.e. <m>\binom{1}{3} = 0</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Condition on the number of dominoes.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        Question: <q>How many tilings of an <m>n</m>-board exist?</q>
+      </p>
+      <p>
+        Answer 1: There are <m>f_n</m> tilings.
+      </p>
+      <p>
+        Answer 2: Condition on the number of dominoes. If there are no dominoes, then from <m>n</m> cells, we have 0 choices for where to put the domino: <m>\binom{n}{0}</m>. For 1 domino, we will be using a total of <m>n-2</m> squares and domino which will span the remaining two locations. That means that we are using a total of <m>n-1</m> tiles, and so we have <m>\binom{n-1}{1}</m> possibilities.
+      </p>
+      <p>
+        For the case where we are using <m>i</m> dominoes, with <m>0\le i \le n/2</m>, we will be using  <m>n-2i</m> squares, or a total of <m>n-2i + i = n-i</m> tiles. To choose where to place the <m>i</m> dominoes, we'll have <m>\binom{n-i}{i}</m> ways to do this.
+      </p>
+      <p>
+        Thus, there are a total of <m>n \ge 0, \binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \dots + \binom{n-n}{n}</m> tilings of an <m>n</m> board.
+      </p>
+    </solution>
+  </example>
+
+  <exercises>
+
+    <!-- This exercise comes from an identity in Proofs that Really Count -->
+    <exercise>
+      <statement>
+        <p>
+          Prove that <m>f_1 + f_3 + f_5 + \dots + f_{2n-1} = f_{2n} - 1</m> using a combinatorial argument.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Condition on the location of the last square.
+        </p>
+      </hint>
+    </exercise>
+
+    <!-- This exercise comes from an identity in Proofs that Really Count -->
+    <exercise>
+      <statement>
+        <p>
+          Prove that <m>f_n^2 + f_{n+1}^2 = f_{2n+2}</m> using a combinatorial argument.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Condition on the breakability of the <m>n+1</m>st space.
+        </p>
+      </hint>
+    </exercise>
+
+  </exercises>
+
+
+</section>
