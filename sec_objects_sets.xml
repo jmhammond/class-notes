@@ -68,6 +68,22 @@
       </p>
     </definition>
 
+
+    <example>
+      <statement>
+        <p>
+          Consider the set <m>S = \{1, 2, 3, 4, 5\}</m>, then:
+          <ul>
+            <li> <m>3 \in S</m>, since 3 is an element of <m>S</m></li>
+            <li> <m>\{3\}\subseteq S</m>, because the set consisting of 3, <m>\{3\}</m>, is a subset of <m>S</m>.</li>
+            <li> We can also write, <m>\{3\}\subset S</m>, because although the set <m>\{3\}</m> is a subset of <m>S</m>, they're unequal: <m>\{3\} \ne S</m>, so it's a proper subset.</li>
+            <li> This is meaningless: <m>3 \subseteq S</m> since 3 a number, not a set, so it can't be a subset of <m>S</m></li>
+            <li> Order in sets doesn't matter, so <m>\{3,1,5,4,2\} = S</m>.</li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+
     <!-- todo keep working on this -->
 
     <!-- <example> -->
