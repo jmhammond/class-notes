@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-combperm">
+  <title>
+    Combinations and Permutations
+  </title>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>permutation</term> is an ordered arrangement of objects.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        If I want to arrange five books on a shelf, how many possible arrangements of the books are there?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        How many functions <m>f: \{1,2,3\} \to \{1, 2, 3\}</m> are bijections?
+      </p>
+    </statement>
+  </example>
+
+
+  <example>
+    <statement>
+      <p>
+        If I only want to arrange three of the five books on my shelf, how many ways are there to do that?
+      </p>
+    </statement>
+  </example>
+
+  <theorem>
+    <statement>
+      <p>
+        If <m>n</m> is a positive integer and <m>r</m> is an integer such that <m>1 \le r \le n</m>, then there are <m>P(n,r) = n\cdot (n-1) \cdot (n-2) \cdot \dots \cdot (n-(r-1))</m> <m>r</m>-permutations of a set of <m>n</m> elements.
+      </p>
+    </statement>
+  </theorem>
+
+
+  <corollary>
+    <statement>
+      <p>
+        If <m>n</m> and <m>r</m> are integers with <m>0\le r \le n</m>, then:
+        <me>P(n,r) = \dfrac{n!}{(n-r)!}</me>
+      </p>
+    </statement>
+  </corollary>
+
+
+  <example>
+    <statement>
+      <p>
+        How many six-letter vanity license plates are there that have no repeated letters?
+      </p>
+    </statement>
+  </example>
+
+
+  <example>
+    <statement>
+      <p>
+        How many functions <m>f: \{1,2,3,4\} \to \{1,2,3,4,5,6\}</m> are injective? [Recall a function is injective <m>\forall a, \forall b ( f(a) = f(b)) \to ( a = b )</m>]
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>combination</term> is an unordered selection of objects.
+      </p>
+    </statement>
+  </definition>
+
+
+  <example>
+    <statement>
+      <p>
+        If I want only to select three books from my five books on the bookshelf, in how many ways can I do this?
+      </p>
+    </statement>
+  </example>
+
+  <note>
+    <statement>
+      <p>
+        If <m>n \and r</m> are integers such that <m>0 \le r \le n</m>, then the number of <m>r</m>-combinations from a set of <m>n</m> elements is
+        <me>\binom{n}{r} = \dfrac{n!}{r!(n-r)!}</me>
+      </p>
+    </statement>
+  </note>
+
+  <example>
+    <statement>
+      <p>
+        How many ways are there to choose five out of ten friends to invite over for dinner?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Two of your ten friends, Tim and Tammy just broke up. They can't stand to be in a room together. How many ways are there to choose five out of ten friends to invite to dinner, ensuring that Tim and Tammy are not both invited?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        How many three element subsets from a set of five elements are there?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        From a standard deck of 52 cards, how many five card hands are possible?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        How many five card cards have exactly the same suit?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        How many five card hands have at least one heart?
+      </p>
+    </statement>
+  </example>
+
+  <exercises>
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          A pizza parlor offers 10 toppings.
+          <ol>
+            <li> <p> How many 3-topping pizzas could they put on their menu?  Assume double toppings are not allowed. </p> </li>
+            <li> <p> How many total pizzas are possible, with between zero and ten toppings (but not double toppings) allowed? </p> </li>
+            <li> <p> The pizza parlor will list the 10 toppings in two equal-sized columns on their menu.  How many ways can they arrange the toppings in the left column? </p> </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li><m>{10 \choose 3} = 120</m> pizzas.  We must choose (in no particular order) 3 out of the 10 toppings.</li>
+            <li><m>2^{10} = 1024</m> pizzas.  Say yes or no to each topping.</li>
+            <li><m>P(10,5) = 30240</m> ways.  Assign each of the 5 spots in the left column to a unique pizza topping.</li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          A combination lock consists of a dial with 40 numbers on it. To open the lock, you turn the dial to the right until you reach a first number, then to the left until you get to second number, then to the right again to the third number. The numbers must be distinct. How many different combinations are possible?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Despite its name, we are not looking for a combination here. The order in which the three numbers appears matters. There are <m>P(40,3) = 40\cdot 39 \cdot 38</m> different possibilities for the <q>combination</q>. This is assuming you cannot repeat any of the numbers (if you could, the answer would be <m>40^3</m>).
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
+    <!-- <exercise> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       Using the digits 2 through 8, find the number of different 5-digit numbers such that: -->
+    <!--       <ol> -->
+    <!--         <li> <p> Digits can be used more than once. </p> </li> -->
+    <!--         <li> <p> Digits cannot be repeated, but can come in any order. </p> </li> -->
+    <!--         <li> <p> Digits cannot be repeated and must be written in increasing order. </p> </li> -->
+    <!--         <li> <p> Which of the above counting questions is a combination and which is a permutation?  Explain why this makes sense. </p> </li> -->
+    <!--       </ol> -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!-- </exercise> -->
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          An <em>anagram</em> of a word is just a rearrangement of its letters. How many different anagrams of <q>uncopyrightable</q> are there? (This happens to be the longest common English word without any repeated letters.)
+        </p>
+      </statement>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          How many anagrams are there of the word <q>assesses</q> that start with the letter <q>a</q>?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          After the first letter (a), we must rearrange the remaining 7 letters. There are only two letters (s and e), so this is really just a bit-string question (think of s as 1 and e as 0). Thus there <m>{7 \choose 2} = 21</m> anagrams starting with <q>a</q>.
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          How many anagrams are there of <q>anagram</q>?
+        </p>
+      </statement>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          On a business retreat, your company of 20 businessmen and businesswomen go golfing.
+          <ol>
+            <li> <p> You need to divide up into foursomes (groups of 4 people): a first foursome, a second foursome, and so on.  How many ways can you do this? </p> </li>
+            <li> <p> After all your hard work, you realize that in fact, you want each foursome to include one of the five Board members.  How many ways can you do this? </p> </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li><m>{20 \choose 4}{16 \choose 4}{12 \choose 4}{8 \choose 4}{4 \choose 4}</m> ways. Pick 4 out of 20 people to be in the first foursome, then 4 of the remaining 16 for the second foursome, and so on (use the multiplicative principle to combine).</li>
+            <li><m>5!{15 \choose 3}{12 \choose 3}{9 \choose 3}{6 \choose 3}{3 \choose 3}</m> ways.  First determine the tee time of the 5 board members, then select 3 of the 15 non board members to golf with the first board member, then 3 of the remaining 12 to golf with the second, and so on.</li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <exercise>
+      <statement>
+        <p>
+          Consider sets <m>A</m> and <m>B</m> with <m>|A| = 10</m> and <m>|B| = 17</m>.
+          <ol>
+            <li>
+              <p>
+                How many functions <m>f: A \to B</m> are there?
+              </p>
+            </li>
+            <li>
+              <p>
+                How many functions <m>f: A \to B</m> are injective?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li><m>17^{10}</m> functions.  There are 17 choices for the image of each element in the domain.</li>
+            <li><m>P(17, 10)</m> injective functions.  There are 17 choices for image of the first element of the domain, then only 16 choices for the second, and so on.</li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
+    <!-- <exercise> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       Consider functions <m>f: \{1,2,3,4\} \to \{1,2,3,4,5,6\}</m>. -->
+    <!--       <ol> -->
+    <!--         <li> <p> How many functions are there total? </p> </li> -->
+    <!--         <li> <p> How many functions are injective? </p> </li> -->
+    <!--         <li><p> How many of the injective functions are <em>increasing</em>?  To be increasing means that if <m>a \lt b</m> then <m>f(a) \lt f(b)</m>, or in other words, the outputs get larger as the inputs get larger. </p></li> -->
+    <!--       </ol> -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!-- </exercise> -->
+
+
+    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- <exercise> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       We have seen that the formula for <m>P(n,k)</m> is <m>\dfrac{n!}{(n-k)!}</m>. Your task here is to explain <em>why</em> this is the right formula. -->
+    <!--       <ol> -->
+    <!--         <li> -->
+    <!--           <p> -->
+    <!--             Suppose you have 12 chips, each a different color. How many different stacks of 5 chips can you make? Explain your answer and why it is the same as using the formula for <m>P(12,5)</m>. -->
+
+
+    <!--           </p> -->
+    <!--         </li> -->
+    <!--         <li> -->
+    <!--           <p> -->
+    <!--             Using the scenario of the 12 chips again, what does <m>12!</m> count? What does <m>7!</m> count? Explain. -->
+
+
+    <!--           </p> -->
+    <!--         </li> -->
+    <!--         <li> -->
+    <!--           <p> -->
+    <!--             Explain why it makes sense to divide <m>12!</m> by <m>7!</m> when computing <m>P(12,5)</m> (in terms of the chips). -->
+
+
+    <!--           </p> -->
+    <!--         </li> -->
+    <!--         <li> -->
+    <!--           <p> -->
+    <!--             Does your explanation work for numbers other than 12 and 5? Explain the formula <m>P(n,k) = \frac{n!}{(n-k)!}</m> using the variables <m>n</m> and <m>k</m>. -->
+
+
+    <!--           </p> -->
+    <!--         </li> -->
+    <!--       </ol> -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!-- </exercise> -->
+
+  </exercises>
+</section>

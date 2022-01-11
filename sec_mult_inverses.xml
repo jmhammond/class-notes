@@ -12,6 +12,9 @@
       <p>
         When we're working with only integers, in particular in congruence classes modulo an integer <m>m</m>, fractions aren't a thing. Some numbers, though, do have multiplicative inverses. They're special, and we explore them in this section.
       </p>
+      <p>
+        Why do we care? At this point, the only algebraic equations we can solve are of the form <m> x + b \equiv c\pmod{m}</m>. The multiplicative inverses help us solve the algebraic, <term>affine</term> equations, <m>ax + b \equiv c\pmod{m}</m>.
+      </p>
     </statement>
   </introduction>
 
@@ -26,13 +29,13 @@
   <example>
     <statement>
       <p>
-        Since <m>5\cdot 3 \equiv 1 \pmod{7}</m>, we say that <m>3</m> is a multiplicative inverse of 5 modulo 7. Similarly, 5 is a multiplicative inverse of 3 modulo 7.
+        Since <m>3 \cdot 5\equiv 1 \pmod{7}</m>, we say that <m>3</m> is a multiplicative inverse of 5 modulo 7. Similarly, 5 is a multiplicative inverse of 3 modulo 7.
       </p>
       <p>
-        We say that <m>3</m> is <i>a</i> multiplicative inverse, rather than <i>the</i> multiplicative inverse, because every number in the congruence class <m>[3]_7</m> is also an inverse!
+        We say that <m>3</m> is <i>a</i> multiplicative inverse, rather than <i>the</i> multiplicative inverse, because every number in the congruence class <m>[3]_7</m> is also an inverse! Observing that <m>-4 \in [3]_7</m>, and <m>10\in [3]_7</m>, we can check that:
         <ul>
-          <li> \5\cdot 10 \equiv 1 \pmod{7} </li>
-          <li> \5\cdot (-4) \equiv 1 \pmod{7} </li>
+          <li> <m>10 \cdot 5\equiv 1 \pmod{7}</m> </li>
+          <li> <m>(-4) \cdot 5 \equiv 1 \pmod{7} </m> </li>
           <li> etc</li>
         </ul>
       </p>
