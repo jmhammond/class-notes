@@ -556,6 +556,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
                 // mySqrt(4) = 2, which you'd expect.
                 // but...
                 // mySqrt(5) = 2, also.
+                // This means mySqrt is not injective.
             </input>
           </program>
           <p>
@@ -578,6 +579,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
                 // Hooray!
                 // mySqrt(5) = 2.23607
+                // and this time mySqrt is injective
             </input>
           </program>
           <p>
@@ -1300,7 +1302,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </exercise>
 
 
-    <definition>
+    <definition xml:id="definition-modulus-operator">
       <statement>
         <p>
           Define the <term>modulus operator</term>, <m>a \modulus m</m> on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
