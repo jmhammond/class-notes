@@ -69,8 +69,14 @@
     <xi:include href="./ch_numtheory.xml"/>
     <xi:include href="./ch_sequences.xml"/>
     <xi:include href="./ch_counting.xml"/>
-    <xi:include href="./ch_appendix.xml"/>
 
+    <backmatter>
+      <xi:include href="./ch_appendix.xml"/>
 
-</book>
+      <solutions divisional="solution">
+        <title>Solutions to the exercises</title>
+      </solutions>
+    </backmatter>
+
+  </book>
 </pretext>
