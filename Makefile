@@ -1,7 +1,7 @@
 STYLESHEETS_DIR = ~/src/mathbook/xsl
 
 html:
-	xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.knowl.proof no -stringparam publisher pub.xml $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
+	xsltproc --xinclude -stringparam publisher pub.xml $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
 
 #
 # Still working on this; custom css in the future.
@@ -11,11 +11,11 @@ html:
 all: html pdf
 
 colorscheme:
-	xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.css.file "pretext-manitoba.css" $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
+	xsltproc --xinclude --stringparam html.css.file "pretext-manitoba.css" $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
 
 
 tex:
-	xsltproc --xinclude --stringparam exercise.divisional.solution yes --stringparam exercise.divisional.answer no ./xsl/latex.xsl class-notes.xml > discrete-class-notes.tex
+	xsltproc --xinclude ./xsl/latex.xsl class-notes.xml > discrete-class-notes.tex
 
 pdf: tex
 	pdflatex discrete-class-notes.tex && pdflatex discrete-class-notes.tex
