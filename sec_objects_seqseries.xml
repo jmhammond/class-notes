@@ -44,6 +44,14 @@
     <p>
       A sequence is called a <term>solution</term> of a recurrence relation if its terms satisfy the recurrence relation.
     </p>
+    <p>
+      We can always think of a sequence as a function, so the recurrence <m>a_n = a_{n-1} + a_{n-2}</m> is the function:
+      <cd>
+        def a(n):
+            return a(n-1) + a(n-1)
+      </cd>
+      with infinite recursion.
+    </p>
   </definition>
 
   <example xml:id="fib-def">
@@ -51,6 +59,9 @@
       <p>
         The <term>Fibonacci sequence</term> <m>F_0, F_1, F_2, \dots</m> is defined by the recurrence:
         <me>F_n = F_{n-1} + F_{n-2} \text{ For } n \ge 2, \text{ where } F_0 = 0, F_1 = 1 </me>
+      </p>
+      <p>
+        Note that the Fibonacci sequence has both the recursive definition <em>and</em> a definition for the first two terms of the sequence.
       </p>
     </statement>
   </example>
@@ -72,6 +83,18 @@
   <note>
     <p>
       A recurrence has a unique solution if it has initial data.
+    </p>
+    <p>
+      This would be a function defined with finite recursion, so the recurrence <m>F_n = F_{n-1} + F_{n-2}</m> with <m>F_0 = 0</m> and <m>F_1=1</m>, the Fibonacci sequence, is the function:
+      <cd>
+        def F(n):
+            if n == 0:
+                return 0
+            elif n == 1:
+                return 1
+            else:
+                return F(n-1) + F(n-1)
+      </cd>
     </p>
   </note>
 
