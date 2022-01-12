@@ -191,7 +191,7 @@
           Basis step: We can form 18 cent postage using two 7 and one 4 cent stamp.
         </p>
         <p>
-          Inductive step:<br/>
+          Inductive step:
           Assume that one can form postage for all values from 18 cents up to <m>k</m> cents. Now we're asked to form <m>k+1</m> cents.
 
           we know that we can form <m>k</m> cents, so, without loss of generality, let's assume that it takes <m>s</m> 7 cent stamps and <m>t</m> 4 cent stamps. That is:

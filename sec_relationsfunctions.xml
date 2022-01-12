@@ -317,7 +317,6 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     </note>
 
-    <!-- TODO: Next time have finite set examples (with different size sets to illustrate this better --> 
     <example>
       <statement>
         <p>
@@ -347,7 +346,6 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     </definition>
 
-    <!-- TODO: Next time have finite set examples (with different size sets to illustrate this better --> 
     <example>
       <statement>
         <p>
@@ -405,6 +403,145 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </answer>
 
     </example>
+
+    <definition xml:id="definition-modulus-operator">
+      <statement>
+        <p>
+          Define the <term>modulus operator</term>, <m>a \modulus m</m> on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
+        </p>
+        <p>
+          For example,
+          <ul>
+            <li><m>25 \modulus 4 = 1</m> since the remainder when dividing 25 by 4 is 1.</li>
+            <li><m>25 \modulus 5 = 0</m> since 5 divides evenly into 25.</li>
+            <li><m>14 \modulus 5 = 4</m></li>
+            <li><m>-1 \modulus 5 = 4</m> (remainders are always positive)</li>
+          </ul>
+        </p>
+        We'll use this to explore injective and surjective properties of functions!
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Complete the following tables of values for each function:
+          <ol>
+            <li>
+              <p>
+                Let <m>f:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>f(n) = (n + 2)\modulus 5</m>
+                <tabular>
+                  <row bottom="minor">
+                    <cell right="minor" halign="center"><m>x</m></cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                  </row>
+                  <row>
+                    <cell right="minor" halign="center"><m>f(x)</m></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                  </row>
+                </tabular>
+                Is <m>f</m> injective? surjective?
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>g:\{0, 1, 2, 3, 4, 5\} \to \{0, 1, 2, 3, 4, 5\}</m> be defined by <m>g(n) = n^2 + 2 \modulus 6</m>
+                <tabular>
+                  <row bottom="minor">
+                    <cell right="minor" halign="center"><m>x</m></cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                    <cell>5</cell>
+                  </row>
+                  <row>
+                    <cell right="minor" halign="center"><m>g(x)</m></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                  </row>
+                </tabular>
+                Is <m>g</m> injective? surjective?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <tabular>
+                  <row bottom="minor">
+                    <cell right="minor" halign="center"><m>x</m></cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                  </row>
+                  <row>
+                    <cell right="minor" halign="center"><m>f(x)</m></cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                  </row>
+                </tabular>
+                <m>f</m> is both injective and surjective - each output occurs only one time (injective) and each output occurs (surjective).
+              </p>
+              <p>
+                Note that the range of the function <m>f</m> is <m>\{0, 1, 2, 3, 4\}</m> which is equal to the whole co-domain (surjective).
+              </p>
+            </li>
+            <li>
+              <p>
+                <tabular>
+                  <row bottom="minor">
+                    <cell right="minor" halign="center"><m>x</m></cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                    <cell>5</cell>
+                  </row>
+                  <row>
+                    <cell right="minor" halign="center"><m>g(x)</m></cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>0</cell>
+                    <cell>5</cell>
+                    <cell>0</cell>
+                    <cell>3</cell>
+                  </row>
+                </tabular>
+                <m>g</m> is not injective since <m>g(1) = g(5)</m>. The same output occurs twice - it fails the "horizontal line test." <m>g</m> is also not surjective since there is no solution to <m>1 = g(n)</m> in the domain. The number 1 is in the codomain, but it's never output.
+              </p>
+              <p>
+                Note that the range of the function <m>g</m> is <m>\{0, 2, 3, 5\}</m> which is not equal to the whole co-domain (not surjective).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
 
     <definition>
       <p>
@@ -1356,23 +1493,6 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </solution>
     </exercise>
 
-
-    <definition xml:id="definition-modulus-operator">
-      <statement>
-        <p>
-          Define the <term>modulus operator</term>, <m>a \modulus m</m> on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
-        </p>
-        <p>
-          For example,
-          <ul>
-            <li><m>25 \modulus 4 = 1</m> since the remainder when dividing 25 by 4 is 1.</li>
-            <li><m>25 \modulus 5 = 0</m> since 5 divides evenly into 25.</li>
-            <li><m>14 \modulus 5 = 4</m></li>
-          </ul>
-        </p>
-      </statement>
-    </definition>
-
     <exercise>
       <statement>
         <p>
@@ -1454,6 +1574,9 @@ b. note that the inverse of a function is always a relation, but not always a fu
                 </tabular>
                 <m>f</m> is both injective and surjective.
               </p>
+              <p>
+                Note that the range of the function <m>f</m> is <m>\{0, 1, 2, 3, 4\}</m> which is equal to the whole co-domain, which tells us it's surjective.
+              </p>
             </li>
             <li>
               <p>
@@ -1476,6 +1599,9 @@ b. note that the inverse of a function is always a relation, but not always a fu
                   </row>
                 </tabular>
                 <m>g</m> is not injective since <m>g(1) = g(2)</m> for example. <m>g</m> is also not surjective since there is no solution to <m>3 = g(n)</m> in the domain.
+              </p>
+              <p>
+                Note that the range of the function <m>g</m> is <m>\{0, 1, 2\}</m> which is not equal co-domain, which tells us it's not surjective.
               </p>
             </li>
           </ol>

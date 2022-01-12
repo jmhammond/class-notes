@@ -335,7 +335,7 @@
       <title>The RSA Algorithm</title>
       <statement>
         <p>
-          RSA is an example of a public-key algorithm. Its security is based on the fact that factoring integers is <a href="https://en.wikipedia.org/wiki/Integer_factorization">a hard problem</a>. The process is outlined below: 
+          RSA is an example of a public-key algorithm. Its security is based on the fact that factoring integers is <a href="https://en.wikipedia.org/wiki/Integer_factorization" visual="">a hard problem</a>. The process is outlined below:
         </p>
           
         <p>
@@ -513,7 +513,7 @@
               <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
               <li>
                 <p>
-                  Send me your public key on via <url href="mailto:john.hammond@wichita.edu?subject=My RSA Key">email (you can click this link!)</url> as:
+                  Send me your public key on via <url href="mailto:john.hammond@wichita.edu?subject=My RSA Key" visual="john.hammond@wichita.edu">email (you can click this link!)</url> as:
                   <cd>
                     n = 15244346903
                     e = 751 
