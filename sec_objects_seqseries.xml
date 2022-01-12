@@ -158,7 +158,7 @@
       </ol>
       
       <p>
-        For this last example, the numbers are huge. If you're reading on the web-based version of this book, this is an interactive calulator. You can type what you want to compute and press 'Evaluate (Sage).' For more information, refer to the <xref ref="sec_sage_howto">Sage appendix</xref>
+        For this last example, the numbers are huge. If you're reading on the web-based version of this book, this is an interactive calulator. You can type what you want to compute and press 'Evaluate (Sage).' For more information, refer to the <xref ref="appendix_sage_howto">Sage appendix</xref>
       </p>
       <sage>
         <input>
