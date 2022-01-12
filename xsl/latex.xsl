@@ -20,8 +20,8 @@ and using it for discovery of what features I actually want to modify in my own.
 <!-- Non-empty string makes it happen    -->
 <!-- Scale works well for "CONFIDENTIAL" -->
 <!-- or  for "DRAFT YYYY/MM/DD"          -->
-<xsl:param name="latex.watermark" select="''"/>
-<xsl:param name="latex.watermark.scale" select="2.0"/>
+<!-- <xsl:param name="latex.watermark" select="''"/> -->
+<!-- <xsl:param name="latex.watermark.scale" select="2.0"/> -->
 <!--  -->
 <!-- Author's Tools                                            -->
 <!-- Set the author-tools parameter to 'yes'                   -->
@@ -39,12 +39,12 @@ and using it for discovery of what features I actually want to modify in my own.
 <!-- (2) Crop marks on letter paper, centered                  -->
 <!--     presuming geometry sets smaller page size             -->
 <!--     with paperheight, paperwidth                          -->
-<xsl:param name="latex.draft" select="'no'"/>
+<!-- <xsl:param name="latex.draft" select="'no'"/> -->
 <!--  -->
 <!-- Print Option                                         -->
 <!-- For a non-electronic copy, inactive links in black   -->
 <!-- Any color options go to black and white, as possible -->
-<xsl:param name="latex.print" select="'no'"/>
+<!-- <xsl:param name="latex.print" select="'no'"/> -->
 <!--  -->
 <!-- Preamble insertions                    -->
 <!-- Insert packages, options into preamble -->
