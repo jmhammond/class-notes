@@ -562,8 +562,6 @@ b. note that the inverse of a function is always a relation, but not always a fu
           <p>
             This function is <m>\text{mySqrt}: \Z \to \Z</m>. We <em>can</em> input negative numbers, but <c>sqrt()</c> throws an error in that case.
           </p>
-          <p>
-          </p>
         </sidebyside>
       </p>
       <p>
