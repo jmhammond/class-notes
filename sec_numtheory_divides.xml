@@ -119,6 +119,7 @@
     <example>
       <statement>
         <p>
+          Each of these statements is true:
           <ol>
             <li> <m>13 \equiv 6 \pmod 7 </m> </li>
             <li> <m>-8 \equiv 6 \pmod 7 </m> </li>
@@ -127,6 +128,19 @@
         </p>
       </statement>
     </example>
+
+    <note>
+      <statement>
+        <p>
+          Let's compare the the congruence relation with the <xref ref="definition-modulus-operator"> modulus operator</xref>:
+          <ul>
+            <li> <m>a \equiv b \pmod{m}</m> is a <em>logical statement</em>. It tells us that <m>a</m> and <m>b</m> are related, that is, the statement <m>m \divides (b-a)</m> is true. </li>
+            <li> <m>a \modulus b</m> is a <em>mathematical operation</em>. The result is a number not a true/false.</li>
+          </ul>
+          The difference is subtle but important.
+        </p>
+      </statement>
+    </note>
 
     <definition>
       <statement>
@@ -158,7 +172,7 @@
       </statement>
       <hint>
         <p>
-          To what numbers is 0 congruent modulo 5? 1? 2? 3? 4? 5? 6? 7?... Have we covered everything?
+          To what numbers is 0 congruent modulo 5? Is 1? 2? 3? 4? 5? 6? 7?... Have we covered everything?
         </p>
       </hint>
       <solution>
@@ -209,7 +223,7 @@
     <note>
       <statement>
         <p>
-          For modular arithmetic, we have addition and multiplication. Subtraction is done via additive inverses, but division is not a thing! We'll discuss multiplicative inverses in a future section.  <!-- todo xref this -->
+          For modular arithmetic, we have addition and multiplication. Subtraction is done via additive inverses, but division is not a thing! We'll discuss multiplicative inverses in <xref ref="section-multiplicative-inverses">section</xref>.  <!-- todo xref this -->
         </p>
       </statement>
     </note>
@@ -223,6 +237,19 @@
 
 
   <exercises>
+
+    <exercise>
+      <statement>
+        <p>
+          Show that if <m>a \equiv b\pmod{m}</m>, then <m>b \equiv a \pmod{m}</m>
+        </p>
+      </statement>
+      <hint>
+        <p>
+          If <m>m \divides (b-a)</m>, how can we write that <m>m \divides (a-b)</m>?
+        </p>
+      </hint>
+    </exercise>
 
     <exercise>
       <statement>

@@ -1300,7 +1300,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </exercise>
 
 
-    <definition>
+    <definition xml:id="definition-modulus-operator">
       <statement>
         <p>
           Define the <term>modulus operator</term>, <m>a \modulus m</m> on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
