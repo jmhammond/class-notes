@@ -778,12 +778,12 @@
         <p>
           Prove that if <m>n^2</m> is multiple of three, then <m>n</m> is a multiple of three where <m>n</m> is an integer.
         </p>
-        <hint>
-          <p>
-            If a number isn't a multiple of three, then it's either 1 more than a multiple of three or 2 more than a multiple of three, that is, you'll have two cases, either <m>n=3k+1</m> or <m>3k+2</m>.
-          </p>
-        </hint>
       </statement>
+      <hint>
+        <p>
+          If a number isn't a multiple of three, then it's either 1 more than a multiple of three or 2 more than a multiple of three, that is, you'll have two cases, either <m>n=3k+1</m> or <m>3k+2</m>.
+        </p>
+      </hint>
       <solution>
         <p>
           <proof>
