@@ -61,10 +61,9 @@
             <li> Move one disk at a time to any other peg. A move is valid only if a smaller disk is placed on top a larger one.</li>
           </ol>
           <figure>
-            <image source="./images/Tower_of_Hanoi_4.png" width="50%">
+            <image source="./images/Tower_of_Hanoi_4.gif" width="50%">
               <description>
-                The Animation of the Towers of Hanoi puzzle by André Karwath aka Aka - Own work, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=85401
-                The static image is public domain, CC-0.
+                The Animation of the Towers of Hanoi puzzle by André Karwath aka Aka - Own work, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=85401 The static image is public domain, CC-0.
               </description>
             </image>
             <caption>Animation of the Towers of Hanoi puzzle with 4 disks</caption>
