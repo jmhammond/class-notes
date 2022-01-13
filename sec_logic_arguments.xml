@@ -460,7 +460,7 @@
       </hint>
     </exercise>
 
-    <!-- This exercise is from Al Doerr, Ken Levasseur, Applied Discrete Structures -->
+    <!-- This exercise is adapted from Al Doerr, Ken Levasseur, Applied Discrete Structures -->
     <exercise>
       <statement>
         <p>
@@ -469,12 +469,12 @@
         <p>
           If wages increase, then there will be inflation. The cost of living will not increase if there is no inflation. Wages will increase. Therefore, the cost of living will increase.
         </p>
-        <hint>
-          <p>
-            Make a truth table.
-          </p>
-        </hint>
       </statement>
+      <hint>
+        <p>
+          Make a truth table.
+        </p>
+      </hint>
       <solution>
         <p>
           The argument has three propositional variables and is of the form:
