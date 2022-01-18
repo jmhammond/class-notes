@@ -26,51 +26,47 @@
           If we consider <m>A</m> and <m>B</m> to both be the set of people in your family, and let <m>\mathrel{R}</m> be the relation <q><m>a</m> is a sibling of <m>b</m>.</q> Here's an example of my family in two graphical representations. What are the ordered pairs that make up the relation? 
         </p>
         <p>
-        <sbsgroup>
-          <sidebyside width="60%">
-            <image xml:id="graph-sib">
-              <description>Standard Cartesian graph showing my siblings; dot means related</description>
-              <latex-image>
-                \begin{tikzpicture}[scale=1]
-                \draw[thin, gray!50] (0,0) grid (4, 4);
-                \draw[thick] (0,4) node[left] {Family Member} -- (0,0) -- (4,0) node[below right] {Family Member};
-                \draw (1,0) node[below] { John} (0, 1) node[left] { John};
-                \draw (2,0) node[below] { Eric} (0, 2) node[left] { Eric};
-                \draw (3,0) node[below] { Sarah} (0, 3) node[left] { Sarah};
-                \fill (1,3) circle (.1) (1,2) circle (0.1) (2,3) circle (.1) (2,1) circle (.1) (3,2) circle (.1) (3,1) circle (.1);
-                \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
-          <sidebyside width="30%">
-            <image xml:id="my-family-graph">
-              <description>Graph showing lines connect each sibling; line means connected</description>
-              <latex-image>
-                \begin{tikzpicture}
-                \coordinate (A)  at (0,3);
-                \node at (A) [below]{Set $A$};
-                \coordinate (B)  at (0,2);
-                \node at (B) [left]{John};
-                \coordinate (C)  at (0,1);
-                \node at (C) [left]{Eric};
-                \coordinate (D)  at (0,0);
-                \node at (D) [left]{Sarah};
+        <sidebyside widths="60% 30%" valign="middle">
+          <image xml:id="graph-sib">
+            <description>Standard Cartesian graph showing my siblings; dot means related</description>
+            <latex-image>
+              \begin{tikzpicture}[scale=1]
+              \draw[thin, gray!50] (0,0) grid (4, 4);
+              \draw[thick] (0,4) node[left] {Family Member} -- (0,0) -- (4,0) node[below right] {Family Member};
+              \draw (1,0) node[below] { John} (0, 1) node[left] { John};
+              \draw (2,0) node[below] { Eric} (0, 2) node[left] { Eric};
+              \draw (3,0) node[below] { Sarah} (0, 3) node[left] { Sarah};
+              \fill (1,3) circle (.1) (1,2) circle (0.1) (2,3) circle (.1) (2,1) circle (.1) (3,2) circle (.1) (3,1) circle (.1);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+          <image xml:id="my-family-graph">
+            <description>Graph showing lines connect each sibling; line means connected</description>
+            <latex-image>
+              \begin{tikzpicture}
+              \coordinate (A)  at (0,3);
+              \node at (A) [below]{Set $A$};
+              \coordinate (B)  at (0,2);
+              \node at (B) [left]{John};
+              \coordinate (C)  at (0,1);
+              \node at (C) [left]{Eric};
+              \coordinate (D)  at (0,0);
+              \node at (D) [left]{Sarah};
 
-                \coordinate (E)  at (2,3);
-                \coordinate (F)  at (2,2);
-                \coordinate (G)  at (2,1);
-                \coordinate (H)  at (2,0);
+              \coordinate (E)  at (2,3);
+              \coordinate (F)  at (2,2);
+              \coordinate (G)  at (2,1);
+              \coordinate (H)  at (2,0);
 
-                \node at (E) [below]{Set $B$};
-                \node at (F) [right]{John};
-                \node at (G) [right]{Eric};
-                \node at (H) [right]{Sarah};
-                \draw (B) -- (G) -- (D) -- (F) -- (C) -- (H) -- (B);
-                \end{tikzpicture}
-              </latex-image>
-            </image>
+              \node at (E) [below]{Set $B$};
+              \node at (F) [right]{John};
+              \node at (G) [right]{Eric};
+              \node at (H) [right]{Sarah};
+              \draw (B) -- (G) -- (D) -- (F) -- (C) -- (H) -- (B);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
           </sidebyside>
-        </sbsgroup>
         </p>
       </statement>
     </example>
@@ -103,21 +99,19 @@
             <p>
               <!-- Draw a graphical representation of the divides relation as we did in the sibling example, listing elements of the two sets and drawing lines from the left set to the right where the line means <m>a</m> divides evenly into <m>b</m>. -->
               Complete the following graph of the relation below, where a point on <m>(x,y)</m> means that <m>x </m> divides evenly into <m>y</m>. 
-        <sidebyside width="50%">
-          <image xml:id="graph-relation-blank">
-            <description>'blank' Cartesian graph to complete</description>
-            <latex-image>
-              \begin{tikzpicture}[scale=1]
-              \draw[thin, gray!50] (0,0) grid (10.5, 10.5);
-              \draw[thick] (0,10.5) node[left] {\(y\)} -- (0,0) -- (10.5,0) node[below right] {\(x\)};
-              \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 , 10}
-              \draw (\x,0) node[below] { \x} (0, \x) node[left] { \x};
-              \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 , 10}
-              \fill(1,\x) circle(.1);
-              \end{tikzpicture}
-            </latex-image>
-          </image>
-        </sidebyside>
+              <image xml:id="graph-relation-blank" width="50%">
+                <description>'blank' Cartesian graph to complete</description>
+                <latex-image>
+                  \begin{tikzpicture}[scale=1]
+                  \draw[thin, gray!50] (0,0) grid (10.5, 10.5);
+                  \draw[thick] (0,10.5) node[left] {\(y\)} -- (0,0) -- (10.5,0) node[below right] {\(x\)};
+                  \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 , 10}
+                  \draw (\x,0) node[below] { \x} (0, \x) node[left] { \x};
+                  \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 , 10}
+                  \fill(1,\x) circle(.1);
+                  \end{tikzpicture}
+                </latex-image>
+              </image>
             </p>
           </li>
           <li> 
@@ -158,22 +152,20 @@
             <li>
               <p>
                 Plot points for the graph of <m>\mathrel{R}</m> for <m>a =-3, -2, -1, 0, 1, 2, 3</m>.
-                <sidebyside width="50%">
-                  <image xml:id="graph-relation-squares">
-                    <description>Cartesian graph plotting squares</description>
-                    <latex-image>
-                      \begin{tikzpicture}[scale=1]
-                      \draw[thin, gray!50] (-3,0) grid (3, 10);
-                      \draw[&lt;-&gt;, thick] (0,10) node[left] {\(b\)} -- (0,0) -- (-3.5,0) -- (3.5,0) node[below right] {\(a\)};
-                      \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 }
-                      \draw (0, \x) node[left] { \x};
-                      \foreach \x in {-3, -2, -1, 0, 1,2,3}
-                      \draw (\x,0) node[below] { \x} ;
-                      % \fill (1,1) circle(0.1) (2,4) circle(0.1) (3,9) circle(.1);
-                      \end{tikzpicture}
-                    </latex-image>
-                  </image>
-                </sidebyside>
+                <image xml:id="graph-relation-squares" width="50%">
+                  <description>Cartesian graph plotting squares</description>
+                  <latex-image>
+                    \begin{tikzpicture}[scale=1]
+                    \draw[thin, gray!50] (-3,0) grid (3, 10);
+                    \draw[&lt;-&gt;, thick] (0,10) node[left] {\(b\)} -- (0,0) -- (-3.5,0) -- (3.5,0) node[below right] {\(a\)};
+                    \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 }
+                    \draw (0, \x) node[left] { \x};
+                    \foreach \x in {-3, -2, -1, 0, 1,2,3}
+                    \draw (\x,0) node[below] { \x} ;
+                    % \fill (1,1) circle(0.1) (2,4) circle(0.1) (3,9) circle(.1);
+                    \end{tikzpicture}
+                  </latex-image>
+                </image>
               </p>
             </li>
           </ol>
@@ -590,29 +582,27 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <definition xml:id="def-composition-of-functions">
       <p>
         Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g : A \to C</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
-        <sidebyside width="75%">
-          <image xml:id="composition-of-functions">
-            <description>Composition of functions</description>
-            <latex-image>
-              \usetikzlibrary{calc,positioning,shapes.geometric}
+        <image xml:id="composition-of-functions" width="75%">
+          <description>Composition of functions</description>
+          <latex-image>
+            \usetikzlibrary{calc,positioning,shapes.geometric}
 
-              \begin{tikzpicture}
-              \tikzset{
-              elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
-              node distance=3cm,
-              font=\footnotesize,
-              >=latex,
-              }
-              \node(x)[elps={1cm}{1cm},label={$A$}]{};
-              \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
-              \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
-              \draw[->](x)to node[above right]{$g$}(y);
-              \draw[->](y)to node[above right]{$f$}(v);
-              \draw[->](x)to[bend left]node[above]{$f \circ g$}(v);
-              \end{tikzpicture}
-            </latex-image>
-          </image>
-        </sidebyside>
+            \begin{tikzpicture}
+            \tikzset{
+            elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
+            node distance=3cm,
+            font=\footnotesize,
+            >=latex,
+            }
+            \node(x)[elps={1cm}{1cm},label={$A$}]{};
+            \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
+            \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
+            \draw[->](x)to node[above right]{$g$}(y);
+            \draw[->](y)to node[above right]{$f$}(v);
+            \draw[->](x)to[bend left]node[above]{$f \circ g$}(v);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
       </p>
     </definition>
 
@@ -825,29 +815,27 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
         <p>
           Let <m>G:A \to B</m> and let <m>R:B \to C</m>. The <term>composition of <m>R</m> and <m>S</m></term>, denoted by <m>R\circ S</m> is defined, for all <m>a \in A</m>, by <m>(R \circ S)(a) = R(S(a))</m>.
-          <sidebyside width="75%">
-            <image xml:id="composition-of-relations">
-              <description>Composition of relations</description>
-              <latex-image>
-                \usetikzlibrary{calc,positioning,shapes.geometric}
+          <image xml:id="composition-of-relations" width="75%">
+            <description>Composition of relations</description>
+            <latex-image>
+              \usetikzlibrary{calc,positioning,shapes.geometric}
 
-                \begin{tikzpicture}
-                \tikzset{
-                elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
-                node distance=3cm,
-                font=\footnotesize,
-                >=latex,
-                }
-                \node(x)[elps={1cm}{1cm},label={$A$}]{};
-                \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
-                \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
-                \draw[->](x)to node[above right]{$S$}(y);
-                \draw[->](y)to node[above right]{$R$}(v);
-                \draw[->](x)to[bend left]node[above]{$R \circ S$}(v);
-                \end{tikzpicture}
-              </latex-image>
-            </image>
-          </sidebyside>
+              \begin{tikzpicture}
+              \tikzset{
+              elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
+              node distance=3cm,
+              font=\footnotesize,
+              >=latex,
+              }
+              \node(x)[elps={1cm}{1cm},label={$A$}]{};
+              \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
+              \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
+              \draw[->](x)to node[above right]{$S$}(y);
+              \draw[->](y)to node[above right]{$R$}(v);
+              \draw[->](x)to[bend left]node[above]{$R \circ S$}(v);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
         </p>
       </solution>
     </exercise>
@@ -907,26 +895,24 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <statement>
         <p>
         Consider the function <m>f:\{1,2,3,4,5\} \to \{1,2,3,4\}</m> given by the table below:</p>
-        <sidebyside>
-          <tabular>
-            <row bottom="minor">
-              <cell right="minor" halign="center"><m>x</m></cell>
-              <cell>1</cell>
-              <cell>2</cell>
-              <cell>3</cell>
-              <cell>4</cell>
-              <cell>5</cell>
-            </row>
-            <row>
-              <cell right="minor" halign="center"><m>f(x)</m></cell>
-              <cell>3</cell>
-              <cell>2</cell>
-              <cell>4</cell>
-              <cell>1</cell>
-              <cell>2</cell>
-            </row>
-          </tabular>
-        </sidebyside>
+        <tabular>
+          <row bottom="minor">
+            <cell right="minor" halign="center"><m>x</m></cell>
+            <cell>1</cell>
+            <cell>2</cell>
+            <cell>3</cell>
+            <cell>4</cell>
+            <cell>5</cell>
+          </row>
+          <row>
+            <cell right="minor" halign="center"><m>f(x)</m></cell>
+            <cell>3</cell>
+            <cell>2</cell>
+            <cell>4</cell>
+            <cell>1</cell>
+            <cell>2</cell>
+          </row>
+        </tabular>
         <p>
           <ol>
             <li>
@@ -964,20 +950,18 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <statement>
         <p>
         Consider the function <m>f:\{1,2,3,4\} \to \{1,2,3,4\}</m> given by the graph below.</p>
-        <sidebyside width="45%">
-          <image xml:id="graph-function-ques">
-            <description>Graph of the function f</description>
-            <latex-image>
-              \begin{tikzpicture}[scale=1]
-              \draw[thin, gray!50] (0,0) grid (4.5, 4.5);
-              \draw[&lt;-&gt;, thick] (0,4.5) node[left] {\(f(x)\)} -- (0,0) -- (4.5,0) node[below right] {\(x\)};
-              \foreach \x in {1,2,3,4}
-              \draw (\x,0) node[below] { \x} (0, \x) node[left] { \x};
-              \fill (1,3) circle (.1) (2,4) circle (.1) (3,1) circle (.1) (4,3) circle (.1);
-              \end{tikzpicture}
-            </latex-image>
-          </image>
-        </sidebyside>
+        <image xml:id="graph-function-ques" width="45%">
+          <description>Graph of the function f</description>
+          <latex-image>
+            \begin{tikzpicture}[scale=1]
+            \draw[thin, gray!50] (0,0) grid (4.5, 4.5);
+            \draw[&lt;-&gt;, thick] (0,4.5) node[left] {\(f(x)\)} -- (0,0) -- (4.5,0) node[below right] {\(x\)};
+            \foreach \x in {1,2,3,4}
+            \draw (\x,0) node[below] { \x} (0, \x) node[left] { \x};
+            \fill (1,3) circle (.1) (2,4) circle (.1) (3,1) circle (.1) (4,3) circle (.1);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
         <p>
           <ol>
             <li>

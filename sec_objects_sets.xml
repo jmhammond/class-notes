@@ -241,18 +241,16 @@
 
       <p>
         As a Venn diagram:
-        <sidebyside width="20%">
-          <image xml:id="A-or-B">
-            <latex-image>
-              \begin{tikzpicture}[scale=.75]
-              \fill[color=gray] \circleA;
-              \fill[color=gray] \circleB;
-              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram for set union</description>
-          </image>
-        </sidebyside>
+        <image xml:id="A-or-B" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[scale=.75]
+            \fill[color=gray] \circleA;
+            \fill[color=gray] \circleB;
+            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+            \end{tikzpicture}
+          </latex-image>
+          <description>Venn diagram for set union</description>
+        </image>
       </p>
 
       <p>
@@ -262,19 +260,17 @@
 
       <p>
         As a Venn diagram:
-        <sidebyside width="20%">
-          <image xml:id="A-and-B">
-            <latex-image>
-              \begin{tikzpicture}[scale=.75]
-              \fill[color=gray] \circleA;
-              \fill[color=gray] \circleB;
-              \fill[even odd rule, color=white] \circleA \circleB;
-              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram for set intersection</description>
-          </image>
-        </sidebyside>
+        <image xml:id="A-and-B" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[scale=.75]
+            \fill[color=gray] \circleA;
+            \fill[color=gray] \circleB;
+            \fill[even odd rule, color=white] \circleA \circleB;
+            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+            \end{tikzpicture}
+          </latex-image>
+          <description>Venn diagram for set intersection</description>
+        </image>
       </p>
 
       <p>
@@ -284,18 +280,16 @@
 
       <p>
         As a Venn diagram:
-        <sidebyside width="20%">
-          <image xml:id="A-minus-B">
-            <latex-image>
-              \begin{tikzpicture}[scale=.75]
-              \fill[color=gray] \circleA;
-              \fill[color=white] \circleB;
-              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram for set difference <m>A \setminus B</m></description>
-          </image>
-        </sidebyside>
+        <image xml:id="A-minus-B" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[scale=.75]
+            \fill[color=gray] \circleA;
+            \fill[color=white] \circleB;
+            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+            \end{tikzpicture}
+          </latex-image>
+          <description>Venn diagram for set difference <m>A \setminus B</m></description>
+        </image>
       </p>
 
       <note>
@@ -311,34 +305,30 @@
       <p>
         Let <m>U</m> be the <term>universal set</term>, that is the set of all possible objects in consideration.
 
-        <sidebyside width="20%">
-          <image xml:id="universal-set">
-            <latex-image>
-              \begin{tikzpicture}[scale=.75]
-              \fill[color=gray] \twosetbox;
-              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram for the universal set </description>
-          </image>
-        </sidebyside>
+        <image xml:id="universal-set" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[scale=.75]
+            \fill[color=gray] \twosetbox;
+            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+            \end{tikzpicture}
+          </latex-image>
+          <description>Venn diagram for the universal set </description>
+        </image>
       </p>
 
       <p>
         If <m>A</m> is a set, the <term>complement</term> of <m>A</m>, denoted <m>\overline{A}</m>, is the set difference <m>\overline{A} = U \setminus A</m>.
 
-        <sidebyside width="20%">
-          <image xml:id="A-complement">
-            <latex-image>
-              \begin{tikzpicture}[scale=.75]
-              \fill[color=gray] \twosetbox;
-              \fill[color=white] \circleA;
-              \draw[thick] \circleA \circleAlabel \twosetbox;
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram for the complement of <m>A</m></description>
-          </image>
-        </sidebyside>
+        <image xml:id="A-complement" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[scale=.75]
+            \fill[color=gray] \twosetbox;
+            \fill[color=white] \circleA;
+            \draw[thick] \circleA \circleAlabel \twosetbox;
+            \end{tikzpicture}
+          </latex-image>
+          <description>Venn diagram for the complement of <m>A</m></description>
+        </image>
       </p>
     </definition>
 
@@ -771,112 +761,100 @@
             <li><p>
               <m>A \cup \bar B</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="A-or-not-B">
-                <latex-image>
-                  \begin{tikzpicture}[fill=gray!50, scale=.75]
-                  \fill \circleA;
-                  \begin{scope}
-                  \clip \circleB \twosetbox;
-                  \fill \twosetbox;
-                  \end{scope}
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description>Venn diagram of <m>A\cup \bar B</m></description>
-              </image>
-            </sidebyside>
+            <image xml:id="A-or-not-B" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[fill=gray!50, scale=.75]
+                \fill \circleA;
+                \begin{scope}
+                \clip \circleB \twosetbox;
+                \fill \twosetbox;
+                \end{scope}
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description>Venn diagram of <m>A\cup \bar B</m></description>
+            </image>
             </li>
             <li><p>
               <m>\bar{(A \cup B)}</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="not-A-or-B">
-                <latex-image>
-                  \begin{tikzpicture}[scale=.5, fill=gray!50]
-                  \fill \twosetbox;
-                  \fill[white] \circleA \circleB;
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description>Venn diagram of <m>\bar{(A \cup B)}</m></description>
-              </image>
-            </sidebyside>
+            <image xml:id="not-A-or-B" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[scale=.5, fill=gray!50]
+                \fill \twosetbox;
+                \fill[white] \circleA \circleB;
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description>Venn diagram of <m>\bar{(A \cup B)}</m></description>
+            </image>
 
             </li>
             <li><p>
               <m>A \cap (B \cup C)</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="A-and-B-or-C">
-                <latex-image>
-                  \begin{tikzpicture}[fill=gray!50, scale=.5]
-                  \begin{scope}
-                  \clip \circleA;
-                  \fill \circleB \circleC;
-                  \end{scope}
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description>Venn diagram of <m>A \cap (B \cup C)</m></description>
-              </image>
-            </sidebyside>
+            <image xml:id="A-and-B-or-C" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[fill=gray!50, scale=.5]
+                \begin{scope}
+                \clip \circleA;
+                \fill \circleB \circleC;
+                \end{scope}
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description>Venn diagram of <m>A \cap (B \cup C)</m></description>
+            </image>
             </li>
             <li><p>
               <m>(A \cap B) \cup C</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="A-and-B-cup-C">
-                <latex-image>
-                  \begin{tikzpicture}[fill=gray!50, scale=.5]
-                  \begin{scope}
-                  \clip \circleA;
-                  \fill \circleB;
-                  \end{scope}
-                  \fill \circleC;
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description> Venn diagram of <m>(A \cap B) \cup C</m></description>
-              </image>
-            </sidebyside>
+            <image xml:id="A-and-B-cup-C" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[fill=gray!50, scale=.5]
+                \begin{scope}
+                \clip \circleA;
+                \fill \circleB;
+                \end{scope}
+                \fill \circleC;
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description> Venn diagram of <m>(A \cap B) \cup C</m></description>
+            </image>
             </li>
             <li><p>
               <m>\bar A \cap B \cap \bar C</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="not-A-cap-B-cap-not-C">
-                <latex-image>
-                  \begin{tikzpicture}[fill=gray!50, scale=.5]
-                  \fill \circleB;
-                  \begin{scope}
-                  \clip \circleB;
-                  \fill[white] \circleA \circleC;
-                  \end{scope}
+            <image xml:id="not-A-cap-B-cap-not-C" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[fill=gray!50, scale=.5]
+                \fill \circleB;
+                \begin{scope}
+                \clip \circleB;
+                \fill[white] \circleA \circleC;
+                \end{scope}
 
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description>Venn diagram of <m>\bar A \cap B \cap \bar C</m></description>
-              </image>
-            </sidebyside>
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description>Venn diagram of <m>\bar A \cap B \cap \bar C</m></description>
+            </image>
             </li>
             <li><p>
               <m>(A \cup B) \setminus C</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="A-or-B-less-C">
-                <latex-image>
-                  \begin{tikzpicture}[fill=gray!50, scale=.5]
-                  \fill \circleA;
-                  \fill \circleB;
-                  \fill[white] \circleC;
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description>Venn diagram of <m>(A \cup B) \setminus C</m></description>
-              </image>
-            </sidebyside>
+            <image xml:id="A-or-B-less-C" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[fill=gray!50, scale=.5]
+                \fill \circleA;
+                \fill \circleB;
+                \fill[white] \circleC;
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description>Venn diagram of <m>(A \cup B) \setminus C</m></description>
+            </image>
             </li>
           </ol>
         </p>
@@ -890,28 +868,26 @@
         <p>
           Describe a set in terms of <m>A</m> and <m>B</m> (using set notation) which has the following Venn diagram:
         </p>
-        <sidebyside width="20%">
-          <image xml:id="not-A-and-B">
-            <latex-image>
-              \begin{tikzpicture}[fill=gray!50, scale=0.5]
-              \scope
-              \clip (-2,-2) rectangle (2,2)
-              (1,0) circle (1);
-              \fill (0,0) circle (1);
-              \endscope
-              \scope
-              \clip (-2,-2) rectangle (2,2)
-              (0,0) circle (1);
-              \fill (1,0) circle (1);
-              \endscope
-              \draw[thick] (0,0) circle (1) (-1,.7)  node [text=black,above] {\(A\)}
-              (1,0) circle (1) (2,.7)  node [text=black,above] {\(B\)}
-              (-1.5,-1.5) rectangle (2.5,1.5);
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram: A is mostly shaded, B is mostly shaded, but the area where A and B overlap is not.</description>
-          </image>
-        </sidebyside>
+        <image xml:id="not-A-and-B" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[fill=gray!50, scale=0.5]
+            \scope
+            \clip (-2,-2) rectangle (2,2)
+            (1,0) circle (1);
+            \fill (0,0) circle (1);
+            \endscope
+            \scope
+            \clip (-2,-2) rectangle (2,2)
+            (0,0) circle (1);
+            \fill (1,0) circle (1);
+            \endscope
+            \draw[thick] (0,0) circle (1) (-1,.7)  node [text=black,above] {\(A\)}
+            (1,0) circle (1) (2,.7)  node [text=black,above] {\(B\)}
+            (-1.5,-1.5) rectangle (2.5,1.5);
+            \end{tikzpicture}
+          </latex-image>
+          <description>Venn diagram: A is mostly shaded, B is mostly shaded, but the area where A and B overlap is not.</description>
+        </image>
       </statement>
 
       <solution>
