@@ -30,22 +30,20 @@
       </p>
       <p>
         This argument is of the form:
-        <sidebyside>
-          <tabular halign="center">
-            <row>
-              <cell/>
-              <cell><m>p \to q</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell/>
-              <cell><m> p</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>q</m></cell>
-            </row>
-          </tabular>
-        </sidebyside>
+        <tabular halign="center">
+          <row>
+            <cell/>
+            <cell><m>p \to q</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell/>
+            <cell><m> p</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore</m></cell>
+            <cell><m>q</m></cell>
+          </row>
+        </tabular>
         and is valid since <m> ((p \to q) \wedge p) \to q</m> is a tautology.
       </p>
     </statement>
@@ -257,22 +255,20 @@
         <p>
           Determine if the following deduction rule is valid:
         </p>
-        <sidebyside>
-          <tabular halign="center">
-            <row>
-              <cell/>
-              <cell><m>p \vee q</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell/>
-              <cell><m>\neg p</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>q</m></cell>
-            </row>
-          </tabular>
-        </sidebyside>
+        <tabular halign="center">
+          <row>
+            <cell/>
+            <cell><m>p \vee q</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell/>
+            <cell><m>\neg p</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore</m></cell>
+            <cell><m>q</m></cell>
+          </row>
+        </tabular>
       </statement>
       <solution>
         <p>
@@ -287,22 +283,20 @@
         <p>
           Determine if the following is a valid deduction rule:
         </p>
-        <sidebyside>
-          <tabular halign="center">
-            <row>
-              <cell/>
-              <cell><m>p \to (q \vee r)</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell/>
-              <cell><m>\neg(p \to q)</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>r</m></cell>
-            </row>
-          </tabular>
-        </sidebyside>
+        <tabular halign="center">
+          <row>
+            <cell/>
+            <cell><m>p \to (q \vee r)</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell/>
+            <cell><m>\neg(p \to q)</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore</m></cell>
+            <cell><m>r</m></cell>
+          </row>
+        </tabular>
       </statement>
       <solution>
         <p>
@@ -318,22 +312,20 @@
         <p>
           Determine if the following is a valid deduction rule:
         </p>
-        <sidebyside>
-          <tabular halign="center">
-            <row>
-              <cell/>
-              <cell><m>(p \wedge q) \to r</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell/>
-              <cell><m>\neg p \vee \neg q</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>\neg r</m></cell>
-            </row>
-          </tabular>
-        </sidebyside>
+        <tabular halign="center">
+          <row>
+            <cell/>
+            <cell><m>(p \wedge q) \to r</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell/>
+            <cell><m>\neg p \vee \neg q</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore</m></cell>
+            <cell><m>\neg r</m></cell>
+          </row>
+        </tabular>
       </statement>
       <solution>
         <p>
@@ -350,22 +342,20 @@
           Show that the following is a valid deduction rule by building a truth table.
         </p>
         <p>
-          <sidebyside>
-            <tabular halign="center">
-              <row>
-                <cell/>
-                <cell><m>p \to q</m></cell>
-              </row>
-              <row bottom="minor">
-                <cell/>
-                <cell><m>q \to r</m></cell>
-              </row>
-              <row>
-                <cell><m>\therefore</m></cell>
-                <cell><m>p \to r</m></cell>
-              </row>
-            </tabular>
-          </sidebyside>
+          <tabular halign="center">
+            <row>
+              <cell/>
+              <cell><m>p \to q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>q \to r</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>p \to r</m></cell>
+            </row>
+          </tabular>
         </p>
       </statement>
       <!-- <solution> -->

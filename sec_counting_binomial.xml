@@ -71,43 +71,41 @@
     <p>
       Let's arrange the binomial coefficients <m>{n \choose k}</m> into a triangle like follows:
     </p>
-    <sidebyside width="80%">
-      <image xml:id="pascal-small">
-        <description>Pascal's triangle</description>
-        <latex-image>
-          \begin{tikzpicture}
-          \def\r{.5}
+    <image xml:id="pascal-small" width="80%">
+      <description>Pascal's triangle</description>
+      <latex-image>
+        \begin{tikzpicture}
+        \def\r{.5}
 
-          % Pascal's triangle
-          %put row of 1's down left side:
-          \foreach \row in {0,...,7} {
-          \hexbox{\row}{0}{ 1}
-          }
-          %fill in the rest of the triangle:
-          \foreach \row in {1,...,7} {
-          \pgfmathsetmacro{\entry}{1};
-          \foreach \col in {1,...,\row} {
-          % iterative formula : val = precval * (row-col+1)/col
-          % (+ 0.5 to bypass rounding errors)
-          \pgfmathtruncatemacro{\entry}{\entry*((\row-\col+1)/\col)+0.5};
-          \global\let\entry=\entry
-          \ifnum \entry&lt;100
-          \hexbox{\row}{\col}{\entry}
-          \else \ifnum \entry&lt;1000
-          \hexbox{\row}{\col}{\footnotesize \entry}
-          \else \ifnum \entry&lt;10000
-          \hexbox{\row}{\col}{\footnotesize \entry}
-          \else
-          \hexbox{\row}{\col}{\scriptsize \entry}
-          \fi
-          \fi
-          \fi
-          }
-          }
-          \end{tikzpicture}
-        </latex-image>
-      </image>
-    </sidebyside>
+        % Pascal's triangle
+        %put row of 1's down left side:
+        \foreach \row in {0,...,7} {
+        \hexbox{\row}{0}{ 1}
+        }
+        %fill in the rest of the triangle:
+        \foreach \row in {1,...,7} {
+        \pgfmathsetmacro{\entry}{1};
+        \foreach \col in {1,...,\row} {
+        % iterative formula : val = precval * (row-col+1)/col
+        % (+ 0.5 to bypass rounding errors)
+        \pgfmathtruncatemacro{\entry}{\entry*((\row-\col+1)/\col)+0.5};
+        \global\let\entry=\entry
+        \ifnum \entry&lt;100
+        \hexbox{\row}{\col}{\entry}
+        \else \ifnum \entry&lt;1000
+        \hexbox{\row}{\col}{\footnotesize \entry}
+        \else \ifnum \entry&lt;10000
+        \hexbox{\row}{\col}{\footnotesize \entry}
+        \else
+        \hexbox{\row}{\col}{\scriptsize \entry}
+        \fi
+        \fi
+        \fi
+        }
+        }
+        \end{tikzpicture}
+      </latex-image>
+    </image>
     <p>
       There are lots of patterns hidden away in the triangle, enough to fill a reasonably sized book. Here are just a few of the most obvious ones:
 
