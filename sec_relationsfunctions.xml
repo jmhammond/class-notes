@@ -878,10 +878,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
               <m>R_4 \circ R_4 = \{(x,y) \mid y \text{ is a grandparent of } x \}</m>
             </li>
             <li>
-              <m>R_5 \circ R_4 = \{(x,y) \mid y \text{ is a sibling of a parent of x}\} = \{(x,y) \mid y \text{ is an aunt/uncle of } x \}</m>
+              <m>R_5 \circ R_4 = \{(x,y) \mid y \text{ is a sibling of a parent of } x\} = \{(x,y) \mid y \text{ is an aunt/uncle of } x \}</m>
             </li>
             <li>
-              <m>R_4 \circ R_5 = \{ (x,y) \mid y is the parent of the sibling of x\} = R_4</m>
+              <m>R_4 \circ R_5 = \{ (x,y) \mid y \text{ is the parent of the sibling of } x\} = R_4</m>
             </li>
           </ol>
         </p>
