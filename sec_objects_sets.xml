@@ -371,7 +371,9 @@
 
   <subsection>
     <title>Verifying Set Identities</title>
-
+    <p>
+        An <term>identity</term> is a statement which is true if we replace the variables with specific sets. One way that we can show that an identity is true by shading a Venn Diagram for each side of the equality.
+    </p>
 
     <example>
       <statement>
@@ -387,149 +389,100 @@
 
     </example>
 
+    <list xml:id="list-set-identities">
+      <title>Fundamental set identities</title>
+      <introduction>
+        Let <m>A, B</m> and <m>C</m> be three sets and let <m>U</m> be the universal set.
+      </introduction>
+
+      <ol>
+        <li>
+          <term>Commutative Laws</term>:
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p>
+              <m>A \cup B = B \cup A</m>
+            </p>
+            <p>
+              <m>A \cap B = B \cap A</m>
+            </p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Associative Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>(A \cup B) \cup C = A \cup (B \cup C)</m></p>
+            <p><m>(A \cap B) \cap C = A \cap (B \cap C)</m></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Distributive Laws:</term><line/>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p>
+              <m>A \cap (B \cup C) = (A \cap B) \cup (A \cap C) </m><line/>
+              <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C) </m>
+            </p>
+            <p><!-- intentionally blank /--></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Identity Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>A \cup \emptyset = A</m></p>
+            <p><m>A \cap U = A</m></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Negation Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>A \cap \overline{A} = \emptyset</m></p>
+            <p><m>A \cup \overline{A} = U</m></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Idempotent Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>A \cup A = A</m> </p>
+            <p><m>A \cap A = A</m> </p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Domination Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>A \cap \emptyset = \emptyset</m> </p>
+            <p><m>A \cup U = U</m> </p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Absorption Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>A \cap (A \cup B)= A</m></p>
+            <p><m>A \cup (A \cap B)= A</m></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>DeMorgan's Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>\overline{(A\cup B)} = \overline{A}\cap \overline{B}</m></p>
+            <p><m>\overline{(A\cap B)} = \overline{A}\cup \overline{B}</m></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Double Negation Law:</term>
+          <sidebyside widths="40% 40%" margin="auto">
+            <p> <m>\overline{\overline{A}} = A</m></p>
+            <p><!-- intentionally blank /--></p>
+          </sidebyside>
+        </li>
+      </ol>
+    </list>
+
     <note>
-      <p>
-        The following is a listing of common identities for set operations. An <term>identity</term> is a statement which is true if we replace the variables with specific sets.
-      </p>
-    </note>
-
-    <table xml:id="table-setidentities">
-      <!-- table modified from https://github.com/klevasseur/ads //-->
-      <title>Set Identities</title>
-      <tabular  halign="center">
-        <row>	
-          <cell></cell>
-          <cell>Commutative Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell> <m>A \cup  B= B\cup A</m>  </cell>
-          <cell></cell>
-          <cell> <m>A \cap B= B \cap A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Associative Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>(A \cup  B) \cup C =  A \cup  (B \cup  C)</m></cell>
-          <cell></cell>
-          <cell>(<m>A \cap B) \cap C= A \cap  (B \cap  C)</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Distributive Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cap  (B \cup  C) =  (A \cap  B ) \cup  (A \cap  C)</m></cell>
-          <cell></cell>
-          <cell><m>A \cup  (B \cap  C) =  (A \cup  B) \cap (A \cup C)</m> </cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Identity Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cup  \emptyset= A</m></cell>
-          <cell></cell>
-          <cell> <m>A \cap  U = A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Negation Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A\cap \overline{A}= \emptyset</m></cell>
-          <cell></cell>
-          <cell> <m>A\cup \overline{A}= U</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Idempotent Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cup  A = A</m> </cell>
-          <cell></cell>
-          <cell>  <m>A\cap A = A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Domination Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cap \emptyset = \emptyset</m> </cell>
-          <cell></cell>
-          <cell> <m>A \cup  U = U</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Absorption Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cap (A\cup  B)= A</m></cell>
-          <cell></cell>
-          <cell><m>A \cup  (A \cap  B) =  A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>DeMorgan's Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>\overline{(A \cup  B)} =  \overline{A} \cap  \overline{B}</m></cell>
-          <cell></cell>
-          <cell><m>\overline{(A \cap  B)} =  \overline{A} \cup  \overline{B}</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Double Negation Law</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell></cell>
-          <cell> <m>\overline{\overline{A}}= A</m></cell>
-          <cell></cell>
-        </row>
-      </tabular>
-    </table>
-
-    <exercise>
       <statement>
         <p>
-          Confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.
+          It would be good practice to take a moment and confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.
         </p>
       </statement>
-    </exercise>
-    
-    <!-- TODO move these to a different section applying logic --> 
-    <!--   <example> -->
-    <!--     <statement> -->
-    <!--       <p> -->
-    <!--         Verify the following set identity by using the basic identities in the table above: <m>A \cap (A \cup B) = A</m>. -->
-    <!--       </p> -->
-    <!--     </statement> -->
-    <!--   </example> -->
-
-    <!--   <example> -->
-    <!--     <statement> -->
-    <!--       <p> -->
-    <!--         The set identities are true as an extension of logic. For example, the identity <m>A \cup \emptyset = A</m> is: -->
-    <!--         <md> -->
-    <!--           <mrow>A \cup \emptyset &amp;= \{ x \mid x \in A \lor x \in \emptyset\} </mrow> -->
-    <!--           <mrow>&amp;= \{x \in A \lor F \} </mrow> -->
-    <!--           <mrow>&amp;= \{x \in A\} </mrow> -->
-    <!--           <mrow>&amp;= A </mrow> -->
-    <!--         </md> -->
-    <!--       </p> -->
-    <!--     </statement> -->
-    <!--   </example> -->
+    </note>
 
   </subsection>
 

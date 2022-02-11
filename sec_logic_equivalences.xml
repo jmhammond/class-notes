@@ -108,8 +108,12 @@
   </note>
 
   <list xml:id="list-logical-equivalences">
+    <title>
+      Fundamental logical equivalences
+    </title>
+
     <introduction>
-      This is a list of the fundamental logical equivalences.
+      Let <m>p, q</m> and <m>r</m> be logical propositions.
     </introduction>
 
     <ol>
@@ -182,14 +186,16 @@
       </li>
       <li>
         <term>Double Negation Law:</term>
-        <sidebyside width="40%" margin="auto">
-        <p> <m>\neg (\neg p)\equiv p</m></p>
+        <sidebyside widths="40% 40%" margin="auto">
+          <p> <m>\neg (\neg p)\equiv p</m></p>
+          <p><!-- intentionally blank /--></p>
         </sidebyside>
       </li>
       <li>
         <term>Implication:</term>
-        <sidebyside width="40%" margin="auto">
-        <p> <m>p \to q \equiv \neg p \lor q</m></p>
+        <sidebyside widths="40% 40%" margin="auto">
+          <p> <m>p \to q \equiv \neg p \lor q</m></p>
+          <p><!-- intentionally blank /--></p>
         </sidebyside>
       </li>
     </ol>
