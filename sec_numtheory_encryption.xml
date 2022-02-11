@@ -8,24 +8,56 @@
     </title>
 
     <p>
-      Our convention will be to use only capital English letters, A to Z. We will identify each letter with the remainders modulo 26. We won't encrypt punctuation, either.:
+      Our convention will be to use only capital English letters, A to Z. We will identify each letter with the remainders modulo 26. As our purposes is introducing basics of encryption, we won't encrypt punctuation or spaces.
       <table>
         <title>List of Alphabet Encoding</title>
         <tabular>
-          <col right="minor"/>
-          <col left="minor"/>
-          <col right="major"/>
-          <col right="minor"/>
-          <col left="minor"/>
-          <col right="major"/>
-          <col right="minor"/>
-          <col left="minor"/>
-          <col right="major"/>
-          <col right="minor"/>
-          <col left="minor"/>
-          <col right="major"/>
-          <col right="minor"/>
-          <col left="minor"/>
+          <col right="minor" halign="center"/>
+          <col left="minor" right="major" halign="center"/>
+          <col left="major" right="minor" halign="center"/>
+          <col left="minor" right="major" halign="center"/>
+          <col left="major" right="minor" halign="center"/>
+          <col left="minor" right="major" halign="center"/>
+          <col left="major" right="minor" halign="center"/>
+          <col left="minor" right="major" halign="center"/>
+          <col left="major" right="minor" halign="center"/>
+          <col left="minor" right="major" halign="center"/>
+          <row header="yes" bottom="major">
+            <cell>
+              letter
+            </cell>
+
+            <cell>
+              number
+            </cell>
+            <cell>
+              letter
+            </cell>
+            <cell>
+              number
+            </cell>
+
+            <cell>
+              letter
+            </cell>
+            <cell>
+              number
+            </cell>
+
+            <cell>
+              letter
+            </cell>
+            <cell>
+              number
+            </cell>
+
+            <cell>
+              letter
+            </cell>
+            <cell>
+              number
+            </cell>
+          </row>
           <row bottom="minor">
             <cell>
               A
@@ -33,32 +65,28 @@
             <cell>
               0
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               G
             </cell>
             <cell>
               6
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               M
             </cell>
             <cell>
               12
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               S
             </cell>
             <cell>
               18
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               Y
             </cell>
@@ -73,32 +101,28 @@
             <cell>
               1
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               H
             </cell>
             <cell>
               7
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               N
             </cell>
             <cell>
               13
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               T
             </cell>
             <cell>
               19
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               Z
             </cell>
@@ -113,36 +137,30 @@
             <cell>
               2
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               I
             </cell>
             <cell>
               8
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               O
             </cell>
             <cell>
               14
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               U
             </cell>
             <cell>
               20
             </cell>
-            <cell>
-            </cell>
-            <cell>
-            </cell>
-            <cell>
-            </cell>
+
+
+
           </row>
           <row bottom="minor">
             <cell>
@@ -151,36 +169,30 @@
             <cell>
               3
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               J
             </cell>
             <cell>
               9
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               P
             </cell>
             <cell>
               15
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               V
             </cell>
             <cell>
               21
             </cell>
-            <cell>
-            </cell>
-            <cell>
-            </cell>
-            <cell>
-            </cell>
+
+
+
           </row>
           <row bottom="minor">
             <cell>
@@ -189,36 +201,30 @@
             <cell>
               4
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               K
             </cell>
             <cell>
               10
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               Q
             </cell>
             <cell>
               16
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               W
             </cell>
             <cell>
               22
             </cell>
-            <cell>
-            </cell>
-            <cell>
-            </cell>
-            <cell>
-            </cell>
+
+
+
           </row>
           <row bottom="minor">
             <cell>
@@ -227,36 +233,30 @@
             <cell>
               5
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               L
             </cell>
             <cell>
               11
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               R
             </cell>
             <cell>
               17
             </cell>
-            <cell>
-            </cell>
+
             <cell>
               X
             </cell>
             <cell>
               23
             </cell>
-            <cell>
-            </cell>
-            <cell>
-            </cell>
-            <cell>
-            </cell>
+
+
+
           </row>
         </tabular>
       </table>
@@ -458,7 +458,7 @@
           a=2345
           b = 234
           l = a.xgcd(b)
-          pretty_print(str(l[0]) + "=" + str(a) + "*(" + str(l[1]) + ") + " + str(b) + "*(" + str(l[2]) + ")")
+          print(str(l[0]) + "=" + str(a) + "*(" + str(l[1]) + ") + " + str(b) + "*(" + str(l[2]) + ")")
         </input>
         <output>
           1=2345*(47) + 234*(-471)
@@ -468,13 +468,13 @@
     </p>
 
     <p>
-      In order to do modular exponentiation, we use the <code>powermod</code> function. For example, to compute <m>2019^{2019} \pmod{1000}</m>:
+      In order to do modular exponentiation, we use the <code>powermod</code> function. For example, to compute <m>2022^{2022} \pmod{1000}</m>:
       <sage>
         <input>
-          2019.powermod(2019,1000)
+          2022.powermod(2022,1000)
         </input>
         <output>
-          979
+          584
         </output>
       </sage>
     </p>
