@@ -4,7 +4,7 @@
 
   <subsection> 
     <title>
-      Relations <m>\require{cancel}</m> <!-- putting this requirement here to include \cancel in mathjax -->
+      Relations
     </title>
     <definition>
       <statement>
