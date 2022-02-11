@@ -28,7 +28,7 @@
         <p>
         <sidebyside widths="60% 30%" valign="middle">
           <image xml:id="graph-sib">
-            <description>Standard Cartesian graph showing my siblings; dot means related</description>
+            <description>Standard Cartesian graph showing my siblings. The horizontal and vertical axes are family members, labeled John, Eric, and Sarah. There is a dot on the graph when the two are related, so dots at (John, Eric), (John, Sarah), (Eric, John), (Eric, Sarah), (Sarah, John), and (Sarah, Eric). </description>
             <latex-image>
               \begin{tikzpicture}[scale=1]
               \draw[thin, gray!50] (0,0) grid (4, 4);
@@ -41,7 +41,7 @@
             </latex-image>
           </image>
           <image xml:id="my-family-graph">
-            <description>Graph showing lines connect each sibling; line means connected</description>
+            <description>Graph of two sets A and B. Elements on the left are John, Eric, and Sarah; elements on the right are John, Eric and Sarah. There is a line from John to Eric and John to Sarah; a line from Eric to John and Eric to Sarah; and a line from Sarah to John and Sarah to Eric.</description>
             <latex-image>
               \begin{tikzpicture}
               \coordinate (A)  at (0,3);
@@ -100,7 +100,7 @@
               <!-- Draw a graphical representation of the divides relation as we did in the sibling example, listing elements of the two sets and drawing lines from the left set to the right where the line means <m>a</m> divides evenly into <m>b</m>. -->
               Complete the following graph of the relation below, where a point on <m>(x,y)</m> means that <m>x </m> divides evenly into <m>y</m>. 
               <image xml:id="graph-relation-blank" width="50%">
-                <description>'blank' Cartesian graph to complete</description>
+                <description>'blank' Cartesian graph to complete. Horizontal axis is integers 1 through 10; vertical axis is integers 1 throught 10.</description>
                 <latex-image>
                   \begin{tikzpicture}[scale=1]
                   \draw[thin, gray!50] (0,0) grid (10.5, 10.5);
@@ -153,7 +153,7 @@
               <p>
                 Plot points for the graph of <m>\mathrel{R}</m> for <m>a =-3, -2, -1, 0, 1, 2, 3</m>.
                 <image xml:id="graph-relation-squares" width="50%">
-                  <description>Cartesian graph plotting squares</description>
+                  <description>Blank Cartesian graph for plotting squares. Horizontal axis is labeled a and goes from -3 to 3. Vertical axis is labeled b and goes from 0 to 9</description>
                   <latex-image>
                     \begin{tikzpicture}[scale=1]
                     \draw[thin, gray!50] (-3,0) grid (3, 10);
@@ -583,7 +583,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <p>
         Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g : A \to C</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
         <image xml:id="composition-of-functions" width="75%">
-          <description>Composition of functions</description>
+          <description>Composition of functions. Three circles are drawn separated by arrows. They are labeled A, B, and C. There is an arrow from A to B labeled S. There is an arrow from B to C labeled R, and there is a big arcing arrow from A to C labeled <m>R\circ S</m></description>
           <latex-image>
             \usetikzlibrary{calc,positioning,shapes.geometric}
 

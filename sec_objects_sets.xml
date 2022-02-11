@@ -249,7 +249,9 @@
             \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
             \end{tikzpicture}
           </latex-image>
-          <description>Venn diagram for set union</description>
+          <description>
+            Venn diagram for set union. Two circles labeled A and B. Both circles are completely shaded.
+          </description>
         </image>
       </p>
 
@@ -269,7 +271,9 @@
             \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
             \end{tikzpicture}
           </latex-image>
-          <description>Venn diagram for set intersection</description>
+          <description>
+            Venn diagram for set intersection. Two circles labeled A and B. Only where the two circles overlap is shaded.
+          </description>
         </image>
       </p>
 
@@ -288,7 +292,9 @@
             \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
             \end{tikzpicture}
           </latex-image>
-          <description>Venn diagram for set difference <m>A \setminus B</m></description>
+          <description>
+            Venn diagram for set difference <m>A \setminus B</m>. Two circles are labeled A and B. Only the part of A that doesn't overlap with B is shaded.
+          </description>
         </image>
       </p>
 
@@ -312,7 +318,9 @@
             \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
             \end{tikzpicture}
           </latex-image>
-          <description>Venn diagram for the universal set </description>
+          <description>
+            Venn diagram for the universal set. Everything is shaded, including A and B and everything outside of those circles.
+          </description>
         </image>
       </p>
 
@@ -327,7 +335,9 @@
             \draw[thick] \circleA \circleAlabel \twosetbox;
             \end{tikzpicture}
           </latex-image>
-          <description>Venn diagram for the complement of <m>A</m></description>
+          <description>
+            Venn diagram for the complement of <m>A</m>. Here there is one circle labeled A and everything outside of it is shaded.
+          </description>
         </image>
       </p>
     </definition>
@@ -740,7 +750,7 @@
 
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -772,7 +782,7 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description>Venn diagram of <m>A\cup \bar B</m></description>
+              <description>Venn diagram of <m>A\cup \bar B</m>. Two circles are labeled A and B. Everything is shaded except for the small part of B that doesn't overlap A.</description>
             </image>
             </li>
             <li><p>
@@ -786,7 +796,7 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description>Venn diagram of <m>\bar{(A \cup B)}</m></description>
+              <description>Venn diagram of <m>\bar{(A \cup B)}</m>. Two circles are labeled A and B. Everything outside the two circles are shaded. </description>
             </image>
 
             </li>
@@ -803,7 +813,7 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description>Venn diagram of <m>A \cap (B \cup C)</m></description>
+              <description>Venn diagram of <m>A \cap (B \cup C)</m> Three circles are labeled A, B, and C. Where A and B is shaded and where A and C is also shaded.</description>
             </image>
             </li>
             <li><p>
@@ -820,7 +830,7 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description> Venn diagram of <m>(A \cap B) \cup C</m></description>
+              <description> Venn diagram of <m>(A \cap B) \cup C</m>. Three circles are labeled A, B, and C. Where A and B overlap is shaded. C is also shaded completely.</description>
             </image>
             </li>
             <li><p>
@@ -838,7 +848,7 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description>Venn diagram of <m>\bar A \cap B \cap \bar C</m></description>
+              <description>Venn diagram of <m>\bar A \cap B \cap \bar C</m>. Three circles are labeled A, B, and C. Only the part of B that doesn't overlap A and doesn't overlap C is shaded.</description>
             </image>
             </li>
             <li><p>
@@ -853,7 +863,7 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description>Venn diagram of <m>(A \cup B) \setminus C</m></description>
+              <description>Venn diagram of <m>(A \cup B) \setminus C</m>. Three circles are labeled A, B, and C. Only those parts of A and B that do not overlap C are shaded. </description>
             </image>
             </li>
           </ol>
@@ -861,7 +871,7 @@
       </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
 

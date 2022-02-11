@@ -72,7 +72,7 @@
       Let's arrange the binomial coefficients <m>{n \choose k}</m> into a triangle like follows:
     </p>
     <image xml:id="pascal-small" width="80%">
-      <description>Pascal's triangle</description>
+      <description>Pascal's triangle. Numbers are arranged in rows in the shape of a triangle. The top number is 1. Next row is 1 and 1; next row is 1, 2, 1; next is 1, 3, 3, 1; and it continues. Each entry is found by adding the two entries above it: e.g. 3=1+2</description>
       <latex-image>
         \begin{tikzpicture}
         \def\r{.5}
