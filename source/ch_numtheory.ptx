@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_numtheory">
+  <title>Some Classic Number Theory</title>
+
+
+  <xi:include href="./sec_numtheory_divides.ptx"/>
+  <xi:include href="./sec_primes.ptx"/>
+  <xi:include href="./sec_gcd_euclid.ptx"/>
+
+  <xi:include href="./sec_mult_inverses.ptx"/>
+  <xi:include href="./sec_numtheory_modularexp.ptx"/>
+
+  <xi:include href="./sec_numtheory_encryption.ptx"/>
+
+</chapter>
+

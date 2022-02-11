@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<publication>
+  <!-- Set where external assets and generated assets will be   -->
+  <!-- stored or created.  Directories are relative to the main -->
+  <!-- source PreTeXt file                                      -->
+  <source webwork-problems="../generated-assets/webwork/webwork-representations.ptx">
+    <directories external="../assets" generated="../generated-assets"/>
+  </source>
+
+  <numbering>
+    <!-- the divisions element describes the numbering of divisions.  -->
+    <!-- @part-structure should be "decorative" or "structural",      -->
+    <!-- were the latter would restart numbering chapters within each -->
+    <!-- part (this only matters if your book has parts).             -->
+    <!-- The attribute @chapter-start give the number of the first    -->
+    <!-- chapter.  @level says how deep (chapter->section->subsection)-->
+    <!-- numbering should appear.                                     -->
+      <!-- For use with a book organized by parts
+    <divisions part-structure="decorative" chapter-start="1" level="3"/>
+      -->
+    <!-- The next elements say how the levels deep to break up the    -->
+    <!-- numbering of the respective elements. Can't be more than the -->
+    <!-- @level on divisions above.                                   -->
+    <blocks level="2"/>
+    <projects level="0"/>
+    <equations level="1"/>
+    <footnotes level="0"/>
+  </numbering>
+
+    <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
+    <!-- for printing; set @sides="two" if the printing woudl be two- -->
+    <!-- sided.  The asymptote/@links set to "yes" would produce      -->
+    <!-- links the html version of asymptote graphics.                -->
+  <latex print="yes" sides="one">
+    <asymptote links="no"/>
+    <exercise>
+      <divisional solution="yes"/>
+      <divisional answer="no"/>
+    </exercise>
+  </latex>
+
+  <html>
+    <knowl remark="no" example="no" proof="no"/>
+
+    <css style="default" colors="brown_gold"/>
+
+    <index-page ref="front-matter"/>
+
+    <search google-cx="015422183392601792159:vae7vvmmczm"/>
+    <video privacy="yes"/>
+  </html>
+</publication>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
 
-  <xi:include href="./bookinfo.xml"/>
+  <xi:include href="./bookinfo.ptx"/>
 
   <book xml:id="discrete-class-notes">
     <title>Math 321 Class Notes</title>
@@ -64,14 +64,14 @@
     </frontmatter>
 
 
-    <xi:include href="./ch_basics.xml"/>
-    <xi:include href="./ch_logic.xml"/>
-    <xi:include href="./ch_numtheory.xml"/>
-    <xi:include href="./ch_sequences.xml"/>
-    <xi:include href="./ch_counting.xml"/>
+    <xi:include href="./ch_basics.ptx"/>
+    <xi:include href="./ch_logic.ptx"/>
+    <xi:include href="./ch_numtheory.ptx"/>
+    <xi:include href="./ch_sequences.ptx"/>
+    <xi:include href="./ch_counting.ptx"/>
 
     <backmatter>
-      <xi:include href="./ch_appendix.xml"/>
+      <xi:include href="./ch_appendix.ptx"/>
 
       <solutions divisional="solution">
         <title>Solutions to the exercises</title>

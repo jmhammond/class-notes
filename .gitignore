@@ -40,3 +40,5 @@ temp.org
 *.listing
 /.auctex-auto/
 *.dep
+/generated-assets/
+/output/
