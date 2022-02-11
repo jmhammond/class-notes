@@ -2,13 +2,13 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_counting">
   <title>Counting Techniques</title>
 
-  <xi:include href="./sec_counting_basics_addmult.xml"/>
+  <xi:include href="./sec_counting_basics_addmult.ptx"/>
 
-  <xi:include href="./sec_counting_combperm.xml"/>
+  <xi:include href="./sec_counting_combperm.ptx"/>
 
-  <xi:include href="./sec_counting_binomial.xml"/>
+  <xi:include href="./sec_counting_binomial.ptx"/>
 
-  <xi:include href="./sec_counting_fib.xml"/>
+  <xi:include href="./sec_counting_fib.ptx"/>
 
   <!-- <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-morecounting"> -->
 

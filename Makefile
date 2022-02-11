@@ -1,21 +1,21 @@
 STYLESHEETS_DIR = ~/src/mathbook/xsl
 
 html:
-	xsltproc --xinclude -stringparam publisher pub.xml $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
+	xsltproc --xinclude -stringparam publisher pub.ptx $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
 
 #
 # Still working on this; custom css in the future.
 #
-# xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.knowl.proof no -stringparam publisher pub.xml -stringparam html.css.server http://hammond.math.wichita.edu/  $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
+# xsltproc --xinclude --stringparam html.knowl.example no --stringparam html.knowl.proof no -stringparam publisher pub.ptx -stringparam html.css.server http://hammond.math.wichita.edu/  $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
 
 all: html pdf
 
 colorscheme:
-	xsltproc --xinclude --stringparam html.css.file "pretext-manitoba.css" $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.xml
+	xsltproc --xinclude --stringparam html.css.file "pretext-manitoba.css" $(STYLESHEETS_DIR)/pretext-html.xsl class-notes.ptx
 
 
 tex:
-	xsltproc --xinclude ./xsl/latex.xsl class-notes.xml > discrete-class-notes.tex
+	xsltproc --xinclude ./xsl/latex.xsl class-notes.ptx > discrete-class-notes.tex
 
 pdf: tex
 	pdflatex discrete-class-notes.tex && pdflatex discrete-class-notes.tex
@@ -36,7 +36,10 @@ publish:
 	ssh hammond@alonzo.math.wichita.edu 'cd src/class-notes && git pull && make publish-to-web'
 
 images:
-	~/src/mathbook/pretext/pretext -vv -c latex-image -f svg -d ~/src/class-notes/images ~/src/class-notes/class-notes.xml
+	~/src/mathbook/pretext/pretext -vv -c latex-image -f svg -d ~/src/class-notes/assets ~/src/class-notes/source/class-notes.ptx
+
+validate:
+	xsltproc --xinclude ~/src/mathbook/schema/pretext-validation-plus.xsl ~/src/class-notes/class-notes.ptx
 
 # Here's the rsync command that probably works for me.
 # rsync -zartv --include "*/" --include="*.html" --exclude="*" ./  ~/public_html/notes-staging

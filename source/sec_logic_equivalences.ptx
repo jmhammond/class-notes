@@ -106,129 +106,110 @@
     <p>
       The following is a collection of very useful tautologies. Do you need to memorize them? Absolutely!
     </p>
+    <p>
+      You'll that for those laws which have two different forms they look very similar, just with different operations and truth and false swapped. Not only does this mean you actually have half as much to memorize, there's a reason for this that we'll get into when we discuss Boolean Algebras in Discrete 2!
+    </p>
   </note>
 
-  <table xml:id="table-equivalences">
-    <!-- table modified from https://github.com/klevasseur/ads //-->
-    <title>Logical Equivalences</title>
-    <tabular  halign="center">
-      <row>	
-        <cell></cell>
-        <cell>Commutative Laws</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell> <m>p \lor  q\equiv q\lor p</m>  </cell>
-        <cell></cell>
-        <cell> <m>p \land q\equiv q \land p</m></cell>
-      </row>
-      <row>
-        <cell></cell>
-        <cell>Associative Laws</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell><m>(p \lor  q) \lor r \equiv  p \lor  (q \lor  r)</m></cell>
-        <cell></cell>
-        <cell>(<m>p \land q) \land r\equiv p \land  (q \land  r)</m></cell>
-      </row>
-      <row>
-        <cell></cell>
-        <cell>Distributive Laws</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell><m>p \land  (q \lor  r) \equiv  (p \land  q ) \lor  (p \land  r)</m></cell>
-        <cell></cell>
-        <cell><m>p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r)</m> </cell>
-      </row>
-      <row>
-        <cell></cell>
-        <cell>Identity Laws</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell><m>p \lor  F\equiv p</m></cell>
-        <cell></cell>
-        <cell> <m>p \land  T \equiv p</m></cell>
-      </row>
-      <row>
-        <cell></cell>
-        <cell>Negation Laws</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell><m>p\land \neg p\equiv F</m></cell>
-        <cell></cell>
-        <cell> <m>p\lor \neg p\equiv T</m></cell>
-      </row>
-      <row>
-        <cell></cell>
-        <cell>Idempotent Laws</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell><m>p \lor  p \equiv p</m> </cell>
-        <cell></cell>
-        <cell>  <m>p\land p \equiv p</m></cell>
-      </row>
-      <row>
-        <cell></cell>
-        <cell>Domination Laws</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell><m>p \land F \equiv F</m> </cell>
-        <cell></cell>
-        <cell> <m>p \lor  T \equiv T</m></cell>
-      </row>
-      <row>
-        <cell></cell>
-        <cell>Absorption Laws</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell><m>p \land (p\lor  q)\equiv p</m></cell>
-        <cell></cell>
-        <cell><m>p \lor  (p \land  q) \equiv  p</m></cell>
-      </row>
-      <row>
-        <cell></cell>
-        <cell>DeMorgan's Laws</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell><m>\neg (p \lor  q) \equiv  (\neg p) \land  (\neg q)</m></cell>
-        <cell></cell>
-        <cell><m>\neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)</m></cell>
-      </row>
-      <row>
-        <cell></cell>
-        <cell>Double Negation Law</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell></cell>
-        <cell> <m>\neg (\neg p)\equiv p</m></cell>
-        <cell></cell>
-      </row>
-      <row>
-        <cell></cell>
-        <cell>Implication</cell>
-        <cell></cell>
-      </row>
-      <row bottom="medium">
-        <cell></cell>
-        <cell> <m>p \to q \equiv \neg p \lor q</m></cell>
-        <cell></cell>
-      </row>
-    </tabular>
-  </table>
+  <list xml:id="list-logical-equivalences">
+    <title>
+      Fundamental logical equivalences
+    </title>
+
+    <introduction>
+      Let <m>p, q</m> and <m>r</m> be logical propositions.
+    </introduction>
+
+    <ol>
+      <li>
+        <term>Commutative Laws</term>:
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p>
+            <m>p \lor  q\equiv q\lor p</m>
+          </p>
+          <p>
+            <m>p \land q\equiv q \land p</m>
+          </p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Associative Laws:</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p><m>(p \lor  q) \lor r \equiv  p \lor  (q \lor  r)</m></p>
+          <p><m>(p \land q) \land r\equiv p \land  (q \land  r)</m></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Distributive Laws:</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p><m>p \land  (q \lor  r) \equiv  (p \land  q ) \lor  (p \land  r)</m></p>
+          <p><m>p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r)</m> </p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Identity Laws:</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p><m>p \lor  F\equiv p</m></p>
+          <p> <m>p \land  T \equiv p</m></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Negation Laws:</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p><m>p\land \neg p\equiv F</m></p>
+          <p> <m>p\lor \neg p\equiv T</m></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Idempotent Laws:</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p><m>p \lor  p \equiv p</m> </p>
+          <p>  <m>p\land p \equiv p</m></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Domination Laws:</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p><m>p \land F \equiv F</m> </p>
+          <p> <m>p \lor  T \equiv T</m></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Absorption Laws:</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p><m>p \land (p\lor  q)\equiv p</m></p>
+          <p><m>p \lor  (p \land  q) \equiv  p</m></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>DeMorgan's Laws:</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p><m>\neg (p \lor  q) \equiv  (\neg p) \land  (\neg q)</m></p>
+          <p><m>\neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)</m></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Double Negation Law:</term>
+        <sidebyside widths="40% 40%" margin="auto">
+          <p> <m>\neg (\neg p)\equiv p</m></p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Implication:</term>
+        <sidebyside widths="40% 40%" margin="auto">
+          <p> <m>p \to q \equiv \neg p \lor q</m></p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+    </ol>
+  </list>
+
 
   <example xml:id="example-contradiction-logic">
     <statement>
       <p>
-        Use existing logical equivalences from <xref ref="table-equivalences"/> to show the following are equivalent.
+        Use existing logical equivalences from <xref ref="list-logical-equivalences"/> to show the following are equivalent.
         <ol>
           <li>
             <m>p \wedge q \equiv \neg(p \to \neg q)</m>
@@ -242,11 +223,8 @@
           <li><m>( \neg p \to (q \wedge \neg q)  ) \equiv p</m></li>
         </ol>
       </p>
-      <p><note>
-        <p>
-          This is your first experience with logical proof! It won't be your last. Much of this class is about learning to understand and argue rigorously.
-        </p>
-      </note>
+      <p>
+        This is your first experience with logical proof! It won't be your last. Much of this class is about learning to understand and argue rigorously.
       </p>
     </statement>
     <answer>
