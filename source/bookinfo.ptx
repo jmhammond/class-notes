@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <brandlogo url="http://www.math.wichita.edu/discrete-book" source="./images/WSULogo.png" />
+<!-- Note that images need just the name, not the directory prefix! /-->
+  <brandlogo url="http://www.math.wichita.edu/discrete-book" source="WSULogo.png" />
 
   <macros> 
     \def\ds{\displaystyle}
@@ -78,8 +79,6 @@
 
     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
     \usetikzlibrary{decorations.markings}
-
-    \usepackage{skak} %for chessboards etc.
 
     \tikzset{-&gt;-/.style={decoration={
     markings,

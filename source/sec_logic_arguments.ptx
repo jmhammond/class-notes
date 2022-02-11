@@ -30,70 +30,133 @@
       </p>
       <p>
         This argument is of the form:
-        <sidebyside>
-          <tabular halign="center">
-            <row>
-              <cell/>
-              <cell><m>p \to q</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell/>
-              <cell><m> p</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>q</m></cell>
-            </row>
-          </tabular>
-        </sidebyside>
+        <tabular halign="center">
+          <row>
+            <cell/>
+            <cell><m>p \to q</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell/>
+            <cell><m> p</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore</m></cell>
+            <cell><m>q</m></cell>
+          </row>
+        </tabular>
         and is valid since <m> ((p \to q) \wedge p) \to q</m> is a tautology.
       </p>
     </statement>
   </example>
 
-  <p> Below is a table of common argument forms, also known as rules of inference. Observe that we're using <m>\Leftrightarrow</m> and <m>\Rightarrow</m> to show <q>if and only if</q> and <q>if, then</q>. This symbolic choice is to highlight the difference between the hypotheses and conclusion of the argument, and carries no additional meaning for the purposes of this course.</p>
+  <p> Below is a table of common argument forms, also known as rules of inference. Observe that we're using <m>\Rightarrow</m> to show <q>if, then</q>. This symbolic choice is to highlight the difference between the hypotheses and conclusion of the argument, and carries no additional meaning for the purposes of this course.</p>
 
-  <table xml:id="table-implications">
-    <!-- table modified from https://github.com/klevasseur/ads //-->
-    <title>Basic Logical Laws - Common Implications and Equivalences</title>
-    <tabular  halign="center">
+  <list xml:id="list-logical-arguments">
+    <title>
+      Basic argument forms - rule of inference
+    </title>
 
-      <row bottom="medium"><cell>Modus Ponens / Detachment</cell><cell>
-      <m>(p \rightarrow  q) \land  p\Rightarrow  q</m></cell></row>
+    <introduction>
+      Let <m>p, q \and r</m> be logical propositions. The following are tautologies:
+    </introduction>
 
-      <row bottom="medium"><cell>Modus Tollens / Indirect Reasoning</cell><cell>
-      <m>(p \to  q) \land  \neg q \Rightarrow  \neg p</m></cell></row>
+    <ol>
+      <li>
+        <term>Modus Ponens/Direct reasoning</term>:
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p>
+            <m>(p\to q) \land p \Rightarrow q</m>
+          </p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Modus Tollens / Indirect Reasoning</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p>
+            <m>(p \to  q) \land  \neg q \Rightarrow  \neg p</m>
+          </p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Disjunctive Addition</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p>
+            <m>p\Rightarrow (p\lor q)</m>
+          </p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Conjunctive Simplification</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p>
+            <m>(p \land  q) \Rightarrow  p</m>
+            <line/> <line/>
+            <m>(p \land  q) \Rightarrow  q</m>
+          </p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Disjunctive Simplification</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p>
+            <m>(p \lor  q) \land  \neg p \Rightarrow  q</m>
+            <line/>
+            <m>(p \lor q) \land \neg q\Rightarrow p</m>
+          </p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Chain Argument / Syllogism</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p>
+            <m>(p \to  q) \land  ( q \rightarrow  r) \Rightarrow  (p\to  r)</m>
+          </p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Biconditional Equivalences</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p>
+            <m>(p \leftrightarrow  q) \equiv  (p\rightarrow q) \land  (q \rightarrow  p)</m><line/>
+            <m>(p \leftrightarrow  q) \equiv (p \land  q) \lor  (\neg p \land  \neg q)</m>
+          </p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Implication / Conditional Equivalence</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p>
+            <m>p \rightarrow  q \equiv  \neg p \lor  q</m>
+          </p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+      <li>
+        <term>Contraposition</term>
+        <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <p>
+            <m>(p\to q) \equiv (\neg q \to \neg p)</m>
+          </p>
+          <p><!-- intentionally blank /--></p>
+        </sidebyside>
+      </li>
+    </ol>
+  </list>
 
-      <row bottom="medium"><cell>Disjunctive Addition</cell><cell>
-      <m>p\Rightarrow (p\lor q)</m></cell></row>
-
-      <row bottom="medium"><cell>Conjunctive Simplification</cell><cell>
-      <m>(p \land  q) \Rightarrow  p</m> and <m>(p \land  q) \Rightarrow  q</m></cell></row>
-
-      <row bottom="medium"><cell>Disjunctive Simplification</cell><cell>
-      <m>(p \lor  q) \land  \neg p \Rightarrow  q</m> and <m>(p \lor q) \land \neg q\Rightarrow p</m></cell></row>
-
-      <row bottom="medium"><cell>Chain Argument / Syllogism</cell><cell>
-      <m>(p \to  q) \land  ( q \rightarrow  r) \Rightarrow  (p\to  r)</m>
-      </cell></row>
-      <row bottom="medium"><cell>Conditional Equivalence</cell><cell>
-      <m>p \rightarrow  q \Leftrightarrow  \neg p \lor  q</m></cell></row>
-
-      <row bottom="medium"><cell>Biconditional Equivalences</cell><cell>
-      <m>(p \leftrightarrow  q) \Leftrightarrow  (p\rightarrow q) \land  (q \rightarrow  p)\Leftrightarrow (p \land  q) \lor  (\neg p \land  \neg q)</m></cell></row>
-
-      <row><cell>Contrapositive</cell><cell>
-      <m>(p\to q) \Leftrightarrow (\neg q \to \neg p)</m></cell></row> 
-    </tabular>
-  </table>
-
-  <exercise>
+  <note>
     <statement>
       <p>
-        Verify that each of the arguments in table <xref ref="table-implications"/> is a tautology.
+        It would be good practice to verify that each of the arguments in table <xref ref="list-logical-arguments"/> is a tautology using either true tables or logical equivalences.
       </p>
     </statement>
-  </exercise>
+  </note>
 
   <example>
     <statement>
@@ -270,22 +333,20 @@
         <p>
           Determine if the following deduction rule is valid:
         </p>
-        <sidebyside>
-          <tabular halign="center">
-            <row>
-              <cell/>
-              <cell><m>p \vee q</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell/>
-              <cell><m>\neg p</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>q</m></cell>
-            </row>
-          </tabular>
-        </sidebyside>
+        <tabular halign="center">
+          <row>
+            <cell/>
+            <cell><m>p \vee q</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell/>
+            <cell><m>\neg p</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore</m></cell>
+            <cell><m>q</m></cell>
+          </row>
+        </tabular>
       </statement>
       <solution>
         <p>
@@ -300,22 +361,20 @@
         <p>
           Determine if the following is a valid deduction rule:
         </p>
-        <sidebyside>
-          <tabular halign="center">
-            <row>
-              <cell/>
-              <cell><m>p \to (q \vee r)</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell/>
-              <cell><m>\neg(p \to q)</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>r</m></cell>
-            </row>
-          </tabular>
-        </sidebyside>
+        <tabular halign="center">
+          <row>
+            <cell/>
+            <cell><m>p \to (q \vee r)</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell/>
+            <cell><m>\neg(p \to q)</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore</m></cell>
+            <cell><m>r</m></cell>
+          </row>
+        </tabular>
       </statement>
       <solution>
         <p>
@@ -331,22 +390,20 @@
         <p>
           Determine if the following is a valid deduction rule:
         </p>
-        <sidebyside>
-          <tabular halign="center">
-            <row>
-              <cell/>
-              <cell><m>(p \wedge q) \to r</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell/>
-              <cell><m>\neg p \vee \neg q</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>\neg r</m></cell>
-            </row>
-          </tabular>
-        </sidebyside>
+        <tabular halign="center">
+          <row>
+            <cell/>
+            <cell><m>(p \wedge q) \to r</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell/>
+            <cell><m>\neg p \vee \neg q</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore</m></cell>
+            <cell><m>\neg r</m></cell>
+          </row>
+        </tabular>
       </statement>
       <solution>
         <p>
@@ -363,22 +420,20 @@
           Show that the following is a valid deduction rule by building a truth table.
         </p>
         <p>
-          <sidebyside>
-            <tabular halign="center">
-              <row>
-                <cell/>
-                <cell><m>p \to q</m></cell>
-              </row>
-              <row bottom="minor">
-                <cell/>
-                <cell><m>q \to r</m></cell>
-              </row>
-              <row>
-                <cell><m>\therefore</m></cell>
-                <cell><m>p \to r</m></cell>
-              </row>
-            </tabular>
-          </sidebyside>
+          <tabular halign="center">
+            <row>
+              <cell/>
+              <cell><m>p \to q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>q \to r</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>p \to r</m></cell>
+            </row>
+          </tabular>
         </p>
       </statement>
       <!-- <solution> -->

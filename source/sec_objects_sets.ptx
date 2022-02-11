@@ -260,18 +260,18 @@
 
       <p>
         As a Venn diagram:
-        <sidebyside width="20%">
-          <image xml:id="A-or-B">
-            <latex-image>
-              \begin{tikzpicture}[scale=.75]
-              \fill[color=gray] \circleA;
-              \fill[color=gray] \circleB;
-              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram for set union</description>
-          </image>
-        </sidebyside>
+        <image xml:id="A-or-B" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[scale=.75]
+            \fill[color=gray] \circleA;
+            \fill[color=gray] \circleB;
+            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+            \end{tikzpicture}
+          </latex-image>
+          <description>
+            Venn diagram for set union. Two circles labeled A and B. Both circles are completely shaded.
+          </description>
+        </image>
       </p>
 
       <p>
@@ -281,19 +281,19 @@
 
       <p>
         As a Venn diagram:
-        <sidebyside width="20%">
-          <image xml:id="A-and-B">
-            <latex-image>
-              \begin{tikzpicture}[scale=.75]
-              \fill[color=gray] \circleA;
-              \fill[color=gray] \circleB;
-              \fill[even odd rule, color=white] \circleA \circleB;
-              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram for set intersection</description>
-          </image>
-        </sidebyside>
+        <image xml:id="A-and-B" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[scale=.75]
+            \fill[color=gray] \circleA;
+            \fill[color=gray] \circleB;
+            \fill[even odd rule, color=white] \circleA \circleB;
+            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+            \end{tikzpicture}
+          </latex-image>
+          <description>
+            Venn diagram for set intersection. Two circles labeled A and B. Only where the two circles overlap is shaded.
+          </description>
+        </image>
       </p>
 
       <p>
@@ -303,18 +303,18 @@
 
       <p>
         As a Venn diagram:
-        <sidebyside width="20%">
-          <image xml:id="A-minus-B">
-            <latex-image>
-              \begin{tikzpicture}[scale=.75]
-              \fill[color=gray] \circleA;
-              \fill[color=white] \circleB;
-              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram for set difference <m>A \setminus B</m></description>
-          </image>
-        </sidebyside>
+        <image xml:id="A-minus-B" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[scale=.75]
+            \fill[color=gray] \circleA;
+            \fill[color=white] \circleB;
+            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+            \end{tikzpicture}
+          </latex-image>
+          <description>
+            Venn diagram for set difference <m>A \setminus B</m>. Two circles are labeled A and B. Only the part of A that doesn't overlap with B is shaded.
+          </description>
+        </image>
       </p>
 
       <note>
@@ -330,34 +330,34 @@
       <p>
         Let <m>U</m> be the <term>universal set</term>, that is the set of all possible objects in consideration.
 
-        <sidebyside width="20%">
-          <image xml:id="universal-set">
-            <latex-image>
-              \begin{tikzpicture}[scale=.75]
-              \fill[color=gray] \twosetbox;
-              \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram for the universal set </description>
-          </image>
-        </sidebyside>
+        <image xml:id="universal-set" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[scale=.75]
+            \fill[color=gray] \twosetbox;
+            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+            \end{tikzpicture}
+          </latex-image>
+          <description>
+            Venn diagram for the universal set. Everything is shaded, including A and B and everything outside of those circles.
+          </description>
+        </image>
       </p>
 
       <p>
         If <m>A</m> is a set, the <term>complement</term> of <m>A</m>, denoted <m>\overline{A}</m>, is the set difference <m>\overline{A} = U \setminus A</m>.
 
-        <sidebyside width="20%">
-          <image xml:id="A-complement">
-            <latex-image>
-              \begin{tikzpicture}[scale=.75]
-              \fill[color=gray] \twosetbox;
-              \fill[color=white] \circleA;
-              \draw[thick] \circleA \circleAlabel \twosetbox;
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram for the complement of <m>A</m></description>
-          </image>
-        </sidebyside>
+        <image xml:id="A-complement" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[scale=.75]
+            \fill[color=gray] \twosetbox;
+            \fill[color=white] \circleA;
+            \draw[thick] \circleA \circleAlabel \twosetbox;
+            \end{tikzpicture}
+          </latex-image>
+          <description>
+            Venn diagram for the complement of <m>A</m>. Here there is one circle labeled A and everything outside of it is shaded.
+          </description>
+        </image>
       </p>
     </definition>
 
@@ -394,7 +394,9 @@
 
   <subsection>
     <title>Verifying Set Identities</title>
-
+    <p>
+        An <term>identity</term> is a statement which is true if we replace the variables with specific sets. One way that we can show that an identity is true by shading a Venn Diagram for each side of the equality.
+    </p>
 
     <example>
       <statement>
@@ -414,149 +416,100 @@
       </answer>
     </example>
 
+    <list xml:id="list-set-identities">
+      <title>Fundamental set identities</title>
+      <introduction>
+        Let <m>A, B</m> and <m>C</m> be three sets and let <m>U</m> be the universal set.
+      </introduction>
+
+      <ol>
+        <li>
+          <term>Commutative Laws</term>:
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p>
+              <m>A \cup B = B \cup A</m>
+            </p>
+            <p>
+              <m>A \cap B = B \cap A</m>
+            </p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Associative Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>(A \cup B) \cup C = A \cup (B \cup C)</m></p>
+            <p><m>(A \cap B) \cap C = A \cap (B \cap C)</m></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Distributive Laws:</term><line/>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p>
+              <m>A \cap (B \cup C) = (A \cap B) \cup (A \cap C) </m><line/>
+              <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C) </m>
+            </p>
+            <p><!-- intentionally blank /--></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Identity Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>A \cup \emptyset = A</m></p>
+            <p><m>A \cap U = A</m></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Negation Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>A \cap \overline{A} = \emptyset</m></p>
+            <p><m>A \cup \overline{A} = U</m></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Idempotent Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>A \cup A = A</m> </p>
+            <p><m>A \cap A = A</m> </p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Domination Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>A \cap \emptyset = \emptyset</m> </p>
+            <p><m>A \cup U = U</m> </p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Absorption Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>A \cap (A \cup B)= A</m></p>
+            <p><m>A \cup (A \cap B)= A</m></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>DeMorgan's Laws:</term>
+          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+            <p><m>\overline{(A\cup B)} = \overline{A}\cap \overline{B}</m></p>
+            <p><m>\overline{(A\cap B)} = \overline{A}\cup \overline{B}</m></p>
+          </sidebyside>
+        </li>
+        <li>
+          <term>Double Negation Law:</term>
+          <sidebyside widths="40% 40%" margin="auto">
+            <p> <m>\overline{\overline{A}} = A</m></p>
+            <p><!-- intentionally blank /--></p>
+          </sidebyside>
+        </li>
+      </ol>
+    </list>
+
     <note>
-      <p>
-        The following is a listing of common identities for set operations. An <term>identity</term> is a statement which is true if we replace the variables with specific sets.
-      </p>
-    </note>
-
-    <table xml:id="table-setidentities">
-      <!-- table modified from https://github.com/klevasseur/ads //-->
-      <title>Set Identities</title>
-      <tabular  halign="center">
-        <row>	
-          <cell></cell>
-          <cell>Commutative Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell> <m>A \cup  B= B\cup A</m>  </cell>
-          <cell></cell>
-          <cell> <m>A \cap B= B \cap A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Associative Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>(A \cup  B) \cup C =  A \cup  (B \cup  C)</m></cell>
-          <cell></cell>
-          <cell>(<m>A \cap B) \cap C= A \cap  (B \cap  C)</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Distributive Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cap  (B \cup  C) =  (A \cap  B ) \cup  (A \cap  C)</m></cell>
-          <cell></cell>
-          <cell><m>A \cup  (B \cap  C) =  (A \cup  B) \cap (A \cup C)</m> </cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Identity Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cup  \emptyset= A</m></cell>
-          <cell></cell>
-          <cell> <m>A \cap  U = A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Negation Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A\cap \overline{A}= \emptyset</m></cell>
-          <cell></cell>
-          <cell> <m>A\cup \overline{A}= U</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Idempotent Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cup  A = A</m> </cell>
-          <cell></cell>
-          <cell>  <m>A\cap A = A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Domination Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cap \emptyset = \emptyset</m> </cell>
-          <cell></cell>
-          <cell> <m>A \cup  U = U</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Absorption Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>A \cap (A\cup  B)= A</m></cell>
-          <cell></cell>
-          <cell><m>A \cup  (A \cap  B) =  A</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>DeMorgan's Laws</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell><m>\overline{(A \cup  B)} =  \overline{A} \cap  \overline{B}</m></cell>
-          <cell></cell>
-          <cell><m>\overline{(A \cap  B)} =  \overline{A} \cup  \overline{B}</m></cell>
-        </row>
-        <row>
-          <cell></cell>
-          <cell>Double Negation Law</cell>
-          <cell></cell>
-        </row>
-        <row bottom="medium">
-          <cell></cell>
-          <cell> <m>\overline{\overline{A}}= A</m></cell>
-          <cell></cell>
-        </row>
-      </tabular>
-    </table>
-
-    <exercise>
       <statement>
         <p>
-          Confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.
+          It would be good practice to take a moment and confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.
         </p>
       </statement>
-    </exercise>
-    
-    <!-- TODO move these to a different section applying logic --> 
-    <!--   <example> -->
-    <!--     <statement> -->
-    <!--       <p> -->
-    <!--         Verify the following set identity by using the basic identities in the table above: <m>A \cap (A \cup B) = A</m>. -->
-    <!--       </p> -->
-    <!--     </statement> -->
-    <!--   </example> -->
-
-    <!--   <example> -->
-    <!--     <statement> -->
-    <!--       <p> -->
-    <!--         The set identities are true as an extension of logic. For example, the identity <m>A \cup \emptyset = A</m> is: -->
-    <!--         <md> -->
-    <!--           <mrow>A \cup \emptyset &amp;= \{ x \mid x \in A \lor x \in \emptyset\} </mrow> -->
-    <!--           <mrow>&amp;= \{x \in A \lor F \} </mrow> -->
-    <!--           <mrow>&amp;= \{x \in A\} </mrow> -->
-    <!--           <mrow>&amp;= A </mrow> -->
-    <!--         </md> -->
-    <!--       </p> -->
-    <!--     </statement> -->
-    <!--   </example> -->
+    </note>
 
   </subsection>
 
@@ -777,7 +730,7 @@
 
 
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -798,147 +751,133 @@
             <li><p>
               <m>A \cup \bar B</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="A-or-not-B">
-                <latex-image>
-                  \begin{tikzpicture}[fill=gray!50, scale=.75]
-                  \fill \circleA;
-                  \begin{scope}
-                  \clip \circleB \twosetbox;
-                  \fill \twosetbox;
-                  \end{scope}
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description>Venn diagram of <m>A\cup \bar B</m></description>
-              </image>
-            </sidebyside>
+            <image xml:id="A-or-not-B" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[fill=gray!50, scale=.75]
+                \fill \circleA;
+                \begin{scope}
+                \clip \circleB \twosetbox;
+                \fill \twosetbox;
+                \end{scope}
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description>Venn diagram of <m>A\cup \bar B</m>. Two circles are labeled A and B. Everything is shaded except for the small part of B that doesn't overlap A.</description>
+            </image>
             </li>
             <li><p>
               <m>\bar{(A \cup B)}</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="not-A-or-B">
-                <latex-image>
-                  \begin{tikzpicture}[scale=.5, fill=gray!50]
-                  \fill \twosetbox;
-                  \fill[white] \circleA \circleB;
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description>Venn diagram of <m>\bar{(A \cup B)}</m></description>
-              </image>
-            </sidebyside>
+            <image xml:id="not-A-or-B" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[scale=.5, fill=gray!50]
+                \fill \twosetbox;
+                \fill[white] \circleA \circleB;
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description>Venn diagram of <m>\bar{(A \cup B)}</m>. Two circles are labeled A and B. Everything outside the two circles are shaded. </description>
+            </image>
 
             </li>
             <li><p>
               <m>A \cap (B \cup C)</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="A-and-B-or-C">
-                <latex-image>
-                  \begin{tikzpicture}[fill=gray!50, scale=.5]
-                  \begin{scope}
-                  \clip \circleA;
-                  \fill \circleB \circleC;
-                  \end{scope}
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description>Venn diagram of <m>A \cap (B \cup C)</m></description>
-              </image>
-            </sidebyside>
+            <image xml:id="A-and-B-or-C" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[fill=gray!50, scale=.5]
+                \begin{scope}
+                \clip \circleA;
+                \fill \circleB \circleC;
+                \end{scope}
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description>Venn diagram of <m>A \cap (B \cup C)</m> Three circles are labeled A, B, and C. Where A and B is shaded and where A and C is also shaded.</description>
+            </image>
             </li>
             <li><p>
               <m>(A \cap B) \cup C</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="A-and-B-cup-C">
-                <latex-image>
-                  \begin{tikzpicture}[fill=gray!50, scale=.5]
-                  \begin{scope}
-                  \clip \circleA;
-                  \fill \circleB;
-                  \end{scope}
-                  \fill \circleC;
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description> Venn diagram of <m>(A \cap B) \cup C</m></description>
-              </image>
-            </sidebyside>
+            <image xml:id="A-and-B-cup-C" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[fill=gray!50, scale=.5]
+                \begin{scope}
+                \clip \circleA;
+                \fill \circleB;
+                \end{scope}
+                \fill \circleC;
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description> Venn diagram of <m>(A \cap B) \cup C</m>. Three circles are labeled A, B, and C. Where A and B overlap is shaded. C is also shaded completely.</description>
+            </image>
             </li>
             <li><p>
               <m>\bar A \cap B \cap \bar C</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="not-A-cap-B-cap-not-C">
-                <latex-image>
-                  \begin{tikzpicture}[fill=gray!50, scale=.5]
-                  \fill \circleB;
-                  \begin{scope}
-                  \clip \circleB;
-                  \fill[white] \circleA \circleC;
-                  \end{scope}
+            <image xml:id="not-A-cap-B-cap-not-C" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[fill=gray!50, scale=.5]
+                \fill \circleB;
+                \begin{scope}
+                \clip \circleB;
+                \fill[white] \circleA \circleC;
+                \end{scope}
 
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description>Venn diagram of <m>\bar A \cap B \cap \bar C</m></description>
-              </image>
-            </sidebyside>
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description>Venn diagram of <m>\bar A \cap B \cap \bar C</m>. Three circles are labeled A, B, and C. Only the part of B that doesn't overlap A and doesn't overlap C is shaded.</description>
+            </image>
             </li>
             <li><p>
               <m>(A \cup B) \setminus C</m>:
             </p>
-            <sidebyside width="20%">
-              <image xml:id="A-or-B-less-C">
-                <latex-image>
-                  \begin{tikzpicture}[fill=gray!50, scale=.5]
-                  \fill \circleA;
-                  \fill \circleB;
-                  \fill[white] \circleC;
-                  \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
-                  \end{tikzpicture}
-                </latex-image>
-                <description>Venn diagram of <m>(A \cup B) \setminus C</m></description>
-              </image>
-            </sidebyside>
+            <image xml:id="A-or-B-less-C" width="25%">
+              <latex-image>
+                \begin{tikzpicture}[fill=gray!50, scale=.5]
+                \fill \circleA;
+                \fill \circleB;
+                \fill[white] \circleC;
+                \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
+                \end{tikzpicture}
+              </latex-image>
+              <description>Venn diagram of <m>(A \cup B) \setminus C</m>. Three circles are labeled A, B, and C. Only those parts of A and B that do not overlap C are shaded. </description>
+            </image>
             </li>
           </ol>
         </p>
       </solution>
     </exercise>
 
-    <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
 
         <p>
           Describe a set in terms of <m>A</m> and <m>B</m> (using set notation) which has the following Venn diagram:
         </p>
-        <sidebyside width="20%">
-          <image xml:id="not-A-and-B">
-            <latex-image>
-              \begin{tikzpicture}[fill=gray!50, scale=0.5]
-              \scope
-              \clip (-2,-2) rectangle (2,2)
-              (1,0) circle (1);
-              \fill (0,0) circle (1);
-              \endscope
-              \scope
-              \clip (-2,-2) rectangle (2,2)
-              (0,0) circle (1);
-              \fill (1,0) circle (1);
-              \endscope
-              \draw[thick] (0,0) circle (1) (-1,.7)  node [text=black,above] {\(A\)}
-              (1,0) circle (1) (2,.7)  node [text=black,above] {\(B\)}
-              (-1.5,-1.5) rectangle (2.5,1.5);
-              \end{tikzpicture}
-            </latex-image>
-            <description>Venn diagram: A is mostly shaded, B is mostly shaded, but the area where A and B overlap is not.</description>
-          </image>
-        </sidebyside>
+        <image xml:id="not-A-and-B" width="25%">
+          <latex-image>
+            \begin{tikzpicture}[fill=gray!50, scale=0.5]
+            \scope
+            \clip (-2,-2) rectangle (2,2)
+            (1,0) circle (1);
+            \fill (0,0) circle (1);
+            \endscope
+            \scope
+            \clip (-2,-2) rectangle (2,2)
+            (0,0) circle (1);
+            \fill (1,0) circle (1);
+            \endscope
+            \draw[thick] (0,0) circle (1) (-1,.7)  node [text=black,above] {\(A\)}
+            (1,0) circle (1) (2,.7)  node [text=black,above] {\(B\)}
+            (-1.5,-1.5) rectangle (2.5,1.5);
+            \end{tikzpicture}
+          </latex-image>
+          <description>Venn diagram: A is mostly shaded, B is mostly shaded, but the area where A and B overlap is not.</description>
+        </image>
       </statement>
 
       <solution>

@@ -2,11 +2,11 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_sequences">
   <title>Sequences, Recurrence, and Induction</title>
 
-  <xi:include href="./sec_objects_seqseries.xml"/>
+  <xi:include href="./sec_objects_seqseries.ptx"/>
 
-  <xi:include href="./sec_solvingrecurrence.xml"/>
+  <xi:include href="./sec_solvingrecurrence.ptx"/>
 
-  <xi:include href="./sec_logic_induction.xml"/>
+  <xi:include href="./sec_logic_induction.ptx"/>
 
 
 </chapter>

@@ -23,7 +23,19 @@ For that reason, I have a number of branches that I'm going to try to maintain (
 
 If you catch an error, let me know and I'll make the fix. Thanks!
 
-Build Directions (in case someone is just getting started with PreText)
+### Build Directions
+- [install the `pretext` command](https://pretextbook.org/doc/guide/html/quickstart-getting-pretext.html).
+- run `pretext build html` or pdf
+- run `pretext view html` to preview via local web server
+
+Building images from latex code: 
+- run `pretext build html -d`.  The `-d` means **d**iagrams
+
+### OLD Build Directions 
+
+**These don't work anymore!**  I migrated my code to use the `pretext` command line tool instead of `xsltproc` directly. I'm leaving this here in case I want to go back to my Makefiles...
+
+
 - Clone the PreText/Mathbook repository https://github.com/rbeezer/mathbook.git
 - Install `xsltproc`
 - Run commands like the ones you see in my Makefile. It's as easy as: 
@@ -31,15 +43,14 @@ Build Directions (in case someone is just getting started with PreText)
   
 Image building dependencies
 - In addition to a basic latex distribution, the `mbx` script from pretext requires xetex
-- the images require the texlive-games package for the skak.sty style file.
 - To build the svg images from the latex code, run: 
 ```bash
-~/src/mathbook/script/mbx -vv -c latex-image -f svg -d ~/src/class-notes/images ~/src/class-notes/class-notes.xml
+~/src/mathbook/script/pretext -vv -c latex-image -f svg -d ~/src/class-notes/assets ~/src/class-notes/source/class-notes.ptx
 ```
 (where the location of the pretext /mathbook/ folder and this set of class notes would depend on your own machine)
 
   
-Acknowledgements: 
+### Acknowledgements: 
 - Special thanks also goes to the Wichita State Open/Alternative Textbook Initiative for their generous grant to help expand the text.
 - I was inspired to write my notes when I encounted [Alan Doerr & Kenneth Levasseur`s Applied Discrete Structures](https://github.com/klevasseur/ads) which I used as a supplemental text for my computer science based mathematical structures course (Math 322).
 - I borrow heavily from the exercises of Oscar Levin's [Discrete Mathematics: An Open Introduction](https://github.com/oscarlevin/discrete-book).

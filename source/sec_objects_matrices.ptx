@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_objects_matrices">
   <title>Matrices</title>
+
+  <!-- You've noticed this isn't used anywhere. I don't want to delete it yet.  I'll probably add it somewhere at some point! //-->
   
   <definition>
     <p>
