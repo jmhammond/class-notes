@@ -61,7 +61,7 @@
             <li> Move one disk at a time to any other peg. A move is valid only if a smaller disk is placed on top a larger one.</li>
           </ol>
           <figure>
-            <image source="./images/Tower_of_Hanoi_4.gif" width="50%">
+            <image source="Tower_of_Hanoi_4.gif" width="50%">
               <description>
                 The Animation of the Towers of Hanoi puzzle by André Karwath. There are three pegs and in this picture four disks. The animation proceeds to show moving the top disk to the far right peg. The next disk to the middle peg, then the smallest disk to the second peg... and so on until we have moved all disks to the third peg.
               </description>

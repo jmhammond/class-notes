@@ -73,7 +73,7 @@
     <backmatter>
       <xi:include href="./ch_appendix.ptx"/>
 
-      <solutions divisional="solution">
+      <solutions divisional="hint solution">
         <title>Solutions to the exercises</title>
       </solutions>
     </backmatter>
