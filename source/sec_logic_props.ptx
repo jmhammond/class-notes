@@ -17,9 +17,11 @@
     <title>The Basics</title>
 
     <definition>
-      <p>
-        A <term>logical proposition</term> or <term>logical statement</term> is a sentence which is either true or false, but not both.
-      </p>
+      <statement>
+        <p>
+          A <term>logical proposition</term> or <term>logical statement</term> is a sentence which is either true or false, but not both.
+        </p>
+      </statement>
     </definition>
 
     <example>
@@ -38,9 +40,11 @@
     </example>
 
     <definition>
-      <p>
-        Let <m>p</m> be a logical proposition. The <term>negation</term> of <m>p</m>, denoted by <m>\neg p</m> has the opposite truth value of <m>p</m>.
-      </p>
+      <statement>
+        <p>
+          Let <m>p</m> be a logical proposition. The <term>negation</term> of <m>p</m>, denoted by <m>\neg p</m> has the opposite truth value of <m>p</m>.
+        </p>
+      </statement>
     </definition>
 
     <example>
@@ -64,26 +68,30 @@
     </example>
 
     <definition>
-      <p>
-        Let <m>p</m> and <m>q</m> be propositions. The <term>conjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \wedge q</m>, is the proposition <q> <m>p</m> and <m>q</m> </q>.
-      </p>
-      <p>
-        The <term> disjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \vee q</m>, is the proposition <q> <m>p</m> or <m>q</m>  (or both)</q>.
-      </p>
+      <statement>
+        <p>
+          Let <m>p</m> and <m>q</m> be propositions. The <term>conjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \wedge q</m>, is the proposition <q> <m>p</m> and <m>q</m> </q>.
+        </p>
+        <p>
+          The <term> disjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \vee q</m>, is the proposition <q> <m>p</m> or <m>q</m>  (or both)</q>.
+        </p>
 
-      <p>
-        The logical disjunction is an <q>inclusive or</q>. On the other hand, we define the <q>exclusive or</q> of <m>p</m> and <m>q</m> to be the proposition <q><m>p</m> or <m>q</m> but not both</q>. We won't be using it in Discrete 1, so we won't give it a special symbol.
-      </p>
+        <p>
+          The logical disjunction is an <q>inclusive or</q>. On the other hand, we define the <q>exclusive or</q> of <m>p</m> and <m>q</m> to be the proposition <q><m>p</m> or <m>q</m> but not both</q>. We won't be using it in Discrete 1, so we won't give it a special symbol.
+        </p>
+      </statement>
     </definition>
 
 
     <definition>
-      <p>
-        Let <m>p</m> and <m>q</m> be propositions. The <term>conditional statement</term> is the compound proposition <q>if <m>p</m> then <m>q</m></q>. The conditional is denoted by <m>p \to q</m>.
-      </p>
-      <p>
-        We call <m>p</m> the <term>hypothesis</term> or antecedent or premise, and <m>q</m> is the <term>conclusion</term> or consequence.
-      </p>
+      <statement>
+        <p>
+          Let <m>p</m> and <m>q</m> be propositions. The <term>conditional statement</term> is the compound proposition <q>if <m>p</m> then <m>q</m></q>. The conditional is denoted by <m>p \to q</m>.
+        </p>
+        <p>
+          We call <m>p</m> the <term>hypothesis</term> or antecedent or premise, and <m>q</m> is the <term>conclusion</term> or consequence.
+        </p>
+      </statement>
     </definition>
 
     <example>
@@ -123,34 +131,37 @@
     </note>
 
     <definition>
-      <p>
-        Let <m>p</m> and <m>q</m> be propositions. For the conditional <m>p \to q</m>, we define:
-        <ul>
-          <li> The <term>converse</term> is <m>q \to p</m></li>
-          <li> The <term>inverse</term> is <m>\neg p \to \neg q</m></li>
-          <li> The <term>contrapositive</term> is <m>\neg q \to \neg p</m></li>
-        </ul>
-      </p>
+      <statement>
+        <p>
+          Let <m>p</m> and <m>q</m> be propositions. For the conditional <m>p \to q</m>, we define:
+          <ul>
+            <li> The <term>converse</term> is <m>q \to p</m></li>
+            <li> The <term>inverse</term> is <m>\neg p \to \neg q</m></li>
+            <li> The <term>contrapositive</term> is <m>\neg q \to \neg p</m></li>
+          </ul>
+        </p>
+      </statement>
     </definition>
 
     <definition>
-      <p>
-        Let <m>p</m> and <m>q</m> be propositions. The <term>biconditional</term> of <m>p</m> and <m>q</m>, is the  statement <q><m>p</m> if and only if <m>q</m></q>, denoted <m>p \leftrightarrow q</m>.
-      </p>
-      <p>
-        Other ways to phrase an <q>if and only if</q> statement:
-        <ul>
-          <li> <m>p</m> iff <m>q</m>.</li>
-          <li> <m>p</m> is necessary and sufficient for <m>q</m>.</li>
-          <li> If <m>p</m> then <m>q</m> and conversely.</li>
-        </ul>
-      </p>
+      <statement>
+        <p>
+          Let <m>p</m> and <m>q</m> be propositions. The <term>biconditional</term> of <m>p</m> and <m>q</m>, is the  statement <q><m>p</m> if and only if <m>q</m></q>, denoted <m>p \leftrightarrow q</m>.
+        </p>
+        <p>
+          Other ways to phrase an <q>if and only if</q> statement:
+          <ul>
+            <li> <m>p</m> iff <m>q</m>.</li>
+            <li> <m>p</m> is necessary and sufficient for <m>q</m>.</li>
+            <li> If <m>p</m> then <m>q</m> and conversely.</li>
+          </ul>
+        </p>
+      </statement>
     </definition>
 
     <p>
       Just as with arithmetic operations (<m>+, -, \times, \div</m>) on numbers, we need to define an order of operations so that compound propositions can be understood without grouping symbols.
       <sidebyside>
-
         <tabular>
           <col right="minor"/>
           <col right="medium"/>
