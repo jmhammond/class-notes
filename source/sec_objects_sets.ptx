@@ -22,17 +22,20 @@
         <p>
           Below are examples of ways of writing sets:
           <dl>
-            <li> <term>Roster</term>: <m>A = \{\text{list, out, all, elements, in, a, comma, separated, list,} \dots\}</m> For exaple: <m>A = \{2, 4, 6, 8, 10, \dots\}.</m> </li>
-            <li> <term>Set-builder</term>: <m> B=\{\text{variable} \mid \text{condition for variable to be in the set}\}</m>. For example, <m>B = \{x \mid x \gt 0 \and x \text{ is an even integer}\}</m> </li>
-          </dl>
-        </p>
-        <p>
-          We have also seen intervals of real numbers in our previous courses which are the sets:
-          <dl cols="2">
-            <li><m>(a,b) = \{x \mid a \lt x \lt b, x\in \R \}</m></li>
-            <li><m>[a,b) = \{x \mid a \le x \lt b, x\in \R \}</m></li>
-            <li><m>(a,b] = \{x \mid a \lt x \le b, x\in \R \}</m></li>
-            <li><m>[a,b] = \{x \mid a \le x \le b, x\in \R \}</m></li>
+            <li>
+              <title>Roster</title>
+              <p>
+                <m>A = \{\text{list, out, the, elements, in, a, comma, separated, list} \dots\}</m> <line/>
+                For example: <m>A = \{2, 4, 6, 8, 10, \dots\}.</m>
+              </p>
+            </li>
+            <li>
+              <title>Set-builder</title>
+              <p>
+                <m> B=\{\text{variable} \mid \text{condition for variable to be in the set}\}</m> <line/>
+                For example, <m>B = \{x \mid x \gt 0 \and x \text{ is an even integer}\}</m>
+              </p>
+            </li>
           </dl>
         </p>
       </statement>
@@ -41,14 +44,44 @@
       <p>
         Here are some special sets we will visit often throughout the course and the rest of your mathematical career: 
         <dl>
-          <li> <m>\emptyset = \{\}</m> is the <term>empty set</term> consisting of no elements.</li>
-          <li> <m> \mathbb{N} = \{0, 1, 2, 3, 4, \dots \}</m> is the set of <term>natural numbers</term>. </li>
-          <li> <m> \mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \}</m> is the set of <term>integers</term>. </li>
-          <li> <m> \mathbb{Z}^+ = \{1, 2, 3, \dots \}</m> is the set of <term>positive integers</term>. </li>
-          <li> <m> \mathbb{Q} = \left\{ \frac{p}{q} \mid p \in \mathbb{Z}, q \in \mathbb{Z}, \text{ and } q \not= 0 \right\}</m> is the set of <term>rational numbers</term>. </li>
-          <li> <m> \mathbb{R} </m> is the set of <term>real numbers</term>. In Calculus, we wrote the interval <m>(-\infty, \infty)</m>.</li>
-          <li> <m> \mathbb{R}^+ </m> is the set of <term>positive real numbers</term>. In Calculus, we wrote the interval <m>(0, \infty)</m></li>
-          <li> <m> \mathbb{C} = \{a + bi \mid a \in \mathbb{R}, b \in \mathbb{R}, i = \sqrt{-1} \} </m> is the set of <term>complex numbers</term> </li>
+          <li>
+            <title>Empty set</title>
+            <p>
+              <m>\emptyset = \{\}</m> is the set consisting of no elements.
+            </p>
+          </li>
+          <li>
+            <title>Natural Numbers</title>
+            <p><m> \mathbb{N} = \{0, 1, 2, 3, 4, \dots \}</m>, the set of counting numbers and zero.
+            </p>
+          </li>
+          <li>
+            <title>Integers</title>
+            <p>
+              <m> \mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \}</m> includes all negative, zero, and positive counting numbers
+            </p>
+         </li>
+         <li>
+           <title>Positive Integers</title>
+           <p>
+             <m> \mathbb{Z}^+ = \{1, 2, 3, \dots \}</m> contains only the positive counting numbers.
+           </p>
+         </li>
+         <li>
+           <title>Rational Numbers</title>
+           <p>
+             <m> \mathbb{Q} = \left\{ \frac{p}{q} \mid p \in \mathbb{Z}, q \in \mathbb{Z}, \text{ and } q \not= 0 \right\}</m> is the set of all fractions.
+           </p>
+         </li>
+         <li>
+           <title>Real Numbers</title>
+           <p>
+             <m> \mathbb{R} </m> is the set of all real numbers. In Calculus, we wrote the interval <m>(-\infty, \infty)</m>. This includes all fractions and those irrational numbers that can't be written as fractions.
+           </p>
+         </li>
+         <!-- <li> -->
+         <!--     <m> \mathbb{R}^+ </m> is the set of <term>positive real numbers</term>. In Calculus, we wrote the interval <m>(0, \infty)</m></li> -->
+         <!--  <li> <m> \mathbb{C} = \{a + bi \mid a \in \mathbb{R}, b \in \mathbb{R}, i = \sqrt{-1} \} </m> is the set of <term>complex numbers</term> </li> -->
         </dl>
       </p>
     </definition>
@@ -70,6 +103,21 @@
             </li>
             <li>
               <m>\{\frac{a}{2} \in \Q \mid a \in \N\}</m> means the elements will be rational numbers of the form <m>\frac{a}{2}</m> (<m>\frac{a}{2} \in Q</m>). Since the qualification is just that the <m>a</m> is a natural number, that tells us to feed all natural numbers into our set, so we have <m>\{0, 1/2, 1, 3/2, 2, 5/2, \dots\}</m>
+            </li>
+            <li>
+              <p>
+                We have also seen intervals of real numbers in our previous courses which are the sets:
+                <sidebyside>
+                  <p>
+                    <m>(a,b) = \{x \mid a \lt x \lt b, x\in \R \}</m> <line/>
+                    <m>[a,b) = \{x \mid a \le x \lt b, x\in \R \}</m>
+                  </p>
+                  <p>
+                    <m>(a,b] = \{x \mid a \lt x \le b, x\in \R \}</m> <line/>
+                    <m>[a,b] = \{x \mid a \le x \le b, x\in \R \}</m>
+                  </p>
+                </sidebyside>
+              </p>
             </li>
           </ol>
         </p>
