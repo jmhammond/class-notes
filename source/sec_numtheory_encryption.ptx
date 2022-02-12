@@ -12,21 +12,16 @@
       <table>
         <title>List of Alphabet Encoding</title>
         <tabular>
+          <col halign="center"/>
           <col right="minor" halign="center"/>
-          <col left="minor" right="major" halign="center"/>
-          <col left="major" right="minor" halign="center"/>
-          <col left="minor" right="major" halign="center"/>
-          <col left="major" right="minor" halign="center"/>
-          <col left="minor" right="major" halign="center"/>
-          <col left="major" right="minor" halign="center"/>
-          <col left="minor" right="major" halign="center"/>
-          <col left="major" right="minor" halign="center"/>
-          <col left="minor" right="major" halign="center"/>
-          <row header="yes" bottom="major">
+          <col halign="center"/>
+          <col right="minor" halign="center"/>
+          <col halign="center"/>
+          <col halign="center"/>
+          <row header="yes" bottom="medium">
             <cell>
               letter
             </cell>
-
             <cell>
               number
             </cell>
@@ -36,21 +31,6 @@
             <cell>
               number
             </cell>
-
-            <cell>
-              letter
-            </cell>
-            <cell>
-              number
-            </cell>
-
-            <cell>
-              letter
-            </cell>
-            <cell>
-              number
-            </cell>
-
             <cell>
               letter
             </cell>
@@ -58,35 +38,139 @@
               number
             </cell>
           </row>
-          <row bottom="minor">
+          <row>
             <cell>
               A
             </cell>
             <cell>
               0
             </cell>
-
             <cell>
-              G
+              J
             </cell>
             <cell>
-              6
+              9
             </cell>
-
-            <cell>
-              M
-            </cell>
-            <cell>
-              12
-            </cell>
-
             <cell>
               S
             </cell>
             <cell>
               18
             </cell>
-
+          </row>
+          <row>
+            <cell>
+              B
+            </cell>
+            <cell>
+              1
+            </cell>
+            <cell>
+              K
+            </cell>
+            <cell>
+              10
+            </cell>
+            <cell>
+              T
+            </cell>
+            <cell>
+              19
+            </cell>
+          </row>
+          <row>
+            <cell>
+              C
+            </cell>
+            <cell>
+              2
+            </cell>
+            <cell>
+              L
+            </cell>
+            <cell>
+              11
+            </cell>
+            <cell>
+              U
+            </cell>
+            <cell>
+              20
+            </cell>
+          </row>
+          <row>
+            <cell>
+              D
+            </cell>
+            <cell>
+              3
+            </cell>
+            <cell>
+              M
+            </cell>
+            <cell>
+              12
+            </cell>
+            <cell>
+              V
+            </cell>
+            <cell>
+              21
+            </cell>
+          </row>
+          <row>
+            <cell>
+              E
+            </cell>
+            <cell>
+              4
+            </cell>
+            <cell>
+              N
+            </cell>
+            <cell>
+              13
+            </cell>
+            <cell>
+              W
+            </cell>
+            <cell>
+              22
+            </cell>
+          </row>
+          <row>
+            <cell>
+              F
+            </cell>
+            <cell>
+              5
+            </cell>
+            <cell>
+              O
+            </cell>
+            <cell>
+              14
+            </cell>
+            <cell>
+              X
+            </cell>
+            <cell>
+              23
+            </cell>
+          </row>
+          <row>
+            <cell>
+              G
+            </cell>
+            <cell>
+              6
+            </cell>
+            <cell>
+              P
+            </cell>
+            <cell>
+              15
+            </cell>
             <cell>
               Y
             </cell>
@@ -94,35 +178,19 @@
               24
             </cell>
           </row>
-          <row bottom="minor">
-            <cell>
-              B
-            </cell>
-            <cell>
-              1
-            </cell>
-
+          <row>
             <cell>
               H
             </cell>
             <cell>
               7
             </cell>
-
             <cell>
-              N
+              Q
             </cell>
             <cell>
-              13
+              16
             </cell>
-
-            <cell>
-              T
-            </cell>
-            <cell>
-              19
-            </cell>
-
             <cell>
               Z
             </cell>
@@ -130,133 +198,23 @@
               25
             </cell>
           </row>
-          <row bottom="minor">
-            <cell>
-              C
-            </cell>
-            <cell>
-              2
-            </cell>
-
+          <row>
             <cell>
               I
             </cell>
             <cell>
               8
             </cell>
-
-            <cell>
-              O
-            </cell>
-            <cell>
-              14
-            </cell>
-
-            <cell>
-              U
-            </cell>
-            <cell>
-              20
-            </cell>
-
-
-
-          </row>
-          <row bottom="minor">
-            <cell>
-              D
-            </cell>
-            <cell>
-              3
-            </cell>
-
-            <cell>
-              J
-            </cell>
-            <cell>
-              9
-            </cell>
-
-            <cell>
-              P
-            </cell>
-            <cell>
-              15
-            </cell>
-
-            <cell>
-              V
-            </cell>
-            <cell>
-              21
-            </cell>
-
-
-
-          </row>
-          <row bottom="minor">
-            <cell>
-              E
-            </cell>
-            <cell>
-              4
-            </cell>
-
-            <cell>
-              K
-            </cell>
-            <cell>
-              10
-            </cell>
-
-            <cell>
-              Q
-            </cell>
-            <cell>
-              16
-            </cell>
-
-            <cell>
-              W
-            </cell>
-            <cell>
-              22
-            </cell>
-
-
-
-          </row>
-          <row bottom="minor">
-            <cell>
-              F
-            </cell>
-            <cell>
-              5
-            </cell>
-
-            <cell>
-              L
-            </cell>
-            <cell>
-              11
-            </cell>
-
             <cell>
               R
             </cell>
             <cell>
               17
             </cell>
-
             <cell>
-              X
             </cell>
             <cell>
-              23
             </cell>
-
-
-
           </row>
         </tabular>
       </table>
