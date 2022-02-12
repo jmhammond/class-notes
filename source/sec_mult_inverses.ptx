@@ -61,7 +61,7 @@
         <table>
           <title>Multiplication table of 4 modulo 9</title>
           <tabular halign="center">
-            <row bottom="medium">
+            <row bottom="medium" header="yes">
               <cell right="medium">
                 *
               </cell>

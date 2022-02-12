@@ -30,18 +30,15 @@
       </p>
       <p>
         This argument is of the form:
-        <tabular halign="center">
+        <tabular halign="right">
           <row>
-            <cell/>
             <cell><m>p \to q</m></cell>
           </row>
           <row bottom="minor">
-            <cell/>
             <cell><m> p</m></cell>
           </row>
           <row>
-            <cell><m>\therefore</m></cell>
-            <cell><m>q</m></cell>
+            <cell><m>\therefore q</m></cell>
           </row>
         </tabular>
         and is valid since <m> ((p \to q) \wedge p) \to q</m> is a tautology.
@@ -202,9 +199,9 @@
       <table>
         <title>Argument step-by-step</title>
         <tabular>
-          <col right="minor"/>
-          <col left="minor"/>
-          <row bottom="minor">
+          <col />
+          <col />
+          <row bottom="minor" header="yes">
             <cell> Step</cell> 
             <cell> Reason </cell>
           </row>
@@ -320,18 +317,15 @@
         <p>
           Determine if the following deduction rule is valid:
         </p>
-        <tabular halign="center">
+        <tabular halign="right">
           <row>
-            <cell/>
             <cell><m>p \vee q</m></cell>
           </row>
           <row bottom="minor">
-            <cell/>
             <cell><m>\neg p</m></cell>
           </row>
           <row>
-            <cell><m>\therefore</m></cell>
-            <cell><m>q</m></cell>
+            <cell><m>\therefore q</m></cell>
           </row>
         </tabular>
       </statement>
@@ -348,18 +342,15 @@
         <p>
           Determine if the following is a valid deduction rule:
         </p>
-        <tabular halign="center">
+        <tabular halign="right">
           <row>
-            <cell/>
             <cell><m>p \to (q \vee r)</m></cell>
           </row>
           <row bottom="minor">
-            <cell/>
             <cell><m>\neg(p \to q)</m></cell>
           </row>
           <row>
-            <cell><m>\therefore</m></cell>
-            <cell><m>r</m></cell>
+            <cell><m>\therefore r</m></cell>
           </row>
         </tabular>
       </statement>
@@ -377,18 +368,15 @@
         <p>
           Determine if the following is a valid deduction rule:
         </p>
-        <tabular halign="center">
+        <tabular halign="right">
           <row>
-            <cell/>
             <cell><m>(p \wedge q) \to r</m></cell>
           </row>
           <row bottom="minor">
-            <cell/>
             <cell><m>\neg p \vee \neg q</m></cell>
           </row>
           <row>
-            <cell><m>\therefore</m></cell>
-            <cell><m>\neg r</m></cell>
+            <cell><m>\therefore \neg r</m></cell>
           </row>
         </tabular>
       </statement>
@@ -407,18 +395,15 @@
           Show that the following is a valid deduction rule by building a truth table.
         </p>
         <p>
-          <tabular halign="center">
+          <tabular halign="right">
             <row>
-              <cell/>
               <cell><m>p \to q</m></cell>
             </row>
             <row bottom="minor">
-              <cell/>
               <cell><m>q \to r</m></cell>
             </row>
             <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>p \to r</m></cell>
+              <cell><m>\therefore (p \to r)</m></cell>
             </row>
           </tabular>
         </p>
@@ -453,33 +438,27 @@
       <solution>
         <p>
           This is an argument of the form:
-          <tabular halign="center">
+          <tabular halign="right">
             <row>
-              <cell/>
               <cell><m>\text{Superman saves} \lor \text{Lois dies}</m></cell>
             </row>
             <row bottom="minor">
-              <cell/>
               <cell><m>\text{Superman saved}</m></cell>
             </row>
             <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>\neg \text{Lois didn't die}</m></cell>
+              <cell><m>\therefore \neg \text{Lois didn't die}</m></cell>
             </row>
           </tabular>
           This is a fallacy. In fact, it's the fallacy of denying the hypothesis in disguise. Rewrite the disjunction as an implication to see this:
-          <tabular halign="center">
+          <tabular halign="right">
             <row>
-              <cell/>
               <cell><m>\neg \text{Superman saves} \to \text{Lois dies}</m></cell>
             </row>
             <row bottom="minor">
-              <cell/>
               <cell><m>\text{Superman saved}</m></cell>
             </row>
             <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>\neg \text{Lois didn't die}</m></cell>
+              <cell><m>\therefore \neg \text{Lois didn't die}</m></cell>
             </row>
           </tabular>
         </p>
@@ -533,22 +512,18 @@
       <solution>
         <p>
           The argument has three propositional variables and is of the form:
-          <tabular halign="center">
+          <tabular halign="right">
             <row>
-              <cell/>
               <cell><m>\text{wages increase} \to \text{inflation}</m></cell>
             </row>
             <row>
-              <cell/>
               <cell><m>\neg\text{inflation} \to \neg \text{cost of living increase}</m></cell>
             </row>
             <row bottom="minor">
-              <cell/>
               <cell><m>\text{wages increase}</m></cell>
             </row>
             <row>
-              <cell><m>\therefore</m></cell>
-              <cell><m>\text{cost of living increases}</m></cell>
+              <cell><m>\therefore \text{cost of living increases}</m></cell>
             </row>
           </tabular>
           ... now make a truth table.

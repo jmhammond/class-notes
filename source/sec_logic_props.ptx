@@ -160,12 +160,12 @@
     </definition>
 
     <p>
-      Just as with arithmetic operations (<m>+, -, \times, \div</m>) on numbers, we need to define an order of operations so that compound propositions can be understood without grouping symbols.
+      Just as with arithmetic operations (<m>+, -, \times, \div</m>) on numbers, we need to define an order of operations so that compound propositions can be understood without grouping symbols. Though for clarity, we will generally write grouping symbols.
       <sidebyside>
         <tabular>
-          <col right="minor"/>
-          <col right="medium"/>
-          <row bottom="minor">
+          <col halign="center" />
+          <col halign="center" />
+          <row bottom="minor" header="yes">
             <cell>Operator </cell>
             <cell>Precedence</cell>
           </row>
@@ -191,8 +191,6 @@
           </me>
         </p>
       </sidebyside>
-
-      Though for clarity, we will generally write grouping symbols.
     </p>
   </subsection>
   <subsection xml:id="subsec-truthtables">
@@ -202,10 +200,10 @@
       <sbsgroup>
         <sidebyside width="20%" margins="auto">
           <tabular halign="center">
-            <col right="minor"/>
-            <col right="medium"/>
+            <col />
+            <col />
             <col/>
-            <row bottom="minor">
+            <row bottom="minor" header="yes">
               <cell><m>p</m></cell>
               <cell><m>q</m></cell>
               <cell><m>p\wedge q</m></cell>
@@ -232,10 +230,10 @@
             </row>
           </tabular>
           <tabular halign="center">
-            <col right="minor"/>
-            <col right="medium"/>
+            <col />
+            <col />
             <col/>
-            <row bottom="minor">
+            <row bottom="minor" header="yes">
               <cell><m>p</m></cell>
               <cell><m>q</m></cell>
               <cell><m>p\vee q</m></cell>
@@ -262,10 +260,10 @@
             </row>
           </tabular>
           <tabular halign="center">
-            <col right="minor"/>
-            <col right="medium"/>
+            <col />
+            <col />
             <col/>
-            <row bottom="minor">
+            <row bottom="minor" header="yes">
               <cell><m>p</m></cell>
               <cell><m>q</m></cell>
               <cell><m>p\to q</m></cell>
@@ -294,10 +292,10 @@
         </sidebyside>
         <sidebyside>
           <tabular halign="center">
-            <col right="minor"/>
-            <col right="medium"/>
+            <col />
+            <col />
             <col/>
-            <row bottom="minor">
+            <row bottom="minor" header="yes">
               <cell><m>p</m></cell>
               <cell><m>q</m></cell>
               <cell><m>p\leftrightarrow q</m></cell>
@@ -324,9 +322,9 @@
             </row>
           </tabular>
           <tabular halign="center">
-            <col right="medium"/>
+            <col />
             <col/>
-            <row bottom="minor">
+            <row bottom="minor" header="yes">
               <cell><m>p</m></cell>
               <cell><m>\neg p</m></cell>
             </row>

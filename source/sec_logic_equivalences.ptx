@@ -49,7 +49,7 @@
       <table xml:id="table-contradiction-valid">
         <title>Showing <m>( \neg p \to (q \wedge \neg q)  )\leftrightarrow p</m> is a tautology</title>
         <tabular  halign="center">
-          <row bottom="medium">
+          <row bottom="minor" header="yes">
             <cell><m>p</m></cell>
             <cell><m>q</m></cell>
             <cell><m>\neg p</m></cell>
