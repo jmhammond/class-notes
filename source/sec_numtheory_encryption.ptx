@@ -292,8 +292,8 @@
           To determine the keys:
           <ol>
             <li>Choose two prime numbers <m>p \and q</m>. Let <m>n=pq \and {m = (p-1)(q-1)}</m>.</li>
-            <li>Find any number <m>e</m> which is relatively prime to <m>m</m></li>. 
-            <li>Determine <m>d</m> which is the inverse of <m>e</m> modulo <m>m</m></li>. 
+            <li>Find any number <m>e</m> which is relatively prime to <m>m</m>.</li>
+            <li>Determine <m>d</m> which is the inverse of <m>e</m> modulo <m>m</m>.</li>
             <li>Your public key is <m>(e, n)</m>.</li>
             <li>Your private key is <m>(d, n)</m>.</li>
           </ol>
