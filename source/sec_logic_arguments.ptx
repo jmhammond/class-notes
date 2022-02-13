@@ -57,94 +57,67 @@
       Let <m>p, q \and r</m> be logical propositions. The following are tautologies:
     </introduction>
 
-    <ol>
+    <dl width="narrow">
       <li>
-        <term>Modus Ponens/Direct reasoning</term>:
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>(p\to q) \land p \Rightarrow q</m>
-          </p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Modus Ponens/Direct reasoning</title>
+        <p>
+          <m>(p\to q) \land p \Rightarrow q</m>
+        </p>
       </li>
       <li>
-        <term>Modus Tollens / Indirect Reasoning</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>(p \to  q) \land  \neg q \Rightarrow  \neg p</m>
-          </p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Modus Tollens / Indirect Reasoning</title>
+        <p>
+          <m>(p \to  q) \land  \neg q \Rightarrow  \neg p</m>
+        </p>
       </li>
       <li>
-        <term>Disjunctive Addition</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>p\Rightarrow (p\lor q)</m>
-          </p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Disjunctive Addition</title>
+        <p>
+          <m>p\Rightarrow (p\lor q)</m>
+        </p>
       </li>
       <li>
-        <term>Conjunctive Simplification</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>(p \land  q) \Rightarrow  p</m>
-            <line/> <line/>
-            <m>(p \land  q) \Rightarrow  q</m>
-          </p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Conjunctive Simplification</title>
+        <p>
+          <m>(p \land  q) \Rightarrow  p</m>
+          <line/> <line/>
+          <m>(p \land  q) \Rightarrow  q</m>
+        </p>
       </li>
       <li>
-        <term>Disjunctive Simplification</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>(p \lor  q) \land  \neg p \Rightarrow  q</m>
-            <line/>
-            <m>(p \lor q) \land \neg q\Rightarrow p</m>
-          </p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Disjunctive Simplification</title>
+        <p>
+          <m>(p \lor  q) \land  \neg p \Rightarrow  q</m>
+          <line/>
+          <m>(p \lor q) \land \neg q\Rightarrow p</m>
+        </p>
       </li>
       <li>
-        <term>Chain Argument / Syllogism</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>(p \to  q) \land  ( q \rightarrow  r) \Rightarrow  (p\to  r)</m>
-          </p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Chain Argument / Syllogism</title>
+        <p>
+          <m>(p \to  q) \land  ( q \rightarrow  r) \Rightarrow  (p\to  r)</m>
+        </p>
       </li>
       <li>
-        <term>Biconditional Equivalences</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>(p \leftrightarrow  q) \equiv  (p\rightarrow q) \land  (q \rightarrow  p)</m><line/>
-            <m>(p \leftrightarrow  q) \equiv (p \land  q) \lor  (\neg p \land  \neg q)</m>
-          </p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Biconditional Equivalences</title>
+        <p>
+          <m>(p \leftrightarrow  q) \equiv  (p\rightarrow q) \land  (q \rightarrow  p)</m><line/>
+          <m>(p \leftrightarrow  q) \equiv (p \land  q) \lor  (\neg p \land  \neg q)</m>
+        </p>
       </li>
       <li>
-        <term>Implication / Conditional Equivalence</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>p \rightarrow  q \equiv  \neg p \lor  q</m>
-          </p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Implication / Conditional Equivalence</title>
+        <p>
+          <m>p \rightarrow  q \equiv  \neg p \lor  q</m>
+        </p>
       </li>
       <li>
-        <term>Contraposition</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>(p\to q) \equiv (\neg q \to \neg p)</m>
-          </p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Contraposition</title>
+        <p>
+          <m>(p\to q) \equiv (\neg q \to \neg p)</m>
+        </p>
       </li>
-    </ol>
+    </dl>
   </list>
 
   <note>
