@@ -41,6 +41,7 @@
       </statement>
     </example>
     <definition>
+      <title>Special Sets of Numbers</title>
       <p>
         Here are some special sets we will visit often throughout the course and the rest of your mathematical career: 
         <dl>
@@ -70,7 +71,13 @@
          <li>
            <title>Rational Numbers</title>
            <p>
-             <m> \mathbb{Q} = \left\{ \frac{p}{q} \mid p \in \mathbb{Z}, q \in \mathbb{Z}, \text{ and } q \not= 0 \right\}</m> is the set of all fractions.
+             <md>
+               <mrow>\mathbb{Q} \amp= \left\{ \frac{p}{q} \mid p \in \mathbb{Z}, q \in \mathbb{Z}, \text{ and } q \not= 0 \right\}
+               </mrow>
+               <mrow> \amp=\left\{0,1,-1,2,\frac{1}{2},-\frac{1}{2},-2,3,\frac{1}{3},-\frac{1}{3},-3,\frac{3}{2},\ldots\right\}
+               </mrow>
+             </md>
+             is the set of all fractions.
            </p>
          </li>
          <li>
