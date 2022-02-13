@@ -48,18 +48,16 @@
     </definition>
 
     <note>
-      <statement>
-        <p>
-          The binomial coefficient counts:
-          <ul>
-            <li> <m>\binom{n}{k}</m> is the number of ways to select <m>k</m> objects from a set of <m>n</m> objects. </li>
-            <li> <m>\binom{n}{k}</m> is the coefficient of <m>x^{n-k}y^k</m> in the expansion of <m>(x+y)^n</m> </li>
-            <li> <m>\binom{n}{k}</m> is the number subsets of size <m>k</m> from a set of size <m>n</m> </li>
-            <li> <m>\binom{n}{k}</m> is the number of bit strings of length <m>n</m> with exactly <m>k</m> 1's</li>
-            <li><m>\dots</m> there are many more ways of viewing binomial coefficients.</li>
-          </ul>
-        </p>
-      </statement>
+      <p>
+        The binomial coefficient counts:
+        <ul>
+          <li> <m>\binom{n}{k}</m> is the number of ways to select <m>k</m> objects from a set of <m>n</m> objects. </li>
+          <li> <m>\binom{n}{k}</m> is the coefficient of <m>x^{n-k}y^k</m> in the expansion of <m>(x+y)^n</m> </li>
+          <li> <m>\binom{n}{k}</m> is the number subsets of size <m>k</m> from a set of size <m>n</m> </li>
+          <li> <m>\binom{n}{k}</m> is the number of bit strings of length <m>n</m> with exactly <m>k</m> 1's</li>
+          <li><m>\dots</m> there are many more ways of viewing binomial coefficients.</li>
+        </ul>
+      </p>
     </note>
 
 
@@ -206,7 +204,7 @@
           Answer two: Pick any element of the set. That element is either included in a subset, or it is not.
           <ul>
             <li> How many subsets contain this element? We will be picking from the remaining <m>n-1</m> elements. Since we want the subsets to have <m>k</m> elements, but we already have one of them, we have a total of <m>\binom{n-1}{k-1}</m> such subsets. </li>
-            <li> How many subsets <emph>do not</emph> contain this element? We will be picking from the remaining <m>n-1</m> elements. Since we want the subsets to have <m>k</m> elements, we have <m>\binom{n-1}{k}</m> such subsets. </li>
+            <li> How many subsets <em>do not</em> contain this element? We will be picking from the remaining <m>n-1</m> elements. Since we want the subsets to have <m>k</m> elements, we have <m>\binom{n-1}{k}</m> such subsets. </li>
           </ul>
           Thus there are <m>\binom{n-1}{k-1} + \binom{n-1}{k}</m> subsets of <m>k</m> elements from a set of <m>n</m> elements.
         </p>
@@ -221,17 +219,15 @@
 
 
     <note>
-      <statement>
-        <p>
-          For a combinatorial proof:
-          <ol>
-            <li> Determine a question that can be answered by the particular equation.</li>
-            <li> Answer the question in two different ways</li>
-            <li> Because those answers count the same object, we can equate their solutions.</li>
-          </ol>
-          Coming up with the question is often the hardest part.
-        </p>
-      </statement>
+      <p>
+        For a combinatorial proof:
+        <ol>
+          <li> Determine a question that can be answered by the particular equation.</li>
+          <li> Answer the question in two different ways</li>
+          <li> Because those answers count the same object, we can equate their solutions.</li>
+        </ol>
+        Coming up with the question is often the hardest part.
+      </p>
     </note>
 
     <example>
@@ -263,7 +259,9 @@
         </p>
       </statement>
       <hint>
-        How many pizzas of <m>n</m> toppings can be made if we can choose from <m>2n</m> toppings?
+        <p>
+          How many pizzas of <m>n</m> toppings can be made if we can choose from <m>2n</m> toppings?
+        </p>
       </hint>
     </example>
 
@@ -539,14 +537,14 @@
         </p>
       </statement>
       <solution>
-        <statement>
+        <p>
           Here's a partial solution:
           <ol>
             <li> <m>(x+1)^2 = x^2 + 2x + 1 \equiv x^2 + 1 \pmod 2 </m></li>
             <li> <m>(x+1)^5 = x^5 + 5x^4 + 10x^3 + 10x^2 + 5x + 1 \equiv x^5 + 1 \pmod 5 </m></li>
           </ol>
           What can be said about each each binomial coefficient except the first and the last? Why?
-        </statement>
+        </p>
       </solution>
     </exercise>
   </exercises>

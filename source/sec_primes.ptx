@@ -15,11 +15,9 @@
   </definition>
 
   <note>
-    <statement>
-      <p>
-        1 is neither prime nor composite. It's called a <term>unit</term>.
-      </p>
-    </statement>
+    <p>
+      1 is neither prime nor composite. It's called a <term>unit</term>.
+    </p>
   </note>
 
   <theorem>
@@ -54,13 +52,11 @@
       </p>
     </statement>
     <proof>
-      <statement>
-        <p>
-          Assume, to the contrary, that every prime divisor of <m>n</m> is greater than <m>\sqrt{n}</m>. Since <m>n</m> is composite, it has at least two prime factors, <m>p_1, p_2</m> so that <m>n = p_1 p_2 b</m> where <m>b</m> is positive integer. But since <m>p_1 \and p_2</m> are a prime divisors of <m>n</m>, they are necessarily larger than  <m>\sqrt{n}</m>. So:
-          <me> n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb</me>
-          But since <m>n</m> is composite and <m>b\in \Z^+</m>, <m>n\gt nb</m> is a contradiction.
-        </p>
-      </statement>
+      <p>
+        Assume, to the contrary, that every prime divisor of <m>n</m> is greater than <m>\sqrt{n}</m>. Since <m>n</m> is composite, it has at least two prime factors, <m>p_1, p_2</m> so that <m>n = p_1 p_2 b</m> where <m>b</m> is positive integer. But since <m>p_1 \and p_2</m> are a prime divisors of <m>n</m>, they are necessarily larger than  <m>\sqrt{n}</m>. So:
+        <me> n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb</me>
+        But since <m>n</m> is composite and <m>b\in \Z^+</m>, <m>n\gt nb</m> is a contradiction.
+      </p>
     </proof>
   </theorem>
 
@@ -501,31 +497,28 @@
       <solution>
         <p>
           This question is of the form <q>if <m>n</m> is a prime number greater than three, then either <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m></q>.
-          <proof>
-            <statement>
-              <p>
-                (by contraposition). Assume that <m>n</m> is not a number of the form
-                <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m>. This gives us four total cases:
-              </p>
-              <p>
-                Case 1: Assume <m>n=6k</m> for some integer <m>k</m>. Then <m>n</m> is not a prime number, since <m>n</m> is divisible by both 2 and 3.
-              </p>
-              <p>
-                Case 2: Assume <m>n = 6k+2 = 2(3k+1)</m> for some integer <m>k</m>. Then <m>n</m> is divisible by 2 and is hence not prime.
-              </p>
-              <p>
-                Case 3: assume <m>n = 6k+3 = 3(2k+1)</m> for some integer <m>k</m>. then <m>n</m> is divisible by 3 and is hence not prime.
-              </p>
-              <p>
-                Case 4: assume <m>n = 6k+4 = 2(3k+2)</m> for some integer <m>k</m>. then <m>n</m> is divisible by 2 and is hence not prime.
-              </p>
-              <p>
-                Thus if <m>n</m> is not of the form <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m>, <m>n</m> is not prime. By contraposition, if <m>n</m> is a prime greater than three then <m>n</m> is of the form either <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m>.
-              </p>
-            </statement>
-          </proof>
-
         </p>
+        <proof>
+          <p>
+            (by contraposition). Assume that <m>n</m> is not a number of the form
+            <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m>. This gives us four total cases:
+          </p>
+          <p>
+            Case 1: Assume <m>n=6k</m> for some integer <m>k</m>. Then <m>n</m> is not a prime number, since <m>n</m> is divisible by both 2 and 3.
+          </p>
+          <p>
+            Case 2: Assume <m>n = 6k+2 = 2(3k+1)</m> for some integer <m>k</m>. Then <m>n</m> is divisible by 2 and is hence not prime.
+          </p>
+          <p>
+            Case 3: assume <m>n = 6k+3 = 3(2k+1)</m> for some integer <m>k</m>. then <m>n</m> is divisible by 3 and is hence not prime.
+          </p>
+          <p>
+            Case 4: assume <m>n = 6k+4 = 2(3k+2)</m> for some integer <m>k</m>. then <m>n</m> is divisible by 2 and is hence not prime.
+          </p>
+          <p>
+            Thus if <m>n</m> is not of the form <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m>, <m>n</m> is not prime. By contraposition, if <m>n</m> is a prime greater than three then <m>n</m> is of the form either <m>n=6k+1</m> or <m>n=6k-1</m> for some integer <m>k</m>.
+          </p>
+        </proof>
       </solution>
 
     </exercise>

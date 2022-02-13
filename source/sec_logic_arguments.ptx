@@ -4,19 +4,21 @@
 
   <definition>
     <title>Logical Arguments</title>
-    <p>
-      An <term>argument</term> is a sequence of statements (<term>premises</term>) that ends with a conclusion.
-    </p>
-    <p>
-      A <term>valid argument</term> is one where the conclusion follows from the truth of the premises.
-    </p>
-    <p>
-      For the sequence of premises <m>p_1, p_2, \dots, p_n</m> and conclusion <m>q</m>, an argument is valid if:
-      <me>p_1 \wedge p_2 \wedge \dots \wedge p_n \to q</me> is a tautology.
-    </p>
-    <p>
-      A <term>fallacy</term> is a form of incorrect reasoning that leads to an invalid argument.
-    </p>
+    <statement>
+      <p>
+        An <term>argument</term> is a sequence of statements (<term>premises</term>) that ends with a conclusion.
+      </p>
+      <p>
+        A <term>valid argument</term> is one where the conclusion follows from the truth of the premises.
+      </p>
+      <p>
+        For the sequence of premises <m>p_1, p_2, \dots, p_n</m> and conclusion <m>q</m>, an argument is valid if:
+        <me>p_1 \wedge p_2 \wedge \dots \wedge p_n \to q</me> is a tautology.
+      </p>
+      <p>
+        A <term>fallacy</term> is a form of incorrect reasoning that leads to an invalid argument.
+      </p>
+    </statement>
   </definition>
 
   <example>
@@ -31,17 +33,19 @@
       </p>
       <p>
         This argument is of the form:
-        <tabular halign="right">
-          <row>
-            <cell><m>p \to q</m></cell>
-          </row>
-          <row bottom="minor">
-            <cell><m> p</m></cell>
-          </row>
-          <row>
-            <cell><m>\therefore q</m></cell>
-          </row>
-        </tabular>
+      </p>
+      <tabular halign="right">
+        <row>
+          <cell><m>p \to q</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell><m> p</m></cell>
+        </row>
+        <row>
+          <cell><m>\therefore q</m></cell>
+        </row>
+      </tabular>
+      <p>
         and is valid since <m> ((p \to q) \wedge p) \to q</m> is a tautology.
       </p>
     </statement>
@@ -55,7 +59,9 @@
     </title>
 
     <introduction>
-      Let <m>p, q \and r</m> be logical propositions. The following are tautologies:
+      <p>
+        Let <m>p, q \and r</m> be logical propositions. The following are tautologies:
+      </p>
     </introduction>
 
     <ol>
@@ -149,45 +155,44 @@
   </list>
 
   <note>
-    <statement>
-      <p>
-        It would be good practice to verify that each of the arguments in table <xref ref="list-logical-arguments"/> is a tautology using either true tables or logical equivalences.
-      </p>
-    </statement>
+    <p>
+      It would be good practice to verify that each of the arguments in table <xref ref="list-logical-arguments"/> is a tautology using either true tables or logical equivalences.
+    </p>
   </note>
 
   <example>
     <statement>
       <p>
         What rules of inference are being used here?
+        <ul>
+          <li>Kangaroos live in Australia and are marsupials. Therefore, kangaroos are marsupials. </li>
+          <li> If I go swimming, then I will stay in the sun too long. If I stay in the sun too long, then I will sunburn. Therefore, if I go swimming, then I will sunburn. </li>
+          <li>I read a horror story. When I read horror stories, I have weird dreams. Therefore I had weird dreams.</li>
+        </ul>
       </p>
-      <ul>
-        <li>Kangaroos live in Australia and are marsupials. Therefore, kangaroos are marsupials. </li>
-        <li> If I go swimming, then I will stay in the sun too long. If I stay in the sun too long, then I will sunburn. Therefore, if I go swimming, then I will sunburn. </li>
-        <li>I read a horror story. When I read horror stories, I have weird dreams. Therefore I had weird dreams.</li>
-      </ul>
     </statement>
   </example>
 
   <definition>
     <title>Quantified Arguments</title>
-    <p>
-      <term>Existential instantiation</term> describes the argument:
-      <me> \exists x P(x) \implies P(c) </me> for some <m>c</m> in the domain.
-    </p>
-    <p>
-      <term>Existential generalization</term> describes the argument:
-      <me> P(c) \implies \exists x P(x) </me>.
-    </p>
-    <p>
-      <term>Universal modus ponens</term> describes the argument:
-      <me>\forall x (P(x) \to Q(x)) \wedge P(a) \implies Q(a)</me> where <m>a</m> is a particular element in the domain.
-    </p>
-    <p>
-      <term>Universal modus tollens</term> describes the argument:
-      <me>\forall x (P(x) \to Q(x)) \wedge \neg Q(a) \implies \neg P(a)</me> where <m>a</m> is a particular element in the domain.
-    </p>
-    
+    <statement>
+      <p>
+        <term>Existential instantiation</term> describes the argument:
+        <me> \exists x P(x) \implies P(c) </me> for some <m>c</m> in the domain.
+      </p>
+      <p>
+        <term>Existential generalization</term> describes the argument:
+        <me> P(c) \implies \exists x P(x) </me>.
+      </p>
+      <p>
+        <term>Universal modus ponens</term> describes the argument:
+        <me>\forall x (P(x) \to Q(x)) \wedge P(a) \implies Q(a)</me> where <m>a</m> is a particular element in the domain.
+      </p>
+      <p>
+        <term>Universal modus tollens</term> describes the argument:
+        <me>\forall x (P(x) \to Q(x)) \wedge \neg Q(a) \implies \neg P(a)</me> where <m>a</m> is a particular element in the domain.
+      </p>
+    </statement>
   </definition>
 
   <example>
@@ -253,12 +258,10 @@
       <p>
         For the following argument, explain the rules of inference for each step leading the the conclusion:
       </p>
-      <p>
-        <blockquote>
-          <p>Linda, a student in this class owns a red convertible. Everyone who owns a red convertible has gotten at least one speeding ticket. Therefore, someone in this class has gotten at least one speeding ticket.
-          </p>
-        </blockquote>
-      </p>
+      <blockquote>
+        <p>Linda, a student in this class owns a red convertible. Everyone who owns a red convertible has gotten at least one speeding ticket. Therefore, someone in this class has gotten at least one speeding ticket.
+        </p>
+      </blockquote>
     </statement>
     <!--
         Let $C(X)$ be the statement ``$x$ is in this class.'' 
@@ -396,19 +399,17 @@
         <p>
           Show that the following is a valid deduction rule by building a truth table.
         </p>
-        <p>
-          <tabular halign="right">
-            <row>
-              <cell><m>p \to q</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell><m>q \to r</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore (p \to r)</m></cell>
-            </row>
-          </tabular>
-        </p>
+        <tabular halign="right">
+          <row>
+            <cell><m>p \to q</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell><m>q \to r</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore (p \to r)</m></cell>
+          </row>
+        </tabular>
       </statement>
       <!-- <solution> -->
       <!--   <p> -->
@@ -440,30 +441,32 @@
       <solution>
         <p>
           This is an argument of the form:
-          <tabular halign="right">
-            <row>
-              <cell><m>\text{Superman saves} \lor \text{Lois dies}</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell><m>\text{Superman saved}</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore \neg \text{Lois didn't die}</m></cell>
-            </row>
-          </tabular>
-          This is a fallacy. In fact, it's the fallacy of denying the hypothesis in disguise. Rewrite the disjunction as an implication to see this:
-          <tabular halign="right">
-            <row>
-              <cell><m>\neg \text{Superman saves} \to \text{Lois dies}</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell><m>\text{Superman saved}</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore \neg \text{Lois didn't die}</m></cell>
-            </row>
-          </tabular>
         </p>
+        <tabular halign="right">
+          <row>
+            <cell><m>\text{Superman saves} \lor \text{Lois dies}</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell><m>\text{Superman saved}</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore \neg \text{Lois didn't die}</m></cell>
+          </row>
+        </tabular>
+        <p>
+          This is a fallacy. In fact, it's the fallacy of denying the hypothesis in disguise. Rewrite the disjunction as an implication to see this:
+        </p>
+        <tabular halign="right">
+          <row>
+            <cell><m>\neg \text{Superman saves} \to \text{Lois dies}</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell><m>\text{Superman saved}</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore \neg \text{Lois didn't die}</m></cell>
+          </row>
+        </tabular>
       </solution>
     </exercise>
 
@@ -514,20 +517,22 @@
       <solution>
         <p>
           The argument has three propositional variables and is of the form:
-          <tabular halign="right">
-            <row>
-              <cell><m>\text{wages increase} \to \text{inflation}</m></cell>
-            </row>
-            <row>
-              <cell><m>\neg\text{inflation} \to \neg \text{cost of living increase}</m></cell>
-            </row>
-            <row bottom="minor">
-              <cell><m>\text{wages increase}</m></cell>
-            </row>
-            <row>
-              <cell><m>\therefore \text{cost of living increases}</m></cell>
-            </row>
-          </tabular>
+        </p>
+        <tabular halign="right">
+          <row>
+            <cell><m>\text{wages increase} \to \text{inflation}</m></cell>
+          </row>
+          <row>
+            <cell><m>\neg\text{inflation} \to \neg \text{cost of living increase}</m></cell>
+          </row>
+          <row bottom="minor">
+            <cell><m>\text{wages increase}</m></cell>
+          </row>
+          <row>
+            <cell><m>\therefore \text{cost of living increases}</m></cell>
+          </row>
+        </tabular>
+        <p>
           ... now make a truth table.
         </p>
       </solution>

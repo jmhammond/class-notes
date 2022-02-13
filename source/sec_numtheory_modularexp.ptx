@@ -3,11 +3,9 @@
   <title>Modular exponentiation</title>
 
   <introduction>
-    <statement>
-      <p>
-       This section seems a bit out of nowhere, but it's a computational tool we need in order to perform the RSA encryption algorithm. When we exponentiate a number, we always get a bigger number, and we'll want to reduce modulo <m>m</m>. In this section we give an algorithm that allows us to perform this operation conveniently.
-      </p>
-    </statement>
+    <p>
+      This section seems a bit out of nowhere, but it's a computational tool we need in order to perform the RSA encryption algorithm. When we exponentiate a number, we always get a bigger number, and we'll want to reduce modulo <m>m</m>. In this section we give an algorithm that allows us to perform this operation conveniently.
+    </p>
   </introduction>
 
 

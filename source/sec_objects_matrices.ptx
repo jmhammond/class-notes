@@ -6,42 +6,44 @@
   
   <definition>
     <title>Matrix</title>
-    <p>
-      A <term>matrix</term> is a rectangular array of numbers. A matrix with <m>m</m> rows and <m>n</m> columns is called an <m>m \times n</m> matrix.
-    </p>
-    <p>
-      A matrix with the same number of rows and columns is called a <term>square matrix</term>.
-    </p>
+    <statement>
+      <p>
+        A <term>matrix</term> is a rectangular array of numbers. A matrix with <m>m</m> rows and <m>n</m> columns is called an <m>m \times n</m> matrix.
+      </p>
+      <p>
+        A matrix with the same number of rows and columns is called a <term>square matrix</term>.
+      </p>
 
-    <p>
-      We can represent a matrix in the following way:
-      <ul>
-        <li>
-          <m>A = \begin{bmatrix}
-          a_{11} &amp; a_{12} &amp; \dots &amp; a_{1n} \\
-          a_{21} &amp; a_{22} &amp; \dots &amp; a_{2n} \\
-          \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-          a_{m1} &amp; a_{m2} &amp; \dots &amp; a_{mn} \\
-          \end{bmatrix} </m>
-        </li>
-        <li>
-          The <m>i</m>th row is <m>\begin{bmatrix}
-          a_{i1} &amp; a_{i2} &amp; \dots &amp; a_{in} \\
-          \end{bmatrix} </m>, a <m>1\times n</m> <term>row matrix</term>.
-        </li>
-        <li>
-          The <m>j</m>th column is <m>\begin{bmatrix}
-          a_{1j} \\ a_{2j} \\ \vdots \\ a_{mj} \\
-          \end{bmatrix} </m>, an <m>m\times 1</m> <term>column matrix</term>.
-        </li>
-        <li>
-          The <m>ij</m>th term of the matrix is denoted <m>a_{ij}</m>
-        </li>
-        <li>
-          We will often write <m>A = \begin{bmatrix} a_{ij} \end{bmatrix} </m> and give a rule for <m>a_{ij}</m> in order to conserve space when relevant.
-        </li>
-      </ul>
-    </p>
+      <p>
+        We can represent a matrix in the following way:
+        <ul>
+          <li>
+            <m>A = \begin{bmatrix}
+            a_{11} &amp; a_{12} &amp; \dots &amp; a_{1n} \\
+            a_{21} &amp; a_{22} &amp; \dots &amp; a_{2n} \\
+            \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+            a_{m1} &amp; a_{m2} &amp; \dots &amp; a_{mn} \\
+            \end{bmatrix} </m>
+          </li>
+          <li>
+            The <m>i</m>th row is <m>\begin{bmatrix}
+            a_{i1} &amp; a_{i2} &amp; \dots &amp; a_{in} \\
+            \end{bmatrix} </m>, a <m>1\times n</m> <term>row matrix</term>.
+          </li>
+          <li>
+            The <m>j</m>th column is <m>\begin{bmatrix}
+            a_{1j} \\ a_{2j} \\ \vdots \\ a_{mj} \\
+            \end{bmatrix} </m>, an <m>m\times 1</m> <term>column matrix</term>.
+          </li>
+          <li>
+            The <m>ij</m>th term of the matrix is denoted <m>a_{ij}</m>
+          </li>
+          <li>
+            We will often write <m>A = \begin{bmatrix} a_{ij} \end{bmatrix} </m> and give a rule for <m>a_{ij}</m> in order to conserve space when relevant.
+          </li>
+        </ul>
+      </p>
+    </statement>
   </definition>
 
   <example>
@@ -62,15 +64,17 @@
 
   <definition>
     <title>Matrix Operations</title>
-    <p>
-      Let <m>A = \begin{bmatrix} a_{ij} \end{bmatrix}</m> and <m>B = \begin{bmatrix} b_{ij} \end{bmatrix}</m> be two <m>m\times n</m> matrices. We define their sum by:
-      <me> A + B = \begin{bmatrix} a_{ij} + b_{ij} \end{bmatrix} </me>
-      That is, we add the corresponding entries together. The result is also an <m>m\times n</m> matrix.
-    </p>
-    <p>
-      Let <m>A</m> be an <m>m\times k</m> matrix, and let <m>B</m> be a <m>k\times n</m> matrix. Then the product <m>AB = \begin{bmatrix}c_{ij} \end{bmatrix}</m> is defined by:
-      <me>c_{ij} = a_{i1}\cdot b_{1j} + a_{i2}\cdot b_{2j} + \dots + a_{ik}\cdot b_{kj}</me>
-    </p>
+    <statement>
+      <p>
+        Let <m>A = \begin{bmatrix} a_{ij} \end{bmatrix}</m> and <m>B = \begin{bmatrix} b_{ij} \end{bmatrix}</m> be two <m>m\times n</m> matrices. We define their sum by:
+        <me> A + B = \begin{bmatrix} a_{ij} + b_{ij} \end{bmatrix} </me>
+        That is, we add the corresponding entries together. The result is also an <m>m\times n</m> matrix.
+      </p>
+      <p>
+        Let <m>A</m> be an <m>m\times k</m> matrix, and let <m>B</m> be a <m>k\times n</m> matrix. Then the product <m>AB = \begin{bmatrix}c_{ij} \end{bmatrix}</m> is defined by:
+        <me>c_{ij} = a_{i1}\cdot b_{1j} + a_{i2}\cdot b_{2j} + \dots + a_{ik}\cdot b_{kj}</me>
+      </p>
+    </statement>
   </definition>
 
   <example>
@@ -87,7 +91,7 @@
     </statement>
   </example>
 
-  <example ref="example-theyreinversematrices">
+  <example xml:id="example-theyreinversematrices">
     <statement>
       <p>
         Find <m>AB</m> if <m>A = \begin{bmatrix} 4 &amp; -3 \\ 3 &amp; -1 \\ 0 &amp; -2 \\ -1 &amp; 5 \end{bmatrix}</m> and <m>B =  \begin{bmatrix} -1 &amp; 3 &amp; 2 &amp; -2 \\ 0 &amp; -1 &amp; 4 &amp; -3 \end{bmatrix}</m>
@@ -106,13 +110,15 @@
 
   <definition>
     <title>Identity Matrix</title>
-    <p>
-      The <term>identity matrix of order <m>n</m></term> is the <m>n \times n</m> matrix:
-      <me>I_n = \begin{bmatrix} \delta_{ij} \end{bmatrix} \text{ where } \delta_{ij} = \left\{ \begin{array}{lr} 1 &amp; i = j \\ 0 &amp; i \not= j \end{array} \right. </me>
-    </p>
-    <p>
-      I'll refer to this as the <term><m>n\times n</m> identity matrix</term>.
-    </p>
+    <statement>
+      <p>
+        The <term>identity matrix of order <m>n</m></term> is the <m>n \times n</m> matrix:
+        <me>I_n = \begin{bmatrix} \delta_{ij} \end{bmatrix} \text{ where } \delta_{ij} = \left\{ \begin{array}{lr} 1 &amp; i = j \\ 0 &amp; i \not= j \end{array} \right. </me>
+      </p>
+      <p>
+        I'll refer to this as the <term><m>n\times n</m> identity matrix</term>.
+      </p>
+    </statement>
   </definition>
 
   <note>
@@ -124,9 +130,11 @@
 
   <definition>
     <title>Matrix Powers</title>
-    <p>
-      If <m>A</m> is a square, <m>n\times n</m> matrix, we define <m>A^r = A A  A \dots  A</m>, the product of <m>A</m> with itself <m>r</m> times. Further, <m>A^0 = I_n</m>.
-    </p>
+    <statement>
+      <p>
+        If <m>A</m> is a square, <m>n\times n</m> matrix, we define <m>A^r = A A  A \dots  A</m>, the product of <m>A</m> with itself <m>r</m> times. Further, <m>A^0 = I_n</m>.
+      </p>
+    </statement>
   </definition>
 
   <example>
@@ -140,37 +148,43 @@
 
   <definition>
     <title>Matrix Inverses</title>
-    <p>
-      If <m>A</m> and <m>B</m> are square, <m>n \times n</m> matrices such that <m>{ AB = BA = I_n }</m>, then <m>B</m> is called the <term>inverse</term> of <m>A</m>, and <m>A</m> is said to be <term>invertible</term>. We write <m>B = A^{-1}</m> to denote the inverse matrix. 
-    </p>
+    <statement>
+      <p>
+        If <m>A</m> and <m>B</m> are square, <m>n \times n</m> matrices such that <m>{ AB = BA = I_n }</m>, then <m>B</m> is called the <term>inverse</term> of <m>A</m>, and <m>A</m> is said to be <term>invertible</term>. We write <m>B = A^{-1}</m> to denote the inverse matrix.
+      </p>
+    </statement>
   </definition>
 
   <example>
     <statement>
       <p>
         Let <m>A = \begin{bmatrix} -1 &amp; 2 \\ 1 &amp; 3 \end{bmatrix}</m>:
+        <ol>
+          <li>Using the formula in <xref ref="homework-2x2inverse">homework</xref>, find <m>A^{-1}</m></li>
+          <li>Find <m>A^3</m></li>
+          <li>Find <m>(A^{-1})^3</m></li>
+          <li>Using the matrices above and matrix multiplication, show that <m>A^3</m> and <m>(A^{-1})^3</m> are inverses.</li>
+        </ol>
       </p>
-      <ol>
-        <li>Using the formula in <xref ref="homework-2x2inverse">homework</xref>, find <m>A^{-1}</m></li>
-        <li>Find <m>A^3</m></li>
-        <li>Find <m>(A^{-1})^3</m></li>
-        <li>Using the matrices above and matrix multiplication, show that <m>A^3</m> and <m>(A^{-1})^3</m> are inverses.</li>
-      </ol>
     </statement>
   </example>
 
   <definition>
     <title>Matrix Transpose</title>
-    <p>
-      Let <m>A</m> be an <m>m \times n</m> matrix. We define the <term>transpose of <m>A</m></term>, denoted <m>A^t</m> to be the <m>n\times m</m> matrix obtained by interchanging the rows and columns of <m>A</m>.
-    </p>
+    <statement>
+      <p>
+        Let <m>A</m> be an <m>m \times n</m> matrix. We define the <term>transpose of <m>A</m></term>, denoted <m>A^t</m> to be the <m>n\times m</m> matrix obtained by interchanging the rows and columns of <m>A</m>.
+      </p>
+    </statement>
   </definition>
 
   <definition>
     <title>Symmetric Matrices</title>
-    <p>
-      A square matrix is called <term>symmetric</term> if <m>A = A^t</m>.
-    </p>
+    <statement>
+      <p>
+        A square matrix is called <term>symmetric</term> if <m>A = A^t</m>.
+      </p>
+    </statement>
   </definition>
 
 
@@ -291,11 +305,13 @@
             <li>
               <p>
                 Then, scrolling to the end, we see:
-                <blockquote>
-                  <p>
+              </p>
+              <blockquote>
+                <p>
                   TypeError: unsupported operand parent(s) for *: 'Full MatrixSpace of 3 by 3 dense matrices over Integer Ring' and 'Full MatrixSpace of 2 by 3 dense matrices over Integer Ring'
-                  </p>
-                </blockquote>
+                </p>
+              </blockquote>
+              <p>
                 That's a lot information, but look what we have:
                 <ol>
                   <li><q>Unsupported operand parent(s) for *</q> tells us that we have a problem with our multiplication.</li>

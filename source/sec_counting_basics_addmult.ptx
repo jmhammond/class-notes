@@ -5,19 +5,16 @@
   </title>
 
   <note>
-    <statement>
-      <p>
-        A standard deck of playing cards contains four <term>suits</term> (spade, heart, club, diamond). There are 13 cards in each suit (2,3,4,5,6,7,8,9,10, Jack, Queen, King, Ace). <term>Face cards</term> refers to jacks, queens, and kings. Spades and clubs are black and hearts and diamonds are red.
-      </p>
-    </statement>
+    <p>
+      A standard deck of playing cards contains four <term>suits</term> (spade, heart, club, diamond). There are 13 cards in each suit (2,3,4,5,6,7,8,9,10, Jack, Queen, King, Ace). <term>Face cards</term> refers to jacks, queens, and kings. Spades and clubs are black and hearts and diamonds are red.
+    </p>
   </note>
-
 
   <definition>
     <title>Multiplication Principle</title>
     <statement>
       <p>
-        The <term>multiplication principle</term> states that if an event <m>A</m> can occur <m>m</m> ways and an event <m>B</m> can occur <n>n</n> ways, then the event <q><m>A \and B</m></q> can occur <m>m\cdot n</m> ways.
+        The <term>multiplication principle</term> states that if an event <m>A</m> can occur <m>m</m> ways and an event <m>B</m> can occur <m>n</m> ways, then the event <q><m>A \and B</m></q> can occur <m>m\cdot n</m> ways.
       </p>
       <p>
         The multiplication principle generalizes to more than two events.
@@ -133,12 +130,10 @@
 
 
   <note>
-    <statement>
-      <p>
-        The Principle of Inclusion-Exclusion applies to more than two sets. For any finite sets <m>A, B, \and C</m>,
-        <me> |A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|</me>
-      </p>
-    </statement>
+    <p>
+      The Principle of Inclusion-Exclusion applies to more than two sets. For any finite sets <m>A, B, \and C</m>,
+      <me> |A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|</me>
+    </p>
   </note>
 
   <example>
@@ -246,9 +241,11 @@
       </p>
     </statement>
     <solution>
-      According to the Generalized Pigeonhole Principle, we want to determine the number of cards, <m>N</m>, that must be drawn (here <m>k = 4</m> suits):
-      <me> \left\lceil \dfrac{N}{4} \right\rceil \ge 3</me>
-      So <m>N = 9</m>.
+      <p>
+        According to the Generalized Pigeonhole Principle, we want to determine the number of cards, <m>N</m>, that must be drawn (here <m>k = 4</m> suits):
+        <me> \left\lceil \dfrac{N}{4} \right\rceil \ge 3</me>
+        So <m>N = 9</m>.
+      </p>
     </solution>
   </example>
 

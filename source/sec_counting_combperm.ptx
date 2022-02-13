@@ -93,12 +93,10 @@
   </example>
 
   <note>
-    <statement>
-      <p>
-        If <m>n \and r</m> are integers such that <m>0 \le r \le n</m>, then the number of <m>r</m>-combinations from a set of <m>n</m> elements is
-        <me>\binom{n}{r} = \dfrac{n!}{r!(n-r)!}</me>
-      </p>
-    </statement>
+    <p>
+      If <m>n \and r</m> are integers such that <m>0 \le r \le n</m>, then the number of <m>r</m>-combinations from a set of <m>n</m> elements is
+      <me>\binom{n}{r} = \dfrac{n!}{r!(n-r)!}</me>
+    </p>
   </note>
 
   <example>

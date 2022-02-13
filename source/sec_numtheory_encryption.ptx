@@ -287,7 +287,7 @@
       <title>The RSA Algorithm</title>
       <statement>
         <p>
-          RSA is an example of a public-key algorithm. Its security is based on the fact that factoring integers is <a href="https://en.wikipedia.org/wiki/Integer_factorization" visual="">a hard problem</a>. The process is outlined below:
+          RSA is an example of a public-key algorithm. Its security is based on the fact that factoring integers is <url href="https://en.wikipedia.org/wiki/Integer_factorization" visual="">a hard problem</url>. The process is outlined below:
         </p>
           
         <p>
@@ -340,13 +340,12 @@
           <p>
             Decrypt the following message, which was encrypted by the standard Caesar cipher: <q>L FDQ DOZDBV WUXVW BRX, EUXWXV.</q>
           </p>
-          <solution>
-            <p>
-              <q>I can always trust you, Brutus.</q>
-            </p>
-          </solution>
-
         </statement>
+        <solution>
+          <p>
+            <q>I can always trust you, Brutus.</q>
+          </p>
+        </solution>
       </exercise>
 
       <exercise>
@@ -386,61 +385,63 @@
     </title>
 
     <p>
-      Sage has a convenient way of determining if a number is prime by asking if the number is in a set primes: 
-      <sage>
+      Sage has a convenient way of determining if a number is prime by asking if the number is in a set primes:
+    </p>
+    <sage>
         <input>
           37 in Primes()
         </input>
         <output>
           True
         </output>
-      </sage>
+    </sage>
+    <p>
       Try testing any number in the cell above.
     </p>
 
     <p>
       If you want to just want to get a prime number of some particular size (as we want with our <xref ref="rsa-activity">RSA activity</xref>), we ask sage for the <code>next_prime</code>:
-      <sage>
-        <input>
-          next_prime(123456)
-        </input>
-        <output>
-          123457
-        </output>
-      </sage>
     </p>
+    <sage>
+      <input>
+        next_prime(123456)
+      </input>
+      <output>
+        123457
+      </output>
+    </sage>
 
     <p xml:id="bezout-gcd">
       The following Sage code allows us to find the GCD and Bézout coefficients via the <code>xgcd</code> command:
-      <sage>
-        <input>
-          # Change a and b to be any positive integers, then press Evaluate
-          a=2345
-          b = 234
-          l = a.xgcd(b)
-          print(str(l[0]) + "=" + str(a) + "*(" + str(l[1]) + ") + " + str(b) + "*(" + str(l[2]) + ")")
-        </input>
-        <output>
-          1=2345*(47) + 234*(-471)
-        </output>
-      </sage>
+    </p>
+    <sage>
+      <input>
+        # Change a and b to be any positive integers, then press Evaluate
+        a=2345
+        b = 234
+        l = a.xgcd(b)
+        print(str(l[0]) + "=" + str(a) + "*(" + str(l[1]) + ") + " + str(b) + "*(" + str(l[2]) + ")")
+      </input>
+      <output>
+        1=2345*(47) + 234*(-471)
+      </output>
+    </sage>
+    <p>
       The <code>xgcd</code> command returns a list of the form <code>(gcd, first Bézout coefficient, second Bézout coefficient)</code>, and the code above pretty-prints this in a readable format.
     </p>
 
     <p>
       In order to do modular exponentiation, we use the <code>powermod</code> function. For example, to compute <m>2022^{2022} \pmod{1000}</m>:
-      <sage>
-        <input>
-          2022.powermod(2022,1000)
-        </input>
-        <output>
-          584
-        </output>
-      </sage>
     </p>
-
+    <sage>
+      <input>
+        2022.powermod(2022,1000)
+      </input>
+      <output>
+        584
+      </output>
+    </sage>
   </subsection>
-
 
   <subsection xml:id="rsa-activity">
     <title>

@@ -4,16 +4,20 @@
 
   <definition>
     <title>Tautology</title>
-    <p>
-      An expression involving logical variables that is true for all values is called a <term>tautology</term>.
-    </p>
+    <statement>
+      <p>
+        An expression involving logical variables that is true for all values is called a <term>tautology</term>.
+      </p>
+    </statement>
   </definition>
 
   <definition>
     <title>Contradiction</title>
-    <p>
-      An expression involving logical variables that is false for all values is called a <term>contradiction</term>.
-    </p>
+    <statement>
+      <p>
+        An expression involving logical variables that is false for all values is called a <term>contradiction</term>.
+      </p>
+    </statement>
   </definition>
 
   <p>
@@ -22,9 +26,11 @@
 
   <definition>
     <title>Logical Equivalence</title>
-    <p>
-      We say two propositions <m>p</m> and <m>q</m> are <term>logically equivalent</term> if <m>p \leftrightarrow q</m> is a tautology. We denote this by <m>p \equiv q</m>.
-    </p>
+    <statement>
+      <p>
+        We say two propositions <m>p</m> and <m>q</m> are <term>logically equivalent</term> if <m>p \leftrightarrow q</m> is a tautology. We denote this by <m>p \equiv q</m>.
+      </p>
+    </statement>
   </definition>
 
   <example>
@@ -40,15 +46,13 @@
         </ol>
       </p>
       <p>
-        <note>
-          <p>
-            We use <m>p \to q \equiv \neg p \vee q</m> often enough that this has a name. We'll call it <term>implication</term>
-          </p>
-        </note>
+         Note! We use <m>p \to q \equiv \neg p \vee q</m> often enough that this has a name. We'll call it <term>implication</term>
       </p>
     </statement>
     <solution>
+      <p>
       Here's the solution for <m>(\neg p \to (q \wedge \neg q)) \equiv p</m>:
+      </p>
       <table xml:id="table-contradiction-valid">
         <title>Showing <m>( \neg p \to (q \wedge \neg q)  )\leftrightarrow p</m> is a tautology</title>
         <tabular  halign="center">
@@ -116,7 +120,9 @@
     </title>
 
     <introduction>
-      Let <m>p, q</m> and <m>r</m> be logical propositions.
+      <p>
+        Let <m>p, q</m> and <m>r</m> be logical propositions.
+      </p>
     </introduction>
 
     <ol>

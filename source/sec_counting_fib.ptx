@@ -15,58 +15,56 @@
       <p>
         For example, here are all of the possible tilings for a 4-board:
       </p>
-      <p>
-        <image xml:id="tilings-of-4board">
-          <description>Tilings of a 4-board: 4sq; 1dom, 2sq; sq, dom, sq; 2sq, 1dom; 2dom</description>
-          <latex-image>
-            % tilings of a 4 board:
-            \begin{tikzpicture}[scale=1.0]
-            \foreach \col in {0,2}{
-            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
-            }
-            \draw[thick] (0,0) rectangle (4,1);
-            \node[left] at (6.5,0.5) {4 sq};
-            \end{tikzpicture}
+      <image xml:id="tilings-of-4board">
+        <description>Tilings of a 4-board: 4sq; 1dom, 2sq; sq, dom, sq; 2sq, 1dom; 2dom</description>
+        <latex-image>
+          % tilings of a 4 board:
+          \begin{tikzpicture}[scale=1.0]
+          \foreach \col in {0,2}{
+          \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+          }
+          \draw[thick] (0,0) rectangle (4,1);
+          \node[left] at (6.5,0.5) {4 sq};
+          \end{tikzpicture}
 
-            \begin{tikzpicture}[scale=1.0]
-            \foreach \col in {0,2}{
-            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
-            }
-            \draw[thick,fill=gray!30] (0,0) rectangle (2,1);
-            \draw[thick] (0,0) rectangle (4,1);
-            \node[left] at (6.5,0.5) {1 dom, 2 sq};
-            \end{tikzpicture}
+          \begin{tikzpicture}[scale=1.0]
+          \foreach \col in {0,2}{
+          \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+          }
+          \draw[thick,fill=gray!30] (0,0) rectangle (2,1);
+          \draw[thick] (0,0) rectangle (4,1);
+          \node[left] at (6.5,0.5) {1 dom, 2 sq};
+          \end{tikzpicture}
 
-            \begin{tikzpicture}[scale=1.0]
-            \foreach \col in {0,2}{
-            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
-            }
-            \draw[thick,fill=gray!30] (1,0) rectangle (3,1);
-            \draw[thick] (0,0) rectangle (4,1);
-            \node[left] at (6.5,0.5) {sq, dom, sq};
-            \end{tikzpicture}
+          \begin{tikzpicture}[scale=1.0]
+          \foreach \col in {0,2}{
+          \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+          }
+          \draw[thick,fill=gray!30] (1,0) rectangle (3,1);
+          \draw[thick] (0,0) rectangle (4,1);
+          \node[left] at (6.5,0.5) {sq, dom, sq};
+          \end{tikzpicture}
 
-            \begin{tikzpicture}[scale=1.0]
-            \foreach \col in {0,2}{
-            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
-            }
-            \draw[thick,fill=gray!30] (2,0) rectangle (4,1);
-            \draw[thick] (0,0) rectangle (4,1);
-            \node[left] at (6.5,0.5) {2 sq, 1 dom};
-            \end{tikzpicture}
+          \begin{tikzpicture}[scale=1.0]
+          \foreach \col in {0,2}{
+          \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+          }
+          \draw[thick,fill=gray!30] (2,0) rectangle (4,1);
+          \draw[thick] (0,0) rectangle (4,1);
+          \node[left] at (6.5,0.5) {2 sq, 1 dom};
+          \end{tikzpicture}
 
-            \begin{tikzpicture}[scale=1.0]
-            \foreach \col in {0,2}{
-            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
-            }
-            \draw[thick,fill=gray!30] (0,0) rectangle (2,1);
-            \draw[thick,fill=gray!30] (2,0) rectangle (4,1);
-            \draw[thick] (0,0) rectangle (4,1);
-            \node[left] at (6.5,0.5) {2 dom};
-            \end{tikzpicture}
-          </latex-image>
-        </image>
-      </p>
+          \begin{tikzpicture}[scale=1.0]
+          \foreach \col in {0,2}{
+          \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+          }
+          \draw[thick,fill=gray!30] (0,0) rectangle (2,1);
+          \draw[thick,fill=gray!30] (2,0) rectangle (4,1);
+          \draw[thick] (0,0) rectangle (4,1);
+          \node[left] at (6.5,0.5) {2 dom};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
     </statement>
   </example>
 
@@ -87,46 +85,44 @@
         These two subdivisions are mutually exclusive (if we added a square to the 3-board, that's turned it into the 4-board, which was already counted above). So we can conclude the number of ways to tile a 5-board is 5+3 = 8.
       </p>
 
-      <p>
-        <image xml:id="tiling-5-board">
-          <description>Tiling a 5-board: The 5-board is a 4-board with square plus a 3-board plus domino</description>
-          <latex-image>
-            \begin{tikzpicture}[scale=1.0]
-            \foreach \col in {0,2,3}{
-            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
-            }
-            \draw[thick,fill=white!20] (0,0) rectangle (5,1);
-            \node[thick,fill=white!20] at (2.5,0.5) {5-board};
-            \draw[thick] (0,0) rectangle (5,1);
-            \end{tikzpicture}
-            \begin{tikzpicture}[scale=1.0]
-            \draw[draw opacity=0, fill opacity=0] (0,0) rectangle (0.25,1);  % draw invisible box to center =
-            \node[thick] at (0.125,0.5) {$=$};
-            \end{tikzpicture}
-            \begin{tikzpicture}[scale=1.0]
-            \foreach \col in {0,2,3}{
-            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
-            }
-            \draw[thick,fill=white!20] (0,0) rectangle (4,1);
-            \node[thick,fill=white!20] at (2,0.5) {4-board};
-            \draw[thick] (0,0) rectangle (5,1);
-            \end{tikzpicture}
-            \begin{tikzpicture}[scale=1.0]
-            \draw[draw opacity=0, fill opacity=0] (0,0) rectangle (0.25,1);
-            \node[thick] at (0.125,0.5) {$+$};
-            \end{tikzpicture}
-            \begin{tikzpicture}[scale=1.0]
-            \foreach \col in {0,2,3}{
-            \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
-            }
-            \draw[thick,fill=white!20] (0,0) rectangle (3,1);
-            \node[thick,fill=white!20] at (1.5,0.5) {3-board};
-            \draw[thick,fill=gray!30] (3,0) rectangle (5,1);
-            \draw[thick] (0,0) rectangle (5,1);
-            \end{tikzpicture}
-          </latex-image>
-        </image>
-      </p>
+      <image xml:id="tiling-5-board">
+        <description>Tiling a 5-board: The 5-board is a 4-board with square plus a 3-board plus domino</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=1.0]
+          \foreach \col in {0,2,3}{
+          \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+          }
+          \draw[thick,fill=white!20] (0,0) rectangle (5,1);
+          \node[thick,fill=white!20] at (2.5,0.5) {5-board};
+          \draw[thick] (0,0) rectangle (5,1);
+          \end{tikzpicture}
+          \begin{tikzpicture}[scale=1.0]
+          \draw[draw opacity=0, fill opacity=0] (0,0) rectangle (0.25,1);  % draw invisible box to center =
+          \node[thick] at (0.125,0.5) {$=$};
+          \end{tikzpicture}
+          \begin{tikzpicture}[scale=1.0]
+          \foreach \col in {0,2,3}{
+          \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+          }
+          \draw[thick,fill=white!20] (0,0) rectangle (4,1);
+          \node[thick,fill=white!20] at (2,0.5) {4-board};
+          \draw[thick] (0,0) rectangle (5,1);
+          \end{tikzpicture}
+          \begin{tikzpicture}[scale=1.0]
+          \draw[draw opacity=0, fill opacity=0] (0,0) rectangle (0.25,1);
+          \node[thick] at (0.125,0.5) {$+$};
+          \end{tikzpicture}
+          \begin{tikzpicture}[scale=1.0]
+          \foreach \col in {0,2,3}{
+          \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+          }
+          \draw[thick,fill=white!20] (0,0) rectangle (3,1);
+          \node[thick,fill=white!20] at (1.5,0.5) {3-board};
+          \draw[thick,fill=gray!30] (3,0) rectangle (5,1);
+          \draw[thick] (0,0) rectangle (5,1);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
     </solution>
   </example>
 

@@ -5,12 +5,10 @@
     <title>Predicates</title>
     <p>
       Consider this mathematical sentence: <q> <m> x \lt 5 </m></q>.
-      <ul>
+      <ul label="circle">
         <li><m>x</m> is a variable, the subject of the sentence.</li>
         <li> <q>is less than five</q> is the <term> predicate</term></li>
-        <ul>
-          <li> A predicate is a property that a subject can have.</li>
-        </ul>
+        <li> A predicate is a property that a subject can have.</li>
         <li>
           <p>
             We can write <m>P(x) :=</m> <q><m> x \lt 5 </m>,</q> where
@@ -25,11 +23,13 @@
 
     <definition>
       <title>Domain of Discourse</title>
-      <p>
-        The <term>domain of discourse</term> (or <term>universe of discourse</term>) is the collection from which variables can take values.
-      </p>
-      <p> For example, if my predicate function is <q><m>x</m> is sharp</q>, the function has a different meaning if my universe of discourse is <q>all college students</q> versus <q>all tools.</q>
-      </p>
+      <statement>
+        <p>
+          The <term>domain of discourse</term> (or <term>universe of discourse</term>) is the collection from which variables can take values.
+        </p>
+        <p> For example, if my predicate function is <q><m>x</m> is sharp</q>, the function has a different meaning if my universe of discourse is <q>all college students</q> versus <q>all tools.</q>
+        </p>
+      </statement>
     </definition>
 
     <example>
@@ -74,18 +74,22 @@
 
     <definition>
       <title>Universal Quantifier</title>
-      <p>
-        The <term>universal quantification</term> of <m>P(x)</m> is the statement that <m>P(x)</m> is true for all values of <m>x</m> in the domain of discourse. We write <m> \forall x P(x)</m>
-      </p>
-      <p>
-        A <term>counterexample</term> is an <m>x</m> value for which <m>P(x)</m> is false.
-      </p>
+      <statement>
+        <p>
+          The <term>universal quantification</term> of <m>P(x)</m> is the statement that <m>P(x)</m> is true for all values of <m>x</m> in the domain of discourse. We write <m> \forall x P(x)</m>
+        </p>
+        <p>
+          A <term>counterexample</term> is an <m>x</m> value for which <m>P(x)</m> is false.
+        </p>
+      </statement>
     </definition>
     <definition>
       <title>Existential Quantifier</title>
-      <p>
-        The <term>existential quantification</term> of <m>P(x)</m> is the statement that there is some value <m>x</m> in the universe of discourse for which <m>P(x)</m> is true. We write <m> \exists x P(x)</m>
-      </p>
+      <statement>
+        <p>
+          The <term>existential quantification</term> of <m>P(x)</m> is the statement that there is some value <m>x</m> in the universe of discourse for which <m>P(x)</m> is true. We write <m> \exists x P(x)</m>
+        </p>
+      </statement>
     </definition>
 
 
@@ -93,11 +97,11 @@
       <statement>
         <p>
           Let <m>P(x)</m> be <q><m>x^2 \ge 0</m></q>. What is the truth value of <m>\forall x P(x)</m> if the domain is:
+          <ol>
+            <li> All real numbers </li>
+            <li> All complex numbers </li>
+          </ol>
         </p>
-        <ol>
-          <li> All real numbers </li>
-          <li> All complex numbers </li>
-        </ol>
       </statement>
       <!-- <answer> -->
       <!--   <ol> -->
@@ -114,12 +118,12 @@
       <statement>
         <p>
           Let the domain be all real numbers. Find a counterexample to the following statements:
+          <ol>
+            <li><m>\forall x (x^2 \not= x)</m></li>
+            <li><m>\forall x (|x| \gt 0)</m></li>
+            <li><m>\forall x (x \gt 3 \vee x \lt 2)</m></li>
+          </ol>
         </p>
-        <ol>
-          <li><m>\forall x (x^2 \not= x)</m></li>
-          <li><m>\forall x (|x| \gt 0)</m></li>
-          <li><m>\forall x (x \gt 3 \vee x \lt 2)</m></li>
-        </ol>
       </statement>
     </example>
 
