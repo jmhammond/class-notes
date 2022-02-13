@@ -17,6 +17,7 @@
     <title>The Basics</title>
 
     <definition>
+      <title>Logical Propositions</title>
       <statement>
         <p>
           A <term>logical proposition</term> or <term>logical statement</term> is a sentence which is either true or false, but not both.
@@ -40,6 +41,7 @@
     </example>
 
     <definition>
+      <title>Logical Negation</title>
       <statement>
         <p>
           Let <m>p</m> be a logical proposition. The <term>negation</term> of <m>p</m>, denoted by <m>\neg p</m> has the opposite truth value of <m>p</m>.
@@ -68,6 +70,7 @@
     </example>
 
     <definition>
+      <title>Logical Operations</title>
       <statement>
         <p>
           Let <m>p</m> and <m>q</m> be propositions. The <term>conjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \wedge q</m>, is the proposition <q> <m>p</m> and <m>q</m> </q>.
@@ -84,6 +87,7 @@
 
 
     <definition>
+      <title>Conditional Statements</title>
       <statement>
         <p>
           Let <m>p</m> and <m>q</m> be propositions. The <term>conditional statement</term> is the compound proposition <q>if <m>p</m> then <m>q</m></q>. The conditional is denoted by <m>p \to q</m>.
@@ -131,6 +135,7 @@
     </note>
 
     <definition>
+      <title>Converse/Inverse/Contrapositive</title>
       <statement>
         <p>
           Let <m>p</m> and <m>q</m> be propositions. For the conditional <m>p \to q</m>, we define:
@@ -144,6 +149,7 @@
     </definition>
 
     <definition>
+      <title>Biconditional Statements</title>
       <statement>
         <p>
           Let <m>p</m> and <m>q</m> be propositions. The <term>biconditional</term> of <m>p</m> and <m>q</m>, is the  statement <q><m>p</m> if and only if <m>q</m></q>, denoted <m>p \leftrightarrow q</m>.

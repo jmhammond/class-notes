@@ -7,6 +7,7 @@
       Relations
     </title>
     <definition>
+      <title>Relations</title>
       <statement>
         <p>
           A mathematical <term>relation, <m>\mathrel{R}</m>, between two sets <m>A</m> and <m>B</m></term> is a collection of ordered pairs from the two sets. Expressed symbolically, <m>\mathrel{R} \subseteq A \times B</m>.
@@ -84,6 +85,7 @@
     </example>
 
     <example xml:id="ex_divides_relation">
+      <title>The Divides Relation</title>
       <statement>
         <p>
           Let <m>A</m> and <m>B</m> both be the set of integers from 1 to 10, and define the relation by <m>a \mathrel{R} b</m> means that <m>a</m> evenly divides into <m>b</m> with no remainder.
@@ -186,6 +188,7 @@
     </example>
 
     <definition>
+      <title>Inverse of Relations</title>
       <p>
         Let <m>R</m> be a relation between sets <m>A \and B</m>. The <term>inverse relation</term> of <m>R</m> is the relation that assigns to each element <m>b\in B</m> an element <m>a \in A</m>. We denote the inverse by <m>R^{-1}</m>, so that
         <me>a \mathrel{R} b \iff b \mathrel{R^{-1}} a</me>
@@ -235,6 +238,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </title>
 
     <definition>
+      <title>Functions</title>
       <p>
         A <term>function from the set <m>A</m> to the set <m>B</m></term> is a relation with the property that exactly one element from <m>B</m> is mapped to each element of the set <m>A</m>. 
         <ul>
@@ -278,6 +282,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </example>
 
     <definition>
+      <title>Injective Functions</title>
       <p><!-- TODO: a future revision, use different letters. a and b suggest particular set relationship... oops! -->
         A function <m>f</m> is said to be  <term>injective</term> or <term>one-to-one</term> if and only if <m>f(a) = f(b)</m> means that <m>a = b</m> for all <m>a \text{ and } b</m> in the domain of <m>f</m>. 
         <!-- <me> -->
@@ -308,6 +313,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </example>
 
     <definition>
+      <title>Surjective Functions</title>
       <p>
         A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>surjective</term> or <term>onto</term> if and only if for every element <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = b</m>.
         <!-- <me> -->
@@ -341,6 +347,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </note>
 
     <definition>
+      <title>Bijective Functions</title>
       <p>
         A function <m>f</m> from <m>A</m> to <m>B</m> is said to be a <term>one-to-one correspondance</term> or <term>bijective</term> if it is both injective and surjective.
       </p>
@@ -362,6 +369,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </example>
 
     <definition xml:id="definition-modulus-operator">
+      <title>The Modulus Operator</title>
       <statement>
         <p>
           Define the <term>modulus operator</term>, <m>a \modulus m</m> on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
@@ -380,9 +388,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </definition>
 
     <definition xml:id="def-zmodn">
+      <title>Set of Integers Modulo n</title>
       <statement>
         <p>
-          We also define the set <m>\mathbb{Z}_n</m>, pronounced <q>integers mod n</q> or <q>Z mod n</q> to be the set of all possible remainders when dividing by <m>n</m>:
+          We also define the set <m>\mathbb{Z}_n</m>, pronounced <q>integers mod n</q> or <q>  mod n</q> to be the set of all possible remainders when dividing by <m>n</m>:
           <md><mrow> \mathbb{Z}_n = \{0, 1, 2, 3, 4,\dots, n-2, n-1\} </mrow> </md>
         </p>
         <p>
@@ -518,6 +527,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
 
     <definition>
+      <title>Inverse Functions</title>
       <p>
         Let <m>f:A \to B</m> be a bijection. The <term>inverse function</term> of <m>f</m> is the unique function that assigns to each element <m>b\in B</m> a unique element <m>a \in A</m> such that <m>f(a) = b</m>. We denote the inverse by <m>f^{-1}</m> so that
         <me>f^{-1} : B \to A \text{ where }  f^{-1}(b) = a \iff f(a) = b</me>
@@ -609,6 +619,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <!-- </example> -->
 
     <definition xml:id="def-composition-of-functions">
+      <title>Function Composition</title>
       <p>
         Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g : A \to C</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
         <image xml:id="composition-of-functions" width="75%">
@@ -1347,6 +1358,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
 
     <definition>
+      <title>Floor and Ceiling Functions</title>
       <statement>
         <p>
           The <term>floor</term> function assigns to every real number <m>x</m> the largest integer that is less than or equal to <m>x</m>. We denote by this <m>\lfloor x \rfloor</m>

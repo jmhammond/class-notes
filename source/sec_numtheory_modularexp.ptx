@@ -60,6 +60,7 @@
   </p>
 
   <definition>
+    <title>Modular Exponentiation</title>
     <statement>
       <p>
         <term>Modular exponentiation</term> is the process of repeatedly squaring and reducing a number modulo some integer, and then combining the results to find the required answer.

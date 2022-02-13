@@ -3,6 +3,7 @@
   <title>Logical Arguments</title>
 
   <definition>
+    <title>Logical Arguments</title>
     <p>
       An <term>argument</term> is a sequence of statements (<term>premises</term>) that ends with a conclusion.
     </p>
@@ -169,6 +170,7 @@
   </example>
 
   <definition>
+    <title>Quantified Arguments</title>
     <p>
       <term>Existential instantiation</term> describes the argument:
       <me> \exists x P(x) \implies P(c) </me> for some <m>c</m> in the domain.

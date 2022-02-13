@@ -9,6 +9,7 @@
   </p>
 
   <definition>
+    <title>Even Integer</title>
     <statement>
       <p>
         A number <m>n</m> is said to be <term>even</term> if it is a multiple of 2. That is, if there exists an integer <m>k</m> such that <m>n = 2k</m>, then <m>n</m> is even.
@@ -30,6 +31,7 @@
   </example>
 
   <definition>
+    <title>Odd Integer</title>
     <statement>
       <p>
         A number <m>n</m> is said to be <term>odd</term> if it is not a multiple of 2. That is, if there exists an integer <m>k</m> such that <m>n = 2k + 1</m>, then <m>n</m> is odd.
@@ -50,6 +52,7 @@
   </example>
   
   <definition>
+    <title>Rational Number</title>
     <statement>
       <p>
         A number <m>n</m> is said to be <term>rational</term> if there exist integers <m>a, b</m> with <m>b \not=0 </m> such that <m>n = \dfrac{a}{b}</m>. If a number is not rational, we say that it is is <term>irrational</term>.
@@ -76,6 +79,7 @@
     </title>
   
   <definition>
+    <title>Statement Terminology</title>
     <ul>
       <li> A <term>theorem</term> is a statement can be shown to be true. We generally reserve the word theorem for an important statement.
       </li>
@@ -90,7 +94,7 @@
       <li>
       A <term>corollary</term> is a theorem that follows directly from a theorem just proved.</li>
       <li>
-        A <term>conjecture</term> is a statement that we think my be true (our intuition suggests it)
+        A <term>conjecture</term> is a statement that we think may be true (our intuition suggests it)
       </li>
     </ul>
   </definition>
@@ -456,24 +460,28 @@
   <subsection>
     <title>Vacuous and Trivial Proofs</title>
     <definition>
-      <p>A <term>vacuous statement</term> is one that is true because the hypothesis is false. You can <q>prove</q> a statement is true immediately.
-      <example>
-        <statement>
-          <p>
-            If I play in the Super Bowl, I will throw the game winning touchdown.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Since I won't ever play in the Super Bowl, it doesn't matter what the truth value of the touchdown statement is. <m>F\to T \equiv T</m> and <m>F \to F \equiv T</m> just the same.
-          </p>
-        </solution>
-      </example>
-      </p>
+      <title>Vacuous Statements</title>
+      <statement>
+        <p>A <term>vacuous statement</term> is one that is true because the hypothesis is false. You can <q>prove</q> a statement is true immediately.
+        <example>
+          <statement>
+            <p>
+              If I play in the Super Bowl, I will throw the game winning touchdown.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Since I won't ever play in the Super Bowl, it doesn't matter what the truth value of the touchdown statement is. <m>F\to T \equiv T</m> and <m>F \to F \equiv T</m> just the same.
+            </p>
+          </solution>
+        </example>
+        </p>
+      </statement>
     </definition>
 
     <definition>
-      
+      <title>Trivial Statements</title>
+      <statement>
       <p>
         If we know that the conclusion of a statement is true, then the statement has a <term>trivial</term> proof.
 
@@ -491,6 +499,7 @@
 
         </example>
       </p>
+      </statement>
     </definition>
 
   </subsection>

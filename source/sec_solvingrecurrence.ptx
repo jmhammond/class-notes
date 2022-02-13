@@ -119,6 +119,7 @@
 
 
     <definition>
+      <title>Linear, Homogeneous Recurrence Relations of Degree k</title>
       <statement>
         <p>
           A <term>linear homogeneous recurrence relation of degree <m>k</m> with constant coefficients</term> is a recurrence relation of the form
@@ -167,6 +168,7 @@
     </note>
 
     <definition>
+      <title>Characteristic Equation</title>
       <statement>
         <p>
           We call the equation <m>\displaystyle r^2 - c_1 r - c_2= 0</m> the <term>characteristic equation</term> of the recurrence relation. The solutions to this equation are the <term>characteristic roots</term>.

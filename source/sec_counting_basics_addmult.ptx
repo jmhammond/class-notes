@@ -14,12 +14,13 @@
 
 
   <definition>
+    <title>Multiplication Principle</title>
     <statement>
       <p>
-        The <term>multiplicative principle</term> states that if an event <m>A</m> can occur <m>m</m> ways and an event <m>B</m> can occur <n>n</n> ways, then the event <q><m>A \and B</m></q> can occur <m>m\cdot n</m> ways.
+        The <term>multiplication principle</term> states that if an event <m>A</m> can occur <m>m</m> ways and an event <m>B</m> can occur <n>n</n> ways, then the event <q><m>A \and B</m></q> can occur <m>m\cdot n</m> ways.
       </p>
       <p>
-        The multiplicative principle generalizes to more than two events.
+        The multiplication principle generalizes to more than two events.
       </p>
     </statement>
   </definition>
@@ -51,9 +52,10 @@
 
 
   <definition>
+    <title>Addition Principle</title>
     <statement>
       <p>
-        The <term>additive principle</term> states that if event <m>A</m> can occur <m>m</m> ways and event <m>B</m> can occur <m>n</m> ways and the two events are disjoint, then the event <q><m>A \text{ or } B</m></q> can occur <m>m + n</m> ways.
+        The <term>addition principle</term> states that if event <m>A</m> can occur <m>m</m> ways and event <m>B</m> can occur <m>n</m> ways and the two events are disjoint, then the event <q><m>A \text{ or } B</m></q> can occur <m>m + n</m> ways.
       </p>
     </statement>
   </definition>

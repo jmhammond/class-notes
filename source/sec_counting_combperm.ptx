@@ -5,6 +5,7 @@
   </title>
 
   <definition>
+    <title>Permutation</title>
     <statement>
       <p>
         A <term>permutation</term> is an ordered arrangement of objects.
@@ -74,6 +75,7 @@
   </example>
 
   <definition>
+    <title>Combination</title>
     <statement>
       <p>
         A <term>combination</term> is an unordered selection of objects.

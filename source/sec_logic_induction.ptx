@@ -23,6 +23,7 @@
   <!-- </theorem> -->
 
   <definition>
+    <title>Mathematical Induction</title>
     <statement>
       <p>
         To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the <term>principal of math induction</term>. The process has two core steps:
@@ -135,6 +136,7 @@
 
 
   <definition>
+    <title>Strong Induction</title>
     <statement>
       <p>
         The principal of <term>strong math induction</term> is like the so-called weak induction, except instead of proving <m>P(k) \to P(k+1)</m>, we assume that <m>P(m)</m> is true for all values of <m>m</m> such that <m>0 \le m \le k</m>, and we show that the next statement, <m>P(k+1)</m>, is true.

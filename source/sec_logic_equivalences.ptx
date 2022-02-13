@@ -3,12 +3,14 @@
   <title>Logical Equivalences</title>
 
   <definition>
+    <title>Tautology</title>
     <p>
       An expression involving logical variables that is true for all values is called a <term>tautology</term>.
     </p>
   </definition>
 
   <definition>
+    <title>Contradiction</title>
     <p>
       An expression involving logical variables that is false for all values is called a <term>contradiction</term>.
     </p>
@@ -19,6 +21,7 @@
   </p>
 
   <definition>
+    <title>Logical Equivalence</title>
     <p>
       We say two propositions <m>p</m> and <m>q</m> are <term>logically equivalent</term> if <m>p \leftrightarrow q</m> is a tautology. We denote this by <m>p \equiv q</m>.
     </p>

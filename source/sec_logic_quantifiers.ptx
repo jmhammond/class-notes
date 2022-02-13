@@ -24,6 +24,7 @@
     </p>
 
     <definition>
+      <title>Domain of Discourse</title>
       <p>
         The <term>domain of discourse</term> (or <term>universe of discourse</term>) is the collection from which variables can take values.
       </p>
@@ -72,6 +73,7 @@
     <title>Logical Quantifiers</title>
 
     <definition>
+      <title>Universal Quantifier</title>
       <p>
         The <term>universal quantification</term> of <m>P(x)</m> is the statement that <m>P(x)</m> is true for all values of <m>x</m> in the domain of discourse. We write <m> \forall x P(x)</m>
       </p>
@@ -80,6 +82,7 @@
       </p>
     </definition>
     <definition>
+      <title>Existential Quantifier</title>
       <p>
         The <term>existential quantification</term> of <m>P(x)</m> is the statement that there is some value <m>x</m> in the universe of discourse for which <m>P(x)</m> is true. We write <m> \exists x P(x)</m>
       </p>
@@ -134,7 +137,8 @@
       </statement>
     </example>
 
-    <definition>
+    <remark>
+      <title>Negating Quantifiers</title>
       <p>
         The negation of quantifiers is found as follows: 
         <md>
@@ -145,7 +149,7 @@
       <p>
         It might help to think <q>not all...</q> is equivalent to <q>some... do not</q>. While <q>there isn't one who...</q> is the same as <q>no one does...</q>.
       </p>
-    </definition>
+    </remark>
     <note>
       <p>
         Counterexamples to universal statements work because if <m>\exists x \neg P(x)</m> is true, then <m>\neg \forall x P(x)</m> is also true, that is, <m>\forall x P(x)</m> is false!

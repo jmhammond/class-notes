@@ -2,6 +2,7 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-gcd-euclid">
   <title>GCDs and The Euclidean Algorithm</title>
   <definition>
+    <title>Greatest Common Divisor (gcd)</title>
     <statement>
       <p>
         Let <m>a \and b</m> be integers, not both zero. The largest integer <m>d</m> such that <m>d\divides a</m> and <m>d \divides b</m> is called the <term>greatest common divisor of <m>a \and b</m></term> which we denote by <m>\gcd(a,b)</m>.
@@ -26,6 +27,7 @@
   </example>
 
   <definition>
+    <title>Lease Common Multiple</title>
     <statement>
       <p>
         Let <m>a \and b</m> be integers, not both zero. The smallest integer <m>m</m> such that <m>a\divides m</m> and <m>b \divides m</m> is called the <term>least common multiple of <m>a \and b</m></term> which we denote by <m>\lcm(a,b)</m>.
@@ -115,6 +117,7 @@
   </proposition>
 
   <definition>
+    <title>Bézout Coefficients</title>
     <statement>
       <p>
         We call <m>s \and t</m> in the theorem above the <term>Bézout coefficients</term> of <m>a \and b</m>. 

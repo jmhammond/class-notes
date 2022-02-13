@@ -3,6 +3,7 @@
   <title>Prime Numbers</title>
 
   <definition>
+    <title>Prime Numbers</title>
     <statement>
       <p>
         A positive integer <m>p</m> is called <term>prime</term> if the only positive factors of <m>p</m> are <m>1 \and p</m> itself.

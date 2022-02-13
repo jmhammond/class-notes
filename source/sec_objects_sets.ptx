@@ -10,6 +10,9 @@
     <title>Basic terminology</title>
 
     <definition>
+      <title>
+        Sets
+      </title>
       <p>
         A <term>set</term> is an unordered collection of objects called <term>elements</term> or <term>members</term> of the set.
       </p>
@@ -132,6 +135,7 @@
     </note>
 
     <definition>
+      <title>Set Relations</title>
       <p>
         We say that two sets, <m>A</m> and <m>B</m> are <term>equal</term>, an write <m>A = B</m> they have exactly the same elements.
       </p>
@@ -199,6 +203,7 @@
     </note>
 
     <definition>
+      <title>Power Set</title>
       <p>
         Given any set <m>S</m>, the <term>power set</term> of <m>S</m> is the set of all subsets of the set <m>S</m>. We denote the power set of <m>S</m> by <m>\pow(S)</m>
       </p>
@@ -222,6 +227,7 @@
     </example>
 
     <definition>
+      <title>Cardinality</title>
       <p>
         Let <m>S</m> be a set. If there are exactly <m>n</m> distinct elements in <m>S</m> where <m>n</m> is a nonnegative integer, then we say that <m>S</m> is a <term>finite</term> set with <term>cardinality</term> of <m>n</m>, and write <m>|S|=n</m>.
       </p>
@@ -262,6 +268,7 @@
     </definition>
 
     <definition>
+      <title>Cartesian Product</title>
       <p>
         Let <m>A</m> and <m>B</m> be sets. The <term>Cartesian Product</term> of <m>A</m> and <m>B</m>, denoted by <m>A\times B</m>, is the set of all ordered pairs <m>(a,b)</m> where <m>a\in A</m> and <m>b \in B</m>. That is,
         <me>A \times B = \{ (a,b) \mid a\in A \text{ and } b \in B\}</me>
@@ -289,6 +296,7 @@
 
     
     <definition>
+      <title>Set Operations</title>
       <p>
         If <m>A</m> and <m>B</m> are two sets, we define the <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A \cup B</m>, to be the set of all elements that are in <m>A</m> or <m>B</m>, or both.
         <me>A \cup B = \{ x \mid x \in A \text{ or } x \in B\}</me>
@@ -360,9 +368,7 @@
           </p>
         </statement>
       </note>
-    </definition>
 
-    <definition>
       <p>
         Let <m>U</m> be the <term>universal set</term>, that is the set of all possible objects in consideration.
 

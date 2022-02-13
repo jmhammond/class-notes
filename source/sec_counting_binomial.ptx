@@ -39,6 +39,7 @@
     </theorem>
 
     <definition>
+      <title>Binomial Coefficient</title>
       <statement>
         <p>
           We call <m>\binom{n}{k}</m> a <term>binomial coefficient</term>.

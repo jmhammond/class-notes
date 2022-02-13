@@ -5,6 +5,7 @@
   <!-- You've noticed this isn't used anywhere. I don't want to delete it yet.  I'll probably add it somewhere at some point! //-->
   
   <definition>
+    <title>Matrix</title>
     <p>
       A <term>matrix</term> is a rectangular array of numbers. A matrix with <m>m</m> rows and <m>n</m> columns is called an <m>m \times n</m> matrix.
     </p>
@@ -60,6 +61,7 @@
   </example>
 
   <definition>
+    <title>Matrix Operations</title>
     <p>
       Let <m>A = \begin{bmatrix} a_{ij} \end{bmatrix}</m> and <m>B = \begin{bmatrix} b_{ij} \end{bmatrix}</m> be two <m>m\times n</m> matrices. We define their sum by:
       <me> A + B = \begin{bmatrix} a_{ij} + b_{ij} \end{bmatrix} </me>
@@ -103,6 +105,7 @@
   </example>
 
   <definition>
+    <title>Identity Matrix</title>
     <p>
       The <term>identity matrix of order <m>n</m></term> is the <m>n \times n</m> matrix:
       <me>I_n = \begin{bmatrix} \delta_{ij} \end{bmatrix} \text{ where } \delta_{ij} = \left\{ \begin{array}{lr} 1 &amp; i = j \\ 0 &amp; i \not= j \end{array} \right. </me>
@@ -120,6 +123,7 @@
   </note>
 
   <definition>
+    <title>Matrix Powers</title>
     <p>
       If <m>A</m> is a square, <m>n\times n</m> matrix, we define <m>A^r = A A  A \dots  A</m>, the product of <m>A</m> with itself <m>r</m> times. Further, <m>A^0 = I_n</m>.
     </p>
@@ -135,6 +139,7 @@
 
 
   <definition>
+    <title>Matrix Inverses</title>
     <p>
       If <m>A</m> and <m>B</m> are square, <m>n \times n</m> matrices such that <m>{ AB = BA = I_n }</m>, then <m>B</m> is called the <term>inverse</term> of <m>A</m>, and <m>A</m> is said to be <term>invertible</term>. We write <m>B = A^{-1}</m> to denote the inverse matrix. 
     </p>
@@ -155,12 +160,14 @@
   </example>
 
   <definition>
+    <title>Matrix Transpose</title>
     <p>
       Let <m>A</m> be an <m>m \times n</m> matrix. We define the <term>transpose of <m>A</m></term>, denoted <m>A^t</m> to be the <m>n\times m</m> matrix obtained by interchanging the rows and columns of <m>A</m>.
     </p>
   </definition>
 
   <definition>
+    <title>Symmetric Matrices</title>
     <p>
       A square matrix is called <term>symmetric</term> if <m>A = A^t</m>.
     </p>
@@ -173,6 +180,7 @@
     </title>
 
     <definition>
+      <title>Binary Matrix</title>
       <p>
         A <term>binary matrix</term> (or <term>Boolean matrix</term>) is one for which all of its entries are either 0 or 1.
       </p>
@@ -198,6 +206,7 @@
     </example>
 
     <definition>
+      <title>Binary Matrix Operations</title>
       <p>
         Let <m>A</m> be an <m>m\times k</m> matrix, and let <m>B</m> be a <m>k\times n</m> matrix. Then the <term>Boolean product</term> <m>A\odot B = \begin{bmatrix}c_{ij} \end{bmatrix}</m> is defined by:
         <me>c_{ij} = ( a_{i1}\land b_{1j} ) \lor ( a_{i2}\land b_{2j} ) \lor \dots \lor ( a_{ik}\land b_{kj} )</me>
@@ -217,6 +226,7 @@
     </example>
 
     <definition>
+      <title>Binary Matrix Powers</title>
       <p>
         If <m>A</m> is a square, <m>n\times n</m> binary matrix, we define <m>{ A^{[r]} = A\odot A\odot A\odot \dots \odot A }</m>, the Boolean product of <m>A</m> with itself <m>r</m> times. Further, <m>A^{[0]} = I_n</m>.
       </p>

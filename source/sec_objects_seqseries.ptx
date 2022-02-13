@@ -3,6 +3,7 @@
   <title>Sequences and Series</title>
 
   <definition>
+    <title>Sequences</title>
     <p>
       A <term>sequence</term> is a function from a subset of the integers (usually <m>\{0, 1,2,3 \dots\}</m>) to a set <m>S</m>. We use the notation <m>a_n</m> to denote the image of the integer <m>n</m>, and we call <m>a_n</m> the <term><m>n</m>-th term</term> of the sequence.
     </p>
@@ -25,6 +26,7 @@
   </example>
 
   <definition>
+    <title>Geometric Sequences</title>
     <p>
       A <term>geometric progression</term> is a sequence of the form:
       <me>a, ar, ar^2, ar^3, \dots, ar^n, \dots </me>
@@ -38,6 +40,7 @@
   </definition>
 
   <definition>
+    <title>Recurrence Relations / Recursive Sequences</title>
     <p>
       A <term>recurrence relation</term> for a sequence <m>\{a_n\}</m> is an equation that expressions <m>a_n</m> in terms of previous terms.
     </p>
@@ -55,6 +58,7 @@
   </definition>
 
   <example xml:id="fib-def">
+    <title>Title Fibonacci Sequence</title>
     <statement>
       <p>
         The <term>Fibonacci sequence</term> <m>F_0, F_1, F_2, \dots</m> is defined by the recurrence:
@@ -155,14 +159,17 @@
   </example>
 
   <definition>
-    <p>
-      Let <m>\{a_n\}</m> be a sequence. We define a <term>series</term> of the sequence to be the summation of some subset of the terms of the sequence. We denote the sum by a capital sigma with sub- and superscript information in the following conventional way:
-      <me>\sum_{\text{index variable, lower bound}}^{\text{upper bound}} \text{(sequence rule in terms of index variable)}</me>
-    </p>
-    <p>
-      For example, the summation of terms from 0 to <m>n</m> is expressed:
-      <me>\sum_{i=0}^n a_i = a_0 + a_1 + a_2 + \dots + a_{n-1} + a_n</me>
-    </p>
+    <title>Series</title>
+    <statement>
+      <p>
+        Let <m>\{a_n\}</m> be a sequence. We define a <term>series</term> of the sequence to be the summation of some subset of the terms of the sequence. We denote the sum by a capital sigma with sub- and superscript information in the following conventional way:
+        <me>\sum_{\text{index variable, lower bound}}^{\text{upper bound}} \text{(sequence rule in terms of index variable)}</me>
+      </p>
+      <p>
+        For example, the summation of terms from 0 to <m>n</m> is expressed:
+        <me>\sum_{i=0}^n a_i = a_0 + a_1 + a_2 + \dots + a_{n-1} + a_n</me>
+      </p>
+    </statement>
   </definition>
 
   <example>
