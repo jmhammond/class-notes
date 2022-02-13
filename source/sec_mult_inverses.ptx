@@ -211,7 +211,7 @@
     </statement>
   </example>
 
-  <example>
+  <example xml:id="example-inverses-multiple-solutions">
     <statement>
       <p>
         Solve the linear congruences, if possible. Explain if there are no solutions, one solution, or infinitely many solutions.
@@ -334,6 +334,31 @@
     </solution>
   </example>
 
+
+  <note xml:id="note-inverses-solving-multiple">
+    <title>Solving systems with gcd other than 1</title>
+    <p>
+      As we hinted in the previous example, we have three possibilities for the congruence <m>ax = b\pmod{m}</m>:
+      <ol>
+        <li> A unique solution if <m>\gcd(a, m) = 1</m> </li>
+        <li> If <m>\gcd(a, m) = d</m>, the congruence will have <m>d</m> solutions if <m>d \divides b</m> </li>
+        <li> And teh system will have no solution if <m>\gcd(a, m) = d</m> and <m>d \not\divides b</m> </li>
+      </ol>
+    </p>
+    <p>
+      If the congruence has a solution, the complete set of solutions is given by:
+      <md>
+        <mrow>
+          x = x_0 + \dfrac{mt}{d}
+        </mrow>
+      </md>
+      where <m>\gcd(a,m) = d</m>, <m>x_0</m> is an initial solution, and <m>t</m> runs through the set of remainders modulo <m>d</m>.
+    </p>
+    <p>
+      Take a moment to revisit the examples in <xref ref="example-inverses-multiple-solutions"/> using this formula.
+    </p>
+  </note>
+
   <exercises>
     <exercise>
       <statement>
@@ -387,6 +412,71 @@
 
     </exercise>
 
+    <exercise>
+      <statement>
+        <p>
+          Solve the following congruences. If none exists, explain why. If there are one or more solutions, give a complete list of solution(s).
+          <ol>
+            <li> <m>3x - 4 = 15 \pmod{26}</m>  </li>
+            <li> <m>13 x - 3 = 4 \pmod{26}</m>  </li>
+            <li> <m>8x=16\pmod{426}</m>  </li>
+            <li> <m>8x=16\pmod{425}</m>  </li>
+            <li> <m>8x=21\pmod{426}</m>  </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Since <m>\gcd(3,26) = 1</m>, there is a unique inverse. Using the Euclidean Algorithm we find that <m>3^{-1} \equiv 9 \pmod{26}</m>. Doing the algebra:
+                <md>
+                  <mrow>3x \amp= 19 \pmod{26}</mrow>
+                  <mrow>(3^{-1})3x \amp=(3^{-1}) 19 \pmod{26}</mrow>
+                  <mrow>x \amp\equiv (9) 19 \pmod{26}</mrow>
+                  <mrow>x \amp\equiv 171 \pmod{26}</mrow>
+                  <mrow>x \amp\equiv 15 \pmod{26}</mrow>
+                </md>
+                is the unique solution.
+              </p>
+            </li>
+            <li>
+              <p>
+                Here <m>\gcd(13, 26) = 2</m> so there is no unique solution. Instead, there are either no solutions or two solutions! But since the gcd doesn't divide <m>7</m>, there are in fact no solutions to this congruence.
+              </p>
+            </li>
+            <li>
+              <p>
+                Since <m>\gcd(8, 426) = 2</m>. Like the previous question there are either no solutions or two solutions. This time since the gcd does divide 16, we will have two solutions!  The first is obviously <m>x=2</m>, and the second will be, applying <xref ref="note-inverses-solving-multiple"/>:
+                <md>
+                  <mrow>x \amp= 2 + \dfrac{426}{2}</mrow>
+                  <mrow> \amp= 215 </mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                This time the modulus is 425, so we have <m>\gcd(425, 8) = 1</m> meaning a unique solution exists the system.  The Euclidean algorithm finds that <m>8^{-1} = -53 \pmod{425}</m>, and solving the expression gives:
+                <md>
+                  <mrow>8x \amp= 16 \pmod{426}</mrow>
+                  <mrow>(8^{-1})8x \amp=(8^{-1}) 16 \pmod{425}</mrow>
+                  <mrow>x \amp\equiv (-53) 16 \pmod{425}</mrow>
+                  <mrow>x \amp\equiv -848 \pmod{425}</mrow>
+                  <mrow>x \amp\equiv 2 \pmod{425}</mrow>
+                </md>
+                ... which actually is both obvious and hilarious. It shows that even if we don't notice the obvious solution, the method will give us the correct result!
+              </p>
+            </li>
+            <li>
+              <p>
+                This time, as before, <m>\gcd(8, 426) = 2</m>, so there are either zero or two solutions. But since there the gcd doesn't divide <m>23</m>, there is no solution to the congruence.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
 
     <exercise>
       <statement>
