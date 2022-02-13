@@ -368,7 +368,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
         <p>
           For example,
-          <ul>
+          <ul label="circle">
             <li><m>25 \modulus 4 = 1</m> since the remainder when dividing 25 by 4 is 1.</li>
             <li><m>25 \modulus 5 = 0</m> since 5 divides evenly into 25.</li>
             <li><m>14 \modulus 5 = 4</m></li>
