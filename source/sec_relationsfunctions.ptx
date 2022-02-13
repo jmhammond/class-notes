@@ -403,7 +403,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
         <p>
           For example,
-          <ul>
+          <ul label="circle">
             <li><m>25 \modulus 4 = 1</m> since the remainder when dividing 25 by 4 is 1.</li>
             <li><m>25 \modulus 5 = 0</m> since 5 divides evenly into 25.</li>
             <li><m>14 \modulus 5 = 4</m></li>
@@ -414,6 +414,23 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </statement>
     </definition>
 
+    <definition xml:id="def-zmodn">
+      <statement>
+        <p>
+          We also define the set <m>\mathbb{Z}_n</m>, pronounced <q>integers mod n</q> or <q>Z mod n</q> to be the set of all possible remainders when dividing by <m>n</m>:
+          <md><mrow> \mathbb{Z}_n = \{0, 1, 2, 3, 4,\dots, n-2, n-1\} </mrow> </md>
+        </p>
+        <p>
+          For example:
+          <ul label="circle">
+            <li><m> \mathbb{Z}_5 = \{0, 1, 2, 3, 4\} </m></li>
+            <li><m> \mathbb{Z}_7 = \{0, 1, 2, 3, 4, 5, 6\}</m> </li>
+            <li><m> \mathbb{Z}_{10} = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
     <example>
       <statement>
         <p>
@@ -421,7 +438,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
           <ol>
             <li>
               <p>
-                Let <m>f:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>f(n) = (n + 2)\modulus 5</m>
+                Let <m>f:\Z_5 \to \Z_5</m> be defined by <m>f(n) = (n + 2)\modulus 5</m>
                 <tabular>
                   <row bottom="minor">
                     <cell right="minor" halign="center"><m>x</m></cell>
@@ -445,7 +462,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
             </li>
             <li>
               <p>
-                Let <m>g:\{0, 1, 2, 3, 4, 5\} \to \{0, 1, 2, 3, 4, 5\}</m> be defined by <m>g(n) = (n^2 + 2) \modulus 6</m>
+                Let <m>g:\Z_6 \to \Z_6</m> be defined by <m>g(n) = (n^2 + 2) \modulus 6</m>
                 <tabular>
                   <row bottom="minor">
                     <cell right="minor" halign="center"><m>x</m></cell>
@@ -1412,7 +1429,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <exercise>
       <statement>
         <p>
-          Let <m>f:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>f(n) = \left \lfloor \dfrac{n}{2}\right \rfloor</m>. Complete the table of values:
+          Let <m>f:Z_5 \to Z_5</m> be defined by <m>f(n) = \left \lfloor \dfrac{n}{2}\right \rfloor</m>. Complete the table of values:
           <tabular>
             <row bottom="minor">
               <cell right="minor" halign="center"><m>x</m></cell>
@@ -1484,7 +1501,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
           <ol>
             <li>
               <p>
-                Let <m>f:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>f(n) = (n + 3)\modulus 5</m>
+                Let <m>f:Z_5 \to Z_5</m> be defined by <m>f(n) = (n + 3)\modulus 5</m>
                 <tabular>
                   <row bottom="minor">
                     <cell right="minor" halign="center"><m>x</m></cell>
@@ -1508,7 +1525,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
             </li>
             <li>
               <p>
-                Let <m>g:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>g(n) = (n^2 + 1)\modulus 5</m>
+                Let <m>g:Z_5 \to Z_5</m> be defined by <m>g(n) = (n^2 + 1)\modulus 5</m>
                 <tabular>
                   <row bottom="minor">
                     <cell right="minor" halign="center"><m>x</m></cell>
