@@ -36,7 +36,7 @@ images:
 	~/src/mathbook/pretext/pretext -vv -c latex-image -f svg -d ~/src/class-notes/assets ~/src/class-notes/source/class-notes.ptx
 
 validate:
-	xsltproc --xinclude ~/src/mathbook/schema/pretext-validation-plus.xsl ~/src/class-notes/class-notes.ptx
+	xsltproc --xinclude ~/src/mathbook/schema/pretext-validation-plus.xsl ~/src/class-notes/source/class-notes.ptx
 
 # Here's the rsync command that probably works for me.
 # rsync -zartv --include "*/" --include="*.html" --exclude="*" ./  ~/public_html/notes-staging
