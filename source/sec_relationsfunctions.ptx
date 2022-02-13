@@ -26,13 +26,13 @@
           If we consider <m>A</m> and <m>B</m> to both be the set of people in your family, and let <m>\mathrel{R}</m> be the relation <q><m>a</m> is a sibling of <m>b</m>.</q> Here's an example of my family in two graphical representations. What are the ordered pairs that make up the relation? 
         </p>
         <p>
-        <sidebyside widths="60% 30%" valign="middle">
+        <sidebyside widths="30% 30%" valign="middle">
           <image xml:id="graph-sib">
             <description>Standard Cartesian graph showing my siblings. The horizontal and vertical axes are family members, labeled John, Eric, and Sarah. There is a dot on the graph when the two are related, so dots at (John, Eric), (John, Sarah), (Eric, John), (Eric, Sarah), (Sarah, John), and (Sarah, Eric). </description>
             <latex-image>
               \begin{tikzpicture}[scale=1]
               \draw[thin, gray!50] (0,0) grid (4, 4);
-              \draw[thick] (0,4) node[left] {Family Member} -- (0,0) -- (4,0) node[below right] {Family Member};
+              \draw[thick] (0,4) node[left] {} -- (0,0) -- (4,0) node[below right] {};
               \draw (1,0) node[below] { John} (0, 1) node[left] { John};
               \draw (2,0) node[below] { Eric} (0, 2) node[left] { Eric};
               \draw (3,0) node[below] { Sarah} (0, 3) node[left] { Sarah};
@@ -45,7 +45,7 @@
             <latex-image>
               \begin{tikzpicture}
               \coordinate (A)  at (0,3);
-              \node at (A) [below]{Set $A$};
+              \node at (A) [below]{};
               \coordinate (B)  at (0,2);
               \node at (B) [left]{John};
               \coordinate (C)  at (0,1);
@@ -58,7 +58,7 @@
               \coordinate (G)  at (2,1);
               \coordinate (H)  at (2,0);
 
-              \node at (E) [below]{Set $B$};
+              \node at (E) [below]{};
               \node at (F) [right]{John};
               \node at (G) [right]{Eric};
               \node at (H) [right]{Sarah};
@@ -69,6 +69,18 @@
           </sidebyside>
         </p>
       </statement>
+      <solution>
+        <p>
+          Looking that the points on the graph, we see that the relation will be the set of ordered pairs:
+          <md>
+            <mrow>\text{Siblings} = \{(\text{John}, \text{Eric}), (\text{John}, \text{Sarah }),
+            (\text{Eric}, \text{John}), (\text{Eric}, \text{Sarah}),
+            (\text{Sarah}, \text{Eric}),(\text{Sarah}, \text{John})\}
+            </mrow>
+          </md>
+          Notice that these ordered pairs correspond to the lines on the graph diagram with each of the first coordinates being connected to the second coordinate. E.g. an arrow goes from John to Eric.
+        </p>
+      </solution>
     </example>
 
     <example xml:id="ex_divides_relation">
