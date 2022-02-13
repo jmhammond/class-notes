@@ -352,7 +352,7 @@
           x = x_0 + \dfrac{mt}{d}
         </mrow>
       </md>
-      where <m>\gcd(a,m) = d</m>, <m>x_0</m> is an initial solution, and <m>t</m> runs through the set of remainders modulo <m>d</m>.
+      where <m>\gcd(a,m) = d</m>, <m>x_0</m> is an initial solution, and <m>t</m> runs through <m>Z_d</m>, the <xref ref="def-zmodn" text="custom">set of remainders modulo d</xref>.
     </p>
     <p>
       Take a moment to revisit the examples in <xref ref="example-inverses-multiple-solutions"/> using this formula.
