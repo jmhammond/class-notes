@@ -125,89 +125,79 @@
       </p>
     </introduction>
 
-    <ol>
+    <dl width="narrow">
       <li>
-        <term>Commutative Laws</term>:
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>p \lor  q\equiv q\lor p</m>
-          </p>
-          <p>
-            <m>p \land q\equiv q \land p</m>
-          </p>
-        </sidebyside>
+        <title>Commutative Laws</title>
+        <p>
+          <m>p \lor  q\equiv q\lor p</m> <line/><line/>
+          <m>p \land q\equiv q \land p</m> <!-- intentionally blank /-->
+        </p>
       </li>
       <li>
-        <term>Associative Laws:</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p><m>(p \lor  q) \lor r \equiv  p \lor  (q \lor  r)</m></p>
-          <p><m>(p \land q) \land r\equiv p \land  (q \land  r)</m></p>
-        </sidebyside>
+        <title>Associative Laws</title>
+        <p>
+          <m>(p \lor  q) \lor r \equiv  p \lor  (q \lor  r)</m> <line/> <line/>
+          <m>(p \land q) \land r\equiv p \land  (q \land  r)</m>
+        </p>
       </li>
       <li>
-        <term>Distributive Laws:</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p><m>p \land  (q \lor  r) \equiv  (p \land  q ) \lor  (p \land  r)</m></p>
-          <p><m>p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r)</m> </p>
-        </sidebyside>
+        <title>Distributive Laws</title>
+        <p>
+          <m>p \land  (q \lor  r) \equiv  (p \land  q ) \lor  (p \land  r)</m> <line/> <line/>
+          <m>p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r)</m>
+        </p>
       </li>
       <li>
-        <term>Identity Laws:</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p><m>p \lor  F\equiv p</m></p>
-          <p> <m>p \land  T \equiv p</m></p>
-        </sidebyside>
+        <title>Identity Laws</title>
+        <p>
+          <m>p \lor  F\equiv p</m> <line/> <line/>
+          <m>p \land  T \equiv p</m>
+        </p>
       </li>
       <li>
-        <term>Negation Laws:</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p><m>p\land \neg p\equiv F</m></p>
-          <p> <m>p\lor \neg p\equiv T</m></p>
-        </sidebyside>
+        <title>Negation Laws</title>
+        <p>
+          <m>p\land \neg p\equiv F</m> <line/><line/>
+          <m>p\lor \neg p\equiv T</m>
+        </p>
       </li>
       <li>
-        <term>Idempotent Laws:</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p><m>p \lor  p \equiv p</m> </p>
-          <p>  <m>p\land p \equiv p</m></p>
-        </sidebyside>
+        <title>Idempotent Laws</title>
+        <p>
+          <m>p \lor  p \equiv p</m>  <line/><line/>
+          <m>p\land p \equiv p</m>
+        </p>
       </li>
       <li>
-        <term>Domination Laws:</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p><m>p \land F \equiv F</m> </p>
-          <p> <m>p \lor  T \equiv T</m></p>
-        </sidebyside>
+        <title>Domination Laws</title>
+        <p>
+          <m>p \land F \equiv F</m> <line/><line/>
+          <m>p \lor  T \equiv T</m>
+        </p>
       </li>
       <li>
-        <term>Absorption Laws:</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p><m>p \land (p\lor  q)\equiv p</m></p>
-          <p><m>p \lor  (p \land  q) \equiv  p</m></p>
-        </sidebyside>
+        <title>Absorption Laws</title>
+        <p>
+          <m>p \land (p\lor  q)\equiv p</m> <line/><line/>
+          <m>p \lor  (p \land  q) \equiv  p</m>
+        </p>
       </li>
       <li>
-        <term>DeMorgan's Laws:</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p><m>\neg (p \lor  q) \equiv  (\neg p) \land  (\neg q)</m></p>
-          <p><m>\neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)</m></p>
-        </sidebyside>
+        <title>DeMorgan's Laws</title>
+        <p>
+          <m>\neg (p \lor  q) \equiv  (\neg p) \land  (\neg q)</m> <line/><line/>
+          <m>\neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)</m>
+        </p>
       </li>
       <li>
-        <term>Double Negation Law:</term>
-        <sidebyside widths="40% 40%" margin="auto">
-          <p> <m>\neg (\neg p)\equiv p</m></p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Double Negation Law</title>
+        <p> <m>\neg (\neg p)\equiv p</m></p>
       </li>
       <li>
-        <term>Implication:</term>
-        <sidebyside widths="40% 40%" margin="auto">
-          <p> <m>p \to q \equiv \neg p \lor q</m></p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
+        <title>Implication</title>
+        <p> <m>p \to q \equiv \neg p \lor q</m></p>
       </li>
-    </ol>
+    </dl>
   </list>
 
 
