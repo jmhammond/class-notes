@@ -99,22 +99,15 @@
         </p>
       </li>
       <li>
-        <title>Biconditional Equivalences</title>
+        <title>Conjunction</title>
         <p>
-          <m>(p \leftrightarrow  q) \equiv  (p\rightarrow q) \land  (q \rightarrow  p)</m><line/>
-          <m>(p \leftrightarrow  q) \equiv (p \land  q) \lor  (\neg p \land  \neg q)</m>
+          <m>(p) \land (q) \Rightarrow (p \land q)</m>
         </p>
       </li>
       <li>
-        <title>Implication / Conditional Equivalence</title>
+        <title>Resolution</title>
         <p>
-          <m>p \rightarrow  q \equiv  \neg p \lor  q</m>
-        </p>
-      </li>
-      <li>
-        <title>Contraposition</title>
-        <p>
-          <m>(p\to q) \equiv (\neg q \to \neg p)</m>
+          <m>(p \lor q) \land (\neg p \lor r) \Rightarrow (q \lor r)</m>
         </p>
       </li>
     </dl>
