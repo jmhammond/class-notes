@@ -115,7 +115,7 @@
         </sidebyside>
       </li>
       <li>
-        <term>Chain Argument / Syllogism</term>
+        <term>Chain Argument / Hypothetical Syllogism</term>
         <sidebyside widths="40% 40%" margins="auto" valign="middle">
           <p>
             <m>(p \to  q) \land  ( q \rightarrow  r) \Rightarrow  (p\to  r)</m>
@@ -124,29 +124,19 @@
         </sidebyside>
       </li>
       <li>
-        <term>Biconditional Equivalences</term>
+        <term>Conjunction</term>
         <sidebyside widths="40% 40%" margins="auto" valign="middle">
           <p>
-            <m>(p \leftrightarrow  q) \equiv  (p\rightarrow q) \land  (q \rightarrow  p)</m><line/>
-            <m>(p \leftrightarrow  q) \equiv (p \land  q) \lor  (\neg p \land  \neg q)</m>
+            <m>(p) \land (q) \Rightarrow  (p \land q)</m>
           </p>
           <p><!-- intentionally blank /--></p>
         </sidebyside>
       </li>
       <li>
-        <term>Implication / Conditional Equivalence</term>
+        <term>Resolution</term>
         <sidebyside widths="40% 40%" margins="auto" valign="middle">
           <p>
-            <m>p \rightarrow  q \equiv  \neg p \lor  q</m>
-          </p>
-          <p><!-- intentionally blank /--></p>
-        </sidebyside>
-      </li>
-      <li>
-        <term>Contraposition</term>
-        <sidebyside widths="40% 40%" margins="auto" valign="middle">
-          <p>
-            <m>(p\to q) \equiv (\neg q \to \neg p)</m>
+            <m>(p \lor  q) \land (\neg p \lor r) \Rightarrow  (q \lor r)</m>
           </p>
           <p><!-- intentionally blank /--></p>
         </sidebyside>
