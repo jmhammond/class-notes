@@ -50,4 +50,10 @@
     <search google-cx="015422183392601792159:vae7vvmmczm"/>
     <video privacy="yes"/>
   </html>
+
+  <epub cover="../assets/quick-cover.png">
+  </epub>
+
+  <braille cover="../assets/quick-cover.png">
+  </braille>
 </publication>
