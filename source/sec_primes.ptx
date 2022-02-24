@@ -15,6 +15,7 @@
   </definition>
 
   <note>
+    <title>1 is the loneliest number</title>
     <p>
       1 is neither prime nor composite. It's called a <term>unit</term>.
     </p>
@@ -34,14 +35,105 @@
   <example>
     <statement>
       <p>
+        The Fundamental Theorem of Arithmetic (FTA) is a non-constructive statement. It tells us that we <em>can</em> write every postive integer as a unique product of primes, but it doesn't tell us <em>how</em>. Instead we need to use trial division and guess-and-check methods.
+      </p>
+      <p>
         Find the prime factorization of the following:
         <ol>
           <li> 124 </li>
           <li> 81 </li>
           <li> 941 </li>
+          <li> 3780</li>
         </ol>
       </p>
     </statement>
+    <solution>
+      <p>
+        Here are factor trees for each of the examples. To construct these, we divide each number by some prime factor and successively divide the remaining factor further until we're left with only prime factors.
+        <ol>
+          <li>
+            <image width="20%">
+              <description> Factor tree for 124 </description>
+              <latex-image>
+\begin{tikzpicture}[
+    circled/.style={draw, circle}
+]
+    \node {124}
+        child {node [circled] {2}}
+        child {node{62}
+            child {node [circled] {3}}
+            child {node [circled] {31}}
+        };
+\end{tikzpicture}
+              </latex-image>
+            </image>
+          </li>
+          <li>
+            <image width="20%">
+              <description> Factor tree for 81 </description>
+              <latex-image>
+\begin{tikzpicture}[
+    circled/.style={draw, circle}
+]
+    \node {81}
+        child {node [circled] {3}}
+        child {node{27}
+            child {node [circled] {3}}
+            child {node {9}
+                child {node [circled] {3}}
+                child {node [circled] {3}}
+                }
+                };
+\end{tikzpicture}
+              </latex-image>
+            </image>
+          </li>
+          <li>
+            <image width="20%">
+              <description> Factor tree for 941, which is prime </description>
+              <latex-image>
+\begin{tikzpicture}[
+    circled/.style={draw, circle}
+]
+    \node {941}
+        child {node  {1}}
+        child {node [circled] {941}};
+\end{tikzpicture}
+              </latex-image>
+            </image>
+          </li>
+          <li>
+            <image width="20%">
+              <description> Factor tree for 3780 </description>
+              <latex-image>
+\begin{tikzpicture}[
+    circled/.style={draw, circle}
+]
+    \node {3780}
+        child {node [circled] {2}}
+        child {node{1890}
+            child {node [circled] {2}}
+            child {node {945}
+                child {node [circled] {3}}
+                child {node {315}
+                    child {node [circled] {3}}
+                    child {node {105}
+                        child {node [circled] {3}}
+                        child {node {35}
+                            child {node [circled] {3}}
+                            child {node [circled] {7}}
+                        }
+                    }
+                }
+            }
+        };
+\end{tikzpicture}
+              </latex-image>
+            </image>
+          </li>
+        </ol>
+      </p>
+    </solution>
   </example>
 
 
@@ -70,13 +162,44 @@
         Use trial division to determine that 251 is prime.
       </p>
     </statement>
+    <solution>
+      <p>
+        Since <m>\sqrt{251} \approx 15.81</m>, we only need to check prime numbers which are less than 15. These are <m>2, 3, 5, 7, 11, 13</m> Since none of these divide into 251 evenly, we conclude that 251 is prime.
+      </p>
+    </solution>
+  </example>
+
+  <example xml:id="example-trial-division">
+    <statement>
+      <p>
+        Use trial division to determine if any of the following are prime:
+        <ol>
+          <li> 127 </li>
+          <li> 143 </li>
+          <li> 54323 </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li> Since, rounding down, <m>\sqrt{127} \approx 11</m>, we need only test primes up through 11.   Noticing that none of 2, 3, 5, 7, or 11 divide evenly, we conclude 127 is prime. </li>
+          <li>
+            Here, <m>\sqrt{143} \approx 12</m> rounding up, so again we test only up through 11. We check that 2, 3, 5, 7 do not work but <m>143 = 11\cdot 13</m>, so we see that <m>143</m> is not a prime number.
+          </li>
+          <li>
+            For <m>\sqrt{54321} \approx 233</m>, so we need a little more work. We need to have a list of all primes up through 233. In order to solve this, let's find a method to develop that list.
+          </li>
+        </ol>
+      </p>
+    </solution>
   </example>
 
   <example>
     <title>Sieve of Eratosthenes</title>
     <statement>
       <p>
-        In order to generate a list of all prime numbers less than or equal to <m>n</m>, start with a tabular listing  of integers from 1 to <m>n</m>:
+        In order to generate a list of all prime numbers less than or equal to <m>n</m>, start with a tabular listing  of integers from 1 to <m>n</m> we run the following sieve or filter:
         <ol>
           <li> Cross off the number 1. </li>
           <li>
@@ -422,8 +545,72 @@
         </tabular>
       </table>
     </statement>
+    <solution>
+      <p>
+        Here is the completed table after running the sieve algorithm:
+        <image source="completedsieve-erat">
+          <description>
+            Table of numbers from 1 to 100. Every number is crossed off except for those which are prime: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 83, 89, 97, which is the complete set of primes less than 100.
+          </description>
+        </image>
+      </p>
+    </solution>
   </example>
 
+
+  <!-- this assemblage is in the wrong place for the schema;... will need to fix that. //-->
+  <assemblage>
+    <title>Computer Corner</title>
+    <caption>The Sieve of Eratosthenes in Python</caption>
+    <p>
+      Implementing the three step algorithm is very straight-forward. We first need to get a list of every integer up to some large size, and then successively remove entries. I'm choosing to implement this in Python in an inefficient, but comprehensible way, so that we can run it in a Sage cell below. You can find it implemented in many, many languages at <url href="http://rosettacode.org/wiki/Sieve_of_Eratosthenes" visual="rosettacode.org/wiki/Sieve_Of_Eratosthenes">Rosetta Code</url>
+    </p>
+    <sidebyside>
+    <sage>
+      <input>
+# create a list of primes up to some upper_bound
+upper_bound = 233
+
+sieved = list(range(2, upper_bound)) # list of integers to be sieved
+for i in range(2, upper_bound+1):
+    if i in sieved: # i is prime if it's still in the list, so
+        # remove every multiple of the prime:
+        for multiple in range(i*i, upper_bound+1, i):
+            try:
+                sieved.remove(multiple)
+            except ValueError:
+                pass # we already removed it; ignore this.
+
+print(sieved)
+      </input>
+      <output>
+        [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229]
+      </output>
+    </sage>
+    </sidebyside>
+
+    <p>
+      We can now return to <xref ref="example-trial-division">determining if 54321 is prime</xref>. We now have a list of primes up to 233, and we can test primality by trial division:
+    </p>
+    <sidebyside>
+    <sage>
+      <input>
+primes_under_233 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229]
+
+def is_54323_prime():
+    for prime in primes_under_233:
+        if 54323 % prime == 0:
+            return "54321 is not prime. It's divisible by %d", prime
+    return "54323 is prime!"
+
+print(is_54323_prime())
+      </input>
+      <output>
+      </output>
+    </sage>
+    </sidebyside>
+
+  </assemblage>
 
   <proposition>
     <statement>
@@ -431,6 +618,11 @@
         There are infinitely many primes.
       </p>
     </statement>
+    <hint>
+      <p>
+        It's hard (impossible?) to prove that there are infinitely many primes. Instead, assume there are finitely many and try to find a contradiction.
+      </p>
+    </hint>
   </proposition>
 
   <exercises>
