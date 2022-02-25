@@ -309,7 +309,7 @@
     <exercise>
       <statement>
         <p>
-          Use De Morgan's Laws, and any other logical equivalence facts you know to simplify the following statements. Show all your steps. Your final statements should have negations only appear directly next to the sentence variables or predicates (<m>p</m>, <m>q</m>, etc.), and no double negations. It would be a good idea to use only conjunctions, disjunctions, and negations.
+          Use DeMorgan's Laws, and any other logical equivalence facts you know to simplify the following statements. Show all your steps. Your final statements should have negations only appear directly next to the sentence variables or predicates (<m>p</m>, <m>q</m>, etc.), and no double negations. It would be a good idea to use only conjunctions, disjunctions, and negations.
           <ol>
             <li><m>\neg((\neg p \wedge q) \vee \neg(r \vee \neg s))</m>. </li>
             <li><m>\neg((\neg p \to \neg q) \wedge (\neg q \to k))</m> (careful with the implications). </li>

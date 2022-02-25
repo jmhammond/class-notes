@@ -114,7 +114,7 @@
               <!-- Draw a graphical representation of the divides relation as we did in the sibling example, listing elements of the two sets and drawing lines from the left set to the right where the line means <m>a</m> divides evenly into <m>b</m>. -->
               Complete the following graph of the relation below, where a point on <m>(x,y)</m> means that <m>x </m> divides evenly into <m>y</m>. 
               <image xml:id="graph-relation-blank" width="50%">
-                <description>'blank' Cartesian graph to complete. Horizontal axis is integers 1 through 10; vertical axis is integers 1 throught 10.</description>
+                <description>'blank' Cartesian graph to complete. Horizontal axis is integers 1 through 10; vertical axis is integers 1 through 10.</description>
                 <latex-image>
                   \begin{tikzpicture}[scale=1]
                   \draw[thin, gray!50] (0,0) grid (10.5, 10.5);
@@ -349,7 +349,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <definition>
       <title>Bijective Functions</title>
       <p>
-        A function <m>f</m> from <m>A</m> to <m>B</m> is said to be a <term>one-to-one correspondance</term> or <term>bijective</term> if it is both injective and surjective.
+        A function <m>f</m> from <m>A</m> to <m>B</m> is said to be a <term>one-to-one correspondence</term> or <term>bijective</term> if it is both injective and surjective.
       </p>
     </definition>
 
@@ -613,7 +613,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <!--   <statement> -->
     <!--     <ol> -->
     <!--       <li> Give an example of a strictly increasing function. </li> -->
-    <!--       <li> Give an example of a strictly descreasing function. </li> -->
+    <!--       <li> Give an example of a strictly decreasing function. </li> -->
     
     <!--   </statement> -->
     <!-- </example> -->

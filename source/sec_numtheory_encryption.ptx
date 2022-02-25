@@ -314,7 +314,7 @@
                   <li> If <m>25252525 \lt n \lt 2525252525</m>, then the blocks will be length 8  </li>
                   <li> and so on... </li>
                 </ol>
-                if the message doesn't fit the appropropriate block size, append a number of 23's at the end. (padding the message with X's).
+                if the message doesn't fit the appropriate block size, append a number of 23's at the end. (padding the message with X's).
               </p>
             </li>
             <li> Encryption occurs my taking each numeric message block <m>M</m> and computing <m>M^e\pmod{n}</m></li>

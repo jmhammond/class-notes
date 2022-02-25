@@ -93,7 +93,7 @@
         If <m>A \and B</m> are two sets, then <m>|A \cup B| = |A| + |B| - |A \cap B|</m>
       </p>
       <p>
-        Note that this is like the additive principle, except we're removing the occurances that are in common between <m>A</m> and <m>B</m>.
+        Note that this is like the additive principle, except we're removing the occurrences that are in common between <m>A</m> and <m>B</m>.
       </p>
     </statement>
   </definition>
@@ -139,7 +139,7 @@
   <example>
     <statement>
       <p>
-        Suppose we surveyed a class of 41 students, asking if they could play an Accordion, a Bassoon, or a Clarinet. 12 could play the clarinet, 8 could play bassoon, and 5 the accordian. 6 played clarinet and bassoon, 2 played clarinet and accordion, and 3 played bassoon and accordion. One student played all three.
+        Suppose we surveyed a class of 41 students, asking if they could play an Accordion, a Bassoon, or a Clarinet. 12 could play the clarinet, 8 could play bassoon, and 5 the accordion. 6 played clarinet and bassoon, 2 played clarinet and accordion, and 3 played bassoon and accordion. One student played all three.
       </p>
       <p>
         How many students can play at least one instrument? Solve this first by Venn Diagrams, then by PIE.
@@ -576,7 +576,7 @@
       </statement>
       <solution>
         <p>
-          There are a total of four different remainders modulo 4. According to the Generalized Pigenhole Principal, if we have 5 numbers divided among four different remainders, <m>\left\lceil \dfrac{5}{4} \right\rceil = 2</m> of them have to have the same remainder. Thus they differ by a multiple of four.
+          There are a total of four different remainders modulo 4. According to the Generalized Pigeonhole Principal, if we have 5 numbers divided among four different remainders, <m>\left\lceil \dfrac{5}{4} \right\rceil = 2</m> of them have to have the same remainder. Thus they differ by a multiple of four.
         </p>
       </solution>
     </exercise>

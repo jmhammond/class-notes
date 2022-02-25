@@ -7,7 +7,7 @@
   <example>
     <statement>
       <p>
-        Let's imagine that you have a rectangular grid of blank spaces. How many ways can you tile that grid using either square tiles or two-square-wide dominos.
+        Let's imagine that you have a rectangular grid of blank spaces. How many ways can you tile that grid using either square tiles or two-square-wide dominoes.
       </p>
       <p>
         We will define an <term><m>n</m>-board</term> to be a rectangular grid of <m>n</m> spaces.

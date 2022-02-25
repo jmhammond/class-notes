@@ -196,7 +196,7 @@
     <statement>
       <p>
         <ol>
-          <li> The inverse of <m>a \text{ modulo } m</m> is its Bezout coefficient in <m>{\gcd(a,m) = as + mt}</m> </li>
+          <li> The inverse of <m>a \text{ modulo } m</m> is its Bézout coefficient in <m>{\gcd(a,m) = as + mt}</m> </li>
           <li> The inverse is also unique (up to congruence), but we won't prove that here.</li>
         </ol>
       </p>
@@ -342,7 +342,7 @@
       <ol>
         <li> A unique solution if <m>\gcd(a, m) = 1</m> </li>
         <li> If <m>\gcd(a, m) = d</m>, the congruence will have <m>d</m> solutions if <m>d \divides b</m> </li>
-        <li> And teh system will have no solution if <m>\gcd(a, m) = d</m> and <m>d \not\divides b</m> </li>
+        <li> And the system will have no solution if <m>\gcd(a, m) = d</m> and <m>d \not\divides b</m> </li>
       </ol>
     </p>
     <p>

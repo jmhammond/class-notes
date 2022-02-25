@@ -228,7 +228,7 @@
         Inductive hypothesis is that <em>all</em> of <m>P(1), P(2), P(3), \dots P(k)</m> are true.   [this is the 'strong' part; it's a larger assumption]
         <li>We show that the hypothesis implies the next element in the sequence, <m>P(k+1)</m>, is true  [like before]</li>
       </ol>
-      the difference between this and the previous induction process is that it's sometimes <em>not convenient</em> to prove that <m>P(k)</m> directly connects to <m>P(k+1)</m>.  Instead, we still need to show that the <em>next</em> element in the sequence <m>P(k+1)</m> is true by appealing to a previous element in the seqence.
+      the difference between this and the previous induction process is that it's sometimes <em>not convenient</em> to prove that <m>P(k)</m> directly connects to <m>P(k+1)</m>.  Instead, we still need to show that the <em>next</em> element in the sequence <m>P(k+1)</m> is true by appealing to a previous element in the sequence.
     </p>
     <p>
       Relevant examples are those like the binary representation of a number - that <m>k</m> has a binary representation doesn't immediately tell us <m>k+1</m> does, but if we can cut the number in half and use the binary representation of that number to scale-up in order to build a binary representation of <m>k+1</m>.

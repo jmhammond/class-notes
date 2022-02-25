@@ -234,7 +234,7 @@
       <title>Cardinality</title>
       <statement>
         <p>
-          Let <m>S</m> be a set. If there are exactly <m>n</m> distinct elements in <m>S</m> where <m>n</m> is a nonnegative integer, then we say that <m>S</m> is a <term>finite</term> set with <term>cardinality</term> of <m>n</m>, and write <m>|S|=n</m>.
+          Let <m>S</m> be a set. If there are exactly <m>n</m> distinct elements in <m>S</m> where <m>n</m> is a non-negative integer, then we say that <m>S</m> is a <term>finite</term> set with <term>cardinality</term> of <m>n</m>, and write <m>|S|=n</m>.
         </p>
         <p>
           A set is said to be <term>infinite</term> if it is not finite.

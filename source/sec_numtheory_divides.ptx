@@ -259,7 +259,7 @@
           <p>
             Assume that <m>a, b, c</m> are integers with <m>a \ne 0</m> and <m>c\ne 0</m> such that <m>ac \divides bc</m>. Then there exists an integer <m>m</m> such <m>bc = acm</m>
           </p>
-          <p> Since <m>c \ne 0</m>, we can divide both sides of the equation by <m>c</m>, yieleding the equality <m>b = am</m>. Thus <m>a \divides b</m>.
+          <p> Since <m>c \ne 0</m>, we can divide both sides of the equation by <m>c</m>, yielding the equality <m>b = am</m>. Thus <m>a \divides b</m>.
           </p>
         </proof>
       </solution>
@@ -376,7 +376,7 @@
         <p>
           <ol>
             <li>One possible counterexample is <m>a = 2, b=4, c=4, and m=6</m>. Certainly <m>2\cdot 3 \equiv 4 \cdot 3 \pmod 6</m> but <m>2 \not \equiv 4 \pmod 6</m>.</li>
-            <li>One possible counterexample here is <m>a = 2, b=7, c=7, b=2, m=5</m>. Then we can see <m>2\equiv 7\pmod 5</m> satifies both parts of the hypothesis, but <m>2^7 \equiv 3 \pmod 5</m> while <m>7^2 \equiv 4 \pmod 5</m>.</li>
+            <li>One possible counterexample here is <m>a = 2, b=7, c=7, b=2, m=5</m>. Then we can see <m>2\equiv 7\pmod 5</m> satisfies both parts of the hypothesis, but <m>2^7 \equiv 3 \pmod 5</m> while <m>7^2 \equiv 4 \pmod 5</m>.</li>
           </ol>
         </p>
       </solution>

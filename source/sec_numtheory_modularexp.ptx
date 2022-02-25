@@ -116,7 +116,7 @@
     Now recall the basic exponents properties of exponents: <m>(a^m)^n = a^{mn}</m> and <m>a^m \cdot a^n = a^{m+n}</m>.
   </p>
   <p>
-    Why do we care? Let's take a look at repeatly squaring a number, say <m>n</m>:
+    Why do we care? Let's take a look at repeatedly squaring a number, say <m>n</m>:
     <ul label="circle">
       <li> <m>n^1 = n^1</m> </li>
       <li> <m>(n^1)^2 = n^{ 1\cdot2 }</m> </li>
@@ -246,7 +246,7 @@
             </table>
             <image source="excel-square-mod.png" scale="50%">
               <description>
-                Screenshot of Excel sheeet demonstrating what is described in the table
+                Screenshot of Excel sheet demonstrating what is described in the table
               </description>
               </image>
             </sidebyside>
