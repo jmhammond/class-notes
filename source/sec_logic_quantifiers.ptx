@@ -109,7 +109,7 @@
       <!--     <li> This is false. Let <m> x = \sqrt{-1}</m>. Then <m>(\sqrt{-1})^2 = -1 \not\ge 0</m>.</li> -->
       <!--   </ol> -->
       <!--   <p> -->
-      <!--     We showed that <m>\sqrt{-1}</m> is a counterexample to the universal quanfication. -->
+      <!--     We showed that <m>\sqrt{-1}</m> is a counterexample to the universal quantification. -->
       <!--   </p> -->
       <!-- </answer> -->
     </example>
@@ -129,7 +129,7 @@
 
     <example>
       <statement>
-        <p> We can combine quantifers, where each variable might come from a different domain. Precedence of quantifiers is left to right.
+        <p> We can combine quantifiers, where each variable might come from a different domain. Precedence of quantifiers is left to right.
         </p>
         <p>
           What is the truth value of the following expressions where the domain is all real numbers:
@@ -353,7 +353,7 @@
             </li>
             <li>
               <p>
-                <em> Applying De Morgan's laws many, many times and noting that the opposite of <m>x\lt a</m> is <m>x \ge a</m>:</em>
+                <em> Applying DeMorgan's laws many, many times and noting that the opposite of <m>x\lt a</m> is <m>x \ge a</m>:</em>
                 <md>
                   <mrow>\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z)) \amp \equiv \neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
                   <mrow> \amp \equiv \exists x \neg \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
@@ -411,7 +411,7 @@
             </li>
             <li>
               <p>
-              <em>Start with the negation on the left and apply De Morgan's laws</em>
+              <em>Start with the negation on the left and apply DeMorgan's laws</em>
                 <md>
                   <mrow>\amp \neg \exists c \exists b \forall r (b \text{ on the campus of } c \text{ in which } r \text{ is painted white})</mrow>
                   <mrow>\amp \equiv \forall c \forall b \exists r \neg(b \text{ on the campus of } c \text{ in which } r \text{ is painted white})</mrow>

@@ -183,7 +183,7 @@
     <example>
       <statement>
         <p>
-          Give a combinotarial proof of the identity:
+          Give a combinatarial proof of the identity:
           <me>
             {n \choose k} = {n-1\choose k-1} + {n-1 \choose k}.
           </me>
@@ -371,7 +371,7 @@
 
         <ol>
           <li> <p> What if she first selects the 6 bridesmaids, and then selects one of them to be the maid of honor? </p> </li>
-          <li> <p> What if she first selects her maid of honor, and then 5 other bridemaids? </p> </li> <li> <p> Explain why <m>6 {15 \choose 6} = 15 {14 \choose 5}</m>. </p> </li>
+          <li> <p> What if she first selects her maid of honor, and then 5 other bridesmaids? </p> </li> <li> <p> Explain why <m>6 {15 \choose 6} = 15 {14 \choose 5}</m>. </p> </li>
         </ol>
       </statement>
       <solution>

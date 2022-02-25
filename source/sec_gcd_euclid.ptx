@@ -126,7 +126,7 @@
   </definition>
 
   <example>
-    <title>Back Substition</title>
+    <title>Back Substitution</title>
     <statement>
       <p>
         We can reverse the Euclidean Algorithm to find the Bézout coefficients, a process that we'll call <term>back substitution</term>. We solve each equation in the Euclidean Algorithm for the remainder, and repeatedly substitute and combine like terms until we arrive at the gcd written as a <term>linear combination</term> of the original two numbers, in this case, <m>73 = 7592s + 5913t</m>
@@ -144,7 +144,7 @@
           </md>
         </p>
         <p>
-          Substition and combining like terms:
+          Substitution and combining like terms:
           <md>
             <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
             <mrow> &amp;= 876 - (1679 - 876 \cdot 1) \cdot 1</mrow>
