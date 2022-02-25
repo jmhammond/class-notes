@@ -22,6 +22,7 @@
     <!-- The next elements say how the levels deep to break up the    -->
     <!-- numbering of the respective elements. Can't be more than the -->
     <!-- @level on divisions above.                                   -->
+    <divisions level="2"/>
     <blocks level="2"/>
     <projects level="0"/>
     <equations level="1"/>

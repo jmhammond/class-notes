@@ -111,11 +111,9 @@
     </statement>
   </example>
   <note>
-    <statement>
-      <p>
-        The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words <q>for all.</q>
-      </p>
-    </statement>
+    <p>
+      The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words <q>for all.</q>
+    </p>
   </note>
   </subsection>
 
@@ -336,38 +334,34 @@
 
     <p>
       Split an argument into completely separate pieces. In the example below we have two cases. Either <m>x \ge y</m> or <m>x \lt y</m>:
-      <example>
-        <statement>
-          <p>
-            Show that if <m>x</m> and <m>y</m> are real numbers, then:
-          </p>
-          <ul>
-            <li>
-              max(<m>x,y</m>) = <m>\dfrac{x+y + |x-y|}{2}</m>
-            </li>
-            <li>
-              min(<m>x,y</m>) = <m>\dfrac{x+y - |x-y|}{2}</m>
-            </li>
-          </ul>
-        </statement>
-      </example>
-      <note>
-        <statement>
-          <p>
-            We need to prove each claim separately for each case!
-          </p>
-        </statement>
-      </note>
     </p>
-    <p>
-      <example>
-        <statement>
-          <p>
-            Prove that <m>5x + 5y</m> is an odd integer when <m>x</m> and <m>y</m> are integers of opposite parity (not both even, not both odd).
-          </p>
-        </statement>
-      </example>
-    </p>
+    <example>
+      <statement>
+        <p>
+          Show that if <m>x</m> and <m>y</m> are real numbers, then:
+        </p>
+        <ul>
+          <li>
+            max(<m>x,y</m>) = <m>\dfrac{x+y + |x-y|}{2}</m>
+          </li>
+          <li>
+            min(<m>x,y</m>) = <m>\dfrac{x+y - |x-y|}{2}</m>
+          </li>
+        </ul>
+      </statement>
+    </example>
+    <note>
+      <p>
+        We need to prove each claim separately for each case!
+      </p>
+    </note>
+    <example>
+      <statement>
+        <p>
+          Prove that <m>5x + 5y</m> is an odd integer when <m>x</m> and <m>y</m> are integers of opposite parity (not both even, not both odd).
+        </p>
+      </statement>
+    </example>
 
   </subsection>
 

@@ -9,216 +9,216 @@
 
     <p>
       Our convention will be to use only capital English letters, A to Z. We will identify each letter with the remainders modulo 26. As our purposes is introducing basics of encryption, we won't encrypt punctuation or spaces.
-      <table>
-        <title>List of Alphabet Encoding</title>
-        <tabular>
-          <col halign="center"/>
-          <col right="minor" halign="center"/>
-          <col halign="center"/>
-          <col right="minor" halign="center"/>
-          <col halign="center"/>
-          <col halign="center"/>
-          <row header="yes" bottom="medium">
-            <cell>
-              letter
-            </cell>
-            <cell>
-              number
-            </cell>
-            <cell>
-              letter
-            </cell>
-            <cell>
-              number
-            </cell>
-            <cell>
-              letter
-            </cell>
-            <cell>
-              number
-            </cell>
-          </row>
-          <row>
-            <cell>
-              A
-            </cell>
-            <cell>
-              0
-            </cell>
-            <cell>
-              J
-            </cell>
-            <cell>
-              9
-            </cell>
-            <cell>
-              S
-            </cell>
-            <cell>
-              18
-            </cell>
-          </row>
-          <row>
-            <cell>
-              B
-            </cell>
-            <cell>
-              1
-            </cell>
-            <cell>
-              K
-            </cell>
-            <cell>
-              10
-            </cell>
-            <cell>
-              T
-            </cell>
-            <cell>
-              19
-            </cell>
-          </row>
-          <row>
-            <cell>
-              C
-            </cell>
-            <cell>
-              2
-            </cell>
-            <cell>
-              L
-            </cell>
-            <cell>
-              11
-            </cell>
-            <cell>
-              U
-            </cell>
-            <cell>
-              20
-            </cell>
-          </row>
-          <row>
-            <cell>
-              D
-            </cell>
-            <cell>
-              3
-            </cell>
-            <cell>
-              M
-            </cell>
-            <cell>
-              12
-            </cell>
-            <cell>
-              V
-            </cell>
-            <cell>
-              21
-            </cell>
-          </row>
-          <row>
-            <cell>
-              E
-            </cell>
-            <cell>
-              4
-            </cell>
-            <cell>
-              N
-            </cell>
-            <cell>
-              13
-            </cell>
-            <cell>
-              W
-            </cell>
-            <cell>
-              22
-            </cell>
-          </row>
-          <row>
-            <cell>
-              F
-            </cell>
-            <cell>
-              5
-            </cell>
-            <cell>
-              O
-            </cell>
-            <cell>
-              14
-            </cell>
-            <cell>
-              X
-            </cell>
-            <cell>
-              23
-            </cell>
-          </row>
-          <row>
-            <cell>
-              G
-            </cell>
-            <cell>
-              6
-            </cell>
-            <cell>
-              P
-            </cell>
-            <cell>
-              15
-            </cell>
-            <cell>
-              Y
-            </cell>
-            <cell>
-              24
-            </cell>
-          </row>
-          <row>
-            <cell>
-              H
-            </cell>
-            <cell>
-              7
-            </cell>
-            <cell>
-              Q
-            </cell>
-            <cell>
-              16
-            </cell>
-            <cell>
-              Z
-            </cell>
-            <cell>
-              25
-            </cell>
-          </row>
-          <row>
-            <cell>
-              I
-            </cell>
-            <cell>
-              8
-            </cell>
-            <cell>
-              R
-            </cell>
-            <cell>
-              17
-            </cell>
-            <cell>
-            </cell>
-            <cell>
-            </cell>
-          </row>
-        </tabular>
-      </table>
     </p>
+    <table>
+      <title>List of Alphabet Encoding</title>
+      <tabular>
+        <col halign="center"/>
+        <col right="minor" halign="center"/>
+        <col halign="center"/>
+        <col right="minor" halign="center"/>
+        <col halign="center"/>
+        <col halign="center"/>
+        <row header="yes" bottom="medium">
+          <cell>
+            letter
+          </cell>
+          <cell>
+            number
+          </cell>
+          <cell>
+            letter
+          </cell>
+          <cell>
+            number
+          </cell>
+          <cell>
+            letter
+          </cell>
+          <cell>
+            number
+          </cell>
+        </row>
+        <row>
+          <cell>
+            A
+          </cell>
+          <cell>
+            0
+          </cell>
+          <cell>
+            J
+          </cell>
+          <cell>
+            9
+          </cell>
+          <cell>
+            S
+          </cell>
+          <cell>
+            18
+          </cell>
+        </row>
+        <row>
+          <cell>
+            B
+          </cell>
+          <cell>
+            1
+          </cell>
+          <cell>
+            K
+          </cell>
+          <cell>
+            10
+          </cell>
+          <cell>
+            T
+          </cell>
+          <cell>
+            19
+          </cell>
+        </row>
+        <row>
+          <cell>
+            C
+          </cell>
+          <cell>
+            2
+          </cell>
+          <cell>
+            L
+          </cell>
+          <cell>
+            11
+          </cell>
+          <cell>
+            U
+          </cell>
+          <cell>
+            20
+          </cell>
+        </row>
+        <row>
+          <cell>
+            D
+          </cell>
+          <cell>
+            3
+          </cell>
+          <cell>
+            M
+          </cell>
+          <cell>
+            12
+          </cell>
+          <cell>
+            V
+          </cell>
+          <cell>
+            21
+          </cell>
+        </row>
+        <row>
+          <cell>
+            E
+          </cell>
+          <cell>
+            4
+          </cell>
+          <cell>
+            N
+          </cell>
+          <cell>
+            13
+          </cell>
+          <cell>
+            W
+          </cell>
+          <cell>
+            22
+          </cell>
+        </row>
+        <row>
+          <cell>
+            F
+          </cell>
+          <cell>
+            5
+          </cell>
+          <cell>
+            O
+          </cell>
+          <cell>
+            14
+          </cell>
+          <cell>
+            X
+          </cell>
+          <cell>
+            23
+          </cell>
+        </row>
+        <row>
+          <cell>
+            G
+          </cell>
+          <cell>
+            6
+          </cell>
+          <cell>
+            P
+          </cell>
+          <cell>
+            15
+          </cell>
+          <cell>
+            Y
+          </cell>
+          <cell>
+            24
+          </cell>
+        </row>
+        <row>
+          <cell>
+            H
+          </cell>
+          <cell>
+            7
+          </cell>
+          <cell>
+            Q
+          </cell>
+          <cell>
+            16
+          </cell>
+          <cell>
+            Z
+          </cell>
+          <cell>
+            25
+          </cell>
+        </row>
+        <row>
+          <cell>
+            I
+          </cell>
+          <cell>
+            8
+          </cell>
+          <cell>
+            R
+          </cell>
+          <cell>
+            17
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+      </tabular>
+    </table>
 
     <definition>
       <title>Shift Cipher</title>
@@ -400,7 +400,7 @@
     </p>
 
     <p>
-      If you want to just want to get a prime number of some particular size (as we want with our <xref ref="rsa-activity">RSA activity</xref>), we ask sage for the <code>next_prime</code>:
+      If you want to just want to get a prime number of some particular size (as we want with our <xref ref="rsa-activity" text="custom">RSA activity</xref>), we ask sage for the <c>next_prime</c>:
     </p>
     <sage>
       <input>
@@ -412,7 +412,7 @@
     </sage>
 
     <p xml:id="bezout-gcd">
-      The following Sage code allows us to find the GCD and Bézout coefficients via the <code>xgcd</code> command:
+      The following Sage code allows us to find the GCD and Bézout coefficients via the <c>xgcd</c> command:
     </p>
     <sage>
       <input>
@@ -427,11 +427,11 @@
       </output>
     </sage>
     <p>
-      The <code>xgcd</code> command returns a list of the form <code>(gcd, first Bézout coefficient, second Bézout coefficient)</code>, and the code above pretty-prints this in a readable format.
+      The <c>xgcd</c> command returns a list of the form <c>(gcd, first Bézout coefficient, second Bézout coefficient)</c>, and the code above pretty-prints this in a readable format.
     </p>
 
     <p>
-      In order to do modular exponentiation, we use the <code>powermod</code> function. For example, to compute <m>2022^{2022} \pmod{1000}</m>:
+      In order to do modular exponentiation, we use the <c>powermod</c> function. For example, to compute <m>2022^{2022} \pmod{1000}</m>:
     </p>
     <sage>
       <input>
@@ -447,46 +447,38 @@
     <title>
       The RSA Activity
     </title>
+    <p>
+      In this activity, you will generate a public/private key-pair. You will send me the public key and keep your private key secret (but don't lose it! If you lose your private key, you won't be able to complete the assignment and will receive no credit).
 
-    <exercises>
-      <exercise>
-        <statement>
+      <ol>
+        <li> Pick two prime numbers <m>p \and q</m> of some interesting size. Make them at least six or seven digits long (use Sage's <c>next_prime</c>). </li>
+        <li> Let <m>m=(p-1)(q-1)</m>, and pick any number <m>e</m> relatively prime to <m>m</m>. </li>
+        <li> Find the multiplicative inverse, <m>d</m>, of <m>e</m> modulo <m>m</m>.</li>
+        <li> Let <m>n = pq</m>. </li>
+        <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
+        <li>
           <p>
-            In this activity, you will generate a public/private key-pair. You will send me the public key and keep your private key secret (but don't lose it! If you lose your private key, you won't be able to complete the assignment and will receive no credit).
-
-            <ol>
-              <li> Pick two prime numbers <m>p \and q</m> of some interesting size. Make them at least six or seven digits long (use Sage's <c>next_prime</c>). </li>
-              <li> Let <m>m=(p-1)(q-1)</m>, and pick any number <m>e</m> relatively prime to <m>m</m>. </li>
-              <li> Find the multiplicative inverse, <m>d</m>, of <m>e</m> modulo <m>m</m>.</li>
-              <li> Let <m>n = pq</m>. </li>
-              <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
-              <li>
-                <p>
-                  Send me your public key on via <url href="mailto:john.hammond@wichita.edu?subject=My RSA Key" visual="john.hammond@wichita.edu">email (you can click this link!)</url> as:
-                  <cd>
-                    n = 15244346903
-                    e = 751 
-                  </cd>
-                </p>
-              </li>
-              <li>
-                <p>
-                  I'll send you an encrypted message which will look like:
-                  <c>
-                    [971896385, 3249912096L, 4079022731L, 8771096382L, 10148198704L]
-                  </c>
-                </p>
-              </li>
-              <li> Enter this information into the Sage cell below to decrypt it (using your <m>n, d, \and c</m>), change <c>what_to_do</c> to <q>decrypt</q>, and then press Evaluate(Python). </li>
-              <li> Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example <q>KEEPITSECRETKEEPITSAFEXX</q> will not receive full credit. </li>
-            </ol>
+            Send me your public key on via <url href="mailto:john.hammond@wichita.edu?subject=My RSA Key" visual="john.hammond@wichita.edu">email (you can click this link!)</url> as:
+            <cd>
+              n = 15244346903
+              e = 751
+            </cd>
           </p>
-        </statement>
-      </exercise>
-    </exercises>
+        </li>
+        <li>
+          <p>
+            I'll send you an encrypted message which will look like:
+            <cd>
+              [971896385, 3249912096L, 4079022731L, 8771096382L, 10148198704L]
+            </cd>
+          </p>
+        </li>
+        <li> Enter this information into the Sage cell below to decrypt it (using your <m>n, d, \and c</m>), change <c>what_to_do</c> to <q>decrypt</q>, and then press Evaluate(Python). </li>
+        <li> Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example <q>KEEPITSECRETKEEPITSAFEXX</q> will not receive full credit. </li>
+      </ol>
+    </p>
 
-    <p xml:id="rsa-code">
-    <sage>
+    <sage xml:id="rsa-code">
       <input>
 ##### ENTER YOUR INFORMATION IN THE VARIABLES BELOW: ######
 
@@ -569,7 +561,6 @@ except IndexError:
     print("You probably have the value of d wrong... \\nDouble check your computations of d, n, m, etc (d needs to be positive, for example)")
       </input>
     </sage>
-    </p>
 
   </subsection>
 

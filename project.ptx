@@ -35,7 +35,7 @@
     <!-- </target> -->
   </targets>
   <executables>
-      <tex>xelatex</tex>
+      <xetex>xelatex</xetex>
       <pdfsvg>pdf2svg</pdfsvg>
       <asy>asy</asy>
       <sage>sage</sage>
