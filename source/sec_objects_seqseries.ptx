@@ -65,7 +65,7 @@
     </definition>
 
     <example xml:id="fib-def">
-      <title>Title Fibonacci Sequence</title>
+      <title>The Fibonacci Sequence</title>
       <statement>
         <p>
           The <term>Fibonacci sequence</term> <m>F_0, F_1, F_2, \dots</m> is defined by the recurrence:
@@ -99,12 +99,12 @@
         This would be a function defined with finite recursion, so the recurrence <m>F_n = F_{n-1} + F_{n-2}</m> with <m>F_0 = 0</m> and <m>F_1=1</m>, the Fibonacci sequence, is the function:
         <cd>
           def F(n):
-          if n == 0:
-          return 0
-          elif n == 1:
-          return 1
-          else:
-          return F(n-1) + F(n-1)
+              if n == 0:
+                  return 0
+              elif n == 1:
+                  return 1
+              else:
+                  return F(n-1) + F(n-1)
         </cd>
       </p>
     </note>
@@ -152,7 +152,7 @@
         </p>
 
         <p>
-          For this last example, the numbers are huge. If you're reading on the web-based version of this book, this is an interactive calculator. You can type what you want to compute and press 'Evaluate (Sage).' For more information, refer to the <xref ref="appendix_sage_howto">Sage appendix</xref>
+          For this last example, the numbers are huge. If you're reading on the web-based version of this book, this is an interactive calculator. You can type what you want to compute and press 'Evaluate (Sage).'
         </p>
         <sage>
           <input>
@@ -211,10 +211,12 @@
       </statement>
     </example>
 
+
+    <!-- include the other, triangle-as-rectangle proof and move this example as an additional supplement//-->
     <example xml:id="example-sum-of-integers">
       <statement>
         <p>
-          Find a formula for the following sums, using the <xref ref="example-telescoping-sum">telescoping example</xref>:
+          Find a formula for the following sums, using the <xref ref="example-telescoping-sum" text="custom">telescoping example</xref>:
           <ol>
             <!-- <li><m>\displaystyle \sum_{k=1}^n (2k -1) </m>, the sum of the first <m>n</m> odd numbers.</li> -->
             <li>Using the sequence <m>a_n=n^2</m>, find a formula for the sum <m>\displaystyle \sum_{k=1}^n k</m> by the finding the sum two ways.</li>
@@ -223,13 +225,14 @@
       </statement>
     </example>
 
+
     <note xml:id="note-some-sum-formulas">
       <p>
         <xref ref="example-sum-of-integers"/> shows us the following formula for an arithmetic series:
         <me> \displaystyle \sum_{k=1}^n k = \dfrac{n(n+1)}{2}</me>
       </p>
       <p>
-        We will verify in <xref ref="exercise-sum-of-squares"/> sum formula for the series of squares:
+        We will verify in <xref ref="exercise-sum-of-squares"/> the sum formula for the series of squares:
         <me> \displaystyle \sum_{k=1}^n k^2 = \dfrac{n(2n+1)(n+1)}{6}</me>
       </p>
     </note>
