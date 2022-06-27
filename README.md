@@ -12,7 +12,7 @@ I use the text alone so that my students don't have to pay for class materials -
 Other instructors at WSU can use this book as a supplemental text to Rosen's Discrete Mathematics.  For them, I build custom versions by removing forums/videos as they choose. 
 
 For that reason, I have a number of branches that I'm going to try to maintain (documenting here so I don't forget): 
-  - `master` will be the branch for bleeding-edge changes. This may break content number flow by introducing new exercises, examples; any printed PDF will be out of sync.
+  - `main` will be the branch for bleeding-edge changes. This may break content number flow by introducing new exercises, examples; any printed PDF will be out of sync.
   - `onlineCourse` is the branch I use that includes forums and videos for my flipped and online course. 
     No new development occurs on this branch. All that happens is that I `git merge` the videos and forums into this branch. It exists so that on my webserver I can run `git pull` and `make publish-to-webs` to update the html5 version. 
   - `videosOnly` contains the core materials and has embedded youtube videos
