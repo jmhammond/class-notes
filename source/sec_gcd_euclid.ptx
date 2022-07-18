@@ -2,6 +2,7 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-gcd-euclid">
   <title>GCDs and The Euclidean Algorithm</title>
   <definition>
+    <title>Greatest Common Divisor (gcd)</title>
     <statement>
       <p>
         Let <m>a \and b</m> be integers, not both zero. The largest integer <m>d</m> such that <m>d\divides a</m> and <m>d \divides b</m> is called the <term>greatest common divisor of <m>a \and b</m></term> which we denote by <m>\gcd(a,b)</m>.
@@ -30,6 +31,7 @@
   </example>
 
   <definition>
+    <title>Lease Common Multiple</title>
     <statement>
       <p>
         Let <m>a \and b</m> be integers, not both zero. The smallest integer <m>m</m> such that <m>a\divides m</m> and <m>b \divides m</m> is called the <term>least common multiple of <m>a \and b</m></term> which we denote by <m>\lcm(a,b)</m>.
@@ -127,6 +129,7 @@
   </proposition>
 
   <definition>
+    <title>Bézout Coefficients</title>
     <statement>
       <p>
         We call <m>s \and t</m> in the theorem above the <term>Bézout coefficients</term> of <m>a \and b</m>. 
@@ -135,38 +138,38 @@
   </definition>
 
   <example>
-    <title>Back Substition</title>
+    <title>Back Substitution</title>
     <statement>
       <p>
         We can reverse the Euclidean Algorithm to find the Bézout coefficients, a process that we'll call <term>back substitution</term>. We solve each equation in the Euclidean Algorithm for the remainder, and repeatedly substitute and combine like terms until we arrive at the gcd written as a <term>linear combination</term> of the original two numbers, in this case, <m>73 = 7592s + 5913t</m>
       </p>
     </statement>
     <solution>
+      <sidebyside widths="45% 45%">
+        <p>
+          The remainders:
+          <md>
+            <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
+            <mrow>803 &amp;= 1679 - 876 \cdot 1 </mrow>
+            <mrow>876 &amp;= 5913 - 1679 \cdot 3 </mrow>
+            <mrow>1679 &amp;= 7592 - 5913 \cdot 1</mrow>
+          </md>
+        </p>
+        <p>
+          Substitution and combining like terms:
+          <md>
+            <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
+            <mrow> &amp;= 876 - (1679 - 876 \cdot 1) \cdot 1</mrow>
+            <mrow> &amp;= 876\cdot 2 - 1679 \cdot 1</mrow>
+            <mrow> &amp;= (5913 - 1679\cdot 3) \cdot 2 - 1679 \cdot 1</mrow>
+            <mrow> &amp;= 5913\cdot 2 - 1679 \cdot 7</mrow>
+            <mrow> &amp;= 5913\cdot 2 - (7592 - 5913 \cdot 1) \cdot 7</mrow>
+            <mrow> &amp;= 5913\cdot 9 - 7592 \cdot 7</mrow>
+            <mrow> &amp;= 5913\cdot 9 + 7592 \cdot (-7)</mrow>
+          </md>
+        </p>
+      </sidebyside>
       <p>
-        <sidebyside widths="45% 45%">
-          <p>
-            The remainders:
-            <md>
-              <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
-              <mrow>803 &amp;= 1679 - 876 \cdot 1 </mrow>
-              <mrow>876 &amp;= 5913 - 1679 \cdot 3 </mrow>
-              <mrow>1679 &amp;= 7592 - 5913 \cdot 1</mrow>
-            </md>
-          </p>
-          <p>
-            Substition and combining like terms:
-            <md>
-              <mrow>73 &amp;= 876 - 803 \cdot 1</mrow>
-              <mrow> &amp;= 876 - (1679 - 876 \cdot 1) \cdot 1</mrow>
-              <mrow> &amp;= 876\cdot 2 - 1679 \cdot 1</mrow>
-              <mrow> &amp;= (5913 - 1679\cdot 3) \cdot 2 - 1679 \cdot 1</mrow>
-              <mrow> &amp;= 5913\cdot 2 - 1679 \cdot 7</mrow>
-              <mrow> &amp;= 5913\cdot 2 - (7592 - 5913 \cdot 1) \cdot 7</mrow>
-              <mrow> &amp;= 5913\cdot 9 - 7592 \cdot 7</mrow>
-              <mrow> &amp;= 5913\cdot 9 + 7592 \cdot (-7)</mrow>
-            </md>
-          </p>
-        </sidebyside>
         So <m>73 = 5913 \cdot 9 + 7592 \cdot(-7)</m> is the linear combination we desired.
       </p>
     </solution>

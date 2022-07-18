@@ -4,9 +4,10 @@
 
   <subsection> 
     <title>
-      Relations <m>\require{cancel}</m> <!-- putting this requirement here to include \cancel in mathjax -->
+      Relations
     </title>
     <definition>
+      <title>Relations</title>
       <statement>
         <p>
           A mathematical <term>relation, <m>\mathrel{R}</m>, between two sets <m>A</m> and <m>B</m></term> is a collection of ordered pairs from the two sets. Expressed symbolically, <m>\mathrel{R} \subseteq A \times B</m>.
@@ -26,13 +27,13 @@
           If we consider <m>A</m> and <m>B</m> to both be the set of people in your family, and let <m>\mathrel{R}</m> be the relation <q><m>a</m> is a sibling of <m>b</m>.</q> Here's an example of my family in two graphical representations. What are the ordered pairs that make up the relation? 
         </p>
         <p>
-        <sidebyside widths="60% 30%" valign="middle">
+        <sidebyside widths="30% 30%" valign="middle">
           <image xml:id="graph-sib">
             <description>Standard Cartesian graph showing my siblings. The horizontal and vertical axes are family members, labeled John, Eric, and Sarah. There is a dot on the graph when the two are related, so dots at (John, Eric), (John, Sarah), (Eric, John), (Eric, Sarah), (Sarah, John), and (Sarah, Eric). </description>
             <latex-image>
               \begin{tikzpicture}[scale=1]
               \draw[thin, gray!50] (0,0) grid (4, 4);
-              \draw[thick] (0,4) node[left] {Family Member} -- (0,0) -- (4,0) node[below right] {Family Member};
+              \draw[thick] (0,4) node[left] {} -- (0,0) -- (4,0) node[below right] {};
               \draw (1,0) node[below] { John} (0, 1) node[left] { John};
               \draw (2,0) node[below] { Eric} (0, 2) node[left] { Eric};
               \draw (3,0) node[below] { Sarah} (0, 3) node[left] { Sarah};
@@ -45,7 +46,7 @@
             <latex-image>
               \begin{tikzpicture}
               \coordinate (A)  at (0,3);
-              \node at (A) [below]{Set $A$};
+              \node at (A) [below]{};
               \coordinate (B)  at (0,2);
               \node at (B) [left]{John};
               \coordinate (C)  at (0,1);
@@ -58,7 +59,7 @@
               \coordinate (G)  at (2,1);
               \coordinate (H)  at (2,0);
 
-              \node at (E) [below]{Set $B$};
+              \node at (E) [below]{};
               \node at (F) [right]{John};
               \node at (G) [right]{Eric};
               \node at (H) [right]{Sarah};
@@ -69,12 +70,25 @@
           </sidebyside>
         </p>
       </statement>
+      <solution>
+        <p>
+          Looking that the points on the graph, we see that the relation will be the set of ordered pairs:
+          <md>
+            <mrow>\text{Siblings} = \{(\text{John}, \text{Eric}), (\text{John}, \text{Sarah }),
+            (\text{Eric}, \text{John}), (\text{Eric}, \text{Sarah}),
+            (\text{Sarah}, \text{Eric}),(\text{Sarah}, \text{John})\}
+            </mrow>
+          </md>
+          Notice that these ordered pairs correspond to the lines on the graph diagram with each of the first coordinates being connected to the second coordinate. E.g. an arrow goes from John to Eric.
+        </p>
+      </solution>
       <answer>
         <video youtube="2-mT6s29iy8"/>
       </answer>
     </example>
 
     <example xml:id="ex_divides_relation">
+      <title>The Divides Relation</title>
       <statement>
         <p>
           Let <m>A</m> and <m>B</m> both be the set of integers from 1 to 10, and define the relation by <m>a \mathrel{R} b</m> means that <m>a</m> evenly divides into <m>b</m> with no remainder.
@@ -103,7 +117,7 @@
               <!-- Draw a graphical representation of the divides relation as we did in the sibling example, listing elements of the two sets and drawing lines from the left set to the right where the line means <m>a</m> divides evenly into <m>b</m>. -->
               Complete the following graph of the relation below, where a point on <m>(x,y)</m> means that <m>x </m> divides evenly into <m>y</m>. 
               <image xml:id="graph-relation-blank" width="50%">
-                <description>'blank' Cartesian graph to complete. Horizontal axis is integers 1 through 10; vertical axis is integers 1 throught 10.</description>
+                <description>'blank' Cartesian graph to complete. Horizontal axis is integers 1 through 10; vertical axis is integers 1 through 10.</description>
                 <latex-image>
                   \begin{tikzpicture}[scale=1]
                   \draw[thin, gray!50] (0,0) grid (10.5, 10.5);
@@ -185,6 +199,7 @@
     </example>
 
     <definition>
+      <title>Inverse of Relations</title>
       <p>
         Let <m>R</m> be a relation between sets <m>A \and B</m>. The <term>inverse relation</term> of <m>R</m> is the relation that assigns to each element <m>b\in B</m> an element <m>a \in A</m>. We denote the inverse by <m>R^{-1}</m>, so that
         <me>a \mathrel{R} b \iff b \mathrel{R^{-1}} a</me>
@@ -238,6 +253,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </title>
 
     <definition>
+      <title>Functions</title>
       <p>
         A <term>function from the set <m>A</m> to the set <m>B</m></term> is a relation with the property that exactly one element from <m>B</m> is mapped to each element of the set <m>A</m>. 
         <ul>
@@ -288,6 +304,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </example>
 
     <definition>
+      <title>Injective Functions</title>
       <p><!-- TODO: a future revision, use different letters. a and b suggest particular set relationship... oops! -->
         A function <m>f</m> is said to be  <term>injective</term> or <term>one-to-one</term> if and only if <m>f(a) = f(b)</m> means that <m>a = b</m> for all <m>a \text{ and } b</m> in the domain of <m>f</m>. 
         <!-- <me> -->
@@ -326,6 +343,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </example>
 
     <definition>
+      <title>Surjective Functions</title>
       <p>
         A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>surjective</term> or <term>onto</term> if and only if for every element <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = b</m>.
         <!-- <me> -->
@@ -372,8 +390,9 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </note>
 
     <definition>
+      <title>Bijective Functions</title>
       <p>
-        A function <m>f</m> from <m>A</m> to <m>B</m> is said to be a <term>one-to-one correspondance</term> or <term>bijective</term> if it is both injective and surjective.
+        A function <m>f</m> from <m>A</m> to <m>B</m> is said to be a <term>one-to-one correspondence</term> or <term>bijective</term> if it is both injective and surjective.
       </p>
     </definition>
 
@@ -397,13 +416,14 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </example>
 
     <definition xml:id="definition-modulus-operator">
+      <title>The Modulus Operator</title>
       <statement>
         <p>
           Define the <term>modulus operator</term>, <m>a \modulus m</m> on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
         </p>
         <p>
           For example,
-          <ul>
+          <ul label="circle">
             <li><m>25 \modulus 4 = 1</m> since the remainder when dividing 25 by 4 is 1.</li>
             <li><m>25 \modulus 5 = 0</m> since 5 divides evenly into 25.</li>
             <li><m>14 \modulus 5 = 4</m></li>
@@ -414,6 +434,24 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </statement>
     </definition>
 
+    <definition xml:id="def-zmodn">
+      <title>Set of Integers Modulo n</title>
+      <statement>
+        <p>
+          We also define the set <m>\mathbb{Z}_n</m>, pronounced <q>integers mod n</q> or <q>  mod n</q> to be the set of all possible remainders when dividing by <m>n</m>:
+          <md><mrow> \mathbb{Z}_n = \{0, 1, 2, 3, 4,\dots, n-2, n-1\} </mrow> </md>
+        </p>
+        <p>
+          For example:
+          <ul label="circle">
+            <li><m> \mathbb{Z}_5 = \{0, 1, 2, 3, 4\} </m></li>
+            <li><m> \mathbb{Z}_7 = \{0, 1, 2, 3, 4, 5, 6\}</m> </li>
+            <li><m> \mathbb{Z}_{10} = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}</m> </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
     <example>
       <statement>
         <p>
@@ -421,51 +459,55 @@ b. note that the inverse of a function is always a relation, but not always a fu
           <ol>
             <li>
               <p>
-                Let <m>f:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>f(n) = (n + 2)\modulus 5</m>
-                <tabular>
-                  <row bottom="minor">
-                    <cell right="minor" halign="center"><m>x</m></cell>
-                    <cell>0</cell>
-                    <cell>1</cell>
-                    <cell>2</cell>
-                    <cell>3</cell>
-                    <cell>4</cell>
-                  </row>
-                  <row>
-                    <cell right="minor" halign="center"><m>f(x)</m></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                  </row>
-                </tabular>
+                Let <m>f:\Z_5 \to \Z_5</m> be defined by <m>f(n) = (n + 2)\modulus 5</m>
+              </p>
+              <tabular>
+                <row bottom="minor">
+                  <cell right="minor" halign="center"><m>x</m></cell>
+                  <cell>0</cell>
+                  <cell>1</cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                </row>
+                <row>
+                  <cell right="minor" halign="center"><m>f(x)</m></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                </row>
+              </tabular>
+              <p>
                 Is <m>f</m> injective? surjective?
               </p>
             </li>
             <li>
               <p>
-                Let <m>g:\{0, 1, 2, 3, 4, 5\} \to \{0, 1, 2, 3, 4, 5\}</m> be defined by <m>g(n) = (n^2 + 2) \modulus 6</m>
-                <tabular>
-                  <row bottom="minor">
-                    <cell right="minor" halign="center"><m>x</m></cell>
-                    <cell>0</cell>
-                    <cell>1</cell>
-                    <cell>2</cell>
-                    <cell>3</cell>
-                    <cell>4</cell>
-                    <cell>5</cell>
-                  </row>
-                  <row>
-                    <cell right="minor" halign="center"><m>g(x)</m></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                  </row>
-                </tabular>
+                Let <m>g:\Z_6 \to \Z_6</m> be defined by <m>g(n) = (n^2 + 2) \modulus 6</m>
+              </p>
+              <tabular>
+                <row bottom="minor">
+                  <cell right="minor" halign="center"><m>x</m></cell>
+                  <cell>0</cell>
+                  <cell>1</cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                  <cell>5</cell>
+                </row>
+                <row>
+                  <cell right="minor" halign="center"><m>g(x)</m></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                </row>
+              </tabular>
+              <p>
                 Is <m>g</m> injective? surjective?
               </p>
             </li>
@@ -476,25 +518,25 @@ b. note that the inverse of a function is always a relation, but not always a fu
         <p>
           <ol>
             <li>
+              <tabular>
+                <row bottom="minor">
+                  <cell right="minor" halign="center"><m>x</m></cell>
+                  <cell>0</cell>
+                  <cell>1</cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                </row>
+                <row>
+                  <cell right="minor" halign="center"><m>f(x)</m></cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                  <cell>0</cell>
+                  <cell>1</cell>
+                </row>
+              </tabular>
               <p>
-                <tabular>
-                  <row bottom="minor">
-                    <cell right="minor" halign="center"><m>x</m></cell>
-                    <cell>0</cell>
-                    <cell>1</cell>
-                    <cell>2</cell>
-                    <cell>3</cell>
-                    <cell>4</cell>
-                  </row>
-                  <row>
-                    <cell right="minor" halign="center"><m>f(x)</m></cell>
-                    <cell>2</cell>
-                    <cell>3</cell>
-                    <cell>4</cell>
-                    <cell>0</cell>
-                    <cell>1</cell>
-                  </row>
-                </tabular>
                 <m>f</m> is both injective and surjective - each output occurs only one time (injective) and each output occurs (surjective).
               </p>
               <p>
@@ -502,27 +544,27 @@ b. note that the inverse of a function is always a relation, but not always a fu
               </p>
             </li>
             <li>
+              <tabular>
+                <row bottom="minor">
+                  <cell right="minor" halign="center"><m>x</m></cell>
+                  <cell>0</cell>
+                  <cell>1</cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                  <cell>5</cell>
+                </row>
+                <row>
+                  <cell right="minor" halign="center"><m>g(x)</m></cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>0</cell>
+                  <cell>5</cell>
+                  <cell>0</cell>
+                  <cell>3</cell>
+                </row>
+              </tabular>
               <p>
-                <tabular>
-                  <row bottom="minor">
-                    <cell right="minor" halign="center"><m>x</m></cell>
-                    <cell>0</cell>
-                    <cell>1</cell>
-                    <cell>2</cell>
-                    <cell>3</cell>
-                    <cell>4</cell>
-                    <cell>5</cell>
-                  </row>
-                  <row>
-                    <cell right="minor" halign="center"><m>g(x)</m></cell>
-                    <cell>2</cell>
-                    <cell>3</cell>
-                    <cell>0</cell>
-                    <cell>5</cell>
-                    <cell>0</cell>
-                    <cell>3</cell>
-                  </row>
-                </tabular>
                 <m>g</m> is not injective since <m>g(1) = g(5)</m>. The same output occurs twice - it fails the "horizontal line test." <m>g</m> is also not surjective since there is no solution to <m>1 = g(n)</m> in the domain. The number 1 is in the codomain, but it's never output.
               </p>
               <p>
@@ -536,6 +578,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
 
     <definition>
+      <title>Inverse Functions</title>
       <p>
         Let <m>f:A \to B</m> be a bijection. The <term>inverse function</term> of <m>f</m> is the unique function that assigns to each element <m>b\in B</m> a unique element <m>a \in A</m> such that <m>f(a) = b</m>. We denote the inverse by <m>f^{-1}</m> so that
         <me>f^{-1} : B \to A \text{ where }  f^{-1}(b) = a \iff f(a) = b</me>
@@ -543,14 +586,12 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </definition>
 
     <note>
-      <statement>
-        <p>
-          Relations always have an inverse - we interchange the domain and codomain sets.
-        </p>
-        <p>
-          As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function, <m>f</m> to have an inverse <em>function</em>, <m>f</m> must be bijective.
-        </p>
-      </statement>
+      <p>
+        Relations always have an inverse - we interchange the domain and codomain sets.
+      </p>
+      <p>
+        As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function, <m>f</m> to have an inverse <em>function</em>, <m>f</m> must be bijective.
+      </p>
     </note>
 
     <example>
@@ -625,14 +666,17 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <!--   <statement> -->
     <!--     <ol> -->
     <!--       <li> Give an example of a strictly increasing function. </li> -->
-    <!--       <li> Give an example of a strictly descreasing function. </li> -->
+    <!--       <li> Give an example of a strictly decreasing function. </li> -->
     
     <!--   </statement> -->
     <!-- </example> -->
 
     <definition xml:id="def-composition-of-functions">
-      <p>
-        Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g : A \to C</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
+      <title>Function Composition</title>
+      <statement>
+        <p>
+          Let <m>g:A \to B</m> and let <m>f:B \to C</m>. The <term>composition of <m>f</m> and <m>g</m></term>, denoted by <m>f\circ g : A \to C</m> is defined, for all <m>a \in A</m>, by <m>(f \circ g)(a) = f(g(a))</m>.
+        </p>
         <image xml:id="composition-of-functions" width="75%">
           <description>Composition of functions. Three circles are drawn separated by arrows. They are labeled A, B, and C. There is an arrow from A to B labeled S. There is an arrow from B to C labeled R, and there is a big arcing arrow from A to C labeled <m>R\circ S</m></description>
           <latex-image>
@@ -654,7 +698,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
             \end{tikzpicture}
           </latex-image>
         </image>
-      </p>
+      </statement>
     </definition>
 
 
@@ -700,78 +744,70 @@ b. note that the inverse of a function is always a relation, but not always a fu
         That is, the inverse <q>undoes</q> a function.
       </p>
     </note>
+    </subsection>
 
-    <assemblage>
+    <subsection>
       <title>Computer Corner</title>
-      <caption>Computer Corner</caption>
       <p>
         C++ defines functions by specifying both the input parameters (<em>domain</em>) and return type (<em>co-domain</em>).  Here are some function examples:
       </p>      
-      <p>
-        <sidebyside width="50%">
-          <program language="cpp">
-            <input>
-                int square(int num) {
-                    return num*num;
-                }
-            </input>
-          </program>
-          <p>
-            Here the function is <m>\text{square}: \Z \to \Z</m>.
-          </p>
-        </sidebyside>
-      </p>
+      <sidebyside width="50%">
+        <program language="cpp">
+          <input>
+            int square(int num) {
+                return num*num;
+            }
+          </input>
+        </program>
+        <p>
+          Here the function is <m>\text{square}: \Z \to \Z</m>.
+        </p>
+      </sidebyside>
       <p>
         Here's another sample that changes the definition of the standard square root function:
       </p>
-      <p>
-        <sidebyside width="50%">
-          <program language="cpp">
-            <input>
-                #include &lt;math.h&gt;
-             
-                int mySqrt(int num) {
-                    return sqrt(num)
-                }
+      <sidebyside width="50%">
+        <program language="cpp">
+          <input>
+            #include &lt;math.h&gt;
 
-                // this will return things like
-                // mySqrt(4) = 2, which you'd expect.
-                // but...
-                // mySqrt(5) = 2, also.
-                // This means mySqrt is not injective.
-            </input>
-          </program>
-          <p>
-            This function is <m>\text{mySqrt}: \Z \to \Z</m>. We <em>can</em> input negative numbers, but <c>sqrt()</c> throws an error in that case.
-          </p>
-        </sidebyside>
-      </p>
+            int mySqrt(int num) {
+                return sqrt(num)
+            }
+
+            // this will return things like
+            // mySqrt(4) = 2, which you'd expect.
+            // but...
+            // mySqrt(5) = 2, also.
+            // This means mySqrt is not injective.
+          </input>
+        </program>
+        <p>
+          This function is <m>\text{mySqrt}: \Z \to \Z</m>. We <em>can</em> input negative numbers, but <c>sqrt()</c> throws an error in that case.
+        </p>
+      </sidebyside>
       <p>
         To get the correct fractional value of the square root of an integer, though, we'd need this:
       </p>
-      <p>
-        <sidebyside width="50%">
-          <program language="cpp">
-            <input>
-                #include &lt;math.h&gt;
+      <sidebyside width="50%">
+        <program language="cpp">
+          <input>
+            #include &lt;math.h&gt;
 
-                double mySqrt(int num) {
-                    return sqrt(num)
-                }
+            double mySqrt(int num) {
+                return sqrt(num)
+            }
 
-                // Hooray!
-                // mySqrt(5) = 2.23607
-                // and this time mySqrt is injective
-            </input>
-          </program>
-          <p>
-            This time the function is <m>\text{mySqrt}: \Z \to \Q</m>. The specification of the codomain is essential to make sure we can compute the correct value!
-          </p>
-        </sidebyside>
-      </p>
-    </assemblage>
-
-  </subsection>
+            // Hooray!
+            // mySqrt(5) = 2.23607
+            // and this time mySqrt is injective
+          </input>
+        </program>
+        <p>
+          This time the function is <m>\text{mySqrt}: \Z \to \Q</m>. The specification of the codomain is essential to make sure we can compute the correct value!
+        </p>
+      </sidebyside>
+    </subsection>
 
   <exercises>
 
@@ -870,33 +906,33 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
         <p>
           Let <m>G:A \to B</m> and let <m>R:B \to C</m>. The <term>composition of <m>R</m> and <m>S</m></term>, denoted by <m>R\circ S</m> is defined, for all <m>a \in A</m>, by <m>(R \circ S)(a) = R(S(a))</m>.
-          <image xml:id="composition-of-relations" width="75%">
-            <description>Composition of relations</description>
-            <latex-image>
-              \usetikzlibrary{calc,positioning,shapes.geometric}
-
-              \begin{tikzpicture}
-              \tikzset{
-              elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
-              node distance=3cm,
-              font=\footnotesize,
-              >=latex,
-              }
-              \node(x)[elps={1cm}{1cm},label={$A$}]{};
-              \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
-              \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
-              \draw[->](x)to node[above right]{$S$}(y);
-              \draw[->](y)to node[above right]{$R$}(v);
-              \draw[->](x)to[bend left]node[above]{$R \circ S$}(v);
-              \end{tikzpicture}
-            </latex-image>
-          </image>
         </p>
+        <image xml:id="composition-of-relations" width="75%">
+          <description>Composition of relations</description>
+          <latex-image>
+            \usetikzlibrary{calc,positioning,shapes.geometric}
+
+            \begin{tikzpicture}
+            \tikzset{
+            elps/.style 2 args={draw,ellipse,minimum width=#1,minimum height=#2},
+            node distance=3cm,
+            font=\footnotesize,
+            >=latex,
+            }
+            \node(x)[elps={1cm}{1cm},label={$A$}]{};
+            \node(y)[elps={1cm}{1cm},right=of x,label={$B$}]{};
+            \node(v)[elps={1cm}{1cm},right=of y,label={$C$}]{};
+            \draw[->](x)to node[above right]{$S$}(y);
+            \draw[->](y)to node[above right]{$R$}(v);
+            \draw[->](x)to[bend left]node[above]{$R \circ S$}(v);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
       </solution>
     </exercise>
 
-    <exercise>
-      <statement>
+  <exercise>
+    <statement>
         <p>
           Using the relations defined in <xref ref="example-relation-inverses"/>, find the following compositions: 
           <ol>
@@ -1128,7 +1164,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
         <p>
           <ol>
             <li><p><m>f</m> is injective.</p>
-
+            <!-- the schema doesn't like this, but it looks pretty... //-->
             <proof>
               <p>
                 Let <m>x</m> and <m>y</m> be elements of the domain <m>\Z</m>. Assume <m>f(x) = f(y)</m>. If <m>x</m> and <m>y</m> are both even, then <m>f(x) = x+1</m> and <m>f(y) = y+1</m>. Since <m>f(x) = f(y)</m>, we have <m>x + 1 = y + 1</m> which implies that <m>x = y</m>. Similarly, if <m>x</m> and <m>y</m> are both odd, then <m>x - 3 = y-3</m> so again <m>x = y</m>. The only other possibility is that <m>x</m> is even an <m>y</m> is odd (or visa-versa). But then <m>x + 1</m> would be odd and <m>y - 3</m> would be even, so it cannot be that <m>f(x) = f(y)</m>. Therefore if <m>f(x) = f(y)</m> we then have <m>x = y</m>, which proves that <m>f</m> is injective.
@@ -1163,7 +1199,9 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </ol>
       </statement>
       <hint>
-        Most likely, your solution will be piecewise-defined. 
+        <p>
+          Most likely, your solution will be piecewise-defined.
+        </p>
       </hint>
       <solution>
         <p>
@@ -1368,11 +1406,9 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </hint>
     </exercise>
 
-
-
-
-
+    <!-- schema doesn't like this either. Maybe defining terms in the exercises is bad...- //-->
     <definition>
+      <title>Floor and Ceiling Functions</title>
       <statement>
         <p>
           The <term>floor</term> function assigns to every real number <m>x</m> the largest integer that is less than or equal to <m>x</m>. We denote by this <m>\lfloor x \rfloor</m>
@@ -1412,48 +1448,50 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <exercise>
       <statement>
         <p>
-          Let <m>f:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>f(n) = \left \lfloor \dfrac{n}{2}\right \rfloor</m>. Complete the table of values:
-          <tabular>
-            <row bottom="minor">
-              <cell right="minor" halign="center"><m>x</m></cell>
-              <cell>0</cell>
-              <cell>1</cell>
-              <cell>2</cell>
-              <cell>3</cell>
-              <cell>4</cell>
-            </row>
-            <row>
-              <cell right="minor" halign="center"><m>f(x)</m></cell>
-              <cell></cell>
-              <cell></cell>
-              <cell></cell>
-              <cell></cell>
-              <cell></cell>
-            </row>
-          </tabular>
+          Let <m>f:Z_5 \to Z_5</m> be defined by <m>f(n) = \left \lfloor \dfrac{n}{2}\right \rfloor</m>. Complete the table of values:
+        </p>
+        <tabular>
+          <row bottom="minor">
+            <cell right="minor" halign="center"><m>x</m></cell>
+            <cell>0</cell>
+            <cell>1</cell>
+            <cell>2</cell>
+            <cell>3</cell>
+            <cell>4</cell>
+          </row>
+          <row>
+            <cell right="minor" halign="center"><m>f(x)</m></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+          </row>
+        </tabular>
+        <p>
           Is <m>f</m> injective? surjective?
         </p>
       </statement>
       <solution>
+        <tabular>
+          <row bottom="minor">
+            <cell right="minor" halign="center"><m>x</m></cell>
+            <cell>0</cell>
+            <cell>1</cell>
+            <cell>2</cell>
+            <cell>3</cell>
+            <cell>4</cell>
+          </row>
+          <row>
+            <cell right="minor" halign="center"><m>f(x)</m></cell>
+            <cell>0</cell>
+            <cell>0</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+            <cell>2</cell>
+          </row>
+        </tabular>
         <p>
-          <tabular>
-            <row bottom="minor">
-              <cell right="minor" halign="center"><m>x</m></cell>
-              <cell>0</cell>
-              <cell>1</cell>
-              <cell>2</cell>
-              <cell>3</cell>
-              <cell>4</cell>
-            </row>
-            <row>
-              <cell right="minor" halign="center"><m>f(x)</m></cell>
-              <cell>0</cell>
-              <cell>0</cell>
-              <cell>1</cell>
-              <cell>1</cell>
-              <cell>2</cell>
-            </row>
-          </tabular>
           <m>f</m> is not injective since <m>f(0) = f(1)</m>, and it is not surjective since there is no solution to <m>3=f(n)</m> in the domain.
         </p>
       </solution>
@@ -1484,7 +1522,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
           <ol>
             <li>
               <p>
-                Let <m>f:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>f(n) = (n + 3)\modulus 5</m>
+                Let <m>f:Z_5 \to Z_5</m> be defined by <m>f(n) = (n + 3)\modulus 5</m>
                 <tabular>
                   <row bottom="minor">
                     <cell right="minor" halign="center"><m>x</m></cell>
@@ -1508,25 +1546,27 @@ b. note that the inverse of a function is always a relation, but not always a fu
             </li>
             <li>
               <p>
-                Let <m>g:\{0, 1, 2, 3, 4\} \to \{0, 1, 2, 3, 4\}</m> be defined by <m>g(n) = (n^2 + 1)\modulus 5</m>
-                <tabular>
-                  <row bottom="minor">
-                    <cell right="minor" halign="center"><m>x</m></cell>
-                    <cell>0</cell>
-                    <cell>1</cell>
-                    <cell>2</cell>
-                    <cell>3</cell>
-                    <cell>4</cell>
-                  </row>
-                  <row>
-                    <cell right="minor" halign="center"><m>g(x)</m></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                  </row>
-                </tabular>
+                Let <m>g:Z_5 \to Z_5</m> be defined by <m>g(n) = (n^2 + 1)\modulus 5</m>
+              </p>
+              <tabular>
+                <row bottom="minor">
+                  <cell right="minor" halign="center"><m>x</m></cell>
+                  <cell>0</cell>
+                  <cell>1</cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                </row>
+                <row>
+                  <cell right="minor" halign="center"><m>g(x)</m></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                </row>
+              </tabular>
+              <p>
                 Is <m>g</m> injective? surjective?
               </p>
             </li>
@@ -1537,25 +1577,25 @@ b. note that the inverse of a function is always a relation, but not always a fu
         <p>
           <ol>
             <li>
+              <tabular>
+                <row bottom="minor">
+                  <cell right="minor" halign="center"><m>x</m></cell>
+                  <cell>0</cell>
+                  <cell>1</cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                </row>
+                <row>
+                  <cell right="minor" halign="center"><m>f(x)</m></cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                  <cell>0</cell>
+                  <cell>1</cell>
+                  <cell>2</cell>
+                </row>
+              </tabular>
               <p>
-                <tabular>
-                  <row bottom="minor">
-                    <cell right="minor" halign="center"><m>x</m></cell>
-                    <cell>0</cell>
-                    <cell>1</cell>
-                    <cell>2</cell>
-                    <cell>3</cell>
-                    <cell>4</cell>
-                  </row>
-                  <row>
-                    <cell right="minor" halign="center"><m>f(x)</m></cell>
-                    <cell>3</cell>
-                    <cell>4</cell>
-                    <cell>0</cell>
-                    <cell>1</cell>
-                    <cell>2</cell>
-                  </row>
-                </tabular>
                 <m>f</m> is both injective and surjective.
               </p>
               <p>
@@ -1563,25 +1603,25 @@ b. note that the inverse of a function is always a relation, but not always a fu
               </p>
             </li>
             <li>
+              <tabular>
+                <row bottom="minor">
+                  <cell right="minor" halign="center"><m>x</m></cell>
+                  <cell>0</cell>
+                  <cell>1</cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                </row>
+                <row>
+                  <cell right="minor" halign="center"><m>g(x)</m></cell>
+                  <cell>1</cell>
+                  <cell>0</cell>
+                  <cell>0</cell>
+                  <cell>2</cell>
+                  <cell>2</cell>
+                </row>
+              </tabular>
               <p>
-                <tabular>
-                  <row bottom="minor">
-                    <cell right="minor" halign="center"><m>x</m></cell>
-                    <cell>0</cell>
-                    <cell>1</cell>
-                    <cell>2</cell>
-                    <cell>3</cell>
-                    <cell>4</cell>
-                  </row>
-                  <row>
-                    <cell right="minor" halign="center"><m>g(x)</m></cell>
-                    <cell>1</cell>
-                    <cell>0</cell>
-                    <cell>0</cell>
-                    <cell>2</cell>
-                    <cell>2</cell>
-                  </row>
-                </tabular>
                 <m>g</m> is not injective since <m>g(1) = g(2)</m> for example. <m>g</m> is also not surjective since there is no solution to <m>3 = g(n)</m> in the domain.
               </p>
               <p>

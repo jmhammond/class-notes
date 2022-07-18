@@ -2,9 +2,9 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_logic">
   <title>Symbolic Logic and Proofs</title>
 
-  <introduction>
-    <!-- write an intro TODO -->
-  </introduction>
+  <!-- <introduction> -->
+  <!--   <!-\- write an intro TODO -\-> -->
+  <!-- </introduction> -->
 
   <xi:include href="./sec_logic_equivalences.ptx"/>
 

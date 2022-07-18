@@ -2,22 +2,21 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-numtheory-divcong">
   <title> Divisibility and Congruences </title>
 
-  <note>
-    <statement>
+  <subsection xml:id="section-numtheory-div">
+    <title>The Divides Relation</title>
+
+    <note>
       <p>
         Any time we say <q>number</q> in the context of divides, congruence, or number theory we mean integer.
       </p>
-    </statement>
-  </note>
-
-  <subsection xml:id="section-numtheory-div">
-    <title>The Divides Relation</title>
+    </note>
 
     <p>
       In <xref ref="ex_divides_relation"/>, we saw the divides relation. Because we're going to use this relation frequently, we will introduce its own notation.
     </p>
 
     <definition>
+      <title>The Divides Relation</title>
       <statement>
         <p>
           Let <m>a \and b</m> be two integers with <m>a \not= 0</m>. We say <term><m>a</m> divides <m>b</m></term> and write <m>a \divides b</m> if there exists an integer <m>m</m> such that <m>b = am</m>.
@@ -115,6 +114,7 @@
     <title> The Congruence Relation </title>
 
     <definition>
+      <title>The Congruence Relation</title>
       <statement>
         <p>
           Let <m>a \and b</m> be two integers and <m>m</m> be a positive integer. We say that <term><m>a</m> is congruent to <m>b</m> modulo <m>m</m></term> if <me>m \divides (b-a)</me>
@@ -146,19 +146,18 @@
     </example>
 
     <note>
-      <statement>
-        <p>
-          Let's compare the the congruence relation with the <xref ref="definition-modulus-operator"> modulus operator</xref>:
-          <ul>
-            <li> <m>a \equiv b \pmod{m}</m> is a <em>logical statement</em>. It tells us that <m>a</m> and <m>b</m> are related, that is, the statement <m>m \divides (b-a)</m> is true. </li>
-            <li> <m>a \modulus b</m> is a <em>mathematical operation</em>. The result is a number not a true/false.</li>
-          </ul>
-          The difference is subtle but important.
-        </p>
-      </statement>
+      <p>
+        Let's compare the the congruence relation with the <xref ref="definition-modulus-operator"> modulus operator</xref>:
+        <ul>
+          <li> <m>a \equiv b \pmod{m}</m> is a <em>logical statement</em>. It tells us that <m>a</m> and <m>b</m> are related, that is, the statement <m>m \divides (b-a)</m> is true. </li>
+          <li> <m>a \modulus b</m> is a <em>mathematical operation</em>. The result is a number not a true/false.</li>
+        </ul>
+        The difference is subtle but important.
+      </p>
     </note>
 
     <definition>
+      <title>Congruence Classes</title>
       <statement>
         <p>
           If <m>a</m> is an integer and <m>m</m> is a positive integer, we define the <term>congruence class of <m>a</m> modulo <m>m</m></term> to be the set of all integers congruent to <m>a</m> modulo <m>m</m>. 
@@ -249,11 +248,9 @@
     </proposition>
 
     <note>
-      <statement>
-        <p>
-          For modular arithmetic, we have addition and multiplication. Subtraction is done via additive inverses, but division is not a thing! We'll discuss multiplicative inverses in <xref ref="section-multiplicative-inverses">section</xref>.  <!-- todo xref this -->
-        </p>
-      </statement>
+      <p>
+        For modular arithmetic, we have addition and multiplication. Subtraction is done via additive inverses, but division is not a thing! We'll discuss multiplicative inverses in <xref ref="section-multiplicative-inverses">section</xref>.  <!-- todo xref this -->
+      </p>
     </note>
 
 
@@ -286,18 +283,13 @@
         </p>
       </statement>
       <solution>
-        <p>
-          <proof>
-            <statement>
-              <p>
-                Assume that <m>a, b, c</m> are integers with <m>a \ne 0</m> and <m>c\ne 0</m> such that <m>ac \divides bc</m>. Then there exists an integer <m>m</m> such <m>bc = acm</m>
-              </p>
-              <p> Since <m>c \ne 0</m>, we can divide both sides of the equation by <m>c</m>, yieleding the equality <m>b = am</m>. Thus <m>a \divides b</m>.
-              </p>
-            </statement>
-          </proof>
-
-        </p>
+        <proof>
+          <p>
+            Assume that <m>a, b, c</m> are integers with <m>a \ne 0</m> and <m>c\ne 0</m> such that <m>ac \divides bc</m>. Then there exists an integer <m>m</m> such <m>bc = acm</m>
+          </p>
+          <p> Since <m>c \ne 0</m>, we can divide both sides of the equation by <m>c</m>, yielding the equality <m>b = am</m>. Thus <m>a \divides b</m>.
+          </p>
+        </proof>
       </solution>
 
     </exercise>
@@ -383,17 +375,15 @@
         </p>
       </statement>
       <solution>
-        <statement>
-          <p>
-            <ol>
-              <li> 10 </li>
-              <li> 8 </li>
-              <li> 0 </li>
-              <li> 6 </li>
-              <li> 0 </li>
-            </ol>
-          </p>
-        </statement>
+        <p>
+          <ol>
+            <li> 10 </li>
+            <li> 8 </li>
+            <li> 0 </li>
+            <li> 6 </li>
+            <li> 0 </li>
+          </ol>
+        </p>
       </solution>
     </exercise>
 
@@ -414,7 +404,7 @@
         <p>
           <ol>
             <li>One possible counterexample is <m>a = 2, b=4, c=4, and m=6</m>. Certainly <m>2\cdot 3 \equiv 4 \cdot 3 \pmod 6</m> but <m>2 \not \equiv 4 \pmod 6</m>.</li>
-            <li>One possible counterexample here is <m>a = 2, b=7, c=7, b=2, m=5</m>. Then we can see <m>2\equiv 7\pmod 5</m> satifies both parts of the hypothesis, but <m>2^7 \equiv 3 \pmod 5</m> while <m>7^2 \equiv 4 \pmod 5</m>.</li>
+            <li>One possible counterexample here is <m>a = 2, b=7, c=7, b=2, m=5</m>. Then we can see <m>2\equiv 7\pmod 5</m> satisfies both parts of the hypothesis, but <m>2^7 \equiv 3 \pmod 5</m> while <m>7^2 \equiv 4 \pmod 5</m>.</li>
           </ol>
         </p>
       </solution>

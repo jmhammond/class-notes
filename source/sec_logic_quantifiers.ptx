@@ -5,12 +5,10 @@
     <title>Predicates</title>
     <p>
       Consider this mathematical sentence: <q> <m> x \lt 5 </m></q>.
-      <ul>
+      <ul label="circle">
         <li><m>x</m> is a variable, the subject of the sentence.</li>
         <li> <q>is less than five</q> is the <term> predicate</term></li>
-        <ul>
-          <li> A predicate is a property that a subject can have.</li>
-        </ul>
+        <li> A predicate is a property that a subject can have.</li>
         <li>
           <p>
             We can write <m>P(x) :=</m> <q><m> x \lt 5 </m>,</q> where
@@ -24,11 +22,14 @@
     </p>
 
     <definition>
-      <p>
-        The <term>domain of discourse</term> (or <term>universe of discourse</term>) is the collection from which variables can take values.
-      </p>
-      <p> For example, if my predicate function is <q><m>x</m> is sharp</q>, the function has a different meaning if my universe of discourse is <q>all college students</q> versus <q>all tools.</q>
-      </p>
+      <title>Domain of Discourse</title>
+      <statement>
+        <p>
+          The <term>domain of discourse</term> (or <term>universe of discourse</term>) is the collection from which variables can take values.
+        </p>
+        <p> For example, if my predicate function is <q><m>x</m> is sharp</q>, the function has a different meaning if my universe of discourse is <q>all college students</q> versus <q>all tools.</q>
+        </p>
+      </statement>
     </definition>
 
     <example>
@@ -76,25 +77,29 @@
     <title>Logical Quantifiers</title>
 
     <definition>
-      <p>
-        The <term>universal quantification</term> of <m>P(x)</m> is the statement that <m>P(x)</m> is true for all values of <m>x</m> in the domain of discourse. We write <m> \forall x P(x)</m>
-      </p>
-      <p>
-        A <term>counterexample</term> is an <m>x</m> value for which <m>P(x)</m> is false.
-      </p>
+      <title>Universal Quantifier</title>
+      <statement>
+        <p>
+          The <term>universal quantification</term> of <m>P(x)</m> is the statement that <m>P(x)</m> is true for all values of <m>x</m> in the domain of discourse. We write <m> \forall x P(x)</m>
+        </p>
+        <p>
+          A <term>counterexample</term> is an <m>x</m> value for which <m>P(x)</m> is false.
+        </p>
+      </statement>
       <answer>
         <video youtube="Z7wornF1Euw"/>
       </answer>
-
     </definition>
     <definition>
-      <p>
-        The <term>existential quantification</term> of <m>P(x)</m> is the statement that there is some value <m>x</m> in the universe of discourse for which <m>P(x)</m> is true. We write <m> \exists x P(x)</m>
-      </p>
-      <answer>
-        <video youtube="H_tA2tyGDdQ"/>
-      </answer>
-
+      <title>Existential Quantifier</title>
+      <statement>
+        <p>
+          The <term>existential quantification</term> of <m>P(x)</m> is the statement that there is some value <m>x</m> in the universe of discourse for which <m>P(x)</m> is true. We write <m> \exists x P(x)</m>
+        </p>
+        <answer>
+          <video youtube="H_tA2tyGDdQ"/>
+        </answer>
+      </statement>
     </definition>
 
 
@@ -102,33 +107,33 @@
       <statement>
         <p>
           Let <m>P(x)</m> be <q><m>x^2 \ge 0</m></q>. What is the truth value of <m>\forall x P(x)</m> if the domain is:
+          <ol>
+            <li> All real numbers </li>
+            <li> All complex numbers </li>
+          </ol>
         </p>
-        <ol>
-          <li> All real numbers </li>
-          <li> All complex numbers </li>
-        </ol>
       </statement>
-      <answer>
-        <ol>
-          <li> Since <m>x^2 \ge 0</m> for all real numbers (what you learned in Algebra is true), this statement is true.</li>
-          <li> This is false. Let <m> x = \sqrt{-1}</m>. Then <m>(\sqrt{-1})^2 = -1 \not\ge 0</m>.</li>
-        </ol>
-        <p>
-          We showed that <m>\sqrt{-1}</m> is a counterexample to the universal quanfication.
-        </p>
-      </answer>
+      <!-- <answer> -->
+      <!--   <ol> -->
+      <!--     <li> Since <m>x^2 \ge 0</m> for all real numbers (what you learned in Algebra is true), this statement is true.</li> -->
+      <!--     <li> This is false. Let <m> x = \sqrt{-1}</m>. Then <m>(\sqrt{-1})^2 = -1 \not\ge 0</m>.</li> -->
+      <!--   </ol> -->
+      <!--   <p> -->
+      <!--     We showed that <m>\sqrt{-1}</m> is a counterexample to the universal quantification. -->
+      <!--   </p> -->
+      <!-- </answer> -->
     </example>
 
     <example>
       <statement>
         <p>
           Let the domain be all real numbers. Find a counterexample to the following statements:
+          <ol>
+            <li><m>\forall x (x^2 \not= x)</m></li>
+            <li><m>\forall x (|x| \gt 0)</m></li>
+            <li><m>\forall x (x \gt 3 \vee x \lt 2)</m></li>
+          </ol>
         </p>
-        <ol>
-          <li><m>\forall x (x^2 \not= x)</m></li>
-          <li><m>\forall x (|x| \gt 0)</m></li>
-          <li><m>\forall x (x \gt 3 \vee x \lt 2)</m></li>
-        </ol>
       </statement>
       <answer>
         <video youtube="n9jfIFqiVnU"/>
@@ -138,7 +143,7 @@
 
     <example>
       <statement>
-        <p> We can combine quantifers, where each variable might come from a different domain. Precedence of quantifiers is left to right.
+        <p> We can combine quantifiers, where each variable might come from a different domain. Precedence of quantifiers is left to right.
         </p>
         <p>
           What is the truth value of the following expressions where the domain is all real numbers:
@@ -154,7 +159,8 @@
 
     </example>
 
-    <definition>
+    <remark>
+      <title>Negating Quantifiers</title>
       <p>
         The negation of quantifiers is found as follows: 
         <md>
@@ -169,8 +175,7 @@
       <answer>
         <video youtube="wgjXIN8csMs"/>
       </answer>
-
-    </definition>
+    </remark>
     <note>
       <p>
         Counterexamples to universal statements work because if <m>\exists x \neg P(x)</m> is true, then <m>\neg \forall x P(x)</m> is also true, that is, <m>\forall x P(x)</m> is false!
@@ -382,7 +387,7 @@
             </li>
             <li>
               <p>
-                <em> Applying De Morgan's laws many, many times and noting that the opposite of <m>x\lt a</m> is <m>x \ge a</m>:</em>
+                <em> Applying DeMorgan's laws many, many times and noting that the opposite of <m>x\lt a</m> is <m>x \ge a</m>:</em>
                 <md>
                   <mrow>\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z)) \amp \equiv \neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
                   <mrow> \amp \equiv \exists x \neg \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
@@ -440,7 +445,7 @@
             </li>
             <li>
               <p>
-              <em>Start with the negation on the left and apply De Morgan's laws</em>
+              <em>Start with the negation on the left and apply DeMorgan's laws</em>
                 <md>
                   <mrow>\amp \neg \exists c \exists b \forall r (b \text{ on the campus of } c \text{ in which } r \text{ is painted white})</mrow>
                   <mrow>\amp \equiv \forall c \forall b \exists r \neg(b \text{ on the campus of } c \text{ in which } r \text{ is painted white})</mrow>

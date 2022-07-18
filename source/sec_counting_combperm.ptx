@@ -5,6 +5,7 @@
   </title>
 
   <definition>
+    <title>Permutation</title>
     <statement>
       <p>
         A <term>permutation</term> is an ordered arrangement of objects.
@@ -74,6 +75,7 @@
   </example>
 
   <definition>
+    <title>Combination</title>
     <statement>
       <p>
         A <term>combination</term> is an unordered selection of objects.
@@ -91,12 +93,10 @@
   </example>
 
   <note>
-    <statement>
-      <p>
-        If <m>n \and r</m> are integers such that <m>0 \le r \le n</m>, then the number of <m>r</m>-combinations from a set of <m>n</m> elements is
-        <me>\binom{n}{r} = \dfrac{n!}{r!(n-r)!}</me>
-      </p>
-    </statement>
+    <p>
+      If <m>n \and r</m> are integers such that <m>0 \le r \le n</m>, then the number of <m>r</m>-combinations from a set of <m>n</m> elements is
+      <me>\binom{n}{r} = \dfrac{n!}{r!(n-r)!}</me>
+    </p>
   </note>
 
   <example>

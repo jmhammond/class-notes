@@ -2,13 +2,9 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-numtheory-modularexp">
   <title>Modular exponentiation</title>
 
-  <introduction>
-    <statement>
-      <p>
-       This section seems a bit out of nowhere, but it's a computational tool we need in order to perform the RSA encryption algorithm. When we exponentiate a number, we always get a bigger number, and we'll want to reduce modulo <m>m</m>. In this section we give an algorithm that allows us to perform this operation conveniently.
-      </p>
-    </statement>
-  </introduction>
+  <p>
+    This section seems a bit out of nowhere, but it's a computational tool we need in order to perform the RSA encryption algorithm. When we exponentiate a number, we always get a bigger number, and we'll want to reduce modulo <m>m</m>. In this section we give an algorithm that allows us to perform this operation conveniently.
+  </p>
 
 
   <p>
@@ -118,7 +114,7 @@
     Now recall the basic exponents properties of exponents: <m>(a^m)^n = a^{mn}</m> and <m>a^m \cdot a^n = a^{m+n}</m>.
   </p>
   <p>
-    Why do we care? Let's take a look at repeatly squaring a number, say <m>n</m>:
+    Why do we care? Let's take a look at repeatedly squaring a number, say <m>n</m>:
     <ul label="circle">
       <li> <m>n^1 = n^1</m> </li>
       <li> <m>(n^1)^2 = n^{ 1\cdot2 }</m> </li>
@@ -134,6 +130,7 @@
   </p>
 
   <definition>
+    <title>Modular Exponentiation</title>
     <statement>
       <p>
         <term>Modular exponentiation</term> is the process of repeatedly squaring and reducing a number modulo some integer, and then combining the results to find the required answer.
@@ -247,7 +244,7 @@
             </table>
             <image source="excel-square-mod.png" scale="50%">
               <description>
-                Screenshot of Excel sheeet demonstrating what is described in the table
+                Screenshot of Excel sheet demonstrating what is described in the table
               </description>
               </image>
             </sidebyside>

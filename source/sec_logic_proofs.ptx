@@ -9,6 +9,7 @@
   </p>
 
   <definition>
+    <title>Even Integer</title>
     <statement>
       <p>
         A number <m>n</m> is said to be <term>even</term> if it is a multiple of 2. That is, if there exists an integer <m>k</m> such that <m>n = 2k</m>, then <m>n</m> is even.
@@ -30,6 +31,7 @@
   </example>
 
   <definition>
+    <title>Odd Integer</title>
     <statement>
       <p>
         A number <m>n</m> is said to be <term>odd</term> if it is not a multiple of 2. That is, if there exists an integer <m>k</m> such that <m>n = 2k + 1</m>, then <m>n</m> is odd.
@@ -50,6 +52,7 @@
   </example>
   
   <definition>
+    <title>Rational Number</title>
     <statement>
       <p>
         A number <m>n</m> is said to be <term>rational</term> if there exist integers <m>a, b</m> with <m>b \not=0 </m> such that <m>n = \dfrac{a}{b}</m>. If a number is not rational, we say that it is is <term>irrational</term>.
@@ -76,6 +79,7 @@
     </title>
   
   <definition>
+    <title>Statement Terminology</title>
     <ul>
       <li> A <term>theorem</term> is a statement can be shown to be true. We generally reserve the word theorem for an important statement.
       </li>
@@ -90,7 +94,7 @@
       <li>
       A <term>corollary</term> is a theorem that follows directly from a theorem just proved.</li>
       <li>
-        A <term>conjecture</term> is a statement that we think my be true (our intuition suggests it)
+        A <term>conjecture</term> is a statement that we think may be true (our intuition suggests it)
       </li>
     </ul>
   </definition>
@@ -107,11 +111,9 @@
     </statement>
   </example>
   <note>
-    <statement>
-      <p>
-        The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words <q>for all.</q>
-      </p>
-    </statement>
+    <p>
+      The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words <q>for all.</q>
+    </p>
   </note>
   </subsection>
 
@@ -167,7 +169,7 @@
     <title>Indirect Proofs</title>
 
     <introduction>
-      <p>We still want to show a statement is true, but perhaps that's difficult to approach directly. There are several different indirect proofs. The most frequent indirect approaches are proofs by contraposition and proofs by contradication.</p>
+      <p>We still want to show a statement is true, but perhaps that's difficult to approach directly. There are several different indirect proofs. The most frequent indirect approaches are proofs by contraposition and proofs by contradiction.</p>
     </introduction>
 
     <subsubsection>
@@ -298,45 +300,40 @@
 
     <p>
       Split an argument into completely separate pieces. In the example below we have two cases. Either <m>x \ge y</m> or <m>x \lt y</m>:
-      <example>
-        <statement>
-          <p>
-            Show that if <m>x</m> and <m>y</m> are real numbers, then:
-          </p>
-          <ul>
-            <li>
-              max(<m>x,y</m>) = <m>\dfrac{x+y + |x-y|}{2}</m>
-            </li>
-            <li>
-              min(<m>x,y</m>) = <m>\dfrac{x+y - |x-y|}{2}</m>
-            </li>
-          </ul>
-        </statement>
-        <answer>
-          <video youtube="pLwuZ-JaTms"/>
-        </answer>
-
-      </example>
-      <note>
-        <statement>
-          <p>
-            We need to prove each claim separately for each case!
-          </p>
-        </statement>
-      </note>
     </p>
-    <p>
-      <example>
-        <statement>
-          <p>
-            Prove that <m>5x + 5y</m> is an odd integer when <m>x</m> and <m>y</m> are integers of opposite parity (not both even, not both odd).
-          </p>
-        </statement>
-        <answer>
-          <video youtube="_UBA9HDFAYI"/>
-        </answer>
-      </example>
-    </p>
+    <example>
+      <statement>
+        <p>
+          Show that if <m>x</m> and <m>y</m> are real numbers, then:
+        </p>
+        <ul>
+          <li>
+            max(<m>x,y</m>) = <m>\dfrac{x+y + |x-y|}{2}</m>
+          </li>
+          <li>
+            min(<m>x,y</m>) = <m>\dfrac{x+y - |x-y|}{2}</m>
+          </li>
+        </ul>
+      </statement>
+      <answer>
+        <video youtube="pLwuZ-JaTms"/>
+      </answer>
+    </example>
+    <note>
+      <p>
+        We need to prove each claim separately for each case!
+      </p>
+    </note>
+    <example>
+      <statement>
+        <p>
+          Prove that <m>5x + 5y</m> is an odd integer when <m>x</m> and <m>y</m> are integers of opposite parity (not both even, not both odd).
+        </p>
+      </statement>
+      <answer>
+        <video youtube="_UBA9HDFAYI"/>
+      </answer>
+    </example>
 
   </subsection>
 
@@ -418,7 +415,7 @@
       </statement>
       <hint>
         <p>
-          Similar to above, show that <m> k</m> satifies this equation, and then show that if you have another number, say <m>l</m> that also does, it must be the case that <m>k = l</m>.
+          Similar to above, show that <m> k</m> satisfies this equation, and then show that if you have another number, say <m>l</m> that also does, it must be the case that <m>k = l</m>.
         </p>
       </hint>
     </example>
@@ -429,24 +426,28 @@
   <subsection>
     <title>Vacuous and Trivial Proofs</title>
     <definition>
-      <p>A <term>vacuous statement</term> is one that is true because the hypothesis is false. You can <q>prove</q> a statement is true immediately.
-      <example>
-        <statement>
-          <p>
-            If I play in the Super Bowl, I will throw the game winning touchdown.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Since I won't ever play in the Super Bowl, it doesn't matter what the truth value of the touchdown statement is. <m>F\to T \equiv T</m> and <m>F \to F \equiv T</m> just the same.
-          </p>
-        </solution>
-      </example>
-      </p>
+      <title>Vacuous Statements</title>
+      <statement>
+        <p>A <term>vacuous statement</term> is one that is true because the hypothesis is false. You can <q>prove</q> a statement is true immediately.
+        <example>
+          <statement>
+            <p>
+              If I play in the Super Bowl, I will throw the game winning touchdown.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Since I won't ever play in the Super Bowl, it doesn't matter what the truth value of the touchdown statement is. <m>F\to T \equiv T</m> and <m>F \to F \equiv T</m> just the same.
+            </p>
+          </solution>
+        </example>
+        </p>
+      </statement>
     </definition>
 
     <definition>
-      
+      <title>Trivial Statements</title>
+      <statement>
       <p>
         If we know that the conclusion of a statement is true, then the statement has a <term>trivial</term> proof.
 
@@ -464,6 +465,7 @@
 
         </example>
       </p>
+      </statement>
     </definition>
 
   </subsection>
@@ -796,7 +798,7 @@
                 <mrow>  \amp= 9k^2 + 6k + 1</mrow>
                 <mrow>  \amp= 3(3k^2 + 2k) + 1</mrow>
               </md>
-              Hence <m>n^2</m> is not a mulitple of three.
+              Hence <m>n^2</m> is not a multiple of three.
               </p>
               <p>Case 1: There exists an integer <m>l</m> such that <m>n =
               3l+2</m>. Consider:
@@ -806,7 +808,7 @@
                 <mrow>  \amp= 9l^2 + 12l + 3 + 1</mrow>
                 <mrow>  \amp= 3(3l^2 + 4l + 1) + 1</mrow>
               </md>
-              Hence <m>n^2</m> is not a mulitple of three.
+              Hence <m>n^2</m> is not a multiple of three.
               </p>
               <p>
                 Thus, we have proven that if <m>n^2</m> is a multiple of three, then <m>n</m> is a multiple of three by contraposition.
