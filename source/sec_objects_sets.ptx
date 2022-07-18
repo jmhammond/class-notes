@@ -10,85 +10,148 @@
     <title>Basic terminology</title>
 
     <definition>
-      <p>
-        A <term>set</term> is an unordered collection of objects called <term>elements</term> or <term>members</term> of the set.
-      </p>
-      <p>
-        If <m>A</m> is a set and <m>a</m> is an element of <m>A</m>, we write <m>a \in A</m>. If <m>b</m> isn't an element of <m>A</m>, we write <m>b \not\in A</m>.
-      </p>
+      <title>
+        Sets
+      </title>
+      <statement>
+        <p>
+          A <term>set</term> is an unordered collection of objects called <term>elements</term> or <term>members</term> of the set.
+        </p>
+        <p>
+          If <m>A</m> is a set and <m>a</m> is an element of <m>A</m>, we write <m>a \in A</m>. If <m>b</m> isn't an element of <m>A</m>, we write <m>b \not\in A</m>.
+        </p>
+      </statement>
     </definition>
     <example>
       <statement>
         <p>
           Below are examples of ways of writing sets:
           <dl>
-            <li> <term>Roster</term>: <m>A = \{\text{list, out, all, elements, in, a, comma, separated, list,} \dots\}</m> For exaple: <m>A = \{2, 4, 6, 8, 10, \dots\}.</m> </li>
-            <li> <term>Set-builder</term>: <m> B=\{\text{variable} \mid \text{condition for variable to be in the set}\}</m>. For example, <m>B = \{x \mid x \gt 0 \and x \text{ is an even integer}\}</m> </li>
-          </dl>
-        </p>
-        <p>
-          We have also seen intervals of real numbers in our previous courses which are the sets:
-          <dl cols="2">
-            <li><m>(a,b) = \{x \mid a \lt x \lt b, x\in \R \}</m></li>
-            <li><m>[a,b) = \{x \mid a \le x \lt b, x\in \R \}</m></li>
-            <li><m>(a,b] = \{x \mid a \lt x \le b, x\in \R \}</m></li>
-            <li><m>[a,b] = \{x \mid a \le x \le b, x\in \R \}</m></li>
+            <li>
+              <title>Roster</title>
+              <p>
+                <m>A = \{\text{list, out, the, elements, in, a, comma, separated, list} \dots\}</m> <line/>
+                For example: <m>A = \{2, 4, 6, 8, 10, \dots\}.</m>
+              </p>
+            </li>
+            <li>
+              <title>Set-builder</title>
+              <p>
+                <m> B=\{\text{variable} \mid \text{condition for variable to be in the set}\}</m> <line/>
+                For example, <m>B = \{x \mid x \gt 0 \and x \text{ is an even integer}\}</m>
+              </p>
+            </li>
           </dl>
         </p>
       </statement>
     </example>
     <definition>
-      <p>
-        Here are some special sets we will visit often throughout the course and the rest of your mathematical career: 
-        <dl>
-          <li> <m>\emptyset = \{\}</m> is the <term>empty set</term> consisting of no elements.</li>
-          <li> <m> \mathbb{N} = \{0, 1, 2, 3, 4, \dots \}</m> is the set of <term>natural numbers</term>. </li>
-          <li> <m> \mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \}</m> is the set of <term>integers</term>. </li>
-          <li> <m> \mathbb{Z}^+ = \{1, 2, 3, \dots \}</m> is the set of <term>positive integers</term>. </li>
-          <li> <m> \mathbb{Q} = \left\{ \frac{p}{q} \mid p \in \mathbb{Z}, q \in \mathbb{Z}, \text{ and } q \not= 0 \right\}</m> is the set of <term>rational numbers</term>. </li>
-          <li> <m> \mathbb{R} </m> is the set of <term>real numbers</term>. In Calculus, we wrote the interval <m>(-\infty, \infty)</m>.</li>
-          <li> <m> \mathbb{R}^+ </m> is the set of <term>positive real numbers</term>. In Calculus, we wrote the interval <m>(0, \infty)</m></li>
-          <li> <m> \mathbb{C} = \{a + bi \mid a \in \mathbb{R}, b \in \mathbb{R}, i = \sqrt{-1} \} </m> is the set of <term>complex numbers</term> </li>
-        </dl>
-      </p>
+      <title>Special Sets of Numbers</title>
+      <statement>
+        <p>
+          Here are some special sets we will visit often throughout the course and the rest of your mathematical career:
+          <dl>
+            <li>
+              <title>Empty set</title>
+              <p>
+                <m>\emptyset = \{\}</m> is the set consisting of no elements.
+              </p>
+            </li>
+            <li>
+              <title>Natural Numbers</title>
+              <p><m> \mathbb{N} = \{0, 1, 2, 3, 4, \dots \}</m>, the set of counting numbers and zero.
+              </p>
+            </li>
+            <li>
+              <title>Integers</title>
+              <p>
+                <m> \mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \}</m> includes all negative, zero, and positive counting numbers
+              </p>
+            </li>
+            <li>
+              <title>Positive Integers</title>
+              <p>
+                <m> \mathbb{Z}^+ = \{1, 2, 3, \dots \}</m> contains only the positive counting numbers.
+              </p>
+            </li>
+            <li>
+              <title>Rational Numbers</title>
+              <p>
+                <md>
+                  <mrow>\mathbb{Q} \amp= \left\{ \frac{p}{q} \mid p \in \mathbb{Z}, q \in \mathbb{Z}, \text{ and } q \not= 0 \right\}
+                  </mrow>
+                  <mrow> \amp=\left\{0,1,-1,2,\frac{1}{2},-\frac{1}{2},-2,3,\frac{1}{3},-\frac{1}{3},-3,\frac{3}{2},\ldots\right\}
+                  </mrow>
+                </md>
+                is the set of all fractions.
+              </p>
+            </li>
+            <li>
+              <title>Real Numbers</title>
+              <p>
+                <m> \mathbb{R} </m> is the set of all real numbers. In Calculus, we wrote the interval <m>(-\infty, \infty)</m>. This includes all fractions and those irrational numbers that can't be written as fractions.
+              </p>
+            </li>
+            <!-- <li> -->
+            <!--     <m> \mathbb{R}^+ </m> is the set of <term>positive real numbers</term>. In Calculus, we wrote the interval <m>(0, \infty)</m></li> -->
+            <!--  <li> <m> \mathbb{C} = \{a + bi \mid a \in \mathbb{R}, b \in \mathbb{R}, i = \sqrt{-1} \} </m> is the set of <term>complex numbers</term> </li> -->
+          </dl>
+        </p>
+      </statement>
     </definition>
 
 
     <note>
-      <statement>
-        <p>
-          When using set-builder notation, we can think about it this way: <m>\{\text{elements look like this} \mid \text{qualifications for membership}\}</m>
-        </p>
-        <p>
-          Here are several examples showing a variety of ways of writing sets:
-          <ol>
-            <li>
-              <m>\{x \mid |2x+1| \le 10 \land x \in \Z\}</m> tells us our elements are going to be whatever <m>x</m> satisfy the expression <m>|2x+1| \le 10</m> where our variables are integers. This will be exactly <m>\{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4\}</m>
-            </li>
-            <li>
-              <m>\{a \in \N \mid \frac{a}{2} \ge 4 \}</m> means that the elements will be natural numbers (<m>a \in \N</m>), and the qualification to be in the set is that <m>a/2 \ge 4</m>. Note that same letter <m>a</m>!. A little algebra says <m>a\ge 8</m> is the qualification, and since the elements are those <m>a</m>s, our set is <m>\{8, 9, 10, 11, 12, \dots\}</m>
-            </li>
-            <li>
-              <m>\{\frac{a}{2} \in \Q \mid a \in \N\}</m> means the elements will be rational numbers of the form <m>\frac{a}{2}</m> (<m>\frac{a}{2} \in Q</m>). Since the qualification is just that the <m>a</m> is a natural number, that tells us to feed all natural numbers into our set, so we have <m>\{0, 1/2, 1, 3/2, 2, 5/2, \dots\}</m>
-            </li>
-          </ol>
-        </p>
-      </statement>
+      <p>
+        When using set-builder notation, we can think about it this way: <m>\{\text{elements look like this} \mid \text{qualifications for membership}\}</m>
+      </p>
+      <p>
+        Here are several examples showing a variety of ways of writing sets:
+        <ol>
+          <li>
+            <m>\{x \mid |2x+1| \le 10 \land x \in \Z\}</m> tells us our elements are going to be whatever <m>x</m> satisfy the expression <m>|2x+1| \le 10</m> where our variables are integers. This will be exactly <m>\{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4\}</m>
+          </li>
+          <li>
+            <m>\{a \in \N \mid \frac{a}{2} \ge 4 \}</m> means that the elements will be natural numbers (<m>a \in \N</m>), and the qualification to be in the set is that <m>a/2 \ge 4</m>. Note that same letter <m>a</m>!. A little algebra says <m>a\ge 8</m> is the qualification, and since the elements are those <m>a</m>s, our set is <m>\{8, 9, 10, 11, 12, \dots\}</m>
+          </li>
+          <li>
+            <m>\{\frac{a}{2} \in \Q \mid a \in \N\}</m> means the elements will be rational numbers of the form <m>\frac{a}{2}</m> (<m>\frac{a}{2} \in Q</m>). Since the qualification is just that the <m>a</m> is a natural number, that tells us to feed all natural numbers into our set, so we have <m>\{0, 1/2, 1, 3/2, 2, 5/2, \dots\}</m>
+          </li>
+          <li>
+            <p>
+              We have also seen intervals of real numbers in our previous courses which are the sets:
+            </p>
+            <sidebyside>
+              <p>
+                <m>(a,b) = \{x \mid a \lt x \lt b, x\in \R \}</m> <line/>
+                <m>[a,b) = \{x \mid a \le x \lt b, x\in \R \}</m>
+              </p>
+              <p>
+                <m>(a,b] = \{x \mid a \lt x \le b, x\in \R \}</m> <line/>
+                <m>[a,b] = \{x \mid a \le x \le b, x\in \R \}</m>
+              </p>
+            </sidebyside>
+          </li>
+        </ol>
+      </p>
     </note>
 
     <definition>
-      <p>
-        We say that two sets, <m>A</m> and <m>B</m> are <term>equal</term>, an write <m>A = B</m> they have exactly the same elements.
-      </p>
-      <p>
-        We say that <m>A</m> is a <term>subset</term> of <m>B</m>, and write <m>A \subseteq B</m> if every element of <m>A</m> is an element of <m>B</m>.
-      </p>
-      <!-- <me>A \subseteq B \iff \forall x (x \in A \to x \in B)</me> -->
+      <title>Set Relations</title>
+      <statement>
+        <p>
+          We say that two sets, <m>A</m> and <m>B</m> are <term>equal</term>, an write <m>A = B</m> they have exactly the same elements.
+        </p>
+        <p>
+          We say that <m>A</m> is a <term>subset</term> of <m>B</m>, and write <m>A \subseteq B</m> if every element of <m>A</m> is an element of <m>B</m>.
+        </p>
+        <!-- <me>A \subseteq B \iff \forall x (x \in A \to x \in B)</me> -->
 
-      <p>
-        If there is an element of <m>B</m> which is not also in <m>A</m>, we say that <m>A</m> is a <term>proper subset</term> of <m>B</m> and write <m>A \subset B</m>.
-        <!-- <me>A \subset B \iff \forall x (x \in A \to x \in B) \text{ and } \exists y (y\in B \text{ and } y \not \in A) </me> -->
-      </p>
+        <p>
+          If there is an element of <m>B</m> which is not also in <m>A</m>, we say that <m>A</m> is a <term>proper subset</term> of <m>B</m> and write <m>A \subset B</m>.
+          <!-- <me>A \subset B \iff \forall x (x \in A \to x \in B) \text{ and } \exists y (y\in B \text{ and } y \not \in A) </me> -->
+        </p>
+      </statement>
     </definition>
 
 
@@ -135,60 +198,64 @@
     </theorem>
 
     <note>
-      <statement>
-        <p>
-          Since a set is always a subset of itself we can say that if two sets, <m>A</m> and <m>B</m> are equal, then <m>A</m> is a subset of <m>B</m> and vice versa.
-          <me>A = B \iff (A \subseteq B \text{ and } B \subseteq A)</me>
-        </p>
-      </statement>
+      <p>
+        Since a set is always a subset of itself we can say that if two sets, <m>A</m> and <m>B</m> are equal, then <m>A</m> is a subset of <m>B</m> and vice versa.
+        <me>A = B \iff (A \subseteq B \text{ and } B \subseteq A)</me>
+      </p>
     </note>
 
     <definition>
-      <p>
-        Given any set <m>S</m>, the <term>power set</term> of <m>S</m> is the set of all subsets of the set <m>S</m>. We denote the power set of <m>S</m> by <m>\pow(S)</m>
-      </p>
+      <title>Power Set</title>
+      <statement>
+        <p>
+          Given any set <m>S</m>, the <term>power set</term> of <m>S</m> is the set of all subsets of the set <m>S</m>. We denote the power set of <m>S</m> by <m>\pow(S)</m>
+        </p>
+      </statement>
     </definition>
     
     <example>
       <statement>
         <p>
           Find the power set of:
+          <ol>
+            <li>
+              <m>\{a, b, c\}</m>
+            </li>
+            <li><m>\{1, 2\}</m></li>
+            <li>
+              <m>\emptyset</m>
+            </li>
+          </ol>
         </p>
-        <ol>
-          <li>
-            <m>\{a, b, c\}</m>
-          </li>
-          <li><m>\{1, 2\}</m></li>
-          <li>
-            <m>\emptyset</m>
-          </li>
-        </ol>
       </statement>
     </example>
 
     <definition>
-      <p>
-        Let <m>S</m> be a set. If there are exactly <m>n</m> distinct elements in <m>S</m> where <m>n</m> is a nonnegative integer, then we say that <m>S</m> is a <term>finite</term> set with <term>cardinality</term> of <m>n</m>, and write <m>|S|=n</m>.
-      </p>
-      <p>
-        A set is said to be <term>infinite</term> if it is not finite.
-      </p>
+      <title>Cardinality</title>
+      <statement>
+        <p>
+          Let <m>S</m> be a set. If there are exactly <m>n</m> distinct elements in <m>S</m> where <m>n</m> is a non-negative integer, then we say that <m>S</m> is a <term>finite</term> set with <term>cardinality</term> of <m>n</m>, and write <m>|S|=n</m>.
+        </p>
+        <p>
+          A set is said to be <term>infinite</term> if it is not finite.
+        </p>
+      </statement>
     </definition>
 
     <example>
       <statement>
         <p>
           Find the cardinality:
+          <ol>
+            <li>
+              <m>|\{a, b, c\}|</m>
+            </li>
+            <li><m>|\pow(\{a, b, c \})|</m></li>
+            <li>
+              <m>|\emptyset|</m>
+            </li>
+          </ol>
         </p>
-        <ol>
-          <li>
-            <m>|\{a, b, c\}|</m>
-          </li>
-          <li><m>|\pow(\{a, b, c \})|</m></li>
-          <li>
-            <m>|\emptyset|</m>
-          </li>
-        </ol>
       </statement>
     </example>
 
@@ -198,42 +265,49 @@
     <title> Operations on sets </title>
 
     <definition>
-      <p>
-        We define an <term>ordered <m>n-</m>tuple</term> to be an ordered collection of the form <m>(a_1, a_2, \dots, a_n)</m>.
-      </p>
-      <p>
-        We call the <m>2-</m>tuple <m>(a_1, a_2)</m> an <term>ordered pair</term>, and the <m>3-</m>tuple <m>(a_1, a_2, a_3)</m> an <term>ordered triple</term>.
-      </p>
+      <statement>
+        <p>
+          We define an <term>ordered <m>n-</m>tuple</term> to be an ordered collection of the form <m>(a_1, a_2, \dots, a_n)</m>.
+        </p>
+        <p>
+          We call the <m>2-</m>tuple <m>(a_1, a_2)</m> an <term>ordered pair</term>, and the <m>3-</m>tuple <m>(a_1, a_2, a_3)</m> an <term>ordered triple</term>.
+        </p>
+      </statement>
     </definition>
 
     <definition>
-      <p>
-        Let <m>A</m> and <m>B</m> be sets. The <term>Cartesian Product</term> of <m>A</m> and <m>B</m>, denoted by <m>A\times B</m>, is the set of all ordered pairs <m>(a,b)</m> where <m>a\in A</m> and <m>b \in B</m>. That is,
-        <me>A \times B = \{ (a,b) \mid a\in A \text{ and } b \in B\}</me>
-      </p>
-      <p>
-        We also denote the Cartesian product of a set with itself by the superscript <m>A^2 = A \times A</m>.
-      </p>
+      <title>Cartesian Product</title>
+      <statement>
+        <p>
+          Let <m>A</m> and <m>B</m> be sets. The <term>Cartesian Product</term> of <m>A</m> and <m>B</m>, denoted by <m>A\times B</m>, is the set of all ordered pairs <m>(a,b)</m> where <m>a\in A</m> and <m>b \in B</m>. That is,
+          <me>A \times B = \{ (a,b) \mid a\in A \text{ and } b \in B\}</me>
+        </p>
+        <p>
+          We also denote the Cartesian product of a set with itself by the superscript <m>A^2 = A \times A</m>.
+        </p>
+      </statement>
     </definition>
 
     <example>
       <statement>
         <p>
           Let <m>A=\{1, 2\}</m> and <m>B = \{x, y , z\}</m>, find:
+          <ol cols="2">
+            <li><m>|A|</m></li>
+            <li><m>|B|</m></li>
+            <li>How many elements do you expect in <m>A \times B</m>?</li>
+            <li><m>A \times B</m></li>
+            <li><m>B \times A</m></li>
+            <li><m>A^2</m></li>
+          </ol>
         </p>
-        <ol cols="2">
-          <li><m>|A|</m></li>
-          <li><m>|B|</m></li>
-          <li>How many elements do you expect in <m>A \times B</m>?</li>
-          <li><m>A \times B</m></li>
-          <li><m>B \times A</m></li>
-          <li><m>A^2</m></li>
-        </ol>
       </statement>
     </example>
 
     
     <definition>
+      <title>Set Operations</title>
+      <statement>
       <p>
         If <m>A</m> and <m>B</m> are two sets, we define the <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A \cup B</m>, to be the set of all elements that are in <m>A</m> or <m>B</m>, or both.
         <me>A \cup B = \{ x \mid x \in A \text{ or } x \in B\}</me>
@@ -241,19 +315,19 @@
 
       <p>
         As a Venn diagram:
-        <image xml:id="A-or-B" width="25%">
-          <latex-image>
-            \begin{tikzpicture}[scale=.75]
-            \fill[color=gray] \circleA;
-            \fill[color=gray] \circleB;
-            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-            \end{tikzpicture}
-          </latex-image>
-          <description>
-            Venn diagram for set union. Two circles labeled A and B. Both circles are completely shaded.
-          </description>
-        </image>
       </p>
+      <image xml:id="A-or-B" width="25%">
+        <description>
+          Venn diagram for set union. Two circles labeled A and B. Both circles are completely shaded.
+        </description>
+        <latex-image>
+          \begin{tikzpicture}[scale=.75]
+          \fill[color=gray] \circleA;
+          \fill[color=gray] \circleB;
+          \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+          \end{tikzpicture}
+        </latex-image>
+      </image>
 
       <p>
         If <m>A</m> and <m>B</m> are two sets, we define the <term>intersection</term> of <m>A</m> and <m>B</m>, denoted <m>A \cap B</m>, to be the set of only elements that are in both <m>A</m> and <m>B</m>.
@@ -262,20 +336,20 @@
 
       <p>
         As a Venn diagram:
-        <image xml:id="A-and-B" width="25%">
-          <latex-image>
-            \begin{tikzpicture}[scale=.75]
-            \fill[color=gray] \circleA;
-            \fill[color=gray] \circleB;
-            \fill[even odd rule, color=white] \circleA \circleB;
-            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-            \end{tikzpicture}
-          </latex-image>
-          <description>
-            Venn diagram for set intersection. Two circles labeled A and B. Only where the two circles overlap is shaded.
-          </description>
-        </image>
       </p>
+      <image xml:id="A-and-B" width="25%">
+        <description>
+          Venn diagram for set intersection. Two circles labeled A and B. Only where the two circles overlap is shaded.
+        </description>
+        <latex-image>
+          \begin{tikzpicture}[scale=.75]
+          \fill[color=gray] \circleA;
+          \fill[color=gray] \circleB;
+          \fill[even odd rule, color=white] \circleA \circleB;
+          \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+          \end{tikzpicture}
+        </latex-image>
+      </image>
 
       <p>
         If <m>A</m> and <m>B</m> are two sets, we define the <term>difference</term> of <m>A</m> and <m>B</m>, denoted <m>A \setminus B</m>, to be the set of only elements that are only in <m>A</m> and not in <m>B</m>.
@@ -284,62 +358,60 @@
 
       <p>
         As a Venn diagram:
-        <image xml:id="A-minus-B" width="25%">
-          <latex-image>
-            \begin{tikzpicture}[scale=.75]
-            \fill[color=gray] \circleA;
-            \fill[color=white] \circleB;
-            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-            \end{tikzpicture}
-          </latex-image>
-          <description>
-            Venn diagram for set difference <m>A \setminus B</m>. Two circles are labeled A and B. Only the part of A that doesn't overlap with B is shaded.
-          </description>
-        </image>
       </p>
+      <image xml:id="A-minus-B" width="25%">
+        <description>
+          Venn diagram for set difference <m>A \setminus B</m>. Two circles are labeled A and B. Only the part of A that doesn't overlap with B is shaded.
+        </description>
+        <latex-image>
+          \begin{tikzpicture}[scale=.75]
+          \fill[color=gray] \circleA;
+          \fill[color=white] \circleB;
+          \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+          \end{tikzpicture}
+        </latex-image>
+      </image>
 
+      <!-- schema note: need to ditch this construct //-->
       <note>
-        <statement>
-          <p>
-            It's worth noting that some authors, Rosen included, use <m>A - B</m> to denote the difference between two sets <m>A</m> and <m>B</m>. We'll be using the slightly more standard <m>A\setminus B</m> in this class. 
-          </p>
-        </statement>
+        <p>
+          It's worth noting that some authors, Rosen included, use <m>A - B</m> to denote the difference between two sets <m>A</m> and <m>B</m>. We'll be using the slightly more standard <m>A\setminus B</m> in this class.
+        </p>
       </note>
-    </definition>
 
-    <definition>
       <p>
         Let <m>U</m> be the <term>universal set</term>, that is the set of all possible objects in consideration.
-
-        <image xml:id="universal-set" width="25%">
-          <latex-image>
-            \begin{tikzpicture}[scale=.75]
-            \fill[color=gray] \twosetbox;
-            \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
-            \end{tikzpicture}
-          </latex-image>
-          <description>
-            Venn diagram for the universal set. Everything is shaded, including A and B and everything outside of those circles.
-          </description>
-        </image>
       </p>
+
+      <image xml:id="universal-set" width="25%">
+        <description>
+          Venn diagram for the universal set. Everything is shaded, including A and B and everything outside of those circles.
+        </description>
+        <latex-image>
+          \begin{tikzpicture}[scale=.75]
+          \fill[color=gray] \twosetbox;
+          \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
+          \end{tikzpicture}
+        </latex-image>
+      </image>
 
       <p>
         If <m>A</m> is a set, the <term>complement</term> of <m>A</m>, denoted <m>\overline{A}</m>, is the set difference <m>\overline{A} = U \setminus A</m>.
-
-        <image xml:id="A-complement" width="25%">
-          <latex-image>
-            \begin{tikzpicture}[scale=.75]
-            \fill[color=gray] \twosetbox;
-            \fill[color=white] \circleA;
-            \draw[thick] \circleA \circleAlabel \twosetbox;
-            \end{tikzpicture}
-          </latex-image>
-          <description>
-            Venn diagram for the complement of <m>A</m>. Here there is one circle labeled A and everything outside of it is shaded.
-          </description>
-        </image>
       </p>
+
+      <image xml:id="A-complement" width="25%">
+        <description>
+          Venn diagram for the complement of <m>A</m>. Here there is one circle labeled A and everything outside of it is shaded.
+        </description>
+        <latex-image>
+          \begin{tikzpicture}[scale=.75]
+          \fill[color=gray] \twosetbox;
+          \fill[color=white] \circleA;
+          \draw[thick] \circleA \circleAlabel \twosetbox;
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </statement>
     </definition>
 
     <example>
@@ -360,11 +432,9 @@
       </statement>
     </example>
     <note>
-      <statement>
-        <p>
-          What do you observe about some combination of the cardinalities above?
-        </p>
-      </statement>
+      <p>
+        What do you observe about some combination of the cardinalities above?
+      </p>
     </note>
 
   </subsection>
@@ -379,12 +449,11 @@
       <statement>
         <p>
           Verify the following identities by using a Venn Diagram.
+          <ol>
+            <li><m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m></li>
+            <li><m>A \cup(B \cap C) = (A \cup B) \cap (A \cup C)</m></li>
+          </ol>
         </p>
-
-        <ol>
-          <li><m>\overline{A \cap B} = \overline{A} \cup \overline{B}</m></li> 
-          <li><m>A \cup(B \cap C) = (A \cup B) \cap (A \cup C)</m></li>
-        </ol>
       </statement>
 
     </example>
@@ -392,96 +461,88 @@
     <list xml:id="list-set-identities">
       <title>Fundamental set identities</title>
       <introduction>
-        Let <m>A, B</m> and <m>C</m> be three sets and let <m>U</m> be the universal set.
+        <p>
+          Let <m>A, B</m> and <m>C</m> be three sets and let <m>U</m> be the universal set.
+        </p>
       </introduction>
 
-      <ol>
+      <dl width="narrow">
         <li>
-          <term>Commutative Laws</term>:
-          <sidebyside widths="40% 40%" margins="auto" valign="middle">
+          <title>Commutative Laws</title>
             <p>
-              <m>A \cup B = B \cup A</m>
-            </p>
-            <p>
+              <m>A \cup B = B \cup A</m><line/><line/>
               <m>A \cap B = B \cap A</m>
             </p>
-          </sidebyside>
         </li>
         <li>
-          <term>Associative Laws:</term>
-          <sidebyside widths="40% 40%" margins="auto" valign="middle">
-            <p><m>(A \cup B) \cup C = A \cup (B \cup C)</m></p>
-            <p><m>(A \cap B) \cap C = A \cap (B \cap C)</m></p>
-          </sidebyside>
+          <title>Associative Laws</title>
+          <p>
+            <m>(A \cup B) \cup C = A \cup (B \cup C)</m><line/><line/>
+            <m>(A \cap B) \cap C = A \cap (B \cap C)</m>
+          </p>
         </li>
         <li>
-          <term>Distributive Laws:</term><line/>
-          <sidebyside widths="40% 40%" margins="auto" valign="middle">
-            <p>
+          <title>Distributive Laws</title><line/>
+          <p>
               <m>A \cap (B \cup C) = (A \cap B) \cup (A \cap C) </m><line/>
               <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C) </m>
-            </p>
-            <p><!-- intentionally blank /--></p>
-          </sidebyside>
+          </p>
         </li>
         <li>
-          <term>Identity Laws:</term>
-          <sidebyside widths="40% 40%" margins="auto" valign="middle">
-            <p><m>A \cup \emptyset = A</m></p>
-            <p><m>A \cap U = A</m></p>
-          </sidebyside>
+          <title>Identity Laws</title>
+          <p>
+            <m>A \cup \emptyset = A</m>
+            <m>A \cap U = A</m>
+          </p>
         </li>
         <li>
-          <term>Negation Laws:</term>
-          <sidebyside widths="40% 40%" margins="auto" valign="middle">
-            <p><m>A \cap \overline{A} = \emptyset</m></p>
-            <p><m>A \cup \overline{A} = U</m></p>
-          </sidebyside>
+          <title>Negation Laws</title>
+          <p>
+            <m>A \cap \overline{A} = \emptyset</m><line/><line/>
+            <m>A \cup \overline{A} = U</m>
+          </p>
         </li>
         <li>
-          <term>Idempotent Laws:</term>
-          <sidebyside widths="40% 40%" margins="auto" valign="middle">
-            <p><m>A \cup A = A</m> </p>
-            <p><m>A \cap A = A</m> </p>
-          </sidebyside>
+          <title>Idempotent Laws</title>
+          <p>
+            <m>A \cup A = A</m> <line/><line/>
+            <m>A \cap A = A</m>
+          </p>
         </li>
         <li>
-          <term>Domination Laws:</term>
-          <sidebyside widths="40% 40%" margins="auto" valign="middle">
-            <p><m>A \cap \emptyset = \emptyset</m> </p>
-            <p><m>A \cup U = U</m> </p>
-          </sidebyside>
+          <title>Domination Laws</title>
+          <p>
+            <m>A \cap \emptyset = \emptyset</m><line/><line/>
+            <m>A \cup U = U</m>
+          </p>
         </li>
         <li>
-          <term>Absorption Laws:</term>
-          <sidebyside widths="40% 40%" margins="auto" valign="middle">
-            <p><m>A \cap (A \cup B)= A</m></p>
-            <p><m>A \cup (A \cap B)= A</m></p>
-          </sidebyside>
+          <title>Absorption Laws</title>
+          <p>
+            <m>A \cap (A \cup B)= A</m><line/><line/>
+            <m>A \cup (A \cap B)= A</m>
+          </p>
         </li>
         <li>
-          <term>DeMorgan's Laws:</term>
-          <sidebyside widths="40% 40%" margins="auto" valign="middle">
-            <p><m>\overline{(A\cup B)} = \overline{A}\cap \overline{B}</m></p>
-            <p><m>\overline{(A\cap B)} = \overline{A}\cup \overline{B}</m></p>
-          </sidebyside>
+          <title>DeMorgan's Laws</title>
+          <p>
+            <m>\overline{(A\cup B)} = \overline{A}\cap \overline{B}</m><line/><line/>
+            <m>\overline{(A\cap B)} = \overline{A}\cup \overline{B}</m>
+          </p>
         </li>
         <li>
-          <term>Double Negation Law:</term>
-          <sidebyside widths="40% 40%" margin="auto">
-            <p> <m>\overline{\overline{A}} = A</m></p>
-            <p><!-- intentionally blank /--></p>
-          </sidebyside>
+          <title>Double Negation Law</title>
+          <p>
+            <m>\overline{\overline{A}} = A</m>
+          </p>
         </li>
-      </ol>
+      </dl>
     </list>
 
     <note>
-      <statement>
-        <p>
-          It would be good practice to take a moment and confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.
-        </p>
-      </statement>
+      <p>
+        It would be good practice to take a moment and confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.
+      </p>
     </note>
 
   </subsection>
@@ -725,6 +786,7 @@
               <m>A \cup \bar B</m>:
             </p>
             <image xml:id="A-or-not-B" width="25%">
+              <description>Venn diagram of <m>A\cup \bar B</m>. Two circles are labeled A and B. Everything is shaded except for the small part of B that doesn't overlap A.</description>
               <latex-image>
                 \begin{tikzpicture}[fill=gray!50, scale=.75]
                 \fill \circleA;
@@ -735,13 +797,13 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description>Venn diagram of <m>A\cup \bar B</m>. Two circles are labeled A and B. Everything is shaded except for the small part of B that doesn't overlap A.</description>
             </image>
             </li>
             <li><p>
               <m>\bar{(A \cup B)}</m>:
             </p>
             <image xml:id="not-A-or-B" width="25%">
+              <description>Venn diagram of <m>\bar{(A \cup B)}</m>. Two circles are labeled A and B. Everything outside the two circles are shaded. </description>
               <latex-image>
                 \begin{tikzpicture}[scale=.5, fill=gray!50]
                 \fill \twosetbox;
@@ -749,7 +811,6 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \twosetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description>Venn diagram of <m>\bar{(A \cup B)}</m>. Two circles are labeled A and B. Everything outside the two circles are shaded. </description>
             </image>
 
             </li>
@@ -757,6 +818,7 @@
               <m>A \cap (B \cup C)</m>:
             </p>
             <image xml:id="A-and-B-or-C" width="25%">
+              <description>Venn diagram of <m>A \cap (B \cup C)</m> Three circles are labeled A, B, and C. Where A and B is shaded and where A and C is also shaded.</description>
               <latex-image>
                 \begin{tikzpicture}[fill=gray!50, scale=.5]
                 \begin{scope}
@@ -766,13 +828,13 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description>Venn diagram of <m>A \cap (B \cup C)</m> Three circles are labeled A, B, and C. Where A and B is shaded and where A and C is also shaded.</description>
             </image>
             </li>
             <li><p>
               <m>(A \cap B) \cup C</m>:
             </p>
             <image xml:id="A-and-B-cup-C" width="25%">
+              <description> Venn diagram of <m>(A \cap B) \cup C</m>. Three circles are labeled A, B, and C. Where A and B overlap is shaded. C is also shaded completely.</description>
               <latex-image>
                 \begin{tikzpicture}[fill=gray!50, scale=.5]
                 \begin{scope}
@@ -783,13 +845,13 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description> Venn diagram of <m>(A \cap B) \cup C</m>. Three circles are labeled A, B, and C. Where A and B overlap is shaded. C is also shaded completely.</description>
             </image>
             </li>
             <li><p>
               <m>\bar A \cap B \cap \bar C</m>:
             </p>
             <image xml:id="not-A-cap-B-cap-not-C" width="25%">
+              <description>Venn diagram of <m>\bar A \cap B \cap \bar C</m>. Three circles are labeled A, B, and C. Only the part of B that doesn't overlap A and doesn't overlap C is shaded.</description>
               <latex-image>
                 \begin{tikzpicture}[fill=gray!50, scale=.5]
                 \fill \circleB;
@@ -801,13 +863,13 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description>Venn diagram of <m>\bar A \cap B \cap \bar C</m>. Three circles are labeled A, B, and C. Only the part of B that doesn't overlap A and doesn't overlap C is shaded.</description>
             </image>
             </li>
             <li><p>
               <m>(A \cup B) \setminus C</m>:
             </p>
             <image xml:id="A-or-B-less-C" width="25%">
+              <description>Venn diagram of <m>(A \cup B) \setminus C</m>. Three circles are labeled A, B, and C. Only those parts of A and B that do not overlap C are shaded. </description>
               <latex-image>
                 \begin{tikzpicture}[fill=gray!50, scale=.5]
                 \fill \circleA;
@@ -816,7 +878,6 @@
                 \draw[thick] \circleA \circleAlabel \circleB \circleBlabel \circleC \circleClabel \threesetbox;
                 \end{tikzpicture}
               </latex-image>
-              <description>Venn diagram of <m>(A \cup B) \setminus C</m>. Three circles are labeled A, B, and C. Only those parts of A and B that do not overlap C are shaded. </description>
             </image>
             </li>
           </ol>
@@ -832,6 +893,7 @@
           Describe a set in terms of <m>A</m> and <m>B</m> (using set notation) which has the following Venn diagram:
         </p>
         <image xml:id="not-A-and-B" width="25%">
+          <description>Venn diagram: A is mostly shaded, B is mostly shaded, but the area where A and B overlap is not.</description>
           <latex-image>
             \begin{tikzpicture}[fill=gray!50, scale=0.5]
             \scope
@@ -849,7 +911,6 @@
             (-1.5,-1.5) rectangle (2.5,1.5);
             \end{tikzpicture}
           </latex-image>
-          <description>Venn diagram: A is mostly shaded, B is mostly shaded, but the area where A and B overlap is not.</description>
         </image>
       </statement>
 

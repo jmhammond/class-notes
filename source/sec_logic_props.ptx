@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-prop-logic">
+  <title>Propositional Logic</title>
   <introduction>
     <!-- intentionally left blank -->
   </introduction>
-  <title>Propositional Logic</title>
 
   <!-- <introduction> -->
   <!--   <statement> -->
@@ -17,9 +17,12 @@
     <title>The Basics</title>
 
     <definition>
-      <p>
-        A <term>logical proposition</term> or <term>logical statement</term> is a sentence which is either true or false, but not both.
-      </p>
+      <title>Logical Propositions</title>
+      <statement>
+        <p>
+          A <term>logical proposition</term> or <term>logical statement</term> is a sentence which is either true or false, but not both.
+        </p>
+      </statement>
     </definition>
 
     <example>
@@ -38,9 +41,12 @@
     </example>
 
     <definition>
-      <p>
-        Let <m>p</m> be a logical proposition. The <term>negation</term> of <m>p</m>, denoted by <m>\neg p</m> has the opposite truth value of <m>p</m>.
-      </p>
+      <title>Logical Negation</title>
+      <statement>
+        <p>
+          Let <m>p</m> be a logical proposition. The <term>negation</term> of <m>p</m>, denoted by <m>\neg p</m> has the opposite truth value of <m>p</m>.
+        </p>
+      </statement>
     </definition>
 
     <example>
@@ -64,26 +70,32 @@
     </example>
 
     <definition>
-      <p>
-        Let <m>p</m> and <m>q</m> be propositions. The <term>conjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \wedge q</m>, is the proposition <q> <m>p</m> and <m>q</m> </q>.
-      </p>
-      <p>
-        The <term> disjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \vee q</m>, is the proposition <q> <m>p</m> or <m>q</m>  (or both)</q>.
-      </p>
+      <title>Logical Operations</title>
+      <statement>
+        <p>
+          Let <m>p</m> and <m>q</m> be propositions. The <term>conjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \wedge q</m>, is the proposition <q> <m>p</m> and <m>q</m> </q>.
+        </p>
+        <p>
+          The <term> disjunction</term> of <m>p</m> and <m>q</m>, denoted <m>p \vee q</m>, is the proposition <q> <m>p</m> or <m>q</m>  (or both)</q>.
+        </p>
 
-      <p>
-        The logical disjunction is an <q>inclusive or</q>. On the other hand, we define the <q>exclusive or</q> of <m>p</m> and <m>q</m> to be the proposition <q><m>p</m> or <m>q</m> but not both</q>. We won't be using it in Discrete 1, so we won't give it a special symbol.
-      </p>
+        <p>
+          The logical disjunction is an <q>inclusive or</q>. On the other hand, we define the <q>exclusive or</q> of <m>p</m> and <m>q</m> to be the proposition <q><m>p</m> or <m>q</m> but not both</q>. We won't be using it in Discrete 1, so we won't give it a special symbol.
+        </p>
+      </statement>
     </definition>
 
 
     <definition>
-      <p>
-        Let <m>p</m> and <m>q</m> be propositions. The <term>conditional statement</term> is the compound proposition <q>if <m>p</m> then <m>q</m></q>. The conditional is denoted by <m>p \to q</m>.
-      </p>
-      <p>
-        We call <m>p</m> the <term>hypothesis</term> or antecedent or premise, and <m>q</m> is the <term>conclusion</term> or consequence.
-      </p>
+      <title>Conditional Statements</title>
+      <statement>
+        <p>
+          Let <m>p</m> and <m>q</m> be propositions. The <term>conditional statement</term> is the compound proposition <q>if <m>p</m> then <m>q</m></q>. The conditional is denoted by <m>p \to q</m>.
+        </p>
+        <p>
+          We call <m>p</m> the <term>hypothesis</term> or antecedent or premise, and <m>q</m> is the <term>conclusion</term> or consequence.
+        </p>
+      </statement>
     </definition>
 
     <example>
@@ -123,217 +135,220 @@
     </note>
 
     <definition>
-      <p>
-        Let <m>p</m> and <m>q</m> be propositions. For the conditional <m>p \to q</m>, we define:
-        <ul>
-          <li> The <term>converse</term> is <m>q \to p</m></li>
-          <li> The <term>inverse</term> is <m>\neg p \to \neg q</m></li>
-          <li> The <term>contrapositive</term> is <m>\neg q \to \neg p</m></li>
-        </ul>
-      </p>
+      <title>Converse/Inverse/Contrapositive</title>
+      <statement>
+        <p>
+          Let <m>p</m> and <m>q</m> be propositions. For the conditional <m>p \to q</m>, we define:
+          <ul>
+            <li> The <term>converse</term> is <m>q \to p</m></li>
+            <li> The <term>inverse</term> is <m>\neg p \to \neg q</m></li>
+            <li> The <term>contrapositive</term> is <m>\neg q \to \neg p</m></li>
+          </ul>
+        </p>
+      </statement>
     </definition>
 
     <definition>
-      <p>
-        Let <m>p</m> and <m>q</m> be propositions. The <term>biconditional</term> of <m>p</m> and <m>q</m>, is the  statement <q><m>p</m> if and only if <m>q</m></q>, denoted <m>p \leftrightarrow q</m>.
-      </p>
-      <p>
-        Other ways to phrase an <q>if and only if</q> statement:
-        <ul>
-          <li> <m>p</m> iff <m>q</m>.</li>
-          <li> <m>p</m> is necessary and sufficient for <m>q</m>.</li>
-          <li> If <m>p</m> then <m>q</m> and conversely.</li>
-        </ul>
-      </p>
+      <title>Biconditional Statements</title>
+      <statement>
+        <p>
+          Let <m>p</m> and <m>q</m> be propositions. The <term>biconditional</term> of <m>p</m> and <m>q</m>, is the  statement <q><m>p</m> if and only if <m>q</m></q>, denoted <m>p \leftrightarrow q</m>.
+        </p>
+        <p>
+          Other ways to phrase an <q>if and only if</q> statement:
+          <ul>
+            <li> <m>p</m> iff <m>q</m>.</li>
+            <li> <m>p</m> is necessary and sufficient for <m>q</m>.</li>
+            <li> If <m>p</m> then <m>q</m> and conversely.</li>
+          </ul>
+        </p>
+      </statement>
     </definition>
 
     <p>
-      Just as with arithmetic operations (<m>+, -, \times, \div</m>) on numbers, we need to define an order of operations so that compound propositions can be understood without grouping symbols.
-      <sidebyside>
-
-        <tabular>
-          <col right="minor"/>
-          <col right="medium"/>
-          <row bottom="minor">
-            <cell>Operator </cell>
-            <cell>Precedence</cell>
-          </row>
-          <row>
-            <cell> <m>\neg</m> </cell>
-            <cell> highest </cell>
-          </row>
-          <row>
-            <cell> <m> \wedge, \vee </m> </cell>
-            <cell> next, from left to right </cell>
-          </row>
-          <row>
-            <cell> <m> \to, \leftrightarrow </m></cell>
-            <cell> lowest, left to right </cell>
-          </row>
-        </tabular>
-        <p>
-          <line/>
-          For example:
-          <me>
-            \neg p \vee q \wedge r \to p \wedge q \\
-            \equiv \left(\left(\left(\neg p\right)\vee q\right) \wedge r\right) \to \left(p \wedge q \right)
-          </me>
-        </p>
-      </sidebyside>
-
-      Though for clarity, we will generally write grouping symbols.
+      Just as with arithmetic operations (<m>+, -, \times, \div</m>) on numbers, we need to define an order of operations so that compound propositions can be understood without grouping symbols. Though for clarity, we will generally write grouping symbols.
     </p>
+    <sidebyside>
+      <tabular>
+        <col halign="center" />
+        <col halign="center" />
+        <row bottom="minor" header="yes">
+          <cell>Operator </cell>
+          <cell>Precedence</cell>
+        </row>
+        <row>
+          <cell> <m>\neg</m> </cell>
+          <cell> highest </cell>
+        </row>
+        <row>
+          <cell> <m> \wedge, \vee </m> </cell>
+          <cell> next, from left to right </cell>
+        </row>
+        <row>
+          <cell> <m> \to, \leftrightarrow </m></cell>
+          <cell> lowest, left to right </cell>
+        </row>
+      </tabular>
+      <p>
+        <line/>
+        For example:
+        <me>
+          \neg p \vee q \wedge r \to p \wedge q \\
+          \equiv \left(\left(\left(\neg p\right)\vee q\right) \wedge r\right) \to \left(p \wedge q \right)
+        </me>
+      </p>
+    </sidebyside>
   </subsection>
   <subsection xml:id="subsec-truthtables">
     <title>Truth Tables for Logical Connectives</title>
     <p>
       <term>Truth tables</term> allow us to uniquely determine the truth value of a compound proposition, based on the truth values of the simple statements from which it is made. Below are the truth tables for conjunction <m>\wedge</m>, disjunction <m>\lor</m>, conditional <m>\to</m>, biconditional <m>\leftrightarrow</m>, exclusive or <m>\oplus</m>, and negation <m>\neg</m>.
-      <sbsgroup>
-        <sidebyside width="20%" margins="auto">
-          <tabular halign="center">
-            <col right="minor"/>
-            <col right="medium"/>
-            <col/>
-            <row bottom="minor">
-              <cell><m>p</m></cell>
-              <cell><m>q</m></cell>
-              <cell><m>p\wedge q</m></cell>
-            </row>
-            <row>
-              <cell>T</cell>
-              <cell>T</cell>
-              <cell>T</cell>
-            </row>
-            <row>
-              <cell>T</cell>
-              <cell>F</cell>
-              <cell>F</cell>
-            </row>
-            <row>
-              <cell>F</cell>
-              <cell>T</cell>
-              <cell>F</cell>
-            </row>
-            <row>
-              <cell>F</cell>
-              <cell>F</cell>
-              <cell>F</cell>
-            </row>
-          </tabular>
-          <tabular halign="center">
-            <col right="minor"/>
-            <col right="medium"/>
-            <col/>
-            <row bottom="minor">
-              <cell><m>p</m></cell>
-              <cell><m>q</m></cell>
-              <cell><m>p\vee q</m></cell>
-            </row>
-            <row>
-              <cell>T</cell>
-              <cell>T</cell>
-              <cell>T</cell>
-            </row>
-            <row>
-              <cell>T</cell>
-              <cell>F</cell>
-              <cell>T</cell>
-            </row>
-            <row>
-              <cell>F</cell>
-              <cell>T</cell>
-              <cell>T</cell>
-            </row>
-            <row>
-              <cell>F</cell>
-              <cell>F</cell>
-              <cell>F</cell>
-            </row>
-          </tabular>
-          <tabular halign="center">
-            <col right="minor"/>
-            <col right="medium"/>
-            <col/>
-            <row bottom="minor">
-              <cell><m>p</m></cell>
-              <cell><m>q</m></cell>
-              <cell><m>p\to q</m></cell>
-            </row>
-            <row>
-              <cell>T</cell>
-              <cell>T</cell>
-              <cell>T</cell>
-            </row>
-            <row>
-              <cell>T</cell>
-              <cell>F</cell>
-              <cell>F</cell>
-            </row>
-            <row>
-              <cell>F</cell>
-              <cell>T</cell>
-              <cell>T</cell>
-            </row>
-            <row>
-              <cell>F</cell>
-              <cell>F</cell>
-              <cell>T</cell>
-            </row>
-          </tabular>
-        </sidebyside>
-        <sidebyside>
-          <tabular halign="center">
-            <col right="minor"/>
-            <col right="medium"/>
-            <col/>
-            <row bottom="minor">
-              <cell><m>p</m></cell>
-              <cell><m>q</m></cell>
-              <cell><m>p\leftrightarrow q</m></cell>
-            </row>
-            <row>
-              <cell>T</cell>
-              <cell>T</cell>
-              <cell>T</cell>
-            </row>
-            <row>
-              <cell>T</cell>
-              <cell>F</cell>
-              <cell>F</cell>
-            </row>
-            <row>
-              <cell>F</cell>
-              <cell>T</cell>
-              <cell>F</cell>
-            </row>
-            <row>
-              <cell>F</cell>
-              <cell>F</cell>
-              <cell>T</cell>
-            </row>
-          </tabular>
-          <tabular halign="center">
-            <col right="medium"/>
-            <col/>
-            <row bottom="minor">
-              <cell><m>p</m></cell>
-              <cell><m>\neg p</m></cell>
-            </row>
-            <row>
-              <cell>T</cell>
-              <cell>F</cell>
-            </row>
-            <row>
-              <cell>F</cell>
-              <cell>T</cell>
-            </row>
-            <row>
-              <cell/>
-            </row>
-          </tabular>
-        </sidebyside>
-      </sbsgroup>
     </p>
+    <sbsgroup>
+      <sidebyside width="20%" margins="auto">
+        <tabular halign="center">
+          <col />
+          <col />
+          <col/>
+          <row bottom="minor" header="yes">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>p\wedge q</m></cell>
+          </row>
+          <row>
+            <cell>T</cell>
+            <cell>T</cell>
+            <cell>T</cell>
+          </row>
+          <row>
+            <cell>T</cell>
+            <cell>F</cell>
+            <cell>F</cell>
+          </row>
+          <row>
+            <cell>F</cell>
+            <cell>T</cell>
+            <cell>F</cell>
+          </row>
+          <row>
+            <cell>F</cell>
+            <cell>F</cell>
+            <cell>F</cell>
+          </row>
+        </tabular>
+        <tabular halign="center">
+          <col />
+          <col />
+          <col/>
+          <row bottom="minor" header="yes">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>p\vee q</m></cell>
+          </row>
+          <row>
+            <cell>T</cell>
+            <cell>T</cell>
+            <cell>T</cell>
+          </row>
+          <row>
+            <cell>T</cell>
+            <cell>F</cell>
+            <cell>T</cell>
+          </row>
+          <row>
+            <cell>F</cell>
+            <cell>T</cell>
+            <cell>T</cell>
+          </row>
+          <row>
+            <cell>F</cell>
+            <cell>F</cell>
+            <cell>F</cell>
+          </row>
+        </tabular>
+        <tabular halign="center">
+          <col />
+          <col />
+          <col/>
+          <row bottom="minor" header="yes">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>p\to q</m></cell>
+          </row>
+          <row>
+            <cell>T</cell>
+            <cell>T</cell>
+            <cell>T</cell>
+          </row>
+          <row>
+            <cell>T</cell>
+            <cell>F</cell>
+            <cell>F</cell>
+          </row>
+          <row>
+            <cell>F</cell>
+            <cell>T</cell>
+            <cell>T</cell>
+          </row>
+          <row>
+            <cell>F</cell>
+            <cell>F</cell>
+            <cell>T</cell>
+          </row>
+        </tabular>
+      </sidebyside>
+      <sidebyside>
+        <tabular halign="center">
+          <col />
+          <col />
+          <col/>
+          <row bottom="minor" header="yes">
+            <cell><m>p</m></cell>
+            <cell><m>q</m></cell>
+            <cell><m>p\leftrightarrow q</m></cell>
+          </row>
+          <row>
+            <cell>T</cell>
+            <cell>T</cell>
+            <cell>T</cell>
+          </row>
+          <row>
+            <cell>T</cell>
+            <cell>F</cell>
+            <cell>F</cell>
+          </row>
+          <row>
+            <cell>F</cell>
+            <cell>T</cell>
+            <cell>F</cell>
+          </row>
+          <row>
+            <cell>F</cell>
+            <cell>F</cell>
+            <cell>T</cell>
+          </row>
+        </tabular>
+        <tabular halign="center">
+          <col />
+          <col/>
+          <row bottom="minor" header="yes">
+            <cell><m>p</m></cell>
+            <cell><m>\neg p</m></cell>
+          </row>
+          <row>
+            <cell>T</cell>
+            <cell>F</cell>
+          </row>
+          <row>
+            <cell>F</cell>
+            <cell>T</cell>
+          </row>
+          <row>
+            <cell/>
+          </row>
+        </tabular>
+      </sidebyside>
+    </sbsgroup>
 
     <example>
       <statement>
@@ -374,9 +389,8 @@
 
   </subsection>
 
-  <assemblage>
+  <subsection>
     <title>Computer Corner</title>
-    <caption>Computer Corner</caption>
     <p>
       The objects that are logical propositions in mathematics are <c>bool</c> Boolean datatypes in computer science.
 
@@ -401,7 +415,7 @@
       </cd>
       corresponds to a logical statement of the form <m>(p \land q \land \neg r) \to s</m>
     </p>
-  </assemblage>
+  </subsection>
 
   <exercises>
     <exercise>
@@ -411,68 +425,66 @@
         </p>
       </statement>
       <solution>
-        <p>
-          <tabular halign="center">
-            <col right="minor"/>
-            <col right="medium"/>
-            <col/>
-            <row bottom="minor">
-              <cell>
-                <m>p</m>
-              </cell>
-              <cell>
-                <m>q</m>
-              </cell>
-              <cell>
-                <m>((p \to q) \land \neg p) \to \neg q</m>
-              </cell>
-            </row>
-            <row>
-              <cell>
-                T
-              </cell>
-              <cell>
-                T
-              </cell>
-              <cell>
-                T
-              </cell>
-            </row>
-            <row>
-              <cell>
-                T
-              </cell>
-              <cell>
-                F
-              </cell>
-              <cell>
-                T
-              </cell>
-            </row>
-            <row>
-              <cell>
-                F
-              </cell>
-              <cell>
-                T
-              </cell>
-              <cell>
-                F
-              </cell>
-            </row>
-            <row>
-              <cell>
-                F
-              </cell>
-              <cell>
-                F
-              </cell>
-              <cell>
-                T
-              </cell>
-            </row>
-          </tabular>
-        </p>
+        <tabular halign="center">
+          <col right="minor"/>
+          <col right="medium"/>
+          <col/>
+          <row bottom="minor">
+            <cell>
+              <m>p</m>
+            </cell>
+            <cell>
+              <m>q</m>
+            </cell>
+            <cell>
+              <m>((p \to q) \land \neg p) \to \neg q</m>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              T
+            </cell>
+            <cell>
+              T
+            </cell>
+            <cell>
+              T
+            </cell>
+          </row>
+          <row>
+            <cell>
+              T
+            </cell>
+            <cell>
+              F
+            </cell>
+            <cell>
+              T
+            </cell>
+          </row>
+          <row>
+            <cell>
+              F
+            </cell>
+            <cell>
+              T
+            </cell>
+            <cell>
+              F
+            </cell>
+          </row>
+          <row>
+            <cell>
+              F
+            </cell>
+            <cell>
+              F
+            </cell>
+            <cell>
+              T
+            </cell>
+          </row>
+        </tabular>
       </solution>
 
     </exercise>
