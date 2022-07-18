@@ -22,254 +22,247 @@
   <!--   </statement> -->
   <!-- </theorem> -->
 
-  <definition>
-    <statement>
-      <p>
-        To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the <term>principal of math induction</term>. The process has two core steps:
-        <ol>
-          <li>Basis step: Prove that <m>P(0)</m> is true.</li>
-          <li>Inductive step: Assume that <m>P(k)</m> is true for some value of <m>k \ge 0</m> and show that <m>P(k+1)</m> is true. </li>
-        </ol>
-      </p>
-    </statement>
-    <answer>
-      <video youtube="D-Ol2N5Tno0"/>
-    </answer>
-
-  </definition>
-
-  <note>
-    <p>
-      You can think of math induction like an infinite ladder. First, you put your foot on the bottom rung. If you're able to go from the <m>k</m>-th rung to the <m>k+1</m>-st rung, you'll be able to climb forever.
-    </p>
-  </note>
-
-  
-  <example>
-    <statement>
-      <p>
-        The model of induction will always follow the following structure:
-      </p>
-      <proof>
+  <subsection xml:id="math-induction">
+    <definition>
+      <title>Mathematical Induction</title>
+      <statement>
         <p>
-          Proof by math induction.
+          To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the <term>principal of math induction</term>. The process has two core steps:
+          <ol>
+            <li>Basis step: Prove that <m>P(0)</m> is true.</li>
+            <li>Inductive step: Assume that <m>P(k)</m> is true for some value of <m>k \ge 0</m> and show that <m>P(k+1)</m> is true. </li>
+          </ol>
+        </p>
+      </statement>
+      <answer>
+        <video youtube="D-Ol2N5Tno0"/>
+      </answer>
+    </definition>
+
+    <note>
+      <p>
+        You can think of math induction like an infinite ladder. First, you put your foot on the bottom rung. If you're able to go from the <m>k</m>-th rung to the <m>k+1</m>-st rung, you'll be able to climb forever.
+      </p>
+    </note>
+
+    <example>
+      <statement>
+        <p>
+          The model of induction will always follow the following structure:
+        </p>
+        <proof>
+          <p>
+            Proof by math induction.
+            <ol>
+              <li>
+                Basis step. [here you prove <m>P(0)</m> is true]
+              </li>
+              <li>
+                <p>
+                  Inductive step. Assume <m>P(k)</m> is true for some <m>k\ge 0</m> [explicitly say what this statement is. This is called the <term>inductive hypothesis</term>]. We will show <m>P(k+1)</m> is true.
+                </p>
+                <p>
+                  [here you actually prove <m>P(k+1)</m> is true. You should use the inductive hypothesis. If you didn't, you've made an error somewhere]
+                </p>
+              </li>
+            </ol>
+          </p>
+        </proof>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Prove that <m>\ds 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}</m>.
+        </p>
+      </statement>
+      <answer>
+        <video youtube="_LI6XX-l3Es"/>
+      </answer>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Prove that <m>a + ar + ar^2 + ar^3 + \dots + ar^n = \frac{ar^{n+1}-a}{r-1}</m> if <m>r \ne 1</m>.
+        </p>
+      </statement>
+      <answer>
+        <video youtube="n1IX0Dye7x0"/>
+      </answer>
+    </example>
+
+    <example>
+      <statement>
+        <p>
           <ol>
             <li>
-              Basis step. [here you prove <m>P(0)</m> is true]
+              Find a formula for <m> \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} + \dots + \frac{1}{n(n+1)}</m> for <m>n\ge 1</m> by examining small values of <m>n</m>.
             </li>
             <li>
-              <p>
-                Inductive step. Assume <m>P(k)</m> is true for some <m>k\ge 0</m> [explicitly say what this statement is. This is called the <term>inductive hypothesis</term>]. We will show <m>P(k+1)</m> is true.
-              </p>
-              <p>
-                [here you actually prove <m>P(k+1)</m> is true. You should use the inductive hypothesis. If you didn't, you've made an error somewhere]
-              </p>
+              Prove the conjecture you just made.
             </li>
           </ol>
         </p>
-      </proof>
-    </statement>
-  </example>
+      </statement>
+      <answer>
+        <video youtube="bJ-56RhKkfc"/>
+      </answer>
+    </example>
 
-  <example>
-    <statement>
+    <example>
+      <statement>
+        <p>
+          Prove that <m>2^n \gt n^2</m> for <m>n > 4</m>
+        </p>
+      </statement>
+      <answer>
+        <video youtube="DLiv7yoaEUE"/>
+      </answer>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          What is wrong with the following <q>proof</q> that all horses are the same color?
+        </p>
+        <p>
+          Proof by induction:
+          <ul>
+            <li>
+              <p> Base step: the statement <m>P(1)</m> is the statement <q>one horse is the same color as itself</q>. This is clearly true.</p>
+            </li>
+            <li>
+              <p> Induction step: Assume that <m>P(k)</m> is true for some integer <m>k</m>. That is, any group of <m>k</m> horses are all the same color.</p>
+              <p> Consider a group of <m>k+1</m> horses. Let's line them up. If we look at first <m>k</m> horses, our induction hypothesis tells us they are the same color. Similarly, if we look at the last <m>k</m> horses, they are also the same color. This shows that all <m>k+1</m> horses are the same color.</p>
+            </li>
+          </ul>
+          Thus, by math induction, all horses are the same color.
+        </p>
+      </statement>
+    </example>
+
+  </subsection>
+
+  <subsection xml:id="strong-induction">
+    <definition>
+      <title>Strong Induction</title>
+      <statement>
+        <p>
+          The principal of <term>strong math induction</term> is like the so-called weak induction, except instead of proving <m>P(k) \to P(k+1)</m>, we assume that <m>P(m)</m> is true for all values of <m>m</m> such that <m>0 \le m \le k</m>, and we show that the next statement, <m>P(k+1)</m>, is true.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="example-postage">
+      <statement>
+        <p>
+          Let <m>P(n)</m> be the statement that <q>postage of <m>n</m> cents can be formed using just 4 cent and 7 cent stamps</q>. Prove <m>P(n)</m> is true for <m>n\ge 18</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Here's one way to approach the problem. Begin by showing we can do the basis, see if we can find a pattern, then make a formal proof:
+          <ul>
+            <li> <m>18 = 7\cdot2 + 4\cdot1</m>  </li>
+            <li> <m>19 = 7\cdot1 + 4\cdot3</m>  </li>
+            <li> <m>20 = 7\cdot0 + 4\cdot5</m>  </li>
+            <li> <m>21 = 7\cdot3 + 4\cdot0</m>  </li>
+            <li> <m>22 = 7\cdot2 + 4\cdot2</m>  </li>
+            <li> <m>23 = 7\cdot1 + 4\cdot4</m>  </li>
+            <li> <m>24 = 7\cdot0 + 4\cdot6</m>  </li>
+            <li> <m>25 = 7\cdot3 + 4\cdot1</m>  </li>
+            <li> <m>26 = 7\cdot2 + 4\cdot3</m>  </li>
+            <li> <m>27 = 7\cdot1 + 4\cdot5</m>  </li>
+            <li> <m>28 = 7\cdot0 + 4\cdot7</m>  </li>
+          </ul>
+          Do you notice a pattern? Take a couple moments to think about it, then let's do the proof.
+        </p>
+        <proof>
+          <p>
+            Basis step: We can form 18 cent postage using two 7 and one 4 cent stamp.
+          </p>
+          <p>
+            Inductive step:
+            Assume that one can form postage for all values from 18 cents up to <m>k</m> cents. Now we're asked to form <m>k+1</m> cents.
+
+            we know that we can form <m>k</m> cents, so, without loss of generality, let's assume that it takes <m>s</m> 7 cent stamps and <m>t</m> 4 cent stamps. That is:
+            <me>
+              k = 7s + 4t
+            </me>
+
+            Now, if <m>s \ge 1</m>, then we can do the following, adding one to both sides in two different ways:
+            <me> k+1 = 7s + 4t - 7 + 8</me>
+            Combining like terms we have
+            <me> k+1 = 7(s-1) + 4(t+2)</me>
+
+            If, on the other hand, <m>s=0</m>, then we need to add one in a different way:
+            <me> k+1 = 7s + 4t + 21 - 20 </me>
+            or, combining like terms:
+            <me> k+1 = 7(s+3) + 4(t-5)</me>
+
+            Thus, by inductive hypothesis, if we can form <m>k</m> cents, I can form <m>k+1</m> cents postage.
+          </p>
+          <p>
+            Therefore, by mathematical induction, every postage cost greater than or equal to 18 can be formed using 4 and 7 cent stamps.
+          </p>
+        </proof>
+      </solution>
+      <answer>
+        <p>
+          Here's a different approach to the problem. If we can construct <m>18, 19, 20, \dots k</m> postage using the four and seven cent stamps, then for the <m>k+1</m> cent postage, We'll just pretend you asked for four cents less! $k+1 -4 = k-3$. Were're guaranteed to be able to make the postage by the induction hypothesis. Imagine putting those stamps on the package. Then all we need is to glue on one four cent stamp and we're good to go!
+          <video youtube="73v1BI2omjs"/>
+        </p>
+      </answer>
+    </example>
+
+
+    <example>
+      <statement>
+        <p>
+          Prove that every positive integer has a binary expansion, that is, it is either a power of two or it is a sum of distinct powers of two.
+        </p>
+      </statement>
+      <answer>
+        <video youtube="PvnCjyp9NHc"/>
+      </answer>
+    </example>
+
+
+    <note>
+      <title>The difference between 'weak' and 'strong' induction</title>
       <p>
-        Prove that <m>\ds 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}</m>.
-      </p>
-    </statement>
-    <answer>
-      <video youtube="_LI6XX-l3Es"/>
-    </answer>
-
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        Prove that <m>a + ar + ar^2 + ar^3 + \dots + ar^n = \frac{ar^{n+1}-a}{r-1}</m> if <m>r \ne 1</m>.
-      </p>
-    </statement>
-    <answer>
-      <video youtube="n1IX0Dye7x0"/>
-    </answer>
-
-  </example>
-
-  <example>
-    <statement>
-      <p>
+        'Regular'/'weak' induction follows the pattern:
         <ol>
-          <li>
-            Find a formula for <m> \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} + \dots + \frac{1}{n(n+1)}</m> for <m>n\ge 1</m> by examining small values of <m>n</m>.
-          </li>
-          <li>
-            Prove the conjecture you just made.
-          </li>
+          <li>Basis step.</li>
+          <li>Inductive hypothesis is <m>P(k)</m> is true</li>
+          <li>We show that <m>P(k)</m> implies that <m>P(k+1)</m> is true</li>
         </ol>
-      </p>
-    </statement>
-    <answer>
-      <video youtube="bJ-56RhKkfc"/>
-    </answer>
-
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        Prove that <m>2^n \gt n^2</m> for <m>n > 4</m>
-      </p>
-    </statement>
-    <answer>
-      <video youtube="DLiv7yoaEUE"/>
-    </answer>
-
-  </example>
-
-
-
-
-    
-
-  <example>
-    <statement>
-      <p>
-        What is wrong with the following <q>proof</q> that all horses are the same color?
+        That is, we use this induction process for claims where it's convenient to show that the pattern follows sequentially in a convenient way. Straight-forward examples are the addition formulas;
       </p>
       <p>
-        Proof by induction:
-        <ul>
+        'Strong' induction follows the pattern:
+        <ol>
+          <li>Basis step(s).   [may need more than one basis, just like some recurrence relations]</li>
           <li>
-            <p> Base step: the statement <m>P(1)</m> is the statement <q>one horse is the same color as itself</q>. This is clearly true.</p>
-          </li>
-          <li>
-            <p> Induction step: Assume that <m>P(k)</m> is true for some integer <m>k</m>. That is, any group of <m>k</m> horses are all the same color.</p>
-            <p> Consider a group of <m>k+1</m> horses. Let's line them up. If we look at first <m>k</m> horses, our induction hypothesis tells us they are the same color. Similarly, if we look at the last <m>k</m> horses, they are also the same color. This shows that all <m>k+1</m> horses are the same color.</p>
-          </li>
-        </ul>
-        Thus, by math induction, all horses are the same color.
+          Inductive hypothesis is that <em>all</em> of <m>P(1), P(2), P(3), \dots P(k)</m> are true.   [this is the 'strong' part; it's a larger assumption]</li>
+          <li>We show that the hypothesis implies the next element in the sequence, <m>P(k+1)</m>, is true  [like before]</li>
+        </ol>
+        the difference between this and the previous induction process is that it's sometimes <em>not convenient</em> to prove that <m>P(k)</m> directly connects to <m>P(k+1)</m>.  Instead, we still need to show that the <em>next</em> element in the sequence <m>P(k+1)</m> is true by appealing to a previous element in the sequence.
       </p>
-    </statement>
-  </example>
-
-
-
-  <definition>
-    <statement>
       <p>
-        The principal of <term>strong math induction</term> is like the so-called weak induction, except instead of proving <m>P(k) \to P(k+1)</m>, we assume that <m>P(m)</m> is true for all values of <m>m</m> such that <m>0 \le m \le k</m>, and we show that the next statement, <m>P(k+1)</m>, is true.
+        Relevant examples are those like the binary representation of a number - that <m>k</m> has a binary representation doesn't immediately tell us <m>k+1</m> does, but if we can cut the number in half and use the binary representation of that number to scale-up in order to build a binary representation of <m>k+1</m>.
       </p>
-    </statement>
-  </definition>
 
-  <example xml:id="example-postage">
-    <statement>
       <p>
-        Let <m>P(n)</m> be the statement that <q>postage of <m>n</m> cents can be formed using just 4 cent and 7 cent stamps</q>. Prove <m>P(n)</m> is true for <m>n\ge 18</m>.
+        <b>Same thing</b> We separate 'weak' and 'strong' induction, but they're really all the same thing. It's just that when it's convenient to show <m>P(k) \to P(k+1)</m>, we write fewer words for our inductive hypothesis. Because if we don't need to use the fact that <m>P(m)</m> is true for all <m>1 \le m \le k</m>, then we just omit that. Mathematicians are lazy.
       </p>
-    </statement>
-    <solution>
-      <p>
-        Here's one way to approach the problem. Begin by showing we can do the basis, see if we can find a pattern, then make a formal proof:
-        <ul>
-          <li> <m>18 = 7\cdot2 + 4\cdot1</m>  </li>
-          <li> <m>19 = 7\cdot1 + 4\cdot3</m>  </li>
-          <li> <m>20 = 7\cdot0 + 4\cdot5</m>  </li>
-          <li> <m>21 = 7\cdot3 + 4\cdot0</m>  </li>
-          <li> <m>22 = 7\cdot2 + 4\cdot2</m>  </li>
-          <li> <m>23 = 7\cdot1 + 4\cdot4</m>  </li>
-          <li> <m>24 = 7\cdot0 + 4\cdot6</m>  </li>
-          <li> <m>25 = 7\cdot3 + 4\cdot1</m>  </li>
-          <li> <m>26 = 7\cdot2 + 4\cdot3</m>  </li>
-          <li> <m>27 = 7\cdot1 + 4\cdot5</m>  </li>
-          <li> <m>28 = 7\cdot0 + 4\cdot7</m>  </li>
-        </ul>
-        Do you notice a pattern? Take a couple moments to think about it, then let's do the proof.
-      </p>
-      <proof>
-        <p>
-          Basis step: We can form 18 cent postage using two 7 and one 4 cent stamp.
-        </p>
-        <p>
-          Inductive step:
-          Assume that one can form postage for all values from 18 cents up to <m>k</m> cents. Now we're asked to form <m>k+1</m> cents.
+    </note>
+  </subsection>
 
-          we know that we can form <m>k</m> cents, so, without loss of generality, let's assume that it takes <m>s</m> 7 cent stamps and <m>t</m> 4 cent stamps. That is:
-          <me>
-            k = 7s + 4t
-          </me>
-
-          Now, if <m>s \ge 1</m>, then we can do the following, adding one to both sides in two different ways:
-          <me> k+1 = 7s + 4t - 7 + 8</me>
-          Combining like terms we have
-          <me> k+1 = 7(s-1) + 4(t+2)</me>
-
-          If, on the other hand, <m>s=0</m>, then we need to add one in a different way:
-          <me> k+1 = 7s + 4t + 21 - 20 </me>
-          or, combining like terms:
-          <me> k+1 = 7(s+3) + 4(t-5)</me>
-
-          Thus, by inductive hypothesis, if we can form <m>k</m> cents, I can form <m>k+1</m> cents postage.
-        </p>
-        <p>
-          Therefore, by mathematical induction, every postage cost greater than or equal to 18 can be formed using 4 and 7 cent stamps.
-        </p>
-      </proof>
-    </solution>
-    <answer>
-      <p>
-        Here's a different approach to the problem. If we can construct <m>18, 19, 20, \dots k</m> postage using the four and seven cent stamps, then for the <m>k+1</m> cent postage, We'll just pretend you asked for four cents less! $k+1 -4 = k-3$. Were're guaranteed to be able to make the postage by the induction hypothesis. Imagine putting those stamps on the package. Then all we need is to glue on one four cent stamp and we're good to go!
-        <video youtube="73v1BI2omjs"/>
-      </p>
-    </answer>
-  </example>
-
-
-  <example>
-    <statement>
-      <p>
-        Prove that every positive integer has a binary expansion, that is, it is either a power of two or it is a sum of distinct powers of two.
-      </p>
-    </statement>
-    <answer>
-      <video youtube="PvnCjyp9NHc"/>
-    </answer>
-
-  </example>
-
-
-  <note>
-    <title>The difference between 'weak' and 'strong' induction</title>
-    <p>
-      'Regular'/'weak' induction follows the pattern:
-      <ol>
-        <li>Basis step.</li>
-        <li>Inductive hypothesis is <m>P(k)</m> is true</li>
-        <li>We show that <m>P(k)</m> implies that <m>P(k+1)</m> is true</li>
-      </ol>
-      That is, we use this induction process for claims where it's convenient to show that the pattern follows sequentially in a convenient way. Straight-forward examples are the addition formulas;
-    </p>
-    <p>
-      'Strong' induction follows the pattern:
-      <ol>
-        <li>Basis step(s).   [may need more than one basis, just like some recurrence relations]</li>
-        Inductive hypothesis is that <em>all</em> of <m>P(1), P(2), P(3), \dots P(k)</m> are true.   [this is the 'strong' part; it's a larger assumption]
-        <li>We show that the hypothesis implies the next element in the sequence, <m>P(k+1)</m>, is true  [like before]</li>
-      </ol>
-      the difference between this and the previous induction process is that it's sometimes <em>not convenient</em> to prove that <m>P(k)</m> directly connects to <m>P(k+1)</m>.  Instead, we still need to show that the <em>next</em> element in the sequence <m>P(k+1)</m> is true by appealing to a previous element in the seqence.
-    </p>
-    <p>
-      Relevant examples are those like the binary representation of a number - that <m>k</m> has a binary representation doesn't immediately tell us <m>k+1</m> does, but if we can cut the number in half and use the binary representation of that number to scale-up in order to build a binary representation of <m>k+1</m>.
-    </p>
-
-    <p>
-      <b>Same thing</b> We separate 'weak' and 'strong' induction, but they're really all the same thing. It's just that when it's convenient to show <m>P(k) \to P(k+1)</m>, we write fewer words for our inductive hypothesis. Because if we don't need to use the fact that <m>P(m)</m> is true for all <m>1 \le m \le k</m>, then we just omit that. Mathematicians are lazy.
-    </p>
-  </note>
-
-  <assemblage>
+  <subsection>
     <title>Computer Corner</title>
-    <caption>Computer Corner</caption>
     <p>
       You'll be using mathematical induction when you're designing algorithms. Let's take the example of sorting a dataset. To prove that an algorithm is correct, you need:
       <ol>
@@ -281,39 +274,31 @@
     <p>
       For example, we proved mathematically in <xref ref="example-postage"/> that any postage over 18 cents can be made with 4 and 7 cent stamps.
       The proof of that gives rise to an algorithm that we know must be correct:
-      <sage language="python">
-        <input>
-# input: n cents postage
-# output: A string telling you what to pay
-def payWithFourAndSevenCents(n):
-    x = 18
-    s = 2
-    t = 1  #base case with:  18 = 7s + 4t
-    while x &lt; n:
-        x +=1 #get get the "x+1" case, we need to either:
-        if s >= 1:
-            s-=1  # subtract 7
-            t+=2  # add two 4s, since -7 + 2*4 = 8, a net gain of 1
-        else:
-            s+=3  # add 7*3 = 21
-            t-=5  # remove 20: 4*5 = 20; net gain of 1 = 21 - 20
-    print("To pay %d cents, you need %d four cent and %d seven cent stamps" % (n,s,t))
-
-payWithFourAndSevenCents(25)
-        </input>
-      </sage>
     </p>
-  </assemblage>
+    <sage language="python">
+        <input>
+          # input: n cents postage
+          # output: A string telling you what to pay
+          def payWithFourAndSevenCents(n):
+              x = 18
+              s = 2
+              t = 1  #base case with:  18 = 7s + 4t
+              while x &lt; n:
+                  x +=1 #get get the "x+1" case, we need to either:
+                  if s >= 1:
+                       s-=1  # subtract 7
+                       t+=2  # add two 4s, since -7 + 2*4 = 8, a net gain of 1
+                  else:
+                       s+=3  # add 7*3 = 21
+                       t-=5  # remove 20: 4*5 = 20; net gain of 1 = 21 - 20
+              print("To pay %d cents, you need %d four cent and %d seven cent stamps" % (n,s,t))
+
+          payWithFourAndSevenCents(25)
+        </input>
+    </sage>
+  </subsection>
 
   <exercises>
-
-    <note>
-      <statement>
-        <!-- TODO: get rid of n\in \N for all examples below //-->
-        <p> Recall, when we write <m>n \in \N</m>, we mean <q>n is an integer with <m>n \ge 0</m></q></p>
-      </statement>
-
-    </note>
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
@@ -403,10 +388,7 @@ payWithFourAndSevenCents(25)
 
 
 
-
-
-
-    <!-- the following is adapated from from https://github.com/oscarlevin/discrete-book -->
+    <!-- the following is adapted from from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
         <p>
@@ -418,28 +400,26 @@ payWithFourAndSevenCents(25)
       </statement>
       <solution>
         <proof>
-          <statement>
-            <p>
-              Let <m>P(n)</m> be the statement <q><m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m></q>. For the base case, we show that <m>P(1)</m> is true. That is:
-              <me> P(1) := 1^2 = \frac{1(1+1)(2\cdot1+1)}{6} </me>
-              which is true.
-            </p>
-            <p>
-              For the inductive step, assume that <m>P(k)</m> is true for some integer <m>k \ge 1</m>, that is <me>
-              1^2 +2^2 +3^2+...+k^2 = \frac{k(k+1)(2k+1)}{6}</me>
-              and consider the statement:
-              <md>
-                <mrow>1^2 + 2^2 + 3^2 + \dots + k^2 + (k+1)^2 &amp;=  \frac{k(k+1)(2k+1)}{6}  + (k+1)^2 </mrow>
-                <mrow> &amp; = \frac{k(k+1)(2k+1)}{6} \frac{6(k+1)^2}{6} </mrow>
-                <mrow> &amp; = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6} </mrow>
-                <mrow> &amp; = \frac{(k+1)[2k^2 + k + 6k+6]}{6} </mrow>
-                <mrow> &amp; = \frac{(k+1)[2k^2 + 7k+6]}{6} </mrow>
-                <mrow> &amp; = \frac{(k+1)[(2k+3)(k+2)]}{6} </mrow>
-                <mrow> &amp; = \frac{(k+1)(2(k+1)+1)((k+1) + 1)}{6} </mrow>
-                which is exactly what we needed to show. Thus, by the principle of mathematical induction, the original statement <m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m> is true for all integers <m>n\ge 1</m>.
-              </md>
-            </p>
-          </statement>
+          <p>
+            Let <m>P(n)</m> be the statement <q><m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m></q>. For the base case, we show that <m>P(1)</m> is true. That is:
+            <me> P(1) := 1^2 = \frac{1(1+1)(2\cdot1+1)}{6} </me>
+            which is true.
+          </p>
+          <p>
+            For the inductive step, assume that <m>P(k)</m> is true for some integer <m>k \ge 1</m>, that is <me>
+            1^2 +2^2 +3^2+...+k^2 = \frac{k(k+1)(2k+1)}{6}</me>
+            and consider the statement:
+            <md>
+              <mrow>1^2 + 2^2 + 3^2 + \dots + k^2 + (k+1)^2 &amp;=  \frac{k(k+1)(2k+1)}{6}  + (k+1)^2 </mrow>
+              <mrow> &amp; = \frac{k(k+1)(2k+1)}{6} \frac{6(k+1)^2}{6} </mrow>
+              <mrow> &amp; = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6} </mrow>
+              <mrow> &amp; = \frac{(k+1)[2k^2 + k + 6k+6]}{6} </mrow>
+              <mrow> &amp; = \frac{(k+1)[2k^2 + 7k+6]}{6} </mrow>
+              <mrow> &amp; = \frac{(k+1)[(2k+3)(k+2)]}{6} </mrow>
+              <mrow> &amp; = \frac{(k+1)(2(k+1)+1)((k+1) + 1)}{6} </mrow>
+            </md>
+            which is exactly what we needed to show. Thus, by the principle of mathematical induction, the original statement <m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m> is true for all integers <m>n\ge 1</m>.
+          </p>
         </proof>
       </solution>
     </exercise>
@@ -540,32 +520,30 @@ payWithFourAndSevenCents(25)
       </statement>
       <solution>
         <proof>
-          <statement>
-            <p>
-              Let <m>P(n)</m> be the statement <q><m>n^2 + n </m> is even.</q>
-            </p>
-            <p>
-              Basis step: when <m>n = 0</m> we have <m>0^0 + 0 = 0</m> which is a even.
-            </p>
-            <p>
-              Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k \ge 0</m>, that is, <m>k^2 + k</m> is even, and let's consider the following:
-              <md>
-                <mrow> (k+1)^2 + (k+1) \amp = k^2 + 2k + 1 + k + 1 </mrow>
-                <mrow> \amp = k^2 + 3k  + 2 </mrow>
-                <mrow> \amp = k^2 + k + 2k + 2 </mrow>
-              </md>
-              now <m>k^2 + k = 2l</m> for some integer <m>l</m> by inductive hypothesis, so we have:
-              <md>
-                <mrow> (k+1)^2 + (k+1) \amp =  k^2 + k + 2k + 2 </mrow>
-                <mrow> \amp =  2l + 2k + 2 </mrow>
-                <mrow> \amp =  2(l + k + 1) </mrow>
-              </md>
-              and thus <m>(k+1)^2 + (k+1)</m> is even.
-            </p>
-            <p>
-              Therefore, by math induction, <m>n^2 + n</m> is even for all natural numbers
-              </p>.
-          </statement>
+          <p>
+            Let <m>P(n)</m> be the statement <q><m>n^2 + n </m> is even.</q>
+          </p>
+          <p>
+            Basis step: when <m>n = 0</m> we have <m>0^0 + 0 = 0</m> which is a even.
+          </p>
+          <p>
+            Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k \ge 0</m>, that is, <m>k^2 + k</m> is even, and let's consider the following:
+            <md>
+              <mrow> (k+1)^2 + (k+1) \amp = k^2 + 2k + 1 + k + 1 </mrow>
+              <mrow> \amp = k^2 + 3k  + 2 </mrow>
+              <mrow> \amp = k^2 + k + 2k + 2 </mrow>
+            </md>
+            now <m>k^2 + k = 2l</m> for some integer <m>l</m> by inductive hypothesis, so we have:
+            <md>
+              <mrow> (k+1)^2 + (k+1) \amp =  k^2 + k + 2k + 2 </mrow>
+              <mrow> \amp =  2l + 2k + 2 </mrow>
+              <mrow> \amp =  2(l + k + 1) </mrow>
+            </md>
+            and thus <m>(k+1)^2 + (k+1)</m> is even.
+          </p>
+          <p>
+            Therefore, by math induction, <m>n^2 + n</m> is even for all natural numbers
+            </p>.
         </proof>
 
       </solution>
@@ -660,32 +638,30 @@ payWithFourAndSevenCents(25)
       </statement>
       <solution>
         <proof>
-          <statement>
-            <p>
-              Let <m>P(n)</m> be the statement <q><m>F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1</m>.</q>
-            </p>
-            <p>
-              Basis step: if <m>n = 0</m> then <m>F_0 = 0</m> while <m>F_{n+2} - 1 = 1 - 1 = 0</m> so the basis step is true.
-            </p>
-            <p>
-              Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k \ge 0</m>. That is, <m>F_0 + F_1 + F_2 + \cdots + F_{k} = F_{k+2} - 1</m>. Now consider
-              <md>
-                <mrow> F_0 + F_1 + F_2 + \dots F_k + F_{k+1} \amp= ( F_{k+2} - 1 ) + F_{k+1} \amp \text{by ind. hyp.}</mrow>
-                <mrow> \amp=  F_{k+2} + F_{k+1} - 1 \amp</mrow>
-                <mrow> \amp=  F_{k+3} - 1 \amp \text{by recursive def.}</mrow>
-              </md>
-              thus <m>P(k+1)</m> is true.
-            </p>
-            <p>
-              Therefore, by math induction, <m>F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1</m> for all natural numbers.
-            </p>
-          </statement>
+          <p>
+            Let <m>P(n)</m> be the statement <q><m>F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1</m>.</q>
+          </p>
+          <p>
+            Basis step: if <m>n = 0</m> then <m>F_0 = 0</m> while <m>F_{n+2} - 1 = 1 - 1 = 0</m> so the basis step is true.
+          </p>
+          <p>
+            Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k \ge 0</m>. That is, <m>F_0 + F_1 + F_2 + \cdots + F_{k} = F_{k+2} - 1</m>. Now consider
+            <md>
+              <mrow> F_0 + F_1 + F_2 + \dots F_k + F_{k+1} \amp= ( F_{k+2} - 1 ) + F_{k+1} \amp \text{by ind. hyp.}</mrow>
+              <mrow> \amp=  F_{k+2} + F_{k+1} - 1 \amp</mrow>
+              <mrow> \amp=  F_{k+3} - 1 \amp \text{by recursive def.}</mrow>
+            </md>
+            thus <m>P(k+1)</m> is true.
+          </p>
+          <p>
+            Therefore, by math induction, <m>F_0 + F_1 + F_2 + \cdots + F_{n} = F_{n+2} - 1</m> for all natural numbers.
+          </p>
         </proof>
       </solution>
 
     </exercise>
 
-    
+
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise xml:id="fibonacci-sum-of-evens">
@@ -724,29 +700,27 @@ payWithFourAndSevenCents(25)
 
       <solution>
         <proof>
-          <statement>
-            <p>
-              Let <m>P(n)</m> be the statement that <m>n</m> is either a Fibonacci number of the sum of distinct Fibonacci numbers
-            </p>
-            <p>
-              Basis step: For <m>n=0</m>, we have that <m>0 = F_0</m> is a Fibonacci number.
-            </p>
-            <p>
-              Inductive step: Assume that there is an integer <m>k \ge 0</m> such that <m>P(m)</m> is true for all <m>0\le m \le k</m>. That is, <m>m</m> is either a Fibonacci number or the sum of distinct Fibonacci numbers. Now let's consider the next number, <m>k+1</m>:
-            </p>
-            <p>
-              Case 1: If <m>k+1</m> is a Fibonacci number, then we're done.
-            </p>
-            <p>
-              Case 2: If <m>k+1</m> is not a Fibonacci number, then let <m>F_m</m> be the largest Fibonacci number less than <m>k+1</m>. Since <m>k+1 - F_m \le k</m> then we have that <m>k+1 - F_m</m> is the sum of distinct Fibonacci numbers, by inductive hypothesis.
-            </p>
-            <p>
-              Adding <m>F_m</m> to this sum gives us <m>k+1 - F_m + F_m = k+1</m> which then itself a sum of distinct Fibonacci numbers.
-            </p>
-            <p>
-              Thus, by induction, every natural number is either a Fibonacci number of the sum of distinct Fibonacci numbers.
-            </p>
-          </statement>
+          <p>
+            Let <m>P(n)</m> be the statement that <m>n</m> is either a Fibonacci number of the sum of distinct Fibonacci numbers
+          </p>
+          <p>
+            Basis step: For <m>n=0</m>, we have that <m>0 = F_0</m> is a Fibonacci number.
+          </p>
+          <p>
+            Inductive step: Assume that there is an integer <m>k \ge 0</m> such that <m>P(m)</m> is true for all <m>0\le m \le k</m>. That is, <m>m</m> is either a Fibonacci number or the sum of distinct Fibonacci numbers. Now let's consider the next number, <m>k+1</m>:
+          </p>
+          <p>
+            Case 1: If <m>k+1</m> is a Fibonacci number, then we're done.
+          </p>
+          <p>
+            Case 2: If <m>k+1</m> is not a Fibonacci number, then let <m>F_m</m> be the largest Fibonacci number less than <m>k+1</m>. Since <m>k+1 - F_m \le k</m> then we have that <m>k+1 - F_m</m> is the sum of distinct Fibonacci numbers, by inductive hypothesis.
+          </p>
+          <p>
+            Adding <m>F_m</m> to this sum gives us <m>k+1 - F_m + F_m = k+1</m> which then itself a sum of distinct Fibonacci numbers.
+          </p>
+          <p>
+            Thus, by induction, every natural number is either a Fibonacci number of the sum of distinct Fibonacci numbers.
+          </p>
         </proof>
       </solution>
 
@@ -760,27 +734,25 @@ payWithFourAndSevenCents(25)
       </statement>
       <solution>
         <proof>
-          <statement>
-            <p>
-              Let <m>P(n)</m> be the statement <q><m>F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}</m></q>
-            </p>
-            <p>
-              Basis step: If <m>n =1</m> then <m>F_1 =1</m> and <m>F_{2\cdot 1} = 1</m> so that <m>P(1)</m> is true.
-            </p>
-            <p>
-              Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k\ge 1</m>. That is, <m>F_1 + F_3 + F_5 + \dots + F_{2k -1} = F_{2k}</m> and consider:
-              <md>
-                <mrow>F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2(k+1) - 1} \amp = F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2k+1} \amp </mrow>
-                <mrow> \amp = F_{2k} + F_{2k+1} \amp \text{by ind. hyp.} </mrow>
-                <mrow> \amp = F_{2k+2} \amp \text{by rec. def.}</mrow>
-                <mrow> \amp = F_{2(k+1)}\amp</mrow>
-              </md>
-              And thus <m>P(k+1)</m> is true.
-            </p>
-            <p>
-              Therefore, by math induction, <m>F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}</m> for all integers <m>n\ge 1</m>.
-            </p>
-          </statement>
+          <p>
+            Let <m>P(n)</m> be the statement <q><m>F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}</m></q>
+          </p>
+          <p>
+            Basis step: If <m>n =1</m> then <m>F_1 =1</m> and <m>F_{2\cdot 1} = 1</m> so that <m>P(1)</m> is true.
+          </p>
+          <p>
+            Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k\ge 1</m>. That is, <m>F_1 + F_3 + F_5 + \dots + F_{2k -1} = F_{2k}</m> and consider:
+            <md>
+              <mrow>F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2(k+1) - 1} \amp = F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2k+1} \amp </mrow>
+              <mrow> \amp = F_{2k} + F_{2k+1} \amp \text{by ind. hyp.} </mrow>
+              <mrow> \amp = F_{2k+2} \amp \text{by rec. def.}</mrow>
+              <mrow> \amp = F_{2(k+1)}\amp</mrow>
+            </md>
+            And thus <m>P(k+1)</m> is true.
+          </p>
+          <p>
+            Therefore, by math induction, <m>F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}</m> for all integers <m>n\ge 1</m>.
+          </p>
         </proof>
 
       </solution>
@@ -871,4 +843,3 @@ payWithFourAndSevenCents(25)
   </subsection>
 
 </section>
-

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This file makes Emacs understand PreText schema for nXML validation //-->
+
+<locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+  <uri pattern="*.ptx" uri="../../mathbook/schema/pretext.rnc"/>
+</locatingRules>

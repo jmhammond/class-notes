@@ -4,19 +4,15 @@
     Multiplicative Inverses
   </title>
 
-  <introduction>
-    <statement>
-      <p>
-        In our algebra and calculus classes, where we worked in <m>\Q</m> and <m>\R</m>, all non-zero numbers had multiplicative inverses. For example, <m>5^{-1} = \frac15</m> since <m>5^{-1}\cdot 5 = 1</m>. But <m>\frac15 \not \in Z</m>!
-      </p>
-      <p>
-        When we're working with only integers, in particular in congruence classes modulo an integer <m>m</m>, fractions aren't a thing. Some numbers, though, do have multiplicative inverses. They're special, and we explore them in this section.
-      </p>
-      <p>
-        Why do we care? At this point, the only algebraic equations we can solve are of the form <m> x + b \equiv c\pmod{m}</m>. The multiplicative inverses help us solve the algebraic, <term>affine</term> equations, <m>ax + b \equiv c\pmod{m}</m>.
-      </p>
-    </statement>
-  </introduction>
+  <p>
+    In our algebra and calculus classes, where we worked in <m>\Q</m> and <m>\R</m>, all non-zero numbers had multiplicative inverses. For example, <m>5^{-1} = \frac15</m> since <m>5^{-1}\cdot 5 = 1</m>. But <m>\frac15 \not \in Z</m>!
+  </p>
+  <p>
+    When we're working with only integers, in particular in congruence classes modulo an integer <m>m</m>, fractions aren't a thing. Some numbers, though, do have multiplicative inverses. They're special, and we explore them in this section.
+  </p>
+  <p>
+    Why do we care? At this point, the only algebraic equations we can solve are of the form <m> x + b \equiv c\pmod{m}</m>. The multiplicative inverses help us solve the algebraic, <term>affine</term> equations, <m>ax + b \equiv c\pmod{m}</m>.
+  </p>
 
   <definition>
     <statement>
@@ -61,7 +57,7 @@
         <table>
           <title>Multiplication table of 4 modulo 9</title>
           <tabular halign="center">
-            <row bottom="medium">
+            <row bottom="medium" header="yes">
               <cell right="medium">
                 *
               </cell>
@@ -212,7 +208,7 @@
     <statement>
       <p>
         <ol>
-          <li> The inverse of <m>a \text{ modulo } m</m> is its Bezout coefficient in <m>{\gcd(a,m) = as + mt}</m> </li>
+          <li> The inverse of <m>a \text{ modulo } m</m> is its Bézout coefficient in <m>{\gcd(a,m) = as + mt}</m> </li>
           <li> The inverse is also unique (up to congruence), but we won't prove that here.</li>
         </ol>
       </p>
@@ -361,7 +357,7 @@
       <ol>
         <li> A unique solution if <m>\gcd(a, m) = 1</m> </li>
         <li> If <m>\gcd(a, m) = d</m>, the congruence will have <m>d</m> solutions if <m>d \divides b</m> </li>
-        <li> And teh system will have no solution if <m>\gcd(a, m) = d</m> and <m>d \not\divides b</m> </li>
+        <li> And the system will have no solution if <m>\gcd(a, m) = d</m> and <m>d \not\divides b</m> </li>
       </ol>
     </p>
     <p>

@@ -9,44 +9,26 @@
       <titlepage>
         <author>
           <personname>John Hammond</personname>
-          <email>john.hammond@wichita.edu</email>
           <department>Department of Mathematics and Statistics</department>
           <institution>Wichita State University</institution>
+          <email>john.hammond@wichita.edu</email>
         </author>
       </titlepage>
 
       <colophon>
-        <copyright>
-          <holder>John Hammond</holder>
-          <year>2018-2022</year>
-          <minilicense>Creative Commons BY-SA</minilicense>
-        </copyright>
         <website>
           <name>Class Notes Website</name>
           <address>http://www.math.wichita.edu/discrete-book</address>
         </website>
+        <copyright>
+          <year>2018-2022</year>
+          <holder>John Hammond</holder>
+          <minilicense>Creative Commons BY-SA</minilicense>
+          <shortlicense>
+              This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="">http://creativecommons.org/licenses/by-sa/4.0/</url>
+          </shortlicense>
+        </copyright>
       </colophon>
-      <preface>
-        <p>
-          The WSU Catalog says of this course: 
-          <blockquote>
-            <p>
-              MATH 321.  Discrete Structures I
-            </p>
-            <p>
-              Cross-listed as CS 321. Provides a mathematical foundation essential to the entire computer science curriculum. Includes propositional and predicate logic, induction, recursion and counting techniques. Prerequisite: MATH 242 or equivalent with a grade point of 2.000 or better.
-            </p>
-          </blockquote>
-        </p>
-
-        <p>
-          We'll be exploring these areas, along with enough number theory to do an interesting application to encryption. 
-        </p>
-        <p>
-          This course is very different that your past math courses. Keep an open mind, and please ask questions! This might be the <q>hardest</q> math class you take, but it can also be one of the most rewarding.
-        </p>
-      </preface>
-
       <acknowledgement>
         <p>
           This book borrows heavily from the exercises of Oscar Levin's <url href="https://github.com/oscarlevin/discrete-book" visual="">Discrete Mathematics: An Open Introduction</url>.
@@ -61,6 +43,25 @@
           I'm also grateful for you, reader, as we go on this journey of mathematics together. This is going to be fun.
         </p>
       </acknowledgement>
+      <preface>
+        <p>
+          The WSU Catalog says of this course:
+        </p>
+        <blockquote>
+          <p>
+            MATH 321.  Discrete Structures I
+          </p>
+          <p>
+            Cross-listed as CS 321. Provides a mathematical foundation essential to the entire computer science curriculum. Includes propositional and predicate logic, induction, recursion and counting techniques. Prerequisite: MATH 242 or equivalent with a grade point of 2.000 or better.
+          </p>
+        </blockquote>
+        <p>
+          We'll be exploring these areas, along with enough number theory to do an interesting application to encryption. 
+        </p>
+        <p>
+          This course is very different that your past math courses. Keep an open mind, and please ask questions! This might be the <q>hardest</q> math class you take, but it can also be one of the most rewarding.
+        </p>
+      </preface>
     </frontmatter>
 
 
@@ -73,7 +74,7 @@
     <backmatter>
       <xi:include href="./ch_appendix.ptx"/>
 
-      <solutions divisional="solution">
+      <solutions divisional="hint solution">
         <title>Solutions to the exercises</title>
       </solutions>
     </backmatter>

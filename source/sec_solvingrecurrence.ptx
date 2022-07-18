@@ -10,41 +10,41 @@
       Let's imagine that we wanted to find the 10,000th term of the sequence <m>{ a_n = a_{n-2} }</m> with <m>{ a_0 =1, a_1 = 3 }</m>. The sequence is very simple: <m>{ \{1, 3, 1, 3, 1, 3, \dots\} }</m>.
     </p>
     <p>
-      It turns out that the solution to this recurrence is <m>a_n = 2+(-1)^{n+1}</m>. We can directly compute the value, and it takes SageMath about 150 microseconds to give us the answer:
-      <sage>
-        <input>
-          %%time
-          def nonrec(x): return 2 + pow(-1, x+1);
-          print(nonrec(10000))
-        </input>
-        <output>
-          1
-          CPU times: user 111 µs, sys: 57 µs, total: 168 µs
-          Wall time: 144 µs
-        </output>
-      </sage>
+      It turns out that the solution to this recurrence is <m>a_n = 2+(-1)^{n+1}</m>. We can directly compute the value, and it takes Sage about 150 microseconds to give us the answer:
     </p>
-  
+    <sage>
+      <input>
+        %%time
+        def nonrec(x): return 2 + pow(-1, x+1);
+        print(nonrec(10000))
+      </input>
+      <output>
+        1
+        CPU times: user 111 µs, sys: 57 µs, total: 168 µs
+        Wall time: 144 µs
+      </output>
+    </sage>
+
     <p>
       But if we wanted to actually have the computer find the 10,000th value via the recursive definition, Sage (computing via Python) can't even do it:
-      <sage>
-        <input>
-          %%time
-          def recursive(x):
-              if x == 0:
-                  return 1;
-              elif x == 1:
-                  return 3;
-              else:
-                  return recursive(x-2)
-              
-          print(recursive(10000))
-        </input>
-        <output>
-          RuntimeError: maximum recursion depth exceeded while calling a Python object
-        </output>
-      </sage>
     </p>
+    <sage>
+      <input>
+        %%time
+        def recursive(x):
+        if x == 0:
+            return 1;
+        elif x == 1:
+            return 3;
+        else:
+            return recursive(x-2)
+
+        print(recursive(10000))
+      </input>
+      <output>
+        RuntimeError: maximum recursion depth exceeded while calling a Python object
+      </output>
+    </sage>
     <p>
       Explicit solutions are better when we want to be able to actually determine specific values of a recurrence.
     </p>
@@ -60,15 +60,15 @@
             <li> Place all the disks on the first peg in order of size with the largest on bottom.</li>
             <li> Move one disk at a time to any other peg. A move is valid only if a smaller disk is placed on top a larger one.</li>
           </ol>
-          <figure>
-            <image source="./images/Tower_of_Hanoi_4.gif" width="50%">
-              <description>
-                The Animation of the Towers of Hanoi puzzle by André Karwath. There are three pegs and in this picture four disks. The animation proceeds to show moving the top disk to the far right peg. The next disk to the middle peg, then the smallest disk to the second peg... and so on until we have moved all disks to the third peg.
-              </description>
-            </image>
-            <caption>Animation of the Towers of Hanoi puzzle with 4 disks</caption>
-          </figure>
         </p>
+        <figure>
+          <caption>Animation of the Towers of Hanoi puzzle with 4 disks</caption>
+          <image source="Tower_of_Hanoi_4.gif" width="50%">
+            <description>
+              The Animation of the Towers of Hanoi puzzle by André Karwath. There are three pegs and in this picture four disks. The animation proceeds to show moving the top disk to the far right peg. The next disk to the middle peg, then the smallest disk to the second peg... and so on until we have moved all disks to the third peg.
+            </description>
+          </image>
+        </figure>
         <p>
           Let <m>H_n</m> denote the number of moves to solve the puzzle with <m>n</m> disks. Our goal is to find a solution to the sequence <m>\{H_n\}</m>.
           <ol>
@@ -88,7 +88,7 @@
     <example>
       <statement>
         <p>
-          Recall that a bitstring is a string containing only 0's and 1's. How many bitstrings of length <m>n</m> do not contain three consecutive 0's? 
+          Recall that a bit string is a string containing only 0's and 1's. How many bit strings of length <m>n</m> do not contain three consecutive 0's?
         </p>
       </statement>
       <answer>
@@ -131,6 +131,7 @@
 
 
     <definition>
+      <title>Linear, Homogeneous Recurrence Relations of Degree k</title>
       <statement>
         <p>
           A <term>linear homogeneous recurrence relation of degree <m>k</m> with constant coefficients</term> is a recurrence relation of the form
@@ -154,31 +155,28 @@
     </definition>
 
     <note>
-      <statement>
-        <p>
-          For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward and takes away from focusing on the new material.
-        </p>
-      </statement>
+      <p>
+        For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward and takes away from focusing on the new material.
+      </p>
     </note>
 
     <note>
-      <statement>
-        <p>
-          If <m>a_n = r^n</m> is a solution to the (degree two) recurrence relation <m>a_n = c_1 a_{n-1} + c_2 a_{n-2}</m>, then we we can plug it in: 
-          <md>
-            <mrow> \displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} </mrow>
-            <mrow> \displaystyle r^n &amp;= c_1 r^{n-1} + c_2r^{n-2} </mrow>
-            <mrow> \text{ Divide both sides by } r^{n-2}</mrow>
-            <mrow>
-              \displaystyle r^2 &amp;= c_1 r + c_2 
-            </mrow>
-            <mrow>\displaystyle r^2 - c_1 r - c_2 &amp;= 0</mrow>
-          </md>
-        </p>
-      </statement>
+      <p>
+        If <m>a_n = r^n</m> is a solution to the (degree two) recurrence relation <m>a_n = c_1 a_{n-1} + c_2 a_{n-2}</m>, then we we can plug it in:
+        <md>
+          <mrow> \displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} </mrow>
+          <mrow> \displaystyle r^n &amp;= c_1 r^{n-1} + c_2r^{n-2} </mrow>
+          <mrow> \text{ Divide both sides by } r^{n-2}</mrow>
+          <mrow>
+            \displaystyle r^2 &amp;= c_1 r + c_2
+          </mrow>
+          <mrow>\displaystyle r^2 - c_1 r - c_2 &amp;= 0</mrow>
+        </md>
+      </p>
     </note>
 
     <definition>
+      <title>Characteristic Equation</title>
       <statement>
         <p>
           We call the equation <m>\displaystyle r^2 - c_1 r - c_2= 0</m> the <term>characteristic equation</term> of the recurrence relation. The solutions to this equation are the <term>characteristic roots</term>.
@@ -212,9 +210,8 @@
       </answer>
 
       <solution>
-        <p>
-          <sage>
-            <input>
+        <sage>
+          <input>
 v=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 def f(n):
@@ -231,14 +228,13 @@ def recur(n):
 print("Explicit solution: " + str(map(f,v)))
 print("\n")
 print("Recursive sequence: " + str(map(recur,v)))
-            </input>
-            <output>
+          </input>
+          <output>
 Explicit solution: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
 
 Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
-            </output>
-          </sage>
-        </p>
+          </output>
+        </sage>
       </solution>
     </example>
 
@@ -257,11 +253,9 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
     </theorem>
 
     <note>
-      <statement>
-        <p>
-          Note the small differences between these statements. It is significant with respect to how you solve the sequence.
-        </p>
-      </statement>
+      <p>
+        Note the small differences between these statements. It is significant with respect to how you solve the sequence.
+      </p>
     </note>
 
     <example>
