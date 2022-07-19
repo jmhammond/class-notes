@@ -2,6 +2,8 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-primes">
   <title>Prime Numbers</title>
 
+  <subsection>
+
   <definition>
     <title>Prime Numbers</title>
     <statement>
@@ -15,10 +17,47 @@
   </definition>
 
   <note>
+    <title>1 is the loneliest number</title>
     <p>
       1 is neither prime nor composite. It's called a <term>unit</term>.
     </p>
   </note>
+
+  <p>
+    Our next proposition, along with the proof that <xref ref="ex-proof-sqrt2-irrational" text="custom">square root of 2 is irrational</xref>, is the most classic example of a proof by contradiction. It's hard (impossible?) to prove directly that there are infinitely many primes. Instead, we assume there are finitely many and then find a contradiction.
+  </p>
+
+  <proposition>
+    <statement>
+      <p>
+        There are infinitely many primes.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Assume, to the contrary, that there are only finitely many primes. Let's call them <m>p_1, p_2, p_3, \dots p_n</m>. Consider the number
+        <me>N = p_1 \cdot p_2\cdot  p_3 \cdots p_n + 1</me>
+        the product of every prime, plus one.
+      </p>
+      <p>
+        Because <m>N</m> is larger than the largest prime, <m>p_n</m>, we know that <m>N</m> isn't in our list of primes and therefore is composite.  Then there is some prime <m>p_i</m> that divides it.
+      </p>
+      <p>
+        But since <m>p_i \divides N</m> and <m>p_i \divides p_1\cdot  p_2\cdot  p_3 \cdots p_n</m>, we see that
+        <me> p_i \divides (N - p_1 \cdot p_2\cdot  p_3 \cdots p_n)</me>
+        meaning that
+        <me>p_i \divides 1</me>
+        But this is a contradiction since the only divisor of 1 is itself. Our assumption was incorrect, and therefore we conclude that there are infinitely many primes.
+      </p>
+    </proof>
+    <answer component="video">
+      <video youtube="Y_9K-BpTdTo" />
+    </answer>
+  </proposition>
+
+  <p>
+    Over our school careers, we've been factoring numbers for a long time. You've probably noticed there is <q>a correct answer</q> when you produce a factorization. For example, we might write: <m>15 = 3\cdot 5</m> or <m>15 = 5\cdot 3</m>, these are the same factorization, we just changed the order we multiplied. The next theorem, which underlies all arithmetic, so we call it Fundament, tells us we <em>can</em> factor every integer and that there is really <em>a correct</em> answer.
+  </p>
 
   <theorem>
     <title>
@@ -34,34 +73,120 @@
   <example>
     <statement>
       <p>
+        The Fundamental Theorem of Arithmetic (FTA) is a non-constructive statement. It tells us that we <em>can</em> write every positive integer as a unique product of primes, but it doesn't tell us <em>how</em>. Instead we need to use trial division and guess-and-check methods.
+      </p>
+      <p>
         Find the prime factorization of the following:
         <ol>
           <li> 124 </li>
           <li> 81 </li>
           <li> 941 </li>
+          <li> 3780</li>
         </ol>
       </p>
     </statement>
+    <solution>
+      <p>
+        Here are factor trees for each of the examples. To construct these, we divide each number by some prime factor and successively divide the remaining factor further until we're left with only prime factors.
+        <ol>
+          <li>
+            <image width="20%">
+              <description> Factor tree for 124 </description>
+              <latex-image>
+\begin{tikzpicture}[
+    circled/.style={draw, circle}
+]
+    \node {124}
+        child {node [circled] {2}}
+        child {node{62}
+            child {node [circled] {3}}
+            child {node [circled] {31}}
+        };
+\end{tikzpicture}
+              </latex-image>
+            </image>
+          </li>
+          <li>
+            <image width="20%">
+              <description> Factor tree for 81 </description>
+              <latex-image>
+\begin{tikzpicture}[
+    circled/.style={draw, circle}
+]
+    \node {81}
+        child {node [circled] {3}}
+        child {node{27}
+            child {node [circled] {3}}
+            child {node {9}
+                child {node [circled] {3}}
+                child {node [circled] {3}}
+                }
+                };
+\end{tikzpicture}
+              </latex-image>
+            </image>
+          </li>
+          <li>
+            <image width="20%">
+              <description> Factor tree for 941, which is prime </description>
+              <latex-image>
+\begin{tikzpicture}[
+    circled/.style={draw, circle}
+]
+    \node {941}
+        child {node  {1}}
+        child {node [circled] {941}};
+\end{tikzpicture}
+              </latex-image>
+            </image>
+          </li>
+          <li>
+            <image width="20%">
+              <description> Factor tree for 3780 </description>
+              <latex-image>
+\begin{tikzpicture}[
+    circled/.style={draw, circle}
+]
+    \node {3780}
+        child {node [circled] {2}}
+        child {node{1890}
+            child {node [circled] {2}}
+            child {node {945}
+                child {node [circled] {3}}
+                child {node {315}
+                    child {node [circled] {3}}
+                    child {node {105}
+                        child {node [circled] {3}}
+                        child {node {35}
+                            child {node [circled] {3}}
+                            child {node [circled] {7}}
+                        }
+                    }
+                }
+            }
+        };
+\end{tikzpicture}
+              </latex-image>
+            </image>
+          </li>
+        </ol>
+      </p>
+    </solution>
     <answer component="video">
       <video youtube="qCvMLt-QNd8" />
     </answer>
-
   </example>
 
+  <p>
+    Trying to determine the prime factors of an integer can be really time consuming, especially if a number is prime. Fortunately, the next theorem tells us just how far we have to check in order to test primality or find a prime divisor.
+  </p>
 
-  <theorem>
+  <theorem xml:id="thm-primes-under-sqrt">
     <statement>
       <p>
-        If <m>n</m> is a composite number, then <m>n</m> has a prime divisor less than or equal to <m>\sqrt{n}</m>.
+        If <m>n</m> is a positive composite number, then <m>n</m> has a prime divisor less than or equal to <m>\sqrt{n}</m>.
       </p>
     </statement>
-    <proof>
-      <p>
-        Assume, to the contrary, that every prime divisor of <m>n</m> is greater than <m>\sqrt{n}</m>. Since <m>n</m> is composite, it has at least two prime factors, <m>p_1, p_2</m> so that <m>n = p_1 p_2 b</m> where <m>b</m> is positive integer. But since <m>p_1 \and p_2</m> are a prime divisors of <m>n</m>, they are necessarily larger than  <m>\sqrt{n}</m>. So:
-        <me> n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb</me>
-        But since <m>n</m> is composite and <m>b\in \Z^+</m>, <m>n\gt nb</m> is a contradiction.
-      </p>
-    </proof>
   </theorem>
 
   <example>
@@ -74,17 +199,47 @@
         Use trial division to determine that 251 is prime.
       </p>
     </statement>
+    <solution>
+      <p>
+        Since <m>\sqrt{251} \approx 15.81</m>, we only need to check prime numbers which are less than 15. These are <m>2, 3, 5, 7, 11, 13</m> Since none of these divide into 251 evenly, we conclude that 251 is prime.
+      </p>
+    </solution>
     <answer component="video">
       <video youtube="Hq88K-lSPFI" />
     </answer>
+  </example>
 
+  <example xml:id="example-trial-division">
+    <statement>
+      <p>
+        Use trial division to determine if any of the following are prime:
+        <ol>
+          <li> 127 </li>
+          <li> 143 </li>
+          <li> 54323 </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li> Since, rounding down, <m>\sqrt{127} \approx 11</m>, we need only test primes up through 11.   Noticing that none of 2, 3, 5, 7, or 11 divide evenly, we conclude 127 is prime. </li>
+          <li>
+            Here, <m>\sqrt{143} \approx 12</m> rounding up, so again we test only up through 11. We check that 2, 3, 5, 7 do not work but <m>143 = 11\cdot 13</m>, so we see that <m>143</m> is not a prime number.
+          </li>
+          <li>
+            For <m>\sqrt{54321} \approx 233</m>, meaning we need to check every prime less than 233. In order to solve this, let's find a method to develop that list...
+          </li>
+        </ol>
+      </p>
+    </solution>
   </example>
 
   <example>
     <title>Sieve of Eratosthenes</title>
     <statement>
       <p>
-        In order to generate a list of all prime numbers less than or equal to <m>n</m>, start with a tabular listing  of integers from 1 to <m>n</m>:
+        In order to generate a list of all prime numbers less than or equal to <m>n</m>, start with a tabular listing  of integers from 1 to <m>n</m> we run the following sieve or filter:
         <ol>
           <li> Cross off the number 1. </li>
           <li>
@@ -430,24 +585,94 @@
         </tabular>
       </table>
     </statement>
+    <solution>
+      <p>
+        Here is the completed table after running the sieve algorithm:
+      </p>
+      <image source="completedsieve-erat.png" width="50%">
+        <description>
+          Table of numbers from 1 to 100. Every number is crossed off except for those which are prime: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 83, 89, 97, which is the complete set of primes less than 100.
+        </description>
+      </image>
+    </solution>
     <answer component="video">
       <video youtube="GHavZM0uS5w" />
     </answer>
-
   </example>
 
+  </subsection>
 
-  <proposition>
-    <statement>
+  <subsection xml:id="computer-corner-sieve">
+    <title>Computer Corner - Implementing the Sieve</title>
+    <p>
+      Implementing the three step algorithm is very straight-forward.
+      <ul label="circle">
+        <li> Make a large list of integers </li>
+        <li> Delete every multiple of of each prime we encounter</li>
+      </ul>
+
+      I'm choosing to implement this in Python in an inefficient, but readable way, so that we can run it in a Sage cell below. If you want to see it in your favorite language, you can find it implemented in many, many different languages on <url href="http://rosettacode.org/wiki/Sieve_of_Eratosthenes" visual="rosettacode.org/wiki/Sieve_Of_Eratosthenes">Rosetta Code</url>
+    </p>
+    <aside>
       <p>
-        There are infinitely many primes.
+        List lookup and removing items from lists is a very computationally expensive operation; on the order of <m>O(n)</m>. That said, I'm only demonstrating <q>small</q> examples for class, so I'm trading efficiency for clarity of the algorithm. In practice you'd want to use more efficient data structures.
       </p>
-    </statement>
-    <answer component="video">
-      <video youtube="Y_9K-BpTdTo" />
-    </answer>
+    </aside>
+    <sage language="python">
+      <input>
+# create a list of primes up to some upper_bound
+upper_bound = 233
 
-  </proposition>
+sieved = list(range(2, upper_bound)) # list of integers to be sieved
+for i in range(2, upper_bound+1):
+    if i in sieved: # i is prime if it's still in the list, so
+        # remove every multiple of the prime:
+        for multiple in range(i*i, upper_bound+1, i):
+            try:
+                sieved.remove(multiple)
+            except ValueError:
+                pass # we already removed it; ignore this error.
+
+print(sieved)
+      </input>
+      <output>
+        [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229]
+      </output>
+    </sage>
+    <p>
+      We can now return to <xref ref="example-trial-division" text="custom">determining if 54323 is prime</xref>. We now have a way of generating a list of primes up to <m>\sqrt{54323}</m>, and we can test primality by trial division. We put it all together in the following function <c>is_it_prime</c>:
+    </p>
+    <sage language="python">
+      <input>
+# change this value and click Evaluate (Sage)
+# to determine primality
+integer_to_check = 54323
+
+def is_it_prime(n):
+    # first, run the Sieve of Eratosthenes
+    sieved = list(range(2, int(n ** 0.5)))
+    for i in range(2, int(n ** .5)+1): #note n**0.5 is the 1/2 power / square root.
+        if i in sieved:
+            for multiple in range(i*i, int(n ** 0.5)+1, i):
+                try:
+                    sieved.remove(multiple)
+                except ValueError:
+                    pass
+
+    # now divide by every prime in the list
+    # if we get something divides, we break then;
+    for prime in sieved:
+        if n % prime == 0:
+            return "%d is not prime. It's divisible by %d" % (n, prime)
+
+    return "%d is prime!" % n
+
+print(is_it_prime(integer_to_check))
+      </input>
+      <output>
+      </output>
+    </sage>
+  </subsection>
 
   <exercises>
 
@@ -499,6 +724,36 @@
 
     </exercise>
 
+    <exercise>
+      <statement>
+        <p>
+          Using the <c>is_it_prime</c> function <xref ref="computer-corner-sieve" text="custom">above</xref> (or write your own in your favorite language!), factor the following large integers.
+          <ol>
+            <li> 654321 </li>
+            <li> 123456 </li>
+            <li> 987654321 </li>
+            <li> 123456789 </li>
+          </ol>
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Begin by changing <c>integer_to_check</c> to 654321 and see that 3 divides it. Then make <c>integer_to_check = 218107</c> and repeat...
+        </p>
+      </hint>
+      <solution>
+        <p>
+          <ol>
+            <li> <m>654321 = 3\cdot 218107 </m> </li>
+            <li> <m>123456 = 2^6 \cdot 3 \cdot 643 </m></li>
+            <li> <m>987654321 = 3^2 \cdot 17^2 \cdot 379721</m> </li>
+            <li> <m>123456789 = 3^2 \cdot 3607 \cdot 3803</m></li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
@@ -537,6 +792,31 @@
         </proof>
       </solution>
 
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Give a proof for <xref ref="thm-primes-under-sqrt"/>
+        </p>
+      </statement>
+      <hint>
+        <p>
+          What happens if we assume that every prime divisor of <m>n</m> is bigger than <m>\sqrt{n}</m>?
+        </p>
+      </hint>
+      <solution>
+        <p>
+          Our proof will go like this: factor <m>n</m> into three parts, <m>p_1, p_2, \and b</m> where <m>p_1 \and p_2</m> are prime and <m>b</m> is whatever is left with the factorization, such as <m>10 = 2\cdot5\cdot1</m> where <m>b=1</m> or <m>60=2\cdot5\cdot6</m> where <m>b=6</m>, but assuming those prime factors are bigger than <m>\sqrt{n}</m>, and look for the contradiction.
+        </p>
+        <proof>
+          <p>
+            Assume, to the contrary, that every prime divisor of <m>n</m> is greater than <m>\sqrt{n}</m>. Since <m>n</m> is composite, it has at least two prime factors, <m>p_1, p_2</m> so that <m>n = p_1 p_2 b</m> where <m>b</m> is some  positive integer. But since <m>p_1 \and p_2</m> are a prime divisors of <m>n</m>, by our assumption, <m>p_1 \gt \sqrt{n} \and p_2 \gt \sqrt{n}</m>. So:
+            <me> n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb</me>
+            But since <m>n\gt 1 </m> and <m>b\in \Z^+</m>, <m>n\gt nb</m> is a contradiction.
+          </p>
+        </proof>
+      </solution>
     </exercise>
   </exercises>
 

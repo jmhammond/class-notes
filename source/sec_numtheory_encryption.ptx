@@ -429,7 +429,7 @@
     <sage>
       <input>
         # Change a and b to be any positive integers, then press Evaluate
-        a=2345
+        a = 2345
         b = 234
         l = a.xgcd(b)
         print(str(l[0]) + "=" + str(a) + "*(" + str(l[1]) + ") + " + str(b) + "*(" + str(l[2]) + ")")
@@ -439,7 +439,7 @@
       </output>
     </sage>
     <p>
-      The <c>xgcd</c> command returns a list of the form <c>(gcd, first Bézout coefficient, second Bézout coefficient)</c>, and the code above pretty-prints this in a readable format.
+      The <c>xgcd</c> command returns a list of the form (gcd, first Bézout coefficient, second Bézout coefficient), and the code above pretty-prints this in a readable format.
     </p>
 
     <p>
@@ -480,8 +480,7 @@
         <li>
           <p>
             I'll send you an encrypted message which will look like:
-            <cd>
-              [971896385, 3249912096L, 4079022731L, 8771096382L, 10148198704L]
+            <cd>[971896385, 3249912096, 4079022731, 8771096382, 10148198704]
             </cd>
           </p>
         </li>

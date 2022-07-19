@@ -219,7 +219,7 @@
         <p> Arrive at a logical contradiction. Some impossibility. Therefore, <m>p</m> is true by contradiction.</p>
       </proof>
 
-      <example>
+      <example xml:id="ex-proof-sqrt2-irrational">
         <statement>
           <p>
             Prove that <m>\sqrt{2}</m> is irrational
