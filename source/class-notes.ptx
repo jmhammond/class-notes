@@ -4,7 +4,7 @@
   <xi:include href="./bookinfo.ptx"/>
 
   <book xml:id="discrete-class-notes">
-    <title>Math 321 Class Notes</title>
+    <title>Discrete Math for Shockers</title>
     <frontmatter xml:id="front-matter">
       <titlepage>
         <author>
@@ -17,7 +17,7 @@
 
       <colophon>
         <website>
-          <name>Class Notes Website</name>
+          <name>Discrete Math for Shockers</name>
           <address>http://www.math.wichita.edu/discrete-book</address>
         </website>
         <copyright>

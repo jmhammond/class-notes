@@ -1,15 +1,11 @@
-# Math 321 Class Notes
-This is the source for the class notes / workbook for Math 321 - Discrete Mathematics at Wichita State University.
+# Discrete Math for Shockers
+This is the source for the textbook I use for my sections of Math 321 - Discrete Structures at Wichita State University.
 
 An interactive version of the text is [available here](http://wichita.edu/discreteBook).
 
-The original objective of the project is to have a set of notes ready for my students to have with them during class. Definitions will be immediately in front of them, and examples and propositions will be already written out. My plan is that during the lecture I can address "Example 2.1.1," and we can work out the solution at that time, in their own note-taking devices. 
+The original objective of the project was to have a set of notes ready for my students to have with them during class. The book has since morphed to be a complete textbook for my sections of class with examples fully worked out in print or in video; exercises similarly worked out. I use the text to enables me to have fully hybrid/flipped class environment. The online version include solutions to exercises, videos with every example, and Discourse forums at the bottom of every page of the textbook in order to facilitate discussion within the textbook.
 
-I use the text to enables me to have fully hybrid/flipped class environment. The online version include solutions to exercises, videos with every example, and Discourse forums at the bottom of every page of the textbook in order to facilitate discussion within the textbook.
-
-I use the text alone so that my students don't have to pay for class materials - because expensive books make me angry (╯°□°）╯︵ ┻━┻.
-
-Other instructors at WSU can use this book as a supplemental text to Rosen's Discrete Mathematics.  For them, I build custom versions by removing forums/videos as they choose. 
+I use the text so that my students don't have to pay for class materials. Other instructors at WSU  use this book as a supplemental text to Rosen's Discrete Mathematics.  For them, I build custom versions by removing forums/videos as they choose. 
 
 For that reason, I have a number of branches that I'm going to try to maintain (documenting here so I don't forget): 
   - `main` will be the branch for bleeding-edge changes. This may break content number flow by introducing new exercises, examples; any printed PDF will be out of sync.
@@ -18,8 +14,6 @@ For that reason, I have a number of branches that I'm going to try to maintain (
   - `videosOnly` contains the core materials and has embedded youtube videos
   - `forumsOnly` contains the core materials and has embedded discourse forums
     If you choose to host your own Discourse forum, to [embed comments](https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963), after configuring your server, you'll need to update each XML file in the class-notes project with your `discourseUrl` and `topicId`.
-  
-  When I 'release' a new semester, I will combine the pieces from the various branches, merging into a course release branch. From that branch I'll build and deploy to our web server.
 
 If you catch an error, let me know and I'll make the fix. Thanks!
 
