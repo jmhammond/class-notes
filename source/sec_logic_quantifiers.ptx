@@ -66,6 +66,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="BUP1k8Yy0X4"/>
+      </answer>
+
     </example>
   </subsection>
 
@@ -82,6 +86,9 @@
           A <term>counterexample</term> is an <m>x</m> value for which <m>P(x)</m> is false.
         </p>
       </statement>
+      <answer>
+        <video youtube="Z7wornF1Euw"/>
+      </answer>
     </definition>
     <definition>
       <title>Existential Quantifier</title>
@@ -89,6 +96,9 @@
         <p>
           The <term>existential quantification</term> of <m>P(x)</m> is the statement that there is some value <m>x</m> in the universe of discourse for which <m>P(x)</m> is true. We write <m> \exists x P(x)</m>
         </p>
+        <answer>
+          <video youtube="H_tA2tyGDdQ"/>
+        </answer>
       </statement>
     </definition>
 
@@ -125,6 +135,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="n9jfIFqiVnU"/>
+      </answer>
+
     </example>
 
     <example>
@@ -139,6 +153,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="8kb1Krhw6Ks"/>
+      </answer>
+
     </example>
 
     <remark>
@@ -153,6 +171,10 @@
       <p>
         It might help to think <q>not all...</q> is equivalent to <q>some... do not</q>. While <q>there isn't one who...</q> is the same as <q>no one does...</q>.
       </p>
+
+      <answer>
+        <video youtube="wgjXIN8csMs"/>
+      </answer>
     </remark>
     <note>
       <p>
@@ -180,6 +202,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="DQEKqe7ZYro"/>
+      </answer>
+
     </example>
 
     <example>
@@ -198,6 +224,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="9qVRwljEnu4"/>
+      </answer>
+
     </example>
 
     <example>
@@ -212,6 +242,10 @@
 
         </p>
       </statement>
+      <answer>
+        <video youtube="ao3a6VF4xUU"/>
+      </answer>
+
     </example>
 
 

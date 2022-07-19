@@ -98,6 +98,9 @@
           </dl>
         </p>
       </statement>
+      <answer>
+        <video youtube="QyDUE4zSIEU"/>
+      </answer>
     </definition>
 
 
@@ -152,6 +155,9 @@
           <!-- <me>A \subset B \iff \forall x (x \in A \to x \in B) \text{ and } \exists y (y\in B \text{ and } y \not \in A) </me> -->
         </p>
       </statement>
+      <answer>
+        <video youtube="cAh-4Xe7Auc"/>
+      </answer>
     </definition>
 
 
@@ -228,6 +234,10 @@
           </ol>
         </p>
       </statement>
+
+      <answer>
+        <video youtube="Xqe7xNxH4aE"/>
+      </answer>
     </example>
 
     <definition>
@@ -257,6 +267,10 @@
           </ol>
         </p>
       </statement>
+
+      <answer>
+        <video youtube="CRqvTn3ncPY"/>
+      </answer>
     </example>
 
   </subsection>
@@ -302,6 +316,10 @@
           </ol>
         </p>
       </statement>
+
+      <answer>
+        <video youtube="TeCOF_lO5qU"/>
+      </answer>
     </example>
 
     
@@ -430,6 +448,10 @@
           <li><m>B\setminus A</m></li>
         </ol>
       </statement>
+
+      <answer>
+        <video youtube="aj5UcvPjCoQ"/>
+      </answer>
     </example>
     <note>
       <p>
@@ -456,6 +478,10 @@
         </p>
       </statement>
 
+
+      <answer>
+        <video youtube="VVXEDmYGy2s"/>
+      </answer>
     </example>
 
     <list xml:id="list-set-identities">

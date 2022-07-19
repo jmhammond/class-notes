@@ -78,6 +78,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="aFZJ5XArC-s"/>
+      </answer>
+
     </example>
 
 
@@ -87,6 +91,10 @@
           Recall that a bit string is a string containing only 0's and 1's. How many bit strings of length <m>n</m> do not contain three consecutive 0's?
         </p>
       </statement>
+      <answer>
+        <video youtube="4ENaXarcKzM"/>
+      </answer>
+
     </example>
 
     <!-- I don't think this adds anything -->
@@ -110,6 +118,10 @@
         </p>
       </statement>
     </example>
+    <answer>
+      <video youtube="oigH5x633sI"/>
+    </answer>
+
   </subsection>
 
   <subsection>
@@ -193,6 +205,10 @@
           Solve <m>a_n = a_{n-1} + 2a_{n-2}</m> where <m>a_0=2</m> and <m>a_1=7</m>.
         </p>
       </statement>
+      <answer>
+        <video youtube="JicG-l7ohfA"/>
+      </answer>
+
       <solution>
         <sage>
           <input>
@@ -248,6 +264,10 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
           Solve <m>a_n = 4a_{n-1} - 4a_{n-2}</m> where <m>a_0=6</m> and <m>a_1=8</m>.
         </p>
       </statement>
+      <answer>
+        <video youtube="Xj2WqRX4Qb0"/>
+      </answer>
+
     </example>
 
     <example>
@@ -256,6 +276,10 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
           Find an explicit formula for the Fibonacci numbers, <m>F_n = F_{n-1} + F_{n-2}</m> with <m>F_0 = 0</m> and <m>F_1 = 1</m>.
         </p>
       </statement>
+      <answer>
+        <video youtube="d3WhI-QaqBE"/>
+      </answer>
+
     </example>
 
 
@@ -266,6 +290,10 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
         </p>
       </statement>
     </example>
+    <answer>
+      <video youtube="WiTOTycl1dg"/>
+    </answer>
+
   </subsection>
     
 

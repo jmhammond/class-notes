@@ -82,6 +82,9 @@
           Notice that these ordered pairs correspond to the lines on the graph diagram with each of the first coordinates being connected to the second coordinate. E.g. an arrow goes from John to Eric.
         </p>
       </solution>
+      <answer>
+        <video youtube="2-mT6s29iy8"/>
+      </answer>
     </example>
 
     <example xml:id="ex_divides_relation">
@@ -142,6 +145,10 @@
             R= \{(1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),\\(2,2),(2,4),(2,6),(2,8),(2,10),(3,3),(3,6),(3,9),(4,4),(4,8),\\(5,5),(5,10),(6,6),(7,7),(8,8),(9,9),(10,10)\}
           </m>
         </p>
+        <p>
+          and a video for the graph:
+          <video youtube="0CiMkIDNe7E"/>
+        </p>
       </answer>
 
     </example>
@@ -185,6 +192,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="S0CTis66gd8"/>
+      </answer>
+
     </example>
 
     <definition>
@@ -219,6 +230,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="JM5WdUZmliI"/>
+      </answer>
+
     </example>
 
     <!-- TODO:
@@ -254,6 +269,9 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </ul>
         and we define the <term>range</term> of the function <m>f</m> to be the set of images of every element in the domain, <m>A</m>, and often write the range by <m>f(A)</m>. Note that the range is a subset of the codomain, <m>f(A)\subseteq B</m>.
       </p>
+      <answer>
+        <video youtube="3pBXG34ojDY"/>
+      </answer>
     </definition>
 
     <note>
@@ -279,6 +297,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="eDNgCcI8jL0"/>
+      </answer>
+
     </example>
 
     <definition>
@@ -298,6 +320,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <p>
         To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (a counterexample!)
       </p>
+      <answer>
+        <video youtube="4i3SIx61-yQ"/>
+      </answer>
+
     </note>
 
     <example>
@@ -310,6 +336,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="svYqYaVvp9g"/>
+      </answer>
+
     </example>
 
     <definition>
@@ -320,6 +350,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
         <!--   f \text{ is surjective means } \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) )  -->
         <!-- </me> -->
       </p>
+      <answer>
+        <video youtube="A2dQwaFFC8I"/>
+      </answer>
+
     </definition>
 
     <example>
@@ -334,6 +368,15 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <answer>
+        <p> Two videos in this section: 
+        <video youtube="HlbvQ9uLjCU"/>
+        </p>
+        <p>
+          <video youtube="Zdi-9-RCPrE"/>
+        </p>
+      </answer>
+      
     </example>
 
     <note>
@@ -366,6 +409,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="_e8FRN7xlGY"/>
+      </answer>
+
     </example>
 
     <definition xml:id="definition-modulus-operator">
@@ -553,6 +600,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
           For the bijection(s) found in <xref ref="example-bijections"/>, find the inverse function.
         </p>
       </statement>
+      <answer>
+        <video youtube="VHzBUIDi_f4"/>
+      </answer>
+
     </example>
 
     <example>
@@ -673,6 +724,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
           Suppose <m>f</m> and <m>f\circ g</m> are injective. Does it follow that <m>g</m> is also injective?
         </p>
       </statement>
+      <answer>
+        <video youtube="9XIjEKAMRZI"/>
+      </answer>
+
     </example>
 
     <note>

@@ -34,6 +34,9 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="D-Ol2N5Tno0"/>
+      </answer>
     </definition>
 
     <note>
@@ -74,6 +77,9 @@
           Prove that <m>\ds 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}</m>.
         </p>
       </statement>
+      <answer>
+        <video youtube="_LI6XX-l3Es"/>
+      </answer>
     </example>
 
     <example>
@@ -82,6 +88,9 @@
           Prove that <m>a + ar + ar^2 + ar^3 + \dots + ar^n = \frac{ar^{n+1}-a}{r-1}</m> if <m>r \ne 1</m>.
         </p>
       </statement>
+      <answer>
+        <video youtube="n1IX0Dye7x0"/>
+      </answer>
     </example>
 
     <example>
@@ -97,6 +106,9 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="bJ-56RhKkfc"/>
+      </answer>
     </example>
 
     <example>
@@ -105,6 +117,9 @@
           Prove that <m>2^n \gt n^2</m> for <m>n > 4</m>
         </p>
       </statement>
+      <answer>
+        <video youtube="DLiv7yoaEUE"/>
+      </answer>
     </example>
 
     <example>
@@ -194,6 +209,12 @@
           </p>
         </proof>
       </solution>
+      <answer>
+        <p>
+          Here's a different approach to the problem. If we can construct <m>18, 19, 20, \dots k</m> postage using the four and seven cent stamps, then for the <m>k+1</m> cent postage, We'll just pretend you asked for four cents less! $k+1 -4 = k-3$. Were're guaranteed to be able to make the postage by the induction hypothesis. Imagine putting those stamps on the package. Then all we need is to glue on one four cent stamp and we're good to go!
+          <video youtube="73v1BI2omjs"/>
+        </p>
+      </answer>
     </example>
 
 
@@ -203,6 +224,9 @@
           Prove that every positive integer has a binary expansion, that is, it is either a power of two or it is a sum of distinct powers of two.
         </p>
       </statement>
+      <answer>
+        <video youtube="PvnCjyp9NHc"/>
+      </answer>
     </example>
 
 
@@ -637,7 +661,7 @@
 
     </exercise>
 
-    
+
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise xml:id="fibonacci-sum-of-evens">
@@ -801,4 +825,3 @@
   </exercises>
 
 </section>
-

@@ -59,6 +59,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="eBcg74rjW1c"/>
+      </answer>
+
     </proposition>
 
 
@@ -68,6 +72,10 @@
           If <m>a, b, c\in \Z</m> with <m>a\not= 0</m> such that <m>a\divides b</m> and <m>a \divides c</m>, then <m>{ a\divides (bm+cn)}</m> where <m>m \and n</m> are some integers.
         </p>
       </statement>
+      <answer>
+        <video youtube="-fY3pUCbnRg"/>
+      </answer>
+
     </corollary>
 
 
@@ -93,6 +101,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="CPIzNeiOipI"/>
+      </answer>
+
     </example>
 
 
@@ -127,6 +139,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="P9NKnDxdUCw"/>
+      </answer>
+
     </example>
 
     <note>
@@ -160,6 +176,10 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <video youtube="5DoLEOmW3bY"/>
+      </answer>
+
     </example>
 
 
@@ -207,6 +227,10 @@
           Let <m>m</m> be a positive integer. Then integers <m>a \and b</m> are congruent modulo <m>m</m> if and only if there exists and integer <m>k</m> such that <m>{a = b + km}</m>.
         </p>
       </statement>
+      <answer>
+        <video youtube="mRgZaNUB_tw"/>
+      </answer>
+
     </proposition>
 
 
@@ -217,6 +241,10 @@
           <me>a + c \equiv b + d \pmod m  \hspace{1em} \and \hspace{1em} ac \equiv bd \pmod m</me>
         </p>
       </statement>
+      <answer>
+        <video youtube="vkifZzmBHgE"/>
+      </answer>
+
     </proposition>
 
     <note>
