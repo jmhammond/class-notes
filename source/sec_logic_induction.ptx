@@ -35,7 +35,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="D-Ol2N5Tno0"/>
+        <video youtube="D-Ol2N5Tno0" component="video"/>
       </answer>
     </definition>
 
@@ -78,7 +78,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="_LI6XX-l3Es"/>
+        <video youtube="_LI6XX-l3Es" component="video"/>
       </answer>
     </example>
 
@@ -89,7 +89,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="n1IX0Dye7x0"/>
+        <video youtube="n1IX0Dye7x0" component="video"/>
       </answer>
     </example>
 
@@ -107,7 +107,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="bJ-56RhKkfc"/>
+        <video youtube="bJ-56RhKkfc" component="video"/>
       </answer>
     </example>
 
@@ -118,7 +118,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="DLiv7yoaEUE"/>
+        <video youtube="DLiv7yoaEUE" component="video"/>
       </answer>
     </example>
 
@@ -212,7 +212,7 @@
       <answer>
         <p>
           Here's a different approach to the problem. If we can construct <m>18, 19, 20, \dots k</m> postage using the four and seven cent stamps, then for the <m>k+1</m> cent postage, We'll just pretend you asked for four cents less! $k+1 -4 = k-3$. Were're guaranteed to be able to make the postage by the induction hypothesis. Imagine putting those stamps on the package. Then all we need is to glue on one four cent stamp and we're good to go!
-          <video youtube="73v1BI2omjs"/>
+          <video youtube="73v1BI2omjs" component="video"/>
         </p>
       </answer>
     </example>
@@ -225,7 +225,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="PvnCjyp9NHc"/>
+        <video youtube="PvnCjyp9NHc" component="video"/>
       </answer>
     </example>
 

@@ -63,7 +63,12 @@
         </p>
         <figure>
           <caption>Animation of the Towers of Hanoi puzzle with 4 disks</caption>
-          <image source="Tower_of_Hanoi_4.gif" width="50%">
+          <image source="Tower_of_Hanoi_4.gif" width="50%" component="html">
+            <description>
+              The Animation of the Towers of Hanoi puzzle by André Karwath. There are three pegs and in this picture four disks. The animation proceeds to show moving the top disk to the far right peg. The next disk to the middle peg, then the smallest disk to the second peg... and so on until we have moved all disks to the third peg.
+            </description>
+          </image>
+          <image source="Tower_of_Hanoi_4.png" width="50%" component="pdf">
             <description>
               The Animation of the Towers of Hanoi puzzle by André Karwath. There are three pegs and in this picture four disks. The animation proceeds to show moving the top disk to the far right peg. The next disk to the middle peg, then the smallest disk to the second peg... and so on until we have moved all disks to the third peg.
             </description>
@@ -79,7 +84,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="aFZJ5XArC-s"/>
+        <video youtube="aFZJ5XArC-s" component="video"/>
       </answer>
 
     </example>
@@ -92,7 +97,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="4ENaXarcKzM"/>
+        <video youtube="4ENaXarcKzM" component="video"/>
       </answer>
 
     </example>
@@ -119,7 +124,7 @@
       </statement>
     </example>
     <answer>
-      <video youtube="oigH5x633sI"/>
+      <video youtube="oigH5x633sI" component="video"/>
     </answer>
 
   </subsection>
@@ -206,7 +211,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="JicG-l7ohfA"/>
+        <video youtube="JicG-l7ohfA" component="video"/>
       </answer>
 
       <solution>
@@ -265,7 +270,7 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
         </p>
       </statement>
       <answer>
-        <video youtube="Xj2WqRX4Qb0"/>
+        <video youtube="Xj2WqRX4Qb0" component="video"/>
       </answer>
 
     </example>
@@ -277,7 +282,7 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
         </p>
       </statement>
       <answer>
-        <video youtube="d3WhI-QaqBE"/>
+        <video youtube="d3WhI-QaqBE" component="video"/>
       </answer>
 
     </example>
@@ -291,7 +296,7 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
       </statement>
     </example>
     <answer>
-      <video youtube="WiTOTycl1dg"/>
+      <video youtube="WiTOTycl1dg" component="video"/>
     </answer>
 
   </subsection>

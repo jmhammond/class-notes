@@ -134,7 +134,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="mQ_cvHA1SUw"/>
+        <video youtube="mQ_cvHA1SUw" component="video"/>
       </answer>
     </example>
 
@@ -146,7 +146,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="vsFVy3q3q5M"/>
+        <video youtube="vsFVy3q3q5M" component="video"/>
       </answer>
 
     </example>
@@ -158,7 +158,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="0SIbTxN9WHw"/>
+        <video youtube="0SIbTxN9WHw" component="video"/>
       </answer>
 
     </example>
@@ -190,7 +190,7 @@
           </p>
         </statement>
         <answer>
-          <video youtube="-fXm5dnyevg"/>
+          <video youtube="-fXm5dnyevg" component="video"/>
         </answer>
 
       </example>
@@ -201,7 +201,7 @@
           </p>
         </statement>
         <answer>
-          <video youtube="P8n4FjM_Rxc"/>
+          <video youtube="P8n4FjM_Rxc" component="video"/>
         </answer>
 
       </example>
@@ -226,7 +226,7 @@
           </p>
         </statement>
         <answer>
-          <video youtube="cPbaYSiGqKU"/>
+          <video youtube="cPbaYSiGqKU" component="video"/>
         </answer>
 
       </example>
@@ -270,7 +270,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="rWvqVUvKBBs"/>
+        <video youtube="rWvqVUvKBBs" component="video"/>
       </answer>
 
     </example>
@@ -287,7 +287,7 @@
         </ol>
       </statement>
       <answer>
-        <video youtube="SSWODzVYxCc"/>
+        <video youtube="SSWODzVYxCc" component="video"/>
       </answer>
 
     </example>
@@ -316,7 +316,7 @@
         </ul>
       </statement>
       <answer>
-        <video youtube="pLwuZ-JaTms"/>
+        <video youtube="pLwuZ-JaTms" component="video"/>
       </answer>
     </example>
     <note>
@@ -331,7 +331,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="_UBA9HDFAYI"/>
+        <video youtube="_UBA9HDFAYI" component="video"/>
       </answer>
     </example>
 

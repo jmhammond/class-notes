@@ -27,7 +27,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="ZNgKw-fIzLk"/>
+        <video youtube="ZNgKw-fIzLk" component="video"/>
       </answer>
     </example>
 
@@ -79,7 +79,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="zo_GYIP61i8"/>
+        <video youtube="zo_GYIP61i8" component="video"/>
       </answer>
     </example>
 
@@ -126,8 +126,8 @@
         </p>
       </statement>
       <answer>
-        <video youtube="e3bMOe2fbKg"/>
-        <video youtube="gBSNZsWxRZ8"/>
+        <video youtube="e3bMOe2fbKg" component="video"/>
+        <video youtube="gBSNZsWxRZ8" component="video"/>
       </answer>
     </example>
 
@@ -202,7 +202,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="dCVopWx51sc"/>
+        <video youtube="dCVopWx51sc" component="video"/>
       </answer>
     </example>
 
@@ -214,7 +214,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="K8eg6Cd_QL8"/>
+        <video youtube="K8eg6Cd_QL8" component="video"/>
       </answer>
     </example>
 
@@ -226,7 +226,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="xY9ZHorCv4I"/>
+        <video youtube="xY9ZHorCv4I" component="video"/>
       </answer>
     </example>
 
@@ -241,7 +241,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="1SD1LJv22Cg"/>
+        <video youtube="1SD1LJv22Cg" component="video"/>
       </answer>
     </example>
 

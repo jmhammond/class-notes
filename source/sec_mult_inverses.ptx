@@ -129,7 +129,7 @@
       </p>
     </solution>
     <answer>
-      <video youtube="MyWZyvJUlI4"/>
+      <video youtube="MyWZyvJUlI4" component="video"/>
     </answer>
 
   </example>
@@ -142,7 +142,7 @@
       </p>
     </statement>
     <answer>
-      <video youtube="-_3jKc2ul4w"/>
+      <video youtube="-_3jKc2ul4w" component="video"/>
     </answer>
 
   </example>
@@ -183,7 +183,7 @@
       </p>
     </statement>
     <answer>
-      <video youtube="IQ3D_dVSl9k"/>
+      <video youtube="IQ3D_dVSl9k" component="video"/>
     </answer>
 
   </example>
@@ -199,7 +199,7 @@
       </p>
     </statement>
     <answer>
-      <video youtube="R14CL5b6GjE"/>
+      <video youtube="R14CL5b6GjE" component="video"/>
     </answer>
 
   </proposition>
@@ -222,7 +222,7 @@
       </p>
     </statement>
     <answer>
-      <video youtube="J-Iu16MEKeo"/>
+      <video youtube="J-Iu16MEKeo" component="video"/>
     </answer>
   </example>
 

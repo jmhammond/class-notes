@@ -6,6 +6,7 @@
   <!-- source PreTeXt file                                      -->
   <source webwork-problems="../generated-assets/webwork/webwork-representations.ptx">
     <directories external="../assets" generated="../generated-assets"/>
+    <version include="html video"/>
   </source>
 
   <numbering>

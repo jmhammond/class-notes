@@ -104,7 +104,7 @@
       </table>
     </solution>
     <answer>
-      <video youtube="44izzfqVMNo"/>
+      <video youtube="44izzfqVMNo" component="video"/>
     </answer>
 
   </example>
@@ -227,7 +227,7 @@
       </p>
     </statement>
     <answer>
-      <video youtube="gFjfEOKlyEc"/>
+      <video youtube="gFjfEOKlyEc" component="video"/>
     </answer>
 
   </example>

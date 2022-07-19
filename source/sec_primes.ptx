@@ -43,7 +43,7 @@
       </p>
     </statement>
     <answer>
-      <video youtube="qCvMLt-QNd8"/>
+      <video youtube="qCvMLt-QNd8" component="video"/>
     </answer>
 
   </example>
@@ -75,7 +75,7 @@
       </p>
     </statement>
     <answer>
-      <video youtube="Hq88K-lSPFI"/>
+      <video youtube="Hq88K-lSPFI" component="video"/>
     </answer>
 
   </example>
@@ -431,7 +431,7 @@
       </table>
     </statement>
     <answer>
-      <video youtube="GHavZM0uS5w"/>
+      <video youtube="GHavZM0uS5w" component="video"/>
     </answer>
 
   </example>
@@ -444,7 +444,7 @@
       </p>
     </statement>
     <answer>
-      <video youtube="Y_9K-BpTdTo"/>
+      <video youtube="Y_9K-BpTdTo" component="video"/>
     </answer>
 
   </proposition>

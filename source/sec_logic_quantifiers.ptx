@@ -67,7 +67,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="BUP1k8Yy0X4"/>
+        <video youtube="BUP1k8Yy0X4" component="video"/>
       </answer>
 
     </example>
@@ -87,7 +87,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="Z7wornF1Euw"/>
+        <video youtube="Z7wornF1Euw" component="video"/>
       </answer>
     </definition>
     <definition>
@@ -97,7 +97,7 @@
           The <term>existential quantification</term> of <m>P(x)</m> is the statement that there is some value <m>x</m> in the universe of discourse for which <m>P(x)</m> is true. We write <m> \exists x P(x)</m>
         </p>
         <answer>
-          <video youtube="H_tA2tyGDdQ"/>
+          <video youtube="H_tA2tyGDdQ" component="video"/>
         </answer>
       </statement>
     </definition>
@@ -136,7 +136,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="n9jfIFqiVnU"/>
+        <video youtube="n9jfIFqiVnU" component="video"/>
       </answer>
 
     </example>
@@ -154,7 +154,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="8kb1Krhw6Ks"/>
+        <video youtube="8kb1Krhw6Ks" component="video"/>
       </answer>
 
     </example>
@@ -173,7 +173,7 @@
       </p>
 
       <answer>
-        <video youtube="wgjXIN8csMs"/>
+        <video youtube="wgjXIN8csMs" component="video"/>
       </answer>
     </remark>
     <note>
@@ -203,7 +203,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="DQEKqe7ZYro"/>
+        <video youtube="DQEKqe7ZYro" component="video"/>
       </answer>
 
     </example>
@@ -225,7 +225,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="9qVRwljEnu4"/>
+        <video youtube="9qVRwljEnu4" component="video"/>
       </answer>
 
     </example>
@@ -243,7 +243,7 @@
         </p>
       </statement>
       <answer>
-        <video youtube="ao3a6VF4xUU"/>
+        <video youtube="ao3a6VF4xUU" component="video"/>
       </answer>
 
     </example>
