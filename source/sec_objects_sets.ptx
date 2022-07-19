@@ -98,8 +98,8 @@
           </dl>
         </p>
       </statement>
-      <answer>
-        <video youtube="QyDUE4zSIEU" component="video"/>
+      <answer component="video">
+        <video youtube="QyDUE4zSIEU" />
       </answer>
     </definition>
 
@@ -155,8 +155,8 @@
           <!-- <me>A \subset B \iff \forall x (x \in A \to x \in B) \text{ and } \exists y (y\in B \text{ and } y \not \in A) </me> -->
         </p>
       </statement>
-      <answer>
-        <video youtube="cAh-4Xe7Auc" component="video"/>
+      <answer component="video">
+        <video youtube="cAh-4Xe7Auc" />
       </answer>
     </definition>
 
@@ -235,8 +235,8 @@
         </p>
       </statement>
 
-      <answer>
-        <video youtube="Xqe7xNxH4aE" component="video"/>
+      <answer component="video">
+        <video youtube="Xqe7xNxH4aE" />
       </answer>
     </example>
 
@@ -268,8 +268,8 @@
         </p>
       </statement>
 
-      <answer>
-        <video youtube="CRqvTn3ncPY" component="video"/>
+      <answer component="video">
+        <video youtube="CRqvTn3ncPY" />
       </answer>
     </example>
 
@@ -317,8 +317,8 @@
         </p>
       </statement>
 
-      <answer>
-        <video youtube="TeCOF_lO5qU" component="video"/>
+      <answer component="video">
+        <video youtube="TeCOF_lO5qU" />
       </answer>
     </example>
 
@@ -449,8 +449,8 @@
         </ol>
       </statement>
 
-      <answer>
-        <video youtube="aj5UcvPjCoQ" component="video"/>
+      <answer component="video">
+        <video youtube="aj5UcvPjCoQ" />
       </answer>
     </example>
     <note>
@@ -479,8 +479,8 @@
       </statement>
 
 
-      <answer>
-        <video youtube="VVXEDmYGy2s" component="video"/>
+      <answer component="video">
+        <video youtube="VVXEDmYGy2s" />
       </answer>
     </example>
 

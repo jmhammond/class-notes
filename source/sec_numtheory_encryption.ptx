@@ -254,8 +254,8 @@
       <p>
         To be able to decrypt an affine function, we need <m>\gcd(a,n)=1</m> in order that <m>a</m> is an invertible element. We can find the inverse via the <xref ref="euclidean-algorithm"> Euclidean Algorithm with back-substitution</xref>. Recall, the inverse of an invertible element is its Bézout coefficient.
       </p>
-      <answer>
-        <video youtube="iVWyD0mvxwQ" component="video"/>
+      <answer component="video">
+        <video youtube="iVWyD0mvxwQ" />
       </answer>
 
     </note>
@@ -285,8 +285,8 @@
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="dRLN1bj6mTI" component="video"/>
+      <answer component="video">
+        <video youtube="dRLN1bj6mTI" />
       </answer>
 
     </example>
@@ -339,8 +339,8 @@
           Let <m>p = 59, q=83</m>. Choose <m>e=15</m> Encrypt <q>WHATS UP</q> and then decrypt the result to confirm it worked. Do this by hand (with the help of a calculator). 
         </p>
       </statement>
-      <answer>
-        <video youtube="xEf5vBH5x_Y" component="video"/>
+      <answer component="video">
+        <video youtube="xEf5vBH5x_Y" />
       </answer>
 
     </example>
@@ -488,8 +488,8 @@
         <li> Enter this information into the Sage cell below to decrypt it (using your <m>n, d, \and c</m>), change <c>what_to_do</c> to <q>decrypt</q>, and then press Evaluate(Python). </li>
         <li> Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example <q>KEEPITSECRETKEEPITSAFEXX</q> will not receive full credit. </li>
       </ol>
-      <answer>
-        <video youtube="GyzmNNCsdWE" component="video"/>
+      <answer component="video">
+        <video youtube="GyzmNNCsdWE" />
       </answer>
     </p>
 

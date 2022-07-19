@@ -38,8 +38,8 @@
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="zNYCHy8KUdM" component="video"/>
+      <answer component="video">
+        <video youtube="zNYCHy8KUdM" />
       </answer>
     </example>
 
@@ -70,8 +70,8 @@
           <!-- </answer> -->
         </p>
       </statement>
-      <answer>
-        <video youtube="tyb4raOZwd4" component="video"/>
+      <answer component="video">
+        <video youtube="tyb4raOZwd4" />
       </answer>
     </example>
 
@@ -119,8 +119,8 @@
           What is the logical negation of <m>p \to q</m> in simple English? 
         </p>
       </statement>
-      <answer>
-        <video youtube="M-FfG0Per7U" component="video"/>
+      <answer component="video">
+        <video youtube="M-FfG0Per7U" />
       </answer>
     </example>
 
@@ -153,8 +153,8 @@
             <li> The <term>contrapositive</term> is <m>\neg q \to \neg p</m></li>
           </ul>
         </p>
-        <answer>
-          <video youtube="hHfbI1fPIME" component="video"/>
+        <answer component="video">
+          <video youtube="hHfbI1fPIME" />
         </answer>
       </statement>
     </definition>
@@ -380,8 +380,8 @@
         </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="EG531mTSNRQ" component="video"/>
+      <answer component="video">
+        <video youtube="EG531mTSNRQ" />
       </answer>
     </example>
 
@@ -399,8 +399,8 @@
           </ul>
         </p>
       </statement>
-      <answer>
-        <video youtube="wVrgQ0vN9Ho" component="video"/>
+      <answer component="video">
+        <video youtube="wVrgQ0vN9Ho" />
       </answer>
     </example>
 

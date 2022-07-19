@@ -82,8 +82,8 @@
           Notice that these ordered pairs correspond to the lines on the graph diagram with each of the first coordinates being connected to the second coordinate. E.g. an arrow goes from John to Eric.
         </p>
       </solution>
-      <answer>
-        <video youtube="2-mT6s29iy8" component="video"/>
+      <answer component="video">
+        <video youtube="2-mT6s29iy8" />
       </answer>
     </example>
 
@@ -147,7 +147,7 @@
         </p>
         <p component="video">
           and a video for the graph:
-          <video youtube="0CiMkIDNe7E" component="video"/>
+          <video youtube="0CiMkIDNe7E" />
         </p>
       </answer>
 
@@ -192,8 +192,8 @@
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="S0CTis66gd8" component="video"/>
+      <answer component="video">
+        <video youtube="S0CTis66gd8" />
       </answer>
 
     </example>
@@ -230,8 +230,8 @@
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="JM5WdUZmliI" component="video"/>
+      <answer component="video">
+        <video youtube="JM5WdUZmliI" />
       </answer>
 
     </example>
@@ -269,8 +269,8 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </ul>
         and we define the <term>range</term> of the function <m>f</m> to be the set of images of every element in the domain, <m>A</m>, and often write the range by <m>f(A)</m>. Note that the range is a subset of the codomain, <m>f(A)\subseteq B</m>.
       </p>
-      <answer>
-        <video youtube="3pBXG34ojDY" component="video"/>
+      <answer component="video">
+        <video youtube="3pBXG34ojDY" />
       </answer>
     </definition>
 
@@ -297,8 +297,8 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="eDNgCcI8jL0" component="video"/>
+      <answer component="video">
+        <video youtube="eDNgCcI8jL0" />
       </answer>
 
     </example>
@@ -320,8 +320,8 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <p>
         To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (a counterexample!)
       </p>
-      <answer>
-        <video youtube="4i3SIx61-yQ" component="video"/>
+      <answer component="video">
+        <video youtube="4i3SIx61-yQ" />
       </answer>
 
     </note>
@@ -336,8 +336,8 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="svYqYaVvp9g" component="video"/>
+      <answer component="video">
+        <video youtube="svYqYaVvp9g" />
       </answer>
 
     </example>
@@ -350,8 +350,8 @@ b. note that the inverse of a function is always a relation, but not always a fu
         <!--   f \text{ is surjective means } \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) )  -->
         <!-- </me> -->
       </p>
-      <answer>
-        <video youtube="A2dQwaFFC8I" component="video"/>
+      <answer component="video">
+        <video youtube="A2dQwaFFC8I" />
       </answer>
 
     </definition>
@@ -368,12 +368,12 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
-      <answer>
-        <p component="video"> Two videos in this section:
-        <video youtube="HlbvQ9uLjCU" component="video"/>
+      <answer component="video">
+        <p > Two videos in this section:
+        <video youtube="HlbvQ9uLjCU" />
         </p>
         <p>
-          <video youtube="Zdi-9-RCPrE" component="video"/>
+          <video youtube="Zdi-9-RCPrE" />
         </p>
       </answer>
       
@@ -409,8 +409,8 @@ b. note that the inverse of a function is always a relation, but not always a fu
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="_e8FRN7xlGY" component="video"/>
+      <answer component="video">
+        <video youtube="_e8FRN7xlGY" />
       </answer>
 
     </example>
@@ -600,8 +600,8 @@ b. note that the inverse of a function is always a relation, but not always a fu
           For the bijection(s) found in <xref ref="example-bijections"/>, find the inverse function.
         </p>
       </statement>
-      <answer>
-        <video youtube="VHzBUIDi_f4" component="video"/>
+      <answer component="video">
+        <video youtube="VHzBUIDi_f4" />
       </answer>
 
     </example>
@@ -724,8 +724,8 @@ b. note that the inverse of a function is always a relation, but not always a fu
           Suppose <m>f</m> and <m>f\circ g</m> are injective. Does it follow that <m>g</m> is also injective?
         </p>
       </statement>
-      <answer>
-        <video youtube="9XIjEKAMRZI" component="video"/>
+      <answer component="video">
+        <video youtube="9XIjEKAMRZI" />
       </answer>
 
     </example>

@@ -103,8 +103,8 @@
         </tabular>
       </table>
     </solution>
-    <answer>
-      <video youtube="44izzfqVMNo" component="video"/>
+    <answer component="video">
+      <video youtube="44izzfqVMNo" />
     </answer>
 
   </example>
@@ -226,8 +226,8 @@
         This is your first experience with logical proof! It won't be your last. Much of this class is about learning to understand and argue rigorously.
       </p>
     </statement>
-    <answer>
-      <video youtube="gFjfEOKlyEc" component="video"/>
+    <answer component="video">
+      <video youtube="gFjfEOKlyEc" />
     </answer>
 
   </example>

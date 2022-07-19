@@ -137,8 +137,8 @@
         </ul>
       </p>
     </statement>
-    <answer>
-      <video youtube="DLqA_e2lbpo" component="video"/>
+    <answer component="video">
+      <video youtube="DLqA_e2lbpo" />
     </answer>
 
   </example>
@@ -221,11 +221,11 @@
         </tabular>
       </table>
     </solution>
-    <answer>
-      <p component="video">
+    <answer component="video">
+      <p>
         Note that the number of the example is wrong, the video says 1.4.7, not 2.4.7. Sorry!
       </p>
-      <video youtube="iMv1sRXNKcI" component="video"/>
+      <video youtube="iMv1sRXNKcI" />
     </answer>
 
   </example>
@@ -240,8 +240,8 @@
         </p>
       </blockquote>
     </statement>
-    <answer>
-      <video youtube="-R5nLeUguWU" component="video"/>
+    <answer component="video">
+      <video youtube="-R5nLeUguWU" />
     </answer>
 
     <!--

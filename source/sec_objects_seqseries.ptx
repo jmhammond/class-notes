@@ -26,8 +26,8 @@
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="ZNgKw-fIzLk" component="video"/>
+      <answer component="video">
+        <video youtube="ZNgKw-fIzLk" />
       </answer>
     </example>
 
@@ -78,8 +78,8 @@
           Note that the Fibonacci sequence has both the recursive definition <em>and</em> a definition for the first two terms of the sequence.
         </p>
       </statement>
-      <answer>
-        <video youtube="zo_GYIP61i8" component="video"/>
+      <answer component="video">
+        <video youtube="zo_GYIP61i8" />
       </answer>
     </example>
 
@@ -125,9 +125,9 @@
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="e3bMOe2fbKg" component="video"/>
-        <video youtube="gBSNZsWxRZ8" component="video"/>
+      <answer component="video">
+        <video youtube="e3bMOe2fbKg" />
+        <video youtube="gBSNZsWxRZ8" />
       </answer>
     </example>
 
@@ -201,8 +201,8 @@
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="dCVopWx51sc" component="video"/>
+      <answer component="video">
+        <video youtube="dCVopWx51sc" />
       </answer>
     </example>
 
@@ -213,8 +213,8 @@
           <me>\sum_{k=0}^n ar^k = \frac{a-ar^{n+1}}{1-r}</me>.
         </p>
       </statement>
-      <answer>
-        <video youtube="K8eg6Cd_QL8" component="video"/>
+      <answer component="video">
+        <video youtube="K8eg6Cd_QL8" />
       </answer>
     </example>
 
@@ -225,8 +225,8 @@
           Show that <me>\sum_{j=1}^n (a_j - a_{j-1}) = a_n - a_0</me>
         </p>
       </statement>
-      <answer>
-        <video youtube="xY9ZHorCv4I" component="video"/>
+      <answer component="video">
+        <video youtube="xY9ZHorCv4I" />
       </answer>
     </example>
 
@@ -240,8 +240,8 @@
           </ol>
         </p>
       </statement>
-      <answer>
-        <video youtube="1SD1LJv22Cg" component="video"/>
+      <answer component="video">
+        <video youtube="1SD1LJv22Cg" />
       </answer>
     </example>
 

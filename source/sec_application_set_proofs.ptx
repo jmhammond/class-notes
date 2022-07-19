@@ -35,8 +35,8 @@
         </ol>
       </p>
     </statement>
-    <answer>
-      <video youtube="gfnlEc9qxSQ" component="video"/>
+    <answer component="video">
+      <video youtube="gfnlEc9qxSQ" />
     </answer>
 
   </definition>
@@ -113,8 +113,8 @@
         thus <m>A \cup \emptyset = A</m>.
       </p>
     </solution>
-    <answer>
-      <video youtube="cNiSxQsOloI" component="video"/>
+    <answer component="video">
+      <video youtube="cNiSxQsOloI" />
     </answer>
   </example>
 

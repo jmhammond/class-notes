@@ -133,8 +133,8 @@
           Prove that the sum of two odd numbers is even.
         </p>
       </statement>
-      <answer>
-        <video youtube="mQ_cvHA1SUw" component="video"/>
+      <answer component="video">
+        <video youtube="mQ_cvHA1SUw" />
       </answer>
     </example>
 
@@ -145,8 +145,8 @@
           Prove that if <m>n</m> is even, then <m>n^2</m> is even.
         </p>
       </statement>
-      <answer>
-        <video youtube="vsFVy3q3q5M" component="video"/>
+      <answer component="video">
+        <video youtube="vsFVy3q3q5M" />
       </answer>
 
     </example>
@@ -157,8 +157,8 @@
           Prove that if <m>m+n</m> and <m>n + p</m> are even integers, then <m>m+p</m> is even.
         </p>
       </statement>
-      <answer>
-        <video youtube="0SIbTxN9WHw" component="video"/>
+      <answer component="video">
+        <video youtube="0SIbTxN9WHw" />
       </answer>
 
     </example>
@@ -189,8 +189,8 @@
             Show that if <m>n</m> is an integer and <m>n^3 + 5</m> is odd, then <m>n</m> is even.
           </p>
         </statement>
-        <answer>
-          <video youtube="-fXm5dnyevg" component="video"/>
+        <answer component="video">
+          <video youtube="-fXm5dnyevg" />
         </answer>
 
       </example>
@@ -200,8 +200,8 @@
             Prove that if <m>n^2</m> is even, then <m>n</m> is even.
           </p>
         </statement>
-        <answer>
-          <video youtube="P8n4FjM_Rxc" component="video"/>
+        <answer component="video">
+          <video youtube="P8n4FjM_Rxc" />
         </answer>
 
       </example>
@@ -225,8 +225,8 @@
             Prove that <m>\sqrt{2}</m> is irrational
           </p>
         </statement>
-        <answer>
-          <video youtube="cPbaYSiGqKU" component="video"/>
+        <answer component="video">
+          <video youtube="cPbaYSiGqKU" />
         </answer>
 
       </example>
@@ -269,8 +269,8 @@
           Prove that <m>n</m> is even if and only if <m>7n+4</m> is even.
         </p>
       </statement>
-      <answer>
-        <video youtube="rWvqVUvKBBs" component="video"/>
+      <answer component="video">
+        <video youtube="rWvqVUvKBBs" />
       </answer>
 
     </example>
@@ -286,8 +286,8 @@
           <li>The average of <m>a</m> and <m>b</m> is less than <m>b</m> </li>
         </ol>
       </statement>
-      <answer>
-        <video youtube="SSWODzVYxCc" component="video"/>
+      <answer component="video">
+        <video youtube="SSWODzVYxCc" />
       </answer>
 
     </example>
@@ -315,8 +315,8 @@
           </li>
         </ul>
       </statement>
-      <answer>
-        <video youtube="pLwuZ-JaTms" component="video"/>
+      <answer component="video">
+        <video youtube="pLwuZ-JaTms" />
       </answer>
     </example>
     <note>
@@ -330,8 +330,8 @@
           Prove that <m>5x + 5y</m> is an odd integer when <m>x</m> and <m>y</m> are integers of opposite parity (not both even, not both odd).
         </p>
       </statement>
-      <answer>
-        <video youtube="_UBA9HDFAYI" component="video"/>
+      <answer component="video">
+        <video youtube="_UBA9HDFAYI" />
       </answer>
     </example>
 

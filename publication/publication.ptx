@@ -6,7 +6,15 @@
   <!-- source PreTeXt file                                      -->
   <source webwork-problems="../generated-assets/webwork/webwork-representations.ptx">
     <directories external="../assets" generated="../generated-assets"/>
+
+    <!-- if you want the basic web version, use this-->
     <version include="html video"/>
+
+    <!-- if you want no videos, use this-->
+    <!-- <version include="html"/> -->
+
+    <!-- if you want pdf and no videos, use this-->
+    <!-- <version include="pdf"/> -->
   </source>
 
   <numbering>
