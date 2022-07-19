@@ -606,7 +606,7 @@
     <title>Computer Corner - Implementing the Sieve</title>
     <p>
       Implementing the three step algorithm is very straight-forward.
-      <ul label="circle">
+      <ul marker="circle">
         <li> Make a large list of integers </li>
         <li> Delete every multiple of of each prime we encounter</li>
       </ul>
