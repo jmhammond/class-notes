@@ -316,6 +316,11 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
     <p>
       This computer corner isn't about a particular connection to computer science but rather just helping explain some of the Python functions I've used above as we checked our answers. You can use this to check your own answers! We'll walk through, using the same code changing one piece at a time as we build up our building blocks.
     </p>
+    <aside>
+      <title>Actually, it is about CS</title>
+      <p>Here we're highlighting that sequences are actually just functions, and we can compute them via CS functions. They just happen to be functions defined only on <m>\N</m>
+      </p>
+    </aside>
     <p>
       In Python, <url href="https://www.w3schools.com/python/python_functions.asp" visual="https://www.w3schools.com/python/python_functions.asp">you define a function</url> by writing <c>def functionName(x):</c> where <c>x</c> is the input variable and the colon is not optional. Everything inside the function <em>must</em> be indented!
     </p>
