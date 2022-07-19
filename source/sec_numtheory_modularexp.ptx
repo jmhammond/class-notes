@@ -115,7 +115,7 @@
   </p>
   <p>
     Why do we care? Let's take a look at repeatedly squaring a number, say <m>n</m>:
-    <ul label="circle">
+    <ul marker="circle">
       <li> <m>n^1 = n^1</m> </li>
       <li> <m>(n^1)^2 = n^{ 1\cdot2 }</m> </li>
       <li> <m>(n^2)^2 = n^{ 2\cdot2 } = n^4</m> </li>
@@ -155,7 +155,7 @@
         <li> 
           <p>
             Repeatedly square and reduce <m>37 \pmod{52}</m> six times. This works since <m>2^6 = 64</m>, which is the highest power of <m>2</m> in the binary representation of 82.
-            <ul label="circle">
+            <ul marker="circle">
               <li><m>37^1 = 37^1 = 37 \equiv 37\pmod{52}</m></li>
               <li><m>37^2 = 37^2 = 1369 \equiv 17\pmod{52}</m></li>
               <li><m>37^4 = 17^2 = 289 \equiv 29 \pmod{52}</m></li>
@@ -250,7 +250,7 @@
             </sidebyside>
             <p>
               then you click-drag to expand the formula down until your count is 12 and power of 2 is 4096. This tells us the following equivalences, with asterisks marking those values we need to finish the computation:
-              <ul label="circle">
+              <ul marker="circle">
                 <li> <m>514^1 = 514 \pmod{711} </m>*  </li>
                 <li> <m>514^2 \equiv 415 \pmod{711} </m>*  </li>
                 <li> <m>514^4 \equiv 163 \pmod{711} </m>*</li>

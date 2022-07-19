@@ -5,7 +5,7 @@
     <title>Predicates</title>
     <p>
       Consider this mathematical sentence: <q> <m> x \lt 5 </m></q>.
-      <ul label="circle">
+      <ul marker="circle">
         <li><m>x</m> is a variable, the subject of the sentence.</li>
         <li> <q>is less than five</q> is the <term> predicate</term></li>
         <li> A predicate is a property that a subject can have.</li>
