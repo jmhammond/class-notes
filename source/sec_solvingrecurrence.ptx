@@ -32,12 +32,12 @@
       <input>
         %%time
         def recursive(x):
-        if x == 0:
-            return 1;
-        elif x == 1:
-            return 3;
-        else:
-            return recursive(x-2)
+            if x == 0:
+                return 1;
+            elif x == 1:
+                return 3;
+            else:
+                return recursive(x-2)
 
         print(recursive(10000))
       </input>
@@ -97,6 +97,15 @@
         </p>
       </statement>
       <answer component="video">
+        <p>
+          In this video I miscounted the number of bitstrings of length 4. I said <m>a_4 = 15</m> but if you actually count the number of bitstrings, there's only <m>a_4 = 13</m>. Oops!😅
+        </p>
+        <p>
+          Note that our solution to the recurrence,
+          <me> a_n = a_{n-1} + a_{n-2} + a_{n-3}</me>
+          with <m>a_1 = 2, a_2 = 4,</m> and <m>a_3 = 7</m> is still correct, and matches:
+          <me> a_4 = 7 + 4  +2 = 13</me>, which is what I should have found.
+        </p>
         <video youtube="4ENaXarcKzM" />
       </answer>
 
@@ -122,10 +131,10 @@
           A vending machine dispensing books of stamps accepts $1 coins, $1 bills, and 5 bills. Find a recurrence relation for the number of ways to deposit <m>n</m> dollars in the vending machine, where the order in which the bills are deposited matters.
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="oigH5x633sI" />
+      </answer>
     </example>
-    <answer component="video">
-      <video youtube="oigH5x633sI" />
-    </answer>
 
   </subsection>
 
@@ -159,26 +168,27 @@
       </statement>
     </definition>
 
-    <note>
-      <p>
-        For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward and takes away from focusing on the new material.
-      </p>
-    </note>
+    <p>
+      For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward and takes away from focusing on the new material.
+    </p>
 
-    <note>
-      <p>
-        If <m>a_n = r^n</m> is a solution to the (degree two) recurrence relation <m>a_n = c_1 a_{n-1} + c_2 a_{n-2}</m>, then we we can plug it in:
-        <md>
-          <mrow> \displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} </mrow>
-          <mrow> \displaystyle r^n &amp;= c_1 r^{n-1} + c_2r^{n-2} </mrow>
-          <mrow> \text{ Divide both sides by } r^{n-2}</mrow>
-          <mrow>
-            \displaystyle r^2 &amp;= c_1 r + c_2
-          </mrow>
-          <mrow>\displaystyle r^2 - c_1 r - c_2 &amp;= 0</mrow>
-        </md>
-      </p>
-    </note>
+    <p>
+      Now let's play with how we can actually solve this type of recurrence. Let's pretend that <m>a_n = r^n</m> is a solution to the (degree two) recurrence relation <m>a_n = c_1 a_{n-1} + c_2 a_{n-2}</m> for some variable <m>r</m>.
+    </p>
+    <p>
+
+      Let's plug it in to the recurrence and simplify:
+      <md>
+        <mrow> \displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} </mrow>
+        <mrow> \displaystyle r^n &amp;= c_1 r^{n-1} + c_2r^{n-2} </mrow>
+        <mrow> \text{ Divide both sides by } r^{n-2}</mrow>
+        <mrow>
+          \displaystyle r^2 &amp;= c_1 r + c_2
+        </mrow>
+        <mrow>\displaystyle r^2 - c_1 r - c_2 &amp;= 0</mrow>
+      </md>
+      This equation, <m>r^2 - c_1 r - c_2 = 0</m>, is a quadratic equation in the variable <m>r</m>, and we'll give it a special name.
+    </p>
 
     <definition>
       <title>Characteristic Equation</title>
@@ -215,10 +225,12 @@
       </answer>
 
       <solution>
+        <p>
+        After using the characteristic root method, we find the answer is <m>a_n = 3\cdot 2^{n} + (-1)^{n+1}</m>. We can confirm our answer by comparing this explicit solution with the recursive version using Python!
+        </p>
+
         <sage>
           <input>
-v=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
 def f(n):
     return 3*pow(2,n)+pow(-1, n+1)
 
@@ -230,12 +242,12 @@ def recur(n):
     else:
         return recur(n-1) + 2*recur(n-2)
 
-print("Explicit solution: " + str(map(f,v)))
+print("Using the explicit solution: " + str(list(map(f,range(0,10)))))
 print("\n")
-print("Recursive sequence: " + str(map(recur,v)))
+print("Recursive sequence: " + str(list(map(recur,range(0, 10)))))
           </input>
           <output>
-Explicit solution: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
+Using the explicit solution: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
 
 Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
           </output>
@@ -257,11 +269,9 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
       </statement>
     </theorem>
 
-    <note>
-      <p>
-        Note the small differences between these statements. It is significant with respect to how you solve the sequence.
-      </p>
-    </note>
+    <p>
+      Note the small differences between these statements. It is significant with respect to how you solve the sequence.
+    </p>
 
     <example>
       <statement>
@@ -288,7 +298,7 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
     </example>
 
 
-    <example>
+    <example xml:id="example-7an-1-12an-2">
       <statement>
         <p>
           Solve <m>a_n = 7a_{n-1} - 12a_{n-2}</m> with <m>a_0 = 12</m> and <m>a_1 = 48</m>
@@ -300,7 +310,96 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
     </answer>
 
   </subsection>
-    
+
+  <subsection xml:id="sec-recurrences-with-python">
+    <title>Computer Corner</title>
+    <p>
+      This computer corner isn't about a particular connection to computer science but rather just helping explain some of the Python functions I've used above as we checked our answers. You can use this to check your own answers! We'll walk through, using the same code changing one piece at a time as we build up our building blocks.
+    </p>
+    <p>
+      In Python, <url href="https://www.w3schools.com/python/python_functions.asp" visual="https://www.w3schools.com/python/python_functions.asp">you define a function</url> by writing <c>def functionName(x):</c> where <c>x</c> is the input variable and the colon is not optional. Everything inside the function <em>must</em> be indented!
+    </p>
+    <p>
+      Here's an example function that squares whatever is input.
+    </p>
+    <sage language="python">
+      <input>
+def square(x):
+    return x*x   #this means x times itself
+
+# print 5^2
+print(square(5))
+      </input>
+      <output>
+        25
+      </output>
+    </sage>
+    <p>
+      The <url href="https://www.w3schools.com/python/ref_func_map.asp" visual="https://www.w3schools.com/python/ref_func_map.asp"><c>map</c> function </url> takes two inputs, the first is a function and the second is a list.  <c>map</c> applies the function to each and every input in the list. It does this <em>lazily</em>, though, meaning that if you just call <c>map(square, [1,2,3,4])</c>, you'll be returned a <em>promise</em> that Python will actually do the computation in the future. Here's what I mean:
+    </p>
+    <sage language="python">
+      <input>
+def square(x):
+    return x*x
+
+# Ask Python to print the results of our map
+print(map(square, [1,2,3,4]))
+      </input>
+      <output>
+        map object at 0x7fcf38394dc0
+      </output>
+    </sage>
+    <p>
+      ... Python returns <c>map object at somememoryaddress</c> because it refers to a map that hasn't actually been computed. If we want to actually find the value, we will explicitly ask Python to return a list of values.  Wrap <c>map</c> into a <c>list</c> function call.
+      <cd>    print(list(map(square, [1,2,3,4])))</cd>
+    </p>
+    <p>
+      Next, instead of typing <c>[1, 2, 3, 4]</c>, we can use <c>range(1, 5)</c> to return the same list. <c>range(a,b)</c> returns all integers <m>a \le x \le b</m>. Change the code above, replacing the typed-out list with a range:
+      <cd>    print(list(map(square, range(1, 5))))</cd>
+    </p>
+    <p>
+      There's one more feature we need. If we want to <url href="https://www.w3schools.com/python/ref_func_pow.asp" visual="https://www.w3schools.com/python/ref_func_pow.asp">write an arbitrary power</url> (such as <m>x^2</m> or even <m>2^x</m>), we use the <c>pow</c> function. For example, <m>x^2</m> is <c>pow(x,2)</c>, which <m>2^x</m> is <c>pow(2,x)</c>. Try rewriting our square function to use it in place of <c>x*x</c>.
+    </p>
+    <p>
+      Now we can put it all together to check our solutions to recurrence relations. For example, in example <xref ref="example-7an-1-12an-2"/>, we found the solution was <m>a_n = 3\cdot 4^{n+1}</m>, then we can build the function <c>a(n)</c> that returns the right-side:
+    </p>
+    <sage language="python">
+      <input>
+def a(n):
+    return 3*pow(4, n+1)
+
+# Ask Python to find the first 10 elements of the sequence, starting from the 0th element
+print(list(map(a, range(0, 10))))
+      </input>
+      <output>
+        [12, 48, 192, 768, 3072, 12288, 49152, 196608, 786432, 3145728]
+      </output>
+    </sage>
+
+    <p>
+      We can compare that against the recursive version of the sequence by writing the recursive function (the function calls itself):
+    </p>
+    <sage language="python">
+      <input>
+def recur(n):
+    if n==0:  # a_0 = 12
+        return 12
+    elif n==1:  # a_1 = 48
+        return 48
+    else:  # a_n = 7*a_{n-1} - 12*a_{n-2}
+        return 7*recur(n-1) - 12*recur(n-2)
+
+# Ask Python to find the first 10 elements of the sequence, starting from the 0th element
+print(list(map(recur, range(0, 10))))
+      </input>
+      <output>
+        [12, 48, 192, 768, 3072, 12288, 49152, 196608, 786432, 3145728]
+      </output>
+    </sage>
+    <p>
+      It worked! Hooray!  If you have questions about it, please don't hesitate to ask me.
+    </p>
+  </subsection>
 
   <exercises>
     <exercise>
