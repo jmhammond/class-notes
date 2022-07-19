@@ -539,4 +539,22 @@
 
     </exercise>
   </exercises>
+
+  <subsection component="forums">
+    <title>Forum Posts about this section</title>
+
+    <slate xml:id="discourse-primes" surface="html" >
+      <div id='discourse-comments'></div>
+      <script type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 286 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script>
+    </slate>
+  </subsection>
 </section>

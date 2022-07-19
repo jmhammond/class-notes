@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_application_set_proofs">
   <title> Application: Set Properties and Equivalences </title>
+  <introduction>
+    <p>
+      This section explores how we can apply the equivalences of logical statements to the set properties we explored in <xref ref="sec_objects_sets"/>. It is no coincidence that those set properties look nearly identical to the logical equivalences!
+    </p>
+  </introduction>
 
-  <!--
-      Schema note: if a <section> contains no subsections, it can't have an introduction.
-      //-->
-  <p>
-    This section explores how we can apply the equivalences of logical statements to the set properties we explored in <xref ref="sec_objects_sets"/>. It is no coincidence that those set properties look nearly identical to the logical equivalences!
-  </p>
 
   <definition>
     <title>Set operations defined via logic</title>
@@ -247,6 +246,23 @@
     </exercise>
   </exercises>
 
+  <subsection component="forums">
+    <title>Forum Posts about this section</title>
 
+    <slate xml:id="discourse-set-proofs" surface="html" >
+      <div id='discourse-comments'></div>
+      <script type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 281 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script>
+    </slate>
+  </subsection>
+ 
 
 </section>

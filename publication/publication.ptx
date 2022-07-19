@@ -7,10 +7,10 @@
   <source webwork-problems="../generated-assets/webwork/webwork-representations.ptx">
     <directories external="../assets" generated="../generated-assets"/>
 
-    <!-- if you want the basic web version, use this-->
-    <version include="html video"/>
+    <!-- if you want the basic web version with videos and forums, use this-->
+    <version include="html video forums"/>
 
-    <!-- if you want no videos, use this-->
+    <!-- if you want no videos and no forums, use this-->
     <!-- <version include="html"/> -->
 
     <!-- if you want pdf and no videos, use this-->
