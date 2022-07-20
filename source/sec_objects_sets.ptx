@@ -4,7 +4,7 @@
 
   <introduction>
     <p>
-      Sets are the core building block of mathematics. This section defines basic terms and explores how we can these objects to build new ones.
+      Sets are the next building block of mathematics. Just as we did with propositions, this section defines basic terms and explores how we can combine these objects to build new ones.
     </p>
   </introduction>
 
@@ -22,6 +22,12 @@
         <p>
           If <m>A</m> is a set and <m>a</m> is an element of <m>A</m>, we write <m>a \in A</m>. If <m>b</m> isn't an element of <m>A</m>, we write <m>b \not\in A</m>.
         </p>
+        <aside>
+          <title>What kind of object?</title>
+          <p>
+            Note that <m>A</m> is a set, while <m>a\in A</m> is a <em>statement</em>. <q>a is an element of set A</q> has a truth value!
+          </p>
+        </aside>
       </statement>
     </definition>
     <example>
@@ -579,6 +585,41 @@
 
 
   <exercises>
+    <exercise>
+      <statement>
+        <p>
+          What kind of object is each of the following? Is it a set, a number, or a logical proposition? If it's a set, give its elements. If it's a number, give the number. If it's proposition, give its truth value.
+        </p>
+        <aside>
+          <p>
+            <q>If you want it to be possessive, it's just its. If you want a contraction it's <url href="https://www.youtube.com/watch?v=yc2udEpyPpU" visual="Strongbad Grammar Lesson Video">i t apostrophe s.</url></q>
+          </p>
+        </aside>
+        <p>
+          Let <m>A = \{1, 2, 3, 4\}</m>, <m>B = \{2, 4\}</m>, and <m>C = \{5\}</m>
+          <ol>
+            <li> <m>A \cap B</m> </li>
+            <li> <m>B \subset A</m> </li>
+            <li> <m>A \subset B</m> </li>
+            <li> <m>|A \cup B|</m> </li>
+            <li> <m>A \cap C</m> </li>
+            <li> <m>3 \in B</m> </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> This is a set; <m>A \cap B= \{2, 4\}</m> </li>
+            <li> This is a statement. It is true. </li>
+            <li> This is also a statement. It is false, since <m>1 \in A</m> but <m>1\not\in B</m> </li>
+            <li> This is a number. It's 5. </li>
+            <li> This is a set. It's <m>\emptyset</m>. </li>
+            <li> This is statement. It's false. </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
     <exercise>
