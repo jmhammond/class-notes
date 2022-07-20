@@ -41,7 +41,7 @@
   </definition>
 
 
-  <example>
+  <example xml:id="example-subset-of-itself-and-empty-set">
     <statement>
       <p>
         Prove that if <m>S</m> is any set:
