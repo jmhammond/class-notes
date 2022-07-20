@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_relationsfunctions">
   <title> Relations and Functions </title>
+  <introduction>
+    <p>
+      Now that we have sets, we introduce a new object that connects one set to another. We call this object a relation. We'll also see that if a relation has some particularly <q>nice</q> properties, we'll call it a function.
+    </p>
+  </introduction>
 
   <subsection> 
     <title>
@@ -10,7 +15,7 @@
       <title>Relations</title>
       <statement>
         <p>
-          A mathematical <term>relation, <m>\mathrel{R}</m>, between two sets <m>A</m> and <m>B</m></term> is a collection of ordered pairs from the two sets. Expressed symbolically, <m>\mathrel{R} \subseteq A \times B</m>.
+          A mathematical <term>relation, <m>\mathrel{R}</m>, between two sets <m>A</m> and <m>B</m></term> is a collection of ordered pairs from the two sets. Expressed symbolically, <m>\mathrel{R} \subseteq A \times B</m>.  This is sometimes called a <term>binary relation</term> because it relates two sets.
         </p>
         <p>
           We call set <m>A</m> the <term>domain</term> and the set <m>B</m> the <term>codomain</term>.
@@ -18,8 +23,17 @@
         <p>
           If <m>a</m> is related to <m>b</m> we will write <m>a \mathrel{R} b</m> or <m>(a,b) \in \mathrel{R}</m>. If two elements <m>c </m> and <m>d</m> are not related, we write <m>c \cancel{\mathrel{R}} d</m>.
         </p>
+        <aside>
+          <p>
+            The statement <m>a \mathrel{R} b</m> is a logical statement whose truth value is true if the two elements are related and false if the two statements are not related.
+          </p>
+        </aside>
       </statement>
     </definition>
+
+    <p>
+      Because a (binary) relation is a collection of ordered pairs from two sets, a relation is actually just a set itself, but that set carries particular meaning about its individual components.
+    </p>
 
     <example xml:id="ex_sib">
       <statement>
@@ -808,6 +822,64 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
       </sidebyside>
     </subsection>
+
+    <subsection>
+      <title>What kind of object? Binary operations vs. <m>a\mathrel{R} b</m></title>
+
+      <p>
+        I want to contrast that with the idea of a <em>binary operation</em>, such as <m>+, -, \cdot, \div</m> with the mathematical statement <m>a \mathrel{b}</m>.
+      </p>
+
+      <p>
+        <ul>
+          <li> A <em>binary operation</em> takes two numbers and returns a third number. Its result is a number. </li>
+          <li> As noted previously, <m>a \mathrel{R} b</m> is a statement when <m>\mathrel{R}</m> is a relation between two sets. </li>
+        </ul>
+      </p>
+
+      <example>
+        <statement>
+          <p>
+            What kind of object are each of the following? What is the value, truth or numeric?
+            <ol>
+              <li><m> 2 \cdot 7 </m></li>
+              <li><m> 3 \gt 8 </m></li>
+              <li><m> 42 \div 3 </m></li>
+              <li><m> 9 \text{ divides } 81 </m></li>
+              <li><m> 1 + 2 = 3</m></li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li> This is a number, the number is 14. </li>
+              <li> This is a statement, the value is false. </li>
+              <li> This is a number, it is 14 </li>
+              <li> This is a statement, it is true, since 9 divides into 81 evenly</li>
+              <li> This is a statement, it is true.  We're <em>relating</em> the operation 1+2 with the number 3</li>
+            </ol>
+          </p>
+        </solution>
+      </example>
+
+      <p>
+        Just remember, you wouldn't say <q> <m>1 + 2</m> is false</q>, and you wouldn't say <q><m>3\lt 4</m> is 12</q>. Practice thinking about what type of object is expected, and it will become second nature.
+      </p>
+      <!-- I want to put snarky footnotes in the book... but it didn't play well with one third of my test audience (asked three students in history class). -->
+      <!-- <aside> -->
+      <!--   <p> -->
+      <!--     ... well, you wouldn't say <q><m>3\lt 4</m> is 12</q> and be correct. -->
+      <!--   </p> -->
+      <!-- </aside> -->
+
+    </subsection>
+
+    <conclusion>
+      <p>
+        The relation is the final of our mathematical building blocks. From here on we will be combining logical propositions, sets, and relations to build greater and greater complexity throughout the semester. 
+      </p>
+    </conclusion>
 
   <exercises>
 
