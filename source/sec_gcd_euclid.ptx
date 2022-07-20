@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-gcd-euclid">
   <title>GCDs and The Euclidean Algorithm</title>
+  <introduction>
+    <p>
+      In this section we explore what pairs of numbers can have in common. It will turn out that numbers that have only 1 as a common divisor are especially useful to encryption methods, so we give an algorithm to find the greatest common divisor and how to write it in a particularly useful way.
+    </p>
+  </introduction>
+
   <definition>
     <title>Greatest Common Divisor (gcd)</title>
     <statement>
@@ -31,7 +37,7 @@
   </example>
 
   <definition>
-    <title>Lease Common Multiple</title>
+    <title>Least Common Multiple</title>
     <statement>
       <p>
         Let <m>a \and b</m> be integers, not both zero. The smallest integer <m>m</m> such that <m>a\divides m</m> and <m>b \divides m</m> is called the <term>least common multiple of <m>a \and b</m></term> which we denote by <m>\lcm(a,b)</m>.
@@ -66,9 +72,21 @@
     </statement>
   </theorem>
 
+  <p>
+    This essentially shows that the greatest common divisor and least common multiple are opposites of eachother in a particular way.  If you know the greatest common divisor of <m>a \and b</m>, you can find the least common multiple by simply: <m>\frac{ab}{\gcd(a,b)}</m>.
+  </p>
+  <p>
+    The greatest common divisor is the more useful of the two, so we'll now give an algorithm that lets us find it without having to factor the number first.
+  </p>
 
   <theorem xml:id="euclidean-algorithm">
     <title>The Euclidean Algorithm</title>
+    <aside>
+      <title>2300+ years old</title>
+      <p>
+        This is called the Euclidean Algorithm after Euclid of Alexandria because it was included in the book(s) of <em>The Elements</em> he wrote in around 300BCE.  We don't know much about Euclid, but <em>The Elements</em> influenced all future Greek, Arab, and Western mathematics.
+      </p>
+    </aside>
     <statement>
       <p>
         Let <m>a</m> and <m>b</m> be two positive integers where <m>a \ge b</m>. If we apply the division algorithm recursively so that
@@ -121,6 +139,12 @@
   
   <proposition>
     <title>Bézout's Lemma</title>
+    <aside>
+      <title>300 years old</title>
+      <p>
+        This one is much less old; discovered by Étienne Bézout in the 18th century (1700's). 
+      </p>
+    </aside>
     <statement>
       <p>
         If <m>a \and b</m> are positive integers, then there exist integers <m>s \and t</m> such that <m>{\gcd(a,b) = as + bt}</m>
@@ -276,6 +300,11 @@
           Find the greatest common divisor of 70, 98, 108.
         </p>
       </statement>
+      <hint>
+        <p>
+          Try looking at each pair of numbers separately.
+        </p>
+      </hint>
       <solution>
         <p>
           <m>\gcd(70, 98, 108) = 2</m>

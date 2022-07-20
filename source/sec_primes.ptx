@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-primes">
   <title>Prime Numbers</title>
+  <introduction>
+    <p>
+      Like atoms making up molecules, prime numbers are the fundamental building blocks of the integers.  In this section we see this in The Fundamental Theorem of Arithmetic, and explore some interesting statements prime numbers. We conclude the section with primality testing -- how to determine if a number is prime.
+    </p>
+  </introduction>
 
   <subsection>
 
@@ -15,6 +20,10 @@
       </p>
     </statement>
   </definition>
+
+  <p>
+    The next logical question students ask is <q>what about 1?</q> because its only positive factors are 1 and itself. One is special.
+  </p>
 
   <note>
     <title>1 is the loneliest number</title>
@@ -69,12 +78,19 @@
       </p>
     </statement>
   </theorem>
+  <aside>
+    <p>
+      If 1 were called a prime number, the factorization wouldn't be unique. For example, we  could write 6 as:
+      <m>6 = 2\cdot 3</m> or <m>6=1 \cdot 2\cdot 3</m> or <m>6=1\cdot 1 \cdot 2\cdot 3</m>, or <m>6=1\cdot 1\cdot 1 \cdot 2\cdot 3</m>...
+    </p>
+  </aside>
+
+  <p>
+    The Fundamental Theorem of Arithmetic (FTA) is a non-constructive statement. It tells us that we <em>can</em> write every positive integer as a unique product of primes, but it doesn't tell us <em>how</em>. Instead we need to use trial division and guess-and-check methods.
+  </p>
 
   <example>
     <statement>
-      <p>
-        The Fundamental Theorem of Arithmetic (FTA) is a non-constructive statement. It tells us that we <em>can</em> write every positive integer as a unique product of primes, but it doesn't tell us <em>how</em>. Instead we need to use trial division and guess-and-check methods.
-      </p>
       <p>
         Find the prime factorization of the following:
         <ol>
