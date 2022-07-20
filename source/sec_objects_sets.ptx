@@ -3,7 +3,9 @@
   <title> Sets </title>
 
   <introduction>
-    <!-- Sets are the core building block of mathematics. This section defines basic terms and explores how we can these objects to build new ones. -->
+    <p>
+      Sets are the core building block of mathematics. This section defines basic terms and explores how we can these objects to build new ones.
+    </p>
   </introduction>
 
   <subsection>
@@ -112,13 +114,13 @@
         Here are several examples showing a variety of ways of writing sets:
         <ol>
           <li>
-            <m>\{x \mid |2x+1| \le 10 \land x \in \Z\}</m> tells us our elements are going to be whatever <m>x</m> satisfy the expression <m>|2x+1| \le 10</m> where our variables are integers. This will be exactly <m>\{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4\}</m>
+            <m>\{x \mid |2x+1| \le 10 \and x \in \Z\}</m> tells us our elements are going to be whatever <m>x</m> satisfy the expression <m>|2x+1| \le 10</m> where our variables are integers. This will be exactly <m>\{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4\}</m>
           </li>
           <li>
-            <m>\{a \in \N \mid \frac{a}{2} \ge 4 \}</m> means that the elements will be natural numbers (<m>a \in \N</m>), and the qualification to be in the set is that <m>a/2 \ge 4</m>. Note that same letter <m>a</m>!. A little algebra says <m>a\ge 8</m> is the qualification, and since the elements are those <m>a</m>s, our set is <m>\{8, 9, 10, 11, 12, \dots\}</m>
+            <m>\{a \in \N \mid \frac{a}{2} \ge 4 \}</m> means that the elements will be natural numbers (this is the first part, <m>a \in \N</m>), and the qualification to be in the set is that <m>a/2 \ge 4</m>. Note that same letter <m>a</m>!. A little algebra says <m>a\ge 8</m> is the requirement to be a member, and since the elements are those same <m>a</m> numbers, our set is <m>\{8, 9, 10, 11, 12, \dots\}</m>
           </li>
           <li>
-            <m>\{\frac{a}{2} \in \Q \mid a \in \N\}</m> means the elements will be rational numbers of the form <m>\frac{a}{2}</m> (<m>\frac{a}{2} \in Q</m>). Since the qualification is just that the <m>a</m> is a natural number, that tells us to feed all natural numbers into our set, so we have <m>\{0, 1/2, 1, 3/2, 2, 5/2, \dots\}</m>
+            <m>\{\frac{a}{2} \in \Q \mid a \in \N\}</m> means the elements will be rational numbers of the form <m>\frac{a}{2}</m> (this is the first part, <m>\frac{a}{2} \in \Q</m>). Since the qualification is just that the <m>a</m> is a natural number, that tells us to feed all natural numbers into our set, so we have <m>\{0, \frac12, 1, \frac32, 2, \frac52, \dots\}</m>
           </li>
           <li>
             <p>
@@ -289,6 +291,10 @@
       </statement>
     </definition>
 
+    <p>
+      Ordered pairs will be familiar from algebra and calculus when you plotted points on the Cartesian plane. <m>(x, y)</m> meant that the <m>x</m> came from one set (corresponding to the horizontal axis), and <m>y</m> came from another set (corresponding to the vertical axis).
+    </p>
+
     <definition>
       <title>Cartesian Product</title>
       <statement>
@@ -302,6 +308,10 @@
       </statement>
     </definition>
 
+    <p>
+      Returning to our calculus experience, for the ordered pair <m>(x,y)</m>, our <m>x</m> and <m>y</m> variables all came from the set of real numbers, so we'd formally say that the point <m>(x,y)</m> is an element in the set <m>\R \times \R</m> or <m>\R^2</m>, that is, <m>(x,y) \in \R^2</m>. If you've had calc 3, the points <m>(x,y,z) \in \R^3</m>, live in three-dimensional space.
+      Let's take a look at discrete examples.
+    </p>
     <example>
       <statement>
         <p>
@@ -373,6 +383,11 @@
         If <m>A</m> and <m>B</m> are two sets, we define the <term>difference</term> of <m>A</m> and <m>B</m>, denoted <m>A \setminus B</m>, to be the set of only elements that are only in <m>A</m> and not in <m>B</m>.
         <me>A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}</me>
       </p>
+      <aside>
+        <p>
+          It's worth noting that some authors, Rosen included, use <m>A - B</m> to denote the difference between two sets <m>A</m> and <m>B</m>. We'll be using the slightly more standard <m>A\setminus B</m> in this class.
+        </p>
+      </aside>
 
       <p>
         As a Venn diagram:
@@ -389,13 +404,6 @@
           \end{tikzpicture}
         </latex-image>
       </image>
-
-      <!-- schema note: need to ditch this construct //-->
-      <note>
-        <p>
-          It's worth noting that some authors, Rosen included, use <m>A - B</m> to denote the difference between two sets <m>A</m> and <m>B</m>. We'll be using the slightly more standard <m>A\setminus B</m> in this class.
-        </p>
-      </note>
 
       <p>
         Let <m>U</m> be the <term>universal set</term>, that is the set of all possible objects in consideration.
@@ -453,12 +461,10 @@
         <video youtube="aj5UcvPjCoQ" />
       </answer>
     </example>
-    <note>
-      <p>
-        What do you observe about some combination of the cardinalities above?
-      </p>
-    </note>
 
+    <p>
+      What do you observe about some combination of the cardinalities above? Be on the lookout for patterns as you work through more cardinality questions. We'll find formulas in the future for things such as <m>|A \cup B|</m>, <m>\mathcal{P}(A)</m>, and <m>|A \times B|</m>
+    </p>
   </subsection>
 
   <subsection>
@@ -565,11 +571,9 @@
       </dl>
     </list>
 
-    <note>
-      <p>
-        It would be good practice to take a moment and confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.
-      </p>
-    </note>
+    <p>
+      It would be good practice to take a moment and confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.
+    </p>
 
   </subsection>
 
@@ -1070,10 +1074,12 @@
         <p>
           Are there sets <m>A</m> and <m>B</m> such that <m>|A| = |B|</m>, <m>|A\cup B| = 10</m>, and <m>|A\cap B| = 5</m>? Explain.
         </p>
-        <p>
-          Note that <m>|A\cup B| = |A| + |B| - |A\cap B|</m>, can you explain why?
-        </p>
       </statement>
+      <hint>
+        <p>
+          Note that <m>|A\cup B| = |A| + |B| - |A\cap B|</m>, (can you explain why this formula is correct? Make a Venn diagram)
+        </p>
+      </hint>
 
       <solution>
         <p>
@@ -1114,9 +1120,9 @@
       <solution>
         <p>
           <ol>
-            <li> <p> No. </p> </li>
-            <li> <p> No. </p> </li>
-            <li><m>2\Z \cap 3\Z</m> is the set of all integers which are multiples of both 2 and 3 (so multiples of 6). Therefore <m>2\Z \cap 3\Z = \{6y \st y \in \Z )\}</m>.</li>
+            <li> <p> No, since the set on the right contains only multiples of <m>2</m>, but the set on the left contains, for example, <m>3</m>.</p> </li>
+            <li> <p> No. Because this time, we have <m>-2 \in 2\Z</m>, but <m>-2\not\in \Z^+</m></p> </li>
+            <li><m>2\Z \cap 3\Z</m> is the set of all integers which are multiples of both 2 and 3 (these are the multiples of 6). Therefore <m>2\Z \cap 3\Z = \{6x \st x \in \Z )\}</m>.</li>
           </ol>
         </p>
       </solution>

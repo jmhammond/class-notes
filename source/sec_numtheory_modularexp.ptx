@@ -2,10 +2,14 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-numtheory-modularexp">
   <title>Modular exponentiation</title>
 
-  <p>
-    This section seems a bit out of nowhere, but it's a computational tool we need in order to perform the RSA encryption algorithm. When we exponentiate a number, we always get a bigger number, and we'll want to reduce modulo <m>m</m>. In this section we give an algorithm that allows us to perform this operation conveniently.
-  </p>
-
+  <introduction>
+    <p>
+      This section seems a bit out of nowhere, but it's a computational tool we need in order to perform the RSA encryption algorithm. When we exponentiate a number, we always get a bigger number, and we'll want to reduce modulo <m>m</m>. In this section we give an algorithm that allows us to perform this operation conveniently.
+    </p>
+    <p>
+      We begin first by showing how to do it "by hand" and then show how to do it using spreadsheet software.
+    </p>
+  </introduction>
 
   <p>
     We begin by breaking up a number into sums of powers of two. First, a quick refresher table of the first several powers of two:
@@ -114,7 +118,7 @@
     Now recall the basic exponents properties of exponents: <m>(a^m)^n = a^{mn}</m> and <m>a^m \cdot a^n = a^{m+n}</m>.
   </p>
   <p>
-    Why do we care? Let's take a look at repeatedly squaring a number, say <m>n</m>:
+    What's the connection? Let's take a look at repeatedly squaring a number, say <m>n</m>:
     <ul marker="circle">
       <li> <m>n^1 = n^1</m> </li>
       <li> <m>(n^1)^2 = n^{ 1\cdot2 }</m> </li>
@@ -126,7 +130,7 @@
       <li> <m>(n^{64})^2 = n^{ 64\cdot2 } = n^{128}</m> </li>
       <li> etc...</li>
     </ul>
-    The point is that each time we square a number, the total exponent becomes the next power of 2.  And because each number can be expressed as a sum of powers of two, we can exploit this fact using a process we'll call modular exponentiation.
+    Each time we square a number, the exponent becomes the next power of 2.  And because each number can be expressed as a sum of powers of two, we can exploit this fact using a process we'll call modular exponentiation.
   </p>
 
   <definition>
