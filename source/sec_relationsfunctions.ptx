@@ -329,10 +329,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     <note>
       <p>
-        To determine if a function <m>f: A \to B</m> is injective, we show that if <m>f(x) = f(y)</m> for arbitrary values <m>x, y \in A</m> with <m>x \not= y</m>, we conclude <m>x=y</m>. (A direct proof).
+        To determine if a function <m>f: A \to B</m> is injective, we show that if <m>f(x) = f(y)</m> for arbitrary values <m>x, y \in A</m> with <m>x \not= y</m>, we conclude <m>x=y</m>. (In a future section, we'll call this a <s>direct proof</s>).
       </p>
       <p>
-        To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (a counterexample!)
+        To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (we'll call this finding a <q>counterexample</q>.)
       </p>
       <answer component="video">
         <video youtube="4i3SIx61-yQ" />
@@ -394,7 +394,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </example>
 
     <note>
-      <p>If a function is onto, the range is exactly the codomain, that is <m>f(A) = B</m></p>
+      <p>If a function is surjective the range is exactly the codomain, that is <m>f(A) = B</m></p>
       <p>
         To determine if a function <m>f: A \to B</m> is surjective, we show that given an arbitrary element <m>y \in B</m> we can find an element <m>x\in A</m> such that <m>f(x)=y</m>. (A direct proof).
       </p>
@@ -430,11 +430,16 @@ b. note that the inverse of a function is always a relation, but not always a fu
     </example>
 
     <definition xml:id="definition-modulus-operator">
-      <title>The Modulus Operator</title>
+      <title>The Modulus Operation</title>
       <statement>
         <p>
-          Define the <term>modulus operator</term>, <m>a \modulus m</m> on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
+          Define the <term>modulus operation</term>, <m>a \modulus m</m> on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
         </p>
+        <aside>
+          <p>
+            The modulus operation is a binary function that takes two numbers and returns a third number (the remainder after division).
+          </p>
+        </aside>
         <p>
           For example,
           <ul marker="circle">
@@ -444,9 +449,12 @@ b. note that the inverse of a function is always a relation, but not always a fu
             <li><m>-1 \modulus 5 = 4</m> (remainders are always positive)</li>
           </ul>
         </p>
-        We'll use this to explore injective and surjective properties of functions!
       </statement>
     </definition>
+
+    <p>
+      We'll use this operation to explore injective and surjective properties of functions! But first, so that we don't have to write <m>\{0, 1, 2, 3, 4, 5\}</m> or say <q> all possible remainders when dividing by six,</q> we introduce notation that says it for us.
+    </p>
 
     <definition xml:id="def-zmodn">
       <title>Set of Integers Modulo n</title>
@@ -466,7 +474,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </statement>
     </definition>
 
-    <example>
+    <example xml:id="example-modulus-injective-surjective">
       <statement>
         <p>
           Complete the following tables of values for each function:
@@ -601,12 +609,13 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     <note>
       <p>
-        Relations always have an inverse - we interchange the domain and codomain sets.
-      </p>
-      <p>
-        As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function, <m>f</m> to have an inverse <em>function</em>, <m>f</m> must be bijective.
+        Relations always have an inverse!  We simply interchange the domain and codomain sets.
       </p>
     </note>
+
+    <p>
+      As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function, <m>f</m> to have an inverse <em>function</em>, <m>f</m> must be bijective.
+    </p>
 
     <example>
       <statement>
@@ -617,13 +626,16 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <answer component="video">
         <video youtube="VHzBUIDi_f4" />
       </answer>
-
     </example>
+
+    <p>
+      The properties of surjectivity and injectivity depend entirely on the function, domain, and codomain. A map that isn't surjective on one codomain actually is surjective on some other codomain.  For example, while <m>f(x) = x^2</m> is not injective if <m>f:\Z \to \Z</m>, since <m>f(-3) = f(3)</m> but <m>-3 \ne 3</m>. It is injective if we define <m>f : \Z^+ \to \Z</m>, since there aren't negative numbers to map duplicate values! The next example asks us to change domain and/or codomain to give the functions desired properties.
+    </p>
 
     <example>
       <statement>
         <p>
-          Restrict the domain and/or codomain so that <m>f(x) = x^2 + 1</m> is invertible. Verify your answer is correct.
+          Restrict the domain and/or codomain (that is, make the domain/codomain smaller sets) so that <m>f(x) = x^2 + 1</m> is invertible. Verify your answer is correct.
         </p>
       </statement>
       <solution>
