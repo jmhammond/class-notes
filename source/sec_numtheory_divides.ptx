@@ -2,6 +2,13 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-numtheory-divcong">
   <title> Divisibility and Congruences </title>
 
+  <introduction>
+    <p>
+      The purpose of this section is twofold.
+      First, Now that we have some experience with mathematical proof, we're now going to expand the types of questions we can prove by introducing the Divides and Congruence relations. Second, this is the first step in building the tools we need towards working with some encryption algorithms.
+    </p>
+  </introduction>
+
   <subsection xml:id="section-numtheory-div">
     <title>The Divides Relation</title>
 
@@ -46,6 +53,37 @@
       </statement>
     </example>
 
+    <p>
+      This is a good time to remember that the relational statment <m>a \mid b</m> is a propositional statement. It is true or false. Let's compare the divides relation with some similar symbols.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          What kind of object are each of the following? What is the value, truth or numeric?
+          <ol>
+            <li><m> 2 \mid 8 </m></li>
+            <li><m> 14 \modulus 5 </m></li>
+            <li><m> 8 \mid 4 </m></li>
+            <li><m> 8 \div 4</m></li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> This is a statement. It is saying <q>2 divides into 8 evenly.</q> This statement is true. </li>
+            <li> This is a number. Its value is 4, since the remainder of 14 divided by 5 is 4. </li>
+            <li> This is a statement. It says <q>8 divides into 4 evenly.</q> This is false. </li>
+            <li> This is a number. Its value is 2. </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      The divisibility relation has some very nice properties that let us practice our new skill of mathematical proof on this new object.
+    </p>
 
     <proposition>
       <title> Properties of divisibility</title>
@@ -87,6 +125,11 @@
           Let <m>n</m> be an integer and <m>d</m> be a positive integer.  Then there exist unique integers <m>q \and r</m> such that
           <me>n = dq + r \hspace{1em} \text{with} \hspace{1em} 0\le r \lt d</me>
         </p>
+        <aside>
+          <p>
+            This theorem is badly named. It's not actually an <q>algorithm</q>, a series steps to arrive at an answer. That's what it's always called, though. 🤷‍♂️
+          </p>
+        </aside>
       </statement>
     </theorem>
 
@@ -246,6 +289,10 @@
       </answer>
 
     </proposition>
+
+    <p>
+      We call the collection of the operations of addition and multiplication modulo <m>m</m> <term>modular arithmetic</term>.
+    </p>
 
     <note>
       <p>
