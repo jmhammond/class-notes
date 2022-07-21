@@ -214,17 +214,22 @@
 
     <definition>
       <title>Inverse of Relations</title>
-      <p>
-        Let <m>R</m> be a relation between sets <m>A \and B</m>. The <term>inverse relation</term> of <m>R</m> is the relation that assigns to each element <m>b\in B</m> an element <m>a \in A</m>. We denote the inverse by <m>R^{-1}</m>, so that
-        <me>a \mathrel{R} b \iff b \mathrel{R^{-1}} a</me>
-        for <m>a \in A \and b \in B</m>.
-      </p>
+      <statement>
+        <p>
+          Let <m>R</m> be a relation between sets <m>A \and B</m>. The <term>inverse relation</term> of <m>R</m> is the relation that assigns to each element <m>b\in B</m> an element <m>a \in A</m>. We denote the inverse by <m>R^{-1}</m>, so that
+          <me>a \mathrel{R} b \iff b \mathrel{R^{-1}} a</me>
+          for <m>a \in A \and b \in B</m>.
+        </p>
+    </statement>
     </definition>
 
     <example xml:id="example-relation-inverses">
       <statement>
         <p>
-          For the purposes of this exercise, the universe of discourse for numeric sets is <m>\R</m> and the universe of discourse for <m>R_4</m> and <m>R_5</m> are the set of people. For example, the relation <m>R = \{(x, y) \mid y = 2x + 1\}</m> has the inverse <m>R^{-1} = \{(x, y) \mid y = (x-1)/2\}</m>. Use this form to give inverses of the following relations:
+          For the purposes of this exercise, all numbers come from <m>\R</m> and <m>R_4</m> and <m>R_5</m> are subsets of the set of people.
+          </p>
+          <p>
+            The relation <m>R = \{(x, y) \mid y = 2x + 1\}</m> has the inverse <m>R^{-1} = \{(x, y) \mid y = (x-1)/2\}</m>. Use this form to give inverses of the following relations:
           <ol>
             <li>
               <m>R_1 = \{ (x,y) \mid y = -3x + 2\}</m>
@@ -268,21 +273,23 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     <definition>
       <title>Functions</title>
-      <p>
-        A <term>function from the set <m>A</m> to the set <m>B</m></term> is a relation with the property that exactly one element from <m>B</m> is mapped to each element of the set <m>A</m>. 
-        <ul>
-          <li>We denote this relation by <m>f:A\to B</m></li>
-          <li>If <m>b\in B</m> is the unique element assigned to <m>a\in A</m>, we write <m>f(a)=b</m></li>
-        </ul>
-      </p>
-      <p>
-        If <m>f(a) = b</m>, we call
-        <ul>
-          <li><m>b</m> is the <term>image</term> of <m>a</m> under the mapping</li>
-          <li><m>a</m> is the <term>preimage</term> of <m>b</m> under the mapping</li>
-        </ul>
-        and we define the <term>range</term> of the function <m>f</m> to be the set of images of every element in the domain, <m>A</m>, and often write the range by <m>f(A)</m>. Note that the range is a subset of the codomain, <m>f(A)\subseteq B</m>.
-      </p>
+      <statement>
+        <p>
+          A <term>function from the set <m>A</m> to the set <m>B</m></term> is a relation with the property that exactly one element from <m>B</m> is mapped to each element of the set <m>A</m>.
+          <ul>
+            <li>We denote this relation by <m>f:A\to B</m></li>
+            <li>If <m>b\in B</m> is the unique element assigned to <m>a\in A</m>, we write <m>f(a)=b</m></li>
+          </ul>
+        </p>
+        <p>
+          If <m>f(a) = b</m>, we call
+          <ul>
+            <li><m>b</m> is the <term>image</term> of <m>a</m> under the mapping</li>
+            <li><m>a</m> is the <term>preimage</term> of <m>b</m> under the mapping</li>
+          </ul>
+          and we define the <term>range</term> of the function <m>f</m> to be the set of images of every element in the domain, <m>A</m>, and often write the range by <m>f(A)</m>. Note that the range is a subset of the codomain, <m>f(A)\subseteq B</m>.
+        </p>
+      </statement>
       <answer component="video">
         <video youtube="3pBXG34ojDY" />
       </answer>
@@ -319,12 +326,14 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     <definition>
       <title>Injective Functions</title>
-      <p><!-- TODO: a future revision, use different letters. a and b suggest particular set relationship... oops! -->
-        A function <m>f</m> is said to be  <term>injective</term> or <term>one-to-one</term> if and only if <m>f(a) = f(b)</m> means that <m>a = b</m> for all <m>a \text{ and } b</m> in the domain of <m>f</m>. 
-        <!-- <me> -->
-        <!--   f \text{ is injective means }  \forall a, b ((f(a) = f(b)) \to (a = b)) -->
-        <!-- </me> -->
-      </p>
+      <statement>
+        <p><!-- TODO: a future revision, use different letters. a and b suggest particular set relationship... oops! -->
+          A function <m>f</m> is said to be  <term>injective</term> or <term>one-to-one</term> if and only if <m>f(a) = f(b)</m> means that <m>a = b</m> for all <m>a \text{ and } b</m> in the domain of <m>f</m>.
+          <!-- <me> -->
+          <!--   f \text{ is injective means }  \forall a, b ((f(a) = f(b)) \to (a = b)) -->
+          <!-- </me> -->
+        </p>
+      </statement>
     </definition>
 
 
@@ -372,12 +381,14 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     <definition>
       <title>Surjective Functions</title>
-      <p>
-        A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>surjective</term> or <term>onto</term> if and only if for every element <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = b</m>.
-        <!-- <me> -->
-        <!--   f \text{ is surjective means } \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) )  -->
-        <!-- </me> -->
-      </p>
+      <statement>
+        <p>
+          A function <m>f</m> from <m>A</m> to <m>B</m> is said to be <term>surjective</term> or <term>onto</term> if and only if for every element <m>b \in B</m>, there is an element <m>a \in A</m> such that <m>f(a) = b</m>.
+          <!-- <me> -->
+          <!--   f \text{ is surjective means } \forall y\in B\,\, \exists x\in A \,\, ( y = f(x) )  -->
+          <!-- </me> -->
+        </p>
+      </statement>
       <answer component="video">
         <video youtube="A2dQwaFFC8I" />
       </answer>
@@ -437,9 +448,11 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     <definition>
       <title>Bijective Functions</title>
-      <p>
-        A function <m>f</m> from <m>A</m> to <m>B</m> is said to be a <term>one-to-one correspondence</term> or <term>bijective</term> if it is both injective and surjective.
-      </p>
+      <statement>
+        <p>
+          A function <m>f</m> from <m>A</m> to <m>B</m> is said to be a <term>one-to-one correspondence</term> or <term>bijective</term> if it is both injective and surjective.
+        </p>
+      </statement>
     </definition>
 
     <example xml:id="example-bijections">
@@ -633,10 +646,12 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     <definition>
       <title>Inverse Functions</title>
-      <p>
-        Let <m>f:A \to B</m> be a bijection. The <term>inverse function</term> of <m>f</m> is the unique function that assigns to each element <m>b\in B</m> a unique element <m>a \in A</m> such that <m>f(a) = b</m>. We denote the inverse by <m>f^{-1}</m> so that
-        <me>f^{-1} : B \to A \text{ where }  f^{-1}(b) = a \iff f(a) = b</me>
-      </p>
+      <statement>
+        <p>
+          Let <m>f:A \to B</m> be a bijection. The <term>inverse function</term> of <m>f</m> is the unique function that assigns to each element <m>b\in B</m> a unique element <m>a \in A</m> such that <m>f(a) = b</m>. We denote the inverse by <m>f^{-1}</m> so that
+          <me>f^{-1} : B \to A \text{ where }  f^{-1}(b) = a \iff f(a) = b</me>
+        </p>
+      </statement>
     </definition>
 
     <note>
