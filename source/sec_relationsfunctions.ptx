@@ -327,18 +327,32 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </p>
     </definition>
 
-    <note>
-      <p>
-        To determine if a function <m>f: A \to B</m> is injective, we show that if <m>f(x) = f(y)</m> for arbitrary values <m>x, y \in A</m> with <m>x \not= y</m>, we conclude <m>x=y</m>. (In a future section, we'll call this a <s>direct proof</s>).
-      </p>
-      <p>
-        To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (we'll call this finding a <q>counterexample</q>.)
-      </p>
-      <answer component="video">
-        <video youtube="4i3SIx61-yQ" />
-      </answer>
 
-    </note>
+    <p>
+      To determine if a function <m>f: A \to B</m> is injective, we show that if <m>f(x) = f(y)</m> for arbitrary values <m>x, y \in A</m> with <m>x \not= y</m>, we conclude <m>x=y</m>. (In a future section, we'll call this a <s>direct proof</s>).
+    </p>
+    <p>
+      To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (we'll call this finding a <q>counterexample</q>.)
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Draw a graph of a function which is not injective. Draw also the graph of one that is.
+        </p>
+      </statement>
+      <answer component="video">
+        <p>
+          The following is a (silent) animation showing the graph of two functions, both have the algebraic expression <m>f(x)=x^2</m>. The first maps <m>f: \R \to \R</m>, which is not injective since, for example, <m>f(-2)=f(2)</m>, but <m>-2\ne 2</m>, while the second maps <m>f:[0, \infty)\to \R</m>, and it is injective.
+        </p>
+        <aside>
+          <p>
+            This is my first thing I ever created with Manim, the math animation python package. I'm still learning...
+          </p>
+        </aside>
+        <video source="InjectiveExplorationX2.mp4"/>
+      </answer>
+    </example>
 
     <example>
       <statement>
@@ -370,6 +384,34 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     </definition>
 
+
+    <p>
+      If a function is surjective the range is exactly the codomain, that is <m>f(A) = B</m>
+    </p>
+    <p>
+      To determine if a function <m>f: A \to B</m> is surjective, we show that given an arbitrary element <m>y \in B</m> we can find an element <m>x\in A</m> such that <m>f(x)=y</m>. (A direct proof).
+    </p>
+    <p>
+      To determine if a function <m>f: A \to B</m> is not surjective, we find a particular element <m>y \in B</m> such that <m>f(x) \not= y</m> for all <m>x\in A</m> (a counterexample!)
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Draw a graph of a function which is not surjective. Draw also the graph of one that is.
+        </p>
+      </statement>
+      <answer component="video">
+        <p>
+          The following is an animation showing the graph of two functions, both have the algebraic expression <m>f(x)=x^2</m>. The first maps <m>f: \R \to \R</m>, which is not surjective since, for example, <m>-1</m> is in the codomain, but <m>f(x)=-1</m> has no solution in the domain.
+        </p>
+        <p>
+          The second maps <m>f:\R \to [0, \infty)</m>, and it is surjective since each and every element of the codomain is mapped to.
+        </p>
+        <video source="SurjectiveExploration.mp4"/>
+      </answer>
+    </example>
+
     <example>
       <statement>
         <p>
@@ -392,16 +434,6 @@ b. note that the inverse of a function is always a relation, but not always a fu
       </answer>
       
     </example>
-
-    <note>
-      <p>If a function is surjective the range is exactly the codomain, that is <m>f(A) = B</m></p>
-      <p>
-        To determine if a function <m>f: A \to B</m> is surjective, we show that given an arbitrary element <m>y \in B</m> we can find an element <m>x\in A</m> such that <m>f(x)=y</m>. (A direct proof).
-      </p>
-      <p>
-        To determine if a function <m>f: A \to B</m> is not surjective, we find a particular element <m>y \in B</m> such that <m>f(x) \not= y</m> for all <m>x\in A</m> (a counterexample!)
-      </p>
-    </note>
 
     <definition>
       <title>Bijective Functions</title>
@@ -627,10 +659,6 @@ b. note that the inverse of a function is always a relation, but not always a fu
         <video youtube="VHzBUIDi_f4" />
       </answer>
     </example>
-
-    <p>
-      The properties of surjectivity and injectivity depend entirely on the function, domain, and codomain. A map that isn't surjective on one codomain actually is surjective on some other codomain.  For example, while <m>f(x) = x^2</m> is not injective if <m>f:\Z \to \Z</m>, since <m>f(-3) = f(3)</m> but <m>-3 \ne 3</m>. It is injective if we define <m>f : \Z^+ \to \Z</m>, since there aren't negative numbers to map duplicate values! The next example asks us to change domain and/or codomain to give the functions desired properties.
-    </p>
 
     <example>
       <statement>
