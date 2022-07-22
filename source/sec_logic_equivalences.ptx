@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-logic-equivalences">
   <title>Logical Equivalences</title>
+  <introduction>
+    <p>
+      What does it mean for two logical statements to be the same? In this section, we'll meet the idea of logical equivalence and visit two methods to show two statements are equivalent. 
+    </p>
+  </introduction>
 
   <definition>
-    <title>Tautology</title>
+    <title>Tautologies and Contradictions</title>
     <statement>
       <p>
         An expression involving logical variables that is true for all values is called a <term>tautology</term>.
       </p>
-    </statement>
-  </definition>
-
-  <definition>
-    <title>Contradiction</title>
-    <statement>
       <p>
         An expression involving logical variables that is false for all values is called a <term>contradiction</term>.
       </p>
@@ -32,6 +31,10 @@
       </p>
     </statement>
   </definition>
+
+  <p>
+    The first method to show that two statements <m>p \and q</m> are equivalent is to build a truth table to to find the truth values of <m>p \leftrightarrow q</m>.
+  </p>
 
   <example>
     <statement>
@@ -106,17 +109,20 @@
     <answer component="video">
       <video youtube="44izzfqVMNo" />
     </answer>
-
   </example>
 
-  <note>
+  <p>
+    Since <m>p \leftrightarrow q</m> is true if <m>p \and q</m> have the same truth values, in this course we will often build a truth table for the two statements and then remark on whether their columns are the same or different.
+  </p>
+
+  <p>
+    The following table is a set of core tautologies we will be using for the rest of the course. In the example that follows them, we will show how we can use these existing tautologies (which we'll call laws) to make conclusions about more complex statements.
+  </p>
+  <aside>
     <p>
-      The following is a collection of very useful tautologies. Do you need to memorize them? Absolutely!
+      Do you need to memorize them? Absolutely!
     </p>
-    <p>
-      You'll that for those laws which have two different forms they look very similar, just with different operations and truth and false swapped. Not only does this mean you actually have half as much to memorize, there's a reason for this that we'll get into when we discuss Boolean Algebras in Discrete 2!
-    </p>
-  </note>
+  </aside>
 
   <list xml:id="list-logical-equivalences">
     <title>
@@ -204,11 +210,14 @@
     </dl>
   </list>
 
+  <p>
+    You'll notice that for those laws which have two different forms they look very similar, just with different operations and truth and false swapped. Not only does this mean you actually have half as much to memorize, there's a neat reason for this that we'll get into when we discuss Boolean Algebras in Discrete 2!
+  </p>
 
   <example xml:id="example-contradiction-logic">
     <statement>
       <p>
-        Use existing logical equivalences from <xref ref="list-logical-equivalences"/> to show the following are equivalent.
+        Use the logical laws from <xref ref="list-logical-equivalences"/> to show the following are equivalent.
         <ol>
           <li>
             <m>p \wedge q \equiv \neg(p \to \neg q)</m>
@@ -222,15 +231,15 @@
           <li><m>( \neg p \to (q \wedge \neg q)  ) \equiv p</m></li>
         </ol>
       </p>
-      <p>
-        This is your first experience with logical proof! It won't be your last. Much of this class is about learning to understand and argue rigorously.
-      </p>
     </statement>
     <answer component="video">
       <video youtube="gFjfEOKlyEc" />
     </answer>
-
   </example>
+
+  <p>
+    This is your first experience with logical proof! It won't be your last. Much of this class is about learning to understand and argue rigorously.
+  </p>
 
   <exercises>
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
