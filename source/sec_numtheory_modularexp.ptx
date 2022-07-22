@@ -2,6 +2,7 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-numtheory-modularexp">
   <title>Modular exponentiation</title>
 
+  <!-- to make the schema happy, I need to put everything into a subsection (since the forums are in a subsection)  -->
   <introduction>
     <p>
       This section seems a bit out of nowhere, but it's a computational tool we need in order to perform the RSA encryption algorithm. When we exponentiate a number, we always get a bigger number, and we'll want to reduce modulo <m>m</m>. In this section we give an algorithm that allows us to perform this operation conveniently.
@@ -11,8 +12,9 @@
     </p>
   </introduction>
 
-  <p>
-    We begin by breaking up a number into sums of powers of two. First, a quick refresher table of the first several powers of two:
+  <subsection>
+    <p>
+      We begin by breaking up a number into sums of powers of two. First, a quick refresher table of the first several powers of two:
       <table xml:id="table-powers-of-two">
         <title>Some small powers of two</title>
         <tabular halign="center">
@@ -70,224 +72,225 @@
           </row>
         </tabular>
       </table>
-  </p>
+    </p>
 
-  <example>
-    <statement>
-      <p>
-        Find the binary representation of each of the following numbers:
-        <ol>
-          <li>24</li>
-          <li>255</li>
-          <li>2019</li>
-        </ol>
-      </p>
-    </statement>
-    <solution>
-      <p>
-        <ol>
-          <li>
-            <m>24 = 16 + 8</m> since that's <m>2^4 + 2^3</m>
-          </li>
-          <li>
-            <md>
-              <mrow> 255 \amp= 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1</mrow>
-              <mrow> \text{since that's}</mrow>
-              <mrow> \amp = 2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0</mrow>
-            </md>
-          </li>
-          <li>
-            <p>
-              This one is a little more work, so I'm including my thinking as we break it down:
+    <example>
+      <statement>
+        <p>
+          Find the binary representation of each of the following numbers:
+          <ol>
+            <li>24</li>
+            <li>255</li>
+            <li>2019</li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <m>24 = 16 + 8</m> since that's <m>2^4 + 2^3</m>
+            </li>
+            <li>
               <md>
-                <mrow> 2019 \amp= 1024 + 995</mrow>
-                <mrow>  \amp= 1024 + 512 + 483 </mrow>
-                <mrow>  \amp= 1024 + 512 + 256 + 227   </mrow>
-                <mrow>  \amp= 1024 + 512 + 256 + 128 + 99   </mrow>
-                <mrow>  \amp= 1024 + 512 + 256 + 128 + 64 + 35  </mrow>
-                <mrow>  \amp= 1024 + 512 + 256 + 128 + 64 + 32 + 2 + 1   </mrow>
+                <mrow> 255 \amp= 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1</mrow>
+                <mrow> \text{since that's}</mrow>
+                <mrow> \amp = 2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0</mrow>
               </md>
-            </p>
-          </li>
-        </ol>
-      </p>
-    </solution>
-  </example>
+            </li>
+            <li>
+              <p>
+                This one is a little more work, so I'm including my thinking as we break it down:
+                <md>
+                  <mrow> 2019 \amp= 1024 + 995</mrow>
+                  <mrow>  \amp= 1024 + 512 + 483 </mrow>
+                  <mrow>  \amp= 1024 + 512 + 256 + 227   </mrow>
+                  <mrow>  \amp= 1024 + 512 + 256 + 128 + 99   </mrow>
+                  <mrow>  \amp= 1024 + 512 + 256 + 128 + 64 + 35  </mrow>
+                  <mrow>  \amp= 1024 + 512 + 256 + 128 + 64 + 32 + 2 + 1   </mrow>
+                </md>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
 
-  <p>
-    Now recall the basic exponents properties of exponents: <m>(a^m)^n = a^{mn}</m> and <m>a^m \cdot a^n = a^{m+n}</m>.
-  </p>
-  <p>
-    What's the connection? Let's take a look at repeatedly squaring a number, say <m>n</m>:
-    <ul marker="circle">
-      <li> <m>n^1 = n^1</m> </li>
-      <li> <m>(n^1)^2 = n^{ 1\cdot2 }</m> </li>
-      <li> <m>(n^2)^2 = n^{ 2\cdot2 } = n^4</m> </li>
-      <li> <m>(n^4)^2 = n^{ 4\cdot2 } = n^8</m> </li>
-      <li> <m>(n^8)^2 = n^{ 8\cdot2 } = n^{16}</m> </li>
-      <li> <m>(n^{16})^2 = n^{ 16\cdot2 } = n^{32}</m> </li>
-      <li> <m>(n^{32})^2 = n^{ 32\cdot2 } = n^{64}</m> </li>
-      <li> <m>(n^{64})^2 = n^{ 64\cdot2 } = n^{128}</m> </li>
-      <li> etc...</li>
-    </ul>
-    Each time we square a number, the exponent becomes the next power of 2.  And because each number can be expressed as a sum of powers of two, we can exploit this fact using a process we'll call modular exponentiation.
-  </p>
+    <p>
+      Now recall the basic exponents properties of exponents: <m>(a^m)^n = a^{mn}</m> and <m>a^m \cdot a^n = a^{m+n}</m>.
+    </p>
+    <p>
+      What's the connection? Let's take a look at repeatedly squaring a number, say <m>n</m>:
+      <ul marker="circle">
+        <li> <m>n^1 = n^1</m> </li>
+        <li> <m>(n^1)^2 = n^{ 1\cdot2 }</m> </li>
+        <li> <m>(n^2)^2 = n^{ 2\cdot2 } = n^4</m> </li>
+        <li> <m>(n^4)^2 = n^{ 4\cdot2 } = n^8</m> </li>
+        <li> <m>(n^8)^2 = n^{ 8\cdot2 } = n^{16}</m> </li>
+        <li> <m>(n^{16})^2 = n^{ 16\cdot2 } = n^{32}</m> </li>
+        <li> <m>(n^{32})^2 = n^{ 32\cdot2 } = n^{64}</m> </li>
+        <li> <m>(n^{64})^2 = n^{ 64\cdot2 } = n^{128}</m> </li>
+        <li> etc...</li>
+      </ul>
+      Each time we square a number, the exponent becomes the next power of 2.  And because each number can be expressed as a sum of powers of two, we can exploit this fact using a process we'll call modular exponentiation.
+    </p>
 
-  <definition>
-    <title>Modular Exponentiation</title>
-    <statement>
-      <p>
-        <term>Modular exponentiation</term> is the process of repeatedly squaring and reducing a number modulo some integer, and then combining the results to find the required answer.
-      </p>
-    </statement>
-  </definition>
+    <definition>
+      <title>Modular Exponentiation</title>
+      <statement>
+        <p>
+          <term>Modular exponentiation</term> is the process of repeatedly squaring and reducing a number modulo some integer, and then combining the results to find the required answer.
+        </p>
+      </statement>
+    </definition>
 
-  <example>
-    <statement>
-      <p>
-        Here's a simple, typed example. We'll find <m>37^{82} \pmod{52}</m>
-      </p>
-    </statement>
-    <solution>
-      <ol>
-        <li>
-          <p>
-            Find the binary representation of <m>82</m>.
-          </p>
-          <me>82 = 64 + 16 + 2</me>
-        </li>
-        <li> 
-          <p>
-            Repeatedly square and reduce <m>37 \pmod{52}</m> six times. This works since <m>2^6 = 64</m>, which is the highest power of <m>2</m> in the binary representation of 82.
-            <ul marker="circle">
-              <li><m>37^1 = 37^1 = 37 \equiv 37\pmod{52}</m></li>
-              <li><m>37^2 = 37^2 = 1369 \equiv 17\pmod{52}</m></li>
-              <li><m>37^4 = 17^2 = 289 \equiv 29 \pmod{52}</m></li>
-              <li><m>37^8 = 29^2 = 841 \equiv 9 \pmod{52}</m></li>
-              <li><m>37^{16} = 9^2 = 81 \equiv 29 \pmod{52}</m></li>
-              <li><m>37^{32} = 29^2 = 841 \equiv 9 \pmod{52}</m></li>
-              <li><m>37^{64} = 9^2 = 81 \equiv 29 \pmod{52}</m></li>
-            </ul>
-            Note that it was a coincidence that we got into a loop of 29, 9, 29, ... But this will happen sometimes! 
-          </p>
-        </li>
-        <li>
-          <p>
-            Now pick from the values above those entries which correspond to the binary representation of our desired power, 82. Since <m>82 = 64 + 16 + 2</m>, we pick the entries corresponding to <m>37^{64}, 37^{16}, \and 37^2</m>:
-            <md>
-              <mrow>
-                37^{82}  \pmod{52} &amp;= 37^{2 + 16 + 64} \pmod{52}
-              </mrow>
-              <mrow>
-                &amp;= 37^2 \cdot 37^{16} \cdot 37^{64} \pmod{52}
-              </mrow>
-              <mrow>
-                &amp;\equiv 17 \cdot 29 \cdot 29 \pmod{52}
-              </mrow>
-              <mrow>
-                &amp;\equiv 49 \pmod{52}
-              </mrow>
-            </md>
-            Take note of the equivalence symbols used above. We write <m>=</m> when the numbers represent equality and <m>\equiv</m> when we have reduced modulo 52.
-          </p>
-        </li>
-      </ol>
-    </solution>
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        Let's find <m>514^{5367}\pmod{711}</m> using the square-and-reduce method.
-      </p>
-    </statement>
-    <solution>
-      <p>
+    <example>
+      <statement>
+        <p>
+          Here's a simple, typed example. We'll find <m>37^{82} \pmod{52}</m>
+        </p>
+      </statement>
+      <solution>
         <ol>
           <li>
-            <p> For the first step, we write the exponent as sums of powers of two:
-            <md>
-              <mrow>5367 = 4096 + 1024 + 128 + 64 + 32 + 16 + 4 + 2 + 1
-              </mrow>
-            </md>
+            <p>
+              Find the binary representation of <m>82</m>.
             </p>
+            <me>82 = 64 + 16 + 2</me>
           </li>
           <li>
             <p>
-              Second step, we repeatedly square and reduce, starting with 514 a total of 12 times since <m>4096 = 2^{12}</m>.
-            </p>
-            <p>
-              Before we get started, I want to admit that I did bring in a spreadsheet to help out. You're encouraged to as well! Excel, Google Sheets, and Apple Numbers all have a <c>=MOD(number, modulus)</c> that compute <m>\text{number} \modulus \text{modulus}</m>
-              I created a table in Excel like this:
-            </p>
-            <sidebyside>
-            <table xml:id="table-excel-square-mod">
-              <title>Sample table in excel</title>
-              <tabular halign="center">
-                <row bottom="medium" header="yes">
-                  <cell>count</cell>
-                  <cell>power of 2</cell>
-                  <cell>value mod 711</cell>
-                </row>
-                <row>
-                  <cell><c>0</c></cell>
-                  <cell><c>2</c></cell>
-                  <cell><c>=MOD(514, 711)</c></cell>
-                </row>
-                <row>
-                  <cell><c>1</c></cell>
-                  <cell><c>2</c></cell>
-                  <cell><c>=MOD(C2*C2, 711)</c></cell>
-                </row>
-                <row>
-                  <cell><c>2</c></cell>
-                  <cell><c>4</c></cell>
-                  <cell><c>=MOD(C3*C3, 711)</c></cell>
-                </row>
-              </tabular>
-            </table>
-            <image source="excel-square-mod.png" scale="50%">
-              <description>
-                Screenshot of Excel sheet demonstrating what is described in the table
-              </description>
-              </image>
-            </sidebyside>
-            <p>
-              then you click-drag to expand the formula down until your count is 12 and power of 2 is 4096. This tells us the following equivalences, with asterisks marking those values we need to finish the computation:
+              Repeatedly square and reduce <m>37 \pmod{52}</m> six times. This works since <m>2^6 = 64</m>, which is the highest power of <m>2</m> in the binary representation of 82.
               <ul marker="circle">
-                <li> <m>514^1 = 514 \pmod{711} </m>*  </li>
-                <li> <m>514^2 \equiv 415 \pmod{711} </m>*  </li>
-                <li> <m>514^4 \equiv 163 \pmod{711} </m>*</li>
-                <li> <m>514^8 \equiv 262 \pmod{711} </m></li>
-                <li> <m>514^{16} \equiv 388 \pmod{711} </m>*</li>
-                <li> <m>514^{32} \equiv 523 \pmod{711}</m>*</li>
-                <li> <m>514^{64} \equiv 505 \pmod{711}</m>*</li>
-                <li> <m>514^{128} \equiv 487 \pmod{711}</m>*</li>
-                <li> <m>514^{256} \equiv 406 \pmod{711}</m></li>
-                <li> <m>514^{512} \equiv 595 \pmod{711}</m></li>
-                <li> <m>514^{1024} \equiv 658 \pmod{711}</m>*</li>
-                <li> <m>514^{2048} \equiv 676 \pmod{711}</m></li>
-                <li> <m>514^{4096} \equiv 514 \pmod{711}</m>*</li>
+                <li><m>37^1 = 37^1 = 37 \equiv 37\pmod{52}</m></li>
+                <li><m>37^2 = 37^2 = 1369 \equiv 17\pmod{52}</m></li>
+                <li><m>37^4 = 17^2 = 289 \equiv 29 \pmod{52}</m></li>
+                <li><m>37^8 = 29^2 = 841 \equiv 9 \pmod{52}</m></li>
+                <li><m>37^{16} = 9^2 = 81 \equiv 29 \pmod{52}</m></li>
+                <li><m>37^{32} = 29^2 = 841 \equiv 9 \pmod{52}</m></li>
+                <li><m>37^{64} = 9^2 = 81 \equiv 29 \pmod{52}</m></li>
               </ul>
+              Note that it was a coincidence that we got into a loop of 29, 9, 29, ... But this will happen sometimes!
             </p>
           </li>
           <li>
             <p>
-              Finally, we put it all together, bringing back the original expression and substituting what we found.
+              Now pick from the values above those entries which correspond to the binary representation of our desired power, 82. Since <m>82 = 64 + 16 + 2</m>, we pick the entries corresponding to <m>37^{64}, 37^{16}, \and 37^2</m>:
               <md>
-                <mrow>514^{5367} \amp= 514^{4096 + 1024 + 128 + 64 + 32 + 16 + 4 + 2 + 1}</mrow>
-                <mrow> \amp= 514^{4096}\cdot514^{1024}\cdot514^{128}\cdot514^{64}\cdot514^{32} \cdot514^{16} \cdot514^{4} \cdot514^2 \cdot514^1</mrow>
-                <mrow> \amp\equiv 514 \cdot 658 \cdot 487 \cdot 505 \cdot 523 \cdot 388 \cdot 163 \cdot 415 \cdot 514 \pmod{711} </mrow>
-                <mrow> \amp \text{multiple two at a time and reduce mod 711 each time}</mrow>
-                <mrow> \amp\equiv 694 \pmod{711}</mrow>
+                <mrow>
+                  37^{82}  \pmod{52} &amp;= 37^{2 + 16 + 64} \pmod{52}
+                </mrow>
+                <mrow>
+                  &amp;= 37^2 \cdot 37^{16} \cdot 37^{64} \pmod{52}
+                </mrow>
+                <mrow>
+                  &amp;\equiv 17 \cdot 29 \cdot 29 \pmod{52}
+                </mrow>
+                <mrow>
+                  &amp;\equiv 49 \pmod{52}
+                </mrow>
               </md>
+              Take note of the equivalence symbols used above. We write <m>=</m> when the numbers represent equality and <m>\equiv</m> when we have reduced modulo 52.
             </p>
           </li>
         </ol>
-        Why only multiply a couple numbers at a time and reduce? If we multiplied all those numbers on second to last line, we'd get 586869563497917784218400,  <url href="https://www.wolframalpha.com/input?i=%28+514+%5Ccdot+658+%5Ccdot+487+%5Ccdot+505+%5Ccdot+523+%5Ccdot+388+%5Ccdot+163+%5Ccdot+415+%5Ccdot+514%29+%2F+%28number+of+stars+in+the+universe%29" visual="wolframalpha.com">which is over half of the number of known stars in the universe</url>. Unless you have a really powerful calculator, you're going to get approximation errors and an incorrect answer!
-      </p>
-    </solution>
-  </example>
+      </solution>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Let's find <m>514^{5367}\pmod{711}</m> using the square-and-reduce method.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p> For the first step, we write the exponent as sums of powers of two:
+              <md>
+                <mrow>5367 = 4096 + 1024 + 128 + 64 + 32 + 16 + 4 + 2 + 1
+                </mrow>
+              </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                Second step, we repeatedly square and reduce, starting with 514 a total of 12 times since <m>4096 = 2^{12}</m>.
+              </p>
+              <p>
+                Before we get started, I want to admit that I did bring in a spreadsheet to help out. You're encouraged to as well! Excel, Google Sheets, and Apple Numbers all have a <c>=MOD(number, modulus)</c> that compute <m>\text{number} \modulus \text{modulus}</m>
+                I created a table in Excel like this:
+              </p>
+              <sidebyside>
+                <table xml:id="table-excel-square-mod">
+                  <title>Sample table in excel</title>
+                  <tabular halign="center">
+                    <row bottom="medium" header="yes">
+                      <cell>count</cell>
+                      <cell>power of 2</cell>
+                      <cell>value mod 711</cell>
+                    </row>
+                    <row>
+                      <cell><c>0</c></cell>
+                      <cell><c>2</c></cell>
+                      <cell><c>=MOD(514, 711)</c></cell>
+                    </row>
+                    <row>
+                      <cell><c>1</c></cell>
+                      <cell><c>2</c></cell>
+                      <cell><c>=MOD(C2*C2, 711)</c></cell>
+                    </row>
+                    <row>
+                      <cell><c>2</c></cell>
+                      <cell><c>4</c></cell>
+                      <cell><c>=MOD(C3*C3, 711)</c></cell>
+                    </row>
+                  </tabular>
+                </table>
+                <image source="excel-square-mod.png" scale="50%">
+                  <description>
+                    Screenshot of Excel sheet demonstrating what is described in the table
+                  </description>
+                </image>
+              </sidebyside>
+              <p>
+                then you click-drag to expand the formula down until your count is 12 and power of 2 is 4096. This tells us the following equivalences, with asterisks marking those values we need to finish the computation:
+                <ul marker="circle">
+                  <li> <m>514^1 = 514 \pmod{711} </m>*  </li>
+                  <li> <m>514^2 \equiv 415 \pmod{711} </m>*  </li>
+                  <li> <m>514^4 \equiv 163 \pmod{711} </m>*</li>
+                  <li> <m>514^8 \equiv 262 \pmod{711} </m></li>
+                  <li> <m>514^{16} \equiv 388 \pmod{711} </m>*</li>
+                  <li> <m>514^{32} \equiv 523 \pmod{711}</m>*</li>
+                  <li> <m>514^{64} \equiv 505 \pmod{711}</m>*</li>
+                  <li> <m>514^{128} \equiv 487 \pmod{711}</m>*</li>
+                  <li> <m>514^{256} \equiv 406 \pmod{711}</m></li>
+                  <li> <m>514^{512} \equiv 595 \pmod{711}</m></li>
+                  <li> <m>514^{1024} \equiv 658 \pmod{711}</m>*</li>
+                  <li> <m>514^{2048} \equiv 676 \pmod{711}</m></li>
+                  <li> <m>514^{4096} \equiv 514 \pmod{711}</m>*</li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                Finally, we put it all together, bringing back the original expression and substituting what we found.
+                <md>
+                  <mrow>514^{5367} \amp= 514^{4096 + 1024 + 128 + 64 + 32 + 16 + 4 + 2 + 1}</mrow>
+                  <mrow> \amp= 514^{4096}\cdot514^{1024}\cdot514^{128}\cdot514^{64}\cdot514^{32} \cdot514^{16} \cdot514^{4} \cdot514^2 \cdot514^1</mrow>
+                  <mrow> \amp\equiv 514 \cdot 658 \cdot 487 \cdot 505 \cdot 523 \cdot 388 \cdot 163 \cdot 415 \cdot 514 \pmod{711} </mrow>
+                  <mrow> \amp \text{multiple two at a time and reduce mod 711 each time}</mrow>
+                  <mrow> \amp\equiv 694 \pmod{711}</mrow>
+                </md>
+              </p>
+            </li>
+          </ol>
+          Why only multiply a couple numbers at a time and reduce? If we multiplied all those numbers on second to last line, we'd get 586869563497917784218400,  <url href="https://www.wolframalpha.com/input?i=%28+514+%5Ccdot+658+%5Ccdot+487+%5Ccdot+505+%5Ccdot+523+%5Ccdot+388+%5Ccdot+163+%5Ccdot+415+%5Ccdot+514%29+%2F+%28number+of+stars+in+the+universe%29" visual="wolframalpha.com">which is over half of the number of known stars in the universe</url>. Unless you have a really powerful calculator, you're going to get approximation errors and an incorrect answer!
+        </p>
+      </solution>
+    </example>
+  </subsection>
 
   <exercises>
 

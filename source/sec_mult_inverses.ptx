@@ -4,178 +4,180 @@
     Multiplicative Inverses
   </title>
 
-  <p>
-    In our algebra and calculus classes, where we worked in <m>\Q</m> and <m>\R</m>, all non-zero numbers had multiplicative inverses. For example, <m>5^{-1} = \frac15</m> since <m>5^{-1}\cdot 5 = 1</m>. But <m>\frac15 \not \in \Z</m>!
-  </p>
-  <p>
-    When we're working with only integers, in particular in congruence classes modulo an integer <m>m</m>, fractions aren't a thing. Some numbers, though, do have multiplicative inverses. They're special, and we explore them in this section.
-  </p>
-  <p>
-    Why do we care? At this point, the only algebraic equations we can solve are of the form <m> x + b \equiv c\pmod{m}</m>. The multiplicative inverses help us solve the algebraic, <term>affine</term> equations, <m>ax + b \equiv c\pmod{m}</m>.
-  </p>
+  <!-- to make the schema happy, I need to put everything into a subsection (since the forums are in a subsection)  -->
+  <subsection>
+    <p>
+      In our algebra and calculus classes, where we worked in <m>\Q</m> and <m>\R</m>, all non-zero numbers had multiplicative inverses. For example, <m>5^{-1} = \frac15</m> since <m>5^{-1}\cdot 5 = 1</m>. But <m>\frac15 \not \in \Z</m>!
+    </p>
+    <p>
+      When we're working with only integers, in particular in congruence classes modulo an integer <m>m</m>, fractions aren't a thing. Some numbers, though, do have multiplicative inverses. They're special, and we explore them in this section.
+    </p>
+    <p>
+      Why do we care? At this point, the only algebraic equations we can solve are of the form <m> x + b \equiv c\pmod{m}</m>. The multiplicative inverses help us solve the algebraic, <term>affine</term> equations, <m>ax + b \equiv c\pmod{m}</m>.
+    </p>
 
-  <definition>
-    <statement>
-      <p>
-        Let <m>a</m> be an integer and <m>m</m> a positive integer. We define a <term>multiplicative inverse of <m>a</m> modulo <m>m</m></term> to be an integer <m>b</m> such that <m>ab \equiv 1 \pmod{m}</m>.
-      </p>
-    </statement>
-  </definition>
+    <definition>
+      <statement>
+        <p>
+          Let <m>a</m> be an integer and <m>m</m> a positive integer. We define a <term>multiplicative inverse of <m>a</m> modulo <m>m</m></term> to be an integer <m>b</m> such that <m>ab \equiv 1 \pmod{m}</m>.
+        </p>
+      </statement>
+    </definition>
 
-  <example>
-    <statement>
-      <p>
-        Since <m>3 \cdot 5\equiv 1 \pmod{7}</m>, we say that <m>3</m> is a multiplicative inverse of 5 modulo 7. Similarly, 5 is a multiplicative inverse of 3 modulo 7.
-      </p>
-      <p>
-        We say that <m>3</m> is <i>a</i> multiplicative inverse, rather than <i>the</i> multiplicative inverse, because every number in the congruence class <m>[3]_7</m> is also an inverse! Observing that <m>-4 \in [3]_7</m>, and <m>10\in [3]_7</m>, we can check that:
-        <ul>
-          <li> <m>10 \cdot 5\equiv 1 \pmod{7}</m> </li>
-          <li> <m>(-4) \cdot 5 \equiv 1 \pmod{7} </m> </li>
-          <li> etc</li>
-        </ul>
-      </p>
-    </statement>
-  </example>
+    <example>
+      <statement>
+        <p>
+          Since <m>3 \cdot 5\equiv 1 \pmod{7}</m>, we say that <m>3</m> is a multiplicative inverse of 5 modulo 7. Similarly, 5 is a multiplicative inverse of 3 modulo 7.
+        </p>
+        <p>
+          We say that <m>3</m> is <i>a</i> multiplicative inverse, rather than <i>the</i> multiplicative inverse, because every number in the congruence class <m>[3]_7</m> is also an inverse! Observing that <m>-4 \in [3]_7</m>, and <m>10\in [3]_7</m>, we can check that:
+          <ul>
+            <li> <m>10 \cdot 5\equiv 1 \pmod{7}</m> </li>
+            <li> <m>(-4) \cdot 5 \equiv 1 \pmod{7} </m> </li>
+            <li> etc</li>
+          </ul>
+        </p>
+      </statement>
+    </example>
 
-  <example>
-    <statement>
-      <p>
-        <ol>
-          <li> 
-            Find every multiple of 4 modulo 9.
-          </li>
-          <li>
-            Find the inverse of 4 modulo 9.
-          </li>
-        </ol>
-      </p>
-    </statement>
-    <solution>
-      <p>
-        Here's the multiplication table. Remember to reduce modulo 9.
-      </p>
-      <table>
-        <title>Multiplication table of 4 modulo 9</title>
-        <tabular halign="center">
-          <row bottom="medium" header="yes">
-            <cell right="medium">
-              *
-            </cell>
-            <cell>
-              1
-            </cell>
-            <cell>
-              2
-            </cell>
-            <cell>
-              3
-            </cell>
-            <cell>
-              4
-            </cell>
-            <cell>
-              5
-            </cell>
-            <cell halign="left">
-              6
-            </cell>
-            <cell halign="left">
-              7
-            </cell>
-            <cell halign="left">
-              8
-            </cell>
-            <cell halign="left">
-              9
-            </cell>
-          </row>
-          <row>
-            <cell right="medium">
-              4
-            </cell>
-            <cell>
-              4
-            </cell>
-            <cell>
-              8
-            </cell>
-            <cell>
-              3
-            </cell>
-            <cell>
-              7
-            </cell>
-            <cell>
-              2
-            </cell>
-            <cell halign="left">
-              6
-            </cell>
-            <cell halign="left">
-              1
-            </cell>
-            <cell halign="left">
-              5
-            </cell>
-            <cell halign="left">
-              0
-            </cell>
-          </row>
-        </tabular>
-      </table>
-      <p>
-        The inverse of 4 modulo 9 is 7. Why? Because <m>4\cdot 7 = 1 \pmod 9</m>.
-      </p>
-    </solution>
-    <answer component="video">
-      <video youtube="MyWZyvJUlI4" />
-    </answer>
+    <example>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              Find every multiple of 4 modulo 9.
+            </li>
+            <li>
+              Find the inverse of 4 modulo 9.
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Here's the multiplication table. Remember to reduce modulo 9.
+        </p>
+        <table>
+          <title>Multiplication table of 4 modulo 9</title>
+          <tabular halign="center">
+            <row bottom="medium" header="yes">
+              <cell right="medium">
+                *
+              </cell>
+              <cell>
+                1
+              </cell>
+              <cell>
+                2
+              </cell>
+              <cell>
+                3
+              </cell>
+              <cell>
+                4
+              </cell>
+              <cell>
+                5
+              </cell>
+              <cell halign="left">
+                6
+              </cell>
+              <cell halign="left">
+                7
+              </cell>
+              <cell halign="left">
+                8
+              </cell>
+              <cell halign="left">
+                9
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+                4
+              </cell>
+              <cell>
+                4
+              </cell>
+              <cell>
+                8
+              </cell>
+              <cell>
+                3
+              </cell>
+              <cell>
+                7
+              </cell>
+              <cell>
+                2
+              </cell>
+              <cell halign="left">
+                6
+              </cell>
+              <cell halign="left">
+                1
+              </cell>
+              <cell halign="left">
+                5
+              </cell>
+              <cell halign="left">
+                0
+              </cell>
+            </row>
+          </tabular>
+        </table>
+        <p>
+          The inverse of 4 modulo 9 is 7. Why? Because <m>4\cdot 7 = 1 \pmod 9</m>.
+        </p>
+      </solution>
+      <answer component="video">
+        <video youtube="MyWZyvJUlI4" />
+      </answer>
 
-  </example>
+    </example>
 
 
-  <example>
-    <statement>
-      <p>
-        Solve the congruence <m>4x \equiv 5 \pmod 9 </m>.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        Given that above we found that the multiplicative inverse of 4 modulo 9 is 7, we need to multiply both sides by 7:
-        <md>
-          <mrow>4x \amp \equiv 5 \pmod 9</mrow>
-          <mrow>4^{-1}4x \amp \equiv 4^{-1} 5 \pmod 9</mrow>
-          <mrow>1x \amp \equiv 7 \cdot 5 \pmod 9 </mrow>
-          <mrow>x \amp \equiv 35 \pmod 9 </mrow>
-          <mrow>x \amp \equiv 8 \pmod 9</mrow>
-        </md>
-      </p>
-    </solution>
-    <answer component="video">
-      <video youtube="-_3jKc2ul4w" />
-    </answer>
-  </example>
+    <example>
+      <statement>
+        <p>
+          Solve the congruence <m>4x \equiv 5 \pmod 9 </m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Given that above we found that the multiplicative inverse of 4 modulo 9 is 7, we need to multiply both sides by 7:
+          <md>
+            <mrow>4x \amp \equiv 5 \pmod 9</mrow>
+            <mrow>4^{-1}4x \amp \equiv 4^{-1} 5 \pmod 9</mrow>
+            <mrow>1x \amp \equiv 7 \cdot 5 \pmod 9 </mrow>
+            <mrow>x \amp \equiv 35 \pmod 9 </mrow>
+            <mrow>x \amp \equiv 8 \pmod 9</mrow>
+          </md>
+        </p>
+      </solution>
+      <answer component="video">
+        <video youtube="-_3jKc2ul4w" />
+      </answer>
+    </example>
 
-  <example xml:id="multiplication-table">
-    <statement>
-      <p>
-        Let's create a multiplication table modulo 9. The following Sage code does it for us. You can change the variable <c>n</c> to other numbers to quickly generate other multiplication tables.
-      </p>
-      <p>
-        The output is a table/matrix whose <m>i, j</m>th entry is <m>i \cdot j \pmod{n}</m>.
-      </p>
-      <sage>
-        <input>
+    <example xml:id="multiplication-table">
+      <statement>
+        <p>
+          Let's create a multiplication table modulo 9. The following Sage code does it for us. You can change the variable <c>n</c> to other numbers to quickly generate other multiplication tables.
+        </p>
+        <p>
+          The output is a table/matrix whose <m>i, j</m>th entry is <m>i \cdot j \pmod{n}</m>.
+        </p>
+        <sage>
+          <input>
             n = 9
             rows = []
             for i in range(1, n):
-                rows.append(list(map((lambda x: (i*x)%n), [x for x in range(1,n)])))
+            rows.append(list(map((lambda x: (i*x)%n), [x for x in range(1,n)])))
 
             table(rows)
-        </input>
-        <output>
+          </input>
+          <output>
             1	2	3	4	5	6	7	8
             2	4	6	8	1	3	5	7
             3	6	0	3	6	0	3	6
@@ -184,256 +186,257 @@
             6	3	0	6	3	0	6	3
             7	5	3	1	8	6	4	2
             8	7	6	5	4	3	2	1
-        </output>
-      </sage>
-      <p>
-        <ol>
-          <li> What is the inverse of 7 modulo 9? </li>
-          <li> Does 6 have an inverse modulo 9? Why or why not?</li>
-          <li> What numbers are invertible modulo 9? What numbers are not?</li>
-        </ol>
-      </p>
-    </statement>
-    <solution>
-      <p>
-        <ol>
-          <li> The inverse of 7 modulo 9 is 4. Notice that in the 7 column, 4th row, we see an entry of 1; that tells us <m>7\cdot 4 = 1</m> and so they are inverses. </li>
-          <li> 6 does not have an inverse modulo 9. See in the 6th column (or equivalently, 6th row), that there is never a value 1; no number multiplied by 6 gives 1. </li>
-          <li> Any number that has a 1 in its row/column has an inverse. These are 1, 2, 4, 5, 7, 8. The other numbers: 3, 6 (and 0) do not have multiplicative inverses.</li>
-        </ol>
-      </p>
-    </solution>
-    <answer component="video">
-      <video youtube="IQ3D_dVSl9k" />
-    </answer>
-  </example>
+          </output>
+        </sage>
+        <p>
+          <ol>
+            <li> What is the inverse of 7 modulo 9? </li>
+            <li> Does 6 have an inverse modulo 9? Why or why not?</li>
+            <li> What numbers are invertible modulo 9? What numbers are not?</li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li> The inverse of 7 modulo 9 is 4. Notice that in the 7 column, 4th row, we see an entry of 1; that tells us <m>7\cdot 4 = 1</m> and so they are inverses. </li>
+            <li> 6 does not have an inverse modulo 9. See in the 6th column (or equivalently, 6th row), that there is never a value 1; no number multiplied by 6 gives 1. </li>
+            <li> Any number that has a 1 in its row/column has an inverse. These are 1, 2, 4, 5, 7, 8. The other numbers: 3, 6 (and 0) do not have multiplicative inverses.</li>
+          </ol>
+        </p>
+      </solution>
+      <answer component="video">
+        <video youtube="IQ3D_dVSl9k" />
+      </answer>
+    </example>
 
-  <p>
-    Computing a multiplication table is tedious if we just want to find a multiplicative inverse to solve a linear congruence. Similarly, guess-and-check is generally inefficient. Now we turn to a powerful fact that gives rise to an algorithm to find inverses.
-  </p>
-
-  <proposition>
-    <statement>
-      <p>
-        If <m>a \and m</m> are relatively prime integers and <m>m \gt 1</m>, then an inverse of <m>a</m> modulo <m>m</m> exists.
-      </p>
-    </statement>
-    <answer component="video">
-      <video youtube="R14CL5b6GjE" />
-    </answer>
-
-  </proposition>
-
-  <note>
     <p>
-      <ol>
-        <li> The inverse of <m>a \text{ modulo } m</m> is its Bézout coefficient in <m>{\gcd(a,m) = as + mt}</m> </li>
-        <li> The inverse is also unique (up to congruence), but we won't prove that here.</li>
-      </ol>
+      Computing a multiplication table is tedious if we just want to find a multiplicative inverse to solve a linear congruence. Similarly, guess-and-check is generally inefficient. Now we turn to a powerful fact that gives rise to an algorithm to find inverses.
     </p>
-  </note>
 
-  <example>
-    <statement>
-      <p>
-        Solve <m>5x + 3 = 0\pmod{14}</m>
-      </p>
-    </statement>
-    <answer component="video">
-      <video youtube="J-Iu16MEKeo" />
-    </answer>
-  </example>
+    <proposition>
+      <statement>
+        <p>
+          If <m>a \and m</m> are relatively prime integers and <m>m \gt 1</m>, then an inverse of <m>a</m> modulo <m>m</m> exists.
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="R14CL5b6GjE" />
+      </answer>
 
-  <example xml:id="example-inverses-multiple-solutions">
-    <statement>
-      <p>
-        Solve the linear congruences, if possible. Explain if there are no solutions, one solution, or infinitely many solutions.
-        <ol>
-          <li><m> 11x \equiv 15 \pmod{20} </m></li>
-          <li><m> 6x\equiv 4 \pmod{10}</m> </li>
-          <li><m> 8x\equiv 2 \pmod{28}</m> </li>
-          <li><m> 5x\equiv 4 \pmod{25}</m> </li>
-        </ol>
-      </p>
-    </statement>
-    <solution>
+    </proposition>
+
+    <note>
       <p>
         <ol>
-          <li>
-            <p>
-              First, since <m>\gcd(11,20)=1</m>, there is a unique solution to this recurrence. Using either the Euclidean Algorithm or guessing-and-checking, notice that <m>11\cdot11=121\equiv 1\pmod{20}</m>, so <m>11^{-1} \equiv 11\pmod{20}</m>.
-
-              So we have:
-              <md>
-                <mrow> 11x &amp;\equiv 15\pmod{20} </mrow>
-                <mrow> 11\cdot11x &amp;\equiv 11\cdot 15\pmod{20} </mrow>
-                <mrow> 1x &amp;\equiv 165 \pmod{20} </mrow>
-                <mrow> x &amp;\equiv 5 \pmod{20} </mrow>
-              </md>
-            </p>
-          </li>
-          <li>
-            <p>
-              Since <m>\gcd(6,10) =2 \ne 1</m>, there isn't a unique solution! We can't use the Euclidean Algorithm to find our inverse and instead have to rely on trial and error.
-            </p>
-            <p> Since <m>6\cdot 4 = 24 \equiv 4 \pmod{10}</m>, we have that 4 is one solution. Similarly, you can check that <m>9</m> is also a solution.
-            </p>
-            <p>
-              This congruence has two solutions modulo 10, <m>x=4</m> and <m>x=9</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              As above, since <m>\gcd(8,28) = 4 \ne 1</m>, so there isn't a unique solution. Let's see what happens when we do the multiplication:
-            </p>
-            <table>
-              <title>Multiplication table of 8 modulo 28</title>
-              <tabular halign="center">
-                <row bottom="medium">
-                  <cell right="medium">
-                    *
-                  </cell>
-                  <cell>
-                    1
-                  </cell>
-                  <cell>
-                    2
-                  </cell>
-                  <cell>
-                    3
-                  </cell>
-                  <cell>
-                    4
-                  </cell>
-                  <cell>
-                    5
-                  </cell>
-                  <cell halign="left">
-                    6
-                  </cell>
-                  <cell halign="left">
-                    7
-                  </cell>
-                  <cell halign="left">
-                    8
-                  </cell>
-                </row>
-                <row>
-                  <cell right="medium">
-                    8
-                  </cell>
-                  <cell>
-                    8
-                  </cell>
-                  <cell>
-                    16
-                  </cell>
-                  <cell>
-                    24
-                  </cell>
-                  <cell>
-                    4
-                  </cell>
-                  <cell>
-                    12
-                  </cell>
-                  <cell>
-                    20
-                  </cell>
-                  <cell halign="left">
-                    0
-                  </cell>
-                  <cell halign="left">
-                    8
-                  </cell>
-                </row>
-              </tabular>
-            </table>
-            <p>
-              ... we could keep going... notice that as soon as we get back to <m>8</m>, we have gone in a loop! The values will repeat.
-            </p>
-            <p>
-              Our first solution is <m>x=4</m>, then <m>x=11</m>, then <m>x=18</m>, and finally <m>m=25</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              Here, since <m>\gcd(5, 25) = 5 \ne 1</m>, again, no unique solution. Take a few moments to multiply values of 5 and notice it will never reach 4.
-            </p>
-            <p>
-              There is no solution to this congruence!
-            </p>
-          </li>
+          <li> The inverse of <m>a \text{ modulo } m</m> is its Bézout coefficient in <m>{\gcd(a,m) = as + mt}</m> </li>
+          <li> The inverse is also unique (up to congruence), but we won't prove that here.</li>
         </ol>
       </p>
-    </solution>
-  </example>
+    </note>
 
-  <note xml:id="note-inverses-solving-multiple">
-    <title>Solving systems with gcd other than 1</title>
-    <p>
-      As we hinted in the previous example, we have three possibilities for the congruence <m>ax = b\pmod{m}</m>:
-      <ol>
-        <li> A unique solution if <m>\gcd(a, m) = 1</m> </li>
-        <li> If <m>\gcd(a, m) = d</m>, the congruence will have <m>d</m> solutions if <m>d \divides b</m> </li>
-        <li> And the system will have no solution if <m>\gcd(a, m) = d</m> and <m>d \not\divides b</m> </li>
-      </ol>
-    </p>
-    <p>
-      If the congruence has a solution, the complete set of solutions reduced modulo <m>m</m> is given by:
-      <md>
-        <mrow>
-          x = x_0 + \dfrac{mt}{d}
-        </mrow>
-      </md>
-      where <m>\gcd(a,m) = d</m>, <m>x_0</m> is an initial solution, and <m>t</m> runs through <m>Z_d</m>, the <xref ref="def-zmodn" text="custom">set of remainders modulo d</xref>.
-    </p>
-    <p>
-      Take a moment to revisit the examples in <xref ref="example-inverses-multiple-solutions"/> using this formula.
-    </p>
-  </note>
+    <example>
+      <statement>
+        <p>
+          Solve <m>5x + 3 = 0\pmod{14}</m>
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="J-Iu16MEKeo" />
+      </answer>
+    </example>
 
-  <example>
-    <statement>
+    <example xml:id="example-inverses-multiple-solutions">
+      <statement>
+        <p>
+          Solve the linear congruences, if possible. Explain if there are no solutions, one solution, or infinitely many solutions.
+          <ol>
+            <li><m> 11x \equiv 15 \pmod{20} </m></li>
+            <li><m> 6x\equiv 4 \pmod{10}</m> </li>
+            <li><m> 8x\equiv 2 \pmod{28}</m> </li>
+            <li><m> 5x\equiv 4 \pmod{25}</m> </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                First, since <m>\gcd(11,20)=1</m>, there is a unique solution to this recurrence. Using either the Euclidean Algorithm or guessing-and-checking, notice that <m>11\cdot11=121\equiv 1\pmod{20}</m>, so <m>11^{-1} \equiv 11\pmod{20}</m>.
+
+                So we have:
+                <md>
+                  <mrow> 11x &amp;\equiv 15\pmod{20} </mrow>
+                  <mrow> 11\cdot11x &amp;\equiv 11\cdot 15\pmod{20} </mrow>
+                  <mrow> 1x &amp;\equiv 165 \pmod{20} </mrow>
+                  <mrow> x &amp;\equiv 5 \pmod{20} </mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                Since <m>\gcd(6,10) =2 \ne 1</m>, there isn't a unique solution! We can't use the Euclidean Algorithm to find our inverse and instead have to rely on trial and error.
+              </p>
+              <p> Since <m>6\cdot 4 = 24 \equiv 4 \pmod{10}</m>, we have that 4 is one solution. Similarly, you can check that <m>9</m> is also a solution.
+              </p>
+              <p>
+                This congruence has two solutions modulo 10, <m>x=4</m> and <m>x=9</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                As above, since <m>\gcd(8,28) = 4 \ne 1</m>, so there isn't a unique solution. Let's see what happens when we do the multiplication:
+              </p>
+              <table>
+                <title>Multiplication table of 8 modulo 28</title>
+                <tabular halign="center">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      *
+                    </cell>
+                    <cell>
+                      1
+                    </cell>
+                    <cell>
+                      2
+                    </cell>
+                    <cell>
+                      3
+                    </cell>
+                    <cell>
+                      4
+                    </cell>
+                    <cell>
+                      5
+                    </cell>
+                    <cell halign="left">
+                      6
+                    </cell>
+                    <cell halign="left">
+                      7
+                    </cell>
+                    <cell halign="left">
+                      8
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      8
+                    </cell>
+                    <cell>
+                      8
+                    </cell>
+                    <cell>
+                      16
+                    </cell>
+                    <cell>
+                      24
+                    </cell>
+                    <cell>
+                      4
+                    </cell>
+                    <cell>
+                      12
+                    </cell>
+                    <cell>
+                      20
+                    </cell>
+                    <cell halign="left">
+                      0
+                    </cell>
+                    <cell halign="left">
+                      8
+                    </cell>
+                  </row>
+                </tabular>
+              </table>
+              <p>
+                ... we could keep going... notice that as soon as we get back to <m>8</m>, we have gone in a loop! The values will repeat.
+              </p>
+              <p>
+                Our first solution is <m>x=4</m>, then <m>x=11</m>, then <m>x=18</m>, and finally <m>m=25</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Here, since <m>\gcd(5, 25) = 5 \ne 1</m>, again, no unique solution. Take a few moments to multiply values of 5 and notice it will never reach 4.
+              </p>
+              <p>
+                There is no solution to this congruence!
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
+    <note xml:id="note-inverses-solving-multiple">
+      <title>Solving systems with gcd other than 1</title>
       <p>
-        Give a complete list of the solutions to the following congruences:
+        As we hinted in the previous example, we have three possibilities for the congruence <m>ax = b\pmod{m}</m>:
         <ol>
-          <li><m> 8x = 20 \pmod{28} </m></li>
-          <li><m> 21x = 14 \pmod{49}</m> </li>
+          <li> A unique solution if <m>\gcd(a, m) = 1</m> </li>
+          <li> If <m>\gcd(a, m) = d</m>, the congruence will have <m>d</m> solutions if <m>d \divides b</m> </li>
+          <li> And the system will have no solution if <m>\gcd(a, m) = d</m> and <m>d \not\divides b</m> </li>
         </ol>
       </p>
-    </statement>
-    <solution>
       <p>
-        <ol>
-          <li>
-            <p>
-              We begin first by finding <m>\gcd(8,28)=4</m>, so there will not be a unique solution, but instead zero or four.  Because <m>4 \divides 20</m>, there will be four solutions reduced modulo 28.
-            </p>
-            <p>
-              Applying the method of <xref ref="note-inverses-solving-multiple" text="custom">solving congruences with multiple solutions</xref>, we need to find the first solution. Running through possible values of <m>x = 0, 1, 2, 3\dots</m>, we note that <m>8\cdot 6 = 48 \equiv 20 \pmod{28}</m> so that <m>x_0=6</m> is the first solution. Then all solutions will be of the form:
-              <md>
-                <mrow>x = 6 + \frac{28t}{4} \text{ for } t \in \Z_4</mrow>
-              </md>
-              Plug in the values <m>t=0, 1, 2, 3</m> to find the complete solution set of <m>x=6, 13, 20, 27</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              As above, first find <m>\gcd(21, 49) = 7</m>. Since <m>7\divides 14</m>, we have seven total solutions reduced modulo 49.
-            </p>
-            <p>
-              To find the initial solution, test values of <m>x=0, 1, 2, \dots</m> to find the first solution is <m>x_0 = 3</m> Applying the formula we find all solutions to be:
-              <md>
-                <mrow>x = 3 + \dfrac{49t}{7} \text{ for } t \in \Z_7</mrow>
-              </md>
-              Plug in the values <m>t=0, 1, 2, 3, 4, 5, 6</m> to find the complete solution set of <m>x=3, 10, 17, 24, 31, 38, 45</m>
-            </p>
-          </li>
-        </ol>
+        If the congruence has a solution, the complete set of solutions reduced modulo <m>m</m> is given by:
+        <md>
+          <mrow>
+            x = x_0 + \dfrac{mt}{d}
+          </mrow>
+        </md>
+        where <m>\gcd(a,m) = d</m>, <m>x_0</m> is an initial solution, and <m>t</m> runs through <m>Z_d</m>, the <xref ref="def-zmodn" text="custom">set of remainders modulo d</xref>.
       </p>
-    </solution>
-  </example>
+      <p>
+        Take a moment to revisit the examples in <xref ref="example-inverses-multiple-solutions"/> using this formula.
+      </p>
+    </note>
+
+    <example>
+      <statement>
+        <p>
+          Give a complete list of the solutions to the following congruences:
+          <ol>
+            <li><m> 8x = 20 \pmod{28} </m></li>
+            <li><m> 21x = 14 \pmod{49}</m> </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                We begin first by finding <m>\gcd(8,28)=4</m>, so there will not be a unique solution, but instead zero or four.  Because <m>4 \divides 20</m>, there will be four solutions reduced modulo 28.
+              </p>
+              <p>
+                Applying the method of <xref ref="note-inverses-solving-multiple" text="custom">solving congruences with multiple solutions</xref>, we need to find the first solution. Running through possible values of <m>x = 0, 1, 2, 3\dots</m>, we note that <m>8\cdot 6 = 48 \equiv 20 \pmod{28}</m> so that <m>x_0=6</m> is the first solution. Then all solutions will be of the form:
+                <md>
+                  <mrow>x = 6 + \frac{28t}{4} \text{ for } t \in \Z_4</mrow>
+                </md>
+                Plug in the values <m>t=0, 1, 2, 3</m> to find the complete solution set of <m>x=6, 13, 20, 27</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                As above, first find <m>\gcd(21, 49) = 7</m>. Since <m>7\divides 14</m>, we have seven total solutions reduced modulo 49.
+              </p>
+              <p>
+                To find the initial solution, test values of <m>x=0, 1, 2, \dots</m> to find the first solution is <m>x_0 = 3</m> Applying the formula we find all solutions to be:
+                <md>
+                  <mrow>x = 3 + \dfrac{49t}{7} \text{ for } t \in \Z_7</mrow>
+                </md>
+                Plug in the values <m>t=0, 1, 2, 3, 4, 5, 6</m> to find the complete solution set of <m>x=3, 10, 17, 24, 31, 38, 45</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+  </subsection>
 
   <exercises>
     <exercise>

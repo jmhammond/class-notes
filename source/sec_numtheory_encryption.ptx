@@ -2,6 +2,7 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-numtheory-encryption">
   <title>Application: Encryption</title>
 
+  <!-- to make the schema happy, I need to put everything into a subsection (since the forums are in a subsection)  -->
   <subsection xml:id="subsection-numtheory-ciphers">
     <title>
       Basic Cipher Examples
