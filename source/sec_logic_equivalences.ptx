@@ -7,239 +7,243 @@
     </p>
   </introduction>
 
-  <definition>
-    <title>Tautologies and Contradictions</title>
-    <statement>
-      <p>
-        An expression involving logical variables that is true for all values is called a <term>tautology</term>.
-      </p>
-      <p>
-        An expression involving logical variables that is false for all values is called a <term>contradiction</term>.
-      </p>
-    </statement>
-  </definition>
+  <!-- to make the schema happy, I need to put everything into a subsection (since the forums are in a subsection)  -->
+  <subsection>
+    <definition>
+      <title>Tautologies and Contradictions</title>
+      <statement>
+        <p>
+          An expression involving logical variables that is true for all values is called a <term>tautology</term>.
+        </p>
+        <p>
+          An expression involving logical variables that is false for all values is called a <term>contradiction</term>.
+        </p>
+      </statement>
+    </definition>
 
-  <p>
-    Statements that are not tautologies or contradictions are called <term>contingencies</term>. 
-  </p>
-
-  <definition>
-    <title>Logical Equivalence</title>
-    <statement>
-      <p>
-        We say two propositions <m>p</m> and <m>q</m> are <term>logically equivalent</term> if <m>p \leftrightarrow q</m> is a tautology. We denote this by <m>p \equiv q</m>.
-      </p>
-    </statement>
-  </definition>
-
-  <p>
-    The first method to show that two statements <m>p \and q</m> are equivalent is to build a truth table to to find the truth values of <m>p \leftrightarrow q</m>.
-  </p>
-
-  <example>
-    <statement>
-      <p>
-        Prove the following are equivalent using a truth table.
-        <ol>
-          <li><m>( \neg p \to (q \wedge \neg q)  ) \equiv p</m></li>
-          <li> <m>p \vee (p \wedge q) \equiv p </m></li>
-          <li> <m>p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)</m></li>
-          <li> <m>\neg(p \to q) \equiv  p \wedge \neg q</m> </li>
-          <li> <m>p \to q \equiv \neg p \vee q</m> </li>
-        </ol>
-      </p>
-      <p>
-         Note! We use <m>p \to q \equiv \neg p \vee q</m> often enough that this has a name. We'll call it <term>implication</term>
-      </p>
-    </statement>
-    <solution>
-      <p>
-      Here's the solution for <m>(\neg p \to (q \wedge \neg q)) \equiv p</m>:
-      </p>
-      <table xml:id="table-contradiction-valid">
-        <title>Showing <m>( \neg p \to (q \wedge \neg q)  )\leftrightarrow p</m> is a tautology</title>
-        <tabular  halign="center">
-          <row bottom="minor" header="yes">
-            <cell><m>p</m></cell>
-            <cell><m>q</m></cell>
-            <cell><m>\neg p</m></cell>
-            <cell><m>q \wedge \neg q</m></cell>
-            <cell><m>\neg p \to (q \wedge \neg q)</m></cell>
-            <cell><m>(\neg p \to (q \wedge \neg q)) \leftrightarrow p</m></cell>
-          </row>
-
-          <row>
-            <cell>T</cell>
-            <cell>T</cell>
-            <cell>F</cell>
-            <cell>F</cell>
-            <cell>T</cell>
-            <cell>T</cell>
-          </row>
-
-          <row>
-            <cell>T</cell>
-            <cell>F</cell>
-            <cell>F</cell>
-            <cell>F</cell>
-            <cell>T</cell>
-            <cell>T</cell>
-          </row>
-
-          <row>
-            <cell>F</cell>
-            <cell>T</cell>
-            <cell>T</cell>
-            <cell>F</cell>
-            <cell>F</cell>
-            <cell>T</cell>
-          </row>
-
-          <row>
-            <cell>F</cell>
-            <cell>F</cell>
-            <cell>T</cell>
-            <cell>F</cell>
-            <cell>F</cell>
-            <cell>T</cell>
-          </row>
-        </tabular>
-      </table>
-    </solution>
-    <answer component="video">
-      <video youtube="44izzfqVMNo" />
-    </answer>
-  </example>
-
-  <p>
-    Since <m>p \leftrightarrow q</m> is true if <m>p \and q</m> have the same truth values, in this course we will often build a truth table for the two statements and then remark on whether their columns are the same or different.
-  </p>
-
-  <p>
-    The following table is a set of core tautologies we will be using for the rest of the course. In the example that follows them, we will show how we can use these existing tautologies (which we'll call laws) to make conclusions about more complex statements.
-  </p>
-  <aside>
     <p>
-      Do you need to memorize them? Absolutely!
+      Statements that are not tautologies or contradictions are called <term>contingencies</term>.
     </p>
-  </aside>
 
-  <list xml:id="list-logical-equivalences">
-    <title>
-      Fundamental logical equivalences
-    </title>
+    <definition>
+      <title>Logical Equivalence</title>
+      <statement>
+        <p>
+          We say two propositions <m>p</m> and <m>q</m> are <term>logically equivalent</term> if <m>p \leftrightarrow q</m> is a tautology. We denote this by <m>p \equiv q</m>.
+        </p>
+      </statement>
+    </definition>
 
-    <introduction>
+    <p>
+      The first method to show that two statements <m>p \and q</m> are equivalent is to build a truth table to to find the truth values of <m>p \leftrightarrow q</m>.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Prove the following are equivalent using a truth table.
+          <ol>
+            <li><m>( \neg p \to (q \wedge \neg q)  ) \equiv p</m></li>
+            <li> <m>p \vee (p \wedge q) \equiv p </m></li>
+            <li> <m>p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)</m></li>
+            <li> <m>\neg(p \to q) \equiv  p \wedge \neg q</m> </li>
+            <li> <m>p \to q \equiv \neg p \vee q</m> </li>
+          </ol>
+        </p>
+        <p>
+          Note! We use <m>p \to q \equiv \neg p \vee q</m> often enough that this has a name. We'll call it <term>implication</term>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Here's the solution for <m>(\neg p \to (q \wedge \neg q)) \equiv p</m>:
+        </p>
+        <table xml:id="table-contradiction-valid">
+          <title>Showing <m>( \neg p \to (q \wedge \neg q)  )\leftrightarrow p</m> is a tautology</title>
+          <tabular  halign="center">
+            <row bottom="minor" header="yes">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\neg p</m></cell>
+              <cell><m>q \wedge \neg q</m></cell>
+              <cell><m>\neg p \to (q \wedge \neg q)</m></cell>
+              <cell><m>(\neg p \to (q \wedge \neg q)) \leftrightarrow p</m></cell>
+            </row>
+
+            <row>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+
+            <row>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+
+            <row>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+
+            <row>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+          </tabular>
+        </table>
+      </solution>
+      <answer component="video">
+        <video youtube="44izzfqVMNo" />
+      </answer>
+    </example>
+
+    <p>
+      Since <m>p \leftrightarrow q</m> is true if <m>p \and q</m> have the same truth values, in this course we will often build a truth table for the two statements and then remark on whether their columns are the same or different.
+    </p>
+
+    <p>
+      The following table is a set of core tautologies we will be using for the rest of the course. In the example that follows them, we will show how we can use these existing tautologies (which we'll call laws) to make conclusions about more complex statements.
+    </p>
+    <aside>
       <p>
-        Let <m>p, q</m> and <m>r</m> be logical propositions.
+        Do you need to memorize them? Absolutely!
       </p>
-    </introduction>
+    </aside>
 
-    <dl width="narrow">
-      <li>
-        <title>Commutative Laws</title>
-        <p>
-          <m>p \lor  q\equiv q\lor p</m> <line/><line/>
-          <m>p \land q\equiv q \land p</m> <!-- intentionally blank /-->
-        </p>
-      </li>
-      <li>
-        <title>Associative Laws</title>
-        <p>
-          <m>(p \lor  q) \lor r \equiv  p \lor  (q \lor  r)</m> <line/> <line/>
-          <m>(p \land q) \land r\equiv p \land  (q \land  r)</m>
-        </p>
-      </li>
-      <li>
-        <title>Distributive Laws</title>
-        <p>
-          <m>p \land  (q \lor  r) \equiv  (p \land  q ) \lor  (p \land  r)</m> <line/> <line/>
-          <m>p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r)</m>
-        </p>
-      </li>
-      <li>
-        <title>Identity Laws</title>
-        <p>
-          <m>p \lor  F\equiv p</m> <line/> <line/>
-          <m>p \land  T \equiv p</m>
-        </p>
-      </li>
-      <li>
-        <title>Negation Laws</title>
-        <p>
-          <m>p\land \neg p\equiv F</m> <line/><line/>
-          <m>p\lor \neg p\equiv T</m>
-        </p>
-      </li>
-      <li>
-        <title>Idempotent Laws</title>
-        <p>
-          <m>p \lor  p \equiv p</m>  <line/><line/>
-          <m>p\land p \equiv p</m>
-        </p>
-      </li>
-      <li>
-        <title>Domination Laws</title>
-        <p>
-          <m>p \land F \equiv F</m> <line/><line/>
-          <m>p \lor  T \equiv T</m>
-        </p>
-      </li>
-      <li>
-        <title>Absorption Laws</title>
-        <p>
-          <m>p \land (p\lor  q)\equiv p</m> <line/><line/>
-          <m>p \lor  (p \land  q) \equiv  p</m>
-        </p>
-      </li>
-      <li>
-        <title>DeMorgan's Laws</title>
-        <p>
-          <m>\neg (p \lor  q) \equiv  (\neg p) \land  (\neg q)</m> <line/><line/>
-          <m>\neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)</m>
-        </p>
-      </li>
-      <li>
-        <title>Double Negation Law</title>
-        <p> <m>\neg (\neg p)\equiv p</m></p>
-      </li>
-      <li>
-        <title>Implication</title>
-        <p> <m>p \to q \equiv \neg p \lor q</m></p>
-      </li>
-    </dl>
-  </list>
+    <list xml:id="list-logical-equivalences">
+      <title>
+        Fundamental logical equivalences
+      </title>
 
-  <p>
-    You'll notice that for those laws which have two different forms they look very similar, just with different operations and truth and false swapped. Not only does this mean you actually have half as much to memorize, there's a neat reason for this that we'll get into when we discuss Boolean Algebras in Discrete 2!
-  </p>
+      <introduction>
+        <p>
+          Let <m>p, q</m> and <m>r</m> be logical propositions.
+        </p>
+      </introduction>
 
-  <example xml:id="example-contradiction-logic">
-    <statement>
-      <p>
-        Use the logical laws from <xref ref="list-logical-equivalences"/> to show the following are equivalent.
-        <ol>
-          <li>
-            <m>p \wedge q \equiv \neg(p \to \neg q)</m>
-          </li>
-          <li>
-            <m>(p \to r) \vee (q \to r) \equiv (p \wedge q) \to r</m> 
-          </li>
-          <li>
-            <m>q \to p \equiv \neg p \to \neg q</m>
-          </li>
-          <li><m>( \neg p \to (q \wedge \neg q)  ) \equiv p</m></li>
-        </ol>
-      </p>
-    </statement>
-    <answer component="video">
-      <video youtube="gFjfEOKlyEc" />
-    </answer>
-  </example>
+      <dl width="narrow">
+        <li>
+          <title>Commutative Laws</title>
+          <p>
+            <m>p \lor  q\equiv q\lor p</m> <line/><line/>
+            <m>p \land q\equiv q \land p</m> <!-- intentionally blank /-->
+          </p>
+        </li>
+        <li>
+          <title>Associative Laws</title>
+          <p>
+            <m>(p \lor  q) \lor r \equiv  p \lor  (q \lor  r)</m> <line/> <line/>
+            <m>(p \land q) \land r\equiv p \land  (q \land  r)</m>
+          </p>
+        </li>
+        <li>
+          <title>Distributive Laws</title>
+          <p>
+            <m>p \land  (q \lor  r) \equiv  (p \land  q ) \lor  (p \land  r)</m> <line/> <line/>
+            <m>p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r)</m>
+          </p>
+        </li>
+        <li>
+          <title>Identity Laws</title>
+          <p>
+            <m>p \lor  F\equiv p</m> <line/> <line/>
+            <m>p \land  T \equiv p</m>
+          </p>
+        </li>
+        <li>
+          <title>Negation Laws</title>
+          <p>
+            <m>p\land \neg p\equiv F</m> <line/><line/>
+            <m>p\lor \neg p\equiv T</m>
+          </p>
+        </li>
+        <li>
+          <title>Idempotent Laws</title>
+          <p>
+            <m>p \lor  p \equiv p</m>  <line/><line/>
+            <m>p\land p \equiv p</m>
+          </p>
+        </li>
+        <li>
+          <title>Domination Laws</title>
+          <p>
+            <m>p \land F \equiv F</m> <line/><line/>
+            <m>p \lor  T \equiv T</m>
+          </p>
+        </li>
+        <li>
+          <title>Absorption Laws</title>
+          <p>
+            <m>p \land (p\lor  q)\equiv p</m> <line/><line/>
+            <m>p \lor  (p \land  q) \equiv  p</m>
+          </p>
+        </li>
+        <li>
+          <title>DeMorgan's Laws</title>
+          <p>
+            <m>\neg (p \lor  q) \equiv  (\neg p) \land  (\neg q)</m> <line/><line/>
+            <m>\neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)</m>
+          </p>
+        </li>
+        <li>
+          <title>Double Negation Law</title>
+          <p> <m>\neg (\neg p)\equiv p</m></p>
+        </li>
+        <li>
+          <title>Implication</title>
+          <p> <m>p \to q \equiv \neg p \lor q</m></p>
+        </li>
+      </dl>
+    </list>
 
-  <p>
-    This is your first experience with logical proof! It won't be your last. Much of this class is about learning to understand and argue rigorously.
-  </p>
+    <p>
+      You'll notice that for those laws which have two different forms they look very similar, just with different operations and truth and false swapped. Not only does this mean you actually have half as much to memorize, there's a neat reason for this that we'll get into when we discuss Boolean Algebras in Discrete 2!
+    </p>
+
+    <example xml:id="example-contradiction-logic">
+      <statement>
+        <p>
+          Use the logical laws from <xref ref="list-logical-equivalences"/> to show the following are equivalent.
+          <ol>
+            <li>
+              <m>p \wedge q \equiv \neg(p \to \neg q)</m>
+            </li>
+            <li>
+              <m>(p \to r) \vee (q \to r) \equiv (p \wedge q) \to r</m>
+            </li>
+            <li>
+              <m>q \to p \equiv \neg p \to \neg q</m>
+            </li>
+            <li><m>( \neg p \to (q \wedge \neg q)  ) \equiv p</m></li>
+          </ol>
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="gFjfEOKlyEc" />
+      </answer>
+    </example>
+
+    <p>
+      This is your first experience with logical proof! It won't be your last. Much of this class is about learning to understand and argue rigorously.
+    </p>
+
+  </subsection>
 
   <exercises>
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
