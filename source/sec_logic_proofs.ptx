@@ -3,118 +3,120 @@
   <title>An introduction to proofs</title>
 
   <subsection>
-    <title>Basic number concepts </title>
-  <p>
-    Before we start, we need to formally define some basic concepts of numbers.
-  </p>
+    <p>
+      Before we start, we need to formally define some basic concepts of numbers.
+    </p>
 
-  <definition>
-    <title>Even Integer</title>
-    <statement>
-      <p>
-        A number <m>n</m> is said to be <term>even</term> if it is a multiple of 2. That is, if there exists an integer <m>k</m> such that <m>n = 2k</m>, then <m>n</m> is even.
-      </p>
-    </statement>
-  </definition>
+    <definition>
+      <title>Even Integer</title>
+      <statement>
+        <p>
+          A number <m>n</m> is said to be <term>even</term> if it is a multiple of 2. That is, if there exists an integer <m>k</m> such that <m>n = 2k</m>, then <m>n</m> is even.
+        </p>
+      </statement>
+    </definition>
 
-  <example>
-    <statement>
-      <p>
-        <ol>
-          <li> 6 is even since <m>6 = 2\cdot 3</m> </li>
-          <li> 0 is even, since <m> 0 = 2\cdot 0</m></li>
-          <li> -8 is even, since <m>-8 = 2 \cdot (-4)</m></li>
-          <li> 9 is not even, since there is no integer <m>k</m> such that <m>9=2k</m></li>
-        </ol>
-      </p>
-    </statement>
-  </example>
+    <example>
+      <statement>
+        <p>
+          <ol>
+            <li> 6 is even since <m>6 = 2\cdot 3</m> </li>
+            <li> 0 is even, since <m> 0 = 2\cdot 0</m></li>
+            <li> -8 is even, since <m>-8 = 2 \cdot (-4)</m></li>
+            <li> 9 is not even, since there is no integer <m>k</m> such that <m>9=2k</m></li>
+          </ol>
+        </p>
+      </statement>
+    </example>
 
-  <definition>
-    <title>Odd Integer</title>
-    <statement>
-      <p>
-        A number <m>n</m> is said to be <term>odd</term> if it is not a multiple of 2. That is, if there exists an integer <m>k</m> such that <m>n = 2k + 1</m>, then <m>n</m> is odd.
-      </p>
-    </statement>
-  </definition>
+    <definition>
+      <title>Odd Integer</title>
+      <statement>
+        <p>
+          A number <m>n</m> is said to be <term>odd</term> if it is not a multiple of 2. That is, if there exists an integer <m>k</m> such that <m>n = 2k + 1</m>, then <m>n</m> is odd.
+        </p>
+      </statement>
+    </definition>
 
-  <example>
-    <statement>
-      <p>
-        <ol>
-          <li> 7 is odd since <m>7 = 2\cdot 3 + 1</m> </li>
-          <li> -1 is odd, since <m> -1 = 2\cdot (-1) + 1</m></li>
-          <li> 8 is not odd, since there is no integer <m>k</m> such that <m>8=2k+1</m></li>
-        </ol>
-      </p>
-    </statement>
-  </example>
-  
-  <definition>
-    <title>Rational Number</title>
-    <statement>
-      <p>
-        A number <m>n</m> is said to be <term>rational</term> if there exist integers <m>a, b</m> with <m>b \not=0 </m> such that <m>n = \dfrac{a}{b}</m>. If a number is not rational, we say that it is is <term>irrational</term>.
-      </p>
-    </statement>
-  </definition>
+    <example>
+      <statement>
+        <p>
+          <ol>
+            <li> 7 is odd since <m>7 = 2\cdot 3 + 1</m> </li>
+            <li> -1 is odd, since <m> -1 = 2\cdot (-1) + 1</m></li>
+            <li> 8 is not odd, since there is no integer <m>k</m> such that <m>8=2k+1</m></li>
+          </ol>
+        </p>
+      </statement>
+    </example>
 
-  <example>
-    <statement>
-      <p>
-        <ol>
-          <li> 7 is rational since <m>7 =  \frac71</m> </li>
-          <li> <m>\frac12</m> is rational, since both 1 and 2 are integers</li>
-        </ol>
-      </p>
-    </statement>
-  </example>
-  
+    <definition>
+      <title>Rational Number</title>
+      <statement>
+        <p>
+          A number <m>n</m> is said to be <term>rational</term> if there exist integers <m>a, b</m> with <m>b \not=0 </m> such that <m>n = \dfrac{a}{b}</m>. If a number is not rational, we say that it is is <term>irrational</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          <ol>
+            <li> 7 is rational since <m>7 =  \frac71</m> </li>
+            <li> <m>\frac12</m> is rational, since both 1 and 2 are integers</li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Note that every integer is a rational number, since if <m>n</m> is an integer, then <m>\frac{n}{1}</m> is a rational number. Not every rational number is an integer, for example, <m>\frac{1}{2}</m> is not an integer.
+    </p>
+    <p>
+      There are also numbers which are not integers and also not rational. We'll give an example later in this section.
+    </p>
   </subsection>
 
   <subsection>
     <title>
       Basic concepts of proof
     </title>
-  
-  <definition>
-    <title>Statement Terminology</title>
-    <ul>
-      <li> A <term>theorem</term> is a statement can be shown to be true. We generally reserve the word theorem for an important statement.
-      </li>
-      <li>
-        A <term>proposition</term> is a <q>less important</q> theorem.
-      </li>
-      <li> The tools we use to prove a theorem are <term>axioms</term> (or <term>postulates</term>) which are basic assumptions we make, as well as other theorems we've already proven.
-      </li>
-      <li>
-        A less important theorem that will be helpful in proving others is called a <term>lemma</term>.
-      </li>
-      <li>
-      A <term>corollary</term> is a theorem that follows directly from a theorem just proved.</li>
-      <li>
-        A <term>conjecture</term> is a statement that we think may be true (our intuition suggests it)
-      </li>
-    </ul>
-  </definition>
+    <definition>
+      <title>Statement Terminology</title>
+      <ul>
+        <li> A <term>theorem</term> is a statement can be shown to be true. We generally reserve the word theorem for an important statement.
+        </li>
+        <li>
+          A <term>proposition</term> is a <q>less important</q> theorem.
+        </li>
+        <li> The tools we use to prove a theorem are <term>axioms</term> (or <term>postulates</term>) which are basic assumptions we make, as well as other theorems we've already proven.
+        </li>
+        <li>
+          A less important theorem that will be helpful in proving others is called a <term>lemma</term>.
+        </li>
+        <li>
+        A <term>corollary</term> is a theorem that follows directly from a theorem just proved.</li>
+        <li>
+          A <term>conjecture</term> is a statement that we think may be true (our intuition suggests it)
+        </li>
+      </ul>
+    </definition>
 
-  <example>
-    <statement>
-      <p>
-        Here's a proposition: <q>If <m>n</m> is an odd integer, then <m>n^2</m> is odd.</q>
-      </p>
-      <p>
-        This statement means for the universe of discourse of all integers:
-        <me> \forall n ((n \text{ is odd } ) \to (n^2  \text{ is odd }))</me>
-      </p>
-    </statement>
-  </example>
-  <note>
+    <example>
+      <statement>
+        <p>
+          Here's a proposition: <q>If <m>n</m> is an odd integer, then <m>n^2</m> is odd.</q>
+        </p>
+        <p>
+          This statement means for the universe of discourse of all integers:
+          <me> \forall n ((n \text{ is odd } ) \to (n^2  \text{ is odd }))</me>
+        </p>
+      </statement>
+    </example>
     <p>
       The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words <q>for all.</q>
     </p>
-  </note>
   </subsection>
 
   <subsection>
@@ -448,23 +450,23 @@
     <definition>
       <title>Trivial Statements</title>
       <statement>
-      <p>
-        If we know that the conclusion of a statement is true, then the statement has a <term>trivial</term> proof.
+        <p>
+          If we know that the conclusion of a statement is true, then the statement has a <term>trivial</term> proof.
 
-        <example>
-          <statement>
-            <p>
-              Let <m>P(x)</m> be the statement <q>If <m>x\in \mathbb{R}</m> and <m>x \gt 0</m> , then <m>x^2 + 1 \ge 0</m></q>.
-            </p>
-          </statement>
-          <solution>
-            <p>
-              Since we know that <m>x^2 \ge 0</m> for any real number, <m>x^2 + 1 \ge x^2 \ge 0</m>. We didn't need the hypothesis <m>x \gt 0</m>. This is a trivial proof.
-            </p>
-          </solution>
+          <example>
+            <statement>
+              <p>
+                Let <m>P(x)</m> be the statement <q>If <m>x\in \mathbb{R}</m> and <m>x \gt 0</m> , then <m>x^2 + 1 \ge 0</m></q>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Since we know that <m>x^2 \ge 0</m> for any real number, <m>x^2 + 1 \ge x^2 \ge 0</m>. We didn't need the hypothesis <m>x \gt 0</m>. This is a trivial proof.
+              </p>
+            </solution>
 
-        </example>
-      </p>
+          </example>
+        </p>
       </statement>
     </definition>
 
@@ -679,9 +681,9 @@
         <p>
           Suppose that you would like to prove the following implication:
         </p>
-          <blockquote>
-            <p>For all numbers <m>n</m>, if <m>n</m> is prime then <m>n</m> is solitary.</p>
-          </blockquote>
+        <blockquote>
+          <p>For all numbers <m>n</m>, if <m>n</m> is prime then <m>n</m> is solitary.</p>
+        </blockquote>
         <p>
           Write out the beginning and end of the argument if you were to prove the statement,
           <ol>
@@ -837,19 +839,19 @@
             <me>
               3 = \frac{a^2}{b^2}
             </me>
-          <me>
-            3b^2  = a^2
-          </me>
-        </p>
+            <me>
+              3b^2  = a^2
+            </me>
+          </p>
           <p>
             So <m>a^2</m> is a multiple of 3. This can only happen if <m>a</m> is a multiple of 3, so <m>a = 3k</m> for some integer <m>k</m>. Then we have
             <me>
               3b^2 = 9k^2
             </me>
-          <me>
-            b^2 = 3k^2
-          </me>
-        </p>
+            <me>
+              b^2 = 3k^2
+            </me>
+          </p>
           <p>
             So <m>b^2</m> is a multiple of 3, making <m>b</m> a multiple of 3 as well. But this contradicts our assumption that <m>\frac{a}{b}</m> is in lowest terms.
           </p>
@@ -1144,7 +1146,7 @@
                 </p>
                 Since we've exhausted every possible combination of integer solutions, we conclude that there is no integer solution to the equation <m>x^2 = 4y+3</m>.
               </p>
-              </statement>
+            </statement>
           </proof>
 
         </p>
