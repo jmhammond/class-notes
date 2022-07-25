@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-logic-proofs">
   <title>An introduction to proofs</title>
+  <introduction>
+    <p>
+      In this section we'll combine everything we've done this semester to introduce the idea of mathematical proof.  We will take statements about numbers, functions, or sets, decompose them into quantified statements and reason using argumentation and rules of logic to draw conclusions. We will do this by writing complete English and mathematical sentences that take us from beginning to end, telling the story of the argument.
+    </p>
+  </introduction>
 
   <subsection>
     <p>

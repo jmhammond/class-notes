@@ -3,6 +3,19 @@
   <title>Logical Arguments</title>
 
   <!-- to make the schema happy, I need to put everything into a subsection (since the forums are in a subsection)  -->
+  <introduction>
+    <p>
+      <q>Vote for me, and your taxes will go down.</q>  <q>If <m>x^2</m> is divisible by 4, then <m>x</m> is even.</q>  <q>If you sneeze with your eyes open, your eye will burst.</q> These statements are all logical arguments. In this section we'll discuss how to determine if such a statement is valid or invalid.
+    </p>
+    <aside>
+      <p>
+        The sneezing myth was even in the April 30, 1882 issue of the <em>New York Times</em>!  <q>[Her physician] says that probably the sneezing was so rapid that the eyelid remained open... of course the young woman lost the sight of the injured eye.</q>.
+      </p>
+      <p>
+        This myth has been debunked, so don't be afraid to sneeze.
+      </p>
+    </aside>
+  </introduction>
   <subsection>
     <definition>
       <title>Logical Arguments</title>
@@ -122,11 +135,19 @@
       </dl>
     </list>
 
-    <note>
-      <p>
-        It would be good practice to verify that each of the arguments in table <xref ref="list-logical-arguments"/> is a tautology using either true tables or logical equivalences.
-      </p>
-    </note>
+    <example>
+      <statement>
+        <p>
+          It would be good practice to verify that each of the arguments in table <xref ref="list-logical-arguments"/> is a tautology using either true tables or logical equivalences.
+        </p>
+      </statement>
+      <answer component="video">
+        <p>
+          In this video, we demonstrate that the addition and (conjuctive) simplication laws are true via truth tables.
+        </p>
+        <video youtube="gfnlEc9qxSQ" />
+      </answer>
+    </example>
 
     <example>
       <statement>

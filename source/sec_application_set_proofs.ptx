@@ -34,10 +34,6 @@
         </ol>
       </p>
     </statement>
-    <answer component="video">
-      <video youtube="gfnlEc9qxSQ" />
-    </answer>
-
   </definition>
 
   <p>
@@ -126,11 +122,11 @@
       <video youtube="cNiSxQsOloI" />
     </answer>
   </example>
-  </subsection>
 
   <p>
     As noted above, take it one line at a time. As you review the example and check your solutions to exercises below, make sure that you understand each line. How did we get from the previous line to this one? Once you understand, move to the next. Don't be afraid to take it slow!
   </p>
+  </subsection>
 
   <exercises>
     <p>
