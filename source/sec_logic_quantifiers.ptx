@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-logic-quantifiers">
-  <title>Predicates and Logical Quantifiers</title>
+  <title>Propositional Functions and Logical Quantifiers</title>
+  <introduction>
+    <p>
+      We often consider very similar propositions over and over: <m>3 \lt 5</m>, <m>2 \lt 5</m>, <m>7 \lt 5</m>...  In this section, we take what is in common with these statements and build a generic function whose input is from some domain (in this example, numbers), and whose output is true or false.
+    </p>
+  </introduction>
   <subsection>
     <title>Predicates</title>
     <p>
@@ -31,6 +36,10 @@
         </p>
       </statement>
     </definition>
+
+    <p>
+      The domain of discourse is the domain of the propositional function. Like all functions, it depends on the particular function we're considering. The codomain of the propositional function will always be the set <m>\{\text{true, false}\}</m>.
+    </p>
 
     <example>
       <statement>
@@ -75,6 +84,10 @@
 
   <subsection>
     <title>Logical Quantifiers</title>
+
+    <p>
+      With the idea of generic propositional functions taken care of, we now want to make sweeping claims about the truth of a propositional function over some domain.  Is the statement true for every value in the domain? Is the statement true for some specific value? These questions come up so frequently in mathematics that we give them each their own symbol.
+    </p>
 
     <definition>
       <title>Universal Quantifier</title>
