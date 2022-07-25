@@ -198,7 +198,7 @@
       The following theorem tells us that every set contains itself and also the empty set. That every set is a subset of itself maybe feels obvious, but the other half, that the empty set is a subset of every set, is a little less obvious. We will formally prove both statements are true in <xref ref="example-subset-of-itself-and-empty-set"/> after we develop the tools of logical proof.
     </p>
 
-    <theorem>
+    <theorem xml:id="theorem-subset-of-itself-and-empty-set">
       <statement>
         <p>
           For every set <m>S</m>,

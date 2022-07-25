@@ -3,12 +3,12 @@
   <title> Application: Set Properties and Equivalences </title>
   <introduction>
     <p>
-      This section explores how we can apply the equivalences of logical statements to the set properties we explored in <xref ref="sec_objects_sets"/>. It is no coincidence that those set properties look nearly identical to the logical equivalences!
+      This section explores how we can apply the equivalences of logical statements to the set properties we explored in <xref ref="sec_objects_sets"/>. It is no coincidence that those set properties look nearly identical to the logical equivalences! Instead of using Venn Diagrams, in this section we'll use equivalences to verify statements about sets.
     </p>
   </introduction>
 
-
-  <definition>
+  <subsection>
+  <definition xml:id="definition-of-set-props">
     <title>Set operations defined via logic</title>
     <statement>
       <p>
@@ -40,6 +40,9 @@
 
   </definition>
 
+  <p>
+    Now that we have formally defined set properties in terms of our logical operations, we can now use our logical equivalences to formally prove statements about sets. We'll start with this basic statement we first introduced as <xref ref="theorem-subset-of-itself-and-empty-set"/>
+  </p>
 
   <example xml:id="example-subset-of-itself-and-empty-set">
     <statement>
@@ -79,6 +82,13 @@
     </solution>
   </example>
 
+  <p>
+    In the next example and the exercises, as you work through each proof, begin by picking one side of the equation, and writing out the logical statement according to <xref ref="definition-of-set-props"/>. Then ask yourself what <xref ref="list-logical-equivalences">logical equivalence</xref> (De Morgan's Law? Associativity? Commutitivity? Distribution?), you could apply.
+  </p>
+  <p>
+    Take it one line at a time.
+  </p>
+
   <example>
     <statement>
       <p>
@@ -116,6 +126,7 @@
       <video youtube="cNiSxQsOloI" />
     </answer>
   </example>
+  </subsection>
 
   <exercises>
     <p>
@@ -263,6 +274,6 @@
       </script>
     </slate>
   </subsection>
- 
+
 
 </section>
