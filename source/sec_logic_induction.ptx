@@ -2,32 +2,23 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_logic_induction">
   <title>Mathematical Induction</title>
 
-  <!-- <theorem> -->
-  <!--   <title> -->
-  <!--       The Principle of Mathematical Induction -->
-  <!--   </title> -->
-  <!--   <statement> -->
-  <!--     <p> -->
-  <!--       Let <m>S\subseteq \N</m> be a subset of the set of natural numbers with the following properties:  -->
-  <!--       <ol> -->
-  <!--         <li> -->
-  <!--           <m>1 \in S</m> -->
-  <!--         </li> -->
-  <!--         <li> -->
-  <!--           For all <m>n\in \mathbb{N}</m>, having <m>n \in S</m> implies that <m>n+1 \in S</m>. -->
-  <!--         </li> -->
-  <!--       </ol> -->
-  <!--       Then <m>S = \N</m> -->
-  <!--     </p> -->
-  <!--   </statement> -->
-  <!-- </theorem> -->
+  <introduction>
+    <p>
+      In this section, we consider statements which involve some form of <q>... is true of every integer</q>. For example,
+      <ul>
+        <li> For every integer <m>n \ge 1</m>, <m>\ds 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}</m>. </li>
+        <li> <m>\log(a^n) = n \log (a)</m> for every positive integer <m>n</m></li>
+      </ul>
+      We can't prove that a statement like this is true by showing it's true for every literal integer (there are infinitely many of them, so that's impossible). Instead, the principle of mathematical induction tells us we <em>can</em> prove statements like these are true, so long as we do it just right. This section helps us learn how to do just that.
+    </p>
+  </introduction>
 
   <subsection xml:id="math-induction">
     <definition>
       <title>Mathematical Induction</title>
       <statement>
         <p>
-          To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the <term>principal of math induction</term>. The process has two core steps:
+          To prove that a statement <m>P(n)</m> is true for all integers <m>n\ge 0</m>, we use the <term>principle of math induction</term>. The process has two core steps:
           <ol>
             <li>Basis step: Prove that <m>P(0)</m> is true.</li>
             <li>Inductive step: Assume that <m>P(k)</m> is true for some value of <m>k \ge 0</m> and show that <m>P(k+1)</m> is true. </li>
@@ -39,11 +30,9 @@
       </answer>
     </definition>
 
-    <note>
-      <p>
-        You can think of math induction like an infinite ladder. First, you put your foot on the bottom rung. If you're able to go from the <m>k</m>-th rung to the <m>k+1</m>-st rung, you'll be able to climb forever.
-      </p>
-    </note>
+    <p>
+      The common analogy for induction is to imagine an infinite ladder. First, you put your foot on the bottom rung. If you're able to go from the <m>k</m>-th rung to the <m>k+1</m>-st rung, you'll be able to climb forever.
+    </p>
 
     <example>
       <statement>
@@ -146,6 +135,11 @@
   </subsection>
 
   <subsection xml:id="strong-induction">
+
+    <p>
+      The next definition says <q>strong induction</q>, and I'm following the convention of nearly every discrete math book ever in defining this with its own name. The two concepts are really not very different, as we'll see below.
+    </p>
+
     <definition>
       <title>Strong Induction</title>
       <statement>
@@ -254,11 +248,11 @@
       <p>
         Relevant examples are those like the binary representation of a number - that <m>k</m> has a binary representation doesn't immediately tell us <m>k+1</m> does, but if we can cut the number in half and use the binary representation of that number to scale-up in order to build a binary representation of <m>k+1</m>.
       </p>
-
-      <p>
-        <b>Same thing</b> We separate 'weak' and 'strong' induction, but they're really all the same thing. It's just that when it's convenient to show <m>P(k) \to P(k+1)</m>, we write fewer words for our inductive hypothesis. Because if we don't need to use the fact that <m>P(m)</m> is true for all <m>1 \le m \le k</m>, then we just omit that. Mathematicians are lazy.
-      </p>
     </note>
+
+    <p>
+      We separate 'weak' and 'strong' induction, but they're really all the same thing. It's just that when it's convenient to show <m>P(k) \to P(k+1)</m>, we write fewer words for our inductive hypothesis. Because if we don't need to use the fact that <m>P(m)</m> is true for all <m>1 \le m \le k</m>, then we just omit that. Mathematicians are lazy.
+    </p>
   </subsection>
 
   <subsection>
@@ -268,7 +262,7 @@
       <ol>
         <li> There is a valid base case. In our example - it can sort a set of one element) </li>
         <li> Assume the algorithm works for <m>n</m> objects. It can sort a set of <m>n</m> objects</li>
-        <li> Show that if you have a larger set of <m>n+1</m> objects, you algorithm correctly works. It can sort a set with <m>n+1</m> objects</li>)
+        <li> Show that if you have a larger set of one more object, <m>n+1</m> objects, your algorithm correctly sorts that new elements with the previous <m>n</m> elements. It can sort a set with <m>n+1</m> objects. Therefore, the algorithm is correct.</li>
       </ol>
     </p>
     <p>
