@@ -16,7 +16,7 @@
       <input>
         %%time
         def nonrec(x): return 2 + pow(-1, x+1);
-        print(nonrec(10000))
+            print(nonrec(10000))
       </input>
       <output>
         1
@@ -317,7 +317,6 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
       This computer corner isn't about a particular connection to computer science but rather just helping explain some of the Python functions I've used above as we checked our answers. You can use this to check your own answers! We'll walk through, using the same code changing one piece at a time as we build up our building blocks.
     </p>
     <aside>
-      <title>Actually, it is about CS</title>
       <p>Here we're highlighting that sequences are actually just functions, and we can compute them via CS functions. They just happen to be functions defined only on <m>\N</m>
       </p>
     </aside>
