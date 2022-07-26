@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-numtheory-encryption">
   <title>Application: Encryption</title>
+  <introduction>
+    <p>
+      In this section, we discuss two types of encryption algorithms. The first is a simple algorithm that uses linear modular equations to encrypt and decrypt. The second, despite being pretty simple to explain is one of the most common encryption algorithms in current use.
+    </p>
+  </introduction>
 
   <!-- to make the schema happy, I need to put everything into a subsection (since the forums are in a subsection)  -->
   <subsection xml:id="subsection-numtheory-ciphers">
@@ -302,7 +307,16 @@
         <p>
           To determine the keys:
           <ol>
-            <li>Choose two prime numbers <m>p \and q</m>. Let <m>n=pq \and {m = (p-1)(q-1)}</m>.</li>
+            <li>
+              <p>
+                Choose two prime numbers <m>p \and q</m>. Let <m>n=pq \and {m = (p-1)(q-1)}</m>.
+              </p>
+              <aside>
+                <p>
+                  Maybe surprisingly, <m>n=pq</m> is the part of the algorithm that makes it secure. RSA's security comes from the fact that factoring large numbers is a <em>very</em> hard problem. If <m>p \and q</m> are both massively large numbers, then <m>n</m> is essentially unfactorable in any reasonable amount of time.
+                </p>
+              </aside>
+            </li>
             <li>Find any number <m>e</m> which is relatively prime to <m>m</m>.</li>
             <li>Determine <m>d</m> which is the inverse of <m>e</m> modulo <m>m</m>.</li>
             <li>Your public key is <m>(e, n)</m>.</li>
@@ -467,7 +481,7 @@
         <li> Pick two prime numbers <m>p \and q</m> of some interesting size. Make them at least six or seven digits long (use Sage's <c>next_prime</c>). </li>
         <li> Let <m>m=(p-1)(q-1)</m>, and pick any number <m>e</m> relatively prime to <m>m</m>. </li>
         <li> Find the multiplicative inverse, <m>d</m>, of <m>e</m> modulo <m>m</m>.</li>
-        <li> Let <m>n = pq</m>. </li>
+        <li> Let <m>n = pq</m>.  </li>
         <li> Record your numbers <m>(n, p, q, m, e, d)</m> somewhere safe (but much of this is private! Keep it secret!).</li>
         <li>
           <p>
