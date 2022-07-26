@@ -4,6 +4,12 @@
     Permutations and Combinations
   </title>
 
+  <introduction>
+    <p>
+      In the previous section, we were counting things that essentially occurred once. For example, we picked one outfit (one shirt, one pair of pants, one hat).  In this section we'll add complexity. Instead of picking an outfit for a day, how many different ways can our bag be packed for a weekend trip?  We'll answer it at the end of the section.
+    </p>
+  </introduction>
+
   <subsection>
     <definition>
       <title>Permutation</title>
@@ -24,6 +30,10 @@
         <video youtube="UF_xPGO71hw"/>
       </answer>
     </example>
+
+    <p>
+      Intuitively, the permutation of the five books is just the multiplication principle. There are five choices for the first, four for the second, ... until there's only one choice. We found it was <m>5\cdot 4 \cdot 3 \cdot 2 \cdot 1 = 5!</m>.
+    </p>
 
     <example>
       <statement>
@@ -47,6 +57,10 @@
         <video youtube="fTxhoMDB5A8"/>
       </answer>
     </example>
+
+    <p>
+      This is still just the multiplication principle. There are five choices for the first, four for the second, but this time three choices for the third is our last book we take. Here we found it was <m>5 \cdot 4 \cdot 3</m>. But this suggests a pattern that is established in the following theorem and its useful corollary.
+    </p>
 
     <theorem>
       <statement>
@@ -88,8 +102,11 @@
       <answer component="video">
         <video youtube="7-6KTaUl2G8"/>
       </answer>
-
     </example>
+
+    <p>
+      Permutations count those situations in which order matters, such as arranging books on a shelf. If the order of items doesn't matter, we need to account for it as a combination.
+    </p>
 
     <definition>
       <title>Combination</title>
@@ -99,7 +116,6 @@
         </p>
       </statement>
     </definition>
-
 
     <example>
       <statement>
@@ -112,11 +128,21 @@
       </answer>
     </example>
 
+    <p>
+      One way we can think about solving this previous example is that we solved the permutation question, but then we divided out the possible orderings.  We started with <m>P(n,r)</m>, and divide by <m>r!</m>, the number of ways to arrange the <m>r</m> objects. This gives us a very convenient formula:
+    </p>
+
     <note>
       <p>
         If <m>n \and r</m> are integers such that <m>0 \le r \le n</m>, then the number of <m>r</m>-combinations from a set of <m>n</m> elements is
         <me>\binom{n}{r} = \dfrac{n!}{r!(n-r)!}</me>
       </p>
+      <aside>
+        <title>A word on notation</title>
+        <p>
+          Other texts sometimes write <m>C(n,r)</m> to be consistent with permutation notation, and TI calculators often have an <m>nCr</m> button. These all mean the same thing. We're using the <q>binomial notation</q> because of a connection we'll make in the next section.
+        </p>
+      </aside>
     </note>
 
     <example>
@@ -184,6 +210,34 @@
         <video youtube="h7IgJde5bvY"/>
       </answer>
     </example>
+
+
+    <example>
+      <statement>
+        <p>
+          Coming back to our packing for the weekend scenario from the introduction, let's say, like in <xref ref="example-ironic-outfits"/>, that our closet has five ironic t-shirts, three pairs of pants, and three collegiate hats. We want to pack for our weekend trip, picking out three shirts, two pants, and two hats for our suitcase.  How many ways can we do this?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Just like when I pack, I'll take one topic at a time:
+          <ul>
+            <li> Picking shirts -- there are <m>3</m> shirts I'm picking from 5, so <m>\binom{5}{3}</m> Although the shirts are all different, the order I put them into the suitcase doesn't matter, so it's a combination.</li>
+            <li> Picking my pants -- there are <m>2</m> shirts I'm picking from 3, so <m>\binom{3}{2}</m>.</li>
+            <li> Picking my hat -- there are <m>2</m> hats I'm picking from 3, so <m>\binom{3}{2}</m> also.</li>
+          </ul>
+          In total, then, since the shirts, pants, and hats are all independent of one another, we multiply the results to find there are: there are
+          <me>\binom53 \binom32 \binom32 = 90</me>
+          So there are ninety different ways to pack for the weekend.
+        </p>
+        <aside>
+          <p>
+            ... no wonder packing can seem stressful!
+          </p>
+        </aside>
+      </solution>
+    </example>
+
   </subsection>
 
   <exercises>

@@ -37,7 +37,7 @@
       </statement>
     </definition>
 
-    <example>
+    <example xml:id="example-ironic-outfits">
       <statement>
         <p>
           If in your closet you have five ironic t-shirts, three pairs of pants, and three collegiate hats, how many different outfits do you have? Here an outfit is pants, shirt, hat.
@@ -79,7 +79,7 @@
       <title>Addition Principle</title>
       <statement>
         <p>
-          The <term>addition principle</term> states that if event <m>A</m> can occur <m>m</m> ways and event <m>B</m> can occur <m>n</m> ways and the two events are disjoint, then the event <q><m>A \text{ or } B</m></q> can occur <m>m + n</m> ways.
+          The <term>addition principle</term> states that if event <m>A</m> can occur <m>m</m> ways and event <m>B</m> can occur <m>n</m> ways and the two events are disjoint, then the event <q><m>A \text{ or } B</m> (but not both)</q> can occur <m>m + n</m> ways.
         </p>
       </statement>
     </definition>
