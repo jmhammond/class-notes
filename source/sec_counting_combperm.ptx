@@ -1,151 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-combperm">
   <title>
-    Combinations and Permutations
+    Permutations and Combinations
   </title>
 
-  <definition>
-    <title>Permutation</title>
-    <statement>
+  <subsection>
+    <definition>
+      <title>Permutation</title>
+      <statement>
+        <p>
+          A <term>permutation</term> is an ordered arrangement of objects.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          If I want to arrange five books on a shelf, how many possible arrangements of the books are there?
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="UF_xPGO71hw"/>
+      </answer>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          How many functions <m>f: \{1,2,3\} \to \{1, 2, 3\}</m> are bijections?
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="5pR7X1gqOcI"/>
+      </answer>
+    </example>
+
+
+    <example>
+      <statement>
+        <p>
+          If I only want to arrange three of the five books on my shelf, how many ways are there to do that?
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="fTxhoMDB5A8"/>
+      </answer>
+    </example>
+
+    <theorem>
+      <statement>
+        <p>
+          If <m>n</m> is a positive integer and <m>r</m> is an integer such that <m>1 \le r \le n</m>, then there are <m>P(n,r) = n\cdot (n-1) \cdot (n-2) \cdot \dots \cdot (n-(r-1))</m> <m>r</m>-permutations of a set of <m>n</m> elements.
+        </p>
+      </statement>
+    </theorem>
+
+
+    <corollary>
+      <statement>
+        <p>
+          If <m>n</m> and <m>r</m> are integers with <m>0\le r \le n</m>, then:
+          <me>P(n,r) = \dfrac{n!}{(n-r)!}</me>
+        </p>
+      </statement>
+    </corollary>
+
+
+    <example>
+      <statement>
+        <p>
+          How many six-letter vanity license plates are there that have no repeated letters?
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="u9ypy1ZZ6qI"/>
+      </answer>
+    </example>
+
+
+    <example>
+      <statement>
+        <p>
+          How many functions <m>f: \{1,2,3,4\} \to \{1,2,3,4,5,6\}</m> are injective? [Recall a function is injective <m>\forall a, \forall b ( f(a) = f(b)) \to ( a = b )</m>]
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="7-6KTaUl2G8"/>
+      </answer>
+
+    </example>
+
+    <definition>
+      <title>Combination</title>
+      <statement>
+        <p>
+          A <term>combination</term> is an unordered selection of objects.
+        </p>
+      </statement>
+    </definition>
+
+
+    <example>
+      <statement>
+        <p>
+          If I want only to select three books from my five books on the bookshelf, in how many ways can I do this?
+        </p>
+      </statement>
+      <answer>
+        <video youtube="0DGmoVjw4Ms"/>
+      </answer>
+    </example>
+
+    <note>
       <p>
-        A <term>permutation</term> is an ordered arrangement of objects.
+        If <m>n \and r</m> are integers such that <m>0 \le r \le n</m>, then the number of <m>r</m>-combinations from a set of <m>n</m> elements is
+        <me>\binom{n}{r} = \dfrac{n!}{r!(n-r)!}</me>
       </p>
-    </statement>
-  </definition>
+    </note>
 
-  <example>
-    <statement>
-      <p>
-        If I want to arrange five books on a shelf, how many possible arrangements of the books are there?
-      </p>
-    </statement>
-  </example>
+    <example>
+      <statement>
+        <p>
+          How many ways are there to choose five out of ten friends to invite over for dinner?
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="PX5JPp49HBw"/>
+      </answer>
+    </example>
 
-  <example>
-    <statement>
-      <p>
-        How many functions <m>f: \{1,2,3\} \to \{1, 2, 3\}</m> are bijections?
-      </p>
-    </statement>
-  </example>
+    <example>
+      <statement>
+        <p>
+          Two of your ten friends, Tim and Tammy just broke up. They can't stand to be in a room together. How many ways are there to choose five out of ten friends to invite to dinner, ensuring that Tim and Tammy are not both invited?
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="XDS19xuU2d8"/>
+      </answer>
+    </example>
 
+    <example>
+      <statement>
+        <p>
+          How many three element subsets from a set of five elements are there?
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="djWnHnLekz0"/>
+      </answer>
+    </example>
 
-  <example>
-    <statement>
-      <p>
-        If I only want to arrange three of the five books on my shelf, how many ways are there to do that?
-      </p>
-    </statement>
-  </example>
+    <example>
+      <statement>
+        <p>
+          From a standard deck of 52 cards, how many five card hands are possible?
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="taUwZ3TCJ2Y"/>
+      </answer>
+    </example>
 
-  <theorem>
-    <statement>
-      <p>
-        If <m>n</m> is a positive integer and <m>r</m> is an integer such that <m>1 \le r \le n</m>, then there are <m>P(n,r) = n\cdot (n-1) \cdot (n-2) \cdot \dots \cdot (n-(r-1))</m> <m>r</m>-permutations of a set of <m>n</m> elements.
-      </p>
-    </statement>
-  </theorem>
+    <example>
+      <statement>
+        <p>
+          How many five card cards have exactly the same suit?
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="uVvEBsD082s"/>
+      </answer>
+    </example>
 
-
-  <corollary>
-    <statement>
-      <p>
-        If <m>n</m> and <m>r</m> are integers with <m>0\le r \le n</m>, then:
-        <me>P(n,r) = \dfrac{n!}{(n-r)!}</me>
-      </p>
-    </statement>
-  </corollary>
-
-
-  <example>
-    <statement>
-      <p>
-        How many six-letter vanity license plates are there that have no repeated letters?
-      </p>
-    </statement>
-  </example>
-
-
-  <example>
-    <statement>
-      <p>
-        How many functions <m>f: \{1,2,3,4\} \to \{1,2,3,4,5,6\}</m> are injective? [Recall a function is injective <m>\forall a, \forall b ( f(a) = f(b)) \to ( a = b )</m>]
-      </p>
-    </statement>
-  </example>
-
-  <definition>
-    <title>Combination</title>
-    <statement>
-      <p>
-        A <term>combination</term> is an unordered selection of objects.
-      </p>
-    </statement>
-  </definition>
-
-
-  <example>
-    <statement>
-      <p>
-        If I want only to select three books from my five books on the bookshelf, in how many ways can I do this?
-      </p>
-    </statement>
-  </example>
-
-  <note>
-    <p>
-      If <m>n \and r</m> are integers such that <m>0 \le r \le n</m>, then the number of <m>r</m>-combinations from a set of <m>n</m> elements is
-      <me>\binom{n}{r} = \dfrac{n!}{r!(n-r)!}</me>
-    </p>
-  </note>
-
-  <example>
-    <statement>
-      <p>
-        How many ways are there to choose five out of ten friends to invite over for dinner?
-      </p>
-    </statement>
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        Two of your ten friends, Tim and Tammy just broke up. They can't stand to be in a room together. How many ways are there to choose five out of ten friends to invite to dinner, ensuring that Tim and Tammy are not both invited?
-      </p>
-    </statement>
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        How many three element subsets from a set of five elements are there?
-      </p>
-    </statement>
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        From a standard deck of 52 cards, how many five card hands are possible?
-      </p>
-    </statement>
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        How many five card cards have exactly the same suit?
-      </p>
-    </statement>
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        How many five card hands have at least one heart?
-      </p>
-    </statement>
-  </example>
+    <example>
+      <statement>
+        <p>
+          How many five card hands have at least one heart?
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="h7IgJde5bvY"/>
+      </answer>
+    </example>
+  </subsection>
 
   <exercises>
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->

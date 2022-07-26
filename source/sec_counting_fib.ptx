@@ -172,6 +172,9 @@
           Condition on the location of the last domino.
         </p>
       </hint>
+      <answer>
+        <video youtube="6zh5-2E9-ks"/>
+      </answer>
     </example>
 
     <!-- This exercise comes from an identity in Proofs that Really Count -->
@@ -204,6 +207,9 @@
           Condition on the breakability at cell <m>m</m>.
         </p>
       </hint>
+      <answer>
+        <video youtube="o-10ucHM9Us"/>
+      </answer>
     </example>
 
 

@@ -43,6 +43,9 @@
           If in your closet you have five ironic t-shirts, three pairs of pants, and three collegiate hats, how many different outfits do you have? Here an outfit is pants, shirt, hat.
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="k4oWbV1LJmI"/>
+      </answer>
     </example>
 
 
@@ -52,6 +55,9 @@
           How many six character license plates can there be if the first three characters are letters and the second three characters are numbers?
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="CjfCNyN6u6Y"/>
+      </answer>
     </example>
 
     <example>
@@ -60,6 +66,9 @@
           How many playing cards in a standard deck are both red and face cards?
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="HFZhiLMOBvI"/>
+      </answer>
     </example>
 
     <p>
@@ -81,6 +90,9 @@
           If in your closet you have five ironic t-shirts, three pairs of pants, and three collegiate hats, how many different items do you have in your closet?
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="Lg_qUGm9gJA"/>
+      </answer>
     </example>
 
     <definition>
@@ -104,6 +116,10 @@
       </statement>
     </definition>
 
+    <p>
+      In order to count <m>A\cup B</m>, regardless of how the two sets intersect, we introduce the following:
+    </p>
+
     <definition>
       <title>The Principle of Inclusion-Exclusion</title>
       <statement>
@@ -116,6 +132,9 @@
       </statement>
     </definition>
 
+    <p>
+      It helps, when working counting problems with unions, even if using the principle of inclusion-exclusion, to draw a Venn diagram and label the number of elements in each section.
+    </p>
 
     <example>
       <statement>
@@ -123,6 +142,9 @@
           Suppose a company receives 350 applications from college graduates for a job. Suppose 220 of these applicants majored in computer science, 147 majored in business, and 51 majored in both computer science and business. How many majored in neither computer science nor business?
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="kLfJ5VaeykE"/>
+      </answer>
     </example>
 
     <example>
@@ -134,9 +156,10 @@
           How many bit strings of length eight either start with a 1 bit or end with two bits 00?
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="dY1b9qJkQig"/>
+      </answer>
     </example>
-
-
 
     <example>
       <statement>
@@ -144,6 +167,9 @@
           There are 30 people in a club. Assuming everyone is qualified to serve in any position, how many different ways are there to assign a president, vice-president, secretary, and treasurer?
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="9rghTsZO-ME"/>
+      </answer>
     </example>
 
 
@@ -255,13 +281,9 @@
       </statement>
     </theorem>
 
-    <example>
-      <statement>
-        <p>
-          If there are 100 people in a large lecture hall, then at least <m>\left\lceil \dfrac{100}{12} \right\rceil = 9</m> have the same birth month.
-        </p>
-      </statement>
-    </example>
+    <p>
+      Let's imagine there are 100 people in a large lecture hall, then we know that at least at least <m>\left\lceil \dfrac{100}{12} \right\rceil = 9</m> have the same birth month.  Divide the number of people by the number of months, and round up.
+    </p>
 
     <example>
       <statement>
@@ -276,6 +298,10 @@
           So <m>N = 9</m>.
         </p>
       </solution>
+      <answer component="video">
+        <video youtube="SoFDcgO1lio"/>
+      </answer>
+
     </example>
   </subsection>
 

@@ -36,6 +36,9 @@
           </me>
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="_X2WjIsgoDo"/>
+      </answer>
     </theorem>
 
     <definition>
@@ -190,6 +193,10 @@
           by viewing the binomial coefficients as counting subsets.
         </p>
       </statement>
+      <answer>
+        <video youtube="56Myzj8jzqk"/>
+      </answer>
+
       <solution>
         <p>
           We begin by asking a question, and answering the question in two ways:
@@ -263,6 +270,9 @@
           How many pizzas of <m>n</m> toppings can be made if we can choose from <m>2n</m> toppings?
         </p>
       </hint>
+      <answer>
+        <video youtube="4N5qJMBCXLg"/>
+      </answer>
     </example>
 
 
