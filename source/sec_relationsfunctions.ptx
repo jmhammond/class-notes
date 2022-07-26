@@ -1462,7 +1462,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
 
     <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
-    <exercise>
+    <exercise xml:id="exercise-cardinality-of-domain-codomain">
       <statement>
         <p>
           What can you deduce about the sets <m>X</m> and <m>Y</m> if you know

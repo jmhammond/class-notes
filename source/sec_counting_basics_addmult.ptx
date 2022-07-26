@@ -4,252 +4,280 @@
     The Multiplicative and Additive Principles
   </title>
 
-  <note>
+  <introduction>
     <p>
-      A standard deck of playing cards contains four <term>suits</term> (spade, heart, club, diamond). There are 13 cards in each suit (2,3,4,5,6,7,8,9,10, Jack, Queen, King, Ace). <term>Face cards</term> refers to jacks, queens, and kings. Spades and clubs are black and hearts and diamonds are red.
+      In this section we begin our quest to start answering a question that sounds simple enough: <q>how many elements are in a set?</q>  Counting the number of sets is common enough that we gave it its own symbol, <m>|S|</m>, in <xref ref="sec_objects_sets"/>. Numbers of elements in the domain and codomain of functions determine whether a function is bijective, as we saw in <xref ref="exercise-cardinality-of-domain-codomain">an exercise in the functions section</xref>
     </p>
-  </note>
+    <p>
+      We start with basic counting rules that help us count <m>|A\times B|</m> and <m>|A\cup B|</m> for sets <m>A \and B</m>.
+    </p>
+  </introduction>
 
-  <definition>
-    <title>Multiplication Principle</title>
-    <statement>
+  <!-- make the schema happy -->
+  <subsection>
+    <note>
       <p>
-        The <term>multiplication principle</term> states that if an event <m>A</m> can occur <m>m</m> ways and an event <m>B</m> can occur <m>n</m> ways, then the event <q><m>A \and B</m></q> can occur <m>m\cdot n</m> ways.
+        It's common to count <q>hands of cards,</q> so we'll note that a standard deck of playing cards contains four <term>suits</term> (spade, heart, club, diamond). There are 13 cards in each suit (2,3,4,5,6,7,8,9,10, Jack, Queen, King, Ace). <term>Face cards</term> refers to jacks, queens, and kings. Spades and clubs are black and hearts and diamonds are red.
       </p>
-      <p>
-        The multiplication principle generalizes to more than two events.
-      </p>
-    </statement>
-  </definition>
+    </note>
 
-  <example>
-    <statement>
-      <p>
-        If in your closet you have five ironic t-shirts, three pairs of pants, and three collegiate hats, how many different outfits do you have? Here an outfit is pants, shirt, hat.
-      </p>
-    </statement>
-  </example>
+    <p>
+      Our first principle counts <m>A\times B</m>:
+    </p>
 
+    <definition>
+      <title>Multiplication Principle</title>
+      <statement>
+        <p>
+          The <term>multiplication principle</term> states that if an event <m>A</m> can occur <m>m</m> ways and an event <m>B</m> can occur <m>n</m> ways, then the event <q><m>A \and B</m></q> can occur <m>m\cdot n</m> ways.
+        </p>
+        <p>
+          The multiplication principle generalizes to more than two events.
+        </p>
+      </statement>
+    </definition>
 
-  <example>
-    <statement>
-      <p>
-        How many six character license plates can there be if the first three characters are letters and the second three characters are numbers?
-      </p>
-    </statement>
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        How many playing cards in a standard deck are both red and face cards?
-      </p>
-    </statement>
-  </example>
+    <example>
+      <statement>
+        <p>
+          If in your closet you have five ironic t-shirts, three pairs of pants, and three collegiate hats, how many different outfits do you have? Here an outfit is pants, shirt, hat.
+        </p>
+      </statement>
+    </example>
 
 
-  <definition>
-    <title>Addition Principle</title>
-    <statement>
-      <p>
-        The <term>addition principle</term> states that if event <m>A</m> can occur <m>m</m> ways and event <m>B</m> can occur <m>n</m> ways and the two events are disjoint, then the event <q><m>A \text{ or } B</m></q> can occur <m>m + n</m> ways.
-      </p>
-    </statement>
-  </definition>
+    <example>
+      <statement>
+        <p>
+          How many six character license plates can there be if the first three characters are letters and the second three characters are numbers?
+        </p>
+      </statement>
+    </example>
 
-  <example>
-    <statement>
-      <p>
-        If in your closet you have five ironic t-shirts, three pairs of pants, and three collegiate hats, how many different items do you have in your closet?
-      </p>
-    </statement>
-  </example>
+    <example>
+      <statement>
+        <p>
+          How many playing cards in a standard deck are both red and face cards?
+        </p>
+      </statement>
+    </example>
 
-  <definition>
-    <title>Counting principles in terms of sets:</title>
-    <statement>
-      <p>
-        Let <m>A \and B</m> be two sets. Then:
-        <ol>
-          <li>
-            <p>
-              <m>|A \times B| = |A| \cdot |B|</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>A \cap B = \emptyset</m>, then <m>|A\cup B| = |A| + |B|</m>
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </definition>
+    <p>
+      Our second principle (almost) counts <m>A\cup B</m>; we need <m>A \and B</m> to be disjoint sets.
+    </p>
 
-  <definition>
-    <title>The Principle of Inclusion-Exclusion</title>
-    <statement>
-      <p>
-        If <m>A \and B</m> are two sets, then <m>|A \cup B| = |A| + |B| - |A \cap B|</m>
-      </p>
-      <p>
-        Note that this is like the additive principle, except we're removing the occurrences that are in common between <m>A</m> and <m>B</m>.
-      </p>
-    </statement>
-  </definition>
+    <definition>
+      <title>Addition Principle</title>
+      <statement>
+        <p>
+          The <term>addition principle</term> states that if event <m>A</m> can occur <m>m</m> ways and event <m>B</m> can occur <m>n</m> ways and the two events are disjoint, then the event <q><m>A \text{ or } B</m></q> can occur <m>m + n</m> ways.
+        </p>
+      </statement>
+    </definition>
 
+    <example>
+      <statement>
+        <p>
+          If in your closet you have five ironic t-shirts, three pairs of pants, and three collegiate hats, how many different items do you have in your closet?
+        </p>
+      </statement>
+    </example>
 
-  <example>
-    <statement>
-      <p>
-        Suppose a company receives 350 applications from college graduates for a job. Suppose 220 of these applicants majored in computer science, 147 majored in business, and 51 majored in both computer science and business. How many majored in neither computer science nor business?
-      </p>
-    </statement>
-  </example>
+    <definition>
+      <title>Counting principles in terms of sets:</title>
+      <statement>
+        <p>
+          Let <m>A \and B</m> be two sets. Then:
+          <ol>
+            <li>
+              <p>
+                <m>|A \times B| = |A| \cdot |B|</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>A \cap B = \emptyset</m>, then <m>|A\cup B| = |A| + |B|</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
 
-  <example>
-    <statement>
-      <p>
-        We will now consider <term>bit strings</term> which are strings of characters containing only <m>0</m> and <m>1</m>. For example, these are bit strings: <m>0011, 1010, 110,</m> etc.
-      </p>
-      <p>
-        How many bit strings of length eight either start with a 1 bit or end with two bits 00?
-      </p>
-    </statement>
-  </example>
-
-
-
-  <example>
-    <statement>
-      <p>
-        There are 30 people in a club. Assuming everyone is qualified to serve in any position, how many different ways are there to assign a president, vice-president, secretary, and treasurer?
-      </p>
-    </statement>
-  </example>
+    <definition>
+      <title>The Principle of Inclusion-Exclusion</title>
+      <statement>
+        <p>
+          If <m>A \and B</m> are two sets, then <m>|A \cup B| = |A| + |B| - |A \cap B|</m>
+        </p>
+        <p>
+          Note that this is like the additive principle, except we're removing the occurrences that are in common between <m>A</m> and <m>B</m>.
+        </p>
+      </statement>
+    </definition>
 
 
-  <note>
+    <example>
+      <statement>
+        <p>
+          Suppose a company receives 350 applications from college graduates for a job. Suppose 220 of these applicants majored in computer science, 147 majored in business, and 51 majored in both computer science and business. How many majored in neither computer science nor business?
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          We will now consider <term>bit strings</term> which are strings of characters containing only <m>0</m> and <m>1</m>. For example, these are bit strings: <m>0011, 1010, 110,</m> etc.
+        </p>
+        <p>
+          How many bit strings of length eight either start with a 1 bit or end with two bits 00?
+        </p>
+      </statement>
+    </example>
+
+
+
+    <example>
+      <statement>
+        <p>
+          There are 30 people in a club. Assuming everyone is qualified to serve in any position, how many different ways are there to assign a president, vice-president, secretary, and treasurer?
+        </p>
+      </statement>
+    </example>
+
+
     <p>
       The Principle of Inclusion-Exclusion applies to more than two sets. For any finite sets <m>A, B, \and C</m>,
       <me> |A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|</me>
+      In fact, we could generalize it further, but I'll leave that to you to write the formula if you're interested.
     </p>
-  </note>
 
-  <example>
-    <statement>
+    <example>
+      <statement>
+        <p>
+          Suppose we surveyed a class of 41 students, asking if they could play an Accordion, a Bassoon, or a Clarinet. 12 could play the clarinet, 8 could play bassoon, and 5 the accordion. 6 played clarinet and bassoon, 2 played clarinet and accordion, and 3 played bassoon and accordion. One student played all three.
+        </p>
+        <p>
+          How many students can play at least one instrument? Solve this first by Venn Diagrams, then by PIE.
+        </p>
+      </statement>
+    </example>
+
+
+
+    <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
+    <!-- <exercise> -->
+    <!--   <statement> -->
+    <!--     <p> -->
+    <!--       The game TENZI comes with 40 six-sided dice (each numbered 1 to 6). Suppose you roll all 40 dice. -->
+    <!--       <ol> -->
+    <!--         <li> Prove that there will be at least seven dice that land on the same number.</li> -->
+    <!--         <li> -->
+    <!--           <p> -->
+    <!--             How many dice would you have to roll before you were guaranteed that some four of them would all match or all be different? Prove your answer. -->
+    <!--           </p> -->
+    <!--         </li> -->
+    <!--       </ol> -->
+    <!--     </p> -->
+    <!--   </statement> -->
+    <!--   <solution> -->
+    <!--     <p> -->
+    <!--       <ol> -->
+    <!--         <li> -->
+    <!--           <p> -->
+    <!--             This is an example of the pigeonhole principle. We can prove it by contrapositive. -->
+    <!--           </p> -->
+
+    <!--           <proof> -->
+    <!--             <p> -->
+    <!--               Suppose that each number only came up 6 or fewer times. So there are at most six 1's, six 2's, and so on. That's a total of 36 dice, so you must not have rolled all 40 dice. -->
+    <!--             </p> -->
+    <!--           </proof> -->
+    <!--         </li> -->
+
+    <!--         <li> -->
+    <!--           <p> -->
+    <!--             We can have 9 dice without any four matching or any four being all different: three 1's, three 2's, three 3's. We will prove that whenever you roll 10 dice, you will always get four matching or all being different. -->
+    <!--           </p> -->
+
+    <!--           <proof> -->
+    <!--             <p> -->
+    <!--               Suppose you roll 10 dice, but that there are NOT four matching rolls. This means at most, there are three of any given value. If we only had three different values, that would be only 9 dice, so there must be 4 different values, giving 4 dice that are all different. -->
+    <!--             </p> -->
+    <!--           </proof> -->
+    <!--         </li> -->
+    <!--       </ol> -->
+    <!--     </p> -->
+    <!--   </solution> -->
+    <!-- </exercise> -->
+
+    <p>
+      Our next counting approach is pretty straight forward. If you have three cookies, but only two plates, you know that one person is eaching at least two cookies.
+    </p>
+    <aside>
       <p>
-        Suppose we surveyed a class of 41 students, asking if they could play an Accordion, a Bassoon, or a Clarinet. 12 could play the clarinet, 8 could play bassoon, and 5 the accordion. 6 played clarinet and bassoon, 2 played clarinet and accordion, and 3 played bassoon and accordion. One student played all three.
+        If they're chocolate chip, I might be eating all three cookies. But that still means that I had <em>at least two</em> cookies.
       </p>
-      <p>
-        How many students can play at least one instrument? Solve this first by Venn Diagrams, then by PIE.
-      </p>
-    </statement>
-  </example>
+    </aside>
 
+    <definition>
+      <title>The Pigeonhole Principle</title>
+      <statement>
+        <p>
+          If <m>k</m> is a positive integer and <m>k+1</m> objects are placed into <m>k</m> boxes, then at least one box has two or more objects.
+        </p>
+      </statement>
+    </definition>
 
+    <p>
+      I'll pause here to note that a <q>pigeonhole</q> is a slot on a desk or shelf for holding papers. In our scenario, if we have five slots in our desk to hold our papers, and six papers, one slot has at least two papers.
+    </p>
 
-  <!-- <!-\- the following comes from https://github.com/oscarlevin/discrete-book -\-> -->
-  <!-- <exercise> -->
-  <!--   <statement> -->
-  <!--     <p> -->
-  <!--       The game TENZI comes with 40 six-sided dice (each numbered 1 to 6). Suppose you roll all 40 dice. -->
-  <!--       <ol> -->
-  <!--         <li> Prove that there will be at least seven dice that land on the same number.</li> -->
-  <!--         <li> -->
-  <!--           <p> -->
-  <!--             How many dice would you have to roll before you were guaranteed that some four of them would all match or all be different? Prove your answer. -->
-  <!--           </p> -->
-  <!--         </li> -->
-  <!--       </ol> -->
-  <!--     </p> -->
-  <!--   </statement> -->
-  <!--   <solution> -->
-  <!--     <p> -->
-  <!--       <ol> -->
-  <!--         <li> -->
-  <!--           <p> -->
-  <!--             This is an example of the pigeonhole principle. We can prove it by contrapositive. -->
-  <!--           </p> -->
+    <example>
+      <statement>
+        <p>
+          <ol>
+            <li> If there are 13 people, at least two of them have the same birth month. </li>
+            <li> If there are 10 cars at a restaurant, but 11 people there, then at least two people car pooled.</li>
+            <li> etc...</li>
+          </ol>
+        </p>
+      </statement>
+    </example>
 
-  <!--           <proof> -->
-  <!--             <p> -->
-  <!--               Suppose that each number only came up 6 or fewer times. So there are at most six 1's, six 2's, and so on. That's a total of 36 dice, so you must not have rolled all 40 dice. -->
-  <!--             </p> -->
-  <!--           </proof> -->
-  <!--         </li> -->
+    <theorem>
+      <title>The Generalized Pigeonhole Principal</title>
+      <statement>
+        <p>
+          If <m>N</m> objects are placed into <m>k</m> boxes, then there is at least one box with <m>\left\lceil \dfrac{N}{k} \right\rceil</m>.
+        </p>
+      </statement>
+    </theorem>
 
-  <!--         <li> -->
-  <!--           <p> -->
-  <!--             We can have 9 dice without any four matching or any four being all different: three 1's, three 2's, three 3's. We will prove that whenever you roll 10 dice, you will always get four matching or all being different. -->
-  <!--           </p> -->
+    <example>
+      <statement>
+        <p>
+          If there are 100 people in a large lecture hall, then at least <m>\left\lceil \dfrac{100}{12} \right\rceil = 9</m> have the same birth month.
+        </p>
+      </statement>
+    </example>
 
-  <!--           <proof> -->
-  <!--             <p> -->
-  <!--               Suppose you roll 10 dice, but that there are NOT four matching rolls. This means at most, there are three of any given value. If we only had three different values, that would be only 9 dice, so there must be 4 different values, giving 4 dice that are all different. -->
-  <!--             </p> -->
-  <!--           </proof> -->
-  <!--         </li> -->
-  <!--       </ol> -->
-  <!--     </p> -->
-  <!--   </solution> -->
-  <!-- </exercise> -->
-
-
-  <definition>
-    <title>The Pigeonhole Principal</title>
-    <statement>
-      <p>
-        If <m>k</m> is a positive integer and <m>k+1</m> objects are placed into <m>k</m> boxes, then at least one box has two or more objects.
-      </p>
-    </statement>
-  </definition>
-
-  <example>
-    <statement>
-      <p>
-        <ol>
-          <li> If there are 13 people, at least two of them have the same birth month. </li>
-          <li> If there are 10 cars at a restaurant, but 11 people there, then at least two people car pooled.</li>
-          <li> etc...</li>
-        </ol>
-      </p>
-    </statement>
-  </example>
-
-  <theorem>
-    <title>The Generalized Pigeonhole Principal</title>
-    <statement>
-      <p>
-        If <m>N</m> objects are placed into <m>k</m> boxes, then there is at least one box with <m>\left\lceil \dfrac{N}{k} \right\rceil</m>.
-      </p>
-    </statement>
-  </theorem>
-
-  <example>
-    <statement>
-      <p>
-        If there are 100 people in a large lecture hall, then at least <m>\left\lceil \dfrac{100}{12} \right\rceil = 9</m> have the same birth month.
-      </p>
-    </statement>
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        How many cards must be selected from a standard deck of 52 cards in order that at least three have the same suit?
-      </p>
-    </statement>
-    <solution>
-      <p>
-        According to the Generalized Pigeonhole Principle, we want to determine the number of cards, <m>N</m>, that must be drawn (here <m>k = 4</m> suits):
-        <me> \left\lceil \dfrac{N}{4} \right\rceil \ge 3</me>
-        So <m>N = 9</m>.
-      </p>
-    </solution>
-  </example>
-
-
+    <example>
+      <statement>
+        <p>
+          How many cards must be selected from a standard deck of 52 cards in order that at least three have the same suit?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          According to the Generalized Pigeonhole Principle, we want to determine the number of cards, <m>N</m>, that must be drawn (here <m>k = 4</m> suits):
+          <me> \left\lceil \dfrac{N}{4} \right\rceil \ge 3</me>
+          So <m>N = 9</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
 
 
 
