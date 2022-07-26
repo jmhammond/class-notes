@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-objects-seqseries">
   <title>Sequences and Series</title>
+  <introduction>
+    <p>
+      The next mathematical object we'll explore is an <em>ordered</em> collection.  Unlike a set which is a loose collection of objects, for a <term>sequence</term>, order matters.  For this reason, we can view a sequence simply as a <em>function</em> whose domain is the counting numbers. But since we will spend a lot of time in our mathematical career working with them (in this class and calc 2 for a start), we give sequences their own special notation.
+    </p>
+  </introduction>
 
   <subsection>
     <definition>
@@ -14,6 +19,10 @@
         </p>
       </statement>
     </definition>
+
+    <p>
+      It's helpful to remember that <m>a_n</m> is just a new shorthand for a function. You can think of <m>a_n</m> as <m>a(n)</m>, with <m>a</m> is name of the function (sequence) and <m>n</m> is the input variable.
+    </p>
 
     <example>
       <statement>
@@ -31,21 +40,33 @@
       </answer>
     </example>
 
+    <p>
+      Although there are many different types of sequences, two common ones we'll encounter regularly in this course are given below:
+    </p>
+
     <definition>
-      <title>Geometric Sequences</title>
+      <title>Arithmetic and Geometric Sequences</title>
       <statement>
-        <p>
-          A <term>geometric progression</term> is a sequence of the form:
-          <me>a, ar, ar^2, ar^3, \dots, ar^n, \dots </me>
-          with the <term>initial term</term> <m>a</m> and the <term>common ratio</term> <m>r</m>.
-        </p>
         <p>
           A <term>arithmetic progression</term> is a sequence of the form:
           <me>a, a+d, a+2d, a+3d, \dots, a+nd, \dots </me>
           with the <term>initial term</term> <m>a</m> and the <term>common difference</term> <m>d</m>.
         </p>
+        <p>
+          A <term>geometric progression</term> is a sequence of the form:
+          <me>a, ar, ar^2, ar^3, \dots, ar^n, \dots </me>
+          with the <term>initial term</term> <m>a</m> and the <term>common ratio</term> <m>r</m>.
+        </p>
       </statement>
     </definition>
+
+    <p>
+      Notice that the arithmetic sequence is of the form <m>a_n = a+nd</m>. Since <m>n</m> is the variable and <m>a \and d</m> are constants, this is the form of a <q><m>y=mx + b</m></q>, so arithmetic sequences are the linear functions of sequences.   The geometric on the other hand, is an exponential function.
+    </p>
+
+    <p>
+      The next type of sequences we encounter isn't one we've encountered in the calculus courses. These sequences are defined in terms of themselves. Each value that is computed depends on the value that comes before it.
+    </p>
 
     <definition>
       <title>Recurrence Relations / Recursive Sequences</title>
@@ -60,7 +81,7 @@
           We can always think of a sequence as a function, so the recurrence <m>a_n = a_{n-1} + a_{n-2}</m> is the function:
           <cd>
             def a(n):
-            return a(n-1) + a(n-1)
+                return a(n-1) + a(n-1)
           </cd>
           with infinite recursion.
         </p>
@@ -74,6 +95,11 @@
           The <term>Fibonacci sequence</term> <m>F_0, F_1, F_2, \dots</m> is defined by the recurrence:
           <me>F_n = F_{n-1} + F_{n-2} \text{ For } n \ge 2, \text{ where } F_0 = 0, F_1 = 1 </me>
         </p>
+        <aside>
+          <p>
+            <q>Fibonacci</q> is from the Latin <em>filius Bonacci</em> meaning <q>son of Bonacci</q>. His name was Leondaro. He's responsible for bringing the Hindu-Arabic numbers to the west. In his book <em>Liber Abaci</em> he has one example that involves rabbits and this recursive relationship.  But this is what he's known for. 🤦‍♂️    Also, have I mentioned I teach a course on math history every fall?
+          </p>
+        </aside>
         <p>
           Note that the Fibonacci sequence has both the recursive definition <em>and</em> a definition for the first two terms of the sequence.
         </p>
@@ -156,7 +182,6 @@
             <li><m>7, 11, 15, 19, 23, 27, 31, \dots</m></li>
             <li><m>1, 10, 11, 100, 101, 110, 111, 1000, \dots</m></li>
             <li><m>1, 3, 15, 105, 945, 10395, 135135, \dots</m></li>
-            <li><m>2,2,2,3,3,3,3,3, 5,5,5,5,5,5,5,\dots</m></li>
             <li><m>2,4,16,256,65536, 4294957296, \dots</m></li>
           </ol>
         </p>
@@ -174,6 +199,10 @@
         </sage>
       </statement>
     </example>
+
+    <p>
+      Now given a sequence, what happens if you add these values together?  The following notation will be familiar from calculus.
+    </p>
 
     <definition>
       <title>Series</title>
@@ -249,6 +278,7 @@
 
 
     <note xml:id="note-some-sum-formulas">
+      <title>Some Sum Formulas</title>
       <p>
         <xref ref="example-sum-of-integers"/> shows us the following formula for an arithmetic series:
         <me> \displaystyle \sum_{k=1}^n k = \dfrac{n(n+1)}{2}</me>
@@ -256,6 +286,10 @@
       <p>
         We will verify in <xref ref="exercise-sum-of-squares"/> the sum formula for the series of squares:
         <me> \displaystyle \sum_{k=1}^n k^2 = \dfrac{n(2n+1)(n+1)}{6}</me>
+      </p>
+      <p>
+        and we saw above that if <m>r \ne 1</m>,
+                  <me>\sum_{k=0}^n ar^k = \frac{a-ar^{n+1}}{1-r}</me>.
       </p>
     </note>
   </subsection>
