@@ -123,7 +123,7 @@
           If I want only to select three books from my five books on the bookshelf, in how many ways can I do this?
         </p>
       </statement>
-      <answer>
+      <answer component="video">
         <video youtube="0DGmoVjw4Ms"/>
       </answer>
     </example>

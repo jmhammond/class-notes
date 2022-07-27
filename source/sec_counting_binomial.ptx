@@ -1,79 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-counting-binomial">
   <title>
-    The Binomial Theorem and Combinatorial Proofs
+    Binomial Coefficients and Combinatorial Proofs
   </title>
 
-  <subsection>
-    <title>The Binomial Theorem and Binomial Coefficients</title>
-
-    <example>
-      <statement>
-        <p>
-          Expand the binomial: <m>(x+y)^3</m>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Everyone and their pet cat will give the correct answer: <m>x^3 + 3x^2y + 3xy^2 + y^3</m>.
-        </p>
-        <p>
-          Why is this the case? Each term has some amount of <m>x</m>'s and <m>y</m>'s. The coefficient of the <m>x^{3-k}y^k</m> term is counting the number of terms that have <m>y^k</m>
-          <m>
-            (x+y)^3 = \binom30 x^3y^0 + \binom31 x^2y^1 + \binom32 x^1y^2 + \binom33 x^0y^3
-          </m>
-        </p>
-      </solution>
-    </example>
-
-    <theorem>
-      <title>The Binomial Theorem</title>
-      <statement>
-        <p>
-          Let <m>x \and y</m> be variables and <m>n</m> a natural number, then
-          <me>
-            (x+y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} y^{k}
-          </me>
-        </p>
-      </statement>
-      <answer component="video">
-        <video youtube="_X2WjIsgoDo"/>
-      </answer>
-    </theorem>
-
-    <definition>
-      <title>Binomial Coefficient</title>
-      <statement>
-        <p>
-          We call <m>\binom{n}{k}</m> a <term>binomial coefficient</term>.
-        </p>
-      </statement>
-    </definition>
-
-    <note>
-      <p>
-        The binomial coefficient counts:
-        <ul>
-          <li> <m>\binom{n}{k}</m> is the number of ways to select <m>k</m> objects from a set of <m>n</m> objects. </li>
-          <li> <m>\binom{n}{k}</m> is the coefficient of <m>x^{n-k}y^k</m> in the expansion of <m>(x+y)^n</m> </li>
-          <li> <m>\binom{n}{k}</m> is the number subsets of size <m>k</m> from a set of size <m>n</m> </li>
-          <li> <m>\binom{n}{k}</m> is the number of bit strings of length <m>n</m> with exactly <m>k</m> 1's</li>
-          <li><m>\dots</m> there are many more ways of viewing binomial coefficients.</li>
-        </ul>
-      </p>
-    </note>
-
-
-  </subsection>
-
-  <subsection>
-    <title>Combinatorial Proofs</title>
-
-    <!-- the following is adapted from https://github.com/oscarlevin/discrete-book -->
+  <introduction>
     <p>
-      Let's arrange the binomial coefficients <m>{n \choose k}</m> into a triangle like follows:
+      We're going to begin this section by doing a lot of tedious looking algebra, but then we'll make a connection to what we've been doing. There's a reason! Later in the section, we will introduce a new method of proof called, <q>combinatorial proof</q> in which we're able to verify mathematical statements by counting!
     </p>
-    <image xml:id="pascal-small" width="80%">
+  </introduction>
+
+  <subsection>
+    <title>Binomial Coefficients</title>
+
+    <p>
+      As promised, we begin with some tedious calculations. Let's start by expanding each of the following binomials:
+
+      <me>(x+y)^0 = 1</me>
+      <me>(x+y)^1 = 1x + 1y</me>
+      <me>(x+y)^2 = 1x^2 + 2xy + 1y^2</me>
+      <me>(x+y)^3 = 1x^3 + 3x^2y + 3xy^2 + 1y^3</me>
+      <me>(x+y)^4 = 1x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + 1y^4</me>
+      <me>(x+y)^5 = 1x^5 + 5x^4y + 10x^3 y^2 + 10x^2 y^3 + 5xy^4 + 1y^5</me>
+      ...
+    </p>
+
+    <p>
+      If we arrange the coefficients of the binomials (binomial coefficients) in a triangle, we can find many really neat patterns.  In the West, this is usually called <q>Pascal's Triangle</q> after Blaise Pascal (1600's), though it was also discussed by the Chinese author Yang Hui (1200's) and it's called <q>Yang Hui's triangle</q> in China.
+    </p>
+    <aside>
+      <p>
+        Neither Yang Hui nor Blaise Pascal invented it, but their works were popular and we settled on naming it after them.
+      </p>
+    </aside>
+    <image xml:id="pascal-small" width="70%">
       <description>Pascal's triangle. Numbers are arranged in rows in the shape of a triangle. The top number is 1. Next row is 1 and 1; next row is 1, 2, 1; next is 1, 3, 3, 1; and it continues. Each entry is found by adding the two entries above it: e.g. 3=1+2</description>
       <latex-image>
         \begin{tikzpicture}
@@ -81,11 +41,11 @@
 
         % Pascal's triangle
         %put row of 1's down left side:
-        \foreach \row in {0,...,7} {
+        \foreach \row in {0,...,9} {
         \hexbox{\row}{0}{ 1}
         }
         %fill in the rest of the triangle:
-        \foreach \row in {1,...,7} {
+        \foreach \row in {1,...,9} {
         \pgfmathsetmacro{\entry}{1};
         \foreach \col in {1,...,\row} {
         % iterative formula : val = precval * (row-col+1)/col
@@ -109,36 +69,117 @@
       </latex-image>
     </image>
     <p>
-      There are lots of patterns hidden away in the triangle, enough to fill a reasonably sized book. Here are just a few of the most obvious ones:
-
+      There are lots of patterns hidden away in the triangle! Take a few minutes to look for some. Here are just a few to notice:
       <ol>
         <li>
           <p>
-            The entries on the border of the triangle are all 1.
-            <me>\binom{n}{0} = \binom{n}{n} = 1</me>
+            The entries on the left or right side of the triangle are all 1.
           </p>
         </li>
         <li>
           <p>
             Any entry not on the border is the sum of the two entries above it.
-            <me>\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}</me>
           </p>
         </li>
         <li>
           <p>
             The triangle is symmetric.  In any row, entries on the left side are mirrored on the right side.
-            <me> \binom{n}{k} = \binom{n}{n - k}</me>
           </p>
         </li>
         <li>
           <p>
             The sum of all entries on a given row is a power of 2.
-            <me> \binom{n}0 + \binom{n}1 + \binom{n}2 + \dots + \binom{n}{n} = 2^n</me>
           </p>
         </li>
       </ol>
     </p>
 
+
+    <p>
+      A connection that Pascal did make in <em>Traité du triangle arithmétique</em> (Treatise on the Arithmetic Triangle) is that the entries in the table are actually combinations!  Here's the triangle again, but written with combinations And rather than going through further linguistic torture, we can now refer to <q>combinations</q> as <term><q>binomial coefficients</q></term>.
+    </p>
+
+    <image xml:id="pascal-small-binom" width="70%">
+      <description>Pascal's triangle re-written with combinations. Numbers are arranged in rows in the shape of a triangle. The top number is (0 choose 0). Next row is (1 choose 0) and (1 choose 1);  Each entry is the (row choose column)</description>
+      <latex-image>
+        \begin{tikzpicture}
+        \def\r{.5}
+        % Pascal's triangle
+        %put row of 1's down left side:
+        \foreach \row in {0,...,9} {
+        \hexbox{\row}{0}{ $\binom{\row}{0}$}
+        }
+        %fill in the rest of the triangle:
+        \foreach \row in {1,...,9} {
+        \pgfmathsetmacro{\entry}{1};
+        \foreach \col in {1,...,\row} {
+        \hexbox{\row}{\col}{$\binom{\row}{\col}$}
+        }
+        }
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+
+    <p>
+      Now that we've connected the coefficients of the binomial to combinations, we can now write the formal binomial theorem as its often presented:
+    </p>
+
+    <theorem>
+      <title>The Binomial Theorem</title>
+      <statement>
+        <p>
+          Let <m>x \and y</m> be variables and <m>n</m> a natural number, then
+          <me>
+            (x+y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} y^{k}
+          </me>
+        </p>
+      </statement>
+      <answer component="video">
+        <video youtube="_X2WjIsgoDo"/>
+      </answer>
+    </theorem>
+    <aside>
+      <p>
+        I'm a big Sherlock Holmes fan, so I want to acknowledge that (fictional) Professor James Moriaraty proved significant results about the binomial theorem.  He of course didn't (because he's not real), but also Isaac Newton and Jakob Bernoulli did it about 150 years before Moriarty would be born.
+      </p>
+      <p>
+        ... this was a really long way of saying I'm a nerd.
+      </p>
+    </aside>
+
+    <p>
+      Take a moment to compare the binomials we expanded in the beginning of the section with the summation in the Binomial Theorem to see how it all fits together.
+    </p>
+
+    <p>
+      We can also return to the patterns we saw in the triangle and rewrite them in terms of binomial coefficients.
+      <ol>
+        <li>
+          <p>
+            The entries on the left or right side of the triangle are all 1. In symbols, we'll write:
+            <me>\binom{n}{0} = \binom{n}{n} = 1</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Any entry not on the border is the sum of the two entries above it. In symbols:
+            <me>\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            The triangle is symmetric.  In any row, entries on the left side are mirrored on the right side. In symbols:
+            <me> \binom{n}{k} = \binom{n}{n - k}</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            The sum of all entries on a given row is a power of 2. In symbols:
+            <me> \binom{n}0 + \binom{n}1 + \binom{n}2 + \dots + \binom{n}{n} = 2^n</me>
+          </p>
+        </li>
+      </ol>
+    </p>
 
     <p>
       Our goal for the remainder of the section is to give proofs of binomial identities.
@@ -182,6 +223,40 @@
       </solution>
     </example>
 
+    <p>
+      That algebra had some fun manipulations if you're into that kind of thing, but as 15th century mathematician Gerolamo Cardano said <em>Ars Magna</em>, it <q>is as refined as it is useless.</q>
+    </p>
+    <aside>
+      <p>
+        Cardano was actually talking about square roots of negative numbers, what we now call complex numbers. He probably wouldn't be impressed with me misquoting him. But he wasn't a very nice person, so I don't care.  I do love to talk about him, though, ask me about him sometime! (Have I reminded you about my math history class lately?)
+      </p>
+    </aside>
+  </subsection>
+
+  <subsection>
+    <title>Combinatorial Proofs</title>
+
+    <p>
+      Here we introduce a new method of providing mathematical statements. Our goal is to show that an equality is true by <em>counting</em> each side of the equation differently, but showing that we've counted the same objects. In order to do this, we will make the following connection for things that binomial coefficients might represent:
+
+      <ul>
+        <li> <m>\binom{n}{k}</m> is the number of ways to select <m>k</m> objects from a set of <m>n</m> objects. </li>
+        <li> <m>\binom{n}{k}</m> is the number subsets of size <m>k</m> from a set of size <m>n</m> </li>
+        <li> <m>\binom{n}{k}</m> is the number of bit strings of length <m>n</m> with exactly <m>k</m> 1's</li>
+        <li> <m>\binom{n}{k}</m> is the coefficient of <m>x^{n-k}y^k</m> in the expansion of <m>(x+y)^n</m> </li>
+        <li><m>\dots</m> there are many more ways of viewing binomial coefficients.</li>
+      </ul>
+    </p>
+
+    <p>
+      For a combinatorial proof, we will follow this approach:
+      <ol>
+        <li> Determine a question that can be answered by the particular equation.</li>
+        <li> Answer the question in two different ways</li>
+        <li> Because those answers count the same object, we can equate their solutions.</li>
+      </ol>
+      Coming up with the question is often the hardest part.
+    </p>
 
     <example>
       <statement>
@@ -193,7 +268,7 @@
           by viewing the binomial coefficients as counting subsets.
         </p>
       </statement>
-      <answer>
+      <answer component="video">
         <video youtube="56Myzj8jzqk"/>
       </answer>
 
@@ -224,44 +299,63 @@
       </solution>
     </example>
 
-
-    <note>
-      <p>
-        For a combinatorial proof:
-        <ol>
-          <li> Determine a question that can be answered by the particular equation.</li>
-          <li> Answer the question in two different ways</li>
-          <li> Because those answers count the same object, we can equate their solutions.</li>
-        </ol>
-        Coming up with the question is often the hardest part.
-      </p>
-    </note>
+    <p>
+      Some people find combinatorial proofs <q>more fun</q> because they tell a story. In this next example, if we used a formula, we'd write <me>\binom{n}{0}=\frac{n!}{0!(n-0)!} = 1</me>.  Fine. But we could also see that this could actually be talking about cookies!
+    </p>
 
     <example>
       <statement>
         <p>
-          Give a combinatorial proof of the identities:
-          <ol>
-            <li>
-              <m>\binom{n}0 = 1</m>.
-            </li>
-            <li>
-              <m>\binom{n}{k} = \binom{n}{n-k}</m>
-            </li>
-          </ol>
-          For each, what question should we answer?
+          Give a combinatorial proof of
+              <m>\displaystyle \binom{n}0 = 1</m>.
         </p>
       </statement>
+      <hint>
+        <p>
+          How about we ask how many ways can we take no cookies from a bag of <m>n</m> cookies?
+        </p>
+      </hint>
+      <solution>
+        <p>
+          Question: How many ways can we take no cookies from a bag of <m>n</m> cookies?
+          <ol>
+            <li> Answer:  This is <m>\binom{n}{0}</m>, since that's what binomial coefficients count. </li>
+            <li> Answer: There is exactly one way to do this. We just don't get a cookie.</li>
+          </ol>
+          Because each answer answers the same question, we have shown that <m>\binom{n}{0} = 1</m>.
+        </p>
+      </solution>
     </example>
 
-
+    <example xml:id="example-symmetry-property">
+      <statement>
+        <p>
+          Give a combinatorial proof of
+              <m>\displaystyle \binom{n}{k} = \binom{n}{n-k}</m>
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Sticking with the cookie scenario, how many ways to pick <m>k</m> cookies from <m>n</m> cookies?
+        </p>
+      </hint>
+      <solution>
+        <p>
+          Question: How many ways can we take <m>k</m> cookies from a bag of <m>n</m> cookies?
+          <ol>
+            <li> Answer: There are <m>\binom{n}{k}</m> ways to do this, since this is what binomial coefficients count.</li>
+            <li> Answer: Instead of picking the cookies we want, let's <em>pick the cookies we don't want</em>.  We will pick the <m>n-k</m> cookies that we don't want, and there's <m>\binom{n}{n-k}</m> ways to do this. </li>
+          </ol>
+          Because these both answer the same question, we have that <m>\binom{n}{k} = \binom{n}{n-k}</m>.
+        </p>
+      </solution>
+    </example>
 
     <example>
       <statement>
         <p>
           Prove the binomial identity
-          <me>
-            \left(\binom{n}{0}\right)^2 +\left(\binom{n}{1}\right)^2 +\left(\binom{n}{2}\right)^2 + \dots + \left(\binom{n}{n}\right)^2 = \binom{2n}{n}
+          <me> \binom{n}{0}\binom{n}{0}+\binom{n}{1}\binom{n}{1}+\binom{n}{2}\binom{n}{2}+ \cdots + \binom{n}{n} \binom{n}{n} = \binom{2n}{n}
           </me>
         </p>
       </statement>
@@ -270,9 +364,62 @@
           How many pizzas of <m>n</m> toppings can be made if we can choose from <m>2n</m> toppings?
         </p>
       </hint>
-      <answer>
+      <answer component="video">
+        <p>
+          Note that in the video, I start with a different form of the equation but quickly change it to this one. It's equivalent.
+        </p>
         <video youtube="4N5qJMBCXLg"/>
       </answer>
+      <solution>
+        <p>
+          For this one, I'm going to rewrite the equation, taking advantage of the symmetry property we proved in <xref ref="example-symmetry-property"/>. We start with:
+          <md>
+            <mrow> \binom{n}{0}\binom{n}{0}+\binom{n}{1}\binom{n}{1}+\binom{n}{2}\binom{n}{2}+ \cdots + \binom{n}{n} \binom{n}{n} \amp= \binom{2n}{n}
+            </mrow>
+            <mrow> \binom{n}{0}\binom{n}{n-0}+\binom{n}{1}\binom{n}{n-1}+\binom{n}{2}\binom{n}{n-2}+ \cdots + \binom{n}{n} \binom{n}{n-n} \amp= \binom{2n}{n}
+            </mrow>
+          </md>
+          and this is what we'll use to prove the identity.
+        </p>
+        <p>
+          Question: If there are <m>n</m> meats and <m>n</m> non-meat toppings for a pizza, how many <m>n</m> topping pizzas can be made? (if we don't allow repeat toppings)
+         <ol>
+           <li> Answer: There are <m>\binom{2n}{n}</m> total pizzas that can be made. </li>
+           <li>
+             <p>
+               Answer: We'll split on how many meats we want:
+               <ul>
+                 <li>
+                   <p>If we want no meats, then we'll select no meats and <m>n</m> non-meats. These are independent of one another, so we multiply: <m>\binom{n}{0}\binom{n}{n}</m>
+                   </p>
+                 </li>
+                 <li>
+                   <p>
+                     If we want 1 meat, then we'll select <m>n-1</m> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <m>\binom{n}{1}\binom{n}{n-1}</m>
+                   </p>
+                 </li>
+                 <li>
+                   <p> If we want 2 meats, then we'll select <m>n-2</m> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <m>\binom{n}{2}\binom{n}{n-2}</m>
+                   </p>
+                 </li>
+                 <li>...</li>
+                 <li>
+                   <p>
+                     If we want n meats, then we'll select <m>n-n=0</m> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <m>\binom{n}{n}\binom{n}{0}</m>
+                   </p>
+                 </li>
+               </ul>
+               because each of these pizzas are completely different than the rest (have different numbers of meats), the addition principle says to add them all together:
+               <me> \binom{n}{0}\binom{n}{n}+\binom{n}{1}\binom{n}{n-1}+\binom{n}{2}\binom{n}{n-2}+ \cdots + \binom{n}{n} \binom{n}{0}
+               </me>
+             </p>
+           </li>
+         </ol>
+         Because each answer was a different way to count the same objects, we find that
+         <me>
+\binom{n}{0}\binom{n}{n-0}+\binom{n}{1}\binom{n}{n-1}+\binom{n}{2}\binom{n}{n-2}+ \cdots + \binom{n}{n} \binom{n}{n-n} = \binom{2n}{n}</me>
+        </p>
+      </solution>
     </example>
 
 
