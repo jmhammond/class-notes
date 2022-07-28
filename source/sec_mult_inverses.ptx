@@ -560,7 +560,7 @@
     <exercise>
       <statement>
         <p>
-          Play around with making <xref ref="multiplication-table">multiplication tables of various moduli in the Sage code in example</xref>.
+          Play around with making <xref ref="multiplication-table" text="custom">multiplication tables of various moduli in the Sage code in example</xref>.
           <ol>
             <li> What condition is required for a number <m>a</m> to have an inverse modulo <m>n</m>? </li>
             <li> What is a condition on <m>n</m> for every element to have an inverse modulo <m>n</m>?</li>

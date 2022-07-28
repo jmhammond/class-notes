@@ -33,7 +33,7 @@
   </note>
 
   <p>
-    Our next proposition, along with the proof that <xref ref="ex-proof-sqrt2-irrational" text="custom">square root of 2 is irrational</xref>, is the most classic example of a proof by contradiction. It's hard (impossible?) to prove directly that there are infinitely many primes. Instead, we assume there are finitely many and then find a contradiction.
+    Our next proposition, along with the proof that <xref ref="ex-proof-sqrt2-irrational" text="custom">the square root of 2 is irrational</xref>, is the most classic example of a proof by contradiction. It's hard (impossible?) to prove directly that there are infinitely many primes. Instead, we assume there are finitely many and then find a contradiction.
   </p>
 
   <proposition>

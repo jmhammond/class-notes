@@ -182,7 +182,7 @@
     </p>
 
     <p>
-      Our goal for the remainder of the section is to give proofs of binomial identities.
+      Our goal for the remainder of the section is to give proofs of binomial identities. We'll start with a very tedious algebraic way to do it and then introduce a new proof technique to deal with the same identity.
     </p>
 
     <example>

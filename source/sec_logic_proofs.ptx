@@ -217,7 +217,7 @@
     <subsubsection>
       <title>Proof by Contradiction</title>
       <p>
-        A proof by contradiction allows us to prove a statement <m>p</m> which is not necessarily conditional. We accomplish this by assuming <m>\neg p</m> is true, and finding a contradiction. This works because <me> \neg p \to (q \wedge \neg q) \equiv p</me> as we showed in <xref ref="example-contradiction-logic">example</xref>. Here's the model:
+        A proof by contradiction allows us to prove a statement <m>p</m> which is not necessarily conditional. We accomplish this by assuming <m>\neg p</m> is true, and finding a contradiction. This works because <me> \neg p \to (q \wedge \neg q) \equiv p</me> as we showed in <xref ref="example-contradiction-logic" text="custom">example</xref>. Here's the model:
       </p>
 
       <proof xml:id="contradiction-model">
@@ -266,7 +266,7 @@
         </p>
       </statement>
       <solution>
-        <p>We actually did this in the two previous subsections. The <xref ref="example-neven">forward direction</xref> and <xref ref="example-n2even">the converse</xref>.</p>
+        <p>We actually did this in the two previous subsections. The <xref ref="example-neven" text="custom">forward direction</xref> and <xref ref="example-n2even" text="custom">the converse</xref>.</p>
       </solution>
     </example>
 
@@ -1030,7 +1030,7 @@
     <exercise>
       <statement>
         <p>
-          Let's say you are presented with a conditional statement <m>p \to q</m> that you want to prove by contradiction. This exercise has you structure a model for contradiction of conditional statements like we saw in the <xref ref="contradiction-model">model</xref>.
+          Let's say you are presented with a conditional statement <m>p \to q</m> that you want to prove by contradiction. This exercise has you structure a model for contradiction of conditional statements like we saw in the <xref ref="contradiction-model" text="custom">model</xref>.
           <ol>
             <li>What is your assumption?</li>
             <li>What is your conclusion?</li>

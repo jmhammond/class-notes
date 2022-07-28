@@ -439,7 +439,7 @@ forever(1)
     <exercise xml:id="exercise-sum-of-squares">
       <statement>
         <p>
-          Using <xref ref="example-telescoping-sum">the telescoping example</xref> with the sequence <m>a_n=(n+1)^3</m>, derive a formula for <m>\displaystyle \sum_{k=1}^n k^2</m>
+          Using <xref ref="example-telescoping-sum" text="custom">the telescoping example</xref> with the sequence <m>a_n=(n+1)^3</m>, derive a formula for <m>\displaystyle \sum_{k=1}^n k^2</m>
         </p>
       </statement>
       <solution>
@@ -447,7 +447,7 @@ forever(1)
         This one's a lot of fun, so let's do it in a lot of detail. This is approach Blaise Pascal used to discover the formula in his 1654 <pubtitle>Traité du triangle arithmétique</pubtitle>.
       </p>
       <p>
-        Let <m>a_n = (n+1)^3</m>. Then from <xref ref="example-telescoping-sum">example</xref>, we have that:
+        Let <m>a_n = (n+1)^3</m>. Then from <xref ref="example-telescoping-sum"/>, we have that:
         <md>
           <mrow>\sum_{j=1}^n (j+1)^3 - j^3 &amp; = a_n - a_0</mrow>
           <mrow>\sum_{j=1}^n (j+1)^3 - j^3 &amp; = (n+1)^3 - (0+1)^3</mrow>
@@ -459,7 +459,7 @@ forever(1)
           </md>
 
           </p>
-          <p> We have from <xref ref="example-sum-of-integers">example</xref> that <m>\displaystyle \sum_{j=1}^n j = \dfrac{n(n+1)}{2}</m> and if we add <m>1</m> a total of <m>n</m> times, we have <m>\displaystyle \sum_{j=1}^n 1 = n</m>. Plugging these in, we find:
+          <p> We have from <xref ref="example-sum-of-integers"/> that <m>\displaystyle \sum_{j=1}^n j = \dfrac{n(n+1)}{2}</m> and if we add <m>1</m> a total of <m>n</m> times, we have <m>\displaystyle \sum_{j=1}^n 1 = n</m>. Plugging these in, we find:
           </p>
           <p>
             <md>
@@ -480,7 +480,7 @@ forever(1)
     <exercise>
     <statement>
       <p>
-        Use <xref ref="example-geometric-series">the formula for geometric series</xref> to show that
+        Use <xref ref="example-geometric-series" text="custom">the formula for geometric series</xref> to show that
         <me>1 + 2 + 2^2 + 2^3 + \dots 2^n = 2^{n+1} - 1</me>
       </p>
     </statement>

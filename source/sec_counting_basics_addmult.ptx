@@ -6,7 +6,7 @@
 
   <introduction>
     <p>
-      In this section we begin our quest to start answering a question that sounds simple enough: <q>how many elements are in a set?</q>  Counting the number of sets is common enough that we gave it its own symbol, <m>|S|</m>, in <xref ref="sec_objects_sets"/>. Numbers of elements in the domain and codomain of functions determine whether a function is bijective, as we saw in <xref ref="exercise-cardinality-of-domain-codomain">an exercise in the functions section</xref>
+      In this section we begin our quest to start answering a question that sounds simple enough: <q>how many elements are in a set?</q>  Counting the number of sets is common enough that we gave it its own symbol, <m>|S|</m>, in <xref ref="sec_objects_sets"/>. Numbers of elements in the domain and codomain of functions determine whether a function is bijective, as we saw in <xref ref="exercise-cardinality-of-domain-codomain" text="custom">an exercise in the functions section</xref>
     </p>
     <p>
       We start with basic counting rules that help us count <m>|A\times B|</m> and <m>|A\cup B|</m> for sets <m>A \and B</m>.

@@ -190,7 +190,7 @@
 
     <note>
       <p>
-        Let's compare the the congruence relation with the <xref ref="definition-modulus-operator"> modulus operator</xref>:
+        Let's compare the the congruence relation with the <xref ref="definition-modulus-operator" text="custom"> modulus operator</xref>:
         <ul>
           <li> <m>a \equiv b \pmod{m}</m> is a <em>logical statement</em>. It tells us that <m>a</m> and <m>b</m> are related, that is, the statement <m>m \divides (b-a)</m> is true. </li>
           <li> <m>a \modulus b</m> is a <em>mathematical operation</em>. The result is a number not a true/false.</li>
