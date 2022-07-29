@@ -15,55 +15,43 @@
     <p>
       For example, here are all of the possible tilings for a 4-board. We can do it using four squares, one domino followed by two squares, one square one domino and one square, two squares followed by a domino, or two dominoes In total there are five ways to do this:
     </p>
-    <image source="tilings-of-4board.svg" width="50%" xml:id="tilings-of-4board" >
-      <description>Tilings of a 4-board: 4sq; 1dom, 2sq; sq, dom, sq; 2sq, 1dom; 2dom</description>
-      <!-- <latex-image> -->
-      <!--   % tilings of a 4 board: -->
-      <!--   \begin{tikzpicture}[scale=1.0] -->
-      <!--   \foreach \col in {0,2}{ -->
-      <!--   \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1); -->
-      <!--   } -->
-      <!--   \draw[thick] (0,0) rectangle (4,1); -->
-      <!--   \node[left] at (6.5,0.5) {4 sq}; -->
-      <!--   \end{tikzpicture} -->
+    <image width="25%" xml:id="tilings-of-4board" >
+      <description>Tilings of a 4-board: four squares, one domino followed by two squares, one square one domino and one square, two squares followed by a domino, or two dominoes</description>
+      <latex-image>
+        % tilings of a 4 board:
+        \begin{tikzpicture}[scale=1.0]
+        \foreach \col in {0,2}{
+        \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1);
+        }
+        \draw[thick] (0,0) rectangle (4,1);
 
-      <!--   \begin{tikzpicture}[scale=1.0] -->
-      <!--   \foreach \col in {0,2}{ -->
-      <!--   \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1); -->
-      <!--   } -->
-      <!--   \draw[thick,fill=gray!30] (0,0) rectangle (2,1); -->
-      <!--   \draw[thick] (0,0) rectangle (4,1); -->
-      <!--   \node[left] at (6.5,0.5) {1 dom, 2 sq}; -->
-      <!--   \end{tikzpicture} -->
+        \foreach \col in {0,2}{
+        \draw[] (\col,-1.5) rectangle (\col+1, -1.5) rectangle (\col+2, -0.5);
+        }
+        \draw[thick,fill=gray!30] (0,-1.5) rectangle (2,-0.5);
+        \draw[thick] (0,-1.5) rectangle (4,-0.5);
 
-      <!--   \begin{tikzpicture}[scale=1.0] -->
-      <!--   \foreach \col in {0,2}{ -->
-      <!--   \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1); -->
-      <!--   } -->
-      <!--   \draw[thick,fill=gray!30] (1,0) rectangle (3,1); -->
-      <!--   \draw[thick] (0,0) rectangle (4,1); -->
-      <!--   \node[left] at (6.5,0.5) {sq, dom, sq}; -->
-      <!--   \end{tikzpicture} -->
 
-      <!--   \begin{tikzpicture}[scale=1.0] -->
-      <!--   \foreach \col in {0,2}{ -->
-      <!--   \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1); -->
-      <!--   } -->
-      <!--   \draw[thick,fill=gray!30] (2,0) rectangle (4,1); -->
-      <!--   \draw[thick] (0,0) rectangle (4,1); -->
-      <!--   \node[left] at (6.5,0.5) {2 sq, 1 dom}; -->
-      <!--   \end{tikzpicture} -->
+        \foreach \col in {0,2}{
+        \draw[] (\col,-3) rectangle (\col+1, -2) rectangle (\col+2, -2);
+        }
+        \draw[thick,fill=gray!30] (1,-3) rectangle (3,-2);
+        \draw[thick] (0,-3) rectangle (4,-2);
 
-      <!--   \begin{tikzpicture}[scale=1.0] -->
-      <!--   \foreach \col in {0,2}{ -->
-      <!--   \draw[] (\col,0) rectangle (\col+1, 0) rectangle (\col+2, 1); -->
-      <!--   } -->
-      <!--   \draw[thick,fill=gray!30] (0,0) rectangle (2,1); -->
-      <!--   \draw[thick,fill=gray!30] (2,0) rectangle (4,1); -->
-      <!--   \draw[thick] (0,0) rectangle (4,1); -->
-      <!--   \node[left] at (6.5,0.5) {2 dom}; -->
-      <!--   \end{tikzpicture} -->
-      <!-- </latex-image> -->
+        \foreach \col in {0,2}{
+        \draw[] (\col,-4.5) rectangle (\col+1, -4.5) rectangle (\col+2, -3.5);
+        }
+        \draw[thick,fill=gray!30] (2,-4.5) rectangle (4,-3.5);
+        \draw[thick] (0,-4.5) rectangle (4,-3.5);
+
+        \foreach \col in {0,2}{
+        \draw[] (\col,-6) rectangle (\col+1, -6) rectangle (\col+2, -5);
+        }
+        \draw[thick,fill=gray!30] (0,-6) rectangle (2,-5);
+        \draw[thick,fill=gray!30] (2,-6) rectangle (4,-5);
+        \draw[thick] (0,-6) rectangle (4,-5);
+        \end{tikzpicture}
+      </latex-image>
     </image>
 
     <p>

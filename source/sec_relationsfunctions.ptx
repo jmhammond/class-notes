@@ -662,18 +662,20 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
     <p>
       As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function, <m>f</m> to have an inverse <em>function</em>, <m>f</m> must be bijective.
-      <ul comoponent="video">
+      <ul>
         <li>
           <p>
-            If the function is not injective, then the inverse relation isn't a function. Here's an animation that illustrates this idea:
-            <video source="InverseExploration1.mp4" />
+            If the function is not injective, then the inverse relation isn't a function. Failing the <q>horizontal line test</q> for injectivity means failing the <q>vertical line test</q> for being a function.
           </p>
+          <p component="video"> Here's an animation that illustrates this idea:</p>
+          <video component="video" source="InverseExploration1.mp4" />
         </li>
         <li>
           <p>
-            If the function is not surjective, then the inverse relation isn't well-defined. Any values that aren't mapped to in the original codomain <em>can't</em> be plugged into the inverse. Here's an animation that illustrates this idea:
-            <video source="InverseExploration2.mp4" />
+            If the function is not surjective, then the inverse relation isn't well-defined. Any values that aren't mapped to in the original codomain <em>can't</em> be plugged into the inverse.
           </p>
+          <p component="video"> Here's an animation that illustrates this idea:</p>
+          <video component="video" source="InverseExploration2.mp4" />
         </li>
       </ul>
     </p>
