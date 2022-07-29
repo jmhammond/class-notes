@@ -61,9 +61,9 @@
     <video privacy="yes"/>
   </html>
 
-  <epub cover="../assets/quick-cover.png">
+  <epub cover="../assets/BookCover.png">
   </epub>
 
-  <braille cover="../assets/quick-cover.png">
+  <braille cover="../assets/BookCover.png">
   </braille>
 </publication>

@@ -4,6 +4,9 @@
 <!-- Note that images need just the name, not the directory prefix! /-->
   <brandlogo url="http://www.math.wichita.edu/discrete-book" source="WSULogo.png" />
 
+  <!-- ... not the case with the covers tag. That needs prefixed with with my entire directory structure 😭 /-->
+  <covers front="/Users/john/src/class-notes/assets/BookCover.pdf"/>
+
   <macros> 
     \def\ds{\displaystyle}
     \def\d{\displaystyle}
