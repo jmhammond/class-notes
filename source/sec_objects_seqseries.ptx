@@ -185,18 +185,6 @@
             <li><m>2,4,16,256,65536, 4294957296, \dots</m></li>
           </ol>
         </p>
-
-        <p>
-          For this last example, the numbers are huge. If you're reading on the web-based version of this book, this is an interactive calculator. You can type what you want to compute and press 'Evaluate (Sage).'
-        </p>
-        <sage>
-          <input>
-            16^2
-          </input>
-          <output>
-            256
-          </output>
-        </sage>
       </statement>
     </example>
 
@@ -324,7 +312,7 @@ def forever(n):
     return forever(n-1)
 
 forever(1)
-## press Evaluate(Python) to watch it go on forever. The algorithm won't halt until the run time stack runs out of memory.
+## press Evaluate(Python) to watch it go on forever. The algorithm won't halt until the runtime stack runs out of memory.
       </input>
     </sage>
     <p>

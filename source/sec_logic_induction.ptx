@@ -9,7 +9,7 @@
         <li> For every integer <m>n \ge 1</m>, <m>\ds 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}</m>. </li>
         <li> <m>\log(a^n) = n \log (a)</m> for every positive integer <m>n</m></li>
       </ul>
-      We can't prove that a statement like this is true by showing it's true for every literal integer (there are infinitely many of them, so that's impossible). Instead, the principle of mathematical induction tells us we <em>can</em> prove statements like these are true, so long as we do it just right. This section helps us learn how to do just that.
+      These are sequences of statements and we'll be using a recursive technique to prove them, because we can't prove that a statement like this is true by showing it's true for every literal integer (there are infinitely many of them, so that's impossible). Instead, the principle of mathematical induction tells us we <em>can</em> prove statements like these are true, so long as we do it just right. This section helps us learn how to do just that.
     </p>
   </introduction>
 

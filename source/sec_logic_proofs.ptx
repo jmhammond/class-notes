@@ -3,7 +3,7 @@
   <title>An introduction to proofs</title>
   <introduction>
     <p>
-      In this section we'll combine everything we've done this semester to introduce the idea of mathematical proof.  We will take statements about numbers, functions, or sets, decompose them into quantified statements and reason using argumentation and rules of logic to draw conclusions. We will do this by writing complete English and mathematical sentences that take us from beginning to end, telling the story of the argument.
+      In this section we'll combine everything we've done so far in the book to introduce the idea of mathematical proof.  We will take statements about numbers, functions, or sets, decompose them into quantified statements and reason using argumentation and rules of logic to draw conclusions. We will do this by writing complete English and mathematical sentences that take us from beginning to end, telling the story of the argument.
     </p>
   </introduction>
 
@@ -76,7 +76,7 @@
     </example>
 
     <p>
-      Note that every integer is a rational number, since if <m>n</m> is an integer, then <m>\frac{n}{1}</m> is a rational number. Not every rational number is an integer, for example, <m>\frac{1}{2}</m> is not an integer.
+      Note that every integer is a rational number, since if <m>n</m> is an integer, then we can write <m>\frac{n}{1}</m> which is a rational number. Not every rational number is an integer, for example, <m>\frac{1}{2}</m> is not an integer.
     </p>
     <p>
       There are also numbers which are not integers and also not rational. We'll give an example later in this section.
@@ -89,23 +89,32 @@
     </title>
     <definition>
       <title>Statement Terminology</title>
-      <ul>
-        <li> A <term>theorem</term> is a statement can be shown to be true. We generally reserve the word theorem for an important statement.
-        </li>
-        <li>
-          A <term>proposition</term> is a <q>less important</q> theorem.
-        </li>
-        <li> The tools we use to prove a theorem are <term>axioms</term> (or <term>postulates</term>) which are basic assumptions we make, as well as other theorems we've already proven.
-        </li>
-        <li>
-          A less important theorem that will be helpful in proving others is called a <term>lemma</term>.
-        </li>
-        <li>
-        A <term>corollary</term> is a theorem that follows directly from a theorem just proved.</li>
-        <li>
-          A <term>conjecture</term> is a statement that we think may be true (our intuition suggests it)
-        </li>
-      </ul>
+      <statement>
+        <p>
+          <ul>
+            <li> A <term>theorem</term> is a statement can be shown to be true. We generally reserve the word theorem for an important statement.
+            </li>
+            <li>
+              A <term>proposition</term> is a <q>less important</q> theorem.
+            </li>
+            <li> The tools we use to prove a theorem are <term>axioms</term> (or <term>postulates</term>) which are basic assumptions we make, as well as other theorems we've already proven.
+            </li>
+            <li>
+              A less important theorem that will be helpful in proving others is called a <term>lemma</term>.
+            </li>
+            <li>
+            A <term>corollary</term> is a theorem that follows directly from a theorem just proved.</li>
+            <li>
+              A <term>conjecture</term> is a statement that we think may be true (our intuition suggests it)
+            </li>
+          </ul>
+        </p>
+        <aside>
+          <p>
+            In this book, I use <q>proposition</q> to mean everything that we'll prove together in the text and reserve <q>theorem</q> for things that will go unproven for now.
+          </p>
+        </aside>
+      </statement>
     </definition>
 
     <example>
@@ -494,30 +503,29 @@
           <li>The sum of two irrational numbers is irrational.</li>
         </ol>
       </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              For example, <m>n = 1</m> works, since <m>(1+4)^2 = 25 \ne 17 = 1+16</m>.
+            </li>
+            <li>
+              The number 7 isn't the sum of two squares. The only squares smaller than 7 are 1 and 4. They don't add to 7.
+            </li>
+            <li>
+              Choosing <m>x=  -1 \and y = 1</m> we have <m>(-1)^2 = (1)^2</m> but certainly <m>-1 \ne 1</m>.
+            </li>
+            <li>
+              We know (from above) that <m>\sqrt{2}</m> is irrational. Multiply it by itself. You get <m>2</m> which is rational.
+            </li>
+            <li>
+              Consider <m>a = \sqrt{2}</m> and <m>b=-\sqrt{2}</m>. Then their sum, <m>a+b = 0</m>, which is rational.
+            </li>
+          </ol>
+
+        </p>
+      </solution>
     </example>
-    <solution>
-      <p>
-        <ol>
-          <li>
-            For example, <m>n = 1</m> works, since <m>(1+4)^2 = 25 \ne 17 = 1+16</m>.
-          </li>
-          <li>
-            The number 7 isn't the sum of two squares. The only squares smaller than 7 are 1 and 4. They don't add to 7. 
-          </li>
-          <li>
-            Choosing <m>x=  -1 \and y = =1</m> we have <m>(-1)^2 = (1)^2</m> but certainly <m>-1 \ne 1</m>.
-          </li>
-          <li>
-            We know (from above) that <m>\sqrt{2}</m> is irrational. Multiply it by itself. You get <m>2</m> which is rational.
-          </li>
-          <li>
-            Consider <m>a = \sqrt{2}</m> and <m>b=-\sqrt{2}</m>. Then their sum, <m>a+b = 0</m>, which is rational.
-          </li>
-        </ol>
-
-      </p>
-
-    </solution>
 
   </subsection>
 

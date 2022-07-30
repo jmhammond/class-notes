@@ -65,7 +65,7 @@
   </proposition>
 
   <p>
-    Over our school careers, we've been factoring numbers for a long time. You've probably noticed there is <q>a correct answer</q> when you produce a factorization. For example, we might write: <m>15 = 3\cdot 5</m> or <m>15 = 5\cdot 3</m>, these are the same factorization, we just changed the order we multiplied. The next theorem, which underlies all arithmetic, so we call it Fundament, tells us we <em>can</em> factor every integer and that there is really <em>a correct</em> answer.
+    Over our school careers, we've been factoring numbers for a long time. You've probably noticed there is <q>a correct answer</q> when you produce a factorization. For example, we might write: <m>15 = 3\cdot 5</m> or <m>15 = 5\cdot 3</m>, these are the same factorization, we just changed the order we multiplied. The next theorem, which underlies all arithmetic, tells us we <em>can</em> factor every integer and that there is really <em>a correct</em> answer.
   </p>
 
   <theorem>
@@ -239,12 +239,12 @@
     <solution>
       <p>
         <ol>
-          <li> Since, rounding down, <m>\sqrt{127} \approx 11</m>, we need only test primes up through 11.   Noticing that none of 2, 3, 5, 7, or 11 divide evenly, we conclude 127 is prime. </li>
+          <li> Since, <m>\sqrt{127} \approx 11</m>, we need only test primes up through 11.   Noticing that none of 2, 3, 5, 7, or 11 divide evenly, we conclude 127 is prime. </li>
           <li>
-            Here, <m>\sqrt{143} \approx 12</m> rounding up, so again we test only up through 11. We check that 2, 3, 5, 7 do not work but <m>143 = 11\cdot 13</m>, so we see that <m>143</m> is not a prime number.
+            Here, <m>\sqrt{143} \approx 12</m> so again we test only up through 11, the largest prime under 12.. We check that 2, 3, 5, 7 do not work but <m>143 = 11\cdot 13</m>, so we see that <m>143</m> is not a prime number.
           </li>
           <li>
-            For <m>\sqrt{54321} \approx 233</m>, meaning we need to check every prime less than 233. In order to solve this, let's find a method to develop that list...
+            For <m>\sqrt{54323} \approx 233</m>, meaning we need to check every prime less than 233. In order to solve this, let's find a method to develop that list...
           </li>
         </ol>
       </p>
@@ -621,10 +621,11 @@
   <subsection xml:id="computer-corner-sieve">
     <title>Computer Corner - Implementing the Sieve</title>
     <p>
-      Implementing the three step algorithm is very straight-forward.
+      Implementing the step algorithm is very straight-forward.
       <ul marker="circle">
         <li> Make a large list of integers </li>
-        <li> Delete every multiple of of each prime we encounter</li>
+        <li> Delete 1 </li>
+        <li> Delete every multiple of each prime we encounter</li>
       </ul>
 
       I'm choosing to implement this in Python in an inefficient, but readable way, so that we can run it in a Sage cell below. If you want to see it in your favorite language, you can find it implemented in many, many different languages on <url href="http://rosettacode.org/wiki/Sieve_of_Eratosthenes" visual="rosettacode.org/wiki/Sieve_Of_Eratosthenes">Rosetta Code</url>
@@ -731,7 +732,7 @@ print(is_it_prime(integer_to_check))
         <p>
           Recall <m>10! = 10 \cdot 9 \cdot 8 \cdot 7 \cdot \dots \cdot 2 \cdot 1</m>. So we can do the following:
           <md>
-            <mrow> 10! \amp = 10\cdot 9 \cdot 8 \cdot 7\cdot 6 \cdot 5 \cdot 4 \ cdot 3 \cdot 2 \cdot 1 </mrow>
+            <mrow> 10! \amp = 10\cdot 9 \cdot 8 \cdot 7\cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 </mrow>
             <mrow> \amp = (2\cdot 5)\cdot 3^2 \cdot 2^3 \cdot 7\cdot (2\cdot 3) \cdot 5 \cdot 2^2 \ cdot 3 \cdot 2 \cdot 1 </mrow>
             <mrow> \amp = 7^1 \cdot 5^2 \cdot 3^4 \cdot 2^8</mrow>
           </md>
@@ -829,7 +830,7 @@ print(is_it_prime(integer_to_check))
           <p>
             Assume, to the contrary, that every prime divisor of <m>n</m> is greater than <m>\sqrt{n}</m>. Since <m>n</m> is composite, it has at least two prime factors, <m>p_1, p_2</m> so that <m>n = p_1 p_2 b</m> where <m>b</m> is some  positive integer. But since <m>p_1 \and p_2</m> are a prime divisors of <m>n</m>, by our assumption, <m>p_1 \gt \sqrt{n} \and p_2 \gt \sqrt{n}</m>. So:
             <me> n = p_1  p_2  b \gt \sqrt{n} \cdot \sqrt{n} \cdot b = nb</me>
-            But since <m>n\gt 1 </m> and <m>b\in \Z^+</m>, <m>n\gt nb</m> is a contradiction.
+            But since <m>n\gt 1 </m> and <m>b\in \Z^+</m>, <m>n\gt nb</m> is a contradiction.  This means our original assumption, that every prime factor of <m>n</m> was greater than <m>\sqrt{n}</m> was wrong, and therefore we conclude that <m>n</m> has a prime factor less than <m>\sqrt{n}</m>.
           </p>
         </proof>
       </solution>

@@ -61,19 +61,16 @@
             <li> Move one disk at a time to any other peg. A move is valid only if a smaller disk is placed on top a larger one.</li>
           </ol>
         </p>
-        <figure>
-          <caption>Animation of the Towers of Hanoi puzzle with 4 disks</caption>
-          <image source="Tower_of_Hanoi_4.gif" width="50%" component="html">
-            <description>
-              The Animation of the Towers of Hanoi puzzle by André Karwath. There are three pegs and in this picture four disks. The animation proceeds to show moving the top disk to the far right peg. The next disk to the middle peg, then the smallest disk to the second peg... and so on until we have moved all disks to the third peg.
-            </description>
-          </image>
-          <image source="Tower_of_Hanoi_4.png" width="50%" component="pdf">
-            <description>
-              The Animation of the Towers of Hanoi puzzle by André Karwath. There are three pegs and in this picture four disks. The animation proceeds to show moving the top disk to the far right peg. The next disk to the middle peg, then the smallest disk to the second peg... and so on until we have moved all disks to the third peg.
-            </description>
-          </image>
-        </figure>
+        <image source="Tower_of_Hanoi_4.gif" width="50%" component="html">
+          <description>
+            The Animation of the Towers of Hanoi puzzle by André Karwath. There are three pegs and in this picture four disks. The animation proceeds to show moving the top disk to the far right peg. The next disk to the middle peg, then the smallest disk to the second peg... and so on until we have moved all disks to the third peg.
+          </description>
+        </image>
+        <image source="Tower_of_Hanoi_4.png" width="50%" component="pdf">
+          <description>
+            Illustration of the Towers of Hanoi puzzle. There are three pegs and in this picture four disks. The animation proceeds to show moving the top disk to the far right peg. The next disk to the middle peg, then the smallest disk to the second peg... and so on until we have moved all disks to the third peg.
+          </description>
+        </image>
         <p>
           Let <m>H_n</m> denote the number of moves to solve the puzzle with <m>n</m> disks. Our goal is to find a solution to the sequence <m>\{H_n\}</m>.
           <ol>
@@ -314,7 +311,7 @@ Recursive sequence: [2, 7, 11, 25, 47, 97, 191, 385, 767, 1537, 3071]
   <subsection xml:id="sec-recurrences-with-python">
     <title>Computer Corner</title>
     <p>
-      This computer corner isn't about a particular connection to computer science but rather just helping explain some of the Python functions I've used above as we checked our answers. You can use this to check your own answers! We'll walk through, using the same code changing one piece at a time as we build up our building blocks.
+      This computer corner isn't about a particular connection to computer science but rather just helping explain some of the Python functions I've used above as we checked our answers. You can use this to check your own answers! We'll walk through, changing one piece of code at a time as we build up our building blocks.
     </p>
     <aside>
       <p>Here we're highlighting that sequences are actually just functions, and we can compute them via CS functions. They just happen to be functions defined only on <m>\N</m>
@@ -358,11 +355,11 @@ print(map(square, [1,2,3,4]))
       <cd>    print(list(map(square, [1,2,3,4])))</cd>
     </p>
     <p>
-      Next, instead of typing <c>[1, 2, 3, 4]</c>, we can use <c>range(1, 5)</c> to return the same list. <c>range(a,b)</c> returns all integers <m>a \le x \le b</m>. Change the code above, replacing the typed-out list with a range:
+      Next, instead of typing <c>[1, 2, 3, 4]</c>, we can use <c>range(1, 5)</c> to return the same list. <c>range(a,b)</c> returns all integers <m>a \le x \lt b</m>. Change the code above, replacing the typed-out list with a range:
       <cd>    print(list(map(square, range(1, 5))))</cd>
     </p>
     <p>
-      There's one more feature we need. If we want to <url href="https://www.w3schools.com/python/ref_func_pow.asp" visual="https://www.w3schools.com/python/ref_func_pow.asp">write an arbitrary power</url> (such as <m>x^2</m> or even <m>2^x</m>), we use the <c>pow</c> function. For example, <m>x^2</m> is <c>pow(x,2)</c>, which <m>2^x</m> is <c>pow(2,x)</c>. Try rewriting our square function to use it in place of <c>x*x</c>.
+      There's one more feature we need. If we want to write an arbitrary power (such as <m>x^2</m> or even <m>2^x</m>), we use the <url href="https://www.w3schools.com/python/ref_func_pow.asp" visual="https://www.w3schools.com/python/ref_func_pow.asp"><c>pow</c> function</url>. For example, <m>x^2</m> is <c>pow(x,2)</c>, which <m>2^x</m> is <c>pow(2,x)</c>. Try rewriting our square function to use it in place of <c>x*x</c>.
     </p>
     <p>
       Now we can put it all together to check our solutions to recurrence relations. For example, in example <xref ref="example-7an-1-12an-2"/>, we found the solution was <m>a_n = 3\cdot 4^{n+1}</m>, then we can build the function <c>a(n)</c> that returns the right-side:

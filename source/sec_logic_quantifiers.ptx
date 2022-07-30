@@ -3,7 +3,7 @@
   <title>Propositional Functions and Logical Quantifiers</title>
   <introduction>
     <p>
-      We often consider very similar propositions over and over: <m>3 \lt 5</m>, <m>2 \lt 5</m>, <m>7 \lt 5</m>...  In this section, we take what is in common with these statements and build a generic function whose input is from some domain (in this example, numbers), and whose output is true or false.
+      We often consider very similar propositions over and over: <m>3 \lt 5</m>, <m>2 \lt 5</m>, <m>7 \lt 5</m>, etc...  In this section, we take what is in common with these statements and build a generic function whose input is from some domain (in this example, numbers), and whose output is either true or false.
     </p>
   </introduction>
   <subsection>
@@ -38,7 +38,7 @@
     </definition>
 
     <p>
-      The domain of discourse is the domain of the propositional function. Like all functions, it depends on the particular function we're considering. The codomain of the propositional function will always be the set <m>\{\text{true, false}\}</m>.
+      The domain of discourse is the domain of the propositional function. Like all functions, it depends on the particular function we're considering. The codomain of a propositional function will always be the set <m>\{\text{true, false}\}</m>.
     </p>
 
     <example>

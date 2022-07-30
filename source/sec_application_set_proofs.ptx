@@ -14,21 +14,21 @@
       <p>
         Let <m>A \and B</m> be sets.
         <ol>
-          <li>
+          <li> Subset:
             <m>A \subseteq B \iff (x \in A) \to (x \in B)</m>
           </li>
-          <li>
+          <li> Union:
             <m>x \in A \cup B  \iff x \in A \lor x \in B</m>
           </li>
           
-          <li>
+          <li> Intersection:
             <m>x \in A \cap B  \iff x \in A \land x \in B</m>
           </li>
           
-          <li>
+          <li> Complement:
             <m>x \in A \setminus B  \iff x \in A \land x \not\in B</m>
           </li>
-          <li>
+          <li> Complement:
             <m>A = B</m> if and only if <m>A \subseteq B</m> and <m>B \subseteq A</m>.
           </li>
         </ol>
@@ -109,7 +109,7 @@
     </statement>
     <solution>
       <p>
-        We'll prove the first via an <q>iff</q> argument:
+        We'll prove the first via an <q>if and only if</q> argument:
         <md>
           <mrow> x\in A \cup \emptyset \amp \iff x \in A \lor x\in \emptyset</mrow>
           <mrow> \amp \iff x\in A \lor F</mrow>

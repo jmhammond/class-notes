@@ -3,7 +3,7 @@
   <title>GCDs and The Euclidean Algorithm</title>
   <introduction>
     <p>
-      In this section we explore what pairs of numbers can have in common. It will turn out that numbers that have only 1 as a common divisor are especially useful to encryption methods, so we give an algorithm to find the greatest common divisor and how to write it in a particularly useful way.
+      In this section we explore what factors that pairs of numbers can have in common. It will turn out that numbers that have only 1 as a common divisor are especially useful to encryption methods, so we give an algorithm to find the greatest common divisor and how to write it in a particularly helpful way.
     </p>
   </introduction>
 

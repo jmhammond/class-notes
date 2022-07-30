@@ -64,6 +64,7 @@
           <ol>
             <li><m> 2 \mid 8 </m></li>
             <li><m> 14 \modulus 5 </m></li>
+            <li><m> 20 / 4 </m></li>
             <li><m> 8 \mid 4 </m></li>
             <li><m> 8 \div 4</m></li>
           </ol>
@@ -74,6 +75,7 @@
           <ol>
             <li> This is a statement. It is saying <q>2 divides into 8 evenly.</q> This statement is true. </li>
             <li> This is a number. Its value is 4, since the remainder of 14 divided by 5 is 4. </li>
+            <li> This is a number. Its value is 5.</li>
             <li> This is a statement. It says <q>8 divides into 4 evenly.</q> This is false. </li>
             <li> This is a number. Its value is 2. </li>
           </ol>
@@ -193,7 +195,7 @@
         Let's compare the the congruence relation with the <xref ref="definition-modulus-operator" text="custom"> modulus operator</xref>:
         <ul>
           <li> <m>a \equiv b \pmod{m}</m> is a <em>logical statement</em>. It tells us that <m>a</m> and <m>b</m> are related, that is, the statement <m>m \divides (b-a)</m> is true. </li>
-          <li> <m>a \modulus b</m> is a <em>mathematical operation</em>. The result is a number not a true/false.</li>
+          <li> <m>a \modulus b</m> is a <em>mathematical operation</em>. The result is a number.</li>
         </ul>
         The difference is subtle but important.
       </p>
@@ -296,7 +298,7 @@
 
     <note>
       <p>
-        For modular arithmetic, we have addition and multiplication. Subtraction is done via additive inverses, but division is not a thing! We'll discuss multiplicative inverses in <xref ref="section-multiplicative-inverses">section</xref>.  <!-- todo xref this -->
+        For modular arithmetic, we have addition and multiplication. Subtraction is done via additive inverses, but division is not a defined operation! We'll discuss multiplicative inverses in <xref ref="section-multiplicative-inverses">section</xref>.  <!-- todo xref this -->
       </p>
     </note>
 

@@ -88,10 +88,9 @@
         <p>
           Looking that the points on the graph, we see that the relation will be the set of ordered pairs:
           <md>
-            <mrow>\text{Siblings} = \{(\text{John}, \text{Eric}), (\text{John}, \text{Sarah }),
-            (\text{Eric}, \text{John}), (\text{Eric}, \text{Sarah}),
-            (\text{Sarah}, \text{Eric}),(\text{Sarah}, \text{John})\}
-            </mrow>
+            <mrow>\text{Siblings} = \amp\{(\text{John}, \text{Eric}), (\text{John}, \text{Sarah}),
+            (\text{Eric}, \text{John}), </mrow>
+            <mrow> \amp (\text{Eric}, \text{Sarah}), (\text{Sarah}, \text{Eric}),(\text{Sarah}, \text{John})\} </mrow>
           </md>
           Notice that these ordered pairs correspond to the lines on the graph diagram with each of the first coordinates being connected to the second coordinate. E.g. an arrow goes from John to Eric.
         </p>
@@ -117,7 +116,7 @@
               Similarly, <m>5 \mathrel{R} 5</m> since it divides into itself. No remainder.
             </li>
             <li>
-              <m>4 \cancel{\mathrel{R}} 3</m> since 4 doesn't divide into 3. The remainder is 1.
+              <m>3 \cancel{\mathrel{R}} 4</m> since 3 doesn't divide into 4. The remainder is 1.
             </li>
             <li>
               <m>6 \cancel{\mathrel{R}} 3</m> since 6 doesn't divide into 3. The remainder is 3.
@@ -155,9 +154,13 @@
       <answer>
         <p>
           The complete listing of the relation is:
-          <m>
-            R= \{(1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),\\(2,2),(2,4),(2,6),(2,8),(2,10),(3,3),(3,6),(3,9),(4,4),(4,8),\\(5,5),(5,10),(6,6),(7,7),(8,8),(9,9),(10,10)\}
-          </m>
+          <md>
+            <mrow> R= \amp\{(1,1),(1,2),(1,3),(1,4),(1,5),</mrow>
+            <mrow>\amp(1,6),(1,7), (1,8),(1,9),(1,10),</mrow>
+            <mrow>\amp(2,2),(2,4),(2,6),(2,8),(2,10),</mrow>
+            <mrow>\amp(3,3),(3,6),(3,9),(4,4),(4,8),</mrow>
+            <mrow>\amp(5,5),(5,10),(6,6),(7,7),(8,8),(9,9),(10,10)\}</mrow>
+          </md>
         </p>
         <p component="video">
           and a video for the graph:
@@ -170,7 +173,7 @@
     <example>
       <statement>
         <p>
-          The domain and codomain don't have to be the same. For example, let <m>\mathrel{R}</m> be the relation from the set of people in discrete math class to the natural numbers which maps a person to their height in inches. In this example, <m>(\text{John}, 76) \in \mathrel{R}</m>. What ordered pair represents you?
+          The domain and codomain don't have to be the same. For example, let <m>\mathrel{R}</m> be the relation from the set of people in discrete math class to the natural numbers which maps a person to their height in inches. In this example, (John, 76) <m>\in \mathrel{R}</m>. What ordered pair represents you?
         </p>
       </statement>
     </example>
@@ -478,7 +481,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <title>The Modulus Operation</title>
       <statement>
         <p>
-          Define the <term>modulus operation</term>, <m>a \modulus m</m> on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
+          Define the <term>modulus operation</term>, <m>a \modulus m</m>, on the set of integers to return the remainder when dividing <m>a</m> by <m>m</m>.
         </p>
         <aside>
           <p>
@@ -505,7 +508,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <title>Set of Integers Modulo n</title>
       <statement>
         <p>
-          We also define the set <m>\mathbb{Z}_n</m>, pronounced <q>integers mod n</q> or <q>  mod n</q> to be the set of all possible remainders when dividing by <m>n</m>:
+          We define the set <m>\mathbb{Z}_n</m>, pronounced <q>integers mod n</q> to be the set of all possible remainders when dividing by <m>n</m>:
           <md><mrow> \mathbb{Z}_n = \{0, 1, 2, 3, 4,\dots, n-2, n-1\} </mrow> </md>
         </p>
         <p>
@@ -672,7 +675,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </li>
         <li>
           <p>
-            If the function is not surjective, then the inverse relation isn't well-defined. Any values that aren't mapped to in the original codomain <em>can't</em> be plugged into the inverse.
+            If the function is not surjective, then the inverse relation isn't well-defined. Any values that aren't mapped to in the original codomain <em>can't be plugged into</em> the inverse.
           </p>
           <p component="video"> Here's an animation that illustrates this idea:</p>
           <video component="video" source="InverseExploration2.mp4" />
@@ -898,13 +901,13 @@ b. note that the inverse of a function is always a relation, but not always a fu
       <title>What kind of object? Binary operations vs. <m>a\mathrel{R} b</m></title>
 
       <p>
-        I want to contrast that with the idea of a <em>binary operation</em>, such as <m>+, -, \cdot, \div</m> with the mathematical statement <m>a \mathrel{b}</m>.
+        I want to contrast the idea of a <em>binary operation</em>, such as <m>+, -, \cdot, \div, \modulus</m> with the mathematical statement <m>a \mathrel{b}</m>.
       </p>
 
       <p>
         <ul>
           <li> A <em>binary operation</em> takes two numbers and returns a third number. Its result is a number. </li>
-          <li> As noted previously, <m>a \mathrel{R} b</m> is a statement when <m>\mathrel{R}</m> is a relation between two sets. </li>
+          <li> As noted previously, <m>a \mathrel{R} b</m> is a statement when <m>\mathrel{R}</m> is a relation between two sets; it returns a truth value. </li>
         </ul>
       </p>
 
@@ -976,7 +979,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
         <p>
           <ol>
             <li> Yes </li>
-            <li> R^{-1} = \{(x, y) \mid y^2 = x, \text{ for } y = -3, -2, -1, \dots 2, 3\} </li>
+            <li><m> R^{-1} = \{(x, y) \mid y^2 = x, \text{ for } y = -3, -2, -1, \dots 2, 3\} </m></li>
             <li> No</li>
           </ol>
         </p>

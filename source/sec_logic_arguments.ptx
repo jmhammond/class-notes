@@ -135,19 +135,21 @@
       </dl>
     </list>
 
-    <example>
-      <statement>
-        <p>
-          It would be good practice to verify that each of the arguments in table <xref ref="list-logical-arguments"/> is a tautology using either true tables or logical equivalences.
-        </p>
-      </statement>
-      <answer component="video">
-        <p>
-          In this video, we demonstrate that the addition and (conjuctive) simplication laws are true via truth tables.
-        </p>
-        <video youtube="gfnlEc9qxSQ" />
-      </answer>
-    </example>
+    <p>
+      It would be good practice to verify that each of the arguments in table <xref ref="list-logical-arguments"/> is a tautology using either truth tables or logical equivalences.
+    </p>
+
+    <!-- johnq 7/28/22: removing video, keeping verbal content. -->
+    <!-- <example component="video"> -->
+    <!--   <statement> -->
+    <!--   </statement> -->
+    <!--   <answer> -->
+    <!--     <p> -->
+    <!--       In this video, we demonstrate that the addition and (conjuctive) simplication laws are true via truth tables. -->
+    <!--     </p> -->
+    <!--     <video youtube="gfnlEc9qxSQ" /> -->
+    <!--   </answer> -->
+    <!-- </example> -->
 
     <example>
       <statement>
@@ -170,20 +172,32 @@
       <title>Quantified Arguments</title>
       <statement>
         <p>
-          <term>Existential instantiation</term> describes the argument:
-          <me> \exists x P(x) \implies P(c) </me> for some <m>c</m> in the domain.
-        </p>
-        <p>
-          <term>Existential generalization</term> describes the argument:
-          <me> P(c) \implies \exists x P(x) </me>.
-        </p>
-        <p>
-          <term>Universal modus ponens</term> describes the argument:
-          <me>\forall x (P(x) \to Q(x)) \wedge P(a) \implies Q(a)</me> where <m>a</m> is a particular element in the domain.
-        </p>
-        <p>
-          <term>Universal modus tollens</term> describes the argument:
-          <me>\forall x (P(x) \to Q(x)) \wedge \neg Q(a) \implies \neg P(a)</me> where <m>a</m> is a particular element in the domain.
+          <ul>
+            <li>
+              <p>
+                <term>Existential instantiation</term> describes the argument:
+                <me> \exists x P(x) \implies P(c) </me> for some <m>c</m> in the domain.
+              </p>
+            </li>
+            <li>
+              <p>
+                <term>Existential generalization</term> describes the argument:
+                <me> P(c) \implies \exists x P(x) </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <term>Universal modus ponens</term> describes the argument:
+                <me>\forall x (P(x) \to Q(x)) \wedge P(a) \implies Q(a)</me> where <m>a</m> is a particular element in the domain.
+              </p>
+            </li>
+            <li>
+              <p>
+                <term>Universal modus tollens</term> describes the argument:
+                <me>\forall x (P(x) \to Q(x)) \wedge \neg Q(a) \implies \neg P(a)</me> where <m>a</m> is a particular element in the domain.
+              </p>
+            </li>
+          </ul>
         </p>
       </statement>
     </definition>

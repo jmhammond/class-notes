@@ -7,7 +7,7 @@
   <!-- to make the schema happy, I need to put everything into a subsection (since the forums are in a subsection)  -->
   <subsection>
     <p>
-      In our algebra and calculus classes, where we worked in <m>\Q</m> and <m>\R</m>, all non-zero numbers had multiplicative inverses. For example, <m>5^{-1} = \frac15</m> since <m>5^{-1}\cdot 5 = 1</m>. But <m>\frac15 \not \in \Z</m>!
+      In our algebra and calculus classes, where we worked in <m>\Q</m> and <m>\R</m>, all non-zero numbers had multiplicative inverses. For example, <m>5^{-1} = \frac15</m> since <m>5^{-1}\cdot 5 = 1</m>. But <m>\frac15 \not \in \Z</m>, so it's not an object that we can use in modular arithmetic.
     </p>
     <p>
       When we're working with only integers, in particular in congruence classes modulo an integer <m>m</m>, fractions aren't a thing. Some numbers, though, do have multiplicative inverses. They're special, and we explore them in this section.
@@ -178,14 +178,14 @@
             table(rows)
           </input>
           <output>
-            1	2	3	4	5	6	7	8
-            2	4	6	8	1	3	5	7
-            3	6	0	3	6	0	3	6
-            4	8	3	7	2	6	1	5
-            5	1	6	2	7	3	8	4
-            6	3	0	6	3	0	6	3
-            7	5	3	1	8	6	4	2
-            8	7	6	5	4	3	2	1
+            1    2    3    4    5    6    7    8
+            2    4    6    8    1    3    5    7
+            3    6    0    3    6    0    3    6
+            4    8    3    7    2    6    1    5
+            5    1    6    2    7    3    8    4
+            6    3    0    6    3    0    6    3
+            7    5    3    1    8    6    4    2
+            8    7    6    5    4    3    2    1
           </output>
         </sage>
         <p>
@@ -378,7 +378,7 @@
         <ol>
           <li> A unique solution if <m>\gcd(a, m) = 1</m> </li>
           <li> If <m>\gcd(a, m) = d</m>, the congruence will have <m>d</m> solutions if <m>d \divides b</m> </li>
-          <li> And the system will have no solution if <m>\gcd(a, m) = d</m> and <m>d \not\divides b</m> </li>
+          <li> And the system will have no solution if <m>\gcd(a, m) = d</m> and <m>d \nmid b</m> </li>
         </ol>
       </p>
       <p>
@@ -388,7 +388,7 @@
             x = x_0 + \dfrac{mt}{d}
           </mrow>
         </md>
-        where <m>\gcd(a,m) = d</m>, <m>x_0</m> is an initial solution, and <m>t</m> runs through <m>Z_d</m>, the <xref ref="def-zmodn" text="custom">set of remainders modulo d</xref>.
+        where <m>\gcd(a,m) = d</m>, <m>x_0</m> is an initial solution, and <m>t</m> runs through <m>\Z_d</m>, the <xref ref="def-zmodn" text="custom">set of remainders modulo d</xref>.
       </p>
       <p>
         Take a moment to revisit the examples in <xref ref="example-inverses-multiple-solutions"/> using this formula.

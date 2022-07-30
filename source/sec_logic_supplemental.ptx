@@ -305,9 +305,9 @@
               <p>Contrapositive: For all real numbers <m>x</m> and <m>y</m>, if <m>x \ne 0</m> and <m>y \ne 0</m> then <m>xy \ne 0</m>.</p>
             </li>
             <li>
-              <p>Negation: There is at least one student in Math 228 who does not understand implications but will still pass the exam.</p>
-              <p>Converse: For every student in Math 228, if they fail the exam, then they did not understand implications.</p>
-              <p>Contrapositive: For every student in Math 228, if they pass the exam, then they understood implications.</p>
+              <p>Negation: There is at least one student in Math 321 who does not understand implications but will still pass the exam.</p>
+              <p>Converse: For every student in Math 321, if they fail the exam, then they did not understand implications.</p>
+              <p>Contrapositive: For every student in Math 321, if they pass the exam, then they understood implications.</p>
             </li>
           </ol>
         </p>

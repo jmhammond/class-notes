@@ -17,8 +17,8 @@
 
       <colophon>
         <website>
-          <name>Discrete Math for Shockers</name>
-          <address>http://www.math.wichita.edu/discrete-book</address>
+          <name>Discrete Math for Shockers - wichita.edu/discretebook</name>
+          <address>http://wichita.edu/discrete-book</address>
         </website>
         <copyright>
           <year>2018-2022</year>
@@ -31,13 +31,16 @@
       </colophon>
       <acknowledgement>
         <p>
-          This book borrows heavily from the exercises of Oscar Levin's <url href="https://github.com/oscarlevin/discrete-book" visual="">Discrete Mathematics: An Open Introduction</url>.
-        </p>
-        <p>
-          The material in section <xref ref="section-counting-fib"/> was first discovered in Arthur Benjamin and Jennifer Quinn's <pubtitle>Proofs that Really Count: The Art of Combinatorial Proof</pubtitle>, and the exercises in that section come from that book, and influenced every choice of Fibonacci sequence problem in the remainder of the text.
-        </p>
-        <p>
           Special thanks goes to the Wichita State Open/Alternative Textbook Initiative for their generous grant to help expand the text.
+        </p>
+        <p>
+          Many exercises come from Oscar Levin's <url href="https://github.com/oscarlevin/discrete-book" visual="">Discrete Mathematics: An Open Introduction</url>.
+        </p>
+        <p>
+          The material in section <xref ref="section-counting-fib"/> I first learned in Arthur Benjamin and Jennifer Quinn's <pubtitle>Proofs that Really Count: The Art of Combinatorial Proof</pubtitle>, and the exercises in that section come from that book, and influenced every choice of Fibonacci sequence problem in the remainder of the text.
+        </p>
+        <p>
+          The comic in the preface is copyright Zach Weinersmith, smbc-comics.com
         </p>
         <p>
           I'm also grateful for you, reader, as we go on this journey of mathematics together. This is going to be fun.
@@ -80,7 +83,9 @@
     <xi:include href="./ch_counting.ptx"/>
 
     <backmatter>
-      <xi:include href="./ch_appendix.ptx"/>
+      <!-- Maybe someday I'll have appendices, but right now I don't care. -->
+      <!-- TODO: A litle of symbols might be nice, though. -->
+      <!-- <xi:include href="./ch_appendix.ptx"/> -->
 
       <solutions divisional="hint solution">
         <title>Solutions to the exercises</title>

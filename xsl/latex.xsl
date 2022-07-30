@@ -6,7 +6,7 @@ and using it for discovery of what features I actually want to modify in my own.
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-<xsl:import href="../../mathbook/xsl/pretext-latex.xsl" />
+<xsl:import href="./core/pretext-latex.xsl" />
 
 
 <!--  -->

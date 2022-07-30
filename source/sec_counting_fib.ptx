@@ -261,7 +261,7 @@
           For the case where we are using <m>i</m> dominoes, with <m>0\le i \le n/2</m>, we will be using  <m>n-2i</m> squares, or a total of <m>n-2i + i = n-i</m> tiles. To choose where to place the <m>i</m> dominoes, we'll have <m>\binom{n-i}{i}</m> ways to do this.
         </p>
         <p>
-          Thus, there are a total of <m>n \ge 0, \binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \dots + \binom{n-n}{n}</m> tilings of an <m>n</m> board.
+          Thus, for <m>n\ge 0</m>, there are a total of <m>\binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \dots + \binom{n-n}{n}</m> tilings of an <m>n</m> board.  Since both answers count the same object, we conclude that <m>\sum_{i=0}^n \binom{n-i}{i} = f_n</m>.
         </p>
       </solution>
     </example>

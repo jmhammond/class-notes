@@ -3,7 +3,7 @@
   <title>Application: Encryption</title>
   <introduction>
     <p>
-      In this section, we discuss two types of encryption algorithms. The first is a simple algorithm that uses linear modular equations to encrypt and decrypt. The second, despite being pretty simple to explain is one of the most common encryption algorithms in current use.
+      In this section, we discuss two types of encryption algorithms. The first is a simple algorithm that uses linear congruence functions to encrypt and decrypt. The second, despite being pretty simple to explain is one of the most common encryption algorithms in current use.
     </p>
   </introduction>
 
@@ -14,7 +14,7 @@
     </title>
 
     <p>
-      Our convention will be to use only capital English letters, A to Z. We will identify each letter with the remainders modulo 26. As our purposes is introducing basics of encryption, we won't encrypt punctuation or spaces.
+      Our convention will be to use only capital English letters, A to Z. We will identify each letter with the remainders modulo 26. As our purpose is introducing basics of encryption, we won't encrypt punctuation or spaces.
     </p>
     <table>
       <title>List of Alphabet Encoding</title>
@@ -343,7 +343,7 @@
             <li> Encryption occurs my taking each numeric message block <m>M</m> and computing <m>M^e\pmod{n}</m></li>
             <li> Decryption occurs my taking each numeric cipher block <m>C</m> and computing <m>C^d\pmod{n}</m></li>
           </ol>
-          This works because <m>(M^e)^d = M^{ed} = M^1 \pmod{n}</m>. Although we haven't proven this, it's a result of Euler's Totient Theorem which you'll revisit in Number Theory.
+          This works because <m>(M^e)^d = M^{ed} = M^1 \pmod{n}</m>. Although we haven't proven this, it's a result of Euler's Totient Theorem which you'll revisit in future course on number theory.
         </p>
       </statement>
     </definition>

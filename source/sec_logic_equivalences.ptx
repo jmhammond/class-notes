@@ -24,6 +24,11 @@
     <p>
       Statements that are not tautologies or contradictions are called <term>contingencies</term>.
     </p>
+    <aside>
+      <p>
+        Most statements are contingencies. It is the tautologies and contradictions that are special that we will single out for the remainder of the semester.
+      </p>
+    </aside>
 
     <definition>
       <title>Logical Equivalence</title>
@@ -37,6 +42,11 @@
     <p>
       The first method to show that two statements <m>p \and q</m> are equivalent is to build a truth table to to find the truth values of <m>p \leftrightarrow q</m>.
     </p>
+    <aside>
+      <p>
+        Since <m>p \leftrightarrow q</m> is true if <m>p \and q</m> have the same truth values, in this course we will often build a truth table for the two statements and then remark on whether their columns are the same or different.
+      </p>
+    </aside>
 
     <example>
       <statement>
@@ -51,7 +61,7 @@
           </ol>
         </p>
         <p>
-          Note! We use <m>p \to q \equiv \neg p \vee q</m> often enough that this has a name. We'll call it <term>implication</term>
+          We use <m>p \to q \equiv \neg p \vee q</m> often enough that this has a name. We'll call it <term>implication</term>
         </p>
       </statement>
       <solution>
@@ -112,10 +122,6 @@
         <video youtube="44izzfqVMNo" />
       </answer>
     </example>
-
-    <p>
-      Since <m>p \leftrightarrow q</m> is true if <m>p \and q</m> have the same truth values, in this course we will often build a truth table for the two statements and then remark on whether their columns are the same or different.
-    </p>
 
     <p>
       The following table is a set of core tautologies we will be using for the rest of the course. In the example that follows them, we will show how we can use these existing tautologies (which we'll call laws) to make conclusions about more complex statements.
