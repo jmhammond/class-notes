@@ -278,7 +278,9 @@
                 Finally, we put it all together, bringing back the original expression and substituting what we found.
                 <md>
                   <mrow>514^{5367} \amp= 514^{4096 + 1024 + 128 + 64 + 32 + 16 + 4 + 2 + 1}</mrow>
-                  <mrow> \amp= 514^{4096}\cdot514^{1024}\cdot514^{128}\cdot514^{64}\cdot514^{32} \cdot514^{16} \cdot514^{4} \cdot514^2 \cdot514^1</mrow>
+                  <mrow> \amp= 514^{4096}\cdot514^{1024}\cdot514^{128}\cdot514^{64}</mrow>
+                  <!-- spread across two lines to fit in 6x9 print -->
+                  <mrow>\amp\hspace{1em} \cdot514^{32} \cdot514^{16} \cdot514^{4} \cdot514^2 \cdot514^1</mrow>
                   <mrow> \amp\equiv 514 \cdot 658 \cdot 487 \cdot 505 \cdot 523 \cdot 388 \cdot 163 \cdot 415 \cdot 514 \pmod{711} </mrow>
                   <mrow> \amp \text{multiple two at a time and reduce mod 711 each time}</mrow>
                   <mrow> \amp\equiv 694 \pmod{711}</mrow>

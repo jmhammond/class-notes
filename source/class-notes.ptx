@@ -15,6 +15,12 @@
         </author>
       </titlepage>
 
+      <dedication>
+        <p>
+          To Dad.  It's not an accounting book, but I did use a spreadsheet!
+        </p>
+      </dedication>
+
       <colophon>
         <website>
           <name>Discrete Math for Shockers - wichita.edu/discretebook</name>
@@ -48,14 +54,6 @@
       </acknowledgement>
       <preface>
         <p>
-          Why this class?
-        </p>
-        <image source="smbc-mathematics.png" scale="50%">
-          <description>
-            Comic by Zach Weinersmith of Saturday Morning Breakfast Cereal that tells us that yeah, math doesn't doesn't teach us humility. Copyright Zach Weinersmith, smbc-comics.com
-          </description>
-        </image>
-        <p>
           The WSU Catalog says of this course:
         </p>
         <blockquote>
@@ -72,6 +70,11 @@
         <p>
           This course is very different that your past math courses. Keep an open mind, and please ask questions! This might be the <q>hardest</q> math class you take, but it can also be one of the most rewarding.
         </p>
+        <image source="smbc-mathematics.png" scale="50%">
+          <description>
+            Comic by Zach Weinersmith of Saturday Morning Breakfast Cereal that tells us that yeah, math doesn't doesn't teach us humility. Copyright Zach Weinersmith, smbc-comics.com
+          </description>
+        </image>
       </preface>
     </frontmatter>
 

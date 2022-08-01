@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_application_set_proofs">
-  <title> Application: Set Properties and Equivalences </title>
+  <title> Application: Set Equivalences </title>
   <introduction>
     <p>
       This section explores how we can apply the equivalences of logical statements to the set properties we explored in <xref ref="sec_objects_sets"/>. It is no coincidence that those set properties look nearly identical to the logical equivalences! Instead of using Venn Diagrams, in this section we'll use equivalences to verify statements about sets.

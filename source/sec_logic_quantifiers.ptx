@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-logic-quantifiers">
-  <title>Propositional Functions and Logical Quantifiers</title>
+  <title>Propositional Functions and Quantifiers</title>
   <introduction>
     <p>
       We often consider very similar propositions over and over: <m>3 \lt 5</m>, <m>2 \lt 5</m>, <m>7 \lt 5</m>, etc...  In this section, we take what is in common with these statements and build a generic function whose input is from some domain (in this example, numbers), and whose output is either true or false.
@@ -402,7 +402,8 @@
               <p>
                 <em> Applying DeMorgan's laws many, many times and noting that the opposite of <m>x\lt a</m> is <m>x \ge a</m>:</em>
                 <md>
-                  <mrow>\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z)) \amp \equiv \neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
+                  <mrow>\amp\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z)) </mrow>
+                  <mrow>\amp\equiv \neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
                   <mrow> \amp \equiv \exists x \neg \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
                   <mrow> \amp \equiv \exists x \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
                   <mrow> \amp \equiv \exists x \forall y \neg(x \lt  y ) \lor \neg ( \exists z (x \lt  z \vee y \lt  z))  ) </mrow>

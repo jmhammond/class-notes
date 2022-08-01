@@ -960,7 +960,8 @@ b. note that the inverse of a function is always a relation, but not always a fu
     <exercise>
       <statement>
         <p>
-          Consider the relation <m>R = \{ (x, y) \mid y = x^2, \text{ for } x=-3, -2, -1, \dots 2, 3\}</m>.
+          Consider the relation
+          <me>R = \{ (x, y) \mid y = x^2, \text{ for } x=-3, -2, -1, \dots 2, 3\}</me>.
           <ol>
             <li>
               Is <m>R</m> a function?

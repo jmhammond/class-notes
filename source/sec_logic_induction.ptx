@@ -308,9 +308,10 @@
             We must prove that <m>1 + 2 + 2^2 + 2^3 + \cdots +2^n = 2^{n+1} - 1</m> for all <m>n \in \N</m>. Thus let <m>P(n)</m> be the statement <m>1 + 2 + 2^2 + \cdots + 2^n = 2^{n+1} - 1</m>. We will prove that <m>P(n)</m> is true for all <m>n \in \N</m>. First we establish the base case, <m>P(0)</m>, which claims that <m>1 = 2^{0+1} -1</m>. Since <m>2^1 - 1 = 2 - 1 = 1</m>, we see that <m>P(0)</m> is true. Now for the inductive case. Assume that <m>P(k)</m> is true for an arbitrary <m>k \in \N</m>. That is, <m>1 + 2 + 2^2 + \cdots + 2^k = 2^{k+1} - 1</m>. We must show that <m>P(k+1)</m> is true (i.e., that <m>1 + 2 + 2^2 + \cdots + 2^{k+1} = 2^{k+2} - 1</m>). To do this, we start with the left-hand side of <m>P(k+1)</m> and work to the right-hand side:
             <md>
 
-              <mrow> 1 + 2 + 2^2 + \cdots + 2^k + 2^{k+1} = \amp ~ 2^{k+1} - 1 + 2^{k+1} \amp \text{by inductive hypothesis}</mrow>
-              <mrow> = \amp ~2\cdot 2^{k+1} - 1 \amp</mrow>
-              <mrow> = \amp ~ 2^{k+2} - 1 \amp</mrow>
+              <mrow> \amp ~ 1 + 2 + 2^2 + \cdots + 2^k + 2^{k+1} </mrow>
+              <mrow> \amp=   2^{k+1} - 1 + 2^{k+1} \amp \text{by inductive hypothesis}</mrow>
+              <mrow> \amp = 2\cdot 2^{k+1} - 1 \amp</mrow>
+              <mrow> \amp=  2^{k+2} - 1 \amp</mrow>
             </md>
           </p>
 
@@ -404,13 +405,14 @@
             1^2 +2^2 +3^2+...+k^2 = \frac{k(k+1)(2k+1)}{6}</me>
             and consider the statement:
             <md>
-              <mrow>1^2 + 2^2 + 3^2 + \dots + k^2 + (k+1)^2 &amp;=  \frac{k(k+1)(2k+1)}{6}  + (k+1)^2 </mrow>
-              <mrow> &amp; = \frac{k(k+1)(2k+1)}{6} \frac{6(k+1)^2}{6} </mrow>
-              <mrow> &amp; = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6} </mrow>
-              <mrow> &amp; = \frac{(k+1)[2k^2 + k + 6k+6]}{6} </mrow>
-              <mrow> &amp; = \frac{(k+1)[2k^2 + 7k+6]}{6} </mrow>
-              <mrow> &amp; = \frac{(k+1)[(2k+3)(k+2)]}{6} </mrow>
-              <mrow> &amp; = \frac{(k+1)(2(k+1)+1)((k+1) + 1)}{6} </mrow>
+              <mrow>\amp ~1^2 + 2^2 + 3^2 + \dots + k^2 + (k+1)^2 </mrow>
+              <mrow>\amp = \frac{k(k+1)(2k+1)}{6}  + (k+1)^2 </mrow>
+              <mrow> \amp = \frac{k(k+1)(2k+1)}{6} \frac{6(k+1)^2}{6} </mrow>
+              <mrow> \amp = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6} </mrow>
+              <mrow> \amp = \frac{(k+1)[2k^2 + k + 6k+6]}{6} </mrow>
+              <mrow> \amp = \frac{(k+1)[2k^2 + 7k+6]}{6} </mrow>
+              <mrow> \amp = \frac{(k+1)[(2k+3)(k+2)]}{6} </mrow>
+              <mrow> \amp = \frac{(k+1)(2(k+1)+1)((k+1) + 1)}{6} </mrow>
             </md>
             which is exactly what we needed to show. Thus, by the principle of mathematical induction, the original statement <m> 1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}</m> is true for all integers <m>n\ge 1</m>.
           </p>
@@ -641,9 +643,10 @@
           <p>
             Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k \ge 0</m>. That is, <m>F_0 + F_1 + F_2 + \cdots + F_{k} = F_{k+2} - 1</m>. Now consider
             <md>
-              <mrow> F_0 + F_1 + F_2 + \dots F_k + F_{k+1} \amp= ( F_{k+2} - 1 ) + F_{k+1} \amp \text{by ind. hyp.}</mrow>
+              <mrow> \amp ~ F_0 + F_1 + F_2 + \dots F_k + F_{k+1}\amp</mrow>
+              <mrow>\amp= ( F_{k+2} - 1 ) + F_{k+1} \amp \text{by inductive hypothesis}</mrow>
               <mrow> \amp=  F_{k+2} + F_{k+1} - 1 \amp</mrow>
-              <mrow> \amp=  F_{k+3} - 1 \amp \text{by recursive def.}</mrow>
+              <mrow> \amp=  F_{k+3} - 1 \amp \text{by recursive definition}</mrow>
             </md>
             thus <m>P(k+1)</m> is true.
           </p>
@@ -670,9 +673,10 @@
           <p>
             Let <m>P(n)</m> be the statement <m>F_0 + F_2 + F_4 + \cdots + F_{2n} = F_{2n+1} - 1</m>. We will show that <m>P(n)</m> is true for all <m>n \ge 0</m>. First the base case is easy because <m>F_0 = 0</m> and <m>F_1 = 1</m> so <m>F_0 = F_1 - 1</m>. Now consider the inductive case. Assume <m>P(k)</m> is true, that is, assume <m>F_0 + F_2 + F_4 + \cdots + F_{2k} = F_{2k+1} - 1</m>. To establish <m>P(k+1)</m> we work from left to right:
             <md>
-              <mrow> F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} ~ \amp = F_{2k+1} - 1 + F_{2k+2} \amp \text{by ind. hyp.}</mrow>
+              <mrow> \amp  F_0 + F_2 + \cdots + F_{2k} + F_{2k+2} \amp</mrow>
+              <mrow>\amp = F_{2k+1} - 1 + F_{2k+2} \amp \text{by inductive hypothesis} </mrow>
               <mrow> \amp = F_{2k+1} + F_{2k+2} - 1 \amp</mrow>
-              <mrow> \amp = F_{2k+3} - 1 \amp \text{by recursive def.}</mrow>
+              <mrow> \amp = F_{2k+3} - 1 \amp \text{by recursive definition}</mrow>
             </md>
           </p>
 
@@ -737,9 +741,10 @@
           <p>
             Inductive step: Assume that <m>P(k)</m> is true for some integer <m>k\ge 1</m>. That is, <m>F_1 + F_3 + F_5 + \dots + F_{2k -1} = F_{2k}</m> and consider:
             <md>
-              <mrow>F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2(k+1) - 1} \amp = F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2k+1} \amp </mrow>
-              <mrow> \amp = F_{2k} + F_{2k+1} \amp \text{by ind. hyp.} </mrow>
-              <mrow> \amp = F_{2k+2} \amp \text{by rec. def.}</mrow>
+              <mrow>\amp F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2(k+1) - 1}\amp </mrow>
+              <mrow>\amp = F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2k+1} \amp </mrow>
+              <mrow> \amp = F_{2k} + F_{2k+1} \amp \text{by inductive hypothesis} </mrow>
+              <mrow> \amp = F_{2k+2} \amp \text{by recursive definition}</mrow>
               <mrow> \amp = F_{2(k+1)}\amp</mrow>
             </md>
             And thus <m>P(k+1)</m> is true.

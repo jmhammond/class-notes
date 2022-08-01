@@ -217,10 +217,14 @@
       <p>
         <line/>
         For example:
-        <me>
-          \neg p \vee q \wedge r \to p \wedge q \\
-          \equiv \left(\left(\left(\neg p\right)\vee q\right) \wedge r\right) \to \left(p \wedge q \right)
-        </me>
+        <md>
+          <mrow>
+          \amp\neg p \vee q \wedge r \to p \wedge q
+          </mrow>
+          <mrow>
+          \amp\equiv \left(\left(\left(\neg p\right)\vee q\right) \wedge r\right) \to \left(p \wedge q \right)
+          </mrow>
+        </md>
       </p>
     </sidebyside>
   </subsection>

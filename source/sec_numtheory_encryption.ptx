@@ -309,7 +309,7 @@
           <ol>
             <li>
               <p>
-                Choose two prime numbers <m>p \and q</m>. Let <m>n=pq \and {m = (p-1)(q-1)}</m>.
+                Choose two prime numbers <m>p \and q</m>. Let <m>n=pq</m> and <m>{m = (p-1)(q-1)}</m>.
               </p>
               <aside>
                 <p>

@@ -229,7 +229,7 @@
     <note>
       <p>
         <ol>
-          <li> The inverse of <m>a \text{ modulo } m</m> is its Bézout coefficient in <m>{\gcd(a,m) = as + mt}</m> </li>
+          <li> The inverse of <m>a \text{ modulo } m</m> is its Bézout coefficient in the equality <me>{\gcd(a,m) = as + mt}</me> </li>
           <li> The inverse is also unique (up to congruence), but we won't prove that here.</li>
         </ol>
       </p>
