@@ -39,6 +39,7 @@
             <li> This is a statement. It happens to be true. </li>
             <li> This is not a statement. Although it is my opinion that chocolate cupcakes are the best, it is not something that is true or false -- it depends.</li>
             <li> This is a mathematical statement. <q>One minus three is four.</q> is a false statement.</li>
+            <li> This is a statement. It’s false, since Topeka is the capitol.</li>
             <li> This is a question; it's not a statement. </li>
             <li> This isn't a statement either. The mathematical operation <q>Add one to two</q> does not have a truth value, it's just an instruction. </li>
           </ol>
