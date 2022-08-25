@@ -616,7 +616,7 @@
             <li> This is a set; <m>A \cap B= \{2, 4\}</m> </li>
             <li> This is a statement. It is true. </li>
             <li> This is also a statement. It is false, since <m>1 \in A</m> but <m>1\not\in B</m> </li>
-            <li> This is a number. It's 5. </li>
+            <li> This is a number. It's 4. </li>
             <li> This is a set. It's <m>\emptyset</m>. </li>
             <li> This is statement. It's false. </li>
           </ol>
