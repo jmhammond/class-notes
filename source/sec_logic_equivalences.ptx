@@ -277,9 +277,12 @@
         <p>
           Let's start with the left-hand side and work towards the right to find out.
           <md>
-            <mrow> p \to (q\vee r) \amp\equiv \neg p \lor (q \land r)</mrow>
-            <mrow> \amp\equiv (\neg p \land q) \lor (\neg p \land r) </mrow>
-            <mrow> \amp\equiv (p \to q) \lor (p \to r)</mrow>
+            <mrow>p \to (q \lor r) \amp\equiv \neg p \lor (q \lor r) \amp \text{implication} </mrow>
+            <mrow> \amp\equiv \neg p \lor q \lor r \amp \text{associative; drop parens}</mrow>
+            <mrow> \amp\equiv \neg p \lor \neg p \lor q \lor r \amp \text{idempotent}</mrow>
+            <mrow>\amp\equiv \neg p \lor q \lor \neg p \lor r \amp \text{communitive}</mrow>
+            <mrow>\amp\equiv (\neg p \lor q) \lor (\neg p \lor r) \amp \text{associative}</mrow>
+            <mrow>\amp\equiv (p \to q) \lor (p \to r) \amp \text{implication} </mrow>
           </md>
           which was what we wanted to show.
         </p>
