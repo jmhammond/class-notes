@@ -328,7 +328,7 @@
             <li><m>p \wedge q</m>.</li>
             <li><m>(\neg p \vee \neg r) \to (q \vee \neg r)</m> or, replacing the implication with a disjunction first: <m>(p \wedge q) \vee (q \vee \neg r)</m>.</li>
             <li> <p><m>(p \wedge q) \wedge (r \wedge \neg r)</m>. This is necessarily false, so it is also equivalent to <m>p \wedge \neg p</m>.</p> </li>
-            <li> <p>Either Sam is not a man and Chris is not a woman, or Chris is a woman.</p> </li>
+            <!-- <li> <p>Either Sam is not a man and Chris is not a woman, or Chris is a woman.</p> </li> -->
           </ol>
         </p>
       </answer>
