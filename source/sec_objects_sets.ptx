@@ -532,7 +532,7 @@
         <li>
           <title>Identity Laws</title>
           <p>
-            <m>A \cup \emptyset = A</m>
+            <m>A \cup \emptyset = A</m> <line/>
             <m>A \cap U = A</m>
           </p>
         </li>
