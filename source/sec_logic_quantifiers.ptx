@@ -400,7 +400,7 @@
             </li>
             <li>
               <p>
-                <em> Applying DeMorgan's laws many, many times and noting that the opposite of <m>x\lt a</m> is <m>x \ge a</m>:</em>
+                Applying DeMorgan's laws many, many times and noting that the opposite of <m>x\lt a</m> is <m>x \ge a</m>:
                 <md>
                   <mrow>\amp\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z)) </mrow>
                   <mrow>\amp\equiv \neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  </mrow>
@@ -415,7 +415,7 @@
             </li>
             <li>
               <p>
-                This statement can be written <m>\exists n \neg \exists x (x \lt n)</m>. It can be simplified as <m>\exists n \forall x \neg (x \lt n)</m>
+                This statement can be written <m>\exists n \neg \exists x (x \le n)</m>. It can be simplified as <m>\exists n \forall x \neg (x \le n)</m>, and even further as <m>\exists n \forall x (x \gt n)</m>
               </p>
             </li>
             <li>
