@@ -110,7 +110,7 @@
           <title>Disjunctive Simplification</title>
           <p>
             <m>(p \lor  q) \land  \neg p \Rightarrow  q</m>
-            <line/>
+            <line/> <line/>
             <m>(p \lor q) \land \neg q\Rightarrow p</m>
           </p>
         </li>
