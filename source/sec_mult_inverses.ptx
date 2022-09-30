@@ -253,7 +253,7 @@
           <ol>
             <li><m> 11x \equiv 15 \pmod{20} </m></li>
             <li><m> 6x\equiv 4 \pmod{10}</m> </li>
-            <li><m> 8x\equiv 2 \pmod{28}</m> </li>
+            <li><m> 8x\equiv 4 \pmod{28}</m> </li>
             <li><m> 5x\equiv 4 \pmod{25}</m> </li>
           </ol>
         </p>
@@ -355,7 +355,7 @@
                 ... we could keep going... notice that as soon as we get back to <m>8</m>, we have gone in a loop! The values will repeat.
               </p>
               <p>
-                Our first solution is <m>x=4</m>, then <m>x=11</m>, then <m>x=18</m>, and finally <m>m=25</m>
+                Our first solution is <m>x=4</m>, then <m>x=11</m>, then <m>x=18</m>, and finally <m>x=25</m>
               </p>
             </li>
             <li>
