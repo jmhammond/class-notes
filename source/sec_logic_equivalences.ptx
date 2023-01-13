@@ -252,6 +252,23 @@
   </subsection>
 
   <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Show that the following are true:
+          <ol>
+            <li> The conditional is logically equivalent to its contrapositive: <m>p\to q \equiv \neg q \to \neg p</m>.</li>
+            <li> The converse is logically equivalent to the inverse: <m>q\to p \equiv \neg p \to \neg q</m>. </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Make a truth table for these statements.
+        </p>
+      </solution>
+    </exercise>
+
     <!-- the following comes from https://github.com/oscarlevin/discrete-book -->
     <exercise>
       <statement>
