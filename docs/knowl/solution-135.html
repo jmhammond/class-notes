@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:20-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.4.1</span><span class="period">.</span>
+</h4>
+<ol class="decimal">
+<li>
+<p>Find the binary representation of <span class="process-math">\(82\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+82 = 64 + 16 + 2
+\end{equation*}
+</div>
+</li>
+<li>
+<p>Repeatedly square and reduce <span class="process-math">\(37 \pmod{52}\)</span> six times. This works since <span class="process-math">\(2^6 = 64\text{,}\)</span> which is the highest power of <span class="process-math">\(2\)</span> in the binary representation of 82.</p>
+<ul class="circle">
+<li><p><span class="process-math">\(\displaystyle 37^1 = 37^1 = 37 \equiv 37\pmod{52}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle 37^2 = 37^2 = 1369 \equiv 17\pmod{52}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle 37^4 = 17^2 = 289 \equiv 29 \pmod{52}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle 37^8 = 29^2 = 841 \equiv 9 \pmod{52}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle 37^{16} = 9^2 = 81 \equiv 29 \pmod{52}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle 37^{32} = 29^2 = 841 \equiv 9 \pmod{52}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle 37^{64} = 9^2 = 81 \equiv 29 \pmod{52}\)</span></p></li>
+</ul>
+<p class="continuation">Note that it was a coincidence that we got into a loop of 29, 9, 29, ... But this will happen sometimes!</p>
+</li>
+<li>
+<p>Now pick from the values above those entries which correspond to the binary representation of our desired power, 82. Since <span class="process-math">\(82 = 64 + 16 + 2\text{,}\)</span> we pick the entries corresponding to <span class="process-math">\(37^{64}, 37^{16}, \and 37^2\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+37^{82}  \pmod{52} &amp;= 37^{2 + 16 + 64} \pmod{52}\\
+&amp;= 37^2 \cdot 37^{16} \cdot 37^{64} \pmod{52}\\
+&amp;\equiv 17 \cdot 29 \cdot 29 \pmod{52}\\
+&amp;\equiv 49 \pmod{52}
+\end{align*}
+</div>
+<p class="continuation">Take note of the equivalence symbols used above. We write <span class="process-math">\(=\)</span> when the numbers represent equality and <span class="process-math">\(\equiv\)</span> when we have reduced modulo 52.</p>
+</li>
+</ol>
+</div>
+<span class="incontext"><a href="section-numtheory-modularexp.html#solution-135" class="internal">in-context</a></span>
+</body>
+</html>

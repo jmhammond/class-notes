@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:14-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Multiplicative Inverses</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Math for Shockers">
+<meta property="book:author" content="John Hammond">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
+</script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=015422183392601792159:vae7vvmmczm"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_brown_gold.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\def\modulus{\mathbin{\%}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="external/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Discrete Math for Shockers</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-gcd-euclid.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_numtheory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-numtheory-modularexp.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-gcd-euclid.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_numtheory.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-numtheory-modularexp.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front-matter.html" data-scroll="front-matter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basics.html" data-scroll="ch_basics" class="internal"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a><ul>
+<li><a href="section-prop-logic.html" data-scroll="section-prop-logic" class="internal">Propositional Logic</a></li>
+<li><a href="sec_objects_sets.html" data-scroll="sec_objects_sets" class="internal">Sets</a></li>
+<li><a href="sec_relationsfunctions.html" data-scroll="sec_relationsfunctions" class="internal">Relations and Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="ch_logic" class="internal"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="section-logic-equivalences.html" data-scroll="section-logic-equivalences" class="internal">Logical Equivalences</a></li>
+<li><a href="sec_application_set_proofs.html" data-scroll="sec_application_set_proofs" class="internal">Application: Set Equivalences</a></li>
+<li><a href="section-logic-quantifiers.html" data-scroll="section-logic-quantifiers" class="internal">Propositional Functions and Quantifiers</a></li>
+<li><a href="section-logic-arguments.html" data-scroll="section-logic-arguments" class="internal">Logical Arguments</a></li>
+<li><a href="section-logic-proofs.html" data-scroll="section-logic-proofs" class="internal">An introduction to proofs</a></li>
+<li><a href="section-prop-supplementatal.html" data-scroll="section-prop-supplementatal" class="internal">Chapter Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_numtheory.html" data-scroll="ch_numtheory" class="internal"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a><ul>
+<li><a href="section-numtheory-divcong.html" data-scroll="section-numtheory-divcong" class="internal">Divisibility and Congruences</a></li>
+<li><a href="section-primes.html" data-scroll="section-primes" class="internal">Prime Numbers</a></li>
+<li><a href="section-gcd-euclid.html" data-scroll="section-gcd-euclid" class="internal">GCDs and The Euclidean Algorithm</a></li>
+<li><a href="section-multiplicative-inverses.html" data-scroll="section-multiplicative-inverses" class="active">Multiplicative Inverses</a></li>
+<li><a href="section-numtheory-modularexp.html" data-scroll="section-numtheory-modularexp" class="internal">Modular exponentiation</a></li>
+<li><a href="section-numtheory-encryption.html" data-scroll="section-numtheory-encryption" class="internal">Application: Encryption</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="ch_sequences" class="internal"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a><ul>
+<li><a href="section-objects-seqseries.html" data-scroll="section-objects-seqseries" class="internal">Sequences and Series</a></li>
+<li><a href="section-solvingrecurrences.html" data-scroll="section-solvingrecurrences" class="internal">Solving Recurrence Relations</a></li>
+<li><a href="sec_logic_induction.html" data-scroll="sec_logic_induction" class="internal">Mathematical Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="ch_counting" class="internal"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-counting-basics.html" data-scroll="section-counting-basics" class="internal">The Multiplicative and Additive Principles</a></li>
+<li><a href="section-counting-combperm.html" data-scroll="section-counting-combperm" class="internal">Permutations and Combinations</a></li>
+<li><a href="section-counting-binomial.html" data-scroll="section-counting-binomial" class="internal">Combinatorial Proofs</a></li>
+<li><a href="section-counting-fib.html" data-scroll="section-counting-fib" class="internal">Counting Fibonacci numbers with tiles</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Solutions to the exercises</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-multiplicative-inverses"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Multiplicative Inverses</span>
+</h2>
+<section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title"></span>
+</h3>
+<p id="p-929">In our algebra and calculus classes, where we worked in <span class="process-math">\(\Q\)</span> and <span class="process-math">\(\R\text{,}\)</span> all non-zero numbers had multiplicative inverses. For example, <span class="process-math">\(5^{-1} = \frac15\)</span> since <span class="process-math">\(5^{-1}\cdot 5 = 1\text{.}\)</span> But <span class="process-math">\(\frac15 \not \in \Z\text{,}\)</span> so it's not an object that we can use in modular arithmetic.</p>
+<p id="p-930">When we're working with only integers, in particular in congruence classes modulo an integer <span class="process-math">\(m\text{,}\)</span> fractions aren't a thing. Some numbers, though, do have multiplicative inverses. They're special, and we explore them in this section.</p>
+<p id="p-931">Why do we care? At this point, the only algebraic equations we can solve are of the form <span class="process-math">\(x + b \equiv c\pmod{m}\text{.}\)</span> The multiplicative inverses help us solve the algebraic, <dfn class="terminology">affine</dfn> equations, <span class="process-math">\(ax + b \equiv c\pmod{m}\text{.}\)</span></p>
+<article class="definition definition-like" id="definition-47"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+</h4>
+<p id="p-932">Let <span class="process-math">\(a\)</span> be an integer and <span class="process-math">\(m\)</span> a positive integer. We define a <dfn class="terminology">multiplicative inverse of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(m\)</span></dfn> to be an integer <span class="process-math">\(b\)</span> such that <span class="process-math">\(ab \equiv 1 \pmod{m}\text{.}\)</span></p></article><article class="example example-like" id="example-84"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
+</h4>
+<p id="p-933">Since <span class="process-math">\(3 \cdot 5\equiv 1 \pmod{7}\text{,}\)</span> we say that <span class="process-math">\(3\)</span> is a multiplicative inverse of 5 modulo 7. Similarly, 5 is a multiplicative inverse of 3 modulo 7.</p>
+<p id="p-934">We say that <span class="process-math">\(3\)</span> is a multiplicative inverse, rather than the multiplicative inverse, because every number in the congruence class <span class="process-math">\([3]_7\)</span> is also an inverse! Observing that <span class="process-math">\(-4 \in [3]_7\text{,}\)</span> and <span class="process-math">\(10\in [3]_7\text{,}\)</span> we can check that:</p>
+<ul class="disc">
+<li id="li-783"><p id="p-derived-li-783"><span class="process-math">\(\displaystyle 10 \cdot 5\equiv 1 \pmod{7}\)</span></p></li>
+<li id="li-784"><p id="p-derived-li-784"><span class="process-math">\(\displaystyle (-4) \cdot 5 \equiv 1 \pmod{7} \)</span></p></li>
+<li id="li-785"><p id="p-derived-li-785">etc</p></li>
+</ul></article><article class="example example-like" id="example-85"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span>
+</h4>
+<ol id="p-935" class="decimal">
+<li id="li-786"><p id="p-derived-li-786">Find every multiple of 4 modulo 9.</p></li>
+<li id="li-787"><p id="p-derived-li-787">Find the inverse of 4 modulo 9.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-70" id="answer-70"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-70"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-72" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/MyWZyvJUlI4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-125" id="solution-125"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-125"><div class="solution solution-like">
+<p id="p-936">Here's the multiplication table. Remember to reduce modulo 9.</p>
+<figure class="table table-like" id="table-4"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.4.4<span class="period">.</span></span><span class="space"> </span>Multiplication table of 4 modulo 9</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r2 l0 t0 lines">*</th>
+<th scope="col" class="c m b2 r0 l0 t0 lines">1</th>
+<th scope="col" class="c m b2 r0 l0 t0 lines">2</th>
+<th scope="col" class="c m b2 r0 l0 t0 lines">3</th>
+<th scope="col" class="c m b2 r0 l0 t0 lines">4</th>
+<th scope="col" class="c m b2 r0 l0 t0 lines">5</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">6</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">7</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">8</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">9</th>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+<td class="c m b0 r0 l0 t0 lines">8</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">7</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+</table></div></figure><p id="p-937">The inverse of 4 modulo 9 is 7. Why? Because <span class="process-math">\(4\cdot 7 = 1 \pmod 9\text{.}\)</span></p>
+</div></div>
+</div></article><article class="example example-like" id="example-86"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="period">.</span>
+</h4>
+<p id="p-938">Solve the congruence <span class="process-math">\(4x \equiv 5 \pmod 9 \text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-71" id="answer-71"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-71"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-73" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/-_3jKc2ul4w?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like">
+<p id="p-939">Given that above we found that the multiplicative inverse of 4 modulo 9 is 7, we need to multiply both sides by 7:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-39">
+\begin{align*}
+4x \amp \equiv 5 \pmod 9\\
+4^{-1}4x \amp \equiv 4^{-1} 5 \pmod 9\\
+1x \amp \equiv 7 \cdot 5 \pmod 9 \\
+x \amp \equiv 35 \pmod 9 \\
+x \amp \equiv 8 \pmod 9
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="example example-like" id="multiplication-table"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span>
+</h4>
+<p id="p-940">Let's create a multiplication table modulo 9. The following Sage code does it for us. You can change the variable <code class="code-inline tex2jax_ignore">n</code> to other numbers to quickly generate other multiplication tables.</p>
+<p id="p-941">The output is a table/matrix whose <span class="process-math">\(i, j\)</span>th entry is <span class="process-math">\(i \cdot j \pmod{n}\text{.}\)</span></p>
+<pre class="ptx-sagecell sagecell-sage" id="sage-3"><script type="text/x-sage">n = 9
+rows = []
+for i in range(1, n):
+    rows.append(list(map((lambda x: (i*x)%n), [x for x in range(1,n)])))
+
+table(rows)
+</script></pre>
+<ol id="p-942" class="decimal">
+<li id="li-788"><p id="p-derived-li-788">What is the inverse of 7 modulo 9?</p></li>
+<li id="li-789"><p id="p-derived-li-789">Does 6 have an inverse modulo 9? Why or why not?</p></li>
+<li id="li-790"><p id="p-derived-li-790">What numbers are invertible modulo 9? What numbers are not?</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-72" id="answer-72"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-72"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-74" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/IQ3D_dVSl9k?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-127" id="solution-127"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-127"><div class="solution solution-like"><ol id="p-943" class="decimal">
+<li id="li-791"><p id="p-derived-li-791">The inverse of 7 modulo 9 is 4. Notice that in the 7 column, 4th row, we see an entry of 1; that tells us <span class="process-math">\(7\cdot 4 = 1\)</span> and so they are inverses.</p></li>
+<li id="li-792"><p id="p-derived-li-792">6 does not have an inverse modulo 9. See in the 6th column (or equivalently, 6th row), that there is never a value 1; no number multiplied by 6 gives 1.</p></li>
+<li id="li-793"><p id="p-derived-li-793">Any number that has a 1 in its row/column has an inverse. These are 1, 2, 4, 5, 7, 8. The other numbers: 3, 6 (and 0) do not have multiplicative inverses.</p></li>
+</ol></div></div>
+</div></article><p id="p-944">Computing a multiplication table is tedious if we just want to find a multiplicative inverse to solve a linear congruence. Similarly, guess-and-check is generally inefficient. Now we turn to a powerful fact that gives rise to an algorithm to find inverses.</p>
+<article class="proposition theorem-like" id="proposition-6"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span>
+</h4>
+<p id="p-945">If <span class="process-math">\(a \and m\)</span> are relatively prime integers and <span class="process-math">\(m \gt 1\text{,}\)</span> then an inverse of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(m\)</span> exists.</p>
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-73" id="answer-73"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-73"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-75" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/R14CL5b6GjE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></article><article class="note remark-like" id="note-13"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.4.8</span><span class="period">.</span>
+</h4>
+<ol id="p-946" class="decimal">
+<li id="li-794"><p id="p-derived-li-794">The inverse of <span class="process-math">\(a \text{ modulo } m\)</span> is its Bézout coefficient in the equality<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{\gcd(a,m) = as + mt}
+\end{equation*}
+</div></p></li>
+<li id="li-795"><p id="p-derived-li-795">The inverse is also unique (up to congruence), but we won't prove that here.</p></li>
+</ol></article><article class="example example-like" id="example-88"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.9</span><span class="period">.</span>
+</h4>
+<p id="p-947">Solve <span class="process-math">\(5x + 3 = 0\pmod{14}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-74" id="answer-74"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-74"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-76" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/J-Iu16MEKeo?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-inverses-multiple-solutions"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.10</span><span class="period">.</span>
+</h4>
+<p id="p-948">Solve the linear congruences, if possible. Explain if there are no solutions, one solution, or infinitely many solutions.</p>
+<ol class="decimal">
+<li id="li-796"><p id="p-derived-li-796"><span class="process-math">\(\displaystyle 11x \equiv 15 \pmod{20} \)</span></p></li>
+<li id="li-797"><p id="p-derived-li-797"><span class="process-math">\(\displaystyle 6x\equiv 4 \pmod{10}\)</span></p></li>
+<li id="li-798"><p id="p-derived-li-798"><span class="process-math">\(\displaystyle 8x\equiv 4 \pmod{28}\)</span></p></li>
+<li id="li-799"><p id="p-derived-li-799"><span class="process-math">\(\displaystyle 5x\equiv 4 \pmod{25}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-128"><div class="solution solution-like"><ol id="p-949" class="decimal">
+<li id="li-800">
+<p id="p-950">First, since <span class="process-math">\(\gcd(11,20)=1\text{,}\)</span> there is a unique solution to this recurrence. Using either the Euclidean Algorithm or guessing-and-checking, notice that <span class="process-math">\(11\cdot11=121\equiv 1\pmod{20}\text{,}\)</span> so <span class="process-math">\(11^{-1} \equiv 11\pmod{20}\text{.}\)</span> So we have:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-40">
+\begin{align*}
+11x &amp;\equiv 15\pmod{20} \\
+11\cdot11x &amp;\equiv 11\cdot 15\pmod{20} \\
+1x &amp;\equiv 165 \pmod{20} \\
+x &amp;\equiv 5 \pmod{20} 
+\end{align*}
+</div>
+</li>
+<li id="li-801">
+<p id="p-951">Since <span class="process-math">\(\gcd(6,10) =2 \ne 1\text{,}\)</span> there isn't a unique solution! We can't use the Euclidean Algorithm to find our inverse and instead have to rely on trial and error.</p>
+<p id="p-952">Since <span class="process-math">\(6\cdot 4 = 24 \equiv 4 \pmod{10}\text{,}\)</span> we have that 4 is one solution. Similarly, you can check that <span class="process-math">\(9\)</span> is also a solution.</p>
+<p id="p-953">This congruence has two solutions modulo 10, <span class="process-math">\(x=4\)</span> and <span class="process-math">\(x=9\text{.}\)</span></p>
+</li>
+<li id="li-802">
+<p id="p-954">As above, since <span class="process-math">\(\gcd(8,28) = 4 \ne 1\text{,}\)</span> so there isn't a unique solution. Let's see what happens when we do the multiplication:</p>
+<figure class="table table-like" id="table-5"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.4.11<span class="period">.</span></span><span class="space"> </span>Multiplication table of 8 modulo 28</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l0 t0 lines">*</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">2</td>
+<td class="c m b2 r0 l0 t0 lines">3</td>
+<td class="c m b2 r0 l0 t0 lines">4</td>
+<td class="c m b2 r0 l0 t0 lines">5</td>
+<td class="l m b2 r0 l0 t0 lines">6</td>
+<td class="l m b2 r0 l0 t0 lines">7</td>
+<td class="l m b2 r0 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r0 l0 t0 lines">8</td>
+<td class="c m b0 r0 l0 t0 lines">16</td>
+<td class="c m b0 r0 l0 t0 lines">24</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+<td class="c m b0 r0 l0 t0 lines">12</td>
+<td class="c m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+</tr>
+</table></div></figure><p id="p-955">... we could keep going... notice that as soon as we get back to <span class="process-math">\(8\text{,}\)</span> we have gone in a loop! The values will repeat.</p>
+<p id="p-956">Our first solution is <span class="process-math">\(x=4\text{,}\)</span> then <span class="process-math">\(x=11\text{,}\)</span> then <span class="process-math">\(x=18\text{,}\)</span> and finally <span class="process-math">\(x=25\)</span></p>
+</li>
+<li id="li-803">
+<p id="p-957">Here, since <span class="process-math">\(\gcd(5, 25) = 5 \ne 1\text{,}\)</span> again, no unique solution. Take a few moments to multiply values of 5 and notice it will never reach 4.</p>
+<p id="p-958">There is no solution to this congruence!</p>
+</li>
+</ol></div></div>
+</div></article><article class="note remark-like" id="note-inverses-solving-multiple"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Solving systems with gcd other than 1.</span>
+</h4>
+<p id="p-959">As we hinted in the previous example, we have three possibilities for the congruence <span class="process-math">\(ax = b\pmod{m}\text{:}\)</span></p>
+<ol class="decimal">
+<li id="li-804"><p id="p-derived-li-804">A unique solution if <span class="process-math">\(\gcd(a, m) = 1\)</span></p></li>
+<li id="li-805"><p id="p-derived-li-805">If <span class="process-math">\(\gcd(a, m) = d\text{,}\)</span> the congruence will have <span class="process-math">\(d\)</span> solutions if <span class="process-math">\(d \divides b\)</span></p></li>
+<li id="li-806"><p id="p-derived-li-806">And the system will have no solution if <span class="process-math">\(\gcd(a, m) = d\)</span> and <span class="process-math">\(d \nmid b\)</span></p></li>
+</ol>
+<p id="p-960">If the congruence has a solution, the complete set of solutions reduced modulo <span class="process-math">\(m\)</span> is given by:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-zmodn.html" id="md-41">
+\begin{gather*}
+x = x_0 + \dfrac{mt}{d}
+\end{gather*}
+</div>
+<p class="continuation">where <span class="process-math">\(\gcd(a,m) = d\text{,}\)</span> <span class="process-math">\(x_0\)</span> is an initial solution, and <span class="process-math">\(t\)</span> runs through <span class="process-math">\(\Z_d\text{,}\)</span> the <a href="" class="xref" data-knowl="./knowl/def-zmodn.html" title="Definition 1.3.20: Set of Integers Modulo n">set of remainders modulo d</a>.</p>
+<p id="p-961">Take a moment to revisit the examples in <a href="" class="xref" data-knowl="./knowl/example-inverses-multiple-solutions.html" title="Example 3.4.10">Example 3.4.10</a> using this formula.</p></article><article class="example example-like" id="example-90"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.13</span><span class="period">.</span>
+</h4>
+<p id="p-962">Give a complete list of the solutions to the following congruences:</p>
+<ol class="decimal">
+<li id="li-807"><p id="p-derived-li-807"><span class="process-math">\(\displaystyle 8x = 20 \pmod{28} \)</span></p></li>
+<li id="li-808"><p id="p-derived-li-808"><span class="process-math">\(\displaystyle 21x = 14 \pmod{49}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-129" id="solution-129"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-129"><div class="solution solution-like"><ol id="p-963" class="decimal">
+<li id="li-809">
+<p id="p-964">We begin first by finding <span class="process-math">\(\gcd(8,28)=4\text{,}\)</span> so there will not be a unique solution, but instead zero or four.  Because <span class="process-math">\(4 \divides 20\text{,}\)</span> there will be four solutions reduced modulo 28.</p>
+<p id="p-965">Applying the method of <a href="" class="xref" data-knowl="./knowl/note-inverses-solving-multiple.html" title="Note 3.4.12: Solving systems with gcd other than 1">solving congruences with multiple solutions</a>, we need to find the first solution. Running through possible values of <span class="process-math">\(x = 0, 1, 2, 3\dots\text{,}\)</span> we note that <span class="process-math">\(8\cdot 6 = 48 \equiv 20 \pmod{28}\)</span> so that <span class="process-math">\(x_0=6\)</span> is the first solution. Then all solutions will be of the form:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/note-inverses-solving-multiple.html" id="md-42">
+\begin{gather*}
+x = 6 + \frac{28t}{4} \text{ for } t \in \Z_4
+\end{gather*}
+</div>
+<p class="continuation">Plug in the values <span class="process-math">\(t=0, 1, 2, 3\)</span> to find the complete solution set of <span class="process-math">\(x=6, 13, 20, 27\)</span></p>
+</li>
+<li id="li-810">
+<p id="p-966">As above, first find <span class="process-math">\(\gcd(21, 49) = 7\text{.}\)</span> Since <span class="process-math">\(7\divides 14\text{,}\)</span> we have seven total solutions reduced modulo 49.</p>
+<p id="p-967">To find the initial solution, test values of <span class="process-math">\(x=0, 1, 2, \dots\)</span> to find the first solution is <span class="process-math">\(x_0 = 3\)</span> Applying the formula we find all solutions to be:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-43">
+\begin{gather*}
+x = 3 + \dfrac{49t}{7} \text{ for } t \in \Z_7
+\end{gather*}
+</div>
+<p class="continuation">Plug in the values <span class="process-math">\(t=0, 1, 2, 3, 4, 5, 6\)</span> to find the complete solution set of <span class="process-math">\(x=3, 10, 17, 24, 31, 38, 45\)</span></p>
+</li>
+</ol></div></div>
+</div></article></section><section class="exercises" id="exercises-13"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-114"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-968">Solve the congruence:</p>
+<ol class="lower-alpha">
+<li id="li-811"><p id="p-derived-li-811"><span class="process-math">\(\displaystyle 3x + 4 \equiv 7 \pmod 8 \)</span></p></li>
+<li id="li-812"><p id="p-derived-li-812"><span class="process-math">\(\displaystyle 9x \equiv 4 \pmod{22}\)</span></p></li>
+<li id="li-813"><p id="p-derived-li-813"><span class="process-math">\(\displaystyle 5x + 14 \equiv 0 \pmod{26}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-130" id="solution-130"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-130"><div class="solution solution-like"><ol id="p-969" class="lower-alpha">
+<li id="li-814"><p id="p-derived-li-814"><span class="process-math">\(\displaystyle x \equiv 1 \pmod 8\)</span></p></li>
+<li id="li-815"><p id="p-derived-li-815"><span class="process-math">\(\displaystyle x \equiv 20 \pmod{22}\)</span></p></li>
+<li id="li-816"><p id="p-derived-li-816"><span class="process-math">\(\displaystyle x \equiv 18 \pmod{26}\)</span></p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-115"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-970">Find all solutions to the congruence (there could be more than one):</p>
+<ol class="lower-alpha">
+<li id="li-817"><p id="p-derived-li-817"><span class="process-math">\(\displaystyle 3x \equiv6 \pmod 9 \)</span></p></li>
+<li id="li-818"><p id="p-derived-li-818"><span class="process-math">\(\displaystyle 4x \equiv 3 \pmod 8 \)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-131" id="solution-131"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-131"><div class="solution solution-like">
+<p id="p-971">Here, since the coefficient of <span class="process-math">\(x\)</span> isn't relatively prime to the modulus there are either multiple answers per modulus or no solution.</p>
+<ol class="lower-alpha">
+<li id="li-819"><p id="p-972">Each of <span class="process-math">\(x \equiv 2 \pmod{9}\text{,}\)</span> <span class="process-math">\(x\equiv 5 \pmod{9}\text{,}\)</span> and <span class="process-math">\(x \equiv 8 \pmod{9}\)</span> satisfy the given equation. We can summarize this as <span class="process-math">\(x \equiv 2 \pmod{3}\)</span></p></li>
+<li id="li-820"><p id="p-derived-li-820">There is no solution to this equality. No multiple of 4 will ever have a remainder of 3 modulo 8.</p></li>
+</ol>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-116"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-973">Solve the following congruences. If none exists, explain why. If there are one or more solutions, give a complete list of solution(s).</p>
+<ol class="lower-alpha">
+<li id="li-821"><p id="p-derived-li-821"><span class="process-math">\(\displaystyle 3x - 4 = 15 \pmod{26}\)</span></p></li>
+<li id="li-822"><p id="p-derived-li-822"><span class="process-math">\(\displaystyle 13 x - 3 = 4 \pmod{26}\)</span></p></li>
+<li id="li-823"><p id="p-derived-li-823"><span class="process-math">\(\displaystyle 8x=16\pmod{426}\)</span></p></li>
+<li id="li-824"><p id="p-derived-li-824"><span class="process-math">\(\displaystyle 8x=16\pmod{425}\)</span></p></li>
+<li id="li-825"><p id="p-derived-li-825"><span class="process-math">\(\displaystyle 8x=21\pmod{426}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-132" id="solution-132"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-132"><div class="solution solution-like"><ol id="p-974" class="lower-alpha">
+<li id="li-826">
+<p id="p-975">Since <span class="process-math">\(\gcd(3,26) = 1\text{,}\)</span> there is a unique inverse. Using the Euclidean Algorithm we find that <span class="process-math">\(3^{-1} \equiv 9 \pmod{26}\text{.}\)</span> Doing the algebra:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-44">
+\begin{align*}
+3x \amp= 19 \pmod{26}\\
+(3^{-1})3x \amp=(3^{-1}) 19 \pmod{26}\\
+x \amp\equiv (9) 19 \pmod{26}\\
+x \amp\equiv 171 \pmod{26}\\
+x \amp\equiv 15 \pmod{26}
+\end{align*}
+</div>
+<p class="continuation">is the unique solution.</p>
+</li>
+<li id="li-827"><p id="p-976">Here <span class="process-math">\(\gcd(13, 26) = 2\)</span> so there is no unique solution. Instead, there are either no solutions or two solutions! But since the gcd doesn't divide <span class="process-math">\(7\text{,}\)</span> there are in fact no solutions to this congruence.</p></li>
+<li id="li-828">
+<p id="p-977">Since <span class="process-math">\(\gcd(8, 426) = 2\text{.}\)</span> Like the previous question there are either no solutions or two solutions. This time since the gcd does divide 16, we will have two solutions!  The first is obviously <span class="process-math">\(x=2\text{,}\)</span> and the second will be, applying <a href="" class="xref" data-knowl="./knowl/note-inverses-solving-multiple.html" title="Note 3.4.12: Solving systems with gcd other than 1">Note 3.4.12</a>:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/note-inverses-solving-multiple.html" id="md-45">
+\begin{align*}
+x \amp= 2 + \dfrac{426}{2}\\
+\amp= 215 
+\end{align*}
+</div>
+</li>
+<li id="li-829">
+<p id="p-978">This time the modulus is 425, so we have <span class="process-math">\(\gcd(425, 8) = 1\)</span> meaning a unique solution exists the system.  The Euclidean algorithm finds that <span class="process-math">\(8^{-1} = -53 \pmod{425}\text{,}\)</span> and solving the expression gives:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-46">
+\begin{align*}
+8x \amp= 16 \pmod{426}\\
+(8^{-1})8x \amp=(8^{-1}) 16 \pmod{425}\\
+x \amp\equiv (-53) 16 \pmod{425}\\
+x \amp\equiv -848 \pmod{425}\\
+x \amp\equiv 2 \pmod{425}
+\end{align*}
+</div>
+<p class="continuation">... which actually is both obvious and hilarious. It shows that even if we don't notice the obvious solution, the method will give us the correct result!</p>
+</li>
+<li id="li-830"><p id="p-979">This time, as before, <span class="process-math">\(\gcd(8, 426) = 2\text{,}\)</span> so there are either zero or two solutions. But since there the gcd doesn't divide <span class="process-math">\(23\text{,}\)</span> there is no solution to the congruence.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-117"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-980">Play around with making <a href="" class="xref" data-knowl="./knowl/multiplication-table.html" title="Example 3.4.6">multiplication tables of various moduli in the Sage code in example</a>.</p>
+<ol class="lower-alpha">
+<li id="li-831"><p id="p-derived-li-831">What condition is required for a number <span class="process-math">\(a\)</span> to have an inverse modulo <span class="process-math">\(n\text{?}\)</span></p></li>
+<li id="li-832"><p id="p-derived-li-832">What is a condition on <span class="process-math">\(n\)</span> for every element to have an inverse modulo <span class="process-math">\(n\text{?}\)</span></p></li>
+<li id="li-833"><p id="p-derived-li-833">If there are more than one solution to <span class="process-math">\(ax = b\pmod{n}\text{,}\)</span> what is the relationship between each solution?</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-133" id="solution-133"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-133"><div class="solution solution-like"><ol id="p-981" class="lower-alpha">
+<li id="li-834"><p id="p-derived-li-834">To have an inverse modulo <span class="process-math">\(n\text{,}\)</span> a number <span class="process-math">\(a\)</span> must be relatively prime to <span class="process-math">\(n\)</span></p></li>
+<li id="li-835"><p id="p-derived-li-835">To have the property that every number has an inverse modulo <span class="process-math">\(n\text{,}\)</span> the number <span class="process-math">\(n\)</span> must be prime</p></li>
+<li id="li-836"><p id="p-derived-li-836">Not a solution, but a hint - take each example and exercise that had multiple solutions and subtract the solutions. What do you notice?</p></li>
+</ol></div></div>
+</div></article></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Forum Posts about this section</span>
+</h3>
+<div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
+<script xmlns:xi="http://www.w3.org/2001/XInclude" type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 295 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

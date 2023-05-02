@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:23-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proof"><h5 class="heading"><span class="type">Proof</span></h5>
+<p>Question: How many 5-element subsets are there of the set <span class="process-math">\(\{1,2,\ldots, n+3\}\text{.}\)</span></p>
+<p>Answer 1: We choose 5 out of the <span class="process-math">\(n+3\)</span> elements, so <span class="process-math">\({n+3 \choose 5}\)</span> subsets.</p>
+<p>Answer 2: Break this up into cases by what the “middle” (third smallest) element of the 5 element subset is. The smallest this could be is a 3. In that case, we have <span class="process-math">\({2 \choose 2}\)</span> choices for the numbers below it, and <span class="process-math">\({n \choose 2}\)</span> choices for the numbers above it. Alternatively, the middle number could be a 4. In this case there are <span class="process-math">\({3 \choose 2}\)</span> choices for the bottom two numbers and <span class="process-math">\({n-1 \choose 2}\)</span> choices for the top two numbers. If the middle number is 5, then there are <span class="process-math">\({4 \choose 2}\)</span> choices for the bottom two numbers and <span class="process-math">\({n-2 \choose 2}\)</span> choices for the top two numbers. An so on, all the way up to the largest the middle number could be, which is <span class="process-math">\(n+1\text{.}\)</span> In that case there are <span class="process-math">\({n \choose 2}\)</span> choices for the bottom two numbers and <span class="process-math">\({2 \choose 2}\)</span> choices for the top number. Thus the number of 5 element subsets is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{2 \choose 2}{n \choose 2} + {3 \choose 2}{n-1 \choose 2} + {4\choose 2}{n-2 \choose 2} + \cdots + {n\choose 2}{2\choose 2}.
+\end{equation*}
+</div>
+<p>Since the two answers correctly answer the same question, we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{2 \choose 2}{n \choose 2} + {3 \choose 2}{n-1 \choose 2} + {4\choose 2}{n-2 \choose 2} + \cdots + {n\choose 2}{2\choose 2} = {n+3 \choose 5}.
+\end{equation*}
+</div></article><span class="incontext"><a href="section-counting-binomial.html#proof-46" class="internal">in-context</a></span>
+</body>
+</html>

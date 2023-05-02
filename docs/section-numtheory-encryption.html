@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:14-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Application: Encryption</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Math for Shockers">
+<meta property="book:author" content="John Hammond">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
+</script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=015422183392601792159:vae7vvmmczm"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_brown_gold.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\def\modulus{\mathbin{\%}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="external/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Discrete Math for Shockers</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-numtheory-modularexp.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_numtheory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch_sequences.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-numtheory-modularexp.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_numtheory.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch_sequences.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front-matter.html" data-scroll="front-matter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basics.html" data-scroll="ch_basics" class="internal"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a><ul>
+<li><a href="section-prop-logic.html" data-scroll="section-prop-logic" class="internal">Propositional Logic</a></li>
+<li><a href="sec_objects_sets.html" data-scroll="sec_objects_sets" class="internal">Sets</a></li>
+<li><a href="sec_relationsfunctions.html" data-scroll="sec_relationsfunctions" class="internal">Relations and Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="ch_logic" class="internal"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="section-logic-equivalences.html" data-scroll="section-logic-equivalences" class="internal">Logical Equivalences</a></li>
+<li><a href="sec_application_set_proofs.html" data-scroll="sec_application_set_proofs" class="internal">Application: Set Equivalences</a></li>
+<li><a href="section-logic-quantifiers.html" data-scroll="section-logic-quantifiers" class="internal">Propositional Functions and Quantifiers</a></li>
+<li><a href="section-logic-arguments.html" data-scroll="section-logic-arguments" class="internal">Logical Arguments</a></li>
+<li><a href="section-logic-proofs.html" data-scroll="section-logic-proofs" class="internal">An introduction to proofs</a></li>
+<li><a href="section-prop-supplementatal.html" data-scroll="section-prop-supplementatal" class="internal">Chapter Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_numtheory.html" data-scroll="ch_numtheory" class="internal"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a><ul>
+<li><a href="section-numtheory-divcong.html" data-scroll="section-numtheory-divcong" class="internal">Divisibility and Congruences</a></li>
+<li><a href="section-primes.html" data-scroll="section-primes" class="internal">Prime Numbers</a></li>
+<li><a href="section-gcd-euclid.html" data-scroll="section-gcd-euclid" class="internal">GCDs and The Euclidean Algorithm</a></li>
+<li><a href="section-multiplicative-inverses.html" data-scroll="section-multiplicative-inverses" class="internal">Multiplicative Inverses</a></li>
+<li><a href="section-numtheory-modularexp.html" data-scroll="section-numtheory-modularexp" class="internal">Modular exponentiation</a></li>
+<li><a href="section-numtheory-encryption.html" data-scroll="section-numtheory-encryption" class="active">Application: Encryption</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="ch_sequences" class="internal"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a><ul>
+<li><a href="section-objects-seqseries.html" data-scroll="section-objects-seqseries" class="internal">Sequences and Series</a></li>
+<li><a href="section-solvingrecurrences.html" data-scroll="section-solvingrecurrences" class="internal">Solving Recurrence Relations</a></li>
+<li><a href="sec_logic_induction.html" data-scroll="sec_logic_induction" class="internal">Mathematical Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="ch_counting" class="internal"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-counting-basics.html" data-scroll="section-counting-basics" class="internal">The Multiplicative and Additive Principles</a></li>
+<li><a href="section-counting-combperm.html" data-scroll="section-counting-combperm" class="internal">Permutations and Combinations</a></li>
+<li><a href="section-counting-binomial.html" data-scroll="section-counting-binomial" class="internal">Combinatorial Proofs</a></li>
+<li><a href="section-counting-fib.html" data-scroll="section-counting-fib" class="internal">Counting Fibonacci numbers with tiles</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Solutions to the exercises</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-numtheory-encryption"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.6</span> <span class="title">Application: Encryption</span>
+</h2>
+<section class="introduction" id="introduction-18"><p id="p-1005">In this section, we discuss two types of encryption algorithms. The first is a simple algorithm that uses linear congruence functions to encrypt and decrypt. The second, despite being pretty simple to explain is one of the most common encryption algorithms in current use.</p></section><section class="subsection" id="subsection-numtheory-ciphers"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Basic Cipher Examples</span>
+</h3>
+<p id="p-1006">Our convention will be to use only capital English letters, A to Z. We will identify each letter with the remainders modulo 26. As our purpose is introducing basics of encryption, we won't encrypt punctuation or spaces.</p>
+<figure class="table table-like" id="table-8"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.6.1<span class="period">.</span></span><span class="space"> </span>List of Alphabet Encoding</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r0 l0 t0 lines">letter</th>
+<th scope="col" class="c m b2 r1 l0 t0 lines">number</th>
+<th scope="col" class="c m b2 r0 l0 t0 lines">letter</th>
+<th scope="col" class="c m b2 r1 l0 t0 lines">number</th>
+<th scope="col" class="c m b2 r0 l0 t0 lines">letter</th>
+<th scope="col" class="c m b2 r0 l0 t0 lines">number</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">A</td>
+<td class="c m b0 r1 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">J</td>
+<td class="c m b0 r1 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines">S</td>
+<td class="c m b0 r0 l0 t0 lines">18</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">B</td>
+<td class="c m b0 r1 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">K</td>
+<td class="c m b0 r1 l0 t0 lines">10</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">19</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">C</td>
+<td class="c m b0 r1 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">L</td>
+<td class="c m b0 r1 l0 t0 lines">11</td>
+<td class="c m b0 r0 l0 t0 lines">U</td>
+<td class="c m b0 r0 l0 t0 lines">20</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">D</td>
+<td class="c m b0 r1 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">M</td>
+<td class="c m b0 r1 l0 t0 lines">12</td>
+<td class="c m b0 r0 l0 t0 lines">V</td>
+<td class="c m b0 r0 l0 t0 lines">21</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">E</td>
+<td class="c m b0 r1 l0 t0 lines">4</td>
+<td class="c m b0 r0 l0 t0 lines">N</td>
+<td class="c m b0 r1 l0 t0 lines">13</td>
+<td class="c m b0 r0 l0 t0 lines">W</td>
+<td class="c m b0 r0 l0 t0 lines">22</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines">O</td>
+<td class="c m b0 r1 l0 t0 lines">14</td>
+<td class="c m b0 r0 l0 t0 lines">X</td>
+<td class="c m b0 r0 l0 t0 lines">23</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">G</td>
+<td class="c m b0 r1 l0 t0 lines">6</td>
+<td class="c m b0 r0 l0 t0 lines">P</td>
+<td class="c m b0 r1 l0 t0 lines">15</td>
+<td class="c m b0 r0 l0 t0 lines">Y</td>
+<td class="c m b0 r0 l0 t0 lines">24</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">H</td>
+<td class="c m b0 r1 l0 t0 lines">7</td>
+<td class="c m b0 r0 l0 t0 lines">Q</td>
+<td class="c m b0 r1 l0 t0 lines">16</td>
+<td class="c m b0 r0 l0 t0 lines">Z</td>
+<td class="c m b0 r0 l0 t0 lines">25</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">I</td>
+<td class="c m b0 r1 l0 t0 lines">8</td>
+<td class="c m b0 r0 l0 t0 lines">R</td>
+<td class="c m b0 r1 l0 t0 lines">17</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><article class="definition definition-like" id="definition-49"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Shift Cipher.</span>
+</h4>
+<p id="p-1007">A <dfn class="terminology">shift cipher</dfn> is one in which the letters of the alphabet have been shifted by some fixed amount.</p></article><article class="example example-like" id="example-94"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.3</span><span class="period">.</span>
+</h4>
+<p id="p-1008">The classic example is the so-called <dfn class="terminology">Caesar Cipher</dfn> which shifts the alphabet to the right three letters. A becomes D, B becomes E, etc.</p>
+<p id="p-1009">We encrypt letter-by-letter via the function <span class="process-math">\(e(x) = x + 3 \pmod{26}\)</span> and decrypt via <span class="process-math">\(d(x) = x-3 \pmod{26}\text{.}\)</span></p></article><article class="definition definition-like" id="definition-50"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Affine Cipher.</span>
+</h4>
+<p id="p-1010">An <dfn class="terminology">affine cipher</dfn> is one in which letters are transformed via a linear function, <span class="process-math">\(e(x) = ax+b \pmod{n} \)</span> where <span class="process-math">\(a, b\in \Z\)</span> and <span class="process-math">\(n\in \Z^+\text{.}\)</span> If <span class="process-math">\(a =1\text{,}\)</span> this is a shift cipher.</p></article><article class="note remark-like" id="note-15"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.6.5</span><span class="period">.</span>
+</h4>
+<p id="p-1011">To be able to decrypt an affine function, we need <span class="process-math">\(\gcd(a,n)=1\)</span> in order that <span class="process-math">\(a\)</span> is an invertible element. We can find the inverse via the <a href="" class="xref" data-knowl="./knowl/euclidean-algorithm.html" title="Theorem 3.3.6: The Euclidean Algorithm">Euclidean Algorithm with back-substitution 3.3.6</a>. Recall, the inverse of an invertible element is its Bézout coefficient.</p>
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-75" id="answer-75"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-75"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-77" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/iVWyD0mvxwQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></article><article class="example example-like" id="example-95"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.6</span><span class="period">.</span>
+</h4>
+<p id="p-1012">The function <span class="process-math">\(f(x) = 5x + 14 \pmod{26} \)</span> is an example of an affine cipher function.</p>
+<ol class="decimal">
+<li id="li-884">
+<p id="p-1013">Encipher the following letters:</p>
+<ol class="lower-alpha">
+<li id="li-885"><p id="p-derived-li-885">A</p></li>
+<li id="li-886"><p id="p-derived-li-886">M</p></li>
+</ol>
+</li>
+<li id="li-887"><p id="p-1014">Given that <span class="process-math">\(5^{-1} \equiv 21\pmod{26}\text{,}\)</span> find the inverse of <span class="process-math">\(f(x)=5x+14\pmod{26}\text{.}\)</span> Please ensure your coefficients are reduced modulo <span class="process-math">\(26\text{.}\)</span></p></li>
+<li id="li-888"><p id="p-derived-li-888">Verify your inverse by confirming it deciphers the letters above.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-76" id="answer-76"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-76"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-78" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/dRLN1bj6mTI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="definition definition-like" id="definition-51"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.6.7</span><span class="period">.</span><span class="space"> </span><span class="title">The RSA Algorithm.</span>
+</h4>
+<p id="p-1015">RSA is an example of a public-key algorithm. Its security is based on the fact that factoring integers is <a class="external" href="https://en.wikipedia.org/wiki/Integer_factorization" target="_blank">a hard problem</a>. The process is outlined below:</p>
+<p id="p-1016">To determine the keys:</p>
+<ol class="decimal">
+<li id="li-889">
+<p id="p-1017">Choose two prime numbers <span class="process-math">\(p \and q\text{.}\)</span> Let <span class="process-math">\(n=pq\)</span> and <span class="process-math">\(m = (p-1)(q-1)\text{.}\)</span></p>
+<aside class="aside aside-like" id="aside-18"><p id="p-1018">Maybe surprisingly, <span class="process-math">\(n=pq\)</span> is the part of the algorithm that makes it secure. RSA's security comes from the fact that factoring large numbers is a <em class="emphasis">very</em> hard problem. If <span class="process-math">\(p \and q\)</span> are both massively large numbers, then <span class="process-math">\(n\)</span> is essentially unfactorable in any reasonable amount of time.</p></aside>
+</li>
+<li id="li-890"><p id="p-derived-li-890">Find any number <span class="process-math">\(e\)</span> which is relatively prime to <span class="process-math">\(m\text{.}\)</span></p></li>
+<li id="li-891"><p id="p-derived-li-891">Determine <span class="process-math">\(d\)</span> which is the inverse of <span class="process-math">\(e\)</span> modulo <span class="process-math">\(m\text{.}\)</span></p></li>
+<li id="li-892"><p id="p-derived-li-892">Your public key is <span class="process-math">\((e, n)\text{.}\)</span></p></li>
+<li id="li-893"><p id="p-derived-li-893">Your private key is <span class="process-math">\((d, n)\text{.}\)</span></p></li>
+</ol>
+<p id="p-1019">To encrypt/decrypt:</p>
+<ol class="decimal">
+<li id="li-894"><p id="p-derived-li-894">Convert our message (plaintext or ciphertext) to numeric values, each letter taking up two digits: A is 00, B is 01, ... Z = 25.</p></li>
+<li id="li-895">
+<p id="p-1020">Using the chosen <span class="process-math">\(n\)</span> value, we split the message into blocks of even length according to the following scheme:</p>
+<ol class="lower-alpha">
+<li id="li-896"><p id="p-derived-li-896">If <span class="process-math">\(2525 \lt n \lt 252525\text{,}\)</span> then the blocks will be length 4</p></li>
+<li id="li-897"><p id="p-derived-li-897">If <span class="process-math">\(252525 \lt n \lt 25252525\text{,}\)</span> then the blocks will be length 6</p></li>
+<li id="li-898"><p id="p-derived-li-898">If <span class="process-math">\(25252525 \lt n \lt 2525252525\text{,}\)</span> then the blocks will be length 8</p></li>
+<li id="li-899"><p id="p-derived-li-899">and so on...</p></li>
+</ol>
+<p class="continuation">if the message doesn't fit the appropriate block size, append a number of 23's at the end. (padding the message with X's).</p>
+</li>
+<li id="li-900"><p id="p-derived-li-900">Encryption occurs my taking each numeric message block <span class="process-math">\(M\)</span> and computing <span class="process-math">\(M^e\pmod{n}\)</span></p></li>
+<li id="li-901"><p id="p-derived-li-901">Decryption occurs my taking each numeric cipher block <span class="process-math">\(C\)</span> and computing <span class="process-math">\(C^d\pmod{n}\)</span></p></li>
+</ol>
+<p class="continuation">This works because <span class="process-math">\((M^e)^d = M^{ed} = M^1 \pmod{n}\text{.}\)</span> Although we haven't proven this, it's a result of Euler's Totient Theorem which you'll revisit in future course on number theory.</p></article><article class="example example-like" id="example-96"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.6.8</span><span class="period">.</span>
+</h4>
+<p id="p-1021">Let <span class="process-math">\(p = 59, q=83\text{.}\)</span> Choose <span class="process-math">\(e=15\)</span> Encrypt “WHATS UP” and then decrypt the result to confirm it worked. Do this by hand (with the help of a calculator).</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-77" id="answer-77"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-77"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-79" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/xEf5vBH5x_Y?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><section class="exercises" id="exercises-15"><h4 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-120"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-1022">Decrypt the following message, which was encrypted by the standard Caesar cipher: “L FDQ DOZDBV WUXVW BRX, EUXWXV.”</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-138" id="solution-138"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-138"><div class="solution solution-like"><p id="p-1023">“I can always trust you, Brutus.”</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-121"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-1024">Apply the affine shift <span class="process-math">\(e(x) = 7x + 11 \pmod{ 26 }\)</span> to the string, “Encrypt me.”</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-139" id="solution-139"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-139"><div class="solution solution-like"><p id="p-1025">Removing spaces from the words and capitalizing everything: “NYZAXMOORN”. The integer values are 13, 24, 25, 0, 23, 12, 14, 14, 17, 13.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-122"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-1026">Decrypt the text which was encrypted via the affine shift <span class="process-math">\(e(x) = 7x + 11 \pmod{ 26 }\text{:}\)</span> “LJNHFRN”</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-140" id="solution-140"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-140"><div class="solution solution-like"><p id="p-1027">“Awesome”.</p></div></div>
+</div></article></section></section><section class="subsection" id="subsection-numtheory-sage"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Number Theory Using Sage</span>
+</h3>
+<p id="p-1028">Sage has a convenient way of determining if a number is prime by asking if the number is in a set primes:</p>
+<pre class="ptx-sagecell sagecell-sage" id="sage-5"><script type="text/x-sage">37 in Primes()
+</script></pre>
+<p id="p-1029">Try testing any number in the cell above.</p>
+<p id="p-1030">If you want to just want to get a prime number of some particular size (as we want with our <a href="section-numtheory-encryption.html#rsa-activity" class="internal" title="Subsection: The RSA Activity">RSA activity</a>), we ask sage for the <code class="code-inline tex2jax_ignore">next_prime</code>:</p>
+<pre class="ptx-sagecell sagecell-sage" id="sage-6"><script type="text/x-sage">next_prime(123456)
+</script></pre>
+<p id="bezout-gcd">The following Sage code allows us to find the GCD and Bézout coefficients via the <code class="code-inline tex2jax_ignore">xgcd</code> command:</p>
+<pre class="ptx-sagecell sagecell-sage" id="sage-7"><script type="text/x-sage"># Change a and b to be any positive integers, then press Evaluate
+a = 2345
+b = 234
+l = a.xgcd(b)
+print(str(l[0]) + "=" + str(a) + "*(" + str(l[1]) + ") + " + str(b) + "*(" + str(l[2]) + ")")
+</script></pre>
+<p id="p-1032">The <code class="code-inline tex2jax_ignore">xgcd</code> command returns a list of the form (gcd, first Bézout coefficient, second Bézout coefficient), and the code above pretty-prints this in a readable format.</p>
+<p id="p-1033">In order to do modular exponentiation, we use the <code class="code-inline tex2jax_ignore">powermod</code> function. For example, to compute <span class="process-math">\(2022^{2022} \pmod{1000}\text{:}\)</span></p>
+<pre class="ptx-sagecell sagecell-sage" id="sage-8"><script type="text/x-sage">2022.powermod(2022,1000)
+</script></pre></section><section class="subsection" id="rsa-activity"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The RSA Activity</span>
+</h3>
+<p id="p-1034">In this activity, you will generate a public/private key-pair. You will send me the public key and keep your private key secret (but don't lose it! If you lose your private key, you won't be able to complete the assignment and will receive no credit).</p>
+<ol class="decimal">
+<li id="li-902"><p id="p-derived-li-902">Pick two prime numbers <span class="process-math">\(p \and q\)</span> of some interesting size. Make them at least six or seven digits long (use Sage's <code class="code-inline tex2jax_ignore">next_prime</code>).</p></li>
+<li id="li-903"><p id="p-derived-li-903">Let <span class="process-math">\(m=(p-1)(q-1)\text{,}\)</span> and pick any number <span class="process-math">\(e\)</span> relatively prime to <span class="process-math">\(m\text{.}\)</span></p></li>
+<li id="li-904"><p id="p-derived-li-904">Find the multiplicative inverse, <span class="process-math">\(d\text{,}\)</span> of <span class="process-math">\(e\)</span> modulo <span class="process-math">\(m\text{.}\)</span></p></li>
+<li id="li-905"><p id="p-derived-li-905">Let <span class="process-math">\(n = pq\text{.}\)</span></p></li>
+<li id="li-906"><p id="p-derived-li-906">Record your numbers <span class="process-math">\((n, p, q, m, e, d)\)</span> somewhere safe (but much of this is private! Keep it secret!).</p></li>
+<li id="li-907">
+<p id="p-1035">Send me your public key on via <a class="external" href="mailto:john.hammond@wichita.edu?subject=My%20RSA%20Key" target="_blank">email (you can click this link!)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a> as:</p>
+<pre class="code-display tex2jax_ignore">
+              n = 15244346903
+              e = 751
+            </pre>
+</li>
+<li id="li-908">
+<p id="p-1036">I'll send you an encrypted message which will look like:</p>
+<pre class="code-display tex2jax_ignore">[971896385, 3249912096, 4079022731, 8771096382, 10148198704]
+            </pre>
+</li>
+<li id="li-909"><p id="p-derived-li-909">Enter this information into the Sage cell below to decrypt it (using your <span class="process-math">\(n, d, \and c\)</span>), change <code class="code-inline tex2jax_ignore">what_to_do</code> to “decrypt”, and then press Evaluate(Python).</p></li>
+<li id="li-910"><p id="p-derived-li-910">Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example “KEEPITSECRETKEEPITSAFEXX” will not receive full credit.</p></li>
+</ol>
+<p class="continuation"><a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-78" id="answer-78"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-78"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-80" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/GyzmNNCsdWE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></p>
+<pre class="ptx-sagecell sagecell-sage" id="rsa-code"><script type="text/x-sage">##### ENTER YOUR INFORMATION IN THE VARIABLES BELOW: ######
+
+# If encrypting, set values for m, n, and e.
+# If decrypting, set values for c, n, and d.
+
+what_to_do = "encrypt" # Set what_to_do to either "encrypt" or "decrypt" (quotes matter)
+m = "KEEP IT SECRET KEEP IT SAFE"   # A message to encrypt 
+n = 15244346903    # Value of n = p*q
+e = 751 # Public encryption exponent
+d = 8545627279 # Private decryption exponent 
+c = [971896385, 3249912096, 4079022731, 8771096382, 10148198704]   # The ciphertext as a comma separated list (formatting matters)
+
+##### LEAVE EVERYTHING ELSE BELOW ALONE  ######
+#####... unless you want to tinker with it. Please do!
+
+import re, string, math
+
+from itertools import zip_longest
+
+def grouper(iterable, n, fillvalue=None):
+    args = [iter(iterable)] * n
+    return zip_longest(*args, fillvalue=fillvalue)
+
+def encrypt():
+    stripped_string = re.sub(r"\W|\d","", m.strip()).upper()
+
+    int_string = ""
+    for i in range(0,len(stripped_string)):
+        the_int = string.ascii_uppercase.index(stripped_string[i])
+        if the_int < 10:
+            int_string += "0" + str(the_int)
+        else:
+            int_string += str(the_int)
+
+    half_num_digits = (ceil(math.log10(n))//2)
+    block_size = (half_num_digits-1)*2 if (int(half_num_digits*"25") > n) else half_num_digits*2        
+
+    # append the string with x's to fill the block size.
+    if (len(int_string) % block_size > 0):
+        int_string += "23"*((block_size-(len(int_string) % block_size))//2)
+
+    # Chunk the message into block_size chunks; a list of string representations 
+    blocks = [("".join(x)) for x in grouper(int_string, block_size)]
+
+    cipher_blocks = []
+    for block in blocks:
+        cipher_blocks.append(pow(int(block), e, n))
+
+    print(cipher_blocks)
+
+def decrypt():
+    half_num_digits = (ceil(math.log10(n))//2)
+    block_size = (half_num_digits-1)*2 if (int(half_num_digits*"25") > n) else half_num_digits*2        
+
+    plain_blocks = []
+    for block in c:
+        plain_block = pow(int(block), d, n)
+        plain_blocks.append(("0"*(block_size - len(str(plain_block))))+ str(plain_block))
+
+    plaintext_message="".join(plain_blocks)
+
+    message = ""
+    ind = 0    
+    while ind < len(plaintext_message):
+        message += string.ascii_uppercase[ int(plaintext_message[ind:ind+2]) ]
+        ind += 2
+    print(message) 
+
+
+# ... pretend python has forward-declaration
+which_function = {"encrypt" : encrypt, "decrypt" : decrypt}
+
+try:
+    which_function[what_to_do]()
+except KeyError:
+    print("Please set the variable what_to_do to either 'encrypt' or 'decrypt'.")
+except IndexError:
+    print("There's a problem: I can't decrypt your message.")
+    print("You probably have the value of d wrong... \\nDouble check your computations of d, n, m, etc (d needs to be positive, for example)")
+</script></pre></section><section class="subsection" id="subsection-50"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Forum Posts about this section</span>
+</h3>
+<div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
+<script xmlns:xi="http://www.w3.org/2001/XInclude" type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 297 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">john.hammond@wichita.edu</code></div></div>
+</div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

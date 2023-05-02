@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:17-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<ol class="lower-alpha">
+<li><div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\neg \exists x \forall y (\neg O(x) \vee E(y)) \amp \equiv \forall x \neg \forall y (\neg O(x) \lor E(y))\\
+\amp \equiv \forall x \exists y \neg (\neg O(x) \lor E(y))\\
+\amp \equiv \forall x \exists y \neg \neg O(x) \land \neg E(y)\\
+\amp \equiv \forall x \exists y O(x) \land \neg E(y)
+\end{align*}
+</div></li>
+<li>
+<p>Applying DeMorgan's laws many, many times and noting that the opposite of <span class="process-math">\(x\lt a\)</span> is <span class="process-math">\(x \ge a\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\amp\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z)) \\
+\amp\equiv \neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  \\
+\amp \equiv \exists x \neg \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  \\
+\amp \equiv \exists x \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  \\
+\amp \equiv \exists x \forall y \neg(x \lt  y ) \lor \neg ( \exists z (x \lt  z \vee y \lt  z))  ) \\
+\amp \equiv \exists x \forall y \neg(x \lt  y ) \lor \forall z \neg (x \lt  z \vee y \lt  z))  ) \\
+\amp \equiv \exists x \forall y \neg(x \lt  y ) \lor \forall z \neg (x \lt  z) \land \neg (y \lt  z))) \\
+\amp \equiv \exists x \forall y (x \ge  y ) \lor \forall z (x \ge  z) \land  (y \ge  z))) 
+\end{align*}
+</div>
+</li>
+<li><p>This statement can be written <span class="process-math">\(\exists n \neg \exists x (x \le n)\text{.}\)</span> It can be simplified as <span class="process-math">\(\exists n \forall x \neg (x \le n)\text{,}\)</span> and even further as <span class="process-math">\(\exists n \forall x (x \gt n)\)</span></p></li>
+<li>
+<p>This statement can be written <span class="process-math">\(\neg \forall n \exists x \exists y (x \lt n \lt y)\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\neg \forall n \exists x \exists y (x \lt n \lt y) \amp \equiv \exists n \neg \exists x \exists y (x \lt n \lt y) \\
+\amp \equiv \exists n \forall x \neg \exists y (x \lt n \lt y) \\
+\amp \equiv \exists n \forall x \forall y \neg (x \lt n \lt y) 
+\end{align*}
+</div>
+</li>
+</ol>
+<span class="incontext"><a href="section-logic-quantifiers.html#p-484" class="internal">in-context</a></span>
+</body>
+</html>
