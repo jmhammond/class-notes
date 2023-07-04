@@ -15,19 +15,13 @@
         </author>
       </titlepage>
 
-      <dedication>
-        <p>
-          To Dad.  It's not an accounting book, but I did use a spreadsheet!
-        </p>
-      </dedication>
-
       <colophon>
         <website>
           <name>Discrete Math for Shockers - wichita.edu/discretebook</name>
           <address>http://wichita.edu/discrete-book</address>
         </website>
         <copyright>
-          <year>2018-2022</year>
+          <year>2018-2023</year>
           <holder>John Hammond</holder>
           <minilicense>Creative Commons BY-SA</minilicense>
           <shortlicense>
@@ -35,6 +29,13 @@
           </shortlicense>
         </copyright>
       </colophon>
+      
+      <dedication>
+        <p>
+          To Dad.  It's not an accounting book, but I did use a spreadsheet!
+        </p>
+      </dedication>
+
       <acknowledgement>
         <p>
           Special thanks goes to the Wichita State Open/Alternative Textbook Initiative for their generous grant to help expand the text.
@@ -70,7 +71,7 @@
         <p>
           This course is very different that your past math courses. Keep an open mind, and please ask questions! This might be the <q>hardest</q> math class you take, but it can also be one of the most rewarding.
         </p>
-        <image source="smbc-mathematics.png" scale="50%">
+        <image source="smbc-mathematics.png">
           <description>
             Comic by Zach Weinersmith of Saturday Morning Breakfast Cereal that tells us that yeah, math doesn't doesn't teach us humility. Copyright Zach Weinersmith, smbc-comics.com
           </description>

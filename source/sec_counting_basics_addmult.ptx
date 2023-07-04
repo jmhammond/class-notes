@@ -15,6 +15,7 @@
 
   <!-- make the schema happy -->
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <note>
       <p>
         It's common to count <q>hands of cards,</q> so we'll note that a standard deck of playing cards contains four <term>suits</term> (spade, heart, club, diamond). There are 13 cards in each suit (2,3,4,5,6,7,8,9,10, Jack, Queen, King, Ace). <term>Face cards</term> refers to jacks, queens, and kings. Spades and clubs are black and hearts and diamonds are red.

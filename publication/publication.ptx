@@ -44,6 +44,7 @@
     <!-- links the html version of asymptote graphics.                -->
   <latex print="yes" sides="one">
     <asymptote links="no"/>
+    <cover front="BookCover.pdf"/>
     <exercise>
       <divisional solution="yes"/>
       <divisional answer="no"/>
@@ -61,9 +62,11 @@
     <video privacy="yes"/>
   </html>
 
-  <epub cover="../assets/BookCover.png">
+  <epub>
+    <cover front="../assets/BookCover.png" />
   </epub>
 
-  <braille cover="../assets/BookCover.png">
+  <braille>
+    <cover front="../assets/BookCover.png" />
   </braille>
 </publication>

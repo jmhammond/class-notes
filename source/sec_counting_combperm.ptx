@@ -11,6 +11,7 @@
   </introduction>
 
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <definition>
       <title>Permutation</title>
       <statement>

@@ -6,6 +6,7 @@
 
     <!-- to make the schema happy, I need to put everything into a subsection (since the forums are in a subsection)  -->
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <p>
       Let's imagine that you have a rectangular grid of blank spaces. How many ways can you tile that grid using either square tiles or two-square-wide dominoes?
     </p>

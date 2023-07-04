@@ -13,6 +13,7 @@
   </introduction>
 
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <p>
       We begin by breaking up a number into sums of powers of two. First, a quick refresher table of the first several powers of two:
       <table xml:id="table-powers-of-two">

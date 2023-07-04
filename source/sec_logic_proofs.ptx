@@ -8,6 +8,7 @@
   </introduction>
 
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <p>
       Before we start, we need to formally define some basic concepts of numbers.
     </p>

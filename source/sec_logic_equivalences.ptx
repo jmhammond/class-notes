@@ -9,6 +9,7 @@
 
   <!-- to make the schema happy, I need to put everything into a subsection (since the forums are in a subsection)  -->
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <definition>
       <title>Tautologies and Contradictions</title>
       <statement>
