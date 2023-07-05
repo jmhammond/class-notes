@@ -1805,6 +1805,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-objects-relnfct" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -1818,6 +1819,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 
 </section>

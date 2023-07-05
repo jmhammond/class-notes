@@ -84,13 +84,14 @@
 
     <theorem xml:id="euclidean-algorithm">
       <title>The Euclidean Algorithm</title>
-      <aside>
-        <title>2300+ years old</title>
-        <p>
-          This is called the Euclidean Algorithm after Euclid of Alexandria because it was included in the book(s) of <em>The Elements</em> he wrote in around 300BCE.  We don't know much about Euclid, but <em>The Elements</em> influenced all future Greek, Arab, and Western mathematics.
-        </p>
-      </aside>
       <statement>
+        <aside>
+          <title>2300+ years old</title>
+          <p> This is called the Euclidean Algorithm after Euclid of Alexandria because it was
+            included in the book(s) of <em>The Elements</em> he wrote in around 300BCE. We don't
+            know much about Euclid, but <em>The Elements</em> influenced all future Greek, Arab, and
+            Western mathematics. </p>
+        </aside>
         <p>
           Let <m>a</m> and <m>b</m> be two positive integers where <m>a \ge b</m>. If we apply the division algorithm recursively so that
           <md>
@@ -337,6 +338,7 @@
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-gcd-euclid" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -350,5 +352,6 @@
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 </section>

@@ -295,6 +295,9 @@
           How many cards must be selected from a standard deck of 52 cards in order that at least three have the same suit?
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="SoFDcgO1lio"/>
+      </answer>
       <solution>
         <p>
           According to the Generalized Pigeonhole Principle, we want to determine the number of cards, <m>N</m>, that must be drawn (here <m>k = 4</m> suits):
@@ -302,9 +305,6 @@
           So <m>N = 9</m>.
         </p>
       </solution>
-      <answer component="video">
-        <video youtube="SoFDcgO1lio"/>
-      </answer>
 
     </example>
   </subsection>
@@ -643,6 +643,7 @@
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-counting-addmult" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -656,5 +657,6 @@
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 </section>
