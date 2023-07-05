@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:22-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Question: If there are <span class="process-math">\(n\)</span> meats and <span class="process-math">\(n\)</span> non-meat toppings for a pizza, how many <span class="process-math">\(n\)</span> topping pizzas can be made? (if we don't allow repeat toppings)</p>
+<ol class="decimal">
+<li><p>Answer: There are <span class="process-math">\(\binom{2n}{n}\)</span> total pizzas that can be made.</p></li>
+<li>
+<p>Answer: We'll split on how many meats we want:</p>
+<ul class="disc">
+<li><p>If we want no meats, then we'll select no meats and <span class="process-math">\(n\)</span> non-meats. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{0}\binom{n}{n}\)</span></p></li>
+<li><p>If we want 1 meat, then we'll select <span class="process-math">\(n-1\)</span> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{1}\binom{n}{n-1}\)</span></p></li>
+<li><p>If we want 2 meats, then we'll select <span class="process-math">\(n-2\)</span> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{2}\binom{n}{n-2}\)</span></p></li>
+<li><p>...</p></li>
+<li><p>If we want n meats, then we'll select <span class="process-math">\(n-n=0\)</span> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{n}\binom{n}{0}\)</span></p></li>
+</ul>
+<p class="continuation">because each of these pizzas are completely different than the rest (have different numbers of meats), the addition principle says to add them all together:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\binom{n}{0}\binom{n}{n}+\binom{n}{1}\binom{n}{n-1}+\binom{n}{2}\binom{n}{n-2}+ \cdots + \binom{n}{n} \binom{n}{0}
+\end{equation*}
+</div>
+</li>
+</ol>
+<p class="continuation">Because each answer was a different way to count the same objects, we find that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\binom{n}{0}\binom{n}{n-0}+\binom{n}{1}\binom{n}{n-1}+\binom{n}{2}\binom{n}{n-2}+ \cdots + \binom{n}{n} \binom{n}{n-n} = \binom{2n}{n}
+\end{equation*}
+</div>
+<span class="incontext"><a href="section-counting-binomial.html#p-1402" class="internal">in-context</a></span>
+</body>
+</html>

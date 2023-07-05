@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:20-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>In this activity, you will generate a public/private key-pair. You will send me the public key and keep your private key secret (but don't lose it! If you lose your private key, you won't be able to complete the assignment and will receive no credit).</p>
+<ol class="decimal">
+<li><p>Pick two prime numbers <span class="process-math">\(p \and q\)</span> of some interesting size. Make them at least six or seven digits long (use Sage's <code class="code-inline tex2jax_ignore">next_prime</code>).</p></li>
+<li><p>Let <span class="process-math">\(m=(p-1)(q-1)\text{,}\)</span> and pick any number <span class="process-math">\(e\)</span> relatively prime to <span class="process-math">\(m\text{.}\)</span></p></li>
+<li><p>Find the multiplicative inverse, <span class="process-math">\(d\text{,}\)</span> of <span class="process-math">\(e\)</span> modulo <span class="process-math">\(m\text{.}\)</span></p></li>
+<li><p>Let <span class="process-math">\(n = pq\text{.}\)</span></p></li>
+<li><p>Record your numbers <span class="process-math">\((n, p, q, m, e, d)\)</span> somewhere safe (but much of this is private! Keep it secret!).</p></li>
+<li>
+<p>Send me your public key on via <a class="external" href="mailto:john.hammond@wichita.edu?subject=My%20RSA%20Key" target="_blank">email (you can click this link!)</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-4-hidden.html" title="Footnote 4"><sup> 4 </sup></a> as:</p>
+<pre class="code-display tex2jax_ignore">
+              n = 15244346903
+              e = 751
+            </pre>
+</li>
+<li>
+<p>I'll send you an encrypted message which will look like:</p>
+<pre class="code-display tex2jax_ignore">[971896385, 3249912096, 4079022731, 8771096382, 10148198704]
+            </pre>
+</li>
+<li><p>Enter this information into the Sage cell below to decrypt it (using your <span class="process-math">\(n, d, \and c\)</span>), change <code class="code-inline tex2jax_ignore">what_to_do</code> to “decrypt”, and then press Evaluate(Python).</p></li>
+<li><p>Send me the decrypted message to confirm you decrypted it correctly (remove the padded X's if relevant, and put appropriate spaces to make it a normal English statement. For example “KEEPITSECRETKEEPITSAFEXX” will not receive full credit.</p></li>
+</ol>
+<p class="continuation"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-78-hidden.html" title="Video / Answer 1"><span class="type">Video / Answer</span><span class="period">.</span></a></p>
+<span class="incontext"><a href="section-numtheory-encryption.html#p-1034" class="internal">in-context</a></span>
+</body>
+</html>

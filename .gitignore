@@ -30,7 +30,6 @@ Thumbs.db
 auto
 *.tex
 *conflict*
-*.html
 .#*
 .DS_Store
 prv_*

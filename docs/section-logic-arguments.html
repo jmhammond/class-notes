@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:13-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logical Arguments</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Math for Shockers">
+<meta property="book:author" content="John Hammond">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=015422183392601792159:vae7vvmmczm"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_brown_gold.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\def\modulus{\mathbin{\%}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="external/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Discrete Math for Shockers</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-logic-quantifiers.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-logic-proofs.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-logic-quantifiers.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-logic-proofs.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front-matter.html" data-scroll="front-matter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basics.html" data-scroll="ch_basics" class="internal"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a><ul>
+<li><a href="section-prop-logic.html" data-scroll="section-prop-logic" class="internal">Propositional Logic</a></li>
+<li><a href="sec_objects_sets.html" data-scroll="sec_objects_sets" class="internal">Sets</a></li>
+<li><a href="sec_relationsfunctions.html" data-scroll="sec_relationsfunctions" class="internal">Relations and Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="ch_logic" class="internal"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="section-logic-equivalences.html" data-scroll="section-logic-equivalences" class="internal">Logical Equivalences</a></li>
+<li><a href="sec_application_set_proofs.html" data-scroll="sec_application_set_proofs" class="internal">Application: Set Equivalences</a></li>
+<li><a href="section-logic-quantifiers.html" data-scroll="section-logic-quantifiers" class="internal">Propositional Functions and Quantifiers</a></li>
+<li><a href="section-logic-arguments.html" data-scroll="section-logic-arguments" class="active">Logical Arguments</a></li>
+<li><a href="section-logic-proofs.html" data-scroll="section-logic-proofs" class="internal">An introduction to proofs</a></li>
+<li><a href="section-prop-supplementatal.html" data-scroll="section-prop-supplementatal" class="internal">Chapter Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_numtheory.html" data-scroll="ch_numtheory" class="internal"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a><ul>
+<li><a href="section-numtheory-divcong.html" data-scroll="section-numtheory-divcong" class="internal">Divisibility and Congruences</a></li>
+<li><a href="section-primes.html" data-scroll="section-primes" class="internal">Prime Numbers</a></li>
+<li><a href="section-gcd-euclid.html" data-scroll="section-gcd-euclid" class="internal">GCDs and The Euclidean Algorithm</a></li>
+<li><a href="section-multiplicative-inverses.html" data-scroll="section-multiplicative-inverses" class="internal">Multiplicative Inverses</a></li>
+<li><a href="section-numtheory-modularexp.html" data-scroll="section-numtheory-modularexp" class="internal">Modular exponentiation</a></li>
+<li><a href="section-numtheory-encryption.html" data-scroll="section-numtheory-encryption" class="internal">Application: Encryption</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="ch_sequences" class="internal"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a><ul>
+<li><a href="section-objects-seqseries.html" data-scroll="section-objects-seqseries" class="internal">Sequences and Series</a></li>
+<li><a href="section-solvingrecurrences.html" data-scroll="section-solvingrecurrences" class="internal">Solving Recurrence Relations</a></li>
+<li><a href="sec_logic_induction.html" data-scroll="sec_logic_induction" class="internal">Mathematical Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="ch_counting" class="internal"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-counting-basics.html" data-scroll="section-counting-basics" class="internal">The Multiplicative and Additive Principles</a></li>
+<li><a href="section-counting-combperm.html" data-scroll="section-counting-combperm" class="internal">Permutations and Combinations</a></li>
+<li><a href="section-counting-binomial.html" data-scroll="section-counting-binomial" class="internal">Combinatorial Proofs</a></li>
+<li><a href="section-counting-fib.html" data-scroll="section-counting-fib" class="internal">Counting Fibonacci numbers with tiles</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Solutions to the exercises</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-logic-arguments"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Logical Arguments</span>
+</h2>
+<section class="introduction" id="introduction-9"><p id="p-495">“Vote for me, and your taxes will go down.”  “If <span class="process-math">\(x^2\)</span> is divisible by 4, then <span class="process-math">\(x\)</span> is even.”  “If you sneeze with your eyes open, your eye will burst.” These statements are all logical arguments. In this section we'll discuss how to determine if such a statement is valid or invalid.</p>
+<aside class="aside aside-like" id="aside-11"><p id="p-496">The sneezing myth was even in the April 30, 1882 issue of the <em class="emphasis">New York Times</em>!  “[Her physician] says that probably the sneezing was so rapid that the eyelid remained open... of course the young woman lost the sight of the injured eye.”.</p>
+<p id="p-497">This myth has been debunked, so don't be afraid to sneeze.</p></aside></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title"></span>
+</h3>
+<article class="definition definition-like" id="definition-32"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Logical Arguments.</span>
+</h4>
+<p id="p-498">An <dfn class="terminology">argument</dfn> is a sequence of statements (<dfn class="terminology">premises</dfn>) that ends with a conclusion.</p>
+<p id="p-499">A <dfn class="terminology">valid argument</dfn> is one where the conclusion follows from the truth of the premises.</p>
+<p id="p-500">For the sequence of premises <span class="process-math">\(p_1, p_2, \dots, p_n\)</span> and conclusion <span class="process-math">\(q\text{,}\)</span> an argument is valid if:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p_1 \wedge p_2 \wedge \dots \wedge p_n \to q
+\end{equation*}
+</div>
+<p class="continuation">is a tautology.</p>
+<p id="p-501">A <dfn class="terminology">fallacy</dfn> is a form of incorrect reasoning that leads to an invalid argument.</p></article><article class="example example-like" id="example-41"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
+</h4>
+<p id="p-502">Consider the following argument:</p>
+<ul class="disc">
+<li id="li-505"><p id="p-derived-li-505">If you give a mouse a cookie, then he'll ask for a glass of milk.</p></li>
+<li id="li-506"><p id="p-derived-li-506">You gave a mouse a cookie.</p></li>
+<li id="li-507"><p id="p-derived-li-507">Therefore he asked for a glass of milk.</p></li>
+</ul>
+<p id="p-503">This argument is of the form:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(p \to q\)</span></td></tr>
+<tr><td class="r m b1 r0 l0 t0 lines"><span class="process-math">\(p\)</span></td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore q\)</span></td></tr>
+</table></div>
+<p id="p-504">and is valid since <span class="process-math">\(((p \to q) \wedge p) \to q\)</span> is a tautology.</p></article><p id="p-505">Below is a table of common argument forms, also known as rules of inference. Observe that we're using <span class="process-math">\(\Rightarrow\)</span> to show “if, then”. This symbolic choice is to highlight the difference between the hypotheses and conclusion of the argument, and carries no additional meaning for the purposes of this course.</p>
+<figure class="list table-like" id="list-logical-arguments"><figcaption><span class="type">List</span><span class="space"> </span><span class="codenumber">2.4.3<span class="period">.</span></span><span class="space"> </span>Basic argument forms - rule of inference</figcaption><div class="named-list-content">
+<div class="introduction" id="introduction-10"><p id="p-506">Let <span class="process-math">\(p, q \and r\)</span> be logical propositions. The following are tautologies:</p></div>
+<dl class="description-list narrow">
+<dt id="li-508">Modus Ponens/Direct reasoning</dt>
+<dd><p id="p-507"><span class="process-math">\(\displaystyle (p\to q) \land p \Rightarrow q\)</span></p></dd>
+<dt id="li-509">Modus Tollens / Indirect Reasoning</dt>
+<dd><p id="p-508"><span class="process-math">\(\displaystyle (p \to  q) \land  \neg q \Rightarrow  \neg p\)</span></p></dd>
+<dt id="li-510">Disjunctive Addition</dt>
+<dd><p id="p-509"><span class="process-math">\(\displaystyle p\Rightarrow (p\lor q)\)</span></p></dd>
+<dt id="li-511">Conjunctive Simplification</dt>
+<dd><p id="p-510"><span class="process-math">\((p \land  q) \Rightarrow  p\)</span> <br>  <span class="process-math">\((p \land  q) \Rightarrow  q\)</span></p></dd>
+<dt id="li-512">Disjunctive Simplification</dt>
+<dd><p id="p-511"><span class="process-math">\((p \lor  q) \land  \neg p \Rightarrow  q\)</span> <br>  <span class="process-math">\((p \lor q) \land \neg q\Rightarrow p\)</span></p></dd>
+<dt id="li-513">Chain Argument / Syllogism</dt>
+<dd><p id="p-512"><span class="process-math">\(\displaystyle (p \to  q) \land  ( q \rightarrow  r) \Rightarrow  (p\to  r)\)</span></p></dd>
+<dt id="li-514">Conjunction</dt>
+<dd><p id="p-513"><span class="process-math">\(\displaystyle (p) \land (q) \Rightarrow (p \land q)\)</span></p></dd>
+<dt id="li-515">Resolution</dt>
+<dd><p id="p-514"><span class="process-math">\(\displaystyle (p \lor q) \land (\neg p \lor r) \Rightarrow (q \lor r)\)</span></p></dd>
+</dl>
+</div></figure><p id="p-515">It would be good practice to verify that each of the arguments in table <a href="" class="xref" data-knowl="./knowl/list-logical-arguments.html" title="List 2.4.3: Basic argument forms - rule of inference">List 2.4.3</a> is a tautology using either truth tables or logical equivalences.</p>
+<article class="example example-like" id="example-42"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
+</h4>
+<p id="p-516">What rules of inference are being used here?</p>
+<ul class="disc">
+<li id="li-516"><p id="p-derived-li-516">Kangaroos live in Australia and are marsupials. Therefore, kangaroos are marsupials.</p></li>
+<li id="li-517"><p id="p-derived-li-517">If I go swimming, then I will stay in the sun too long. If I stay in the sun too long, then I will sunburn. Therefore, if I go swimming, then I will sunburn.</p></li>
+<li id="li-518"><p id="p-derived-li-518">I read a horror story. When I read horror stories, I have weird dreams. Therefore I had weird dreams.</p></li>
+</ul>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-41" id="answer-41"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-41"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-43" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/DLqA_e2lbpo?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="definition definition-like" id="definition-33"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Quantified Arguments.</span>
+</h4>
+<ul id="p-517" class="disc">
+<li id="li-519">
+<p id="p-518"><dfn class="terminology">Existential instantiation</dfn> describes the argument:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\exists x P(x) \implies P(c) 
+\end{equation*}
+</div>
+<p class="continuation">for some <span class="process-math">\(c\)</span> in the domain.</p>
+</li>
+<li id="li-520">
+<p id="p-519"><dfn class="terminology">Existential generalization</dfn> describes the argument:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+P(c) \implies \exists x P(x) \text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-521">
+<p id="p-520"><dfn class="terminology">Universal modus ponens</dfn> describes the argument:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\forall x (P(x) \to Q(x)) \wedge P(a) \implies Q(a)
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(a\)</span> is a particular element in the domain.</p>
+</li>
+<li id="li-522">
+<p id="p-521"><dfn class="terminology">Universal modus tollens</dfn> describes the argument:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\forall x (P(x) \to Q(x)) \wedge \neg Q(a) \implies \neg P(a)
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(a\)</span> is a particular element in the domain.</p>
+</li>
+</ul></article><article class="example example-like" id="example-43"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span>
+</h4>
+<p id="p-522">Show that the premises, “A student in this class has not read the book,” and “Everyone in this class passed the first exam” imply the conclusion “Someone who passed the first exam has not read the book.” Let <span class="process-math">\(C(x)\)</span> be “<span class="process-math">\(x\)</span> is in this class,” <span class="process-math">\(B(x)\)</span> “x has read the book”, and <span class="process-math">\(P(x)\)</span> “<span class="process-math">\(x\)</span> passed the first exam.”</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-42" id="answer-42"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-42"><div class="answer solution-like">
+<p id="p-524">Note that the number of the example is wrong, the video says 1.4.7, not 2.4.7. Sorry!</p>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-44" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/iMv1sRXNKcI?&amp;modestbranding=1&amp;rel=0"></iframe></div>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like">
+<p id="p-523">The statement, “someone who passed the first exam has not read the book” means there is someone in class did those things. <span class="process-math">\(\exists x (P(x) \wedge \neg B(x))\)</span></p>
+<figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.7<span class="period">.</span></span><span class="space"> </span>Argument step-by-step</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Step</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Reason</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1. <span class="process-math">\(\exists x(C(x) \wedge \neg B(x))\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines">Premise</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2. <span class="process-math">\(C(a) \wedge \neg B(a) \)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines">Existential instantiation</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3. <span class="process-math">\(C(a)\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines">Simplification of 2</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4. <span class="process-math">\(\forall x (C(x) \to P(x))\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines">Premise</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5. <span class="process-math">\(C(a) \to P(a)\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines">Universal instantiation</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">6. <span class="process-math">\(P(a)\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines">Modus ponens of 3 and 5</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">7. <span class="process-math">\(\neg B(a)\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines">simplification of 2 a different way</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">8. <span class="process-math">\(P(a) \wedge \neg B(a)\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines">Conjunction of 6 and 7</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">9 . <span class="process-math">\(\exists x (P(x) \wedge \neg B(x))\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines">Existential generalization from 8.</td>
+</tr>
+</table></div></figure>
+</div></div>
+</div></article><article class="example example-like" id="example-44"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span>
+</h4>
+<p id="p-525">For the following argument, explain the rules of inference for each step leading the the conclusion:</p>
+<blockquote class="blockquote" id="blockquote-2"><p id="p-526">Linda, a student in this class owns a red convertible. Everyone who owns a red convertible has gotten at least one speeding ticket. Therefore, someone in this class has gotten at least one speeding ticket.</p></blockquote>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-43" id="answer-43"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-43"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-45" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/-R5nLeUguWU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><p id="p-527">Here are some common fallacies. They're not typeset in a table because although you should be aware of what they are, they are not valid arguments!</p>
+<ul class="disc">
+<li id="li-523">
+<p id="p-528">Fallacy of affirming the conclusion:</p>
+<ul class="circle">
+<li id="li-524"><p id="p-derived-li-524">“If you get an A, you pass this class. You passed the class, therefore you got an A.”   (not valid!)</p></li>
+<li id="li-525"><p id="p-derived-li-525">“If an animal is a type of cat, it has hair. I have hair. Therefore, I must be some kind of cat.” (not valid!)</p></li>
+<li id="li-526"><p id="p-derived-li-526"><span class="process-math">\(((p \to q) \wedge q \to p)\)</span> is not a tautology!</p></li>
+</ul>
+</li>
+<li id="li-527">
+<p id="p-529">Fallacy of denying the hypothesis</p>
+<ul class="circle">
+<li id="li-528"><p id="p-derived-li-528">“If you get an A, you pass this class. You didn't get an A. Oh no! You must not have passed this class!” (still not valid!)</p></li>
+<li id="li-529"><p id="p-derived-li-529">“If an animal is a type of cat, it has hair. My dog Ruby isn't a cat. Therefore she must not have hair.” (nope)</p></li>
+<li id="li-530"><p id="p-derived-li-530"><span class="process-math">\(((p\to q) \wedge \neg p \to q)\)</span> is not a tautology!</p></li>
+</ul>
+</li>
+</ul></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-65"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-530">Determine if the following deduction rule is valid:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(p \vee q\)</span></td></tr>
+<tr><td class="r m b1 r0 l0 t0 lines"><span class="process-math">\(\neg p\)</span></td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore q\)</span></td></tr>
+</table></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution solution-like"><p id="p-531">The deduction rule is valid. To see this, make a truth table which contains <span class="process-math">\(p \vee q\)</span> and <span class="process-math">\(\neg p\)</span> (and <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> of course). Look at the truth value of <span class="process-math">\(q\)</span> in each of the rows that have <span class="process-math">\(p \vee q\)</span> and <span class="process-math">\(\neg p\)</span> true.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-66"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-532">Determine if the following is a valid deduction rule:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(p \to (q \vee r)\)</span></td></tr>
+<tr><td class="r m b1 r0 l0 t0 lines"><span class="process-math">\(\neg(p \to q)\)</span></td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore r\)</span></td></tr>
+</table></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-71" id="solution-71"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-71"><div class="solution solution-like"><p id="p-533">This is valid. Make a truth table.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-67"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-534">Determine if the following is a valid deduction rule:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\((p \wedge q) \to r\)</span></td></tr>
+<tr><td class="r m b1 r0 l0 t0 lines"><span class="process-math">\(\neg p \vee \neg q\)</span></td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore \neg r\)</span></td></tr>
+</table></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-72" id="solution-72"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-72"><div class="solution solution-like"><p id="p-535">It isn't; make a truth table and see <span class="process-math">\((((p \land q) \to r) \land (\neg p \lor \neg q)) \to \neg r\)</span> isn't a tautology.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-68"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-536">Show that the following is a valid deduction rule by building a truth table.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(p \to q\)</span></td></tr>
+<tr><td class="r m b1 r0 l0 t0 lines"><span class="process-math">\(q \to r\)</span></td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore (p \to r)\)</span></td></tr>
+</table></div></article><article class="exercise exercise-like" id="exercise-69"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-537">Come up with all valid conclusions for this set of premises: “If you get out the leash, the dog wants to go for a walk,” “the dog wants to go for a  walk if you put on shoes,” “the dog wanting to go for a walk is sufficient for me to want a cat.” “The dog doesn't want to go for a walk.” Explain your answer noting each step of the argument.</p></article><article class="exercise exercise-like" id="exercise-70"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-538">Consider the statement “Superman saves the day or Lois Lane dies. Superman saved the day, therefore Lois didn't die.” Is the argument valid? Explain your answer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-73"><div class="solution solution-like">
+<p id="p-539">This is an argument of the form:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\text{Superman saves} \lor \text{Lois dies}\)</span></td></tr>
+<tr><td class="r m b1 r0 l0 t0 lines"><span class="process-math">\(\text{Superman saved}\)</span></td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore \neg \text{Lois didn't die}\)</span></td></tr>
+</table></div>
+<p id="p-540">This is a fallacy. In fact, it's the fallacy of denying the hypothesis in disguise. Rewrite the disjunction as an implication to see this:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\neg \text{Superman saves} \to \text{Lois dies}\)</span></td></tr>
+<tr><td class="r m b1 r0 l0 t0 lines"><span class="process-math">\(\text{Superman saved}\)</span></td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore \neg \text{Lois didn't die}\)</span></td></tr>
+</table></div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-71"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-541">Prove that the folowing is a valid argument, explaining each rule of inference used to arrive at the conclusion.</p>
+<ol class="lower-alpha">
+<li id="li-531"><p id="p-542">“I take the bus or I walk. If I walk I get tired. I do not get tired. Therefore I take the bus.”</p></li>
+<li id="li-532"><p id="p-543">“All lions are fierce. Some lions do not drink coffee. Therefore, some fierce creatures do not drink coffee.”</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><ol id="p-544" class="lower-alpha">
+<li id="li-533"><p id="p-derived-li-533">Write each in terms of logical symbols.</p></li>
+<li id="li-534"><p id="p-derived-li-534">Let the universe of discourse be all creatures, <span class="process-math">\(L(x)\)</span> be the statement “<span class="process-math">\(x\)</span> is a lion,” <span class="process-math">\(C(x)\)</span> be “<span class="process-math">\(x\)</span> drinks coffee,” and <span class="process-math">\(F(x)\)</span> is “<span class="process-math">\(x\)</span> is fierce.”</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-72"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-545">Show that the following argument is invalid.</p>
+<p id="p-546">If wages increase, then there will be inflation. The cost of living will not increase if there is no inflation. Wages will increase. Therefore, the cost of living will increase.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-547">Make a truth table.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-74"><div class="solution solution-like">
+<p id="p-548">The argument has three propositional variables and is of the form:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\text{wages increase} \to \text{inflation}\)</span></td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\neg\text{inflation} \to \neg \text{cost of living increase}\)</span></td></tr>
+<tr><td class="r m b1 r0 l0 t0 lines"><span class="process-math">\(\text{wages increase}\)</span></td></tr>
+<tr><td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\therefore \text{cost of living increases}\)</span></td></tr>
+</table></div>
+<p id="p-549">... now make a truth table.</p>
+</div></div>
+</div></article></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Forum Posts about this section</span>
+</h3>
+<div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
+<script xmlns:xi="http://www.w3.org/2001/XInclude" type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 285 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:13-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Propositional Functions and Quantifiers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Math for Shockers">
+<meta property="book:author" content="John Hammond">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=015422183392601792159:vae7vvmmczm"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_brown_gold.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\def\modulus{\mathbin{\%}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="external/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Discrete Math for Shockers</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_application_set_proofs.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-logic-arguments.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_application_set_proofs.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-logic-arguments.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front-matter.html" data-scroll="front-matter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basics.html" data-scroll="ch_basics" class="internal"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a><ul>
+<li><a href="section-prop-logic.html" data-scroll="section-prop-logic" class="internal">Propositional Logic</a></li>
+<li><a href="sec_objects_sets.html" data-scroll="sec_objects_sets" class="internal">Sets</a></li>
+<li><a href="sec_relationsfunctions.html" data-scroll="sec_relationsfunctions" class="internal">Relations and Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="ch_logic" class="internal"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="section-logic-equivalences.html" data-scroll="section-logic-equivalences" class="internal">Logical Equivalences</a></li>
+<li><a href="sec_application_set_proofs.html" data-scroll="sec_application_set_proofs" class="internal">Application: Set Equivalences</a></li>
+<li><a href="section-logic-quantifiers.html" data-scroll="section-logic-quantifiers" class="active">Propositional Functions and Quantifiers</a></li>
+<li><a href="section-logic-arguments.html" data-scroll="section-logic-arguments" class="internal">Logical Arguments</a></li>
+<li><a href="section-logic-proofs.html" data-scroll="section-logic-proofs" class="internal">An introduction to proofs</a></li>
+<li><a href="section-prop-supplementatal.html" data-scroll="section-prop-supplementatal" class="internal">Chapter Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_numtheory.html" data-scroll="ch_numtheory" class="internal"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a><ul>
+<li><a href="section-numtheory-divcong.html" data-scroll="section-numtheory-divcong" class="internal">Divisibility and Congruences</a></li>
+<li><a href="section-primes.html" data-scroll="section-primes" class="internal">Prime Numbers</a></li>
+<li><a href="section-gcd-euclid.html" data-scroll="section-gcd-euclid" class="internal">GCDs and The Euclidean Algorithm</a></li>
+<li><a href="section-multiplicative-inverses.html" data-scroll="section-multiplicative-inverses" class="internal">Multiplicative Inverses</a></li>
+<li><a href="section-numtheory-modularexp.html" data-scroll="section-numtheory-modularexp" class="internal">Modular exponentiation</a></li>
+<li><a href="section-numtheory-encryption.html" data-scroll="section-numtheory-encryption" class="internal">Application: Encryption</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="ch_sequences" class="internal"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a><ul>
+<li><a href="section-objects-seqseries.html" data-scroll="section-objects-seqseries" class="internal">Sequences and Series</a></li>
+<li><a href="section-solvingrecurrences.html" data-scroll="section-solvingrecurrences" class="internal">Solving Recurrence Relations</a></li>
+<li><a href="sec_logic_induction.html" data-scroll="sec_logic_induction" class="internal">Mathematical Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="ch_counting" class="internal"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-counting-basics.html" data-scroll="section-counting-basics" class="internal">The Multiplicative and Additive Principles</a></li>
+<li><a href="section-counting-combperm.html" data-scroll="section-counting-combperm" class="internal">Permutations and Combinations</a></li>
+<li><a href="section-counting-binomial.html" data-scroll="section-counting-binomial" class="internal">Combinatorial Proofs</a></li>
+<li><a href="section-counting-fib.html" data-scroll="section-counting-fib" class="internal">Counting Fibonacci numbers with tiles</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Solutions to the exercises</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-logic-quantifiers"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Propositional Functions and Quantifiers</span>
+</h2>
+<section class="introduction" id="introduction-8"><p id="p-450">We often consider very similar propositions over and over: <span class="process-math">\(3 \lt 5\text{,}\)</span> <span class="process-math">\(2 \lt 5\text{,}\)</span> <span class="process-math">\(7 \lt 5\text{,}\)</span> etc...  In this section, we take what is in common with these statements and build a generic function whose input is from some domain (in this example, numbers), and whose output is either true or false.</p></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Predicates</span>
+</h3>
+<p id="p-451">Consider this mathematical sentence: “<span class="process-math">\(x \lt 5 \)</span>”.</p>
+<ul class="circle">
+<li id="li-427"><p id="p-derived-li-427"><span class="process-math">\(x\)</span> is a variable, the subject of the sentence.</p></li>
+<li id="li-428"><p id="p-derived-li-428">“is less than five” is the <dfn class="terminology">predicate</dfn></p></li>
+<li id="li-429"><p id="p-derived-li-429">A predicate is a property that a subject can have.</p></li>
+<li id="li-430">
+<p id="p-452">We can write <span class="process-math">\(P(x) :=\)</span> “<span class="process-math">\(x \lt 5 \text{,}\)</span>” where</p>
+<ul class="circle">
+<li id="li-431"><p id="p-derived-li-431">the value of <span class="process-math">\(P(x)\)</span> is the value of the <dfn class="terminology">propositional function</dfn> <span class="process-math">\(P\)</span> at <span class="process-math">\(x\text{.}\)</span></p></li>
+<li id="li-432"><p id="p-derived-li-432">Assigning a value to <span class="process-math">\(x\)</span> makes <span class="process-math">\(P\)</span> a proposition (it then has a truth value)</p></li>
+</ul>
+</li>
+</ul>
+<article class="definition definition-like" id="definition-29"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Domain of Discourse.</span>
+</h4>
+<p id="p-453">The <dfn class="terminology">domain of discourse</dfn> (or <dfn class="terminology">universe of discourse</dfn>) is the collection from which variables can take values.</p>
+<p id="p-454">For example, if my predicate function is “<span class="process-math">\(x\)</span> is sharp”, the function has a different meaning if my universe of discourse is “all college students” versus “all tools.”</p></article><p id="p-455">The domain of discourse is the domain of the propositional function. Like all functions, it depends on the particular function we're considering. The codomain of a propositional function will always be the set <span class="process-math">\(\{\text{true, false}\}\text{.}\)</span></p>
+<article class="example example-like" id="example-34"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h4>
+<p id="p-456">Determine the truth values of the following:</p>
+<ol class="decimal">
+<li id="li-433">
+<p id="p-457">If <span class="process-math">\(P(x):=\)</span> “The word <span class="process-math">\(x \)</span> contains the letter a”.</p>
+<ol class="lower-alpha">
+<li id="li-434"><p id="p-derived-li-434"><span class="process-math">\(P\)</span>(elephant)</p></li>
+<li id="li-435"><p id="p-derived-li-435"><span class="process-math">\(P\)</span>(purple)</p></li>
+<li id="li-436"><p id="p-derived-li-436"><span class="process-math">\(P\)</span>(true)</p></li>
+<li id="li-437"><p id="p-derived-li-437"><span class="process-math">\(P\)</span>(false)</p></li>
+</ol>
+</li>
+<li id="li-438">
+<p id="p-458">If <span class="process-math">\(Q(x,y):=\)</span> “<span class="process-math">\(x^2 + y^2 = 25\)</span>”.</p>
+<ol class="lower-alpha">
+<li id="li-439"><p id="p-derived-li-439"><span class="process-math">\(\displaystyle Q(4,5)\)</span></p></li>
+<li id="li-440"><p id="p-derived-li-440"><span class="process-math">\(\displaystyle Q(3,4)\)</span></p></li>
+</ol>
+</li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-32" id="answer-32"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-32"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-34" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/BUP1k8Yy0X4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Logical Quantifiers</span>
+</h3>
+<p id="p-459">With the idea of generic propositional functions taken care of, we now want to make sweeping claims about the truth of a propositional function over some domain.  Is the statement true for every value in the domain? Is the statement true for some specific value? These questions come up so frequently in mathematics that we give them each their own symbol.</p>
+<article class="definition definition-like" id="definition-30"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Universal Quantifier.</span>
+</h4>
+<p id="p-460">The <dfn class="terminology">universal quantification</dfn> of <span class="process-math">\(P(x)\)</span> is the statement that <span class="process-math">\(P(x)\)</span> is true for all values of <span class="process-math">\(x\)</span> in the domain of discourse. We write <span class="process-math">\(\forall x P(x)\)</span></p>
+<p id="p-461">A <dfn class="terminology">counterexample</dfn> is an <span class="process-math">\(x\)</span> value for which <span class="process-math">\(P(x)\)</span> is false.</p>
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-33" id="answer-33"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-35" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Z7wornF1Euw?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></article><article class="definition definition-like" id="definition-31"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Existential Quantifier.</span>
+</h4>
+<p id="p-462">The <dfn class="terminology">existential quantification</dfn> of <span class="process-math">\(P(x)\)</span> is the statement that there is some value <span class="process-math">\(x\)</span> in the universe of discourse for which <span class="process-math">\(P(x)\)</span> is true. We write <span class="process-math">\(\exists x P(x)\)</span></p>
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-34" id="answer-34"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-36" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/H_tA2tyGDdQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></article><article class="example example-like" id="example-35"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
+</h4>
+<p id="p-463">Let <span class="process-math">\(P(x)\)</span> be “<span class="process-math">\(x^2 \ge 0\)</span>”. What is the truth value of <span class="process-math">\(\forall x P(x)\)</span> if the domain is:</p>
+<ol class="decimal">
+<li id="li-441"><p id="p-derived-li-441">All real numbers</p></li>
+<li id="li-442"><p id="p-derived-li-442">All complex numbers</p></li>
+</ol></article><article class="example example-like" id="example-36"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
+</h4>
+<p id="p-464">Let the domain be all real numbers. Find a counterexample to the following statements:</p>
+<ol class="decimal">
+<li id="li-443"><p id="p-derived-li-443"><span class="process-math">\(\displaystyle \forall x (x^2 \not= x)\)</span></p></li>
+<li id="li-444"><p id="p-derived-li-444"><span class="process-math">\(\displaystyle \forall x (|x| \gt 0)\)</span></p></li>
+<li id="li-445"><p id="p-derived-li-445"><span class="process-math">\(\displaystyle \forall x (x \gt 3 \vee x \lt 2)\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-35" id="answer-35"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-37" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/n9jfIFqiVnU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-37"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
+</h4>
+<p id="p-465">We can combine quantifiers, where each variable might come from a different domain. Precedence of quantifiers is left to right.</p>
+<p id="p-466">What is the truth value of the following expressions where the domain is all real numbers:</p>
+<ol class="decimal">
+<li id="li-446"><p id="p-derived-li-446"><span class="process-math">\(\displaystyle \forall x \exists y ( xy = 5)\)</span></p></li>
+<li id="li-447"><p id="p-derived-li-447"><span class="process-math">\(\displaystyle \exists x \forall y ( xy = 5)\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-36" id="answer-36"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-38" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/8kb1Krhw6Ks?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Negating Quantifiers.</span>
+</h4>
+<p id="p-467">The negation of quantifiers is found as follows:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-19">
+\begin{align*}
+\neg \forall x P(x) \amp\equiv \exists x \neg P(x) \\
+\neg \exists x P(x) \amp\equiv \forall x \neg P(x)  
+\end{align*}
+</div>
+<p id="p-468">It might help to think “not all...” is equivalent to “some... do not”. While “there isn't one who...” is the same as “no one does...”.</p>
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-37" id="answer-37"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-39" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/wgjXIN8csMs?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></article><article class="note remark-like" id="note-7"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span>
+</h4>
+<p id="p-469">Counterexamples to universal statements work because if <span class="process-math">\(\exists x \neg P(x)\)</span> is true, then <span class="process-math">\(\neg \forall x P(x)\)</span> is also true, that is, <span class="process-math">\(\forall x P(x)\)</span> is false!</p></article><article class="example example-like" id="example-38"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span>
+</h4>
+<p id="p-470">For each negation below, write the statement using quantifiers to confirm each is correct.</p>
+<ol class="decimal">
+<li id="li-448"><p id="p-derived-li-448">The negation of “There exists a green horse” is “No horse is green.”</p></li>
+<li id="li-449"><p id="p-derived-li-449">The negation of “All people wear hats” is the statement “Some person doesn't wear hats”.</p></li>
+<li id="li-450"><p id="p-derived-li-450">The negation of “Nobody loves math” is “Someone does love math”.</p></li>
+<li id="li-451"><p id="p-derived-li-451">Find the negation of “some drivers don't obey the speed limit.”.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-38" id="answer-38"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-40" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/DQEKqe7ZYro?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-39"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.11</span><span class="period">.</span>
+</h4>
+<p id="p-471">If the universe of discourse is all people at the university, and <span class="process-math">\(P(x)\)</span> is the statement “<span class="process-math">\(x\)</span> loves to drink coffee,” express each statement in plain English:</p>
+<ol class="decimal">
+<li id="li-452"><p id="p-derived-li-452"><span class="process-math">\(\displaystyle \forall x P(x)\)</span></p></li>
+<li id="li-453"><p id="p-derived-li-453"><span class="process-math">\(\displaystyle \exists x P(x)\)</span></p></li>
+<li id="li-454"><p id="p-derived-li-454"><span class="process-math">\(\displaystyle \forall x \neg P(x)\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-39" id="answer-39"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-41" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/9qVRwljEnu4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-40"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.12</span><span class="period">.</span>
+</h4>
+<p id="p-472">Translate the statement into logical expressions using predicates, quantifiers, and logical connectives.</p>
+<ol class="decimal">
+<li id="li-455"><p id="p-derived-li-455">All of your friends are perfect.</p></li>
+<li id="li-456"><p id="p-derived-li-456">Not everybody is your friend or someone is not perfect.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-40" id="answer-40"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-40"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-42" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/ao3a6VF4xUU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-59"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-473">Determine the truth value of the each of these statements if the domain consists of all integers</p>
+<ol class="lower-alpha cols2">
+<li id="li-457"><p id="p-derived-li-457"><span class="process-math">\(\displaystyle \forall n (n+1 &gt; n)\)</span></p></li>
+<li id="li-458"><p id="p-derived-li-458"><span class="process-math">\(\displaystyle \exists n (n^3 = -1)\)</span></p></li>
+<li id="li-459"><p id="p-derived-li-459"><span class="process-math">\(\displaystyle \exists n (2n = 5n)\)</span></p></li>
+<li id="li-460"><p id="p-derived-li-460"><span class="process-math">\(\displaystyle \forall n (3n \le 4n)\)</span></p></li>
+<li id="li-461"><p id="p-derived-li-461"><span class="process-math">\(\displaystyle \forall x \forall y ((x^2 = y^2) \to (x = y))\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-63" id="solution-63"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-63"><div class="solution solution-like"><ol id="p-474" class="lower-alpha">
+<li id="li-462"><p id="p-derived-li-462">True</p></li>
+<li id="li-463"><p id="p-derived-li-463">True</p></li>
+<li id="li-464"><p id="p-derived-li-464">True</p></li>
+<li id="li-465"><p id="p-derived-li-465">False</p></li>
+<li id="li-466"><p id="p-derived-li-466">False</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-60"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-475">Determine the truth value of each of the following statements if the domain consists of all real numbers.</p>
+<ol class="lower-alpha cols2">
+<li id="li-467"><p id="p-derived-li-467"><span class="process-math">\(\displaystyle \exists x(x^2 = 2)\)</span></p></li>
+<li id="li-468"><p id="p-derived-li-468"><span class="process-math">\(\displaystyle \exists x (x^2 = -1)\)</span></p></li>
+<li id="li-469"><p id="p-derived-li-469"><span class="process-math">\(\displaystyle \forall x (x^2 + 2 \ge 1)\)</span></p></li>
+<li id="li-470"><p id="p-derived-li-470"><span class="process-math">\(\displaystyle \forall x (2x &gt; 2)\)</span></p></li>
+<li id="li-471"><p id="p-derived-li-471"><span class="process-math">\(\displaystyle \forall x (x+4)^2 = x^2 + 16\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-64"><div class="solution solution-like"><ol id="p-476" class="lower-alpha">
+<li id="li-472"><p id="p-derived-li-472">True</p></li>
+<li id="li-473"><p id="p-derived-li-473">False</p></li>
+<li id="li-474"><p id="p-derived-li-474">True</p></li>
+<li id="li-475"><p id="p-derived-li-475">False</p></li>
+<li id="li-476"><p id="p-derived-li-476">False</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-61"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-477">Translate these statements into English where <span class="process-math">\(F(x)\)</span> is “<span class="process-math">\(x\)</span> is fast” and <span class="process-math">\(A(x)\)</span> is “<span class="process-math">\(x\)</span> is an athlete”, here the domain is the set of people.</p>
+<ol class="lower-alpha cols2">
+<li id="li-477"><p id="p-derived-li-477"><span class="process-math">\(\displaystyle \forall x (A(x) \to F(x))\)</span></p></li>
+<li id="li-478"><p id="p-derived-li-478"><span class="process-math">\(\displaystyle \forall x (F(x) \land A(x))\)</span></p></li>
+<li id="li-479"><p id="p-derived-li-479"><span class="process-math">\(\displaystyle \exists x (F(x) \to A(x))\)</span></p></li>
+<li id="li-480"><p id="p-derived-li-480"><span class="process-math">\(\displaystyle \exists x (A(x) \land \neg F(x))\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-65"><div class="solution solution-like">
+<p id="p-478">Your answer shouldn't have <span class="process-math">\(x\)</span> in it anywhere! Regular people don't say “For all x if x is fast, then...” Here some some ideas (your answer may very)</p>
+<ol class="lower-alpha cols2">
+<li id="li-481"><p id="p-derived-li-481">All athletes are fast.</p></li>
+<li id="li-482"><p id="p-derived-li-482">Everyone is a fast athlete.</p></li>
+<li id="li-483"><p id="p-derived-li-483">Some fast person is an athlete.</p></li>
+<li id="li-484"><p id="p-derived-li-484">There is a slow athlete.</p></li>
+</ol>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-62"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-479">Let <span class="process-math">\(C(x)\)</span> denote the predicate “<span class="process-math">\(x\)</span> is in the correct place”, let <span class="process-math">\(E(x)\)</span> denote “<span class="process-math">\(x\)</span> is in excellent condition”, and let <span class="process-math">\(T(x)\)</span> denote “<span class="process-math">\(x\)</span> is a tool” where the domain of each predicate is the set of objects in a garage. Translate each into plain English:</p>
+<ol class="lower-alpha">
+<li id="li-485"><p id="p-derived-li-485"><span class="process-math">\(\displaystyle \exists x \neg C(x)\)</span></p></li>
+<li id="li-486"><p id="p-derived-li-486"><span class="process-math">\(\displaystyle \exists x (T(x) \land \neg C(x))\)</span></p></li>
+<li id="li-487"><p id="p-derived-li-487"><span class="process-math">\(\displaystyle \forall x (T(x) \to (C(x) \land E(x)))\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-66"><div class="solution solution-like"><ol id="p-480" class="lower-alpha">
+<li id="li-488"><p id="p-derived-li-488">Something in the garage is out of place.</p></li>
+<li id="li-489"><p id="p-derived-li-489">Some tool is misplaced.</p></li>
+<li id="li-490"><p id="p-derived-li-490">All tools are in excellent condition and in the correct place.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-63"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-481">Simplify the statements below so that negations are only directly next to the predicates.</p>
+<ol class="lower-alpha">
+<li id="li-491"><p id="p-derived-li-491"><span class="process-math">\(\neg \exists x \forall y (\neg O(x) \vee E(y))\text{.}\)</span></p></li>
+<li id="li-492"><p id="p-derived-li-492"><span class="process-math">\(\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))\text{.}\)</span></p></li>
+<li id="li-493"><p id="p-482">There is a number <span class="process-math">\(n\)</span> for which no other number is either less than or equal to <span class="process-math">\(n\text{.}\)</span></p></li>
+<li id="li-494"><p id="p-483">It is false that for every number <span class="process-math">\(n\)</span> there are two other numbers which <span class="process-math">\(n\)</span> is between.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-67" id="solution-67"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-67"><div class="solution solution-like"><ol id="p-484" class="lower-alpha">
+<li id="li-495"><div class="displaymath process-math" data-contains-math-knowls="" id="md-20">
+\begin{align*}
+\neg \exists x \forall y (\neg O(x) \vee E(y)) \amp \equiv \forall x \neg \forall y (\neg O(x) \lor E(y))\\
+\amp \equiv \forall x \exists y \neg (\neg O(x) \lor E(y))\\
+\amp \equiv \forall x \exists y \neg \neg O(x) \land \neg E(y)\\
+\amp \equiv \forall x \exists y O(x) \land \neg E(y)
+\end{align*}
+</div></li>
+<li id="li-496">
+<p id="p-486">Applying DeMorgan's laws many, many times and noting that the opposite of <span class="process-math">\(x\lt a\)</span> is <span class="process-math">\(x \ge a\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-21">
+\begin{align*}
+\amp\neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z)) \\
+\amp\equiv \neg \forall x \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  \\
+\amp \equiv \exists x \neg \neg \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  \\
+\amp \equiv \exists x \forall y \neg(x \lt  y \wedge \exists z (x \lt  z \vee y \lt  z))  \\
+\amp \equiv \exists x \forall y \neg(x \lt  y ) \lor \neg ( \exists z (x \lt  z \vee y \lt  z))  ) \\
+\amp \equiv \exists x \forall y \neg(x \lt  y ) \lor \forall z \neg (x \lt  z \vee y \lt  z))  ) \\
+\amp \equiv \exists x \forall y \neg(x \lt  y ) \lor \forall z \neg (x \lt  z) \land \neg (y \lt  z))) \\
+\amp \equiv \exists x \forall y (x \ge  y ) \lor \forall z (x \ge  z) \land  (y \ge  z))) 
+\end{align*}
+</div>
+</li>
+<li id="li-497"><p id="p-487">This statement can be written <span class="process-math">\(\exists n \neg \exists x (x \le n)\text{.}\)</span> It can be simplified as <span class="process-math">\(\exists n \forall x \neg (x \le n)\text{,}\)</span> and even further as <span class="process-math">\(\exists n \forall x (x \gt n)\)</span></p></li>
+<li id="li-498">
+<p id="p-488">This statement can be written <span class="process-math">\(\neg \forall n \exists x \exists y (x \lt n \lt y)\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-22">
+\begin{align*}
+\neg \forall n \exists x \exists y (x \lt n \lt y) \amp \equiv \exists n \neg \exists x \exists y (x \lt n \lt y) \\
+\amp \equiv \exists n \forall x \neg \exists y (x \lt n \lt y) \\
+\amp \equiv \exists n \forall x \forall y \neg (x \lt n \lt y) 
+\end{align*}
+</div>
+</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-64"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-489">Consider the statement, “There is a building on the campus of some college in the United States in which every room is painted white.”</p>
+<ol class="lower-alpha">
+<li id="li-499"><p id="p-derived-li-499">Express the statement using quantifiers. Be sure to define your predicate function and specify the domain of each of the three variables.</p></li>
+<li id="li-500"><p id="p-derived-li-500">Express the negation of the above logical quantified statement so that no negation is to the left of a quantifier.</p></li>
+<li id="li-501"><p id="p-derived-li-501">Write the negation of the statement in plain English.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-68" id="solution-68"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-68"><div class="solution solution-like">
+<p id="p-490">Let <span class="process-math">\(c\)</span> come from the universe of colleges in the US, <span class="process-math">\(b\)</span> be from the universe of buildings on a chosen campus and <span class="process-math">\(r\)</span> be the rooms in a chosen building.</p>
+<ol class="lower-alpha">
+<li id="li-502">
+<p id="p-491">We have to first select a college, then find the building on that campus:</p>
+<p id="p-492"><span class="process-math">\(\exists c \exists b \forall r (b \text{ on the campus of } c \text{ in which } r \text{ is painted white})\)</span></p>
+</li>
+<li id="li-503">
+<p id="p-493"><em class="emphasis">Start with the negation on the left and apply DeMorgan's laws</em></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-23">
+\begin{align*}
+\amp \neg \exists c \exists b \forall r (b \text{ on the campus of } c \text{ in which } r \text{ is painted white})\\
+\amp \equiv \forall c \forall b \exists r \neg(b \text{ on the campus of } c \text{ in which } r \text{ is painted white})
+\end{align*}
+</div>
+</li>
+<li id="li-504"><p id="p-494">On every campus in the US, every building has at least one room that isn't painted white.</p></li>
+</ol>
+</div></div>
+</div></article></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Forum Posts about this section</span>
+</h3>
+<div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
+<script xmlns:xi="http://www.w3.org/2001/XInclude" type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 291 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:14-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solving Recurrence Relations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Math for Shockers">
+<meta property="book:author" content="John Hammond">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
+</script><script>// Make *any* pre with class 'sagecell-python' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-python',
+                       linked: true,
+                       languages: ['python'],
+                       evalButtonText: 'Evaluate (Python)'});
+</script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=015422183392601792159:vae7vvmmczm"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_brown_gold.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\def\modulus{\mathbin{\%}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="external/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Discrete Math for Shockers</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-objects-seqseries.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_logic_induction.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-objects-seqseries.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_sequences.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_logic_induction.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front-matter.html" data-scroll="front-matter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basics.html" data-scroll="ch_basics" class="internal"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a><ul>
+<li><a href="section-prop-logic.html" data-scroll="section-prop-logic" class="internal">Propositional Logic</a></li>
+<li><a href="sec_objects_sets.html" data-scroll="sec_objects_sets" class="internal">Sets</a></li>
+<li><a href="sec_relationsfunctions.html" data-scroll="sec_relationsfunctions" class="internal">Relations and Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="ch_logic" class="internal"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="section-logic-equivalences.html" data-scroll="section-logic-equivalences" class="internal">Logical Equivalences</a></li>
+<li><a href="sec_application_set_proofs.html" data-scroll="sec_application_set_proofs" class="internal">Application: Set Equivalences</a></li>
+<li><a href="section-logic-quantifiers.html" data-scroll="section-logic-quantifiers" class="internal">Propositional Functions and Quantifiers</a></li>
+<li><a href="section-logic-arguments.html" data-scroll="section-logic-arguments" class="internal">Logical Arguments</a></li>
+<li><a href="section-logic-proofs.html" data-scroll="section-logic-proofs" class="internal">An introduction to proofs</a></li>
+<li><a href="section-prop-supplementatal.html" data-scroll="section-prop-supplementatal" class="internal">Chapter Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_numtheory.html" data-scroll="ch_numtheory" class="internal"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a><ul>
+<li><a href="section-numtheory-divcong.html" data-scroll="section-numtheory-divcong" class="internal">Divisibility and Congruences</a></li>
+<li><a href="section-primes.html" data-scroll="section-primes" class="internal">Prime Numbers</a></li>
+<li><a href="section-gcd-euclid.html" data-scroll="section-gcd-euclid" class="internal">GCDs and The Euclidean Algorithm</a></li>
+<li><a href="section-multiplicative-inverses.html" data-scroll="section-multiplicative-inverses" class="internal">Multiplicative Inverses</a></li>
+<li><a href="section-numtheory-modularexp.html" data-scroll="section-numtheory-modularexp" class="internal">Modular exponentiation</a></li>
+<li><a href="section-numtheory-encryption.html" data-scroll="section-numtheory-encryption" class="internal">Application: Encryption</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="ch_sequences" class="internal"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a><ul>
+<li><a href="section-objects-seqseries.html" data-scroll="section-objects-seqseries" class="internal">Sequences and Series</a></li>
+<li><a href="section-solvingrecurrences.html" data-scroll="section-solvingrecurrences" class="active">Solving Recurrence Relations</a></li>
+<li><a href="sec_logic_induction.html" data-scroll="sec_logic_induction" class="internal">Mathematical Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="ch_counting" class="internal"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-counting-basics.html" data-scroll="section-counting-basics" class="internal">The Multiplicative and Additive Principles</a></li>
+<li><a href="section-counting-combperm.html" data-scroll="section-counting-combperm" class="internal">Permutations and Combinations</a></li>
+<li><a href="section-counting-binomial.html" data-scroll="section-counting-binomial" class="internal">Combinatorial Proofs</a></li>
+<li><a href="section-counting-fib.html" data-scroll="section-counting-fib" class="internal">Counting Fibonacci numbers with tiles</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Solutions to the exercises</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-solvingrecurrences"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Solving Recurrence Relations</span>
+</h2>
+<section class="subsection" id="subsection-54"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Motivation, or, why do I care?</span>
+</h3>
+<p id="p-1088">Let's imagine that we wanted to find the 10,000th term of the sequence <span class="process-math">\({ a_n = a_{n-2} }\)</span> with <span class="process-math">\({ a_0 =1, a_1 = 3 }\text{.}\)</span> The sequence is very simple: <span class="process-math">\({ \{1, 3, 1, 3, 1, 3, \dots\} }\text{.}\)</span></p>
+<p id="p-1089">It turns out that the solution to this recurrence is <span class="process-math">\(a_n = 2+(-1)^{n+1}\text{.}\)</span> We can directly compute the value, and it takes Sage about 150 microseconds to give us the answer:</p>
+<pre class="ptx-sagecell sagecell-sage" id="sage-12"><script type="text/x-sage">%%time
+def nonrec(x): return 2 + pow(-1, x+1);
+    print(nonrec(10000))
+</script></pre>
+<p id="p-1090">But if we wanted to actually have the computer find the 10,000th value via the recursive definition, Sage (computing via Python) can't even do it:</p>
+<pre class="ptx-sagecell sagecell-sage" id="sage-13"><script type="text/x-sage">%%time
+def recursive(x):
+    if x == 0:
+        return 1;
+    elif x == 1:
+        return 3;
+    else:
+        return recursive(x-2)
+
+print(recursive(10000))
+</script></pre>
+<p id="p-1091">Explicit solutions are better when we want to be able to actually determine specific values of a recurrence.</p></section><section class="subsection" id="subsection-55"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Solving recurrence relations</span>
+</h3>
+<article class="example example-like" id="example-106"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
+</h4>
+<p id="p-1092">The Towers of Hanoi is a puzzle with the goal of moving all disks from one peg to another peg. The puzzle has the following rules:</p>
+<ol class="decimal">
+<li id="li-968"><p id="p-derived-li-968">Place all the disks on the first peg in order of size with the largest on bottom.</p></li>
+<li id="li-969"><p id="p-derived-li-969">Move one disk at a time to any other peg. A move is valid only if a smaller disk is placed on top a larger one.</p></li>
+</ol>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/Tower_of_Hanoi_4.gif" class="contained" alt="The Animation of the Towers of Hanoi puzzle by André Karwath. There are three pegs and in this picture four disks. The animation proceeds to show moving the top disk to the far right peg. The next disk to the middle peg, then the smallest disk to the second peg... and so on until we have moved all disks to the third peg."></div>
+<p id="p-1093">Let <span class="process-math">\(H_n\)</span> denote the number of moves to solve the puzzle with <span class="process-math">\(n\)</span> disks. Our goal is to find a solution to the sequence <span class="process-math">\(\{H_n\}\text{.}\)</span></p>
+<ol class="decimal">
+<li id="li-970"><p id="p-derived-li-970">What is the recurrence relation that describes <span class="process-math">\(H_n\)</span> in terms of previous values?</p></li>
+<li id="li-971"><p id="p-derived-li-971">Solve the recurrence relation.</p></li>
+<li id="li-972"><p id="p-derived-li-972">The story accompanying the puzzle says that monks are currently solving the puzzle with 64 golden disks, and that the world will end when they finally solve the puzzle. Should we be concerned? Why or why not?</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-86" id="answer-86"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-86"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-89" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/aFZJ5XArC-s?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-107"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
+</h4>
+<p id="p-1094">Recall that a bit string is a string containing only 0's and 1's. How many bit strings of length <span class="process-math">\(n\)</span> do not contain three consecutive 0's?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-87" id="answer-87"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-87"><div class="answer solution-like">
+<p id="p-1095">In this video I miscounted the number of bitstrings of length 4. I said <span class="process-math">\(a_4 = 15\)</span> but if you actually count the number of bitstrings, there's only <span class="process-math">\(a_4 = 13\text{.}\)</span> Oops!😅</p>
+<p id="p-1096">Note that our solution to the recurrence,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n = a_{n-1} + a_{n-2} + a_{n-3}
+\end{equation*}
+</div>
+<p class="continuation">with <span class="process-math">\(a_1 = 2, a_2 = 4,\)</span> and <span class="process-math">\(a_3 = 7\)</span> is still correct, and matches:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_4 = 7 + 4  +2 = 13\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which is what I should have found.</p>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-90" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/4ENaXarcKzM?&amp;modestbranding=1&amp;rel=0"></iframe></div>
+</div></div>
+</div></article><article class="example example-like" id="example-fifth-degree-recurrence"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
+</h4>
+<p id="p-1097">A vending machine dispensing books of stamps accepts $1 coins, $1 bills, and 5 bills. Find a recurrence relation for the number of ways to deposit <span class="process-math">\(n\)</span> dollars in the vending machine, where the order in which the bills are deposited matters.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-88" id="answer-88"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-88"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-91" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/oigH5x633sI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Solving particularly nice recurrence relations</span>
+</h3>
+<article class="definition definition-like" id="definition-56"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Linear, Homogeneous Recurrence Relations of Degree k.</span>
+</h4>
+<p id="p-1098">A <dfn class="terminology">linear homogeneous recurrence relation of degree <span class="process-math">\(k\)</span> with constant coefficients</dfn> is a recurrence relation of the form</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n = c_1 a_{n-1} + c_2a_{n-2} + \dots + c_k a_{n-k}
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(c_1, c_2, \dots , c_k\)</span> are real numbers with <span class="process-math">\(c_k \not=0\text{.}\)</span></p>
+<article class="example example-like" id="example-109"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
+</h5>
+<ol id="p-1099" class="decimal">
+<li id="li-973"><p id="p-derived-li-973">The Fibonacci sequence: <span class="process-math">\(F_n = F_{n-1} + F_{n-2}\)</span> is linear, and its coefficients are 1 and 1. The degree is 2.</p></li>
+<li id="li-974"><p id="p-derived-li-974"><span class="process-math">\(D_n = 2D_{n-1} + D_{n-5}\)</span> is linear, and it coefficients are 2, 0, 0, 0, 1. Its degree is 5.</p></li>
+</ol></article></article><p id="p-1100">For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward and takes away from focusing on the new material.</p>
+<p id="p-1101">Now let's play with how we can actually solve this type of recurrence. Let's pretend that <span class="process-math">\(a_n = r^n\)</span> is a solution to the (degree two) recurrence relation <span class="process-math">\(a_n = c_1 a_{n-1} + c_2 a_{n-2}\)</span> for some variable <span class="process-math">\(r\text{.}\)</span></p>
+<p id="p-1102">Let's plug it in to the recurrence and simplify:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-55">
+\begin{align*}
+\displaystyle a_n &amp;= c_1 a_{n-1} + c_2a_{n-2} \\
+\displaystyle r^n &amp;= c_1 r^{n-1} + c_2r^{n-2} \\
+\text{ Divide both sides by } r^{n-2}\\
+\displaystyle r^2 &amp;= c_1 r + c_2\\
+\displaystyle r^2 - c_1 r - c_2 &amp;= 0
+\end{align*}
+</div>
+<p class="continuation">This equation, <span class="process-math">\(r^2 - c_1 r - c_2 = 0\text{,}\)</span> is a quadratic equation in the variable <span class="process-math">\(r\text{,}\)</span> and we'll give it a special name.</p>
+<article class="definition definition-like" id="definition-57"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Characteristic Equation.</span>
+</h4>
+<p id="p-1103">We call the equation <span class="process-math">\(\displaystyle r^2 - c_1 r - c_2= 0\)</span> the <dfn class="terminology">characteristic equation</dfn> of the recurrence relation. The solutions to this equation are the <dfn class="terminology">characteristic roots</dfn>.</p></article><article class="theorem theorem-like" id="theorem-7"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
+</h4>
+<p id="p-1104">Let <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> be real numbers. Suppose that the characteristic equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+r^2 - c_1 r - c_2 = 0
+\end{equation*}
+</div>
+<p class="continuation">has two distinct roots <span class="process-math">\(r_1\)</span> and <span class="process-math">\(r_2\text{.}\)</span> Then the sequence <span class="process-math">\(\{a_n\}\)</span> is a solution to the recurrence relation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n = c_1 a_{n-1} + c_2 a_{n-2}
+\end{equation*}
+</div>
+<p class="continuation">if, and only if</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n = \alpha_1 r_1^n + \alpha_2 r_2^n
+\end{equation*}
+</div>
+<p class="continuation">for <span class="process-math">\(n = 0, 1, 2, \dots\)</span> and <span class="process-math">\(\alpha_1\)</span> and <span class="process-math">\(\alpha_2\)</span> are constants.</p></article><article class="example example-like" id="example-110"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.8</span><span class="period">.</span>
+</h4>
+<p id="p-1105">Solve <span class="process-math">\(a_n = a_{n-1} + 2a_{n-2}\)</span> where <span class="process-math">\(a_0=2\)</span> and <span class="process-math">\(a_1=7\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-89" id="answer-89"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-89"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-92" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/JicG-l7ohfA?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-147" id="solution-147"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-147"><div class="solution solution-like">
+<p id="p-1106">After using the characteristic root method, we find the answer is <span class="process-math">\(a_n = 3\cdot 2^{n} + (-1)^{n+1}\text{.}\)</span> We can confirm our answer by comparing this explicit solution with the recursive version using Python!</p>
+<pre class="ptx-sagecell hidden-sagecell-sage" id="sage-14"><script type="text/x-sage">def f(n):
+    return 3*pow(2,n)+pow(-1, n+1)
+
+def recur(n):
+    if n==0:
+        return 2
+    elif n==1:
+        return 7
+    else:
+        return recur(n-1) + 2*recur(n-2)
+
+print("Using the explicit solution: " + str(list(map(f,range(0,10)))))
+print("\n")
+print("Recursive sequence: " + str(list(map(recur,range(0, 10)))))
+</script></pre>
+</div></div>
+</div></article><article class="theorem theorem-like" id="theorem-8"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.9</span><span class="period">.</span>
+</h4>
+<p id="p-1107">Let <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> be real numbers. Suppose that the characteristic equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+r^2 - c_1 r - c_2 = 0
+\end{equation*}
+</div>
+<p class="continuation">has one and only one root <span class="process-math">\(r_1\text{.}\)</span> Then the sequence <span class="process-math">\(\{a_n\}\)</span> is a solution to the recurrence relation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n = c_1 a_{n-1} + c_2 a_{n-2}
+\end{equation*}
+</div>
+<p class="continuation">if, and only if</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n = \alpha_1 r_1^n + \alpha_2 n r_1^n
+\end{equation*}
+</div>
+<p class="continuation">for <span class="process-math">\(n = 0, 1, 2, \dots\)</span> and <span class="process-math">\(\alpha_1\)</span> and <span class="process-math">\(\alpha_2\)</span> are constants.</p></article><p id="p-1108">Note the small differences between these statements. It is significant with respect to how you solve the sequence.</p>
+<article class="example example-like" id="example-111"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span>
+</h4>
+<p id="p-1109">Solve <span class="process-math">\(a_n = 4a_{n-1} - 4a_{n-2}\)</span> where <span class="process-math">\(a_0=6\)</span> and <span class="process-math">\(a_1=8\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-90" id="answer-90"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-90"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-93" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Xj2WqRX4Qb0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-112"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.11</span><span class="period">.</span>
+</h4>
+<p id="p-1110">Find an explicit formula for the Fibonacci numbers, <span class="process-math">\(F_n = F_{n-1} + F_{n-2}\)</span> with <span class="process-math">\(F_0 = 0\)</span> and <span class="process-math">\(F_1 = 1\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-91" id="answer-91"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-91"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-94" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/d3WhI-QaqBE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-7an-1-12an-2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.12</span><span class="period">.</span>
+</h4>
+<p id="p-1111">Solve <span class="process-math">\(a_n = 7a_{n-1} - 12a_{n-2}\)</span> with <span class="process-math">\(a_0 = 12\)</span> and <span class="process-math">\(a_1 = 48\)</span></p></article><a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-92" id="answer-92"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-92"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-95" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/WiTOTycl1dg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></section><section class="subsection" id="sec-recurrences-with-python"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Computer Corner</span>
+</h3>
+<p id="p-1112">This computer corner isn't about a particular connection to computer science but rather just helping explain some of the Python functions I've used above as we checked our answers. You can use this to check your own answers! We'll walk through, changing one piece of code at a time as we build up our building blocks.</p>
+<aside class="aside aside-like" id="aside-20"><p id="p-1113">Here we're highlighting that sequences are actually just functions, and we can compute them via CS functions. They just happen to be functions defined only on <span class="process-math">\(\N\)</span></p></aside><p id="p-1114">In Python, <a class="external" href="https://www.w3schools.com/python/python_functions.asp" target="_blank">you define a function</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a> by writing <code class="code-inline tex2jax_ignore">def functionName(x):</code> where <code class="code-inline tex2jax_ignore">x</code> is the input variable and the colon is not optional. Everything inside the function <em class="emphasis">must</em> be indented!</p>
+<p id="p-1115">Here's an example function that squares whatever is input.</p>
+<pre class="ptx-sagecell sagecell-python" id="sage-15"><script type="text/x-sage">def square(x):
+    return x*x   #this means x times itself
+
+# print 5^2
+print(square(5))
+</script></pre>
+<p id="p-1116">The <a class="external" href="https://www.w3schools.com/python/ref_func_map.asp" target="_blank"><code class="code-inline tex2jax_ignore">map</code> function</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a> takes two inputs, the first is a function and the second is a list.  <code class="code-inline tex2jax_ignore">map</code> applies the function to each and every input in the list. It does this <em class="emphasis">lazily</em>, though, meaning that if you just call <code class="code-inline tex2jax_ignore">map(square, [1,2,3,4])</code>, you'll be returned a <em class="emphasis">promise</em> that Python will actually do the computation in the future. Here's what I mean:</p>
+<pre class="ptx-sagecell sagecell-python" id="sage-16"><script type="text/x-sage">def square(x):
+    return x*x
+
+# Ask Python to print the results of our map
+print(map(square, [1,2,3,4]))
+</script></pre>
+<p id="p-1117">... Python returns <code class="code-inline tex2jax_ignore">map object at somememoryaddress</code> because it refers to a map that hasn't actually been computed. If we want to actually find the value, we will explicitly ask Python to return a list of values.  Wrap <code class="code-inline tex2jax_ignore">map</code> into a <code class="code-inline tex2jax_ignore">list</code> function call.</p>
+<pre class="code-display tex2jax_ignore">    print(list(map(square, [1,2,3,4])))</pre>
+<p id="p-1118">Next, instead of typing <code class="code-inline tex2jax_ignore">[1, 2, 3, 4]</code>, we can use <code class="code-inline tex2jax_ignore">range(1, 5)</code> to return the same list. <code class="code-inline tex2jax_ignore">range(a,b)</code> returns all integers <span class="process-math">\(a \le x \lt b\text{.}\)</span> Change the code above, replacing the typed-out list with a range:</p>
+<pre class="code-display tex2jax_ignore">    print(list(map(square, range(1, 5))))</pre>
+<p id="p-1119">There's one more feature we need. If we want to write an arbitrary power (such as <span class="process-math">\(x^2\)</span> or even <span class="process-math">\(2^x\)</span>), we use the <a class="external" href="https://www.w3schools.com/python/ref_func_pow.asp" target="_blank"><code class="code-inline tex2jax_ignore">pow</code> function</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a>. For example, <span class="process-math">\(x^2\)</span> is <code class="code-inline tex2jax_ignore">pow(x,2)</code>, which <span class="process-math">\(2^x\)</span> is <code class="code-inline tex2jax_ignore">pow(2,x)</code>. Try rewriting our square function to use it in place of <code class="code-inline tex2jax_ignore">x*x</code>.</p>
+<p id="p-1120">Now we can put it all together to check our solutions to recurrence relations. For example, in example <a href="" class="xref" data-knowl="./knowl/example-7an-1-12an-2.html" title="Example 4.2.12">Example 4.2.12</a>, we found the solution was <span class="process-math">\(a_n = 3\cdot 4^{n+1}\text{,}\)</span> then we can build the function <code class="code-inline tex2jax_ignore">a(n)</code> that returns the right-side:</p>
+<pre class="ptx-sagecell sagecell-python" id="sage-17"><script type="text/x-sage">def a(n):
+    return 3*pow(4, n+1)
+
+# Ask Python to find the first 10 elements of the sequence, starting from the 0th element
+print(list(map(a, range(0, 10))))
+</script></pre>
+<p id="p-1121">We can compare that against the recursive version of the sequence by writing the recursive function (the function calls itself):</p>
+<pre class="ptx-sagecell sagecell-python" id="sage-18"><script type="text/x-sage">def recur(n):
+    if n==0:  # a_0 = 12
+        return 12
+    elif n==1:  # a_1 = 48
+        return 48
+    else:  # a_n = 7*a_{n-1} - 12*a_{n-2}
+        return 7*recur(n-1) - 12*recur(n-2)
+
+# Ask Python to find the first 10 elements of the sequence, starting from the 0th element
+print(list(map(recur, range(0, 10))))
+</script></pre>
+<p id="p-1122">It worked! Hooray!  If you have questions about it, please don't hesitate to ask me.</p></section><section class="exercises" id="exercises-17"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-129"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-1123">Find a recurrence relation for the number of ways to give someone <span class="process-math">\(n\)</span> dollars if you have 1 dollar coins, 2 dollar coins, 2 dollar bills, and 4 dollar bills where the order in which the coins and bills are paid matters.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-148" id="solution-148"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-148"><div class="solution solution-like"><p id="p-1124"><span class="process-math">\(a_n = a_{n-1} + 2a_{n-2} + a_{n-4}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-130"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1125">Solve the recurrence relation <span class="process-math">\(a_n = a_{n-1} + 2^n\)</span> with <span class="process-math">\(a_0 = 5\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-149" id="solution-149"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-149"><div class="solution solution-like">
+<p id="p-1126"><span class="process-math">\(a_n = 3 + 2^{n+1}\text{.}\)</span>  We should use telescoping or iteration here.  For example, telescoping gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-56">
+\begin{align*}
+a_1 - a_0 \amp = 2^1\\
+a_2 - a_1 \amp = 2^2\\
+a_3 - a_2 \amp = 2^3\\
+\vdots\amp \vdots \\
+a_n - a_{n-1} \amp = 2^n
+\end{align*}
+</div>
+<p class="continuation">which “telescopes” to <span class="process-math">\(a_n - a_0 = 2^{n+1} - 2\text{.}\)</span>  Substituting <span class="process-math">\(a_0 = 5\)</span> and solving for <span class="process-math">\(a_n\)</span> completes the solution.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-131"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-1127">Show that <span class="process-math">\(4^n\)</span> is a solution to the recurrence relation <span class="process-math">\(a_n = 3a_{n-1} + 4a_{n-2}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-150" id="solution-150"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-150"><div class="solution solution-like"><p id="p-1128">We claim <span class="process-math">\(a_n = 4^n\)</span> works. Plug it in: <span class="process-math">\(4^n = 3(4^{n-1}) + 4(4^{n-2})\text{.}\)</span> This works - just simplify the right-hand side.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-132"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-1129">Find the solution to the recurrence relation <span class="process-math">\(a_n = 3a_{n-1} + 4a_{n-2}\)</span> with initial terms <span class="process-math">\(a_0 = 2\)</span> and <span class="process-math">\(a_1 = 3\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-151" id="solution-151"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-151"><div class="solution solution-like"><p id="p-1130">By the Characteristic Root Technique. <span class="process-math">\(a_n = 4^n + (-1)^n\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-133"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-1131">Find the solution to the recurrence relation <span class="process-math">\(a_n = 3a_{n-1} + 4a_{n-2}\)</span> with initial terms <span class="process-math">\(a_0 = 5\)</span> and <span class="process-math">\(a_1 = 8\)</span> using the characteristic root method..</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-152" id="solution-152"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-152"><div class="solution solution-like"><p id="p-1132"><span class="process-math">\(a_n = \frac{13}{5}(4)^n + \frac{12}{5}(-1)^n\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-134"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-1133">While walking up stairs you notice that you have a habit of using 3 ways of taking one step and 4 ways of taking two steps at a time. Find a recurrence relation for the number of ways to go up <span class="process-math">\(n\)</span> steps. Solve the recurrence relation given the initial conditions of <span class="process-math">\(a_0 = 1\)</span> and <span class="process-math">\(a_1 = 3\)</span> using the characteristic root method.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-153" id="solution-153"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-153"><div class="solution solution-like"><p id="p-1134">The recurrence is <span class="process-math">\(a_n = 3a_{n-1} + 4a_{n-2}\text{.}\)</span> The solution with the given initial conditions is <span class="process-math">\(a_n = \frac{4^{n+1}}{5} + \frac{(-1)^n}{5}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-135"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-1135">Solve the recurrence <span class="process-math">\(a_n = 3a_{n-1} + 40a_{n-2}\)</span> where <span class="process-math">\(a_0 = 5\)</span> and <span class="process-math">\(a_1 = 14\)</span> using the characteristic root method.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-154" id="solution-154"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-154"><div class="solution solution-like"><p id="p-1136"><span class="process-math">\(a_n = 3(8)^n + 2(-5)^n\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-136"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-1137">Solve the recurrence <span class="process-math">\(a_n = 4a_{n-1} + 21a_{n-2}\)</span> where <span class="process-math">\(a_0 = 18\)</span> and <span class="process-math">\(a_1 = 366\)</span> using the characteristic root method.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-155" id="solution-155"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-155"><div class="solution solution-like"><p id="p-1138"><span class="process-math">\(a_n = 42 (7)^n - 24(-3)^n\)</span> you could write <span class="process-math">\(a_n = 6(7)^{n+1} + 8(-3)^{n+1}\)</span></p></div></div>
+</div></article></section><section class="subsection" id="subsection-58"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Forum Posts about this section</span>
+</h3>
+<div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
+<script xmlns:xi="http://www.w3.org/2001/XInclude" type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 299 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.w3schools.com/python/python_functions.asp</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.w3schools.com/python/ref_func_map.asp</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.w3schools.com/python/ref_func_pow.asp</code></div></div>
+</div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-02T16:32:12-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Relations and Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Math for Shockers">
+<meta property="book:author" content="John Hammond">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=015422183392601792159:vae7vvmmczm"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_brown_gold.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\def\modulus{\mathbin{\%}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="external/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Discrete Math for Shockers</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_objects_sets.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_basics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch_logic.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_objects_sets.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_basics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch_logic.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="front-matter.html" data-scroll="front-matter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basics.html" data-scroll="ch_basics" class="internal"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a><ul>
+<li><a href="section-prop-logic.html" data-scroll="section-prop-logic" class="internal">Propositional Logic</a></li>
+<li><a href="sec_objects_sets.html" data-scroll="sec_objects_sets" class="internal">Sets</a></li>
+<li><a href="sec_relationsfunctions.html" data-scroll="sec_relationsfunctions" class="active">Relations and Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_logic.html" data-scroll="ch_logic" class="internal"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a><ul>
+<li><a href="section-logic-equivalences.html" data-scroll="section-logic-equivalences" class="internal">Logical Equivalences</a></li>
+<li><a href="sec_application_set_proofs.html" data-scroll="sec_application_set_proofs" class="internal">Application: Set Equivalences</a></li>
+<li><a href="section-logic-quantifiers.html" data-scroll="section-logic-quantifiers" class="internal">Propositional Functions and Quantifiers</a></li>
+<li><a href="section-logic-arguments.html" data-scroll="section-logic-arguments" class="internal">Logical Arguments</a></li>
+<li><a href="section-logic-proofs.html" data-scroll="section-logic-proofs" class="internal">An introduction to proofs</a></li>
+<li><a href="section-prop-supplementatal.html" data-scroll="section-prop-supplementatal" class="internal">Chapter Review</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_numtheory.html" data-scroll="ch_numtheory" class="internal"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a><ul>
+<li><a href="section-numtheory-divcong.html" data-scroll="section-numtheory-divcong" class="internal">Divisibility and Congruences</a></li>
+<li><a href="section-primes.html" data-scroll="section-primes" class="internal">Prime Numbers</a></li>
+<li><a href="section-gcd-euclid.html" data-scroll="section-gcd-euclid" class="internal">GCDs and The Euclidean Algorithm</a></li>
+<li><a href="section-multiplicative-inverses.html" data-scroll="section-multiplicative-inverses" class="internal">Multiplicative Inverses</a></li>
+<li><a href="section-numtheory-modularexp.html" data-scroll="section-numtheory-modularexp" class="internal">Modular exponentiation</a></li>
+<li><a href="section-numtheory-encryption.html" data-scroll="section-numtheory-encryption" class="internal">Application: Encryption</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sequences.html" data-scroll="ch_sequences" class="internal"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a><ul>
+<li><a href="section-objects-seqseries.html" data-scroll="section-objects-seqseries" class="internal">Sequences and Series</a></li>
+<li><a href="section-solvingrecurrences.html" data-scroll="section-solvingrecurrences" class="internal">Solving Recurrence Relations</a></li>
+<li><a href="sec_logic_induction.html" data-scroll="sec_logic_induction" class="internal">Mathematical Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_counting.html" data-scroll="ch_counting" class="internal"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-counting-basics.html" data-scroll="section-counting-basics" class="internal">The Multiplicative and Additive Principles</a></li>
+<li><a href="section-counting-combperm.html" data-scroll="section-counting-combperm" class="internal">Permutations and Combinations</a></li>
+<li><a href="section-counting-binomial.html" data-scroll="section-counting-binomial" class="internal">Combinatorial Proofs</a></li>
+<li><a href="section-counting-fib.html" data-scroll="section-counting-fib" class="internal">Counting Fibonacci numbers with tiles</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Solutions to the exercises</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_relationsfunctions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Relations and Functions</span>
+</h2>
+<section class="introduction" id="introduction-4"><p id="p-207">Now that we have sets, we introduce a new object that connects one set to another. We call this object a relation. We'll also see that if a relation has some particularly “nice” properties, we'll call it a function.</p></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Relations</span>
+</h3>
+<article class="definition definition-like" id="definition-15"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Relations.</span>
+</h4>
+<p id="p-208">A mathematical <dfn class="terminology">relation, <span class="process-math">\(\mathrel{R}\text{,}\)</span> between two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span></dfn> is a collection of ordered pairs from the two sets. Expressed symbolically, <span class="process-math">\(\mathrel{R} \subseteq A \times B\text{.}\)</span>  This is sometimes called a <dfn class="terminology">binary relation</dfn> because it relates two sets.</p>
+<p id="p-209">We call set <span class="process-math">\(A\)</span> the <dfn class="terminology">domain</dfn> and the set <span class="process-math">\(B\)</span> the <dfn class="terminology">codomain</dfn>.</p>
+<p id="p-210">If <span class="process-math">\(a\)</span> is related to <span class="process-math">\(b\)</span> we will write <span class="process-math">\(a \mathrel{R} b\)</span> or <span class="process-math">\((a,b) \in \mathrel{R}\text{.}\)</span> If two elements <span class="process-math">\(c \)</span> and <span class="process-math">\(d\)</span> are not related, we write <span class="process-math">\(c \cancel{\mathrel{R}} d\text{.}\)</span></p>
+<aside class="aside aside-like" id="aside-5"><p id="p-211">The statement <span class="process-math">\(a \mathrel{R} b\)</span> is a logical statement whose truth value is true if the two elements are related and false if the two statements are not related.</p></aside></article><p id="p-212">Because a (binary) relation is a collection of ordered pairs from two sets, a relation is actually just a set itself, but that set carries particular meaning about its individual components.</p>
+<article class="example example-like" id="ex_sib"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
+</h4>
+<p id="p-213">If we consider <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> to both be the set of people in your family, and let <span class="process-math">\(\mathrel{R}\)</span> be the relation “<span class="process-math">\(a\)</span> is a sibling of <span class="process-math">\(b\text{.}\)</span>” Here's an example of my family in two graphical representations. What are the ordered pairs that make up the relation?</p>
+<p id="p-214"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
+<div class="sbspanel middle" style="width:37.5%;"><img src="generated/latex-image/graph-sib.svg" role="img" class="contained" alt="Standard Cartesian graph showing my siblings. The horizontal and vertical axes are family members, labeled John, Eric, and Sarah. There is a dot on the graph when the two are related, so dots at (John, Eric), (John, Sarah), (Eric, John), (Eric, Sarah), (Sarah, John), and (Sarah, Eric)."></div>
+<div class="sbspanel middle" style="width:37.5%;"><img src="generated/latex-image/my-family-graph.svg" role="img" class="contained" alt="Graph of two sets A and B. Elements on the left are John, Eric, and Sarah; elements on the right are John, Eric and Sarah. There is a line from John to Eric and John to Sarah; a line from Eric to John and Eric to Sarah; and a line from Sarah to John and Sarah to Eric."></div>
+</div></div></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-14" id="answer-14"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-14" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/2-mT6s29iy8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like">
+<p id="p-215">Looking that the points on the graph, we see that the relation will be the set of ordered pairs:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+\begin{align*}
+\text{Siblings} = \amp\{(\text{John}, \text{Eric}), (\text{John}, \text{Sarah}),
+(\text{Eric}, \text{John}), \\
+\amp (\text{Eric}, \text{Sarah}), (\text{Sarah}, \text{Eric}),(\text{Sarah}, \text{John})\} 
+\end{align*}
+</div>
+<p class="continuation">Notice that these ordered pairs correspond to the lines on the graph diagram with each of the first coordinates being connected to the second coordinate. E.g. an arrow goes from John to Eric.</p>
+</div></div>
+</div></article><article class="example example-like" id="ex_divides_relation"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Divides Relation.</span>
+</h4>
+<p id="p-216">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> both be the set of integers from 1 to 10, and define the relation by <span class="process-math">\(a \mathrel{R} b\)</span> means that <span class="process-math">\(a\)</span> evenly divides into <span class="process-math">\(b\)</span> with no remainder.</p>
+<p id="p-217">Here are some examples of the divides relation:</p>
+<ul class="disc">
+<li id="li-207"><p id="p-derived-li-207"><span class="process-math">\(2 \mathrel{R} 4\)</span> since 2 divides into 4 evenly.  There is no remainder.</p></li>
+<li id="li-208"><p id="p-derived-li-208">Similarly, <span class="process-math">\(5 \mathrel{R} 5\)</span> since it divides into itself. No remainder.</p></li>
+<li id="li-209"><p id="p-derived-li-209"><span class="process-math">\(3 \cancel{\mathrel{R}} 4\)</span> since 3 doesn't divide into 4. The remainder is 1.</p></li>
+<li id="li-210"><p id="p-derived-li-210"><span class="process-math">\(6 \cancel{\mathrel{R}} 3\)</span> since 6 doesn't divide into 3. The remainder is 3.</p></li>
+</ul>
+<p class="continuation">Now, complete the following questions:</p>
+<ol class="decimal">
+<li id="li-211"><p id="p-218"> Complete the following graph of the relation below, where a point on <span class="process-math">\((x,y)\)</span> means that <span class="process-math">\(x \)</span> divides evenly into <span class="process-math">\(y\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/graph-relation-blank.svg" role="img" class="contained" alt="'blank' Cartesian graph to complete. Horizontal axis is integers 1 through 10; vertical axis is integers 1 through 10."></div></p></li>
+<li id="li-212"><p id="p-219">Now list all ordered pairs in the relation.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-15" id="answer-15"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like">
+<p id="p-220">The complete listing of the relation is:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+\begin{align*}
+R= \amp\{(1,1),(1,2),(1,3),(1,4),(1,5),\\
+\amp(1,6),(1,7), (1,8),(1,9),(1,10),\\
+\amp(2,2),(2,4),(2,6),(2,8),(2,10),\\
+\amp(3,3),(3,6),(3,9),(4,4),(4,8),\\
+\amp(5,5),(5,10),(6,6),(7,7),(8,8),(9,9),(10,10)\}
+\end{align*}
+</div>
+<p id="p-221">and a video for the graph: <div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-15" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/0CiMkIDNe7E?&amp;modestbranding=1&amp;rel=0"></iframe></div></p>
+</div></div>
+</div></article><article class="example example-like" id="example-15"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span>
+</h4>
+<p id="p-222">The domain and codomain don't have to be the same. For example, let <span class="process-math">\(\mathrel{R}\)</span> be the relation from the set of people in discrete math class to the natural numbers which maps a person to their height in inches. In this example, (John, 76) <span class="process-math">\(\in \mathrel{R}\text{.}\)</span> What ordered pair represents you?</p></article><article class="example example-like" id="example-16"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span>
+</h4>
+<p id="p-223">Let <span class="process-math">\(\mathrel{R}\)</span> be the relation from <span class="process-math">\(\Z\)</span> to <span class="process-math">\(\Z\)</span> where we say <span class="process-math">\(a \mathrel{R} b\)</span> if <span class="process-math">\(a^2 = b\text{.}\)</span></p>
+<ol class="decimal">
+<li id="li-213"><p id="p-derived-li-213">List the first few ordered pairs of the relation for <span class="process-math">\(a = 0, 1, 2, \dots 5\text{.}\)</span></p></li>
+<li id="li-214"><p id="p-224">Plot points for the graph of <span class="process-math">\(\mathrel{R}\)</span> for <span class="process-math">\(a =-3, -2, -1, 0, 1, 2, 3\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/graph-relation-squares.svg" role="img" class="contained" alt="Blank Cartesian graph for plotting squares. Horizontal axis is labeled a and goes from -3 to 3. Vertical axis is labeled b and goes from 0 to 9"></div></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-16" id="answer-16"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-16" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/S0CTis66gd8?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="definition definition-like" id="definition-16"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse of Relations.</span>
+</h4>
+<p id="p-225">Let <span class="process-math">\(R\)</span> be a relation between sets <span class="process-math">\(A \and B\text{.}\)</span> The <dfn class="terminology">inverse relation</dfn> of <span class="process-math">\(R\)</span> is the relation that assigns to each element <span class="process-math">\(b\in B\)</span> an element <span class="process-math">\(a \in A\text{.}\)</span> We denote the inverse by <span class="process-math">\(R^{-1}\text{,}\)</span> so that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a \mathrel{R} b \iff b \mathrel{R^{-1}} a
+\end{equation*}
+</div>
+<p class="continuation">for <span class="process-math">\(a \in A \and b \in B\text{.}\)</span></p></article><article class="example example-like" id="example-relation-inverses"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span>
+</h4>
+<p id="p-226">For the purposes of this exercise, all numbers come from <span class="process-math">\(\R\)</span> and <span class="process-math">\(R_4\)</span> and <span class="process-math">\(R_5\)</span> are subsets of the set of people.</p>
+<p id="p-227">The relation <span class="process-math">\(R = \{(x, y) \mid y = 2x + 1\}\)</span> has the inverse <span class="process-math">\(R^{-1} = \{(x, y) \mid y = (x-1)/2\}\text{.}\)</span> Use this form to give inverses of the following relations:</p>
+<ol class="decimal">
+<li id="li-215"><p id="p-derived-li-215"><span class="process-math">\(\displaystyle R_1 = \{ (x,y) \mid y = -3x + 2\}\)</span></p></li>
+<li id="li-216"><p id="p-derived-li-216"><span class="process-math">\(\displaystyle R_2= \{ (x,y) \mid y = x^2 + 2\}\)</span></p></li>
+<li id="li-217"><p id="p-derived-li-217"><span class="process-math">\(\displaystyle R_3 = \{(x,y) \mid y \gt 3x - 4\}\)</span></p></li>
+<li id="li-218"><p id="p-derived-li-218"><span class="process-math">\(\displaystyle R_4 = \{(x,y) \mid y \text{ is the parent of } x \}\)</span></p></li>
+<li id="li-219"><p id="p-derived-li-219"><span class="process-math">\(\displaystyle R_5 = \{(x,y) \mid x \text{ is a sibling of } y \}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-17" id="answer-17"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-17" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/JM5WdUZmliI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Functions</span>
+</h3>
+<article class="definition definition-like" id="definition-17"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Functions.</span>
+</h4>
+<p id="p-228">A <dfn class="terminology">function from the set <span class="process-math">\(A\)</span> to the set <span class="process-math">\(B\)</span></dfn> is a relation with the property that exactly one element from <span class="process-math">\(B\)</span> is mapped to each element of the set <span class="process-math">\(A\text{.}\)</span></p>
+<ul class="disc">
+<li id="li-220"><p id="p-derived-li-220">We denote this relation by <span class="process-math">\(f:A\to B\)</span></p></li>
+<li id="li-221"><p id="p-derived-li-221">If <span class="process-math">\(b\in B\)</span> is the unique element assigned to <span class="process-math">\(a\in A\text{,}\)</span> we write <span class="process-math">\(f(a)=b\)</span></p></li>
+</ul>
+<p id="p-229">If <span class="process-math">\(f(a) = b\text{,}\)</span> we call</p>
+<ul class="disc">
+<li id="li-222"><p id="p-derived-li-222"><span class="process-math">\(b\)</span> is the <dfn class="terminology">image</dfn> of <span class="process-math">\(a\)</span> under the mapping</p></li>
+<li id="li-223"><p id="p-derived-li-223"><span class="process-math">\(a\)</span> is the <dfn class="terminology">preimage</dfn> of <span class="process-math">\(b\)</span> under the mapping</p></li>
+</ul>
+<p class="continuation">and we define the <dfn class="terminology">range</dfn> of the function <span class="process-math">\(f\)</span> to be the set of images of every element in the domain, <span class="process-math">\(A\text{,}\)</span> and often write the range by <span class="process-math">\(f(A)\text{.}\)</span> Note that the range is a subset of the codomain, <span class="process-math">\(f(A)\subseteq B\text{.}\)</span></p>
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-18" id="answer-18"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-18" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/3pBXG34ojDY?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></article><article class="note remark-like" id="note-4"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.3.9</span><span class="period">.</span>
+</h4>
+<p id="p-230">A function has two pieces of information:</p>
+<ol class="decimal">
+<li id="li-224"><p id="p-derived-li-224">Specification of two sets, the domain and codomain</p></li>
+<li id="li-225"><p id="p-derived-li-225">A mapping between those two sets</p></li>
+</ol>
+<p id="p-231">In this class, we will be using a variety of ways of describing the domain and codomain of a function, from writing <span class="process-math">\(f:A \to B\)</span> to describing them in words.</p></article><article class="example example-like" id="example-18"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.10</span><span class="period">.</span>
+</h4>
+<p id="p-232">Find the domain, codomain, and range of the following functions:</p>
+<ol class="decimal">
+<li id="li-226"><p id="p-derived-li-226">Let <span class="process-math">\(f: \mathbb{Z} \to \mathbb{Z}\)</span> be defined by <span class="process-math">\(f(x)=x^2\)</span></p></li>
+<li id="li-227"><p id="p-derived-li-227">Let <span class="process-math">\(g: \mathbb{R} \to \mathbb{R}\)</span> be defined by <span class="process-math">\(g(x)=x^2\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-19" id="answer-19"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-19" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/eDNgCcI8jL0?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="definition definition-like" id="definition-18"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Injective Functions.</span>
+</h4>
+<p id="p-233">A function <span class="process-math">\(f\)</span> is said to be  <dfn class="terminology">injective</dfn> or <dfn class="terminology">one-to-one</dfn> if and only if <span class="process-math">\(f(a) = f(b)\)</span> means that <span class="process-math">\(a = b\)</span> for all <span class="process-math">\(a \text{ and } b\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span>   </p></article><p id="p-234">To determine if a function <span class="process-math">\(f: A \to B\)</span> is injective, we show that if <span class="process-math">\(f(x) = f(y)\)</span> for arbitrary values <span class="process-math">\(x, y \in A\)</span> with <span class="process-math">\(x \not= y\text{,}\)</span> we conclude <span class="process-math">\(x=y\text{.}\)</span> (In a future section, we'll call this a direct proof).</p>
+<p id="p-235">To determine if a function <span class="process-math">\(f: A \to B\)</span> is not injective, we find particular elements <span class="process-math">\(x, y \in A\)</span> such that <span class="process-math">\(x \not= y\)</span> but <span class="process-math">\(f(x) = f(y)\)</span> (we'll call this finding a “counterexample”.)</p>
+<article class="example example-like" id="example-19"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.12</span><span class="period">.</span>
+</h4>
+<p id="p-236">Draw a graph of a function which is not injective. Draw also the graph of one that is.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-20" id="answer-20"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like">
+<p id="p-237">The following is a (silent) animation showing the graph of two functions, both have the algebraic expression <span class="process-math">\(f(x)=x^2\text{.}\)</span> The first maps <span class="process-math">\(f: \R \to \R\text{,}\)</span> which is not injective since, for example, <span class="process-math">\(f(-2)=f(2)\text{,}\)</span> but <span class="process-math">\(-2\ne 2\text{,}\)</span> while the second maps <span class="process-math">\(f:[0, \infty)\to \R\text{,}\)</span> and it is injective.</p>
+<aside class="aside aside-like" id="aside-6"><p id="p-238">This is my first thing I ever created with Manim, the math animation python package. I'm still learning...</p></aside><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="video-20" class="video" controls=""><source src="external/InjectiveExplorationX2.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
+</div></div>
+</div></article><article class="example example-like" id="example-20"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.13</span><span class="period">.</span>
+</h4>
+<p id="p-239">Determine if the following functions are injective. If so, prove it. If not, provide a specific counterexample showing that it is not.</p>
+<ol class="decimal">
+<li id="li-228"><p id="p-derived-li-228">Let <span class="process-math">\(f:\mathbb{R} \to \mathbb{R}\)</span> be defined by <span class="process-math">\(f(x) = 2x-1\text{.}\)</span></p></li>
+<li id="li-229"><p id="p-derived-li-229">Let <span class="process-math">\(g(x) = x^2\)</span> be the mapping from <span class="process-math">\(\mathbb{R} \to \mathbb{R}\text{.}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-21" id="answer-21"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-21" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/svYqYaVvp9g?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="definition definition-like" id="definition-19"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Surjective Functions.</span>
+</h4>
+<p id="p-240">A function <span class="process-math">\(f\)</span> from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\)</span> is said to be <dfn class="terminology">surjective</dfn> or <dfn class="terminology">onto</dfn> if and only if for every element <span class="process-math">\(b \in B\text{,}\)</span> there is an element <span class="process-math">\(a \in A\)</span> such that <span class="process-math">\(f(a) = b\text{.}\)</span>   </p>
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-22" id="answer-22"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-22" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/A2dQwaFFC8I?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></article><p id="p-241">If a function is surjective the range is exactly the codomain, that is <span class="process-math">\(f(A) = B\)</span></p>
+<p id="p-242">To determine if a function <span class="process-math">\(f: A \to B\)</span> is surjective, we show that given an arbitrary element <span class="process-math">\(y \in B\)</span> we can find an element <span class="process-math">\(x\in A\)</span> such that <span class="process-math">\(f(x)=y\text{.}\)</span> (A direct proof).</p>
+<p id="p-243">To determine if a function <span class="process-math">\(f: A \to B\)</span> is not surjective, we find a particular element <span class="process-math">\(y \in B\)</span> such that <span class="process-math">\(f(x) \not= y\)</span> for all <span class="process-math">\(x\in A\)</span> (a counterexample!)</p>
+<article class="example example-like" id="example-21"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.15</span><span class="period">.</span>
+</h4>
+<p id="p-244">Draw a graph of a function which is not surjective. Draw also the graph of one that is.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-23" id="answer-23"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like">
+<p id="p-245">The following is an animation showing the graph of two functions, both have the algebraic expression <span class="process-math">\(f(x)=x^2\text{.}\)</span> The first maps <span class="process-math">\(f: \R \to \R\text{,}\)</span> which is not surjective since, for example, <span class="process-math">\(-1\)</span> is in the codomain, but <span class="process-math">\(f(x)=-1\)</span> has no solution in the domain.</p>
+<p id="p-246">The second maps <span class="process-math">\(f:\R \to [0, \infty)\text{,}\)</span> and it is surjective since each and every element of the codomain is mapped to.</p>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="video-23" class="video" controls=""><source src="external/SurjectiveExploration.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
+</div></div>
+</div></article><article class="example example-like" id="example-22"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.16</span><span class="period">.</span>
+</h4>
+<p id="p-247">Determine if the following functions are surjective. If so, prove it. If not, provide a specific counterexample showing that it is not.</p>
+<ol class="decimal">
+<li id="li-230"><p id="p-derived-li-230">Let <span class="process-math">\(f:\mathbb{R} \to \mathbb{R}\)</span> be defined by <span class="process-math">\(f(x) = 2x-1\text{.}\)</span></p></li>
+<li id="li-231"><p id="p-derived-li-231">Let <span class="process-math">\(g(x) = x^2\)</span> be the mapping from <span class="process-math">\(\mathbb{R} \to \mathbb{R}\text{.}\)</span></p></li>
+<li id="li-232"><p id="p-derived-li-232">Let <span class="process-math">\(g(x) = x^2\)</span> be the mapping from <span class="process-math">\(\mathbb{Z} \to \mathbb{Z}\text{.}\)</span></p></li>
+<li id="li-233"><p id="p-derived-li-233">Let <span class="process-math">\(g(x) = x^3\)</span> be the mapping from <span class="process-math">\(\mathbb{Z} \to \mathbb{Z}\text{.}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-24" id="answer-24"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like">
+<p id="p-248">Two videos in this section: <div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-24" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/HlbvQ9uLjCU?&amp;modestbranding=1&amp;rel=0"></iframe></div></p>
+<p id="p-249"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-25" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Zdi-9-RCPrE?&amp;modestbranding=1&amp;rel=0"></iframe></div></p>
+</div></div>
+</div></article><article class="definition definition-like" id="definition-20"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Bijective Functions.</span>
+</h4>
+<p id="p-250">A function <span class="process-math">\(f\)</span> from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\)</span> is said to be a <dfn class="terminology">one-to-one correspondence</dfn> or <dfn class="terminology">bijective</dfn> if it is both injective and surjective.</p></article><article class="example example-like" id="example-bijections"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.18</span><span class="period">.</span>
+</h4>
+<p id="p-251">Determine if the following are bijections from <span class="process-math">\(\mathbb{R} \to \mathbb{R}\text{:}\)</span></p>
+<ol class="decimal">
+<li id="li-234"><p id="p-derived-li-234"><span class="process-math">\(\displaystyle f(x) = -3x^2 + 7\)</span></p></li>
+<li id="li-235"><p id="p-derived-li-235"><span class="process-math">\(\displaystyle f(x) = x^5 + 1\)</span></p></li>
+<li id="li-236"><p id="p-derived-li-236"><span class="process-math">\(\displaystyle f(x) = 5^x\)</span></p></li>
+<li id="li-237"><p id="p-derived-li-237"><span class="process-math">\(\displaystyle \ds f(x) = \frac{x+1}{x+2}\)</span></p></li>
+<li id="li-238"><p id="p-derived-li-238">Which of the functions we've considered so far have been bijections?</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-25" id="answer-25"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-26" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/_e8FRN7xlGY?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="definition definition-like" id="definition-modulus-operator"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.19</span><span class="period">.</span><span class="space"> </span><span class="title">The Modulus Operation.</span>
+</h4>
+<p id="p-252">Define the <dfn class="terminology">modulus operation</dfn>, <span class="process-math">\(a \modulus m\text{,}\)</span> on the set of integers to return the remainder when dividing <span class="process-math">\(a\)</span> by <span class="process-math">\(m\text{.}\)</span></p>
+<aside class="aside aside-like" id="aside-7"><p id="p-253">The modulus operation is a binary function that takes two numbers and returns a third number (the remainder after division).</p></aside><p id="p-254">For example,</p>
+<ul class="circle">
+<li id="li-239"><p id="p-derived-li-239"><span class="process-math">\(25 \modulus 4 = 1\)</span> since the remainder when dividing 25 by 4 is 1.</p></li>
+<li id="li-240"><p id="p-derived-li-240"><span class="process-math">\(25 \modulus 5 = 0\)</span> since 5 divides evenly into 25.</p></li>
+<li id="li-241"><p id="p-derived-li-241"><span class="process-math">\(\displaystyle 14 \modulus 5 = 4\)</span></p></li>
+<li id="li-242"><p id="p-derived-li-242"><span class="process-math">\(-1 \modulus 5 = 4\)</span> (remainders are always positive)</p></li>
+</ul></article><p id="p-255">We'll use this operation to explore injective and surjective properties of functions! But first, so that we don't have to write <span class="process-math">\(\{0, 1, 2, 3, 4, 5\}\)</span> or say “all possible remainders when dividing by six,” we introduce notation that says it for us.</p>
+<article class="definition definition-like" id="def-zmodn"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.20</span><span class="period">.</span><span class="space"> </span><span class="title">Set of Integers Modulo n.</span>
+</h4>
+<p id="p-256">We define the set <span class="process-math">\(\mathbb{Z}_n\text{,}\)</span> pronounced “integers mod n” to be the set of all possible remainders when dividing by <span class="process-math">\(n\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+\begin{gather*}
+\mathbb{Z}_n = \{0, 1, 2, 3, 4,\dots, n-2, n-1\} 
+\end{gather*}
+</div>
+<p id="p-257">For example:</p>
+<ul class="circle">
+<li id="li-243"><p id="p-derived-li-243"><span class="process-math">\(\displaystyle \mathbb{Z}_5 = \{0, 1, 2, 3, 4\} \)</span></p></li>
+<li id="li-244"><p id="p-derived-li-244"><span class="process-math">\(\displaystyle \mathbb{Z}_7 = \{0, 1, 2, 3, 4, 5, 6\}\)</span></p></li>
+<li id="li-245"><p id="p-derived-li-245"><span class="process-math">\(\displaystyle \mathbb{Z}_{10} = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}\)</span></p></li>
+</ul></article><article class="example example-like" id="example-modulus-injective-surjective"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.21</span><span class="period">.</span>
+</h4>
+<p id="p-258">Complete the following tables of values for each function:</p>
+<ol class="decimal">
+<li id="li-246">
+<p id="p-259">Let <span class="process-math">\(f:\Z_5 \to \Z_5\)</span> be defined by <span class="process-math">\(f(n) = (n + 2)\modulus 5\)</span></p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div>
+<p id="p-260">Is <span class="process-math">\(f\)</span> injective? surjective?</p>
+</li>
+<li id="li-247">
+<p id="p-261">Let <span class="process-math">\(g:\Z_6 \to \Z_6\)</span> be defined by <span class="process-math">\(g(n) = (n^2 + 2) \modulus 6\)</span></p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+<td class="l m b1 r0 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(g(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div>
+<p id="p-262">Is <span class="process-math">\(g\)</span> injective? surjective?</p>
+</li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like"><ol id="p-263" class="decimal">
+<li id="li-248">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+</table></div>
+<p id="p-264"><span class="process-math">\(f\)</span> is both injective and surjective - each output occurs only one time (injective) and each output occurs (surjective).</p>
+<p id="p-265">Note that the range of the function <span class="process-math">\(f\)</span> is <span class="process-math">\(\{0, 1, 2, 3, 4\}\)</span> which is equal to the whole co-domain (surjective).</p>
+</li>
+<li id="li-249">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+<td class="l m b1 r0 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(g(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+</tr>
+</table></div>
+<p id="p-266"><span class="process-math">\(g\)</span> is not injective since <span class="process-math">\(g(1) = g(5)\text{.}\)</span> The same output occurs twice - it fails the "horizontal line test." <span class="process-math">\(g\)</span> is also not surjective since there is no solution to <span class="process-math">\(1 = g(n)\)</span> in the domain. The number 1 is in the codomain, but it's never output.</p>
+<p id="p-267">Note that the range of the function <span class="process-math">\(g\)</span> is <span class="process-math">\(\{0, 2, 3, 5\}\)</span> which is not equal to the whole co-domain (not surjective).</p>
+</li>
+</ol></div></div>
+</div></article><article class="definition definition-like" id="definition-23"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.22</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse Functions.</span>
+</h4>
+<p id="p-268">Let <span class="process-math">\(f:A \to B\)</span> be a bijection. The <dfn class="terminology">inverse function</dfn> of <span class="process-math">\(f\)</span> is the unique function that assigns to each element <span class="process-math">\(b\in B\)</span> a unique element <span class="process-math">\(a \in A\)</span> such that <span class="process-math">\(f(a) = b\text{.}\)</span> We denote the inverse by <span class="process-math">\(f^{-1}\)</span> so that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f^{-1} : B \to A \text{ where }  f^{-1}(b) = a \iff f(a) = b
+\end{equation*}
+</div></article><article class="note remark-like" id="note-5"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.3.23</span><span class="period">.</span>
+</h4>
+<p id="p-269">Relations always have an inverse!  We simply interchange the domain and codomain sets.</p></article><p id="p-270">As we've seen, the inverse of a relation is always a relation, but not always a function. In order for a function, <span class="process-math">\(f\)</span> to have an inverse <em class="emphasis">function</em>, <span class="process-math">\(f\)</span> must be bijective.</p>
+<ul class="disc">
+<li id="li-250">
+<p id="p-271">If the function is not injective, then the inverse relation isn't a function. Failing the “horizontal line test” for injectivity means failing the “vertical line test” for being a function.</p>
+<p id="p-272">Here's an animation that illustrates this idea:</p>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="video-27" class="video" controls=""><source src="external/InverseExploration1.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
+</li>
+<li id="li-251">
+<p id="p-273">If the function is not surjective, then the inverse relation isn't well-defined. Any values that aren't mapped to in the original codomain <em class="emphasis">can't be plugged into</em> the inverse.</p>
+<p id="p-274">Here's an animation that illustrates this idea:</p>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="video-28" class="video" controls=""><source src="external/InverseExploration2.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
+</li>
+</ul>
+<article class="example example-like" id="example-25"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.24</span><span class="period">.</span>
+</h4>
+<p id="p-275">For the bijection(s) found in <a href="" class="xref" data-knowl="./knowl/example-bijections.html" title="Example 1.3.18">Example 1.3.18</a>, find the inverse function.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-26" id="answer-26"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-29" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/VHzBUIDi_f4?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-26"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.25</span><span class="period">.</span>
+</h4>
+<p id="p-276">Restrict the domain and/or codomain (that is, make the domain/codomain smaller sets) so that <span class="process-math">\(f(x) = x^2 + 1\)</span> is invertible. Verify your answer is correct.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like">
+<p id="p-277">In order for <span class="process-math">\(f\)</span> to be injective, we can restrict the domain to just the non-negative real numbers: <span class="process-math">\([0, \infty)\text{.}\)</span> In order for <span class="process-math">\(f\)</span> to be surjective, using the codomain to be the interval <span class="process-math">\([1, \infty)\)</span> works for the chosen domain.</p>
+<p id="p-278">Alternatively, if we choose the domain to be <span class="process-math">\(\N\text{,}\)</span> then the range is only square numbers, so the codomain would need to be <span class="process-math">\(\{1, 4, 9, 16, \dots\}\text{.}\)</span></p>
+</div></div>
+</div></article><article class="definition definition-like" id="def-composition-of-functions"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.26</span><span class="period">.</span><span class="space"> </span><span class="title">Function Composition.</span>
+</h4>
+<p id="p-279">Let <span class="process-math">\(g:A \to B\)</span> and let <span class="process-math">\(f:B \to C\text{.}\)</span> The <dfn class="terminology">composition of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span></dfn>, denoted by <span class="process-math">\(f\circ g : A \to C\)</span> is defined, for all <span class="process-math">\(a \in A\text{,}\)</span> by <span class="process-math">\((f \circ g)(a) = f(g(a))\text{.}\)</span></p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/composition-of-functions.svg" role="img" class="contained" alt="Composition of functions. Three circles are drawn separated by arrows. They are labeled A, B, and C. There is an arrow from A to B labeled S. There is an arrow from B to C labeled R, and there is a big arcing arrow from A to C labeled \(R\circ S\)"></div></article><article class="example example-like" id="example-27"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.27</span><span class="period">.</span>
+</h4>
+<p id="p-280">Let <span class="process-math">\(f(x) = 5x-3\)</span> and <span class="process-math">\(g(x) = 3x^2-5\text{.}\)</span> Find <span class="process-math">\(f\circ g\)</span> and <span class="process-math">\(g\circ f\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like"><p id="p-281">This is basic algebra. <span class="process-math">\((f \circ g)(x) = 15x^2 - 28 \and (g \circ f)(x) = 75x^2 - 90x + 22\)</span></p></div></div>
+</div></article><article class="example example-like" id="example-28"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.28</span><span class="period">.</span>
+</h4>
+<p id="p-282">Suppose <span class="process-math">\(f\)</span> and <span class="process-math">\(f\circ g\)</span> are injective. Does it follow that <span class="process-math">\(g\)</span> is also injective?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-27" id="answer-27"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-30" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/9XIjEKAMRZI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="note remark-like" id="note-6"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.3.29</span><span class="period">.</span>
+</h4>
+<p id="p-283">Since given a function <span class="process-math">\(f: A \to B\)</span> we define <span class="process-math">\(f^{-1}: B \to A\)</span> by <span class="process-math">\(f(a) = b \iff f^{-1}(b) = a\)</span> for <span class="process-math">\(a \in A\text{,}\)</span> <span class="process-math">\(b \in B\text{,}\)</span> we have:</p>
+<ul class="disc">
+<li id="li-252">
+<p id="p-284">for <span class="process-math">\(b \in B\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(f \circ f^{-1})(b) = f(f^{-1}(b)) = f(a) = b \in B 
+\end{equation*}
+</div>
+</li>
+<li id="li-253">
+<p id="p-285">and for <span class="process-math">\(a \in A\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(f^{-1} \circ f)(a) = f^{-1}(f(a)) = f^{-1}(b) = a \in A
+\end{equation*}
+</div>
+</li>
+</ul>
+<p class="continuation">That is, the inverse “undoes” a function.</p></article></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Computer Corner</span>
+</h3>
+<p id="p-286">C++ defines functions by specifying both the input parameters (<em class="emphasis">domain</em>) and return type (<em class="emphasis">co-domain</em>).  Here are some function examples:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><pre class="program"><code class="language-cpp">int square(int num) {
+    return num*num;
+}
+</code></pre></div>
+<div class="sbspanel top" style="width:50%;"><p id="p-287">Here the function is <span class="process-math">\(\text{square}: \Z \to \Z\text{.}\)</span></p></div>
+</div></div>
+<p id="p-288">Here's another sample that changes the definition of the standard square root function:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><pre class="program"><code class="language-cpp">#include &lt;math.h&gt;
+
+int mySqrt(int num) {
+    return sqrt(num)
+}
+
+// this will return things like
+// mySqrt(4) = 2, which you'd expect.
+// but...
+// mySqrt(5) = 2, also.
+// This means mySqrt is not injective.
+</code></pre></div>
+<div class="sbspanel top" style="width:50%;"><p id="p-289">This function is <span class="process-math">\(\text{mySqrt}: \Z \to \Z\text{.}\)</span> We <em class="emphasis">can</em> input negative numbers, but <code class="code-inline tex2jax_ignore">sqrt()</code> throws an error in that case.</p></div>
+</div></div>
+<p id="p-290">To get the correct fractional value of the square root of an integer, though, we'd need this:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><pre class="program"><code class="language-cpp">#include &lt;math.h&gt;
+
+double mySqrt(int num) {
+    return sqrt(num)
+}
+
+// Hooray!
+// mySqrt(5) = 2.23607
+// and this time mySqrt is injective
+</code></pre></div>
+<div class="sbspanel top" style="width:50%;"><p id="p-291">This time the function is <span class="process-math">\(\text{mySqrt}: \Z \to \Q\text{.}\)</span> The specification of the codomain is essential to make sure we can compute the correct value!</p></div>
+</div></div></section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">What kind of object? Binary operations vs. <span class="process-math">\(a\mathrel{R} b\)</span></span>
+</h3>
+<p id="p-292">I want to contrast the idea of a <em class="emphasis">binary operation</em>, such as <span class="process-math">\(+, -, \cdot, \div, \modulus\)</span> with the mathematical statement <span class="process-math">\(a \mathrel{b}\text{.}\)</span></p>
+<ul id="p-293" class="disc">
+<li id="li-254"><p id="p-derived-li-254">A <em class="emphasis">binary operation</em> takes two numbers and returns a third number. Its result is a number.</p></li>
+<li id="li-255"><p id="p-derived-li-255">As noted previously, <span class="process-math">\(a \mathrel{R} b\)</span> is a statement when <span class="process-math">\(\mathrel{R}\)</span> is a relation between two sets; it returns a truth value.</p></li>
+</ul>
+<article class="example example-like" id="example-29"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.30</span><span class="period">.</span>
+</h4>
+<p id="p-294">What kind of object are each of the following? What is the value, truth or numeric?</p>
+<ol class="decimal">
+<li id="li-256"><p id="p-derived-li-256"><span class="process-math">\(\displaystyle 2 \cdot 7 \)</span></p></li>
+<li id="li-257"><p id="p-derived-li-257"><span class="process-math">\(\displaystyle 3 \gt 8 \)</span></p></li>
+<li id="li-258"><p id="p-derived-li-258"><span class="process-math">\(\displaystyle 42 \div 3 \)</span></p></li>
+<li id="li-259"><p id="p-derived-li-259"><span class="process-math">\(\displaystyle 9 \text{ divides } 81 \)</span></p></li>
+<li id="li-260"><p id="p-derived-li-260"><span class="process-math">\(\displaystyle 1 + 2 = 3\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like"><ol id="p-295" class="decimal">
+<li id="li-261"><p id="p-derived-li-261">This is a number, the number is 14.</p></li>
+<li id="li-262"><p id="p-derived-li-262">This is a statement, the value is false.</p></li>
+<li id="li-263"><p id="p-derived-li-263">This is a number, it is 14</p></li>
+<li id="li-264"><p id="p-derived-li-264">This is a statement, it is true, since 9 divides into 81 evenly</p></li>
+<li id="li-265"><p id="p-derived-li-265">This is a statement, it is true.  We're <em class="emphasis">relating</em> the operation 1+2 with the number 3</p></li>
+</ol></div></div>
+</div></article><p id="p-296">Just remember, you wouldn't say “<span class="process-math">\(1 + 2\)</span> is false”, and you wouldn't say “<span class="process-math">\(3\lt 4\)</span> is 12”. Practice thinking about what type of object is expected, and it will become second nature.</p></section><section class="conclusion" id="conclusion-1"><p id="p-297">The relation is the final of our mathematical building blocks. From here on we will be combining logical propositions, sets, and relations to build greater and greater complexity throughout the semester.</p></section><section class="exercises" id="exercises-3"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-28"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-298">Consider the relation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+R = \{ (x, y) \mid y = x^2, \text{ for } x=-3, -2, -1, \dots 2, 3\}\text{.}
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-266"><p id="p-derived-li-266">Is <span class="process-math">\(R\)</span> a function?</p></li>
+<li id="li-267"><p id="p-derived-li-267">Find <span class="process-math">\(R^{-1}\text{.}\)</span></p></li>
+<li id="li-268"><p id="p-derived-li-268">Is <span class="process-math">\(R^{-1}\)</span> a function? Why or why not?</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like"><ol id="p-299" class="lower-alpha">
+<li id="li-269"><p id="p-derived-li-269">Yes</p></li>
+<li id="li-270"><p id="p-derived-li-270"><span class="process-math">\(\displaystyle R^{-1} = \{(x, y) \mid y^2 = x, \text{ for } y = -3, -2, -1, \dots 2, 3\} \)</span></p></li>
+<li id="li-271"><p id="p-derived-li-271">No</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-29"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<ol id="p-300" class="lower-alpha">
+<li id="li-272"><p id="p-derived-li-272">Is the sibling relation defined in <a href="" class="xref" data-knowl="./knowl/ex_sib.html" title="Example 1.3.2">Example 1.3.2</a> a function? Why or why not?</p></li>
+<li id="li-273"><p id="p-derived-li-273">Is the divides relation defined in <a href="" class="xref" data-knowl="./knowl/ex_divides_relation.html" title="Example 1.3.3: The Divides Relation">Example 1.3.3</a> on the set <span class="process-math">\(\{1, 2, 3, \dots, 10\}\)</span> to itself a function? Why or why not?</p></li>
+<li id="li-274"><p id="p-derived-li-274">Is the height relation between the set of people and the set of natural numbers a function? Why or why not?</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-32" id="solution-32"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like"><ol id="p-301" class="lower-alpha">
+<li id="li-275"><p id="p-derived-li-275">No.</p></li>
+<li id="li-276"><p id="p-derived-li-276">No. For example <span class="process-math">\((2, 2)\)</span> and <span class="process-math">\((2,4)\)</span> are the the relation.</p></li>
+<li id="li-277"><p id="p-derived-li-277">Yes, each person has a unique height (at any given time).</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-30"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-302">Let <span class="process-math">\(\mathrel{R}\)</span> be the relation between the set <span class="process-math">\(A\)</span> and itself defined by <span class="process-math">\(a \mathrel{R} b\)</span> whenever <span class="process-math">\(a \and b\)</span> are exactly the same object.</p>
+<ol class="lower-alpha">
+<li id="li-278"><p id="p-derived-li-278">What is the familiar way we normally write this relation?</p></li>
+<li id="li-279"><p id="p-derived-li-279">Is this relation a function? If so, what is the algebraic definition?</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like"><ol id="p-303" class="lower-alpha">
+<li id="li-280"><p id="p-derived-li-280">We'd normally write <span class="process-math">\(a=b\)</span> if <span class="process-math">\(a \mathrel{R} b\)</span> when <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are the same object.</p></li>
+<li id="li-281"><p id="p-derived-li-281">Yes! Given a set <span class="process-math">\(A\text{,}\)</span> we define the function by <span class="process-math">\(f: A \to A\)</span> by <span class="process-math">\(f(x)=x\text{.}\)</span></p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-31"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-304">Reformulate <a href="" class="xref" data-knowl="./knowl/def-composition-of-functions.html" title="Definition 1.3.26: Function Composition">Definition 1.3.26</a> in order to define composition of two relations.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-34" id="solution-34"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like">
+<p id="p-305">Very little needs changed - I'm simply relabling the variables. We'll explore relations (and their composition) in greater depth in Discrete 2.</p>
+<p id="p-306">Let <span class="process-math">\(G:A \to B\)</span> and let <span class="process-math">\(R:B \to C\text{.}\)</span> The <dfn class="terminology">composition of <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span></dfn>, denoted by <span class="process-math">\(R\circ S\)</span> is defined, for all <span class="process-math">\(a \in A\text{,}\)</span> by <span class="process-math">\((R \circ S)(a) = R(S(a))\text{.}\)</span></p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/composition-of-relations.svg" role="img" class="contained" alt="Composition of relations"></div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-32"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-307">Using the relations defined in <a href="" class="xref" data-knowl="./knowl/example-relation-inverses.html" title="Example 1.3.7">Example 1.3.7</a>, find the following compositions:</p>
+<ol class="lower-alpha">
+<li id="li-282"><p id="p-derived-li-282"><span class="process-math">\(\displaystyle R_1 \circ R_2\)</span></p></li>
+<li id="li-283"><p id="p-derived-li-283"><span class="process-math">\(\displaystyle R_2 \circ R_1\)</span></p></li>
+<li id="li-284"><p id="p-derived-li-284"><span class="process-math">\(\displaystyle R_4 \circ R_4\)</span></p></li>
+<li id="li-285"><p id="p-derived-li-285"><span class="process-math">\(\displaystyle R_5 \circ R_4\)</span></p></li>
+<li id="li-286"><p id="p-derived-li-286"><span class="process-math">\(\displaystyle R_4 \circ R_5\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-35" id="solution-35"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like"><ol id="p-308" class="lower-alpha">
+<li id="li-287"><p id="p-derived-li-287"><span class="process-math">\(\displaystyle R_1 \circ R_2 = \{(x,y) \mid y = -3(x^2 + 2) + 2\} = \{(x,y) \mid y = -3x^2 -4\}\)</span></p></li>
+<li id="li-288"><p id="p-derived-li-288"><span class="process-math">\(\displaystyle R_2 \circ R_1 = \{(x,y) \mid y = (-3x+2)^2 + 2\} = \{(x,y) \mid 9x^2 -6x + 6\}\)</span></p></li>
+<li id="li-289"><p id="p-derived-li-289"><span class="process-math">\(\displaystyle R_4 \circ R_4 = \{(x,y) \mid y \text{ is a grandparent of } x \}\)</span></p></li>
+<li id="li-290"><p id="p-derived-li-290"><span class="process-math">\(\displaystyle R_5 \circ R_4 = \{(x,y) \mid y \text{ is a sibling of a parent of } x\} = \{(x,y) \mid y \text{ is an aunt/uncle of } x \}\)</span></p></li>
+<li id="li-291"><p id="p-derived-li-291"><span class="process-math">\(\displaystyle R_4 \circ R_5 = \{ (x,y) \mid y \text{ is the parent of the sibling of } x\} = R_4\)</span></p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-33"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-309">Consider the function <span class="process-math">\(f:\{1,2,3,4,5\} \to \{1,2,3,4\}\)</span> given by the table below:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+<td class="l m b1 r0 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+</tr>
+</table></div>
+<ol id="p-310" class="lower-alpha">
+<li id="li-292"><p id="p-311">Is <span class="process-math">\(f\)</span> injective? Explain.</p></li>
+<li id="li-293"><p id="p-312">Is <span class="process-math">\(f\)</span> surjective? Explain.</p></li>
+<li id="li-294"><p id="p-313">Is <span class="process-math">\(f^{-1}\)</span> a function? Explain.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-36" id="solution-36"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like"><ol id="p-314" class="lower-alpha">
+<li id="li-295"><p id="p-derived-li-295">No, the function is no injective. <span class="process-math">\(2 = f(2) = f(5) = 2\)</span> but clearly <span class="process-math">\(2 \not= 5\)</span></p></li>
+<li id="li-296"><p id="p-derived-li-296">Yes, the function is surjective. The codomain is <span class="process-math">\(\{1, 2, 3, 4\}\)</span> and each element of the codomain is mapped (the range equals the codomain)</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-34"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-315">Consider the function <span class="process-math">\(f:\{1,2,3,4\} \to \{1,2,3,4\}\)</span> given by the graph below.</p>
+<div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="generated/latex-image/graph-function-ques.svg" role="img" class="contained" alt="Graph of the function f"></div>
+<ol id="p-316" class="lower-alpha">
+<li id="li-297"><p id="p-317">Is <span class="process-math">\(f\)</span> injective? Explain.</p></li>
+<li id="li-298"><p id="p-318">Is <span class="process-math">\(f\)</span> surjective? Explain.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-37" id="solution-37"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like"><ol id="p-319" class="lower-alpha">
+<li id="li-299"><p id="p-derived-li-299">No! <span class="process-math">\(f(1) = f(4)\)</span> and <span class="process-math">\(1\ne 4\)</span></p></li>
+<li id="li-300"><p id="p-derived-li-300">Also no, since there is no <span class="process-math">\(x\)</span> for which <span class="process-math">\(f(x) = 2\text{.}\)</span></p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-35"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-320">For each function given below, determine whether or not the function is injective and whether or not the function is surjective.</p>
+<ol class="lower-alpha">
+<li id="li-301"><p id="p-derived-li-301"><span class="process-math">\(f:\N \to \N\)</span> given by <span class="process-math">\(f(n) = n+4\text{.}\)</span></p></li>
+<li id="li-302"><p id="p-derived-li-302"><span class="process-math">\(f:\Z \to \Z\)</span> given by <span class="process-math">\(f(n) = n+4\text{.}\)</span></p></li>
+<li id="li-303"><p id="p-derived-li-303"><span class="process-math">\(f:\Z \to \Z\)</span> given by <span class="process-math">\(f(n) = 5n - 8\text{.}\)</span></p></li>
+<li id="li-304"><p id="p-derived-li-304"><span class="process-math">\(f:\Z \to \Z\)</span> given by <span class="process-math">\(f(n) = \begin{cases}n/2 \amp  \text{ if } n \text{ is even} \\ (n+1)/2 \amp \text{ if } n \text{ is odd} . \end{cases}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-38" id="solution-38"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like"><ol id="p-321" class="lower-alpha">
+<li id="li-305"><p id="p-derived-li-305"><span class="process-math">\(f\)</span> is injective, but not surjective (since 0, for example, is never an output).</p></li>
+<li id="li-306"><p id="p-derived-li-306"><span class="process-math">\(f\)</span> is injective and surjective. Unlike in the previous question, every integers is an output (of the integer 4 less than it).</p></li>
+<li id="li-307"><p id="p-derived-li-307"><span class="process-math">\(f\)</span> is injective, but not surjective (10 is not 8 less than a multiple of 5, for example).</p></li>
+<li id="li-308"><p id="p-derived-li-308"><span class="process-math">\(f\)</span> is not injective, but is surjective. Every integer is an output (of twice itself, for example) but some integers are outputs of more than one input: <span class="process-math">\(f(5) = 3 = f(6)\text{.}\)</span></p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-36"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-322">Determine whether <span class="process-math">\(f:\Z \times \Z \to \Z\)</span> is surjective if</p>
+<ol class="lower-alpha">
+<li id="li-309"><p id="p-derived-li-309"><span class="process-math">\(\displaystyle f(m,n) = m + n\)</span></p></li>
+<li id="li-310"><p id="p-derived-li-310"><span class="process-math">\(\displaystyle f(m,n) = m^2 + n^2 \)</span></p></li>
+<li id="li-311"><p id="p-derived-li-311"><span class="process-math">\(\displaystyle f(m,n) = m\)</span></p></li>
+<li id="li-312"><p id="p-derived-li-312"><span class="process-math">\(\displaystyle f(m,n) = m - n\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-39" id="solution-39"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-39"><div class="solution solution-like">
+<ol id="p-323" class="lower-alpha">
+<li id="li-313"><p id="p-derived-li-313">Yes, since given any integer <span class="process-math">\(c\in \Z\)</span> we can find two other integers <span class="process-math">\(m, n\)</span> for which <span class="process-math">\(f(m,n) = c\)</span> for example, <span class="process-math">\(f(c,0) = c+0 = c\text{.}\)</span></p></li>
+<li id="li-314"><p id="p-derived-li-314">No, since <span class="process-math">\(-1 \in \Z\)</span> and there is no integers <span class="process-math">\(m, n\)</span> for which <span class="process-math">\(m^2 + n^2 = -1\text{.}\)</span></p></li>
+<li id="li-315"><p id="p-derived-li-315">Yes, since every integer <span class="process-math">\(m\)</span> in the codomain is mappsed to via <span class="process-math">\(f(m,0) = m\)</span></p></li>
+<li id="li-316"><p id="p-derived-li-316">Yes again, this will map to every possible integer. For example, <span class="process-math">\(f(m,0) = m\)</span> for any integer <span class="process-math">\(m\)</span> in the codomain.</p></li>
+</ol>
+<p class="continuation">It's worth noting while these aren't injective, they can be surjective.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-37"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-324">Consider the function <span class="process-math">\(f:\Z \to \Z\)</span> given by <span class="process-math">\(f(n) = \begin{cases}n+1 \amp  \text{ if }n\text{ is even} \\ n-3 \amp \text{ if }n\text{ is odd} . \end{cases}\)</span></p>
+<ol class="lower-alpha">
+<li id="li-317"><p id="p-325">Is <span class="process-math">\(f\)</span> injective? Prove your answer.</p></li>
+<li id="li-318"><p id="p-326">Is <span class="process-math">\(f\)</span> surjective? Prove your answer.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-40" id="solution-40"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like"><ol id="p-327" class="lower-alpha">
+<li id="li-319">
+<p id="p-328"><span class="process-math">\(f\)</span> is injective.</p>
+<article class="proof" id="proof-1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<p id="p-329">Let <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> be elements of the domain <span class="process-math">\(\Z\text{.}\)</span> Assume <span class="process-math">\(f(x) = f(y)\text{.}\)</span> If <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are both even, then <span class="process-math">\(f(x) = x+1\)</span> and <span class="process-math">\(f(y) = y+1\text{.}\)</span> Since <span class="process-math">\(f(x) = f(y)\text{,}\)</span> we have <span class="process-math">\(x + 1 = y + 1\)</span> which implies that <span class="process-math">\(x = y\text{.}\)</span> Similarly, if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are both odd, then <span class="process-math">\(x - 3 = y-3\)</span> so again <span class="process-math">\(x = y\text{.}\)</span> The only other possibility is that <span class="process-math">\(x\)</span> is even an <span class="process-math">\(y\)</span> is odd (or visa-versa). But then <span class="process-math">\(x + 1\)</span> would be odd and <span class="process-math">\(y - 3\)</span> would be even, so it cannot be that <span class="process-math">\(f(x) = f(y)\text{.}\)</span> Therefore if <span class="process-math">\(f(x) = f(y)\)</span> we then have <span class="process-math">\(x = y\text{,}\)</span> which proves that <span class="process-math">\(f\)</span> is injective.</p></article>
+</li>
+<li id="li-320">
+<p id="p-330"><span class="process-math">\(f\)</span> is surjective.</p>
+<article class="proof" id="proof-2"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<p id="p-331">Let <span class="process-math">\(y\)</span> be an element of the codomain <span class="process-math">\(\Z\text{.}\)</span> We will show there is an element <span class="process-math">\(n\)</span> of the domain (<span class="process-math">\(\Z\)</span>) such that <span class="process-math">\(f(n) = y\text{.}\)</span> There are two cases: First, if <span class="process-math">\(y\)</span> is even, then let <span class="process-math">\(n = y+3\text{.}\)</span> Since <span class="process-math">\(y\)</span> is even, <span class="process-math">\(n\)</span> is odd, so <span class="process-math">\(f(n) = n-3 = y+3-3 = y\)</span> as desired. Second, if <span class="process-math">\(y\)</span> is odd, then let <span class="process-math">\(n = y-1\text{.}\)</span> Since <span class="process-math">\(y\)</span> is odd, <span class="process-math">\(n\)</span> is even, so <span class="process-math">\(f(n) = n+1 = y-1+1 = y\)</span> as needed. Therefore <span class="process-math">\(f\)</span> is surjective.</p></article>
+</li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-38"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<p id="p-332">Give an explicit formula for a function from the set of integers to the set of positive integers that is</p>
+<ol class="lower-alpha">
+<li id="li-321"><p id="p-derived-li-321">injective but not surjective</p></li>
+<li id="li-322"><p id="p-derived-li-322">surjective but not injective</p></li>
+<li id="li-323"><p id="p-derived-li-323">injective and surjective</p></li>
+<li id="li-324"><p id="p-derived-li-324">neither injective nor surjective</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-333">Most likely, your solution will be piecewise-defined.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-41" id="solution-41"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-41"><div class="solution solution-like"><ol id="p-334" class="lower-alpha">
+<li id="li-325"><p id="p-derived-li-325"><span class="process-math">\(\displaystyle f(n) = \begin{cases} -2n \amp \text{ if } n\lt0  \\ 2n+3 \amp \text{ if } n\ge0\end{cases}\)</span></p></li>
+<li id="li-326"><p id="p-derived-li-326"><span class="process-math">\(\displaystyle f(n) = \begin{cases} -n \amp \text{ if } n\lt0  \\ n+1 \amp \text{ if } n\ge0\end{cases}\)</span></p></li>
+<li id="li-327"><p id="p-derived-li-327"><span class="process-math">\(\displaystyle f(n) = \begin{cases} -2n \amp \text{ if } n\lt0  \\ 2n+1 \amp \text{ if } n\ge0\end{cases}\)</span></p></li>
+<li id="li-328"><p id="p-derived-li-328"><span class="process-math">\(\displaystyle f(n) = n^2 + 1\)</span></p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-39"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<p id="p-335">Let <span class="process-math">\(A = \{1,2,3,\ldots,10\}\text{.}\)</span> Consider the function <span class="process-math">\(f:\pow(A) \to \N\)</span> given by <span class="process-math">\(f(B) = |B|\text{.}\)</span> That is, <span class="process-math">\(f\)</span> takes a subset of <span class="process-math">\(A\)</span> as an input and outputs the cardinality of that set.</p>
+<ol class="lower-alpha">
+<li id="li-329"><p id="p-336">Is <span class="process-math">\(f\)</span> injective? Prove your answer.</p></li>
+<li id="li-330"><p id="p-337">Is <span class="process-math">\(f\)</span> surjective? Prove your answer.</p></li>
+<li id="li-331"><p id="p-338">Find <span class="process-math">\(f\inv(1)\text{.}\)</span></p></li>
+<li id="li-332"><p id="p-339">Find <span class="process-math">\(f\inv(0)\text{.}\)</span></p></li>
+<li id="li-333"><p id="p-340">Find <span class="process-math">\(f\inv(12)\text{.}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-42" id="solution-42"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-42"><div class="solution solution-like"><ol id="p-341" class="lower-alpha">
+<li id="li-334"><p id="p-derived-li-334"><span class="process-math">\(f\)</span> is not injective. To prove this, we must simply find two different elements of the domain which map to the same element of the codomain. Since <span class="process-math">\(f(\{1\}) = 1\)</span> and <span class="process-math">\(f(\{2\}) = 1\text{,}\)</span> we see that <span class="process-math">\(f\)</span> is not injective.</p></li>
+<li id="li-335"><p id="p-derived-li-335"><span class="process-math">\(f\)</span> is not surjective. The largest subset of <span class="process-math">\(A\)</span> is <span class="process-math">\(A\)</span> itself, and <span class="process-math">\(|A| = 10\text{.}\)</span> So no natural number greater than 10 will ever be an output.</p></li>
+<li id="li-336"><p id="p-derived-li-336"><span class="process-math">\(f\inv(1) = \{\{1\}, \{2\}, \{3\}, \ldots \{10\}\}\)</span> (the set of all the singleton subsets of <span class="process-math">\(A\)</span>).</p></li>
+<li id="li-337"><p id="p-derived-li-337"><span class="process-math">\(f\inv(0) = \{\emptyset\}\text{.}\)</span> Note, it would be wrong to write <span class="process-math">\(f\inv(0) = \emptyset\)</span> - that would claim that there is no input which has 0 as an output.</p></li>
+<li id="li-338"><p id="p-derived-li-338"><span class="process-math">\(f\inv(12) = \emptyset\text{,}\)</span> since there are no subsets of <span class="process-math">\(A\)</span> with cardinality 12.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-40"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<p id="p-342">Let <span class="process-math">\(A = \{n \in \N \st 0 \le n \le 999\}\)</span> be the set of all numbers with three or fewer digits. Define the function <span class="process-math">\(f:A \to \N\)</span> by <span class="process-math">\(f(abc) = a+b+c\text{,}\)</span> where <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> are the digits of the number in <span class="process-math">\(A\text{.}\)</span> For example, <span class="process-math">\(f(253) = 2 + 5 + 3 =  10\text{.}\)</span></p>
+<ol class="lower-alpha">
+<li id="li-339"><p id="p-343">Find <span class="process-math">\(f\inv(3)\text{.}\)</span></p></li>
+<li id="li-340"><p id="p-344">Find <span class="process-math">\(f\inv(28)\text{.}\)</span></p></li>
+<li id="li-341"><p id="p-345">Is <span class="process-math">\(f\)</span> injective. Explain.</p></li>
+<li id="li-342"><p id="p-346">Is <span class="process-math">\(f\)</span> surjective. Explain.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-43" id="solution-43"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-43"><div class="solution solution-like"><ol id="p-347" class="lower-alpha">
+<li id="li-343"><p id="p-derived-li-343"><span class="process-math">\(\displaystyle f\inv(3) = \{003, 030, 300, 012, 021, 102, 201, 120, 210, 111\}\)</span></p></li>
+<li id="li-344"><p id="p-derived-li-344"><span class="process-math">\(f\inv(28) = \emptyset\)</span> (since the largest sum of three digits is <span class="process-math">\(9+9+9 = 27\)</span>)</p></li>
+<li id="li-345"><p id="p-348">Part (a) proves that <span class="process-math">\(f\)</span> is not injective. The output 3 is assigned to 10 different inputs.</p></li>
+<li id="li-346"><p id="p-349">Part (b) proves that <span class="process-math">\(f\)</span> is not surjective. There is an element of the codomain (28) which is not assigned to any inputs.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-cardinality-of-domain-codomain"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<p id="p-350">What can you deduce about the sets <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> if you know …</p>
+<ol class="lower-alpha">
+<li id="li-347"><p id="p-351">there is an injective function <span class="process-math">\(f:X \to Y\text{?}\)</span> Explain.</p></li>
+<li id="li-348"><p id="p-352">there is a surjective function <span class="process-math">\(f:X \to Y\text{?}\)</span> Explain.</p></li>
+<li id="li-349"><p id="p-353">there is a bijective function <span class="process-math">\(f:X \to Y\text{?}\)</span> Explain.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-44" id="solution-44"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-44"><div class="solution solution-like"><ol id="p-354" class="lower-alpha">
+<li id="li-350"><p id="p-derived-li-350"><span class="process-math">\(\displaystyle |X| \le |Y|\)</span></p></li>
+<li id="li-351"><p id="p-derived-li-351"><span class="process-math">\(\displaystyle |Y| \le |X|\)</span></p></li>
+<li id="li-352"><p id="p-derived-li-352"><span class="process-math">\(\displaystyle |X| = |Y|\)</span></p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-42"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<p id="p-355">Suppose <span class="process-math">\(f:X \to Y\)</span> is a function. Which of the following are possible? Explain.</p>
+<ol class="lower-alpha">
+<li id="li-353"><p id="p-derived-li-353"><span class="process-math">\(f\)</span> is injective but not surjective.</p></li>
+<li id="li-354"><p id="p-derived-li-354"><span class="process-math">\(f\)</span> is surjective but not injective.</p></li>
+<li id="li-355"><p id="p-derived-li-355"><span class="process-math">\(|X| = |Y|\)</span> and <span class="process-math">\(f\)</span> is injective but not surjective.</p></li>
+<li id="li-356"><p id="p-derived-li-356"><span class="process-math">\(|X| = |Y|\)</span> and <span class="process-math">\(f\)</span> is surjective but not injective.</p></li>
+<li id="li-357"><p id="p-derived-li-357"><span class="process-math">\(|X| = |Y|\text{,}\)</span> <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are finite, and <span class="process-math">\(f\)</span> is injective but not surjective.</p></li>
+<li id="li-358"><p id="p-derived-li-358"><span class="process-math">\(|X| = |Y|\text{,}\)</span> <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are finite, and <span class="process-math">\(f\)</span> is surjective but not injective.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-45" id="solution-45"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-45"><div class="solution solution-like"><ol id="p-356" class="lower-alpha">
+<li id="li-359"><p id="p-derived-li-359">Yes</p></li>
+<li id="li-360"><p id="p-derived-li-360">Yes</p></li>
+<li id="li-361"><p id="p-derived-li-361">Yes</p></li>
+<li id="li-362"><p id="p-derived-li-362">Yes</p></li>
+<li id="li-363"><p id="p-derived-li-363">Finally a no!</p></li>
+<li id="li-364"><p id="p-derived-li-364">Also a no</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-43"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<p id="p-357">How does composition relate to function properties?</p>
+<ol class="lower-alpha">
+<li id="li-365"><p id="p-derived-li-365">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are both injective, must <span class="process-math">\(g\circ f\)</span> be injective?  Explain.</p></li>
+<li id="li-366"><p id="p-derived-li-366">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are both surjective, must <span class="process-math">\(g\circ f\)</span> be surjective?  Explain.</p></li>
+<li id="li-367"><p id="p-derived-li-367">Suppose <span class="process-math">\(g\circ f\)</span> is surjective.  What, if anything, can you say about <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{?}\)</span>  Explain.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-358">Work with some examples.</p></div></div>
+</div></article><article class="definition definition-like" id="definition-25"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.31</span><span class="period">.</span><span class="space"> </span><span class="title">Floor and Ceiling Functions.</span>
+</h4>
+<p id="p-359">The <dfn class="terminology">floor</dfn> function assigns to every real number <span class="process-math">\(x\)</span> the largest integer that is less than or equal to <span class="process-math">\(x\text{.}\)</span> We denote by this <span class="process-math">\(\lfloor x \rfloor\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lfloor \cdot \rfloor : \mathbb{R}\to \mathbb{Z} \text{ with } (\lfloor x \rfloor = n) \iff (n \le x \lt n + 1)
+\end{equation*}
+</div>
+<p id="p-360">The <dfn class="terminology">ceiling</dfn> function assigns to every real number <span class="process-math">\(x\)</span> the smallest integer that is greater than or equal to <span class="process-math">\(x\text{.}\)</span> We denote by this <span class="process-math">\(\lceil x \rceil\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lceil \cdot \rceil : \mathbb{R}\to \mathbb{Z} \text{ with } (\lceil x \rceil = n) \iff (n - 1 \lt x \le n)
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exercise-44"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<p id="p-361">Find the floor and ceiling of each of the following real numbers:</p>
+<ol class="lower-alpha cols2">
+<li id="li-368"><p id="p-derived-li-368">8.675309</p></li>
+<li id="li-369"><p id="p-derived-li-369"><span class="process-math">\(\displaystyle \pi\)</span></p></li>
+<li id="li-370"><p id="p-derived-li-370"><span class="process-math">\(\displaystyle -2.1\)</span></p></li>
+<li id="li-371"><p id="p-derived-li-371"><span class="process-math">\(\displaystyle 7\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-46"><div class="solution solution-like"><ol id="p-362" class="lower-alpha">
+<li id="li-372"><p id="p-derived-li-372"><span class="process-math">\(\lfloor 8.675309 \rfloor = 8\)</span> and <span class="process-math">\(\lceil 8.675309 \rceil = 9 \)</span></p></li>
+<li id="li-373"><p id="p-derived-li-373"><span class="process-math">\(\lfloor \pi \rfloor = 3\)</span> and <span class="process-math">\(\lceil \pi \rceil = 4\)</span></p></li>
+<li id="li-374"><p id="p-derived-li-374"><span class="process-math">\(\lfloor -2.1 \rfloor = -3\)</span> and <span class="process-math">\(\lceil -2.1 \rceil = -2\)</span></p></li>
+<li id="li-375"><p id="p-derived-li-375"><span class="process-math">\(\displaystyle \lfloor 7 \rfloor = \lceil 7 \rceil = 7\)</span></p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-45"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<p id="p-363">Let <span class="process-math">\(f:Z_5 \to Z_5\)</span> be defined by <span class="process-math">\(f(n) = \left \lfloor \dfrac{n}{2}\right \rfloor\text{.}\)</span> Complete the table of values:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div>
+<p id="p-364">Is <span class="process-math">\(f\)</span> injective? surjective?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+</tr>
+</table></div>
+<p id="p-365"><span class="process-math">\(f\)</span> is not injective since <span class="process-math">\(f(0) = f(1)\text{,}\)</span> and it is not surjective since there is no solution to <span class="process-math">\(3=f(n)\)</span> in the domain.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-46"><h4 class="heading"><span class="codenumber">19<span class="period">.</span></span></h4>
+<p id="p-366">Are the floor or ceiling functions injective? Surjective? If so, prove it. If not, provide specific counterexamples to show why not.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like">
+<p id="p-367">I'm providing a solution for the floor function. The ceiling function solution can be done very similarly. The floor function is not injective. Consider the two real numbers 2.1 and 2.5: <span class="process-math">\(\lfloor 2.1\rfloor = \lfloor 2.5\rfloor = 2\text{.}\)</span></p>
+<p id="p-368">The floor function is surjective, however. Let <span class="process-math">\(c\in \Z\)</span> be an integer in the codomain. Then consider <span class="process-math">\(a = c+0.1 \in \R\text{,}\)</span> the domain. <span class="process-math">\(\lfloor a \rfloor = \lfloor c+0.1 \rfloor = c.\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-47"><h4 class="heading"><span class="codenumber">20<span class="period">.</span></span></h4>
+<p id="p-369">Complete the following tables of values for each function:</p>
+<ol class="lower-alpha">
+<li id="li-376"><p id="p-370">Let <span class="process-math">\(f:Z_5 \to Z_5\)</span> be defined by <span class="process-math">\(f(n) = (n + 3)\modulus 5\)</span> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div> Is <span class="process-math">\(f\)</span> injective? surjective?</p></li>
+<li id="li-377">
+<p id="p-371">Let <span class="process-math">\(g:Z_5 \to Z_5\)</span> be defined by <span class="process-math">\(g(n) = (n^2 + 1)\modulus 5\)</span></p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(g(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div>
+<p id="p-372">Is <span class="process-math">\(g\)</span> injective? surjective?</p>
+</li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-49"><div class="solution solution-like"><ol id="p-373" class="lower-alpha">
+<li id="li-378">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+</tr>
+</table></div>
+<p id="p-374"><span class="process-math">\(f\)</span> is both injective and surjective.</p>
+<p id="p-375">Note that the range of the function <span class="process-math">\(f\)</span> is <span class="process-math">\(\{0, 1, 2, 3, 4\}\)</span> which is equal to the whole co-domain, which tells us it's surjective.</p>
+</li>
+<li id="li-379">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(g(x)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+</tr>
+</table></div>
+<p id="p-376"><span class="process-math">\(g\)</span> is not injective since <span class="process-math">\(g(1) = g(2)\)</span> for example. <span class="process-math">\(g\)</span> is also not surjective since there is no solution to <span class="process-math">\(3 = g(n)\)</span> in the domain.</p>
+<p id="p-377">Note that the range of the function <span class="process-math">\(g\)</span> is <span class="process-math">\(\{0, 1, 2\}\)</span> which is not equal co-domain, which tells us it's not surjective.</p>
+</li>
+</ol></div></div>
+</div></article></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Forum Posts about this section</span>
+</h3>
+<div xmlns:xi="http://www.w3.org/2001/XInclude" id="discourse-comments"></div>
+<script xmlns:xi="http://www.w3.org/2001/XInclude" type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://discourse.math.wichita.edu/',
+        topicId: 290 };
+
+        (function() {
+        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
