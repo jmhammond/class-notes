@@ -40,7 +40,6 @@
         <p>
           If we consider <m>A</m> and <m>B</m> to both be the set of people in your family, and let <m>\mathrel{R}</m> be the relation <q><m>a</m> is a sibling of <m>b</m>.</q> Here's an example of my family in two graphical representations. What are the ordered pairs that make up the relation? 
         </p>
-        <p>
         <sidebyside widths="30% 30%" valign="middle">
           <image xml:id="graph-sib">
             <description>Standard Cartesian graph showing my siblings. The horizontal and vertical axes are family members, labeled John, Eric, and Sarah. There is a dot on the graph when the two are related, so dots at (John, Eric), (John, Sarah), (Eric, John), (Eric, Sarah), (Sarah, John), and (Sarah, Eric). </description>
@@ -82,7 +81,6 @@
             </latex-image>
           </image>
           </sidebyside>
-        </p>
       </statement>
       <solution>
         <p>
@@ -95,9 +93,6 @@
           Notice that these ordered pairs correspond to the lines on the graph diagram with each of the first coordinates being connected to the second coordinate. E.g. an arrow goes from John to Eric.
         </p>
       </solution>
-      <answer component="video">
-        <video youtube="2-mT6s29iy8" />
-      </answer>
     </example>
 
     <example xml:id="ex_divides_relation">
@@ -124,32 +119,39 @@
           </ul>
           Now, complete the following questions:
         </p>
-        <ol>
-          <li>
-            <p>
-              <!-- Draw a graphical representation of the divides relation as we did in the sibling example, listing elements of the two sets and drawing lines from the left set to the right where the line means <m>a</m> divides evenly into <m>b</m>. -->
-              Complete the following graph of the relation below, where a point on <m>(x,y)</m> means that <m>x </m> divides evenly into <m>y</m>. 
-              <image xml:id="graph-relation-blank" width="50%">
-                <description>'blank' Cartesian graph to complete. Horizontal axis is integers 1 through 10; vertical axis is integers 1 through 10.</description>
-                <latex-image>
-                  \begin{tikzpicture}[scale=1]
-                  \draw[thin, gray!50] (0,0) grid (10.5, 10.5);
-                  \draw[thick] (0,10.5) node[left] {\(y\)} -- (0,0) -- (10.5,0) node[below right] {\(x\)};
-                  \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 , 10}
-                  \draw (\x,0) node[below] { \x} (0, \x) node[left] { \x};
-                  \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 , 10}
-                  \fill(1,\x) circle(.1);
-                  \end{tikzpicture}
-                </latex-image>
-              </image>
-            </p>
-          </li>
-          <li> 
-            <p>
-              Now list all ordered pairs in the relation.
-            </p>
-          </li>
-        </ol>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <!-- Draw a graphical representation of the divides relation as we did in the
+                sibling example, listing elements of the two sets and drawing lines from the left
+                set to the right where the line means <m>a</m> divides evenly into <m>b</m>. --> Complete the following graph of the relation below, where a point on <m>(x,y)</m>
+                means that <m>x </m> divides evenly into <m>y</m>. 
+                <image
+                  xml:id="graph-relation-blank" width="50%">
+                  <description>'blank' Cartesian graph to complete. Horizontal axis is integers 1
+                through 10; vertical axis is integers 1 through 10.</description>
+                  <latex-image>
+                    \begin{tikzpicture}[scale=1]
+                    \draw[thin, gray!50] (0,0) grid (10.5, 10.5);
+                    \draw[thick] (0,10.5) node[left] {\(y\)} -- (0,0) -- (10.5,0) node[below right]
+                {\(x\)};
+                    \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 , 10}
+                    \draw (\x,0) node[below] { \x} (0, \x) node[left] { \x};
+                    \foreach \x in {1,2,3,4, 5, 6, 7, 8, 9 , 10}
+                    \fill(1,\x) circle(.1);
+                    \end{tikzpicture}
+                  </latex-image>
+                </image>
+              </p>
+            </li>
+            <li>
+              <p>
+                Now list all ordered pairs in the relation.
+              </p>
+            </li>
+          </ol>
+        </p>
       </statement>
       <answer>
         <p>
@@ -164,8 +166,8 @@
         </p>
         <p component="video">
           and a video for the graph:
-          <video youtube="0CiMkIDNe7E" />
         </p>
+        <video component="video" youtube="0CiMkIDNe7E" />
       </answer>
 
     </example>
@@ -341,10 +343,10 @@ b. note that the inverse of a function is always a relation, but not always a fu
 
 
     <p>
-      To determine if a function <m>f: A \to B</m> is injective, we show that if <m>f(x) = f(y)</m> for arbitrary values <m>x, y \in A</m> with <m>x \not= y</m>, we conclude <m>x=y</m>. (In a future section, we'll call this a <s>direct proof</s>).
+      To determine if a function <m>f: A \to B</m> is injective, we show that if <m>f(x) = f(y)</m> for arbitrary values <m>x, y \in A</m> with <m>x \not= y</m>, we conclude <m>x=y</m>. (In a future section, we'll call this a <em>direct proof</em>).
     </p>
     <p>
-      To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (we'll call this finding a <q>counterexample</q>.)
+      To determine if a function <m>f: A \to B</m> is not injective, we find particular elements <m>x, y \in A</m> such that <m>x \not= y</m> but <m>f(x) = f(y)</m> (we'll call this <em>finding a counterexample</em>.)
     </p>
 
     <example>
@@ -439,12 +441,11 @@ b. note that the inverse of a function is always a relation, but not always a fu
         </p>
       </statement>
       <answer component="video">
-        <p > Two videos in this section:
+        <p> 
+          Two videos in this section:
+        </p>
         <video youtube="HlbvQ9uLjCU" />
-        </p>
-        <p>
-          <video youtube="Zdi-9-RCPrE" />
-        </p>
+        <video youtube="Zdi-9-RCPrE" />
       </answer>
       
     </example>
@@ -1670,26 +1671,30 @@ b. note that the inverse of a function is always a relation, but not always a fu
             <li>
               <p>
                 Let <m>f:Z_5 \to Z_5</m> be defined by <m>f(n) = (n + 3)\modulus 5</m>
-                <tabular>
-                  <row bottom="minor">
-                    <cell right="minor" halign="center"><m>x</m></cell>
-                    <cell>0</cell>
-                    <cell>1</cell>
-                    <cell>2</cell>
-                    <cell>3</cell>
-                    <cell>4</cell>
-                  </row>
-                  <row>
-                    <cell right="minor" halign="center"><m>f(x)</m></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                  </row>
-                </tabular>
-                Is <m>f</m> injective? surjective?
               </p>
+              <tabular>
+                <row bottom="minor">
+                  <cell right="minor" halign="center">
+                    <m>x</m>
+                  </cell>
+                  <cell>0</cell>
+                  <cell>1</cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                </row>
+                <row>
+                  <cell right="minor" halign="center">
+                    <m>f(x)</m>
+                  </cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                </row>
+              </tabular>
+              <p> Is <m>f</m> injective? surjective? </p>
             </li>
             <li>
               <p>
@@ -1800,6 +1805,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-objects-relnfct" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -1813,6 +1819,7 @@ b. note that the inverse of a function is always a relation, but not always a fu
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 
 </section>

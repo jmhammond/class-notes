@@ -8,6 +8,7 @@
   </introduction>
 
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <p>
       Before we start, we need to formally define some basic concepts of numbers.
     </p>
@@ -295,12 +296,12 @@
       <statement>
         <p>
           Prove the following are equivalent:
-        </p>
         <ol>
           <li><m>a\lt b</m></li>
           <li>The average of <m>a</m> and <m>b</m> is greater than <m>a</m> </li>
           <li>The average of <m>a</m> and <m>b</m> is less than <m>b</m> </li>
         </ol>
+        </p>
       </statement>
       <answer component="video">
         <video youtube="SSWODzVYxCc" />
@@ -1172,6 +1173,7 @@
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-logic-proofs" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -1185,5 +1187,6 @@
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 </section>

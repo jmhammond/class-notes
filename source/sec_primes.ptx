@@ -8,7 +8,7 @@
   </introduction>
 
   <subsection>
-
+    <title/> <!-- make the schema happy; expects a title in every section. -->
   <definition>
     <title>Prime Numbers</title>
     <statement>
@@ -840,6 +840,7 @@ print(is_it_prime(integer_to_check))
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-primes" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -853,5 +854,6 @@ print(is_it_prime(integer_to_check))
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 </section>

@@ -15,6 +15,7 @@
 
   <!-- make the schema happy -->
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <note>
       <p>
         It's common to count <q>hands of cards,</q> so we'll note that a standard deck of playing cards contains four <term>suits</term> (spade, heart, club, diamond). There are 13 cards in each suit (2,3,4,5,6,7,8,9,10, Jack, Queen, King, Ace). <term>Face cards</term> refers to jacks, queens, and kings. Spades and clubs are black and hearts and diamonds are red.
@@ -294,6 +295,9 @@
           How many cards must be selected from a standard deck of 52 cards in order that at least three have the same suit?
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="SoFDcgO1lio"/>
+      </answer>
       <solution>
         <p>
           According to the Generalized Pigeonhole Principle, we want to determine the number of cards, <m>N</m>, that must be drawn (here <m>k = 4</m> suits):
@@ -301,9 +305,6 @@
           So <m>N = 9</m>.
         </p>
       </solution>
-      <answer component="video">
-        <video youtube="SoFDcgO1lio"/>
-      </answer>
 
     </example>
   </subsection>
@@ -642,6 +643,7 @@
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-counting-addmult" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -655,5 +657,6 @@
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 </section>

@@ -14,6 +14,7 @@
   </introduction>
 
   <subsection xml:id="math-induction">
+    <title/> <!-- make the schema happy -->
     <definition>
       <title>Mathematical Induction</title>
       <statement>
@@ -155,6 +156,12 @@
           Let <m>P(n)</m> be the statement that <q>postage of <m>n</m> cents can be formed using just 4 cent and 7 cent stamps</q>. Prove <m>P(n)</m> is true for <m>n\ge 18</m>.
         </p>
       </statement>
+      <answer>
+        <p>
+          Here's a different approach to the problem. If we can construct <m>18, 19, 20, \dots k</m> postage using the four and seven cent stamps, then for the <m>k+1</m> cent postage, We'll just pretend you asked for four cents less! <m>k+1 -4 = k-3</m>. Were're guaranteed to be able to make the postage by the induction hypothesis. Imagine putting those stamps on the package. Then all we need is to glue on one four cent stamp and we're good to go!
+          <video youtube="73v1BI2omjs" component="video"/>
+        </p>
+      </answer>
       <solution>
         <p>
           Here's one way to approach the problem. Begin by showing we can do the basis, see if we can find a pattern, then make a formal proof:
@@ -203,12 +210,6 @@
           </p>
         </proof>
       </solution>
-      <answer>
-        <p>
-          Here's a different approach to the problem. If we can construct <m>18, 19, 20, \dots k</m> postage using the four and seven cent stamps, then for the <m>k+1</m> cent postage, We'll just pretend you asked for four cents less! <m>k+1 -4 = k-3</m>. Were're guaranteed to be able to make the postage by the induction hypothesis. Imagine putting those stamps on the package. Then all we need is to glue on one four cent stamp and we're good to go!
-          <video youtube="73v1BI2omjs" component="video"/>
-        </p>
-      </answer>
     </example>
 
 
@@ -826,6 +827,7 @@
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-logic-induction" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -839,6 +841,7 @@
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 
 </section>

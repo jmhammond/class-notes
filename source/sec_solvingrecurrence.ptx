@@ -150,21 +150,25 @@
           where <m>c_1, c_2, \dots , c_k</m> are real numbers with <m>c_k \not=0</m>.
         </p>
 
-        <example>
-          <statement>
-            <p>
-              <ol>
-                <li> The Fibonacci sequence: <m>F_n = F_{n-1} + F_{n-2}</m> is linear, and its coefficients are 1 and 1. The degree is 2. 
-                </li>
-                <li> <m>D_n = 2D_{n-1} + D_{n-5}</m> is linear, and it coefficients are 2, 0, 0, 0, 1. Its degree is 5.  </li>
-                <!-- <li> Parenthesizing <m>n+1</m> terms, <m>C_n = \sum_{k=0}^{n-1} C_{n-k}C_k</m> is <emph>not</emph> linear.  -->
-              </ol>
-            </p>
-          </statement>
-        </example>
       </statement>
     </definition>
 
+    <example>
+      <statement>
+        <p>
+          <ol>
+            <li> The Fibonacci sequence: <m>F_n = F_{n-1} + F_{n-2}</m> is linear, and its
+              coefficients are 1 and 1. The degree is 2. </li>
+            <li>
+              <m>D_n = 2D_{n-1} + D_{n-5}</m> is linear, and it coefficients are 2, 0, 0, 0, 1. Its
+              degree is 5. </li>
+            <!-- <li> Parenthesizing <m>n+1</m> terms, <m>C_n = \sum_{k=0}^{n-1} C_{n-k}C_k</m> is
+            <emph>not</emph> linear.  -->
+          </ol>
+        </p>
+      </statement>
+    </example>
+    
     <p>
       For the purposes of this learning the concept, we will restrict ourselves to degree two recurrences. This means the characteristic equations are quadratic and can be easily solved. The same process would apply if the characteristic equation were of higher degree - it's just that solving those equations isn't straightforward and takes away from focusing on the new material.
     </p>
@@ -530,6 +534,7 @@ print(list(map(recur, range(0, 10))))
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-solving-recur" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -543,5 +548,6 @@ print(list(map(recur, range(0, 10))))
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 </section>

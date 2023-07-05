@@ -9,6 +9,7 @@
 
   <!-- to make the schema happy, I need to put everything into a subsection (since the forums are in a subsection)  -->
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <definition>
       <title>Tautologies and Contradictions</title>
       <statement>
@@ -64,6 +65,9 @@
           We use <m>p \to q \equiv \neg p \vee q</m> often enough that this has a name. We'll call it <term>implication</term>
         </p>
       </statement>
+      <answer component="video">
+        <video youtube="44izzfqVMNo" />
+      </answer>
       <solution>
         <p>
           Here's the solution for <m>(\neg p \to (q \wedge \neg q)) \equiv p</m>:
@@ -118,9 +122,6 @@
           </tabular>
         </table>
       </solution>
-      <answer component="video">
-        <video youtube="44izzfqVMNo" />
-      </answer>
     </example>
 
     <p>
@@ -428,6 +429,7 @@
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-logic-equiv" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -441,6 +443,7 @@
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 
 </section>

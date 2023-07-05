@@ -13,6 +13,7 @@
   </introduction>
 
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <p>
       We begin by breaking up a number into sums of powers of two. First, a quick refresher table of the first several powers of two:
       <table xml:id="table-powers-of-two">
@@ -349,6 +350,7 @@
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-modexp" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -362,5 +364,6 @@
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 </section>

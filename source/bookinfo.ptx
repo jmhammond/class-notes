@@ -4,9 +4,6 @@
 <!-- Note that images need just the name, not the directory prefix! /-->
   <brandlogo url="http://www.math.wichita.edu/discrete-book" source="WSULogo.png" />
 
-  <!-- ... not the case with the covers tag. That needs prefixed with with my entire directory structure 😭 /-->
-  <covers front="/Users/john/src/class-notes/assets/BookCover.pdf"/>
-
   <macros> 
     \def\ds{\displaystyle}
     \def\d{\displaystyle}
@@ -89,6 +86,6 @@
 
   </latex-image-preamble>
 
-  <rename component="video" element="answer" xml:lang="en-US">Video / Answer</rename>
+  <rename element="answer" xml:lang="en-US" component="video">Video / Answer</rename>
 
 </docinfo>

@@ -8,6 +8,7 @@
   </introduction>
 
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
   <definition xml:id="definition-of-set-props">
     <title>Set operations defined via logic</title>
     <statement>
@@ -107,6 +108,9 @@
         </ol>
       </p>
     </statement>
+    <answer component="video">
+      <video youtube="cNiSxQsOloI" />
+    </answer>
     <solution>
       <p>
         We'll prove the first via an <q>if and only if</q> argument:
@@ -118,9 +122,6 @@
         thus <m>A \cup \emptyset = A</m>.
       </p>
     </solution>
-    <answer component="video">
-      <video youtube="cNiSxQsOloI" />
-    </answer>
   </example>
 
   <p>
@@ -129,9 +130,11 @@
   </subsection>
 
   <exercises>
+  <introduction>
     <p>
       Let <m>A, B, \and C</m> be sets. Prove the following identities:
     </p>
+  </introduction>
     <exercise>
       <statement>
         <p>
@@ -260,6 +263,7 @@
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-set-proofs" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -273,6 +277,7 @@
         })();
       </script>
     </slate>
+  </interactive>
   </subsection>
 
 

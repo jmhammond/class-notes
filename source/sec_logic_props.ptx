@@ -777,6 +777,7 @@
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-logic-props" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -790,6 +791,7 @@
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 
 </section>

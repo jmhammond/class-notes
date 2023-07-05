@@ -8,6 +8,7 @@
   </introduction>
 
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <definition>
       <title>Sequences</title>
       <statement>
@@ -490,6 +491,7 @@ forever(1)
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interctive>
     <slate xml:id="discourse-objects-seqseries" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -503,6 +505,7 @@ forever(1)
         })();
       </script>
     </slate>
+    </interctive>
   </subsection>
 
 </section>

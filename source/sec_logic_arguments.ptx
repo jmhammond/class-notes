@@ -17,6 +17,7 @@
     </aside>
   </introduction>
   <subsection>
+    <title/> <!-- make the schema happy; expects a title in every section. -->
     <definition>
       <title>Logical Arguments</title>
       <statement>
@@ -208,6 +209,12 @@
           Show that the premises, <q>A student in this class has not read the book,</q> and <q>Everyone in this class passed the first exam</q> imply the conclusion <q>Someone who passed the first exam has not read the book.</q> Let <m>C(x)</m> be <q><m>x</m> is in this class,</q> <m>B(x)</m> <q>x has read the book</q>, and <m>P(x)</m> <q><m>x</m> passed the first exam.</q>
         </p>
       </statement>
+      <answer component="video">
+        <p>
+          Note that the number of the example is wrong, the video says 1.4.7, Sorry!
+        </p>
+        <video youtube="iMv1sRXNKcI" />
+      </answer>
       <solution>
         <p> The statement, <q>someone who passed the first exam has not read the book</q> means there is someone in class did those things. <m>\exists x (P(x) \wedge \neg B(x))</m></p>
         <table>
@@ -258,12 +265,6 @@
           </tabular>
         </table>
       </solution>
-      <answer component="video">
-        <p>
-          Note that the number of the example is wrong, the video says 1.4.7, not 2.4.7. Sorry!
-        </p>
-        <video youtube="iMv1sRXNKcI" />
-      </answer>
 
     </example>
 
@@ -561,6 +562,7 @@
   <subsection component="forums">
     <title>Forum Posts about this section</title>
 
+    <interactive>
     <slate xml:id="discourse-logic-arguments" surface="html" >
       <div id='discourse-comments'></div>
       <script type="text/javascript">
@@ -574,6 +576,7 @@
         })();
       </script>
     </slate>
+    </interactive>
   </subsection>
 
 </section>
