@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Math for Shockers">
+<meta property="book:author" content="John Hammond">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script async="" src="https://cse.google.com/cse.js?cx=015422183392601792159:vae7vvmmczm"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_brown_gold.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="external/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Discrete Math for Shockers</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-prop-logic.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_basics.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec_relationsfunctions.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\def\modulus{\mathbin{\%}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="dedication-1.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_basics.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-prop-logic.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Propositional Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-prop-logic.html#subsection-1" class="internal"><span class="title">The Basics</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#subsec-truthtables" class="internal"><span class="title">Truth Tables for Logical Connectives</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#subsection-3" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#exercises-1" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="sec_objects_sets.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-4" class="internal"><span class="title">Basic terminology</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-5" class="internal"><span class="title">Operations on sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-6" class="internal"><span class="title">Verifying Set Identities</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#exercises-2" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_relationsfunctions.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Relations and Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-7" class="internal"><span class="title">Relations</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-8" class="internal"><span class="title">Functions</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-9" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-10" class="internal"><span class="title">What kind of object? Binary operations vs. <span class="process-math">\(a\mathrel{R} b\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_logic.html" class="internal"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-logic-equivalences.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Logical Equivalences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-equivalences.html#subsection-11" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-equivalences.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_application_set_proofs.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Application: Set Equivalences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_application_set_proofs.html#subsection-12" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_application_set_proofs.html#exercises-5" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-quantifiers.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Propositional Functions and Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#subsection-13" class="internal"><span class="title">Predicates</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#subsection-14" class="internal"><span class="title">Logical Quantifiers</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#exercises-6" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-arguments.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Logical Arguments</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-arguments.html#subsection-15" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-arguments.html#exercises-7" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-proofs.html" class="internal"><span class="codenumber">2.5</span> <span class="title">An introduction to proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-16" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-17" class="internal"><span class="title">Basic concepts of proof</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-18" class="internal"><span class="title">Direct Proof</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-logic-proofs.html#subsection-19" class="internal"><span class="title">Indirect Proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsubsection-1" class="internal"><span class="title">Proof by Contraposition</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsubsection-2" class="internal"><span class="title">Proof by Contradiction</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-20" class="internal"><span class="title">Proofs of equivalence</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-21" class="internal"><span class="title">Proof by cases</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-22" class="internal"><span class="title">Existence Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-23" class="internal"><span class="title">Uniqueness proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-24" class="internal"><span class="title">Vacuous and Trivial Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-25" class="internal"><span class="title">Counterexamples Revisited</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#exercises-8" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-prop-supplementatal.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Chapter Review</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-prop-supplementatal.html#exercises_logic-conc" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_numtheory.html" class="internal"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-numtheory-divcong.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Divisibility and Congruences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#section-numtheory-div" class="internal"><span class="title">The Divides Relation</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#section-numtheory-cong" class="internal"><span class="title">The Congruence Relation</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#exercises-10" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-primes.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Prime Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-primes.html#subsection-28" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-primes.html#computer-corner-sieve" class="internal"><span class="title">Computer Corner - Implementing the Sieve</span></a></div></li>
+<li><div class="toc-item"><a href="section-primes.html#exercises-11" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-gcd-euclid.html" class="internal"><span class="codenumber">3.3</span> <span class="title">GCDs and The Euclidean Algorithm</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-gcd-euclid.html#subsection-30" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-gcd-euclid.html#exercises-12" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-multiplicative-inverses.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Multiplicative Inverses</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-multiplicative-inverses.html#subsection-31" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-multiplicative-inverses.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-numtheory-modularexp.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Modular exponentiation</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-numtheory-modularexp.html#subsection-32" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-modularexp.html#exercises-14" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-numtheory-encryption.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Application: Encryption</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-numtheory-encryption.html#subsection-numtheory-ciphers" class="internal"><span class="title">Basic Cipher Examples</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-numtheory-encryption.html#exercises-15" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-numtheory-encryption.html#subsection-numtheory-sage" class="internal"><span class="title">Number Theory Using Sage</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-encryption.html#rsa-activity" class="internal"><span class="title">The RSA Activity</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_sequences.html" class="internal"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-objects-seqseries.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-objects-seqseries.html#subsection-36" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-objects-seqseries.html#subsection-37" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-objects-seqseries.html#exercises-16" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-solvingrecurrences.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Solving Recurrence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-38" class="internal"><span class="title">Motivation, or, why do I care?</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-39" class="internal"><span class="title">Solving recurrence relations</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-40" class="internal"><span class="title">Solving particularly nice recurrence relations</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#sec-recurrences-with-python" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#exercises-17" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_logic_induction.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_logic_induction.html#math-induction" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#strong-induction" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#subsection-44" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#exercises-18" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_counting.html" class="internal"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-counting-basics.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The Multiplicative and Additive Principles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-basics.html#subsection-45" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-basics.html#exercises-19" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-combperm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Permutations and Combinations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-combperm.html#subsection-46" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-combperm.html#exercises-20" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-binomial.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Combinatorial Proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-binomial.html#subsection-47" class="internal"><span class="title">Binomial Coefficients</span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-binomial.html#subsection-48" class="internal"><span class="title">Combinatorial Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-binomial.html#exercises-21" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-fib.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Counting Fibonacci numbers with tiles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-fib.html#subsection-49" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-fib.html#exercises-22" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="solutions-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Solutions to the exercises</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec_objects_sets"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Sets</span>
+</h2>
+<section class="introduction" id="introduction-2"><div class="para" id="p-67">Sets are the next building block of mathematics. Just as we did with propositions, this section defines basic terms and explores how we can combine these objects to build new ones.</div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Basic terminology</span>
+</h3>
+<article class="definition definition-like" id="definition-7"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sets.</span>
+</h4> <div class="para" id="p-68">A <dfn class="terminology">set</dfn> is an unordered collection of objects called <dfn class="terminology">elements</dfn> or <dfn class="terminology">members</dfn> of the set.</div> <div class="para" id="p-69">If <span class="process-math">\(A\)</span> is a set and <span class="process-math">\(a\)</span> is an element of <span class="process-math">\(A\text{,}\)</span> we write <span class="process-math">\(a \in A\text{.}\)</span> If <span class="process-math">\(b\)</span> isn’t an element of <span class="process-math">\(A\text{,}\)</span> we write <span class="process-math">\(b \not\in A\text{.}\)</span>
+</div> <aside class="aside aside-like" id="aside-2"><h5 class="heading"><span class="title">What kind of object?</span></h5>
+<div class="para" id="p-70">Note that <span class="process-math">\(A\)</span> is a set, while <span class="process-math">\(a\in A\)</span> is a <em class="emphasis">statement</em>. “a is an element of set A” has a truth value!</div></aside></article><article class="example example-like" id="example-6"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-71">
+<div class="para">Below are examples of ways of writing sets:</div>
+<dl class="description-list">
+<dt id="li-62">Roster</dt>
+<dd><div class="para" id="p-72">
+<span class="process-math">\(A = \{\)</span>list, out, the, elements, in, a, comma, separated, list<span class="process-math">\(, \dots\}\)</span>  For example: <span class="process-math">\(A = \{2, 4, 6, 8, 10, \dots\}.\)</span>
+</div></dd>
+<dt id="li-63">Set-builder</dt>
+<dd><div class="para" id="p-73">
+<span class="process-math">\(B=\{\)</span>variable <span class="process-math">\(\mid\)</span> condition for variable to be in the set<span class="process-math">\(\}\)</span>  For example, <span class="process-math">\(B = \{x \mid x \gt 0 \and x \text{ is an even integer}\}\)</span>
+</div></dd>
+</dl>
+</div></article><article class="definition definition-like" id="definition-8"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Special Sets of Numbers.</span>
+</h4> <div class="para logical" id="p-74">
+<div class="para">Here are some special sets we will visit often throughout the course and the rest of your mathematical career:</div>
+<dl class="description-list">
+<dt id="li-64">Empty set</dt>
+<dd><div class="para" id="p-75">
+<span class="process-math">\(\emptyset = \{\}\)</span> is the set consisting of no elements.</div></dd>
+<dt id="li-65">Natural Numbers</dt>
+<dd><div class="para" id="p-76">
+<span class="process-math">\(\mathbb{N} = \{0, 1, 2, 3, 4, \dots \}\text{,}\)</span> the set of counting numbers and zero.</div></dd>
+<dt id="li-66">Integers</dt>
+<dd><div class="para" id="p-77">
+<span class="process-math">\(\mathbb{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \}\)</span> includes all negative, zero, and positive counting numbers</div></dd>
+<dt id="li-67">Positive Integers</dt>
+<dd><div class="para" id="p-78">
+<span class="process-math">\(\mathbb{Z}^+ = \{1, 2, 3, \dots \}\)</span> contains only the positive counting numbers.</div></dd>
+<dt id="li-68">Rational Numbers</dt>
+<dd><div class="para logical" id="p-79">
+<div class="displaymath process-math" id="md-2">
+\begin{align*}
+\mathbb{Q} \amp= \left\{ \frac{p}{q} \mid p \in \mathbb{Z}, q \in \mathbb{Z}, \text{ and } q \not= 0 \right\}\\
+\amp=\left\{0,1,-1,2,\frac{1}{2},-\frac{1}{2},-2,3,\frac{1}{3},-\frac{1}{3},-3,\frac{3}{2},\ldots\right\}
+\end{align*}
+</div>
+<div class="para">is the set of all fractions.</div>
+</div></dd>
+<dt id="li-69">Real Numbers</dt>
+<dd><div class="para" id="p-80">
+<span class="process-math">\(\mathbb{R} \)</span> is the set of all real numbers. In Calculus, we wrote the interval <span class="process-math">\((-\infty, \infty)\text{.}\)</span> This includes all fractions and those irrational numbers that can’t be written as fractions.</div></dd>
+</dl>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-7" id="answer-7"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-7" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/QyDUE4zSIEU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></article><article class="note remark-like" id="note-2"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-81">When using set-builder notation, we can think about it this way: <span class="process-math">\(\{\text{elements look like this} \mid \text{qualifications for membership}\}\)</span>
+</div> <div class="para logical" id="p-82">
+<div class="para">Here are several examples showing a variety of ways of writing sets:</div>
+<ol class="decimal">
+<li id="li-70"><div class="para" id="p-derived-li-70">
+<span class="process-math">\(\{x \mid |2x+1| \le 10 \and x \in \Z\}\)</span> tells us our elements are going to be whatever <span class="process-math">\(x\)</span> satisfy the expression <span class="process-math">\(|2x+1| \le 10\)</span> where our variables are integers. This will be exactly <span class="process-math">\(\{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4\}\)</span>
+</div></li>
+<li id="li-71"><div class="para" id="p-derived-li-71">
+<span class="process-math">\(\{a \in \N \mid \frac{a}{2} \ge 4 \}\)</span> means that the elements will be natural numbers (this is the first part, <span class="process-math">\(a \in \N\)</span>), and the qualification to be in the set is that <span class="process-math">\(a/2 \ge 4\text{.}\)</span> Note that same letter <span class="process-math">\(a\text{!.}\)</span> A little algebra says <span class="process-math">\(a\ge 8\)</span> is the requirement to be a member, and since the elements are those same <span class="process-math">\(a\)</span> numbers, our set is <span class="process-math">\(\{8, 9, 10, 11, 12, \dots\}\)</span>
+</div></li>
+<li id="li-72"><div class="para" id="p-derived-li-72">
+<span class="process-math">\(\{\frac{a}{2} \in \Q \mid a \in \N\}\)</span> means the elements will be rational numbers of the form <span class="process-math">\(\frac{a}{2}\)</span> (this is the first part, <span class="process-math">\(\frac{a}{2} \in \Q\)</span>). Since the qualification is just that the <span class="process-math">\(a\)</span> is a natural number, that tells us to feed all natural numbers into our set, so we have <span class="process-math">\(\{0, \frac12, 1, \frac32, 2, \frac52, \dots\}\)</span>
+</div></li>
+<li id="li-73">
+<div class="para" id="p-83">We have also seen intervals of real numbers in our previous courses which are the sets:</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><div class="para" id="p-84">
+<span class="process-math">\((a,b) = \{x \mid a \lt x \lt b, x\in \R \}\)</span>  <span class="process-math">\([a,b) = \{x \mid a \le x \lt b, x\in \R \}\)</span>
+</div></div>
+<div class="sbspanel top" style="width:50%;"><div class="para" id="p-85">
+<span class="process-math">\((a,b] = \{x \mid a \lt x \le b, x\in \R \}\)</span>  <span class="process-math">\([a,b] = \{x \mid a \le x \le b, x\in \R \}\)</span>
+</div></div>
+</div></div>
+</li>
+</ol>
+</div></article><article class="definition definition-like" id="definition-9"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Set Relations.</span>
+</h4> <div class="para" id="p-86">We say that two sets, <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <dfn class="terminology">equal</dfn>, an write <span class="process-math">\(A = B\)</span> they have exactly the same elements.</div> <div class="para" id="p-87">We say that <span class="process-math">\(A\)</span> is a <dfn class="terminology">subset</dfn> of <span class="process-math">\(B\text{,}\)</span> and write <span class="process-math">\(A \subseteq B\)</span> if every element of <span class="process-math">\(A\)</span> is an element of <span class="process-math">\(B\text{.}\)</span>
+</div>  <div class="para" id="p-88">If there is an element of <span class="process-math">\(B\)</span> which is not also in <span class="process-math">\(A\text{,}\)</span> we say that <span class="process-math">\(A\)</span> is a <dfn class="terminology">proper subset</dfn> of <span class="process-math">\(B\)</span> and write <span class="process-math">\(A \subset B\text{.}\)</span> </div> <a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-8" id="answer-8"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-8" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/cAh-4Xe7Auc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></article><article class="example example-like" id="example-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-89">
+<div class="para">Consider the set <span class="process-math">\(S = \{1, 2, 3, 4, 5\}\text{,}\)</span> then:</div>
+<ul class="disc">
+<li id="li-74"><div class="para" id="p-derived-li-74">
+<span class="process-math">\(3 \in S\text{,}\)</span> since 3 is an element of <span class="process-math">\(S\)</span>
+</div></li>
+<li id="li-75"><div class="para" id="p-derived-li-75">
+<span class="process-math">\(\{3\}\subseteq S\text{,}\)</span> because the set consisting of 3, <span class="process-math">\(\{3\}\text{,}\)</span> is a subset of <span class="process-math">\(S\text{.}\)</span>
+</div></li>
+<li id="li-76"><div class="para" id="p-derived-li-76">We can also write, <span class="process-math">\(\{3\}\subset S\text{,}\)</span> because although the set <span class="process-math">\(\{3\}\)</span> is a subset of <span class="process-math">\(S\text{,}\)</span> they’re unequal: <span class="process-math">\(\{3\} \ne S\text{,}\)</span> so it’s a proper subset.</div></li>
+<li id="li-77"><div class="para" id="p-derived-li-77">This is meaningless: <span class="process-math">\(3 \subseteq S\)</span> since 3 a number, not a set, so it can’t be a subset of <span class="process-math">\(S\)</span>
+</div></li>
+<li id="li-78"><div class="para" id="p-derived-li-78">Order in sets doesn’t matter, so <span class="process-math">\(\{3,1,5,4,2\} = S\text{.}\)</span>
+</div></li>
+</ul>
+</div></article><div class="para" id="p-90">The following theorem tells us that every set contains itself and also the empty set. That every set is a subset of itself maybe feels obvious, but the other half, that the empty set is a subset of every set, is a little less obvious. We will formally prove both statements are true in <a href="" class="xref" data-knowl="./knowl/example-subset-of-itself-and-empty-set.html" title="Example 2.2.2">Example 2.2.2</a> after we develop the tools of logical proof.</div>
+<article class="theorem theorem-like" id="theorem-subset-of-itself-and-empty-set"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-91">
+<div class="para">For every set <span class="process-math">\(S\text{,}\)</span>
+</div>
+<ul class="disc">
+<li id="li-79"><div class="para" id="p-derived-li-79">
+<span class="process-math">\(\emptyset \subseteq S\)</span> and</div></li>
+<li id="li-80"><div class="para" id="p-derived-li-80"><span class="process-math">\(S \subseteq S\text{.}\)</span></div></li>
+</ul>
+</div></article><article class="note remark-like" id="note-3"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-92">
+<div class="para">Since a set is always a subset of itself we can say that if two sets, <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are equal, then <span class="process-math">\(A\)</span> is a subset of <span class="process-math">\(B\)</span> and vice versa.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = B \iff (A \subseteq B \text{ and } B \subseteq A)
+\end{equation*}
+</div>
+</div></article><article class="definition definition-like" id="definition-10"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Power Set.</span>
+</h4> <div class="para" id="p-93">Given any set <span class="process-math">\(S\text{,}\)</span> the <dfn class="terminology">power set</dfn> of <span class="process-math">\(S\)</span> is the set of all subsets of the set <span class="process-math">\(S\text{.}\)</span> We denote the power set of <span class="process-math">\(S\)</span> by <span class="process-math">\(\pow(S)\)</span>
+</div></article><article class="example example-like" id="example-8"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-94">
+<div class="para">Find the power set of:</div>
+<ol class="decimal">
+<li id="li-81"><div class="para" id="p-derived-li-81"><span class="process-math">\(\displaystyle \{a, b, c\}\)</span></div></li>
+<li id="li-82"><div class="para" id="p-derived-li-82"><span class="process-math">\(\displaystyle \{1, 2\}\)</span></div></li>
+<li id="li-83"><div class="para" id="p-derived-li-83"><span class="process-math">\(\displaystyle \emptyset\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-9" id="answer-9"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-9" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Xqe7xNxH4aE?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="definition definition-like" id="definition-11"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Cardinality.</span>
+</h4> <div class="para" id="p-95">Let <span class="process-math">\(S\)</span> be a set. If there are exactly <span class="process-math">\(n\)</span> distinct elements in <span class="process-math">\(S\)</span> where <span class="process-math">\(n\)</span> is a non-negative integer, then we say that <span class="process-math">\(S\)</span> is a <dfn class="terminology">finite</dfn> set with <dfn class="terminology">cardinality</dfn> of <span class="process-math">\(n\text{,}\)</span> and write <span class="process-math">\(|S|=n\text{.}\)</span>
+</div> <div class="para" id="p-96">A set is said to be <dfn class="terminology">infinite</dfn> if it is not finite.</div></article><article class="example example-like" id="example-9"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-97">
+<div class="para">Find the cardinality:</div>
+<ol class="decimal">
+<li id="li-84"><div class="para" id="p-derived-li-84"><span class="process-math">\(\displaystyle |\{a, b, c\}|\)</span></div></li>
+<li id="li-85"><div class="para" id="p-derived-li-85"><span class="process-math">\(\displaystyle |\pow(\{a, b, c \})|\)</span></div></li>
+<li id="li-86"><div class="para" id="p-derived-li-86"><span class="process-math">\(\displaystyle |\emptyset|\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-10" id="answer-10"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-10" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/CRqvTn3ncPY?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Operations on sets</span>
+</h3>
+<article class="definition definition-like" id="definition-12"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.13</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-98">We define an <dfn class="terminology">ordered <span class="process-math">\(n-\)</span>tuple</dfn> to be an ordered collection of the form <span class="process-math">\((a_1, a_2, \dots, a_n)\text{.}\)</span>
+</div> <div class="para" id="p-99">We call the <span class="process-math">\(2-\)</span>tuple <span class="process-math">\((a_1, a_2)\)</span> an <dfn class="terminology">ordered pair</dfn>, and the <span class="process-math">\(3-\)</span>tuple <span class="process-math">\((a_1, a_2, a_3)\)</span> an <dfn class="terminology">ordered triple</dfn>.</div></article><div class="para" id="p-100">Ordered pairs will be familiar from algebra and calculus when you plotted points on the Cartesian plane. <span class="process-math">\((x, y)\)</span> meant that the <span class="process-math">\(x\)</span> came from one set (corresponding to the horizontal axis), and <span class="process-math">\(y\)</span> came from another set (corresponding to the vertical axis).</div>
+<article class="definition definition-like" id="definition-13"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Cartesian Product.</span>
+</h4> <div class="para logical" id="p-101">
+<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be sets. The <dfn class="terminology">Cartesian Product</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> denoted by <span class="process-math">\(A\times B\text{,}\)</span> is the set of all ordered pairs <span class="process-math">\((a,b)\)</span> where <span class="process-math">\(a\in A\)</span> and <span class="process-math">\(b \in B\text{.}\)</span> That is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \times B = \{ (a,b) \mid a\in A \text{ and } b \in B\}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-102">We also denote the Cartesian product of a set with itself by the superscript <span class="process-math">\(A^2 = A \times A\text{.}\)</span>
+</div></article><div class="para" id="p-103">Returning to our calculus experience, for the ordered pair <span class="process-math">\((x,y)\text{,}\)</span> our <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> variables all came from the set of real numbers, so we’d formally say that the point <span class="process-math">\((x,y)\)</span> is an element in the set <span class="process-math">\(\R \times \R\)</span> or <span class="process-math">\(\R^2\text{,}\)</span> that is, <span class="process-math">\((x,y) \in \R^2\text{.}\)</span> If you’ve had calc 3, the points <span class="process-math">\((x,y,z) \in \R^3\text{,}\)</span> live in three-dimensional space. Let’s take a look at discrete examples.</div>
+<article class="example example-like" id="example-10"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.15</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-104">
+<div class="para">Let <span class="process-math">\(A=\{1, 2\}\)</span> and <span class="process-math">\(B = \{x, y , z\}\text{,}\)</span> find:</div>
+<ol class="decimal cols2">
+<li id="li-87"><div class="para" id="p-derived-li-87"><span class="process-math">\(\displaystyle |A|\)</span></div></li>
+<li id="li-88"><div class="para" id="p-derived-li-88"><span class="process-math">\(\displaystyle |B|\)</span></div></li>
+<li id="li-89"><div class="para" id="p-derived-li-89">How many elements do you expect in <span class="process-math">\(A \times B\text{?}\)</span>
+</div></li>
+<li id="li-90"><div class="para" id="p-derived-li-90"><span class="process-math">\(\displaystyle A \times B\)</span></div></li>
+<li id="li-91"><div class="para" id="p-derived-li-91"><span class="process-math">\(\displaystyle B \times A\)</span></div></li>
+<li id="li-92"><div class="para" id="p-derived-li-92"><span class="process-math">\(\displaystyle A^2\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-11" id="answer-11"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-11" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/TeCOF_lO5qU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="definition definition-like" id="definition-14"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Set Operations.</span>
+</h4> <div class="para logical" id="p-105">
+<div class="para">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are two sets, we define the <dfn class="terminology">union</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> denoted <span class="process-math">\(A \cup B\text{,}\)</span> to be the set of all elements that are in <span class="process-math">\(A\)</span> or <span class="process-math">\(B\text{,}\)</span> or both.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \cup B = \{ x \mid x \in A \text{ or } x \in B\}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-106">As a Venn diagram:</div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/A-or-B.svg" role="img" class="contained" alt="Venn diagram for set union. Two circles labeled A and B. Both circles are completely shaded."></div> <div class="para logical" id="p-107">
+<div class="para">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are two sets, we define the <dfn class="terminology">intersection</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> denoted <span class="process-math">\(A \cap B\text{,}\)</span> to be the set of only elements that are in both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \cap B = \{ x \mid x \in A \text{ and } x \in B\}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-108">As a Venn diagram:</div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/A-and-B.svg" role="img" class="contained" alt="Venn diagram for set intersection. Two circles labeled A and B. Only where the two circles overlap is shaded."></div> <div class="para logical" id="p-109">
+<div class="para">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are two sets, we define the <dfn class="terminology">difference</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> denoted <span class="process-math">\(A \setminus B\text{,}\)</span> to be the set of only elements that are only in <span class="process-math">\(A\)</span> and not in <span class="process-math">\(B\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \setminus B = \{ x \mid x \in A \text{ and } x \not\in B\}
+\end{equation*}
+</div>
+</div> <aside class="aside aside-like" id="aside-3"><div class="para" id="p-110">It’s worth noting that some authors, Rosen included, use <span class="process-math">\(A - B\)</span> to denote the difference between two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> We’ll be using the slightly more standard <span class="process-math">\(A\setminus B\)</span> in this class.</div></aside> <div class="para" id="p-111">As a Venn diagram:</div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/A-minus-B.svg" role="img" class="contained" alt="Venn diagram for set difference \(A \setminus B\text{.}\) Two circles are labeled A and B. Only the part of A that doesn’t overlap with B is shaded."></div> <div class="para" id="p-112">Let <span class="process-math">\(U\)</span> be the <dfn class="terminology">universal set</dfn>, that is the set of all possible objects in consideration.</div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/universal-set.svg" role="img" class="contained" alt="Venn diagram for the universal set. Everything is shaded, including A and B and everything outside of those circles."></div> <div class="para" id="p-113">If <span class="process-math">\(A\)</span> is a set, the <dfn class="terminology">complement</dfn> of <span class="process-math">\(A\text{,}\)</span> denoted <span class="process-math">\(\overline{A}\text{,}\)</span> is the set difference <span class="process-math">\(\overline{A} = U \setminus A\text{.}\)</span>
+</div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/A-complement.svg" role="img" class="contained" alt="Venn diagram for the complement of \(A\text{.}\) Here there is one circle labeled A and everything outside of it is shaded."></div></article><article class="example example-like" id="example-11"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.17</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-114">Let <span class="process-math">\(A=\{a,b,c,d,e\}\)</span> and <span class="process-math">\(B=\{a, b,c,d,e,f,g,h\}\text{,}\)</span> find</div> <ol class="decimal cols3">
+<li id="li-93"><div class="para" id="p-derived-li-93"><span class="process-math">\(\displaystyle |A|\)</span></div></li>
+<li id="li-94"><div class="para" id="p-derived-li-94"><span class="process-math">\(\displaystyle |B|\)</span></div></li>
+<li id="li-95"><div class="para" id="p-derived-li-95"><span class="process-math">\(\displaystyle A\cup B\)</span></div></li>
+<li id="li-96"><div class="para" id="p-derived-li-96"><span class="process-math">\(\displaystyle A\cap B\)</span></div></li>
+<li id="li-97"><div class="para" id="p-derived-li-97"><span class="process-math">\(\displaystyle |A\cup B|\)</span></div></li>
+<li id="li-98"><div class="para" id="p-derived-li-98"><span class="process-math">\(\displaystyle |A\cap B|\)</span></div></li>
+<li id="li-99"><div class="para" id="p-derived-li-99"><span class="process-math">\(\displaystyle A\setminus B\)</span></div></li>
+<li id="li-100"><div class="para" id="p-derived-li-100"><span class="process-math">\(\displaystyle B\setminus A\)</span></div></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-12" id="answer-12"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-12" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/aj5UcvPjCoQ?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><div class="para" id="p-115">What do you observe about some combination of the cardinalities above? Be on the lookout for patterns as you work through more cardinality questions. We’ll find formulas in the future for things such as <span class="process-math">\(|A \cup B|\text{,}\)</span> <span class="process-math">\(\mathcal{P}(A)\text{,}\)</span> and <span class="process-math">\(|A \times B|\)</span>
+</div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Verifying Set Identities</span>
+</h3>
+<div class="para" id="p-116">An <dfn class="terminology">identity</dfn> is a statement which is true if we replace the variables with specific sets. One way that we can show that an identity is true by shading a Venn Diagram for each side of the equality.</div>
+<article class="example example-like" id="example-12"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.18</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-117">
+<div class="para">Verify the following identities by using a Venn Diagram.</div>
+<ol class="decimal">
+<li id="li-101"><div class="para" id="p-derived-li-101"><span class="process-math">\(\displaystyle \overline{A \cap B} = \overline{A} \cup \overline{B}\)</span></div></li>
+<li id="li-102"><div class="para" id="p-derived-li-102"><span class="process-math">\(\displaystyle A \cup(B \cap C) = (A \cup B) \cap (A \cup C)\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-13" id="answer-13"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-13" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/VVXEDmYGy2s?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><figure class="list table-like" id="list-set-identities"><figcaption><span class="type">List</span><span class="space"> </span><span class="codenumber">1.2.19<span class="period">.</span></span><span class="space"> </span>Fundamental set identities</figcaption><div class="named-list-content">
+<div class="introduction" id="introduction-3"><div class="para" id="p-118">Let <span class="process-math">\(A, B\)</span> and <span class="process-math">\(C\)</span> be three sets and let <span class="process-math">\(U\)</span> be the universal set.</div></div>
+<dl class="description-list narrow">
+<dt id="li-103">Commutative Laws</dt>
+<dd><div class="para" id="p-119">
+<span class="process-math">\(A \cup B = B \cup A\)</span><br> <span class="process-math">\(A \cap B = B \cap A\)</span>
+</div></dd>
+<dt id="li-104">Associative Laws</dt>
+<dd><div class="para" id="p-120">
+<span class="process-math">\((A \cup B) \cup C = A \cup (B \cup C)\)</span><br> <span class="process-math">\((A \cap B) \cap C = A \cap (B \cap C)\)</span>
+</div></dd>
+<dt id="li-105">Distributive Laws</dt>
+<dd><div class="para" id="p-121">
+<span class="process-math">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C) \)</span> <span class="process-math">\(A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \)</span>
+</div></dd>
+<dt id="li-106">Identity Laws</dt>
+<dd><div class="para" id="p-122">
+<span class="process-math">\(A \cup \emptyset = A\)</span>  <span class="process-math">\(A \cap U = A\)</span>
+</div></dd>
+<dt id="li-107">Negation Laws</dt>
+<dd><div class="para" id="p-123">
+<span class="process-math">\(A \cap \overline{A} = \emptyset\)</span><br> <span class="process-math">\(A \cup \overline{A} = U\)</span>
+</div></dd>
+<dt id="li-108">Idempotent Laws</dt>
+<dd><div class="para" id="p-124">
+<span class="process-math">\(A \cup A = A\)</span> <br> <span class="process-math">\(A \cap A = A\)</span>
+</div></dd>
+<dt id="li-109">Domination Laws</dt>
+<dd><div class="para" id="p-125">
+<span class="process-math">\(A \cap \emptyset = \emptyset\)</span><br> <span class="process-math">\(A \cup U = U\)</span>
+</div></dd>
+<dt id="li-110">Absorption Laws</dt>
+<dd><div class="para" id="p-126">
+<span class="process-math">\(A \cap (A \cup B)= A\)</span><br> <span class="process-math">\(A \cup (A \cap B)= A\)</span>
+</div></dd>
+<dt id="li-111">DeMorgan’s Laws</dt>
+<dd><div class="para" id="p-127">
+<span class="process-math">\(\overline{(A\cup B)} = \overline{A}\cap \overline{B}\)</span><br> <span class="process-math">\(\overline{(A\cap B)} = \overline{A}\cup \overline{B}\)</span>
+</div></dd>
+<dt id="li-112">Double Negation Law</dt>
+<dd><div class="para" id="p-128"><span class="process-math">\(\displaystyle \overline{\overline{A}} = A\)</span></div></dd>
+</dl>
+</div></figure><div class="para" id="p-129">It would be good practice to take a moment and confirm for yourself that these identities are true by shading a Venn diagram for each side of the equalities.</div></section><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-130">What kind of object is each of the following? Is it a set, a number, or a logical proposition? If it’s a set, give its elements. If it’s a number, give the number. If it’s proposition, give its truth value.</div> <aside class="aside aside-like" id="aside-4"><div class="para" id="p-131">“If you want it to be possessive, it’s just its. If you want a contraction it’s <a class="external" href="https://www.youtube.com/watch?v=yc2udEpyPpU" target="_blank">i t apostrophe s.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>”</div></aside> <div class="para logical" id="p-132">
+<div class="para">Let <span class="process-math">\(A = \{1, 2, 3, 4\}\text{,}\)</span> <span class="process-math">\(B = \{2, 4\}\text{,}\)</span> and <span class="process-math">\(C = \{5\}\)</span>
+</div>
+<ol class="lower-alpha">
+<li id="li-113"><div class="para" id="p-derived-li-113"><span class="process-math">\(\displaystyle A \cap B\)</span></div></li>
+<li id="li-114"><div class="para" id="p-derived-li-114"><span class="process-math">\(\displaystyle B \subset A\)</span></div></li>
+<li id="li-115"><div class="para" id="p-derived-li-115"><span class="process-math">\(\displaystyle A \subset B\)</span></div></li>
+<li id="li-116"><div class="para" id="p-derived-li-116"><span class="process-math">\(\displaystyle |A \cup B|\)</span></div></li>
+<li id="li-117"><div class="para" id="p-derived-li-117"><span class="process-math">\(\displaystyle A \cap C\)</span></div></li>
+<li id="li-118"><div class="para" id="p-derived-li-118"><span class="process-math">\(\displaystyle 3 \in B\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><div class="para logical" id="p-133"><ol class="lower-alpha">
+<li id="li-119"><div class="para" id="p-derived-li-119">This is a set; <span class="process-math">\(A \cap B= \{2, 4\}\)</span>
+</div></li>
+<li id="li-120"><div class="para" id="p-derived-li-120">This is a statement. It is true.</div></li>
+<li id="li-121"><div class="para" id="p-derived-li-121">This is also a statement. It is false, since <span class="process-math">\(1 \in A\)</span> but <span class="process-math">\(1\not\in B\)</span>
+</div></li>
+<li id="li-122"><div class="para" id="p-derived-li-122">This is a number. It’s 4.</div></li>
+<li id="li-123"><div class="para" id="p-derived-li-123">This is a set. It’s <span class="process-math">\(\emptyset\text{.}\)</span>
+</div></li>
+<li id="li-124"><div class="para" id="p-derived-li-124">This is statement. It’s false.</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="p-134">
+<div class="para">Let <span class="process-math">\(A = \{1, 2, 3, 4, 5, 6\}\text{,}\)</span> <span class="process-math">\(B = \{2, 4, 6\}\text{,}\)</span> <span class="process-math">\(C = \{1, 2, 3\}\)</span> and <span class="process-math">\(D = \{7, 8, 9\}\text{.}\)</span> Determine which of the following are true, false, or meaningless.</div>
+<ol class="lower-alpha cols3">
+<li id="li-125"><div class="para" id="p-derived-li-125"><span class="process-math">\(A \subset B\text{.}\)</span></div></li>
+<li id="li-126"><div class="para" id="p-derived-li-126"><span class="process-math">\(B \subset A\text{.}\)</span></div></li>
+<li id="li-127"><div class="para" id="p-derived-li-127"><span class="process-math">\(B \in C\text{.}\)</span></div></li>
+<li id="li-128"><div class="para" id="p-derived-li-128"><span class="process-math">\(\emptyset \in A\text{.}\)</span></div></li>
+<li id="li-129"><div class="para" id="p-derived-li-129"><span class="process-math">\(\emptyset \subset A\text{.}\)</span></div></li>
+<li id="li-130"><div class="para" id="p-derived-li-130"><span class="process-math">\(A \lt  D\text{.}\)</span></div></li>
+<li id="li-131"><div class="para" id="p-derived-li-131"><span class="process-math">\(3 \in C\text{.}\)</span></div></li>
+<li id="li-132"><div class="para" id="p-derived-li-132"><span class="process-math">\(3 \subset C\text{.}\)</span></div></li>
+<li id="li-133"><div class="para" id="p-derived-li-133"><span class="process-math">\(\{3\} \subset C\text{.}\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><div class="para logical" id="p-135"><ol class="lower-alpha">
+<li id="li-134"><div class="para" id="p-136">False. For example, <span class="process-math">\(1\in A\)</span> but <span class="process-math">\(1 \notin B\text{.}\)</span>
+</div></li>
+<li id="li-135"><div class="para" id="p-137">True. Every element in <span class="process-math">\(B\)</span> is an element in <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="li-136"><div class="para" id="p-138">False. The elements in <span class="process-math">\(C\)</span> are 1, 2, and 3. The <em class="emphasis">set</em> <span class="process-math">\(B\)</span> is not equal to 1, 2, or 3.</div></li>
+<li id="li-137"><div class="para" id="p-139">False. <span class="process-math">\(A\)</span> has exactly 6 elements, and none of them are the empty set.</div></li>
+<li id="li-138"><div class="para" id="p-140">True. Everything in the empty set (nothing) is also an element of <span class="process-math">\(A\text{.}\)</span> Notice that the empty set is a subset of every set.</div></li>
+<li id="li-139"><div class="para" id="p-141">Meaningless. A set cannot be less than another set.</div></li>
+<li id="li-140"><div class="para" id="p-142">True. <span class="process-math">\(3\)</span> is one of the elements of the set <span class="process-math">\(C\text{.}\)</span>
+</div></li>
+<li id="li-141"><div class="para" id="p-143">Meaningless. <span class="process-math">\(3\)</span> is not a set, so it cannot be a subset of another set.</div></li>
+<li id="li-142"><div class="para" id="p-144">True. <span class="process-math">\(3\)</span> is the only element of the set <span class="process-math">\(\{3\}\text{,}\)</span> and is an element of <span class="process-math">\(C\text{,}\)</span> so every element in <span class="process-math">\(\{3\}\)</span> is an element of <span class="process-math">\(C\text{.}\)</span>
+</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para logical" id="p-145">
+<div class="para">Let <span class="process-math">\(A = \{1, 2, 3, 4, 5, 6\}\text{,}\)</span> <span class="process-math">\(B = \{2, 4, 6\}\text{,}\)</span> <span class="process-math">\(C = \{1, 2, 3\}\)</span> and <span class="process-math">\(D = \{7, 8, 9\}\text{.}\)</span> If the universe is <span class="process-math">\(U = \{1, 2, \ldots, 10\}\text{,}\)</span> find:</div>
+<ol class="lower-alpha cols3">
+<li id="li-143"><div class="para" id="p-derived-li-143"><span class="process-math">\(A \cup B\text{.}\)</span></div></li>
+<li id="li-144"><div class="para" id="p-derived-li-144"><span class="process-math">\(A \cap B\text{.}\)</span></div></li>
+<li id="li-145"><div class="para" id="p-derived-li-145"><span class="process-math">\(B \cap C\text{.}\)</span></div></li>
+<li id="li-146"><div class="para" id="p-derived-li-146"><span class="process-math">\(A \cap D\text{.}\)</span></div></li>
+<li id="li-147"><div class="para" id="p-derived-li-147"><span class="process-math">\(\bar{B \cup C}\text{.}\)</span></div></li>
+<li id="li-148"><div class="para" id="p-derived-li-148"><span class="process-math">\(A \setminus B\text{.}\)</span></div></li>
+<li id="li-149"><div class="para" id="p-derived-li-149"><span class="process-math">\((D \cap \bar C) \cup \bar{A \cap B}\text{.}\)</span></div></li>
+<li id="li-150"><div class="para" id="p-derived-li-150"><span class="process-math">\(\emptyset \cup C\text{.}\)</span></div></li>
+<li id="li-151"><div class="para" id="p-derived-li-151"><span class="process-math">\(\emptyset \cap C\text{.}\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like"><div class="para logical" id="p-146"><ol class="lower-alpha">
+<li id="li-152"><div class="para" id="p-derived-li-152">
+<span class="process-math">\(A \cup B = \{1, 2, 3, 4, 5, 6\} = A\)</span> since everything in <span class="process-math">\(B\)</span> is already in <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="li-153"><div class="para" id="p-derived-li-153">
+<span class="process-math">\(A \cap B = \{2, 4, 6\} = B\)</span> since everything in <span class="process-math">\(B\)</span> is in <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="li-154"><div class="para" id="p-derived-li-154">
+<span class="process-math">\(B \cap C = \{2\}\)</span> as the only element of both <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> is 2.</div></li>
+<li id="li-155"><div class="para" id="p-derived-li-155">
+<span class="process-math">\(A \cap D = \emptyset\)</span> since <span class="process-math">\(A\)</span> and <span class="process-math">\(D\)</span> have no common elements.</div></li>
+<li id="li-156"><div class="para" id="p-derived-li-156">
+<span class="process-math">\(\bar{B \cup C} = \{5, 7, 8, 9, 10\}\text{.}\)</span> First we find that <span class="process-math">\(B \cup C = \{1, 2, 3, 4, 6\}\text{,}\)</span> then we take everything not in that set.</div></li>
+<li id="li-157"><div class="para" id="p-derived-li-157">
+<span class="process-math">\(A \setminus B = \{1, 3, 5\}\)</span> since the elements 1, 3, and 5 are in <span class="process-math">\(A\)</span> but not in <span class="process-math">\(B\text{.}\)</span> This is the same as <span class="process-math">\(A \cap \bar B\text{.}\)</span>
+</div></li>
+<li id="li-158"><div class="para" id="p-derived-li-158">
+<span class="process-math">\((D \cap \bar C) \cup \bar{A \cap B} = \{1, 3, 5, 7, 8, 9, 10\}.\)</span> The set contains all elements that are either in <span class="process-math">\(D\)</span> but not in <span class="process-math">\(C\)</span> (i.e., <span class="process-math">\(\{7,8,9\}\)</span>), or not in both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> (i.e., <span class="process-math">\(\{1,3,5,7,8,9,10\}\)</span>).</div></li>
+<li id="li-159"><div class="para" id="p-derived-li-159">
+<span class="process-math">\(\emptyset \cup C = C\)</span> since nothing is added by the empty set.</div></li>
+<li id="li-160"><div class="para" id="p-derived-li-160">
+<span class="process-math">\(\emptyset \cap C = \emptyset\)</span> since nothing can be both in a set and in the empty set.</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="p-147">
+<div class="para">Let <span class="process-math">\(A = \{1,2,3,4,5\}\text{,}\)</span> <span class="process-math">\(B = \{3,4,5,6,7\}\text{,}\)</span> and <span class="process-math">\(C = \{2,3,5\}\text{.}\)</span>
+</div>
+<ol class="lower-alpha cols2">
+<li id="li-161"><div class="para" id="p-148">Find <span class="process-math">\(A \cap B\text{.}\)</span>
+</div></li>
+<li id="li-162"><div class="para" id="p-149">Find <span class="process-math">\(A \cup B\text{.}\)</span>
+</div></li>
+<li id="li-163"><div class="para" id="p-150">Find <span class="process-math">\(A \setminus B\text{.}\)</span>
+</div></li>
+<li id="li-164"><div class="para" id="p-151">Find <span class="process-math">\(A \cap \overline{(B \cup C)}\text{.}\)</span>
+</div></li>
+<li id="li-165"><div class="para" id="p-152">Find <span class="process-math">\(A \times C\text{.}\)</span>
+</div></li>
+<li id="li-166"><div class="para" id="p-153">Is <span class="process-math">\(C \subseteq A\text{?}\)</span> Explain.</div></li>
+<li id="li-167"><div class="para" id="p-154">Is <span class="process-math">\(C \subseteq B\text{?}\)</span> Explain.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like"><div class="para logical" id="p-155"><ol class="lower-alpha">
+<li id="li-168"><div class="para" id="p-derived-li-168"><span class="process-math">\(A \cap B = \{3,4,5\}\text{.}\)</span></div></li>
+<li id="li-169"><div class="para" id="p-derived-li-169"><span class="process-math">\(A \cup B = \{1,2,3,4,5,6,7\}\text{.}\)</span></div></li>
+<li id="li-170"><div class="para" id="p-derived-li-170"><span class="process-math">\(A \setminus B = \{1,2\}\text{.}\)</span></div></li>
+<li id="li-171"><div class="para" id="p-derived-li-171"><span class="process-math">\(A \cap \bar{(B \cup C)} = \{1\}\text{.}\)</span></div></li>
+<li id="li-172"><div class="para" id="p-derived-li-172"><div class="displaymath process-math" id="md-3">
+\begin{align*}
+A \times C = \{ \amp(1,2), (1,3), (1,5), (2,2), (2,3), (2,5), (3,2), (3,3), \\
+\amp(3,5), (4,2),(4,3), (4,5), (5,2), (5,3), (5,5)\}
+\end{align*}
+</div></div></li>
+<li id="li-173"><div class="para" id="p-156">Yes.  All three elements of <span class="process-math">\(C\)</span> are also elements of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="li-174"><div class="para" id="p-157">No. There is an element of <span class="process-math">\(C\text{,}\)</span> namely the element 2, which is not an element of <span class="process-math">\(B\text{.}\)</span>
+</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="p-158">
+<div class="para">Let <span class="process-math">\(A = \{x \in \N \st 3 \le x \le 13\}\text{,}\)</span> <span class="process-math">\(B = \{x \in \N \st x \mbox{ is even} \}\text{,}\)</span> and <span class="process-math">\({C = \{x \in \N \st x \mbox{ is odd} \}}\text{.}\)</span>
+</div>
+<ol class="lower-alpha cols2">
+<li id="li-175"><div class="para" id="p-159">Find <span class="process-math">\(A \cap B\text{.}\)</span>
+</div></li>
+<li id="li-176"><div class="para" id="p-160">Find <span class="process-math">\(A \cup B\text{.}\)</span>
+</div></li>
+<li id="li-177"><div class="para" id="p-161">Find <span class="process-math">\(B \cap C\text{.}\)</span>
+</div></li>
+<li id="li-178"><div class="para" id="p-162">Find <span class="process-math">\(B \cup C\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><div class="para logical" id="p-163"><ol class="lower-alpha">
+<li id="li-179"><div class="para" id="p-derived-li-179"><span class="process-math">\(\displaystyle A\cap B = \{4, 6, 8, 10, 12\}\)</span></div></li>
+<li id="li-180"><div class="para" id="p-derived-li-180"><span class="process-math">\(\displaystyle A\cup B = \{0, 2, 3, 4, 5, \dots 12, 13, 14, 16,  18, 20, 22, 24, \dots\}\)</span></div></li>
+<li id="li-181"><div class="para" id="p-derived-li-181"><span class="process-math">\(\displaystyle B\cap C = \emptyset \)</span></div></li>
+<li id="li-182"><div class="para" id="p-derived-li-182"><span class="process-math">\(\displaystyle B\cup C = \N \)</span></div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-15"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-164">Find an example of sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> such that <span class="process-math">\(A\cap B = \{3, 5\}\)</span> and <span class="process-math">\(A \cup B = \{2, 3, 5, 7, 8\}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><div class="para" id="p-165">There are many possible examples. Here is a simple one. Let <span class="process-math">\(A=\{3, 5\}\)</span> and <span class="process-math">\(B=\{2, 3, 5, 7, 8\}\)</span>
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-16"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-166">Find an example of sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> such that <span class="process-math">\(A \subseteq B\)</span> and <span class="process-math">\(A \in B\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><div class="para" id="p-167">For example, <span class="process-math">\(A = \{1,2,3\}\)</span> and <span class="process-math">\(B = \{1,2,3,4,5,\{1,2,3\}\}\)</span>
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-17"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para logical" id="p-168">
+<div class="para">Draw a Venn diagram to represent each of the following:</div>
+<ol class="lower-alpha cols2">
+<li id="li-183"><div class="para" id="p-derived-li-183"><span class="process-math">\(\displaystyle A \cup \bar B\)</span></div></li>
+<li id="li-184"><div class="para" id="p-derived-li-184"><span class="process-math">\(\displaystyle \bar{(A \cup B)}\)</span></div></li>
+<li id="li-185"><div class="para" id="p-derived-li-185"><span class="process-math">\(\displaystyle A \cap (B \cup C)\)</span></div></li>
+<li id="li-186"><div class="para" id="p-derived-li-186"><span class="process-math">\(\displaystyle (A \cap B) \cup C\)</span></div></li>
+<li id="li-187"><div class="para" id="p-derived-li-187"><span class="process-math">\(\displaystyle \bar A \cap B \cap \bar C\)</span></div></li>
+<li id="li-188"><div class="para" id="p-derived-li-188"><span class="process-math">\(\displaystyle (A \cup B) \setminus C\)</span></div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="para logical" id="p-169"><ol class="lower-alpha">
+<li id="li-189">
+<div class="para" id="p-170"><span class="process-math">\(A \cup \bar B\text{:}\)</span></div>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/A-or-not-B.svg" role="img" class="contained" alt="Venn diagram of \(A\cup \bar B\text{.}\) Two circles are labeled A and B. Everything is shaded except for the small part of B that doesn’t overlap A."></div>
+</li>
+<li id="li-190">
+<div class="para" id="p-171"><span class="process-math">\(\bar{(A \cup B)}\text{:}\)</span></div>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/not-A-or-B.svg" role="img" class="contained" alt="Venn diagram of \(\bar{(A \cup B)}\text{.}\) Two circles are labeled A and B. Everything outside the two circles are shaded."></div>
+</li>
+<li id="li-191">
+<div class="para" id="p-172"><span class="process-math">\(A \cap (B \cup C)\text{:}\)</span></div>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/A-and-B-or-C.svg" role="img" class="contained" alt="Venn diagram of \(A \cap (B \cup C)\) Three circles are labeled A, B, and C. Where A and B is shaded and where A and C is also shaded."></div>
+</li>
+<li id="li-192">
+<div class="para" id="p-173"><span class="process-math">\((A \cap B) \cup C\text{:}\)</span></div>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/A-and-B-cup-C.svg" role="img" class="contained" alt="Venn diagram of \((A \cap B) \cup C\text{.}\) Three circles are labeled A, B, and C. Where A and B overlap is shaded. C is also shaded completely."></div>
+</li>
+<li id="li-193">
+<div class="para" id="p-174"><span class="process-math">\(\bar A \cap B \cap \bar C\text{:}\)</span></div>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/not-A-cap-B-cap-not-C.svg" role="img" class="contained" alt="Venn diagram of \(\bar A \cap B \cap \bar C\text{.}\) Three circles are labeled A, B, and C. Only the part of B that doesn’t overlap A and doesn’t overlap C is shaded."></div>
+</li>
+<li id="li-194">
+<div class="para" id="p-175"><span class="process-math">\((A \cup B) \setminus C\text{:}\)</span></div>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/A-or-B-less-C.svg" role="img" class="contained" alt="Venn diagram of \((A \cup B) \setminus C\text{.}\) Three circles are labeled A, B, and C. Only those parts of A and B that do not overlap C are shaded."></div>
+</li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-18"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-176">Describe a set in terms of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> (using set notation) which has the following Venn diagram:</div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/not-A-and-B.svg" role="img" class="contained" alt="Venn diagram: A is mostly shaded, B is mostly shaded, but the area where A and B overlap is not."></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><div class="para" id="p-177">One way to answer is <span class="process-math">\((A\cup B) \setminus (A\cap B)\)</span>
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-19"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para logical" id="p-178">
+<div class="para">Find the following cardinalities:</div>
+<ol class="lower-alpha">
+<li id="li-195"><div class="para" id="p-derived-li-195">
+<span class="process-math">\(|A|\)</span> when <span class="process-math">\(A = \{4,5,6,\ldots,37\}\)</span>
+</div></li>
+<li id="li-196"><div class="para" id="p-derived-li-196">
+<span class="process-math">\(|A|\)</span> when <span class="process-math">\(A = \{x \in \Z \st -2 \le x \le 100\}\)</span>
+</div></li>
+<li id="li-197"><div class="para" id="p-179">
+<span class="process-math">\(|A \cap B|\)</span> when <span class="process-math">\(A = \{x \in \N \st x \le 20\}\)</span> and <span class="process-math">\(B = \{x \in \N \st x \mbox{ is prime} \}\text{;}\)</span> note that 1 isn’t prime.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><div class="para logical" id="p-180"><ol class="lower-alpha">
+<li id="li-198"><div class="para" id="p-181">34.</div></li>
+<li id="li-199"><div class="para" id="p-182">103.</div></li>
+<li id="li-200"><div class="para" id="p-183">8.</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-20"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="p-184">Let <span class="process-math">\(A = \{a, b, c, d\}\text{.}\)</span> Find <span class="process-math">\(\pow(A)\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><div class="para" id="p-185">We are looking for a set containing 16 sets.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><div class="para logical" id="p-186"><div class="displaymath process-math" id="md-4">
+\begin{align*}
+\mathcal{P}(A) = \{\amp\emptyset, \{a\}, \{b\}, \{c\}, \{d\}, \{a,b\}, \{a,c\}, \{a,d\},\\
+\amp\{b,c\}, \{b,d\}, \{c,d\}, \{a,b,c\}, \{a, c,d\},\\
+\amp\{a, b, d\}, \{b,c,d\}, \{a, b, c, d\}\}
+\end{align*}
+</div></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-21"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para" id="p-187">Let <span class="process-math">\(A = \{1,2,3,4,5,6\}\text{.}\)</span> Find all sets <span class="process-math">\(B \in \pow(A)\)</span> which have the property <span class="process-math">\(\{2,3,5\} \subseteq B\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="para" id="p-188">There are eight possible sets. <span class="process-math">\(B\)</span> can be any of <span class="process-math">\(\{2,3,5\}\text{,}\)</span> <span class="process-math">\(\{1,2,3,5\}\text{,}\)</span> <span class="process-math">\(\{2,3,4, 5\}\text{,}\)</span> <span class="process-math">\(\{2,3,5,6\}\text{,}\)</span> <span class="process-math">\(\{1,2,3,4,5\}\text{,}\)</span> <span class="process-math">\(\{1,2,3,5,6\}\text{,}\)</span> <span class="process-math">\(\{2,3, 4, 5, 6\}\text{,}\)</span> <span class="process-math">\(\and \{1, 2, 3, 4, 5, 6\}\)</span>
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-22"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="para" id="p-189">Find an example of sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> such that <span class="process-math">\(|A| = 4\text{,}\)</span> <span class="process-math">\(|B| = 5\text{,}\)</span> and <span class="process-math">\(|A \cup B| = 9\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><div class="para" id="p-190">For example, <span class="process-math">\(A = \{1,2,3,4\}\)</span> and <span class="process-math">\(B = \{5,6,7,8,9\}\)</span> gives <span class="process-math">\(A \cup B = \{1,2,3,4,5,6,7,8,9\}\text{.}\)</span>
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-23"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="para" id="p-191">Let <span class="process-math">\(A = \{1,2,\ldots, 10\}\text{.}\)</span> How many subsets of <span class="process-math">\(A\)</span> contain exactly one element (i.e., how many <dfn class="terminology">singleton</dfn> subsets are there)? How many <dfn class="terminology">doubleton</dfn> subsets (containing exactly two elements) are there?</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><div class="para" id="p-192">There are 10 subsets that consist of a single element. For subsets consisting of exactly two elements, there are 45</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-24"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<div class="para" id="p-193">Find an example of sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> such that <span class="process-math">\(|A| = 3\text{,}\)</span> <span class="process-math">\(|B| = 4\text{,}\)</span> and <span class="process-math">\(|A \cup B| = 5\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like"><div class="para" id="p-194">There are many examples. Here’s one possibility: <span class="process-math">\(A = \{ a, b, c\}, B=\{b,c,d,e\}\text{.}\)</span> Then the union is <span class="process-math">\(A \cup B = \{a, b, c, d, e\}\text{.}\)</span>
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-25"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<div class="para" id="p-195">Are there sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> such that <span class="process-math">\(|A| = |B|\text{,}\)</span> <span class="process-math">\(|A\cup B| = 10\text{,}\)</span> and <span class="process-math">\(|A\cap B| = 5\text{?}\)</span> Explain.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><div class="para" id="p-196">Note that <span class="process-math">\(|A\cup B| = |A| + |B| - |A\cap B|\text{,}\)</span> (can you explain why this formula is correct? Make a Venn diagram)</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><div class="para" id="p-197">The answer is no. Can you explain why?</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-26"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<div class="para" id="p-198">In a regular deck of playing cards there are 26 red cards and 12 face cards. Explain, using sets and what you have learned about cardinalities, why there are only 32 cards which are either red or a face card.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like"><div class="para" id="p-199">The intersection of the set of red cards and the set of face cards is nonempty. It includes six cards: Jack of Hearts, Queen of Hearts, King of Hearts, Jack of Diamonds, Queen of Diamonds, and King of Diamonds.</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-27"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<div class="para logical" id="p-200">
+<div class="para">Recall <span class="process-math">\(\Z = \{\ldots,-2,-1,0, 1,2,\ldots\}\)</span> (the integers). Let <span class="process-math">\(\Z^+ = \{1, 2, 3, \ldots\}\)</span> be the positive integers. Let <span class="process-math">\(2\Z\)</span> be the even integers, <span class="process-math">\(3\Z\)</span> be the multiples of 3, and so on.</div>
+<ol class="lower-alpha">
+<li id="li-201"><div class="para" id="p-201">Is <span class="process-math">\(\Z^+ \subseteq 2\Z\text{?}\)</span> Explain.</div></li>
+<li id="li-202"><div class="para" id="p-202">Is <span class="process-math">\(2\Z \subseteq \Z^+\text{?}\)</span> Explain.</div></li>
+<li id="li-203"><div class="para" id="p-203">Find <span class="process-math">\(2\Z \cap 3\Z\text{.}\)</span> Describe the set in words, and using set notation.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like"><div class="para logical" id="p-204"><ol class="lower-alpha">
+<li id="li-204"><div class="para" id="p-205">No, since the set on the right contains only multiples of <span class="process-math">\(2\text{,}\)</span> but the set on the left contains, for example, <span class="process-math">\(3\text{.}\)</span>
+</div></li>
+<li id="li-205"><div class="para" id="p-206">No. Because this time, we have <span class="process-math">\(-2 \in 2\Z\text{,}\)</span> but <span class="process-math">\(-2\not\in \Z^+\)</span>
+</div></li>
+<li id="li-206"><div class="para" id="p-derived-li-206">
+<span class="process-math">\(2\Z \cap 3\Z\)</span> is the set of all integers which are multiples of both 2 and 3 (these are the multiples of 6). Therefore <span class="process-math">\(2\Z \cap 3\Z = \{6x \st x \in \Z )\}\text{.}\)</span>
+</div></li>
+</ol></div></div></div>
+</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">Strongbad Grammar Lesson Video</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-prop-logic.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec_relationsfunctions.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.1</span><span class="period">.</span>
+</h4>
+<article class="proof"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para">Question: How many <span class="process-math">\(k\)</span>-letter words can you make using <span class="process-math">\(n\)</span> different letters without repeating any letter?</div> <div class="para">Answer 1: There are <span class="process-math">\(n\)</span> choices for the first letter, <span class="process-math">\(n-1\)</span> choices for the second letter, <span class="process-math">\(n-2\)</span> choices for the third letter, and so on until <span class="process-math">\(n - (k-1)\)</span> choices for the <span class="process-math">\(k\)</span>th letter (since <span class="process-math">\(k-1\)</span> letters have already been assigned at that point). The product of these numbers can be written <span class="process-math">\(\frac{n!}{(n-k)!}\)</span> which is <span class="process-math">\(P(n,k)\text{.}\)</span>  Therefore there are <span class="process-math">\(P(n,k)\)</span> words.</div> <div class="para">Answer 2: First pick <span class="process-math">\(k\)</span> letters to be in the word from the <span class="process-math">\(n\)</span> choices. This can be done in <span class="process-math">\({n \choose k}\)</span> ways. Now arrange those letters into a word. There are <span class="process-math">\(k\)</span> choices for the first letter, <span class="process-math">\(k-1\)</span> choices for the second, and so on, for a total of <span class="process-math">\(k!\)</span> arrangements of the <span class="process-math">\(k\)</span> letters. Thus the total number of words is <span class="process-math">\({n \choose k}k!\text{.}\)</span>
+</div> <div class="para">Since the two answers are correct answers to the same question, we have established that <span class="process-math">\(P(n,k) = {n \choose k}k!\text{.}\)</span>
+</div></article>
+</div>
+<span class="incontext"><a href="section-counting-binomial.html#solution-199" class="internal">in-context</a></span>
+</body>
+</html>

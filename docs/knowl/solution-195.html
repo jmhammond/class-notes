@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span>
+</h4>
+<article class="proof"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para">Question: How many subsets of <span class="process-math">\(A = \{1,2,3, \ldots, n+1\}\)</span> contain exactly two elements?</div> <div class="para">Answer 1: We must choose 2 elements from <span class="process-math">\(n+1\)</span> choices, so there are <span class="process-math">\({n+1 \choose 2}\)</span> subsets.</div> <div class="para">Answer 2: We break this question down into cases, based on what the larger of the two elements in the subset is. The larger element can’t be 1, since we need at least one element smaller than it.</div> <div class="para">Larger element is 2: there is 1 choice for the smaller element.</div> <div class="para">Larger element is 3: there are 2 choices for the smaller element.</div> <div class="para">Larger element is 4: there are 3 choices for the smaller element.</div> <div class="para">And so on. When the larger element is <span class="process-math">\(n+1\text{,}\)</span> there are <span class="process-math">\(n\)</span> choices for the smaller element. Since each two element subset must be in exactly one of these cases, the total number of two element subsets is <span class="process-math">\(1 + 2 + 3 + \cdots + n\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Answer 1 and answer 2 are both correct answers to the same question, so they must be equal. Therefore,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 + 2 + 3 + \cdots + n = {n+1 \choose 2}
+\end{equation*}
+</div>
+</div></article>
+</div>
+<span class="incontext"><a href="section-counting-binomial.html#solution-195" class="internal">in-context</a></span>
+</body>
+</html>

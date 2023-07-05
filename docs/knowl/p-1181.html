@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">For the inductive step, assume that <span class="process-math">\(P(k)\)</span> is true for some integer <span class="process-math">\(k \ge 1\text{,}\)</span> that is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1^2 +2^2 +3^2+...+k^2 = \frac{k(k+1)(2k+1)}{6}
+\end{equation*}
+</div>
+<div class="para">and consider the statement:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp ~1^2 + 2^2 + 3^2 + \dots + k^2 + (k+1)^2 \\
+\amp = \frac{k(k+1)(2k+1)}{6}  + (k+1)^2 \\
+\amp = \frac{k(k+1)(2k+1)}{6} \frac{6(k+1)^2}{6} \\
+\amp = \frac{(k+1)[k(2k+1) + 6(k+1)]}{6} \\
+\amp = \frac{(k+1)[2k^2 + k + 6k+6]}{6} \\
+\amp = \frac{(k+1)[2k^2 + 7k+6]}{6} \\
+\amp = \frac{(k+1)[(2k+3)(k+2)]}{6} \\
+\amp = \frac{(k+1)(2(k+1)+1)((k+1) + 1)}{6} 
+\end{align*}
+</div>
+<div class="para">which is exactly what we needed to show. Thus, by the principle of mathematical induction, the original statement <span class="process-math">\(1^2 +2^2 +3^2+...+n^2 = \frac{n(n+1)(2n+1)}{6}\)</span> is true for all integers <span class="process-math">\(n\ge 1\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec_logic_induction.html#p-1181" class="internal">in-context</a></span>
+</body>
+</html>

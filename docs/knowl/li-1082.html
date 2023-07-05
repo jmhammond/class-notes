@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="li"><h5 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
+</h5>
+<div class="para logical">
+<div class="para">Answer: We’ll split on how many meats we want:</div>
+<ul class="disc">
+<li><div class="para">If we want no meats, then we’ll select no meats and <span class="process-math">\(n\)</span> non-meats. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{0}\binom{n}{n}\)</span>
+</div></li>
+<li><div class="para">If we want 1 meat, then we’ll select <span class="process-math">\(n-1\)</span> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{1}\binom{n}{n-1}\)</span>
+</div></li>
+<li><div class="para">If we want 2 meats, then we’ll select <span class="process-math">\(n-2\)</span> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{2}\binom{n}{n-2}\)</span>
+</div></li>
+<li><div class="para">...</div></li>
+<li><div class="para">If we want n meats, then we’ll select <span class="process-math">\(n-n=0\)</span> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{n}\binom{n}{0}\)</span>
+</div></li>
+</ul>
+<div class="para">because each of these pizzas are completely different than the rest (have different numbers of meats), the addition principle says to add them all together:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{0}\binom{n}{n}+\binom{n}{1}\binom{n}{n-1}+\binom{n}{2}\binom{n}{n-2}+ \cdots + \binom{n}{n} \binom{n}{0}
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="section-counting-binomial.html#li-1082" class="internal">in-context</a></span>
+</body>
+</html>

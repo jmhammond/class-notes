@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like"><article class="proof"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para">Let <span class="process-math">\(P(n)\)</span> be the statement that <span class="process-math">\(n\)</span> is either a Fibonacci number of the sum of distinct Fibonacci numbers</div> <div class="para">Basis step: For <span class="process-math">\(n=0\text{,}\)</span> we have that <span class="process-math">\(0 = F_0\)</span> is a Fibonacci number.</div> <div class="para">Inductive step: Assume that there is an integer <span class="process-math">\(k \ge 0\)</span> such that <span class="process-math">\(P(m)\)</span> is true for all <span class="process-math">\(0\le m \le k\text{.}\)</span> That is, <span class="process-math">\(m\)</span> is either a Fibonacci number or the sum of distinct Fibonacci numbers. Now let’s consider the next number, <span class="process-math">\(k+1\text{:}\)</span>
+</div> <div class="para">Case 1: If <span class="process-math">\(k+1\)</span> is a Fibonacci number, then we’re done.</div> <div class="para">Case 2: If <span class="process-math">\(k+1\)</span> is not a Fibonacci number, then let <span class="process-math">\(F_m\)</span> be the largest Fibonacci number less than <span class="process-math">\(k+1\text{.}\)</span> Since <span class="process-math">\(k+1 - F_m \le k\)</span> then we have that <span class="process-math">\(k+1 - F_m\)</span> is the sum of distinct Fibonacci numbers, by inductive hypothesis.</div> <div class="para">Adding <span class="process-math">\(F_m\)</span> to this sum gives us <span class="process-math">\(k+1 - F_m + F_m = k+1\)</span> which then itself a sum of distinct Fibonacci numbers.</div> <div class="para">Thus, by induction, every natural number is either a Fibonacci number of the sum of distinct Fibonacci numbers.</div></article></div></body>
+</html>

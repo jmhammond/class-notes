@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.6.7</span><span class="period">.</span><span class="space"> </span><span class="title">The RSA Algorithm.</span>
+</h4> <div class="para">RSA is an example of a public-key algorithm. Its security is based on the fact that factoring integers is <a class="external" href="https://en.wikipedia.org/wiki/Integer_factorization" target="_blank">a hard problem</a>. The process is outlined below:</div> <div class="para logical">
+<div class="para">To determine the keys:</div>
+<ol class="decimal">
+<li>
+<div class="para">Choose two prime numbers <span class="process-math">\(p \and q\text{.}\)</span> Let <span class="process-math">\(n=pq\)</span> and <span class="process-math">\(m = (p-1)(q-1)\text{.}\)</span>
+</div>
+<aside class="aside aside-like"><div class="para">Maybe surprisingly, <span class="process-math">\(n=pq\)</span> is the part of the algorithm that makes it secure. RSA’s security comes from the fact that factoring large numbers is a <em class="emphasis">very</em> hard problem. If <span class="process-math">\(p \and q\)</span> are both massively large numbers, then <span class="process-math">\(n\)</span> is essentially unfactorable in any reasonable amount of time.</div></aside>
+</li>
+<li><div class="para">Find any number <span class="process-math">\(e\)</span> which is relatively prime to <span class="process-math">\(m\text{.}\)</span>
+</div></li>
+<li><div class="para">Determine <span class="process-math">\(d\)</span> which is the inverse of <span class="process-math">\(e\)</span> modulo <span class="process-math">\(m\text{.}\)</span>
+</div></li>
+<li><div class="para">Your public key is <span class="process-math">\((e, n)\text{.}\)</span>
+</div></li>
+<li><div class="para">Your private key is <span class="process-math">\((d, n)\text{.}\)</span>
+</div></li>
+</ol>
+</div> <div class="para logical">
+<div class="para">To encrypt/decrypt:</div>
+<ol class="decimal">
+<li><div class="para">Convert our message (plaintext or ciphertext) to numeric values, each letter taking up two digits: A is 00, B is 01, ... Z = 25.</div></li>
+<li><div class="para logical">
+<div class="para">Using the chosen <span class="process-math">\(n\)</span> value, we split the message into blocks of even length according to the following scheme:</div>
+<ol class="lower-alpha">
+<li><div class="para">If <span class="process-math">\(2525 \lt n \lt 252525\text{,}\)</span> then the blocks will be length 4</div></li>
+<li><div class="para">If <span class="process-math">\(252525 \lt n \lt 25252525\text{,}\)</span> then the blocks will be length 6</div></li>
+<li><div class="para">If <span class="process-math">\(25252525 \lt n \lt 2525252525\text{,}\)</span> then the blocks will be length 8</div></li>
+<li><div class="para">and so on...</div></li>
+</ol>
+<div class="para">if the message doesn’t fit the appropriate block size, append a number of 23’s at the end. (padding the message with X’s).</div>
+</div></li>
+<li><div class="para">Encryption occurs my taking each numeric message block <span class="process-math">\(M\)</span> and computing <span class="process-math">\(M^e\pmod{n}\)</span>
+</div></li>
+<li><div class="para">Decryption occurs my taking each numeric cipher block <span class="process-math">\(C\)</span> and computing <span class="process-math">\(C^d\pmod{n}\)</span>
+</div></li>
+</ol>
+<div class="para">This works because <span class="process-math">\((M^e)^d = M^{ed} = M^1 \pmod{n}\text{.}\)</span> Although we haven’t proven this, it’s a result of Euler’s Totient Theorem which you’ll revisit in future course on number theory.</div>
+</div></article><span class="incontext"><a href="section-numtheory-encryption.html#definition-51" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span>
+</h4>
+<div class="para">This one’s a lot of fun, so let’s do it in a lot of detail. This is approach Blaise Pascal used to discover the formula in his 1654 <span class="booktitle">Traité du triangle arithmétique</span>.</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(a_n = (n+1)^3\text{.}\)</span> Then from <a href="" class="xref" data-knowl="./knowl/example-telescoping-sum.html" title="Example 4.1.14">Example 4.1.14</a>, we have that:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/example-telescoping-sum.html">
+\begin{align*}
+\sum_{j=1}^n (j+1)^3 - j^3 &amp; = a_n - a_0\\
+\sum_{j=1}^n (j+1)^3 - j^3 &amp; = (n+1)^3 - (0+1)^3\\
+\sum_{j=1}^n j^3 + 3j^2 + 3j + 1 - j^3 &amp; = n^3 + 3n^2 + 3n + 1 - 1\\
+\sum_{j=1}^n 3j^2 + 3j + 1 &amp; = n^3 + 3n^2 + 3n \\
+\sum_{j=1}^n 3j^2 + \sum_{j=1}^n 3j + \sum_{j=1}^n 1 &amp; = n^3 + 3n^2 + 3n \\
+3 \sum_{j=1}^n j^2 + 3 \sum_{j=1}^n j + \sum_{j=1}^n 1 &amp; = n^3 + 3n^2 + 3n \\
+3 \sum_{j=1}^n j^2 &amp; = n^3 + 3n^2 + 3n - 3 \sum_{j=1}^n j - \sum_{j=1}^n 1 
+\end{align*}
+</div>
+</div> <div class="para">We have from <a href="" class="xref" data-knowl="./knowl/example-sum-of-integers.html" title="Example 4.1.15">Example 4.1.15</a> that <span class="process-math">\(\displaystyle \sum_{j=1}^n j = \dfrac{n(n+1)}{2}\)</span> and if we add <span class="process-math">\(1\)</span> a total of <span class="process-math">\(n\)</span> times, we have <span class="process-math">\(\displaystyle \sum_{j=1}^n 1 = n\text{.}\)</span> Plugging these in, we find:</div> <div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+3 \sum_{j=1}^n j^2  &amp; = n^3 + 3n^2 + 3n - 3 \sum_{j=1}^n j - \sum_{j=1}^n 1 \\
+3 \sum_{j=1}^n j^2  &amp; = n^3 + 3n^2 + 3n - 3\left( \dfrac{n(n+1)}{2}\right) - n\\
+3 \sum_{j=1}^n j^2  &amp; = n^3 + 3n^2 + 2n - 3\left(\dfrac{n^2 + n}{2}\right) \\
+3 \sum_{j=1}^n j^2  &amp; = \frac{2n^3}{2} + \frac{6n^2}{2} + \frac{4n}{2} - \dfrac{3n^2}{2} - \frac{3n}{2}\\
+3 \sum_{j=1}^n j^2  &amp; = \frac{2n^3 + 3n^2 + n}{2}  \\
+3 \sum_{j=1}^n j^2  &amp; = \frac{n(2n+1)(n+1)}{2}  \\
+\sum_{j=1}^n j^2  &amp; = \frac{n(2n+1)(n+1)}{6}  
+\end{align*}
+</div>
+<div class="para">which is exactly the formula you learned in calculus!</div>
+</div>
+</div>
+<span class="incontext"><a href="section-objects-seqseries.html#solution-145" class="internal">in-context</a></span>
+</body>
+</html>

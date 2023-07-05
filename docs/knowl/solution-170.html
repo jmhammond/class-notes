@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">16.1</span><span class="period">.</span>
+</h4>
+<article class="proof"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para">Let <span class="process-math">\(P(n)\)</span> be the statement “<span class="process-math">\(F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}\)</span>”</div> <div class="para">Basis step: If <span class="process-math">\(n =1\)</span> then <span class="process-math">\(F_1 =1\)</span> and <span class="process-math">\(F_{2\cdot 1} = 1\)</span> so that <span class="process-math">\(P(1)\)</span> is true.</div> <div class="para logical">
+<div class="para">Inductive step: Assume that <span class="process-math">\(P(k)\)</span> is true for some integer <span class="process-math">\(k\ge 1\text{.}\)</span> That is, <span class="process-math">\(F_1 + F_3 + F_5 + \dots + F_{2k -1} = F_{2k}\)</span> and consider:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2(k+1) - 1}\amp \\
+\amp = F_1 + F_3 + F_5 + \dots + F_{2k -1} + F_{2k+1} \amp \\
+\amp = F_{2k} + F_{2k+1} \amp \text{by inductive hypothesis} \\
+\amp = F_{2k+2} \amp \text{by recursive definition}\\
+\amp = F_{2(k+1)}\amp
+\end{align*}
+</div>
+<div class="para">And thus <span class="process-math">\(P(k+1)\)</span> is true.</div>
+</div> <div class="para">Therefore, by math induction, <span class="process-math">\(F_1 + F_3 + F_5 + \dots + F_{2n -1} = F_{2n}\)</span> for all integers <span class="process-math">\(n\ge 1\text{.}\)</span>
+</div></article>
+</div>
+<span class="incontext"><a href="sec_logic_induction.html#solution-170" class="internal">in-context</a></span>
+</body>
+</html>

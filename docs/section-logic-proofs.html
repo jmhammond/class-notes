@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>An introduction to proofs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Math for Shockers">
+<meta property="book:author" content="John Hammond">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script async="" src="https://cse.google.com/cse.js?cx=015422183392601792159:vae7vvmmczm"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_brown_gold.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="external/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Discrete Math for Shockers</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-logic-arguments.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_logic.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-prop-supplementatal.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\def\modulus{\mathbin{\%}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="dedication-1.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_basics.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-prop-logic.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Propositional Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-prop-logic.html#subsection-1" class="internal"><span class="title">The Basics</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#subsec-truthtables" class="internal"><span class="title">Truth Tables for Logical Connectives</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#subsection-3" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#exercises-1" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_objects_sets.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-4" class="internal"><span class="title">Basic terminology</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-5" class="internal"><span class="title">Operations on sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-6" class="internal"><span class="title">Verifying Set Identities</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#exercises-2" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_relationsfunctions.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Relations and Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-7" class="internal"><span class="title">Relations</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-8" class="internal"><span class="title">Functions</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-9" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-10" class="internal"><span class="title">What kind of object? Binary operations vs. <span class="process-math">\(a\mathrel{R} b\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_logic.html" class="internal"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-logic-equivalences.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Logical Equivalences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-equivalences.html#subsection-11" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-equivalences.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_application_set_proofs.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Application: Set Equivalences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_application_set_proofs.html#subsection-12" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_application_set_proofs.html#exercises-5" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-quantifiers.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Propositional Functions and Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#subsection-13" class="internal"><span class="title">Predicates</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#subsection-14" class="internal"><span class="title">Logical Quantifiers</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#exercises-6" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-arguments.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Logical Arguments</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-arguments.html#subsection-15" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-arguments.html#exercises-7" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-logic-proofs.html" class="internal"><span class="codenumber">2.5</span> <span class="title">An introduction to proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-16" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-17" class="internal"><span class="title">Basic concepts of proof</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-18" class="internal"><span class="title">Direct Proof</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-logic-proofs.html#subsection-19" class="internal"><span class="title">Indirect Proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsubsection-1" class="internal"><span class="title">Proof by Contraposition</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsubsection-2" class="internal"><span class="title">Proof by Contradiction</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-20" class="internal"><span class="title">Proofs of equivalence</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-21" class="internal"><span class="title">Proof by cases</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-22" class="internal"><span class="title">Existence Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-23" class="internal"><span class="title">Uniqueness proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-24" class="internal"><span class="title">Vacuous and Trivial Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-25" class="internal"><span class="title">Counterexamples Revisited</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#exercises-8" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-prop-supplementatal.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Chapter Review</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-prop-supplementatal.html#exercises_logic-conc" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_numtheory.html" class="internal"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-numtheory-divcong.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Divisibility and Congruences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#section-numtheory-div" class="internal"><span class="title">The Divides Relation</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#section-numtheory-cong" class="internal"><span class="title">The Congruence Relation</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#exercises-10" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-primes.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Prime Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-primes.html#subsection-28" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-primes.html#computer-corner-sieve" class="internal"><span class="title">Computer Corner - Implementing the Sieve</span></a></div></li>
+<li><div class="toc-item"><a href="section-primes.html#exercises-11" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-gcd-euclid.html" class="internal"><span class="codenumber">3.3</span> <span class="title">GCDs and The Euclidean Algorithm</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-gcd-euclid.html#subsection-30" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-gcd-euclid.html#exercises-12" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-multiplicative-inverses.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Multiplicative Inverses</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-multiplicative-inverses.html#subsection-31" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-multiplicative-inverses.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-numtheory-modularexp.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Modular exponentiation</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-numtheory-modularexp.html#subsection-32" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-modularexp.html#exercises-14" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-numtheory-encryption.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Application: Encryption</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-numtheory-encryption.html#subsection-numtheory-ciphers" class="internal"><span class="title">Basic Cipher Examples</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-numtheory-encryption.html#exercises-15" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-numtheory-encryption.html#subsection-numtheory-sage" class="internal"><span class="title">Number Theory Using Sage</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-encryption.html#rsa-activity" class="internal"><span class="title">The RSA Activity</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_sequences.html" class="internal"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-objects-seqseries.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-objects-seqseries.html#subsection-36" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-objects-seqseries.html#subsection-37" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-objects-seqseries.html#exercises-16" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-solvingrecurrences.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Solving Recurrence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-38" class="internal"><span class="title">Motivation, or, why do I care?</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-39" class="internal"><span class="title">Solving recurrence relations</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-40" class="internal"><span class="title">Solving particularly nice recurrence relations</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#sec-recurrences-with-python" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#exercises-17" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_logic_induction.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_logic_induction.html#math-induction" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#strong-induction" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#subsection-44" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#exercises-18" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_counting.html" class="internal"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-counting-basics.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The Multiplicative and Additive Principles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-basics.html#subsection-45" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-basics.html#exercises-19" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-combperm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Permutations and Combinations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-combperm.html#subsection-46" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-combperm.html#exercises-20" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-binomial.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Combinatorial Proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-binomial.html#subsection-47" class="internal"><span class="title">Binomial Coefficients</span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-binomial.html#subsection-48" class="internal"><span class="title">Combinatorial Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-binomial.html#exercises-21" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-fib.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Counting Fibonacci numbers with tiles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-fib.html#subsection-49" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-fib.html#exercises-22" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="solutions-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Solutions to the exercises</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-logic-proofs"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">An introduction to proofs</span>
+</h2>
+<section class="introduction" id="introduction-12"><div class="para" id="p-550">In this section we’ll combine everything we’ve done so far in the book to introduce the idea of mathematical proof.  We will take statements about numbers, functions, or sets, decompose them into quantified statements and reason using argumentation and rules of logic to draw conclusions. We will do this by writing complete English and mathematical sentences that take us from beginning to end, telling the story of the argument.</div></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title"></span>
+</h3>
+<div class="para" id="p-551">Before we start, we need to formally define some basic concepts of numbers.</div>
+<article class="definition definition-like" id="definition-34"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Even Integer.</span>
+</h4> <div class="para" id="p-552">A number <span class="process-math">\(n\)</span> is said to be <dfn class="terminology">even</dfn> if it is a multiple of 2. That is, if there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(n = 2k\text{,}\)</span> then <span class="process-math">\(n\)</span> is even.</div></article><article class="example example-like" id="example-45"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-553"><ol class="decimal">
+<li id="li-535"><div class="para" id="p-derived-li-535">6 is even since <span class="process-math">\(6 = 2\cdot 3\)</span>
+</div></li>
+<li id="li-536"><div class="para" id="p-derived-li-536">0 is even, since <span class="process-math">\(0 = 2\cdot 0\)</span>
+</div></li>
+<li id="li-537"><div class="para" id="p-derived-li-537">-8 is even, since <span class="process-math">\(-8 = 2 \cdot (-4)\)</span>
+</div></li>
+<li id="li-538"><div class="para" id="p-derived-li-538">9 is not even, since there is no integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(9=2k\)</span>
+</div></li>
+</ol></div></article><article class="definition definition-like" id="definition-35"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Odd Integer.</span>
+</h4> <div class="para" id="p-554">A number <span class="process-math">\(n\)</span> is said to be <dfn class="terminology">odd</dfn> if it is not a multiple of 2. That is, if there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(n = 2k + 1\text{,}\)</span> then <span class="process-math">\(n\)</span> is odd.</div></article><article class="example example-like" id="example-46"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-555"><ol class="decimal">
+<li id="li-539"><div class="para" id="p-derived-li-539">7 is odd since <span class="process-math">\(7 = 2\cdot 3 + 1\)</span>
+</div></li>
+<li id="li-540"><div class="para" id="p-derived-li-540">-1 is odd, since <span class="process-math">\(-1 = 2\cdot (-1) + 1\)</span>
+</div></li>
+<li id="li-541"><div class="para" id="p-derived-li-541">8 is not odd, since there is no integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(8=2k+1\)</span>
+</div></li>
+</ol></div></article><article class="definition definition-like" id="definition-36"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Rational Number.</span>
+</h4> <div class="para" id="p-556">A number <span class="process-math">\(n\)</span> is said to be <dfn class="terminology">rational</dfn> if there exist integers <span class="process-math">\(a, b\)</span> with <span class="process-math">\(b \not=0 \)</span> such that <span class="process-math">\(n = \dfrac{a}{b}\text{.}\)</span> If a number is not rational, we say that it is is <dfn class="terminology">irrational</dfn>.</div></article><article class="example example-like" id="example-47"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.6</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-557"><ol class="decimal">
+<li id="li-542"><div class="para" id="p-derived-li-542">7 is rational since <span class="process-math">\(7 =  \frac71\)</span>
+</div></li>
+<li id="li-543"><div class="para" id="p-derived-li-543">
+<span class="process-math">\(\frac12\)</span> is rational, since both 1 and 2 are integers</div></li>
+</ol></div></article><div class="para" id="p-558">Note that every integer is a rational number, since if <span class="process-math">\(n\)</span> is an integer, then we can write <span class="process-math">\(\frac{n}{1}\)</span> which is a rational number. Not every rational number is an integer, for example, <span class="process-math">\(\frac{1}{2}\)</span> is not an integer.</div>
+<div class="para" id="p-559">There are also numbers which are not integers and also not rational. We’ll give an example later in this section.</div></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Basic concepts of proof</span>
+</h3>
+<article class="definition definition-like" id="definition-37"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Statement Terminology.</span>
+</h4> <div class="para logical" id="p-560"><ul class="disc">
+<li id="li-544"><div class="para" id="p-derived-li-544">A <dfn class="terminology">theorem</dfn> is a statement can be shown to be true. We generally reserve the word theorem for an important statement.</div></li>
+<li id="li-545"><div class="para" id="p-derived-li-545">A <dfn class="terminology">proposition</dfn> is a “less important” theorem.</div></li>
+<li id="li-546"><div class="para" id="p-derived-li-546">The tools we use to prove a theorem are <dfn class="terminology">axioms</dfn> (or <dfn class="terminology">postulates</dfn>) which are basic assumptions we make, as well as other theorems we’ve already proven.</div></li>
+<li id="li-547"><div class="para" id="p-derived-li-547">A less important theorem that will be helpful in proving others is called a <dfn class="terminology">lemma</dfn>.</div></li>
+<li id="li-548"><div class="para" id="p-derived-li-548">A <dfn class="terminology">corollary</dfn> is a theorem that follows directly from a theorem just proved.</div></li>
+<li id="li-549"><div class="para" id="p-derived-li-549">A <dfn class="terminology">conjecture</dfn> is a statement that we think may be true (our intuition suggests it)</div></li>
+</ul></div> <aside class="aside aside-like" id="aside-12"><div class="para" id="p-561">In this book, I use “proposition” to mean everything that we’ll prove together in the text and reserve “theorem” for things that will go unproven for now.</div></aside></article><article class="example example-like" id="example-48"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.8</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-562">Here’s a proposition: “If <span class="process-math">\(n\)</span> is an odd integer, then <span class="process-math">\(n^2\)</span> is odd.”</div> <div class="para logical" id="p-563">
+<div class="para">This statement means for the universe of discourse of all integers:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall n ((n \text{ is odd } ) \to (n^2  \text{ is odd }))
+\end{equation*}
+</div>
+</div></article><div class="para" id="p-564">The universe of discourse was implied in the general statement above. Mathematical propositions will almost always omit the words “for all.”</div></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Direct Proof</span>
+</h3>
+<div class="para" id="p-565">A direct proof is used when proving a proposition of the form <span class="process-math">\(p \to q\text{.}\)</span> The goal is to show <span class="process-math">\(q\)</span> is true when we assume <span class="process-math">\(p\)</span> is true. Here’s the model:</div>
+<article class="proof" id="proof-3"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<div class="para" id="p-566">Assume <span class="process-math">\(p\)</span> is true.</div> <div class="para" id="p-567">... use logical equivalences (and/or mathematics) ...</div> <div class="para" id="p-568">Therefore <span class="process-math">\(q\)</span> is true.</div></article><article class="example example-like" id="example-49"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.9</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-569">Prove that the sum of two odd numbers is even.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-43" id="answer-43"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-43"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-45" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/mQ_cvHA1SUw?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-neven"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.10</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-570">Prove that if <span class="process-math">\(n\)</span> is even, then <span class="process-math">\(n^2\)</span> is even.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-44" id="answer-44"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-44"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-46" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/vsFVy3q3q5M?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-51"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.11</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-571">Prove that if <span class="process-math">\(m+n\)</span> and <span class="process-math">\(n + p\)</span> are even integers, then <span class="process-math">\(m+p\)</span> is even.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-45" id="answer-45"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-45"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-47" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/0SIbTxN9WHw?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Indirect Proofs</span>
+</h3>
+<section class="introduction" id="introduction-13"><div class="para" id="p-572">We still want to show a statement is true, but perhaps that’s difficult to approach directly. There are several different indirect proofs. The most frequent indirect approaches are proofs by contraposition and proofs by contradiction.</div></section><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Proof by Contraposition</span>
+</h4>
+<div class="para" id="p-573">. A proof by contraposition is a direct proof of <span class="process-math">\(\neg q \to \neg p\text{.}\)</span> Here’s the model:</div>
+<article class="proof" id="proof-4"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-574">Assume <span class="process-math">\(\neg q\)</span> is true.</div> <div class="para" id="p-575">... use logical equivalences (and/or mathematics) ...</div> <div class="para" id="p-576">Show <span class="process-math">\(\neg p\)</span> is true. Therefore, <span class="process-math">\(p \to q\)</span> is true by contraposition.</div></article><div class="para" id="p-577">Remember that <span class="process-math">\(\neg q \to \neg p \equiv p \to q\text{,}\)</span> so this is a valid argument.</div>
+<article class="example example-like" id="example-52"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.12</span><span class="period">.</span>
+</h5>
+<div class="para" id="p-578">Show that if <span class="process-math">\(n\)</span> is an integer and <span class="process-math">\(n^3 + 5\)</span> is odd, then <span class="process-math">\(n\)</span> is even.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-46" id="answer-46"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-46"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-48" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/-fXm5dnyevg?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-n2even"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.13</span><span class="period">.</span>
+</h5>
+<div class="para" id="p-579">Prove that if <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is even.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-47" id="answer-47"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-47"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-49" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/P8n4FjM_Rxc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Proof by Contradiction</span>
+</h4>
+<div class="para logical" id="p-580">
+<div class="para">A proof by contradiction allows us to prove a statement <span class="process-math">\(p\)</span> which is not necessarily conditional. We accomplish this by assuming <span class="process-math">\(\neg p\)</span> is true, and finding a contradiction. This works because</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/example-contradiction-logic.html">
+\begin{equation*}
+\neg p \to (q \wedge \neg q) \equiv p
+\end{equation*}
+</div>
+<div class="para">as we showed in <a href="" class="xref" data-knowl="./knowl/example-contradiction-logic.html" title="Example 2.1.6">example</a>. Here’s the model:</div>
+</div>
+<article class="proof" id="contradiction-model"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-581">Assume, to the contrary, that <span class="process-math">\(p\)</span> is false, that is <span class="process-math">\(\neg p\)</span> is true.</div> <div class="para" id="p-582">... use logical equivalences (and/or mathematics) ...</div> <div class="para" id="p-583">Arrive at a logical contradiction. Some impossibility. Therefore, <span class="process-math">\(p\)</span> is true by contradiction.</div></article><article class="example example-like" id="ex-proof-sqrt2-irrational"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.14</span><span class="period">.</span>
+</h5>
+<div class="para" id="p-584">Prove that <span class="process-math">\(\sqrt{2}\)</span> is irrational</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-48" id="answer-48"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-48"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-50" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/cPbaYSiGqKU?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article></section></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Proofs of equivalence</span>
+</h3>
+<div class="para" id="p-585">For statements which are “if an only if:” <span class="process-math">\(p \iff q\)</span> we need to prove both <span class="process-math">\(p \to q\)</span> and its converse <span class="process-math">\(q \to p\text{.}\)</span>
+</div>
+<article class="example example-like" id="example-55"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.15</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-586">Prove that <span class="process-math">\(n\)</span> is even if and only if <span class="process-math">\(n^2\)</span> is even.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-75"><div class="solution solution-like"><div class="para" id="p-587">We actually did this in the two previous subsections. The <a href="" class="xref" data-knowl="./knowl/example-neven.html" title="Example 2.5.10">forward direction</a> and <a href="" class="xref" data-knowl="./knowl/example-n2even.html" title="Example 2.5.13">the converse</a>.</div></div></div>
+</div></article><article class="example example-like" id="example-56"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.16</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-588">Prove that <span class="process-math">\(n\)</span> is even if and only if <span class="process-math">\(7n+4\)</span> is even.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-49" id="answer-49"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-49"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-51" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/rWvqVUvKBBs?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="example example-like" id="example-57"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.17</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-589">
+<div class="para">Prove the following are equivalent:</div>
+<ol class="decimal">
+<li id="li-550"><div class="para" id="p-derived-li-550"><span class="process-math">\(\displaystyle a\lt b\)</span></div></li>
+<li id="li-551"><div class="para" id="p-derived-li-551">The average of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> is greater than <span class="process-math">\(a\)</span>
+</div></li>
+<li id="li-552"><div class="para" id="p-derived-li-552">The average of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> is less than <span class="process-math">\(b\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-50" id="answer-50"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-50"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-52" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/SSWODzVYxCc?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Proof by cases</span>
+</h3>
+<div class="para" id="p-590">Split an argument into completely separate pieces. In the example below we have two cases. Either <span class="process-math">\(x \ge y\)</span> or <span class="process-math">\(x \lt y\text{:}\)</span>
+</div>
+<article class="example example-like" id="example-58"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.18</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-591">Show that if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are real numbers, then:</div> <ul class="disc">
+<li id="li-553"><div class="para" id="p-derived-li-553">max(<span class="process-math">\(x,y\)</span>) = <span class="process-math">\(\dfrac{x+y + |x-y|}{2}\)</span>
+</div></li>
+<li id="li-554"><div class="para" id="p-derived-li-554">min(<span class="process-math">\(x,y\)</span>) = <span class="process-math">\(\dfrac{x+y - |x-y|}{2}\)</span>
+</div></li>
+</ul>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-51" id="answer-51"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-51"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-53" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/pLwuZ-JaTms?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article><article class="note remark-like" id="note-8"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">2.5.19</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-592">We need to prove each claim separately for each case!</div></article><article class="example example-like" id="example-59"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.20</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-593">Prove that <span class="process-math">\(5x + 5y\)</span> is an odd integer when <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are integers of opposite parity (not both even, not both odd).</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-52" id="answer-52"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-52"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-54" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/_UBA9HDFAYI?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+</div></article></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Existence Proofs</span>
+</h3>
+<div class="para" id="p-594">The claim of an existence theorem is that there is some object that has a property. A <dfn class="terminology">constructive proof</dfn> is one which, during the argumentation, tells the reader specifically how to come up with the object in question. A <dfn class="terminology">nonconstructive proof</dfn> merely confirms the existence of an object, but doesn’t give any detail as to how to find it.</div>
+<article class="example example-like" id="example-60"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.21</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-595">Prove that either <span class="process-math">\(2 \cdot 10^{500} + 15\)</span> or <span class="process-math">\(2 \cdot 10^{500} + 16\)</span> is not a perfect square.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like">
+<div class="para" id="p-596">Let me get you started on it, and we can discuss below. Notice that the two numbers are one apart from eachother. They’re massive, so we don’t necessarily know whether they’re square, but we need only show that not more than one of them is square.</div> <div class="para" id="p-597">Let’s imagine that I have a square number, namely <span class="process-math">\(n^2\text{.}\)</span> Is it possible that <span class="process-math">\(n^2 - 1\)</span> or <span class="process-math">\(n^2 + 1\)</span> is also a square number? What condition on <span class="process-math">\(n\)</span> is required?</div>
+</div></div>
+</div></article><article class="example example-like" id="example-61"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.22</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-598">Show that between any two rational numbers is another rational number.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><div class="para" id="p-599">If we have two rational numbers <span class="process-math">\(a/b\)</span> and <span class="process-math">\(c/d\)</span> with <span class="process-math">\(a, b, c, d \in \Z\)</span> and <span class="process-math">\(b, d \ne 0\text{,}\)</span> then we can construct <span class="process-math">\(\frac{a+c}{b+d}\text{.}\)</span> Show that this is a rational number which is contained between the two original numbers.</div></div></div>
+</div></article></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Uniqueness proofs</span>
+</h3>
+<div class="para logical" id="p-600">
+<div class="para">The claim of a uniqueness theorem is that there exists an element that has a desired property, and that no other element has this property. The outline of our proof is often:</div>
+<ul class="disc">
+<li id="li-555"><div class="para" id="p-derived-li-555">Prove the existence of <span class="process-math">\(x\text{,}\)</span> some element that has the property we want.</div></li>
+<li id="li-556"><div class="para" id="p-derived-li-556">Assume that a second element, <span class="process-math">\(y\)</span> also has that property.</div></li>
+<li id="li-557"><div class="para" id="p-derived-li-557">Conclude that <span class="process-math">\(x = y\)</span>
+</div></li>
+</ul>
+</div>
+<article class="example example-like" id="example-62"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.23</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-601">Show that if <span class="process-math">\(a, b, c\)</span> are real numbers with <span class="process-math">\(a\ne 0\text{,}\)</span> then there is a unique solution to the algebraic equation <span class="process-math">\(ax+b=c\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><div class="para" id="p-602">You know how to solve an algebraic equation. Now assume there’s a second solution. Show that the two solutions are equal.</div></div></div>
+</div></article><article class="example example-like" id="example-63"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.24</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-603">Show that if <span class="process-math">\(n\)</span> is an odd integer, then there exists a unique integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(n = (k-2) + (k+3)\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><div class="para" id="p-604">Similar to above, show that <span class="process-math">\(k\)</span> satisfies this equation, and then show that if you have another number, say <span class="process-math">\(l\)</span> that also does, it must be the case that <span class="process-math">\(k = l\text{.}\)</span>
+</div></div></div>
+</div></article></section><section class="subsection" id="subsection-24"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Vacuous and Trivial Proofs</span>
+</h3>
+<article class="definition definition-like" id="definition-38"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.25</span><span class="period">.</span><span class="space"> </span><span class="title">Vacuous Statements.</span>
+</h4> <div class="para" id="p-605">A <dfn class="terminology">vacuous statement</dfn> is one that is true because the hypothesis is false. You can “prove” a statement is true immediately. <article class="example example-like" id="example-64"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.26</span><span class="period">.</span>
+</h5>
+<div class="para" id="p-606">If I play in the Super Bowl, I will throw the game winning touchdown.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-76"><div class="solution solution-like"><div class="para" id="p-607">Since I won’t ever play in the Super Bowl, it doesn’t matter what the truth value of the touchdown statement is. <span class="process-math">\(F\to T \equiv T\)</span> and <span class="process-math">\(F \to F \equiv T\)</span> just the same.</div></div></div>
+</div></article>
+</div></article><article class="definition definition-like" id="definition-39"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.27</span><span class="period">.</span><span class="space"> </span><span class="title">Trivial Statements.</span>
+</h4> <div class="para" id="p-608">If we know that the conclusion of a statement is true, then the statement has a <dfn class="terminology">trivial</dfn> proof. <article class="example example-like" id="example-65"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.28</span><span class="period">.</span>
+</h5>
+<div class="para" id="p-609">Let <span class="process-math">\(P(x)\)</span> be the statement “If <span class="process-math">\(x\in \mathbb{R}\)</span> and <span class="process-math">\(x \gt 0\)</span> , then <span class="process-math">\(x^2 + 1 \ge 0\)</span>”.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-77"><div class="solution solution-like"><div class="para" id="p-610">Since we know that <span class="process-math">\(x^2 \ge 0\)</span> for any real number, <span class="process-math">\(x^2 + 1 \ge x^2 \ge 0\text{.}\)</span> We didn’t need the hypothesis <span class="process-math">\(x \gt 0\text{.}\)</span> This is a trivial proof.</div></div></div>
+</div></article>
+</div></article></section><section class="subsection" id="subsection-25"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Counterexamples Revisited</span>
+</h3>
+<div class="para" id="p-611">Recall in math propositions, the universal quantifier is implied and is usually omitted.  To show a statement is false, we need only find a single counterexample.</div>
+<article class="example example-like" id="example-66"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.29</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-612">Each of the following statements is false. Find a specific counterexample and explain why the statement is false.</div> <ol class="decimal">
+<li id="li-558"><div class="para" id="p-derived-li-558">If <span class="process-math">\(n\)</span> is a real number, then <span class="process-math">\((n+4)^2 = n^2 + 16\text{.}\)</span>
+</div></li>
+<li id="li-559"><div class="para" id="p-derived-li-559">Every integer is the sum of the squares of two integers.</div></li>
+<li id="li-560"><div class="para" id="p-derived-li-560">
+<span class="process-math">\(\forall x \forall y (x^2 = y^2 \to x = y)\)</span> where the domain of all variables is the set of all integers.</div></li>
+<li id="li-561"><div class="para" id="p-derived-li-561">The product of two irrational numbers is irrational.</div></li>
+<li id="li-562"><div class="para" id="p-derived-li-562">The sum of two irrational numbers is irrational.</div></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-78"><div class="solution solution-like"><div class="para logical" id="p-613"><ol class="decimal">
+<li id="li-563"><div class="para" id="p-derived-li-563">For example, <span class="process-math">\(n = 1\)</span> works, since <span class="process-math">\((1+4)^2 = 25 \ne 17 = 1+16\text{.}\)</span>
+</div></li>
+<li id="li-564"><div class="para" id="p-derived-li-564">The number 7 isn’t the sum of two squares. The only squares smaller than 7 are 1 and 4. They don’t add to 7.</div></li>
+<li id="li-565"><div class="para" id="p-derived-li-565">Choosing <span class="process-math">\(x=  -1 \and y = 1\)</span> we have <span class="process-math">\((-1)^2 = (1)^2\)</span> but certainly <span class="process-math">\(-1 \ne 1\text{.}\)</span>
+</div></li>
+<li id="li-566"><div class="para" id="p-derived-li-566">We know (from above) that <span class="process-math">\(\sqrt{2}\)</span> is irrational. Multiply it by itself. You get <span class="process-math">\(2\)</span> which is rational.</div></li>
+<li id="li-567"><div class="para" id="p-derived-li-567">Consider <span class="process-math">\(a = \sqrt{2}\)</span> and <span class="process-math">\(b=-\sqrt{2}\text{.}\)</span> Then their sum, <span class="process-math">\(a+b = 0\text{,}\)</span> which is rational.</div></li>
+</ol></div></div></div>
+</div></article></section><section class="exercises" id="exercises-8"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-73"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para logical" id="p-614">
+<div class="para">Consider the statement “for all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a + b\)</span> is even, then <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are even”</div>
+<ol class="lower-alpha">
+<li id="li-568"><div class="para" id="p-615">Write the contrapositive of the statement.</div></li>
+<li id="li-569"><div class="para" id="p-616">Write the converse of the statement.</div></li>
+<li id="li-570"><div class="para" id="p-617">Write the negation of the statement.</div></li>
+<li id="li-571"><div class="para" id="p-618">Is the original statement true or false? Prove your answer.</div></li>
+<li id="li-572"><div class="para" id="p-619">Is the contrapositive of the original statement true or false? Prove your answer.</div></li>
+<li id="li-573"><div class="para" id="p-620">Is the converse of the original statement true or false? Prove your answer.</div></li>
+<li id="li-574"><div class="para" id="p-621">Is the negation of the original statement true or false? Prove your answer.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-79"><div class="solution solution-like"><div class="para logical" id="p-622"><ol class="lower-alpha">
+<li id="li-575"><div class="para" id="p-623">For all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a\)</span> or <span class="process-math">\(b\)</span> is not even, then <span class="process-math">\(a+b\)</span> is not even.</div></li>
+<li id="li-576"><div class="para" id="p-624">For all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are even, then <span class="process-math">\(a+b\)</span> is even.</div></li>
+<li id="li-577"><div class="para" id="p-625">There are numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> such that <span class="process-math">\(a+b\)</span> is even but <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are not both even.</div></li>
+<li id="li-578"><div class="para" id="p-626">False. For example, <span class="process-math">\(a = 3\)</span> and <span class="process-math">\(b = 5\text{.}\)</span> <span class="process-math">\(a+b = 8\text{,}\)</span> but neither <span class="process-math">\(a\)</span> nor <span class="process-math">\(b\)</span> are even.</div></li>
+<li id="li-579"><div class="para" id="p-627">False, since it is equivalent to the original statement.</div></li>
+<li id="li-580"><div class="para" id="p-628">True. Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be integers. Assume both are even. Then <span class="process-math">\(a = 2k\)</span> and <span class="process-math">\(b = 2j\)</span> for some integers <span class="process-math">\(k\)</span> and <span class="process-math">\(j\text{.}\)</span> But then <span class="process-math">\(a+b = 2k + 2j = 2(k+j)\)</span> which is even.</div></li>
+<li id="li-581"><div class="para" id="p-629">True, since the statement is false.</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-74"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="p-630">
+<div class="para">Consider the statement: for all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is even then <span class="process-math">\(8n\)</span> is even.</div>
+<ol class="lower-alpha">
+<li id="li-582"><div class="para" id="p-631">Prove the statement. What sort of proof are you using?</div></li>
+<li id="li-583"><div class="para" id="p-632">Is the converse true? Prove or disprove.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-80" id="solution-80"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-80"><div class="solution solution-like"><div class="para logical" id="p-633"><ol class="lower-alpha">
+<li id="li-584"><div class="para" id="p-634">Direct proof. <article class="proof" id="proof-6"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-635">Let <span class="process-math">\(n\)</span> be an integer. Assume <span class="process-math">\(n\)</span> is even. Then <span class="process-math">\(n = 2k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Thus <span class="process-math">\(8n = 16k = 2(8k)\text{.}\)</span> Therefore <span class="process-math">\(8n\)</span> is even.</div></article>
+</div></li>
+<li id="li-585"><div class="para" id="p-636">The converse is false. That is, there is an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(8n\)</span> is even but <span class="process-math">\(n\)</span> is odd. For example, consider <span class="process-math">\(n = 3\text{.}\)</span> Then <span class="process-math">\(8n = 24\)</span> which is even but <span class="process-math">\(n = 3\)</span> is odd.</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-75"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-637">Your “friend” has shown you a “proof” he wrote to show that <span class="process-math">\(1 = 3\text{.}\)</span> Here is the proof:</div> <article class="proof" id="proof-7"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-638">I claim that <span class="process-math">\(1 = 3\text{.}\)</span> Of course we can do anything to one side of an equation as long as we also do it to the other side. So subtract 2 from both sides. This gives <span class="process-math">\(-1 = 1\text{.}\)</span> Now square both sides, to get <span class="process-math">\(1 = 1\text{.}\)</span> And we all agree this is true.</div></article> <div class="para" id="p-639">What is going on here? Is your friend’s argument valid? Is the argument a proof of the claim <span class="process-math">\(1=3\text{?}\)</span> Carefully explain using what we know about logic.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><div class="para" id="p-640">Hint: What implication follows from the given proof?</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-76"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-641">Suppose that you would like to prove the following implication:</div> <blockquote class="blockquote" id="blockquote-3"><div class="para" id="p-642">For all numbers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is prime then <span class="process-math">\(n\)</span> is solitary.</div></blockquote> <div class="para logical" id="p-643">
+<div class="para">Write out the beginning and end of the argument if you were to prove the statement,</div>
+<ol class="lower-alpha">
+<li id="li-586"><div class="para" id="p-644">Directly</div></li>
+<li id="li-587"><div class="para" id="p-645">By contrapositive</div></li>
+<li id="li-588"><div class="para" id="p-646">By contradiction</div></li>
+</ol>
+</div> <div class="para" id="p-647">You do not need to provide details for the proofs (since you do not know what solitary means). However, make sure that you provide the first few and last few lines of the proofs so that we can see that logical structure you would follow.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-81" id="solution-81"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-81"><div class="solution solution-like"><div class="para logical" id="p-648"><ol class="lower-alpha">
+<li id="li-589"><div class="para" id="p-derived-li-589">Assume that <span class="process-math">\(n\)</span> is a prime number. <span class="process-math">\(\dots\)</span> Therefore <span class="process-math">\(n\)</span> is solitary.</div></li>
+<li id="li-590"><div class="para" id="p-derived-li-590">Assume that <span class="process-math">\(n\)</span> is not solitary. <span class="process-math">\(\dots\)</span> Therefore <span class="process-math">\(n\)</span> is a prime number by contraposition.</div></li>
+<li id="li-591"><div class="para" id="p-derived-li-591">Assume that <span class="process-math">\(n\)</span> is a prime number and is not solitary. <span class="process-math">\(\dots\)</span> This contradicts our assumption. Thus if <span class="process-math">\(n\)</span> is a prime number, <span class="process-math">\(n\)</span> is solitary.</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-77"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="p-649">
+<div class="para">For each of the statements below, say what method of proof you should use to prove them. Then say how the proof starts and how it ends. Pretend bonus points for filling in the middle.</div>
+<ol class="lower-alpha">
+<li id="li-592"><div class="para" id="p-650">There are no integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(x\)</span> is a prime greater than 5 and <span class="process-math">\(x = 6y + 3\text{.}\)</span>
+</div></li>
+<li id="li-593"><div class="para" id="p-651">For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is a multiple of 3, then <span class="process-math">\(n\)</span> can be written as the sum of consecutive integers.</div></li>
+<li id="li-594"><div class="para" id="p-652">For all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a^2 + b^2\)</span> is odd, then <span class="process-math">\(a\)</span> or <span class="process-math">\(b\)</span> is odd.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-82" id="solution-82"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-82"><div class="solution solution-like"><div class="para logical" id="p-653"><ol class="lower-alpha">
+<li id="li-595"><div class="para" id="p-654">Proof by contradiction. Start of proof: Assume, for the sake of contradiction, that there are integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(x\)</span> is a prime greater than 5 and <span class="process-math">\(x = 6y + 3\text{.}\)</span> End of proof: … this is a contradiction, so there are no such integers.</div></li>
+<li id="li-596"><div class="para" id="p-655">Direct proof. Start of proof: Let <span class="process-math">\(n\)</span> be an integer. Assume <span class="process-math">\(n\)</span> is a multiple of 3. End of proof: Therefore <span class="process-math">\(n\)</span> can be written as the sum of consecutive integers.</div></li>
+<li id="li-597"><div class="para" id="p-656">Proof by contrapositive. Start of proof: Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be integers. Assume that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are even. End of proof: Therefore <span class="process-math">\(a^2 + b^2\)</span> is even.</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-78"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-657">Prove that if <span class="process-math">\(n^2\)</span> is multiple of three, then <span class="process-math">\(n\)</span> is a multiple of three where <span class="process-math">\(n\)</span> is an integer.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like"><div class="para" id="p-658">If a number isn’t a multiple of three, then it’s either 1 more than a multiple of three or 2 more than a multiple of three, that is, you’ll have two cases, either <span class="process-math">\(n=3k+1\)</span> or <span class="process-math">\(3k+2\text{.}\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-83" id="solution-83"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-83"><div class="solution solution-like"><div class="para" id="p-659"><article class="proof" id="proof-8"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-660">Proof by contraposition: Assume that <span class="process-math">\(n\)</span> is not a multiple of three. Then:</div> <div class="para logical" id="p-661">
+<div class="para">Case 1: There exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(n =
+3k+1\text{.}\)</span> Consider:</div>
+<div class="displaymath process-math" id="md-24">
+\begin{align*}
+n^2 \amp= (3k+1)^2 \\
+\amp= 9k^2 + 6k + 1\\
+\amp= 3(3k^2 + 2k) + 1
+\end{align*}
+</div>
+<div class="para">Hence <span class="process-math">\(n^2\)</span> is not a multiple of three.</div>
+</div> <div class="para logical" id="p-662">
+<div class="para">Case 1: There exists an integer <span class="process-math">\(l\)</span> such that <span class="process-math">\(n =
+3l+2\text{.}\)</span> Consider:</div>
+<div class="displaymath process-math" id="md-25">
+\begin{align*}
+n^2 \amp= (3l+2)^2 \\
+\amp= 9l^2 + 12l + 4\\
+\amp= 9l^2 + 12l + 3 + 1\\
+\amp= 3(3l^2 + 4l + 1) + 1
+\end{align*}
+</div>
+<div class="para">Hence <span class="process-math">\(n^2\)</span> is not a multiple of three.</div>
+</div> <div class="para" id="p-663">Thus, we have proven that if <span class="process-math">\(n^2\)</span> is a multiple of three, then <span class="process-math">\(n\)</span> is a multiple of three by contraposition.</div></article></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-79"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-664">Prove that <span class="process-math">\(\sqrt 3\)</span> is irrational.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-84" id="solution-84"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-84"><div class="solution solution-like"><article class="proof" id="proof-9"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para logical" id="p-665">
+<div class="para">Suppose <span class="process-math">\(\sqrt{3}\)</span> were rational. Then <span class="process-math">\(\sqrt{3} = \frac{a}{b}\)</span> for some integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b \ne 0\text{.}\)</span> Without loss of generality, assume <span class="process-math">\(\frac{a}{b}\)</span> is reduced. Now</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3 = \frac{a^2}{b^2}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3b^2  = a^2
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-666">
+<div class="para">So <span class="process-math">\(a^2\)</span> is a multiple of 3. This can only happen if <span class="process-math">\(a\)</span> is a multiple of 3, so <span class="process-math">\(a = 3k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3b^2 = 9k^2
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b^2 = 3k^2
+\end{equation*}
+</div>
+</div> <div class="para" id="p-667">So <span class="process-math">\(b^2\)</span> is a multiple of 3, making <span class="process-math">\(b\)</span> a multiple of 3 as well. But this contradicts our assumption that <span class="process-math">\(\frac{a}{b}\)</span> is in lowest terms.</div> <div class="para" id="p-668">Therefore, <span class="process-math">\(\sqrt{3}\)</span> is irrational.</div></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-80"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para logical" id="p-669">
+<div class="para">Consider the statement: for all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a\)</span> is even and <span class="process-math">\(b\)</span> is a multiple of 3, then <span class="process-math">\(ab\)</span> is a multiple of 6.</div>
+<ol class="lower-alpha">
+<li id="li-598"><div class="para" id="p-670">Prove the statement. What sort of proof are you using?</div></li>
+<li id="li-599"><div class="para" id="p-671">State the converse. Is it true? Prove or disprove.</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-85" id="solution-85"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-85"><div class="solution solution-like"><div class="para logical" id="p-672"><ol class="lower-alpha">
+<li id="li-600"><div class="para" id="p-derived-li-600"><article class="proof" id="proof-10"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-673">(this is a direct proof): Assume that <span class="process-math">\(a\)</span> is even <span class="process-math">\(b\)</span> is a multiple of three. Then there exist integers <span class="process-math">\(k\)</span> and <span class="process-math">\(l\)</span> such that <span class="process-math">\(a=2k\)</span> and <span class="process-math">\(b=3l\text{.}\)</span> Then <span class="process-math">\(ab = (2k)(3l) = 6kl\text{.}\)</span> Thus <span class="process-math">\(ab\)</span> is a multiple of six.</div></article></div></li>
+<li id="li-601">
+<div class="para" id="p-674">The converse is “If <span class="process-math">\(ab\)</span> is a multiple of six, then <span class="process-math">\(a\)</span> is even and <span class="process-math">\(b\)</span> is a multiple of three.”</div>
+<div class="para" id="p-675">This is false. For example, <span class="process-math">\(ab = 6\)</span> where <span class="process-math">\(a = 6\)</span> and <span class="process-math">\(b=1\text{.}\)</span>
+</div>
+</li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-81"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-676">Prove the statement: For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(5n\)</span> is odd, then <span class="process-math">\(n\)</span> is odd. Clearly state the style of proof you are using.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-86" id="solution-86"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-86"><div class="solution solution-like">
+<div class="para" id="p-677">We will prove the contrapositive: if <span class="process-math">\(n\)</span> is even, then <span class="process-math">\(5n\)</span> is even.</div> <article class="proof" id="proof-11"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-678">Let <span class="process-math">\(n\)</span> be an arbitrary integer, and suppose <span class="process-math">\(n\)</span> is even. Then <span class="process-math">\(n = 2k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Thus <span class="process-math">\(5n = 5\cdot 2k = 10k = 2(5k)\text{.}\)</span> Since <span class="process-math">\(5k\)</span> is an integer, we see that <span class="process-math">\(5n\)</span> must be even. This completes the proof.</div></article>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-82"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="p-679">Prove: <span class="process-math">\(x=y\)</span> if and only if <span class="process-math">\(xy=\dfrac{(x+y)^2}{4}\text{.}\)</span> Note, you will need to prove two “directions” here: the “if” and the “only if” part.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-87" id="solution-87"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-87"><div class="solution solution-like"><div class="para" id="p-680"><article class="proof" id="proof-12"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para logical" id="p-681">
+<div class="para">“<span class="process-math">\(\to\)</span>” Assume that <span class="process-math">\(x = y\text{,}\)</span> and consider:</div>
+<div class="displaymath process-math" id="md-26">
+\begin{align*}
+\dfrac{(x+y)^2}{4} \amp=  \dfrac{(x+x)^2}{4} \\
+\amp=  \dfrac{(2x)^2}{4} \\
+\amp=  x^2 \\
+\amp=  xy 
+\end{align*}
+</div>
+<div class="para">This shows that if <span class="process-math">\(x=y\)</span> then <span class="process-math">\(xy=\dfrac{(x+y)^2}{4}\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="p-682">
+<div class="para">“<span class="process-math">\(\leftarrow\)</span>” Assume that <span class="process-math">\(\dfrac{(x+y)^2}{4} =  xy\)</span> Then:</div>
+<div class="displaymath process-math" id="md-27">
+\begin{align*}
+\dfrac{(x+y)^2}{4} \amp=  xy \\
+(x+y)^2 \amp= 4xy  \\
+x^2 + 2xy + y^2 \amp= 4xy  \\
+x^2 - 2xy + y^2 \amp= 0  \\
+(x-y)^2 \amp= 0  \\
+x \amp = y 
+\end{align*}
+</div>
+<div class="para">This shows that if <span class="process-math">\(xy=\dfrac{(x+y)^2}{4}\text{,}\)</span> then <span class="process-math">\(x=y\text{.}\)</span>
+</div>
+</div></article></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-83"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="p-683">Prove that <span class="process-math">\(\log(7)\)</span> is irrational.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-88" id="solution-88"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-88"><div class="solution solution-like">
+<div class="para" id="p-684">We give a proof by contradiction.</div> <article class="proof" id="proof-13"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para logical" id="p-685">
+<div class="para">Suppose, contrary to stipulation that <span class="process-math">\(\log(7)\)</span> is rational. Then <span class="process-math">\(\log(7) = \frac{a}{b}\)</span> with <span class="process-math">\(a\)</span> and <span class="process-math">\(b \ne 0\)</span> integers. By properties of logarithms, this implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+7 = 10^{\frac{a}{b}}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-686">
+<div class="para">Equivalently,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+7^b = 10^a
+\end{equation*}
+</div>
+</div> <div class="para" id="p-687">But this is impossible as any power of 7 will be odd while any power of 10 will be even.  Therefore, <span class="process-math">\(\log(7)\)</span> is irrational.</div></article>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-84"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para logical" id="p-688">
+<div class="para">Let’s say you are presented with a conditional statement <span class="process-math">\(p \to q\)</span> that you want to prove by contradiction. This exercise has you structure a model for contradiction of conditional statements like we saw in the <a href="" class="xref" data-knowl="./knowl/contradiction-model.html" title="Proof 1">model</a>.</div>
+<ol class="lower-alpha">
+<li id="li-602"><div class="para" id="p-derived-li-602">What is your assumption?</div></li>
+<li id="li-603"><div class="para" id="p-derived-li-603">What is your conclusion?</div></li>
+</ol>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-89" id="solution-89"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-89"><div class="solution solution-like"><div class="para logical" id="p-689"><ol class="lower-alpha">
+<li id="li-604"><div class="para" id="p-derived-li-604">Assume, to the contrary that <span class="process-math">\(p\to q\)</span> is false, that is, we assume that <span class="process-math">\(\neg p\to q\)</span> or <span class="process-math">\(p \land \neg q\text{.}\)</span>
+</div></li>
+<li id="li-605"><div class="para" id="p-derived-li-605">Therefore, <span class="process-math">\(p\to q\)</span> is true by contradiction.</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-85"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="para" id="p-690">Prove that for all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a^2 + b^2 = c^2\text{,}\)</span> then <span class="process-math">\(a\)</span> or <span class="process-math">\(b\)</span> is even.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><div class="para" id="p-691">Try a proof by contradiction.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-90" id="solution-90"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-90"><div class="solution solution-like">
+<div class="para" id="p-692">The negation of the statement is <span class="process-math">\(a^2 + b^2 = c^2\)</span> and both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are odd.</div> <article class="proof" id="proof-14"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-693">Assume that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both odd and that <span class="process-math">\(a^2 +b^2 = c^2\text{.}\)</span> Then there exist integers <span class="process-math">\(k\)</span> and <span class="process-math">\(l\)</span> such that <span class="process-math">\(a=2k+1\)</span> and <span class="process-math">\(b=2k+1\text{.}\)</span>
+</div> <div class="para logical" id="p-694">
+<div class="para">First, we observe that</div>
+<div class="displaymath process-math" id="md-28">
+\begin{align*}
+a^2 + b^2 \amp= (2k+1)^2 + (2l+1)^2 \\
+\amp = 4k^2 + 4k + 1 + 4l^2 + 4l + 1 \\
+\amp = 4k^2 + 4k + 4l^2 + 4l + 2 
+\end{align*}
+</div>
+<div class="para">so that <span class="process-math">\(c^2\)</span> and hence <span class="process-math">\(c\)</span> is even.  Let <span class="process-math">\(c=2m\)</span> where <span class="process-math">\(m\)</span> is some integer. Then:</div>
+<div class="displaymath process-math" id="md-29">
+\begin{align*}
+c^2 \amp = a^2 + b^2 \\
+(2k)^2 \amp = 4k^2 + 4k + 4l^2 + 4l + 2 \\
+4k^2 \amp = 4(k^2 + k + l^2 + l) + 2 
+\end{align*}
+</div>
+<div class="para">This is a contradiction as we have a multiple of four being equal to something which is not a multiple of four.  Thus, our original assumption was incorrect and therefore if <span class="process-math">\(a^2 + b^2 = c^2\text{,}\)</span> we conclude that one of <span class="process-math">\(a\)</span> or <span class="process-math">\(b\)</span> is even.</div>
+</div></article>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-86"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="para" id="p-695">Prove that there are no integer solutions to the equation <span class="process-math">\(x^2 = 4y + 3\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-91" id="solution-91"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-91"><div class="solution solution-like"><div class="para" id="p-696"><article class="proof" id="proof-15"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-697">Assume, to the contrary, that there is an integer solution, <span class="process-math">\((a, b)\text{,}\)</span> to the equation <span class="process-math">\(x^2 = 4y + 3\)</span> We’ll split this into four cases: <div class="para logical" id="p-698">
+<div class="para">Case 1: <span class="process-math">\(x\)</span> is odd and <span class="process-math">\(y\)</span> is even. Then there exist integers <span class="process-math">\(k\)</span> and <span class="process-math">\(l\)</span> such that <span class="process-math">\(x=2k+1\)</span> and <span class="process-math">\(y = 2l\text{.}\)</span> Plugging this into the equation, we have:</div>
+<div class="displaymath process-math" id="md-30">
+\begin{align*}
+x^2 \amp= 4y +3 \\
+(2k+1)^2 \amp= 4(2l) +3 \\
+4k^2 + 4k + 1 \amp= 8l +3 \\
+4k^2 + 4k - 8l \amp= 2\\
+4(k^2 + k - 2l) \amp= 2
+\end{align*}
+</div>
+<div class="para">This is not possible, as 2 is not a multiple of 4.</div>
+</div> <div class="para logical" id="p-699">
+<div class="para">Case 2: <span class="process-math">\(x\)</span> is even and <span class="process-math">\(y\)</span> is odd. Then there exist integers <span class="process-math">\(k\)</span> and <span class="process-math">\(l\)</span> such that <span class="process-math">\(x=2k\)</span> and <span class="process-math">\(y = 2l+1\text{.}\)</span> Plugging this into the equation, we have:</div>
+<div class="displaymath process-math" id="md-31">
+\begin{align*}
+x^2 \amp= 4y +3 \\
+(2k)^2 \amp= 4(2l+1) +3 \\
+4k^2 \amp= 8l +4  +3 \\
+4k^2 - 8l \amp= 7\\
+4(k^2 - 2l) \amp= 7
+\end{align*}
+</div>
+<div class="para">This is not possible, as 7 is not a multiple of 4.</div>
+</div> <div class="para logical" id="p-700">
+<div class="para">Case 3: <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are both even. Then there exist integers <span class="process-math">\(k\)</span> and <span class="process-math">\(l\)</span> such that <span class="process-math">\(x=2k\)</span> and <span class="process-math">\(y = 2l\text{.}\)</span> Plugging this into the equation, we have:</div>
+<div class="displaymath process-math" id="md-32">
+\begin{align*}
+x^2 \amp= 4y +3 \\
+(2k)^2 \amp= 4(2l) +3 \\
+4k^2 \amp= 8l  +3 \\
+4k^2 - 8l \amp= 3\\
+4(k^2 - 2l) \amp= 3
+\end{align*}
+</div>
+<div class="para">This is not possible, as 3 is not a multiple of 4.</div>
+</div> <div class="para logical" id="p-701">
+<div class="para">Case 4: <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are both odd. Then there exist integers <span class="process-math">\(k\)</span> and <span class="process-math">\(l\)</span> such that <span class="process-math">\(x=2k\)</span> and <span class="process-math">\(y = 2l\text{.}\)</span> Plugging this into the equation, we have:</div>
+<div class="displaymath process-math" id="md-33">
+\begin{align*}
+x^2 \amp= 4y +3 \\
+(2k+1)^2 \amp= 4(2l+1) +3 \\
+4k^2 +4k + 1\amp= 8l + 4  +3 \\
+4k^2 +4k - 8l \amp= 6\\
+4(k^2 +k  - 2l) \amp= 6
+\end{align*}
+</div>
+<div class="para">This is also not possible, as 6 is not a multiple of 4.</div>
+</div> Since we’ve exhausted every possible combination of integer solutions, we conclude that there is no integer solution to the equation <span class="process-math">\(x^2 = 4y+3\text{.}\)</span>
+</div></article></div></div></div>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-logic-arguments.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-prop-supplementatal.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span>
+</h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para logical">
+<div class="para">Since <span class="process-math">\(\gcd(3,26) = 1\text{,}\)</span> there is a unique inverse. Using the Euclidean Algorithm we find that <span class="process-math">\(3^{-1} \equiv 9 \pmod{26}\text{.}\)</span> Doing the algebra:</div>
+<div class="displaymath process-math">
+\begin{align*}
+3x \amp= 19 \pmod{26}\\
+(3^{-1})3x \amp=(3^{-1}) 19 \pmod{26}\\
+x \amp\equiv (9) 19 \pmod{26}\\
+x \amp\equiv 171 \pmod{26}\\
+x \amp\equiv 15 \pmod{26}
+\end{align*}
+</div>
+<div class="para">is the unique solution.</div>
+</div></li>
+<li><div class="para">Here <span class="process-math">\(\gcd(13, 26) = 2\)</span> so there is no unique solution. Instead, there are either no solutions or two solutions! But since the gcd doesn’t divide <span class="process-math">\(7\text{,}\)</span> there are in fact no solutions to this congruence.</div></li>
+<li><div class="para logical">
+<div class="para">Since <span class="process-math">\(\gcd(8, 426) = 2\text{.}\)</span> Like the previous question there are either no solutions or two solutions. This time since the gcd does divide 16, we will have two solutions!  The first is obviously <span class="process-math">\(x=2\text{,}\)</span> and the second will be, applying <a href="" class="xref" data-knowl="./knowl/note-inverses-solving-multiple.html" title="Note 3.4.12: Solving systems with gcd other than 1">Note 3.4.12</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/note-inverses-solving-multiple.html">
+\begin{align*}
+x \amp= 2 + \dfrac{426}{2}\\
+\amp= 215 
+\end{align*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">This time the modulus is 425, so we have <span class="process-math">\(\gcd(425, 8) = 1\)</span> meaning a unique solution exists the system.  The Euclidean algorithm finds that <span class="process-math">\(8^{-1} = -53 \pmod{425}\text{,}\)</span> and solving the expression gives:</div>
+<div class="displaymath process-math">
+\begin{align*}
+8x \amp= 16 \pmod{426}\\
+(8^{-1})8x \amp=(8^{-1}) 16 \pmod{425}\\
+x \amp\equiv (-53) 16 \pmod{425}\\
+x \amp\equiv -848 \pmod{425}\\
+x \amp\equiv 2 \pmod{425}
+\end{align*}
+</div>
+<div class="para">... which actually is both obvious and hilarious. It shows that even if we don’t notice the obvious solution, the method will give us the correct result!</div>
+</div></li>
+<li><div class="para">This time, as before, <span class="process-math">\(\gcd(8, 426) = 2\text{,}\)</span> so there are either zero or two solutions. But since there the gcd doesn’t divide <span class="process-math">\(23\text{,}\)</span> there is no solution to the congruence.</div></li>
+</ol></div>
+</div>
+<span class="incontext"><a href="section-multiplicative-inverses.html#solution-132" class="internal">in-context</a></span>
+</body>
+</html>

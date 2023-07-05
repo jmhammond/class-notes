@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">We begin by asking a question, and answering the question in two ways:</div> <div class="para">“How many subsets of size <span class="process-math">\(k\)</span> are there from a set of size <span class="process-math">\(n\text{?}\)</span>”</div> <div class="para">Answer one: There are <span class="process-math">\(\binom{n}{k}\)</span> such subsets.</div> <div class="para logical">
+<div class="para">Answer two: Pick any element of the set. That element is either included in a subset, or it is not.</div>
+<ul class="disc">
+<li><div class="para">How many subsets contain this element? We will be picking from the remaining <span class="process-math">\(n-1\)</span> elements. Since we want the subsets to have <span class="process-math">\(k\)</span> elements, but we already have one of them, we have a total of <span class="process-math">\(\binom{n-1}{k-1}\)</span> such subsets.</div></li>
+<li><div class="para">How many subsets <em class="emphasis">do not</em> contain this element? We will be picking from the remaining <span class="process-math">\(n-1\)</span> elements. Since we want the subsets to have <span class="process-math">\(k\)</span> elements, we have <span class="process-math">\(\binom{n-1}{k}\)</span> such subsets.</div></li>
+</ul>
+<div class="para">Thus there are <span class="process-math">\(\binom{n-1}{k-1} + \binom{n-1}{k}\)</span> subsets of <span class="process-math">\(k\)</span> elements from a set of <span class="process-math">\(n\)</span> elements.</div>
+</div> <div class="para logical">
+<div class="para">Because each answer counted the same objects, but in two different ways, those answers much be the same. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{n \choose k} = {n-1\choose k-1} + {n-1 \choose k}.
+\end{equation*}
+</div>
+</div>
+</div></body>
+</html>

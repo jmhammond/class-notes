@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.5.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<ol class="decimal">
+<li><div class="para logical">
+<div class="para">For the first step, we write the exponent as sums of powers of two:</div>
+<div class="displaymath process-math">
+\begin{gather*}
+5367 = 4096 + 1024 + 128 + 64 + 32 + 16 + 4 + 2 + 1
+\end{gather*}
+</div>
+</div></li>
+<li>
+<div class="para">Second step, we repeatedly square and reduce, starting with 514 a total of 12 times since <span class="process-math">\(4096 = 2^{12}\text{.}\)</span>
+</div>
+<div class="para">Before we get started, I want to admit that I did bring in a spreadsheet to help out. You’re encouraged to as well! Excel, Google Sheets, and Apple Numbers all have a <code class="code-inline tex2jax_ignore">=MOD(number, modulus)</code> that compute <span class="process-math">\(\text{number} \modulus \text{modulus}\)</span> I created a table in Excel like this:</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width top" style="width:50%;"><figure class="table table-like"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b2 r0 l0 t0 lines">count</th>
+<th scope="col" class="c m b2 r0 l0 t0 lines">power of 2</th>
+<th scope="col" class="c m b2 r0 l0 t0 lines">value mod 711</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">0</code></td>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">2</code></td>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">=MOD(514, 711)</code></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">1</code></td>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">2</code></td>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">=MOD(C2*C2, 711)</code></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">2</code></td>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">4</code></td>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">=MOD(C3*C3, 711)</code></td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.5.6<span class="period">.</span></span><span class="space"> </span>Sample table in excel</figcaption></figure></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/excel-square-mod.png" class="contained" alt="Screenshot of Excel sheet demonstrating what is described in the table"></div>
+</div></div>
+<div class="para logical">
+<div class="para">then you click-drag to expand the formula down until your count is 12 and power of 2 is 4096. This tells us the following equivalences, with asterisks marking those values we need to finish the computation:</div>
+<ul class="circle">
+<li><div class="para">
+<span class="process-math">\(514^1 = 514 \pmod{711} \)</span>*</div></li>
+<li><div class="para">
+<span class="process-math">\(514^2 \equiv 415 \pmod{711} \)</span>*</div></li>
+<li><div class="para">
+<span class="process-math">\(514^4 \equiv 163 \pmod{711} \)</span>*</div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 514^8 \equiv 262 \pmod{711} \)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(514^{16} \equiv 388 \pmod{711} \)</span>*</div></li>
+<li><div class="para">
+<span class="process-math">\(514^{32} \equiv 523 \pmod{711}\)</span>*</div></li>
+<li><div class="para">
+<span class="process-math">\(514^{64} \equiv 505 \pmod{711}\)</span>*</div></li>
+<li><div class="para">
+<span class="process-math">\(514^{128} \equiv 487 \pmod{711}\)</span>*</div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 514^{256} \equiv 406 \pmod{711}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 514^{512} \equiv 595 \pmod{711}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(514^{1024} \equiv 658 \pmod{711}\)</span>*</div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 514^{2048} \equiv 676 \pmod{711}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(514^{4096} \equiv 514 \pmod{711}\)</span>*</div></li>
+</ul>
+</div>
+</li>
+<li><div class="para logical">
+<div class="para">Finally, we put it all together, bringing back the original expression and substituting what we found.</div>
+<div class="displaymath process-math">
+\begin{align*}
+514^{5367} \amp= 514^{4096 + 1024 + 128 + 64 + 32 + 16 + 4 + 2 + 1}\\
+\amp= 514^{4096}\cdot514^{1024}\cdot514^{128}\cdot514^{64}\\
+\amp\hspace{1em} \cdot514^{32} \cdot514^{16} \cdot514^{4} \cdot514^2 \cdot514^1\\
+\amp\equiv 514 \cdot 658 \cdot 487 \cdot 505 \cdot 523 \cdot 388 \cdot 163 \cdot 415 \cdot 514 \pmod{711} \\
+\amp \text{multiple two at a time and reduce mod 711 each time}\\
+\amp\equiv 694 \pmod{711}
+\end{align*}
+</div>
+</div></li>
+</ol>
+<div class="para">Why only multiply a couple numbers at a time and reduce? If we multiplied all those numbers on second to last line, we’d get 586869563497917784218400,  <a class="external" href="https://www.wolframalpha.com/input?i=%28+514+%5Ccdot+658+%5Ccdot+487+%5Ccdot+505+%5Ccdot+523+%5Ccdot+388+%5Ccdot+163+%5Ccdot+415+%5Ccdot+514%29+%2F+%28number+of+stars+in+the+universe%29" target="_blank">which is over half of the number of known stars in the universe</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-3-hidden.html" title="Footnote 3"><sup> 3 </sup></a>. Unless you have a really powerful calculator, you’re going to get approximation errors and an incorrect answer!</div>
+</div>
+</div>
+<span class="incontext"><a href="section-numtheory-modularexp.html#solution-136" class="internal">in-context</a></span>
+</body>
+</html>

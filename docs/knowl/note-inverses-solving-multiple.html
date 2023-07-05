@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="note remark-like"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Solving systems with gcd other than 1.</span>
+</h4> <div class="para logical">
+<div class="para">As we hinted in the previous example, we have three possibilities for the congruence <span class="process-math">\(ax = b\pmod{m}\text{:}\)</span>
+</div>
+<ol class="decimal">
+<li><div class="para">A unique solution if <span class="process-math">\(\gcd(a, m) = 1\)</span>
+</div></li>
+<li><div class="para">If <span class="process-math">\(\gcd(a, m) = d\text{,}\)</span> the congruence will have <span class="process-math">\(d\)</span> solutions if <span class="process-math">\(d \divides b\)</span>
+</div></li>
+<li><div class="para">And the system will have no solution if <span class="process-math">\(\gcd(a, m) = d\)</span> and <span class="process-math">\(d \nmid b\)</span>
+</div></li>
+</ol>
+</div> <div class="para logical">
+<div class="para">If the congruence has a solution, the complete set of solutions reduced modulo <span class="process-math">\(m\)</span> is given by:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-zmodn.html">
+\begin{gather*}
+x = x_0 + \dfrac{mt}{d}
+\end{gather*}
+</div>
+<div class="para">where <span class="process-math">\(\gcd(a,m) = d\text{,}\)</span> <span class="process-math">\(x_0\)</span> is an initial solution, and <span class="process-math">\(t\)</span> runs through <span class="process-math">\(\Z_d\text{,}\)</span> the <a href="" class="xref" data-knowl="./knowl/def-zmodn.html" title="Definition 1.3.20: Set of Integers Modulo n">set of remainders modulo d</a>.</div>
+</div> <div class="para">Take a moment to revisit the examples in <a href="" class="xref" data-knowl="./knowl/example-inverses-multiple-solutions.html" title="Example 3.4.10">Example 3.4.10</a> using this formula.</div></article><span class="incontext"><a href="section-multiplicative-inverses.html#note-inverses-solving-multiple" class="internal">in-context</a></span>
+</body>
+</html>

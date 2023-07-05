@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Combinatorial Proofs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Math for Shockers">
+<meta property="book:author" content="John Hammond">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script async="" src="https://cse.google.com/cse.js?cx=015422183392601792159:vae7vvmmczm"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_brown_gold.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="external/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Discrete Math for Shockers</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-counting-combperm.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_counting.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-counting-fib.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\def\modulus{\mathbin{\%}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="dedication-1.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_basics.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-prop-logic.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Propositional Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-prop-logic.html#subsection-1" class="internal"><span class="title">The Basics</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#subsec-truthtables" class="internal"><span class="title">Truth Tables for Logical Connectives</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#subsection-3" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#exercises-1" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_objects_sets.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-4" class="internal"><span class="title">Basic terminology</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-5" class="internal"><span class="title">Operations on sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-6" class="internal"><span class="title">Verifying Set Identities</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#exercises-2" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_relationsfunctions.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Relations and Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-7" class="internal"><span class="title">Relations</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-8" class="internal"><span class="title">Functions</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-9" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-10" class="internal"><span class="title">What kind of object? Binary operations vs. <span class="process-math">\(a\mathrel{R} b\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_logic.html" class="internal"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-logic-equivalences.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Logical Equivalences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-equivalences.html#subsection-11" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-equivalences.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_application_set_proofs.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Application: Set Equivalences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_application_set_proofs.html#subsection-12" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_application_set_proofs.html#exercises-5" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-quantifiers.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Propositional Functions and Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#subsection-13" class="internal"><span class="title">Predicates</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#subsection-14" class="internal"><span class="title">Logical Quantifiers</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#exercises-6" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-arguments.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Logical Arguments</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-arguments.html#subsection-15" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-arguments.html#exercises-7" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-proofs.html" class="internal"><span class="codenumber">2.5</span> <span class="title">An introduction to proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-16" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-17" class="internal"><span class="title">Basic concepts of proof</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-18" class="internal"><span class="title">Direct Proof</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-logic-proofs.html#subsection-19" class="internal"><span class="title">Indirect Proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsubsection-1" class="internal"><span class="title">Proof by Contraposition</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsubsection-2" class="internal"><span class="title">Proof by Contradiction</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-20" class="internal"><span class="title">Proofs of equivalence</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-21" class="internal"><span class="title">Proof by cases</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-22" class="internal"><span class="title">Existence Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-23" class="internal"><span class="title">Uniqueness proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-24" class="internal"><span class="title">Vacuous and Trivial Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-25" class="internal"><span class="title">Counterexamples Revisited</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#exercises-8" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-prop-supplementatal.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Chapter Review</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-prop-supplementatal.html#exercises_logic-conc" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_numtheory.html" class="internal"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-numtheory-divcong.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Divisibility and Congruences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#section-numtheory-div" class="internal"><span class="title">The Divides Relation</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#section-numtheory-cong" class="internal"><span class="title">The Congruence Relation</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#exercises-10" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-primes.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Prime Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-primes.html#subsection-28" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-primes.html#computer-corner-sieve" class="internal"><span class="title">Computer Corner - Implementing the Sieve</span></a></div></li>
+<li><div class="toc-item"><a href="section-primes.html#exercises-11" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-gcd-euclid.html" class="internal"><span class="codenumber">3.3</span> <span class="title">GCDs and The Euclidean Algorithm</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-gcd-euclid.html#subsection-30" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-gcd-euclid.html#exercises-12" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-multiplicative-inverses.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Multiplicative Inverses</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-multiplicative-inverses.html#subsection-31" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-multiplicative-inverses.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-numtheory-modularexp.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Modular exponentiation</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-numtheory-modularexp.html#subsection-32" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-modularexp.html#exercises-14" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-numtheory-encryption.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Application: Encryption</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-numtheory-encryption.html#subsection-numtheory-ciphers" class="internal"><span class="title">Basic Cipher Examples</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-numtheory-encryption.html#exercises-15" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-numtheory-encryption.html#subsection-numtheory-sage" class="internal"><span class="title">Number Theory Using Sage</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-encryption.html#rsa-activity" class="internal"><span class="title">The RSA Activity</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_sequences.html" class="internal"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-objects-seqseries.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-objects-seqseries.html#subsection-36" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-objects-seqseries.html#subsection-37" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-objects-seqseries.html#exercises-16" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-solvingrecurrences.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Solving Recurrence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-38" class="internal"><span class="title">Motivation, or, why do I care?</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-39" class="internal"><span class="title">Solving recurrence relations</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-40" class="internal"><span class="title">Solving particularly nice recurrence relations</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#sec-recurrences-with-python" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#exercises-17" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_logic_induction.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_logic_induction.html#math-induction" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#strong-induction" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#subsection-44" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#exercises-18" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_counting.html" class="internal"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-counting-basics.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The Multiplicative and Additive Principles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-basics.html#subsection-45" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-basics.html#exercises-19" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-combperm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Permutations and Combinations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-combperm.html#subsection-46" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-combperm.html#exercises-20" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-counting-binomial.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Combinatorial Proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-binomial.html#subsection-47" class="internal"><span class="title">Binomial Coefficients</span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-binomial.html#subsection-48" class="internal"><span class="title">Combinatorial Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-binomial.html#exercises-21" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-fib.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Counting Fibonacci numbers with tiles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-fib.html#subsection-49" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-fib.html#exercises-22" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="solutions-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Solutions to the exercises</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-counting-binomial"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Combinatorial Proofs</span>
+</h2>
+<section class="introduction" id="introduction-24"><div class="para" id="p-1356">We’re going to begin this section by doing a lot of tedious looking algebra, but then we’ll make a connection to what we’ve been doing. There’s a reason! Later in the section, we will introduce a new method of proof called, “combinatorial proof” in which we’re able to verify mathematical statements by counting!</div></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Binomial Coefficients</span>
+</h3>
+<div class="para logical" id="p-1357">
+<div class="para">As promised, we begin with some tedious calculations. Let’s start by expanding each of the following binomials:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)^0 = 1
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)^1 = 1x + 1y
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)^2 = 1x^2 + 2xy + 1y^2
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)^3 = 1x^3 + 3x^2y + 3xy^2 + 1y^3
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)^4 = 1x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + 1y^4
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)^5 = 1x^5 + 5x^4y + 10x^3 y^2 + 10x^2 y^3 + 5xy^4 + 1y^5
+\end{equation*}
+</div>
+<div class="para">...</div>
+</div>
+<div class="para" id="p-1358">If we arrange the coefficients of the binomials (binomial coefficients) in a triangle, we can find many really neat patterns.  In the West, this is usually called “Pascal’s Triangle” after Blaise Pascal (1600’s), though it was also discussed by the Chinese author Yang Hui (1200’s) and it’s called “Yang Hui’s triangle” in China.</div>
+<aside class="aside aside-like" id="aside-24"><div class="para" id="p-1359">Neither Yang Hui nor Blaise Pascal invented it, but their works were popular and we settled on naming it after them.</div></aside><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/pascal-small.svg" role="img" class="contained" alt="Pascal’s triangle. Numbers are arranged in rows in the shape of a triangle. The top number is 1. Next row is 1 and 1; next row is 1, 2, 1; next is 1, 3, 3, 1; and it continues. Each entry is found by adding the two entries above it: e.g. 3=1+2"></div>
+<div class="para logical" id="p-1360">
+<div class="para">There are lots of patterns hidden away in the triangle! Take a few minutes to look for some. Here are just a few to notice:</div>
+<ol class="decimal">
+<li id="li-1059"><div class="para" id="p-1361">The entries on the left or right side of the triangle are all 1.</div></li>
+<li id="li-1060"><div class="para" id="p-1362">Any entry not on the border is the sum of the two entries above it.</div></li>
+<li id="li-1061"><div class="para" id="p-1363">The triangle is symmetric.  In any row, entries on the left side are mirrored on the right side.</div></li>
+<li id="li-1062"><div class="para" id="p-1364">The sum of all entries on a given row is a power of 2.</div></li>
+</ol>
+</div>
+<div class="para" id="p-1365">A connection that Pascal did make in <em class="emphasis">Traité du triangle arithmétique</em> (Treatise on the Arithmetic Triangle) is that the entries in the table are actually combinations!  Here’s the triangle again, but written with combinations And rather than going through further linguistic torture, we can now refer to “combinations” as <dfn class="terminology">“binomial coefficients”</dfn>.</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/pascal-small-binom.svg" role="img" class="contained" alt="Pascal’s triangle re-written with combinations. Numbers are arranged in rows in the shape of a triangle. The top number is (0 choose 0). Next row is (1 choose 0) and (1 choose 1);  Each entry is the (row choose column)"></div>
+<div class="para" id="p-1366">Now that we’ve connected the coefficients of the binomial to combinations, we can now write the formal binomial theorem as its often presented:</div>
+<article class="theorem theorem-like" id="theorem-11"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">The Binomial Theorem.</span>
+</h4>
+<div class="para logical" id="p-1367">
+<div class="para">Let <span class="process-math">\(x \and y\)</span> be variables and <span class="process-math">\(n\)</span> a natural number, then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} y^{k}
+\end{equation*}
+</div>
+</div>
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-120" id="answer-120"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-120"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-123" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/_X2WjIsgoDo?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div></article><aside class="aside aside-like" id="aside-25"><div class="para" id="p-1368">I’m a big Sherlock Holmes fan, so I want to acknowledge that (fictional) Professor James Moriaraty proved significant results about the binomial theorem.  He of course didn’t (because he’s not real), but also Isaac Newton and Jakob Bernoulli did it about 150 years before Moriarty would be born.</div>
+<div class="para" id="p-1369">... this was a really long way of saying I’m a nerd.</div></aside><div class="para" id="p-1370">Take a moment to compare the binomials we expanded in the beginning of the section with the summation in the Binomial Theorem to see how it all fits together.</div>
+<div class="para logical" id="p-1371">
+<div class="para">We can also return to the patterns we saw in the triangle and rewrite them in terms of binomial coefficients.</div>
+<ol class="decimal">
+<li id="li-1063"><div class="para logical" id="p-1372">
+<div class="para">The entries on the left or right side of the triangle are all 1. In symbols, we’ll write:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{0} = \binom{n}{n} = 1
+\end{equation*}
+</div>
+</div></li>
+<li id="li-1064"><div class="para logical" id="p-1373">
+<div class="para">Any entry not on the border is the sum of the two entries above it. In symbols:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}
+\end{equation*}
+</div>
+</div></li>
+<li id="li-1065"><div class="para logical" id="p-1374">
+<div class="para">The triangle is symmetric.  In any row, entries on the left side are mirrored on the right side. In symbols:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{k} = \binom{n}{n - k}
+\end{equation*}
+</div>
+</div></li>
+<li id="li-1066"><div class="para logical" id="p-1375">
+<div class="para">The sum of all entries on a given row is a power of 2. In symbols:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}0 + \binom{n}1 + \binom{n}2 + \dots + \binom{n}{n} = 2^n
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div>
+<div class="para" id="p-1376">Our goal for the remainder of the section is to give proofs of binomial identities. We’ll start with a very tedious algebraic way to do it and then introduce a new proof technique to deal with the same identity.</div>
+<article class="example example-like" id="example-145"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-1377">
+<div class="para">Give an algebraic proof for the binomial identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{n \choose k} = {n-1\choose k-1} + {n-1 \choose k}.
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-189" id="solution-189"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-189"><div class="solution solution-like"><article class="proof" id="proof-41"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para logical" id="p-1378">
+<div class="para">By the definition of <span class="process-math">\({n \choose k}\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{n-1 \choose k-1} = \frac{(n-1)!}{(n-1-(k-1))!(k-1)!} = \frac{(n-1)!}{(n-k)!(k-1)!}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{n-1 \choose k} = \frac{(n-1)!}{(n-1-k)!k!}.
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-1379">
+<div class="para">Thus, starting with the right-hand side of the equation:</div>
+<div class="displaymath process-math" id="md-67">
+\begin{align*}
+{n-1 \choose k-1} + {n-1 \choose k} \amp = \frac{(n-1)!}{(n-k)!(k-1)!}+ \frac{(n-1)!}{(n-1-k)!\,k!}\\
+\amp = \frac{(n-1)!k}{(n-k)!\,k!} + \frac{(n-1)!(n-k)}{(n-k)!\,k!}\\
+\amp = \frac{(n-1)!(k+n-k)}{(n-k)!\,k!}\\
+\amp = \frac{n!}{(n-k)!\, k!}\\
+\amp = {n \choose k}.
+\end{align*}
+</div>
+</div> <div class="para" id="p-1380">The second line (where the common denominator is found) works because <span class="process-math">\(k(k-1)! = k!\)</span> and <span class="process-math">\((n-k)(n-k-1)! = (n-k)!\text{.}\)</span>
+</div></article></div></div>
+</div></article><div class="para" id="p-1381">That algebra had some fun manipulations if you’re into that kind of thing, but as 15th century mathematician Gerolamo Cardano said <em class="emphasis">Ars Magna</em>, it “is as refined as it is useless.”</div>
+<aside class="aside aside-like" id="aside-26"><div class="para" id="p-1382">Cardano was actually talking about square roots of negative numbers, what we now call complex numbers. He probably wouldn’t be impressed with me misquoting him. But he wasn’t a very nice person, so I don’t care.  I do love to talk about him, though, ask me about him sometime! (Have I reminded you about my math history class lately?)</div></aside></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Combinatorial Proofs</span>
+</h3>
+<div class="para logical" id="p-1383">
+<div class="para">Here we introduce a new method of providing mathematical statements. Our goal is to show that an equality is true by <em class="emphasis">counting</em> each side of the equation differently, but showing that we’ve counted the same objects. In order to do this, we will make the following connection for things that binomial coefficients might represent:</div>
+<ul class="disc">
+<li id="li-1067"><div class="para" id="p-derived-li-1067">
+<span class="process-math">\(\binom{n}{k}\)</span> is the number of ways to select <span class="process-math">\(k\)</span> objects from a set of <span class="process-math">\(n\)</span> objects.</div></li>
+<li id="li-1068"><div class="para" id="p-derived-li-1068">
+<span class="process-math">\(\binom{n}{k}\)</span> is the number subsets of size <span class="process-math">\(k\)</span> from a set of size <span class="process-math">\(n\)</span>
+</div></li>
+<li id="li-1069"><div class="para" id="p-derived-li-1069">
+<span class="process-math">\(\binom{n}{k}\)</span> is the number of bit strings of length <span class="process-math">\(n\)</span> with exactly <span class="process-math">\(k\)</span> 1’s</div></li>
+<li id="li-1070"><div class="para" id="p-derived-li-1070">
+<span class="process-math">\(\binom{n}{k}\)</span> is the coefficient of <span class="process-math">\(x^{n-k}y^k\)</span> in the expansion of <span class="process-math">\((x+y)^n\)</span>
+</div></li>
+<li id="li-1071"><div class="para" id="p-derived-li-1071">
+<span class="process-math">\(\dots\)</span> there are many more ways of viewing binomial coefficients.</div></li>
+</ul>
+</div>
+<div class="para logical" id="p-1384">
+<div class="para">For a combinatorial proof, we will follow this approach:</div>
+<ol class="decimal">
+<li id="li-1072"><div class="para" id="p-derived-li-1072">Determine a question that can be answered by the particular equation.</div></li>
+<li id="li-1073"><div class="para" id="p-derived-li-1073">Answer the question in two different ways</div></li>
+<li id="li-1074"><div class="para" id="p-derived-li-1074">Because those answers count the same object, we can equate their solutions.</div></li>
+</ol>
+<div class="para">Coming up with the question is often the hardest part.</div>
+</div>
+<article class="example example-like" id="example-146"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.3</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-1385">
+<div class="para">Give a combinatarial proof of the identity:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{n \choose k} = {n-1\choose k-1} + {n-1 \choose k}.
+\end{equation*}
+</div>
+<div class="para">by viewing the binomial coefficients as counting subsets.</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-121" id="answer-121"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-121"><div class="answer solution-like"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-124" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/56Myzj8jzqk?&amp;modestbranding=1&amp;rel=0"></iframe></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-190" id="solution-190"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-190"><div class="solution solution-like">
+<div class="para" id="p-1386">We begin by asking a question, and answering the question in two ways:</div> <div class="para" id="p-1387">“How many subsets of size <span class="process-math">\(k\)</span> are there from a set of size <span class="process-math">\(n\text{?}\)</span>”</div> <div class="para" id="p-1388">Answer one: There are <span class="process-math">\(\binom{n}{k}\)</span> such subsets.</div> <div class="para logical" id="p-1389">
+<div class="para">Answer two: Pick any element of the set. That element is either included in a subset, or it is not.</div>
+<ul class="disc">
+<li id="li-1075"><div class="para" id="p-derived-li-1075">How many subsets contain this element? We will be picking from the remaining <span class="process-math">\(n-1\)</span> elements. Since we want the subsets to have <span class="process-math">\(k\)</span> elements, but we already have one of them, we have a total of <span class="process-math">\(\binom{n-1}{k-1}\)</span> such subsets.</div></li>
+<li id="li-1076"><div class="para" id="p-derived-li-1076">How many subsets <em class="emphasis">do not</em> contain this element? We will be picking from the remaining <span class="process-math">\(n-1\)</span> elements. Since we want the subsets to have <span class="process-math">\(k\)</span> elements, we have <span class="process-math">\(\binom{n-1}{k}\)</span> such subsets.</div></li>
+</ul>
+<div class="para">Thus there are <span class="process-math">\(\binom{n-1}{k-1} + \binom{n-1}{k}\)</span> subsets of <span class="process-math">\(k\)</span> elements from a set of <span class="process-math">\(n\)</span> elements.</div>
+</div> <div class="para logical" id="p-1390">
+<div class="para">Because each answer counted the same objects, but in two different ways, those answers much be the same. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{n \choose k} = {n-1\choose k-1} + {n-1 \choose k}.
+\end{equation*}
+</div>
+</div>
+</div></div>
+</div></article><div class="para logical" id="p-1391">
+<div class="para">Some people find combinatorial proofs “more fun” because they tell a story. In this next example, if we used a formula, we’d write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{0}=\frac{n!}{0!(n-0)!} = 1\text{.}
+\end{equation*}
+</div>
+<div class="para">Fine. But we could also see that this could actually be talking about cookies!</div>
+</div>
+<article class="example example-like" id="example-147"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-1392">Give a combinatorial proof of <span class="process-math">\(\displaystyle \binom{n}0 = 1\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-28" id="hint-28"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-28"><div class="hint solution-like"><div class="para" id="p-1393">How about we ask how many ways can we take no cookies from a bag of <span class="process-math">\(n\)</span> cookies?</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-191" id="solution-191"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-191"><div class="solution solution-like"><div class="para logical" id="p-1394">
+<div class="para">Question: How many ways can we take no cookies from a bag of <span class="process-math">\(n\)</span> cookies?</div>
+<ol class="decimal">
+<li id="li-1077"><div class="para" id="p-derived-li-1077">Answer:  This is <span class="process-math">\(\binom{n}{0}\text{,}\)</span> since that’s what binomial coefficients count.</div></li>
+<li id="li-1078"><div class="para" id="p-derived-li-1078">Answer: There is exactly one way to do this. We just don’t get a cookie.</div></li>
+</ol>
+<div class="para">Because each answer answers the same question, we have shown that <span class="process-math">\(\binom{n}{0} = 1\text{.}\)</span>
+</div>
+</div></div></div>
+</div></article><article class="example example-like" id="example-symmetry-property"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-1395">Give a combinatorial proof of <span class="process-math">\(\displaystyle \binom{n}{k} = \binom{n}{n-k}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-29" id="hint-29"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-29"><div class="hint solution-like"><div class="para" id="p-1396">Sticking with the cookie scenario, how many ways to pick <span class="process-math">\(k\)</span> cookies from <span class="process-math">\(n\)</span> cookies?</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-192" id="solution-192"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-192"><div class="solution solution-like"><div class="para logical" id="p-1397">
+<div class="para">Question: How many ways can we take <span class="process-math">\(k\)</span> cookies from a bag of <span class="process-math">\(n\)</span> cookies?</div>
+<ol class="decimal">
+<li id="li-1079"><div class="para" id="p-derived-li-1079">Answer: There are <span class="process-math">\(\binom{n}{k}\)</span> ways to do this, since this is what binomial coefficients count.</div></li>
+<li id="li-1080"><div class="para" id="p-derived-li-1080">Answer: Instead of picking the cookies we want, let’s <em class="emphasis">pick the cookies we don’t want</em>.  We will pick the <span class="process-math">\(n-k\)</span> cookies that we don’t want, and there’s <span class="process-math">\(\binom{n}{n-k}\)</span> ways to do this.</div></li>
+</ol>
+<div class="para">Because these both answer the same question, we have that <span class="process-math">\(\binom{n}{k} = \binom{n}{n-k}\text{.}\)</span>
+</div>
+</div></div></div>
+</div></article><article class="example example-like" id="example-149"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-1398">
+<div class="para">Prove the binomial identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{0}\binom{n}{0}+\binom{n}{1}\binom{n}{1}+\binom{n}{2}\binom{n}{2}+ \cdots + \binom{n}{n} \binom{n}{n} = \binom{2n}{n}
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-30" id="hint-30"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-30"><div class="hint solution-like"><div class="para" id="p-1399">How many pizzas of <span class="process-math">\(n\)</span> toppings can be made if we can choose from <span class="process-math">\(2n\)</span> toppings?</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original has-video" data-refid="hk-answer-122" id="answer-122"><span class="type">Video / Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-122"><div class="answer solution-like">
+<div class="para" id="p-1400">Note that in the video, I start with a different form of the equation but quickly change it to this one. It’s equivalent.</div> <div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-125" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/4N5qJMBCXLg?&amp;modestbranding=1&amp;rel=0"></iframe></div>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-193" id="solution-193"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-193"><div class="solution solution-like">
+<div class="para logical" id="p-1401">
+<div class="para">For this one, I’m going to rewrite the equation, taking advantage of the symmetry property we proved in <a href="" class="xref" data-knowl="./knowl/example-symmetry-property.html" title="Example 5.3.5">Example 5.3.5</a>. We start with:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/example-symmetry-property.html" id="md-68">
+\begin{align*}
+\binom{n}{0}\binom{n}{0}+\binom{n}{1}\binom{n}{1}+\binom{n}{2}\binom{n}{2}+ \cdots + \binom{n}{n} \binom{n}{n} \amp= \binom{2n}{n}\\
+\binom{n}{0}\binom{n}{n-0}+\binom{n}{1}\binom{n}{n-1}+\binom{n}{2}\binom{n}{n-2}+ \cdots + \binom{n}{n} \binom{n}{n-n} \amp= \binom{2n}{n}
+\end{align*}
+</div>
+<div class="para">and this is what we’ll use to prove the identity.</div>
+</div> <div class="para logical" id="p-1402">
+<div class="para">Question: If there are <span class="process-math">\(n\)</span> meats and <span class="process-math">\(n\)</span> non-meat toppings for a pizza, how many <span class="process-math">\(n\)</span> topping pizzas can be made? (if we don’t allow repeat toppings)</div>
+<ol class="decimal">
+<li id="li-1081"><div class="para" id="p-derived-li-1081">Answer: There are <span class="process-math">\(\binom{2n}{n}\)</span> total pizzas that can be made.</div></li>
+<li id="li-1082"><div class="para logical" id="p-1403">
+<div class="para">Answer: We’ll split on how many meats we want:</div>
+<ul class="disc">
+<li id="li-1083"><div class="para" id="p-1404">If we want no meats, then we’ll select no meats and <span class="process-math">\(n\)</span> non-meats. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{0}\binom{n}{n}\)</span>
+</div></li>
+<li id="li-1084"><div class="para" id="p-1405">If we want 1 meat, then we’ll select <span class="process-math">\(n-1\)</span> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{1}\binom{n}{n-1}\)</span>
+</div></li>
+<li id="li-1085"><div class="para" id="p-1406">If we want 2 meats, then we’ll select <span class="process-math">\(n-2\)</span> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{2}\binom{n}{n-2}\)</span>
+</div></li>
+<li id="li-1086"><div class="para" id="p-derived-li-1086">...</div></li>
+<li id="li-1087"><div class="para" id="p-1407">If we want n meats, then we’ll select <span class="process-math">\(n-n=0\)</span> non-meats for the rest of the toppings. These are independent of one another, so we multiply: <span class="process-math">\(\binom{n}{n}\binom{n}{0}\)</span>
+</div></li>
+</ul>
+<div class="para">because each of these pizzas are completely different than the rest (have different numbers of meats), the addition principle says to add them all together:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{0}\binom{n}{n}+\binom{n}{1}\binom{n}{n-1}+\binom{n}{2}\binom{n}{n-2}+ \cdots + \binom{n}{n} \binom{n}{0}
+\end{equation*}
+</div>
+</div></li>
+</ol>
+<div class="para">Because each answer was a different way to count the same objects, we find that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{0}\binom{n}{n-0}+\binom{n}{1}\binom{n}{n-1}+\binom{n}{2}\binom{n}{n-2}+ \cdots + \binom{n}{n} \binom{n}{n-n} = \binom{2n}{n}
+\end{equation*}
+</div>
+</div>
+</div></div>
+</div></article></section><section class="exercises" id="exercises-21"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-177"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1408">Prove <span class="process-math">\(\d\sum_{k=0}^n {n \choose k} = 2^n\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><div class="para logical" id="p-1409">
+<div class="para">Here are two different ways to go about it:</div>
+<ol class="lower-alpha">
+<li id="li-1088"><div class="para" id="p-derived-li-1088">Combinatorial proof: Answer the question “If a pizza place offers <span class="process-math">\(n\)</span> toppings, how many pizzas can you build using any number of toppings using each topping no more than once?”</div></li>
+<li id="li-1089"><div class="para" id="p-derived-li-1089">Or, use the binomial theorem and set appropriate values of <span class="process-math">\(x \and y\text{.}\)</span>
+</div></li>
+</ol>
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-178"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1410">Give a combinatorial proof of the identity <span class="process-math">\(2+2+2 = 3\cdot 2\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-194" id="solution-194"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-194"><div class="solution solution-like"><article class="proof" id="proof-42"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-1411">Question: How many 2-letter words start with <em class="emphasis">a</em>, <em class="emphasis">b</em>, or <em class="emphasis">c</em> and end with either <em class="emphasis">y</em> or <em class="emphasis">z</em>?</div> <div class="para" id="p-1412">Answer 1: There are two words that start with <em class="emphasis">a</em>, two that start with <em class="emphasis">b</em>, two that start with <em class="emphasis">c</em>, for a total of <span class="process-math">\(2+2+2\text{.}\)</span>
+</div> <div class="para" id="p-1413">Answer 2: There are three choices for the first letter and two choices for the second letter, for a total of <span class="process-math">\(3 \cdot 2\text{.}\)</span>
+</div> <div class="para" id="p-1414">Since the two answers are both answers to the same question, they are equal. Thus <span class="process-math">\(2 + 2 + 2 = 3\cdot 2\text{.}\)</span>
+</div></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-179"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1415">Give a combinatorial proof for the identity <span class="process-math">\(1 + 2 + 3 + \cdots + n = {n+1 \choose 2}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-195" id="solution-195"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-195"><div class="solution solution-like"><article class="proof" id="proof-43"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-1416">Question: How many subsets of <span class="process-math">\(A = \{1,2,3, \ldots, n+1\}\)</span> contain exactly two elements?</div> <div class="para" id="p-1417">Answer 1: We must choose 2 elements from <span class="process-math">\(n+1\)</span> choices, so there are <span class="process-math">\({n+1 \choose 2}\)</span> subsets.</div> <div class="para" id="p-1418">Answer 2: We break this question down into cases, based on what the larger of the two elements in the subset is. The larger element can’t be 1, since we need at least one element smaller than it.</div> <div class="para" id="p-1419">Larger element is 2: there is 1 choice for the smaller element.</div> <div class="para" id="p-1420">Larger element is 3: there are 2 choices for the smaller element.</div> <div class="para" id="p-1421">Larger element is 4: there are 3 choices for the smaller element.</div> <div class="para" id="p-1422">And so on. When the larger element is <span class="process-math">\(n+1\text{,}\)</span> there are <span class="process-math">\(n\)</span> choices for the smaller element. Since each two element subset must be in exactly one of these cases, the total number of two element subsets is <span class="process-math">\(1 + 2 + 3 + \cdots + n\text{.}\)</span>
+</div> <div class="para logical" id="p-1423">
+<div class="para">Answer 1 and answer 2 are both correct answers to the same question, so they must be equal. Therefore,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 + 2 + 3 + \cdots + n = {n+1 \choose 2}
+\end{equation*}
+</div>
+</div></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-180"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1424">A woman is getting married. She has 15 best friends but can only select 6 of them to be her bridesmaids, one of which needs to be her maid of honor. How many ways can she do this?</div> <ol class="lower-alpha">
+<li id="li-1090"><div class="para" id="p-1425">What if she first selects the 6 bridesmaids, and then selects one of them to be the maid of honor?</div></li>
+<li id="li-1091"><div class="para" id="p-1426">What if she first selects her maid of honor, and then 5 other bridesmaids?</div></li>
+<li id="li-1092"><div class="para" id="p-1427">Explain why <span class="process-math">\(6 {15 \choose 6} = 15 {14 \choose 5}\text{.}\)</span>
+</div></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-196" id="solution-196"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-196"><div class="solution solution-like"><div class="para logical" id="p-1428"><ol class="lower-alpha">
+<li id="li-1093"><div class="para" id="p-1429">She has <span class="process-math">\({15 \choose 6}\)</span> ways to select the 6 bridesmaids, and then for each way, has 6 choices for the maid of honor.  Thus she has <span class="process-math">\({15 \choose 6}6\)</span> choices.</div></li>
+<li id="li-1094"><div class="para" id="p-1430">She has 15 choices for who will be her maid of honor.  Then she needs to select 5 of the remaining 14 friends to be bridesmaids, which she can do in <span class="process-math">\({14 \choose 5}\)</span> ways.  Thus she has <span class="process-math">\(15 {14 \choose 5}\)</span> choices.</div></li>
+<li id="li-1095"><div class="para" id="p-1431">We have answered the question (how many wedding parties can the bride choose from) in two ways.  The first way gives the left-hand side of the identity and the second way gives the right-hand side of the identity.  Therefore the identity holds.</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-181"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1432">Give a combinatorial proof of the identity <span class="process-math">\({n \choose 2}{n-2 \choose k-2} = {n\choose k}{k \choose 2}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-197" id="solution-197"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-197"><div class="solution solution-like"><article class="proof" id="proof-44"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-1433">Question: You have a large container filled with ping-pong balls, all with a different number on them. You must select <span class="process-math">\(k\)</span> of the balls, putting two of them in a jar and the others in a box. How many ways can you do this?</div> <div class="para" id="p-1434">Answer 1: First select 2 of the <span class="process-math">\(n\)</span> balls to put in the jar. Then select <span class="process-math">\(k-2\)</span> of the remaining <span class="process-math">\(n-2\)</span> balls to put in the box. The first task can be completed in <span class="process-math">\({n \choose 2}\)</span> different ways, the second task in <span class="process-math">\({n-2 \choose k-2}\)</span> ways. Thus there are <span class="process-math">\({n \choose 2}{n-2 \choose k-2}\)</span> ways to select the balls.</div> <div class="para" id="p-1435">Answer 2: First select <span class="process-math">\(k\)</span> balls from the <span class="process-math">\(n\)</span> in the container. Then pick 2 of the <span class="process-math">\(k\)</span> balls you picked to put in the jar, placing the remaining <span class="process-math">\(k-2\)</span> in the box. The first task can be completed in <span class="process-math">\({n \choose k}\)</span> ways, the second task in <span class="process-math">\({k \choose 2}\)</span> ways. Thus there are <span class="process-math">\({n \choose k}{k \choose 2}\)</span> ways to select the balls.</div> <div class="para" id="p-1436">Since both answers count the same thing, they must be equal and the identity is established.</div></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-182"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-1437">How many ways are there to rearrange the letters in the word “rearrange”? Answer this question in at least two different ways to establish a binomial identity.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-198" id="solution-198"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-198"><div class="solution solution-like">
+<div class="para logical" id="p-1438">
+<div class="para">The word contains 9 letters: 3 “r”s, 2 “a”s and 2 “e”s, along with an “n” and a “g”. We could first select the positions for the “r”s in <span class="process-math">\({9 \choose 3}\)</span> ways, then the “a”s in <span class="process-math">\({6 \choose 2}\)</span> ways, the “e”s in <span class="process-math">\({4 \choose 2}\)</span> ways and then select one of the remaining two spots to put the “n” (placing the “g” in the last spot). This gives the answer</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{9 \choose 3}{6 \choose 2}{4 \choose 2}{2\choose 1}{1\choose 1}.
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-1439">
+<div class="para">Alternatively, we could select the positions of the letters in the opposite order, which would give an answer</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{9 \choose 1}{8\choose 1}{7 \choose 2}{5\choose 2}{3\choose 3}.
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-1440">
+<div class="para">(where the 3 “r”s go in the remaining 3 spots). These two expressions are equal:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{9 \choose 3}{6 \choose 2}{4 \choose 2}{2\choose 1}{1\choose 1} = {9 \choose 1}{8\choose 1}{7 \choose 2}{5\choose 2}{3\choose 3}.
+\end{equation*}
+</div>
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-183"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-1441">Give a combinatorial proof of the identity <span class="process-math">\(1 + 2 + 4 + 8 + \dots 2^{n-1} = 2^n - 1\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-184"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-1442">Give a combinatorial proof for the identity <span class="process-math">\(P(n,k) = {n \choose k}k!\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-199" id="solution-199"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-199"><div class="solution solution-like"><article class="proof" id="proof-45"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-1443">Question: How many <span class="process-math">\(k\)</span>-letter words can you make using <span class="process-math">\(n\)</span> different letters without repeating any letter?</div> <div class="para" id="p-1444">Answer 1: There are <span class="process-math">\(n\)</span> choices for the first letter, <span class="process-math">\(n-1\)</span> choices for the second letter, <span class="process-math">\(n-2\)</span> choices for the third letter, and so on until <span class="process-math">\(n - (k-1)\)</span> choices for the <span class="process-math">\(k\)</span>th letter (since <span class="process-math">\(k-1\)</span> letters have already been assigned at that point). The product of these numbers can be written <span class="process-math">\(\frac{n!}{(n-k)!}\)</span> which is <span class="process-math">\(P(n,k)\text{.}\)</span>  Therefore there are <span class="process-math">\(P(n,k)\)</span> words.</div> <div class="para" id="p-1445">Answer 2: First pick <span class="process-math">\(k\)</span> letters to be in the word from the <span class="process-math">\(n\)</span> choices. This can be done in <span class="process-math">\({n \choose k}\)</span> ways. Now arrange those letters into a word. There are <span class="process-math">\(k\)</span> choices for the first letter, <span class="process-math">\(k-1\)</span> choices for the second, and so on, for a total of <span class="process-math">\(k!\)</span> arrangements of the <span class="process-math">\(k\)</span> letters. Thus the total number of words is <span class="process-math">\({n \choose k}k!\text{.}\)</span>
+</div> <div class="para" id="p-1446">Since the two answers are correct answers to the same question, we have established that <span class="process-math">\(P(n,k) = {n \choose k}k!\text{.}\)</span>
+</div></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-185"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para logical" id="p-1447">
+<div class="para">Establish the identity below using a combinatorial proof.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{2 \choose 2}{n \choose 2} + {3 \choose 2}{n-1 \choose 2} + {4\choose 2}{n-2 \choose 2} + \cdots + {n\choose 2}{2\choose 2} = {n+3 \choose 5}.
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-200" id="solution-200"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-200"><div class="solution solution-like"><article class="proof" id="proof-46"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para" id="p-1448">Question: How many 5-element subsets are there of the set <span class="process-math">\(\{1,2,\ldots, n+3\}\text{.}\)</span>
+</div> <div class="para" id="p-1449">Answer 1: We choose 5 out of the <span class="process-math">\(n+3\)</span> elements, so <span class="process-math">\({n+3 \choose 5}\)</span> subsets.</div> <div class="para logical" id="p-1450">
+<div class="para">Answer 2: Break this up into cases by what the “middle” (third smallest) element of the 5 element subset is. The smallest this could be is a 3. In that case, we have <span class="process-math">\({2 \choose 2}\)</span> choices for the numbers below it, and <span class="process-math">\({n \choose 2}\)</span> choices for the numbers above it. Alternatively, the middle number could be a 4. In this case there are <span class="process-math">\({3 \choose 2}\)</span> choices for the bottom two numbers and <span class="process-math">\({n-1 \choose 2}\)</span> choices for the top two numbers. If the middle number is 5, then there are <span class="process-math">\({4 \choose 2}\)</span> choices for the bottom two numbers and <span class="process-math">\({n-2 \choose 2}\)</span> choices for the top two numbers. An so on, all the way up to the largest the middle number could be, which is <span class="process-math">\(n+1\text{.}\)</span> In that case there are <span class="process-math">\({n \choose 2}\)</span> choices for the bottom two numbers and <span class="process-math">\({2 \choose 2}\)</span> choices for the top number. Thus the number of 5 element subsets is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{2 \choose 2}{n \choose 2} + {3 \choose 2}{n-1 \choose 2} + {4\choose 2}{n-2 \choose 2} + \cdots + {n\choose 2}{2\choose 2}.
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-1451">
+<div class="para">Since the two answers correctly answer the same question, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{2 \choose 2}{n \choose 2} + {3 \choose 2}{n-1 \choose 2} + {4\choose 2}{n-2 \choose 2} + \cdots + {n\choose 2}{2\choose 2} = {n+3 \choose 5}.
+\end{equation*}
+</div>
+</div></article></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-186"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para logical" id="p-1452">
+<div class="para">In each polynomial below, assume <span class="process-math">\(x\)</span> is some variable. Use the binomial theorem to expand and reduce modulo the appropriate number:</div>
+<ol class="lower-alpha">
+<li id="li-1096"><div class="para" id="p-derived-li-1096"><span class="process-math">\(\displaystyle (x+1)^2 \pmod 2 \)</span></div></li>
+<li id="li-1097"><div class="para" id="p-derived-li-1097"><span class="process-math">\(\displaystyle (x+1)^5 \pmod 5 \)</span></div></li>
+<li id="li-1098"><div class="para" id="p-derived-li-1098"><span class="process-math">\(\displaystyle (x+1)^7 \pmod 7 \)</span></div></li>
+</ol>
+<div class="para">Prove that <span class="process-math">\((x+1)^p \equiv x^p + 1 \pmod p\)</span> for any prime <span class="process-math">\(p\text{.}\)</span>
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-201" id="solution-201"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-201"><div class="solution solution-like"><div class="para logical" id="p-1453">
+<div class="para">Here’s a partial solution:</div>
+<ol class="lower-alpha">
+<li id="li-1099"><div class="para" id="p-derived-li-1099"><span class="process-math">\(\displaystyle (x+1)^2 = x^2 + 2x + 1 \equiv x^2 + 1 \pmod 2 \)</span></div></li>
+<li id="li-1100"><div class="para" id="p-derived-li-1100"><span class="process-math">\(\displaystyle (x+1)^5 = x^5 + 5x^4 + 10x^3 + 10x^2 + 5x + 1 \equiv x^5 + 1 \pmod 5 \)</span></div></li>
+</ol>
+<div class="para">What can be said about each each binomial coefficient except the first and the last? Why?</div>
+</div></div></div>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-counting-combperm.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-counting-fib.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

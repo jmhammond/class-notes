@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+\neg((\neg p \wedge q) \vee \neg(r \vee \neg s)) \amp\equiv \neg(\neg p \wedge q) \land \neg \neg(r \vee \neg s) \\
+\amp\equiv \neg(\neg p \wedge q) \land (r \vee \neg s)\\
+\amp\equiv (\neg\neg p \lor \neg q) \land (r \lor \neg s)\\
+\amp\equiv (p \lor \neg q) \land (r \lor \neg s)
+\end{align*}
+</div></div></li>
+<li><div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+\neg((\neg p \to \neg q) \wedge (\neg q \to k)) \amp \equiv \neg((\neg \neg p \lor \neg q) \wedge (\neg \neg q \lor k))\\
+\amp\equiv \neg((p \lor \neg q) \wedge (q \lor k))\\
+\amp \equiv \neg(p \lor \neg q) \lor \neg (q \lor k)\\
+\amp \equiv (\neg p \land \neg \neg q) \lor (\neg q \land \neg k)\\
+\amp \equiv (\neg p \land q) \lor (\neg q \land \neg k)
+\end{align*}
+</div></div></li>
+<li><div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+(p\land q) \to (p \lor q) \amp \equiv \neg (p\land q) \lor (p \lor q) \\
+\amp \equiv (\neg p \lor \neg q) \lor (p \lor q)\\
+\amp \equiv \neg p \lor \neg q \lor p \lor q\\
+\amp \equiv \neg p \lor p \lor \neg q \lor q\\
+\amp \equiv (\neg p \lor p) \lor ( \neg q \lor q )\\
+\amp \equiv (T) \lor (T)\\
+\amp \equiv T
+\end{align*}
+</div>
+<div class="para">... it’s a tautology!</div>
+</div></li>
+</ol></div>
+<span class="incontext"><a href="section-logic-equivalences.html#p-418" class="internal">in-context</a></span>
+</body>
+</html>

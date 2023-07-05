@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solutions to the exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Discrete Math for Shockers">
+<meta property="book:author" content="John Hammond">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script async="" src="https://cse.google.com/cse.js?cx=015422183392601792159:vae7vvmmczm"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_brown_gold.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://www.math.wichita.edu/discrete-book" target="_blank"><img src="external/WSULogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="discrete-class-notes.html"><span class="title">Discrete Math for Shockers</span></a></h1>
+<p class="byline">John Hammond</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="backmatter-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="backmatter-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span></span><div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ds{\displaystyle}
+\def\d{\displaystyle}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\F{\mathbb F}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\def\st{\mid}
+\def\divides{\mid}
+\def\and{\text{ and }}
+\def\lcm{\text{lcm}}
+\def\modulus{\mathbin{\%}}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1}
+\draw (\x,\y) node{#3};
+}
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\fixspacing}{\vspace{0pt plus 1filll}\mbox{}}
+\usepackage{cancel} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="dedication-1.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_basics.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Objects and Symbols</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-prop-logic.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Propositional Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-prop-logic.html#subsection-1" class="internal"><span class="title">The Basics</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#subsec-truthtables" class="internal"><span class="title">Truth Tables for Logical Connectives</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#subsection-3" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-prop-logic.html#exercises-1" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_objects_sets.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-4" class="internal"><span class="title">Basic terminology</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-5" class="internal"><span class="title">Operations on sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#subsection-6" class="internal"><span class="title">Verifying Set Identities</span></a></div></li>
+<li><div class="toc-item"><a href="sec_objects_sets.html#exercises-2" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_relationsfunctions.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Relations and Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-7" class="internal"><span class="title">Relations</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-8" class="internal"><span class="title">Functions</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-9" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#subsection-10" class="internal"><span class="title">What kind of object? Binary operations vs. <span class="process-math">\(a\mathrel{R} b\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_relationsfunctions.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_logic.html" class="internal"><span class="codenumber">2</span> <span class="title">Symbolic Logic and Proofs</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-logic-equivalences.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Logical Equivalences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-equivalences.html#subsection-11" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-equivalences.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_application_set_proofs.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Application: Set Equivalences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_application_set_proofs.html#subsection-12" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_application_set_proofs.html#exercises-5" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-quantifiers.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Propositional Functions and Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#subsection-13" class="internal"><span class="title">Predicates</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#subsection-14" class="internal"><span class="title">Logical Quantifiers</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-quantifiers.html#exercises-6" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-arguments.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Logical Arguments</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-arguments.html#subsection-15" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-arguments.html#exercises-7" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-logic-proofs.html" class="internal"><span class="codenumber">2.5</span> <span class="title">An introduction to proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-16" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-17" class="internal"><span class="title">Basic concepts of proof</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-18" class="internal"><span class="title">Direct Proof</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-logic-proofs.html#subsection-19" class="internal"><span class="title">Indirect Proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsubsection-1" class="internal"><span class="title">Proof by Contraposition</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsubsection-2" class="internal"><span class="title">Proof by Contradiction</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-20" class="internal"><span class="title">Proofs of equivalence</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-21" class="internal"><span class="title">Proof by cases</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-22" class="internal"><span class="title">Existence Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-23" class="internal"><span class="title">Uniqueness proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-24" class="internal"><span class="title">Vacuous and Trivial Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#subsection-25" class="internal"><span class="title">Counterexamples Revisited</span></a></div></li>
+<li><div class="toc-item"><a href="section-logic-proofs.html#exercises-8" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-prop-supplementatal.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Chapter Review</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-prop-supplementatal.html#exercises_logic-conc" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_numtheory.html" class="internal"><span class="codenumber">3</span> <span class="title">Some Classic Number Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-numtheory-divcong.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Divisibility and Congruences</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#section-numtheory-div" class="internal"><span class="title">The Divides Relation</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#section-numtheory-cong" class="internal"><span class="title">The Congruence Relation</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-divcong.html#exercises-10" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-primes.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Prime Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-primes.html#subsection-28" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-primes.html#computer-corner-sieve" class="internal"><span class="title">Computer Corner - Implementing the Sieve</span></a></div></li>
+<li><div class="toc-item"><a href="section-primes.html#exercises-11" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-gcd-euclid.html" class="internal"><span class="codenumber">3.3</span> <span class="title">GCDs and The Euclidean Algorithm</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-gcd-euclid.html#subsection-30" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-gcd-euclid.html#exercises-12" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-multiplicative-inverses.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Multiplicative Inverses</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-multiplicative-inverses.html#subsection-31" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-multiplicative-inverses.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-numtheory-modularexp.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Modular exponentiation</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-numtheory-modularexp.html#subsection-32" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-modularexp.html#exercises-14" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-numtheory-encryption.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Application: Encryption</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-numtheory-encryption.html#subsection-numtheory-ciphers" class="internal"><span class="title">Basic Cipher Examples</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-numtheory-encryption.html#exercises-15" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-numtheory-encryption.html#subsection-numtheory-sage" class="internal"><span class="title">Number Theory Using Sage</span></a></div></li>
+<li><div class="toc-item"><a href="section-numtheory-encryption.html#rsa-activity" class="internal"><span class="title">The RSA Activity</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_sequences.html" class="internal"><span class="codenumber">4</span> <span class="title">Sequences, Recurrence, and Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-objects-seqseries.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-objects-seqseries.html#subsection-36" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-objects-seqseries.html#subsection-37" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-objects-seqseries.html#exercises-16" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-solvingrecurrences.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Solving Recurrence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-38" class="internal"><span class="title">Motivation, or, why do I care?</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-39" class="internal"><span class="title">Solving recurrence relations</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#subsection-40" class="internal"><span class="title">Solving particularly nice recurrence relations</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#sec-recurrences-with-python" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="section-solvingrecurrences.html#exercises-17" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_logic_induction.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_logic_induction.html#math-induction" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#strong-induction" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#subsection-44" class="internal"><span class="title">Computer Corner</span></a></div></li>
+<li><div class="toc-item"><a href="sec_logic_induction.html#exercises-18" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch_counting.html" class="internal"><span class="codenumber">5</span> <span class="title">Counting Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-counting-basics.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The Multiplicative and Additive Principles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-basics.html#subsection-45" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-basics.html#exercises-19" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-combperm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Permutations and Combinations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-combperm.html#subsection-46" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-combperm.html#exercises-20" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-binomial.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Combinatorial Proofs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-binomial.html#subsection-47" class="internal"><span class="title">Binomial Coefficients</span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-binomial.html#subsection-48" class="internal"><span class="title">Combinatorial Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-binomial.html#exercises-21" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-counting-fib.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Counting Fibonacci numbers with tiles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-counting-fib.html#subsection-49" class="internal"><span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-counting-fib.html#exercises-22" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural"><li class="active"><div class="toc-item"><a href="solutions-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Solutions to the exercises</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="solutions" id="solutions-1"><h2 class="heading">
+<span class="type">Appendix</span> <span class="codenumber">A</span> <span class="title">Solutions to the exercises</span>
+</h2>
+<h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">1</span><span class="space"> </span><span class="title">Basic Objects and Symbols</span><br><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Propositional Logic</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-2-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-3-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-4-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-5-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-1-hidden.html" title="Hint 5.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-6-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-7-hidden.html" title="Solution 7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-2-hidden.html" title="Hint 8.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-3-hidden.html" title="Hint 9.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">1.2</span><span class="space"> </span><span class="title">Sets</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-8-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-9-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-10-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-11-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-12-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-13-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-14-hidden.html" title="Solution 7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-15-hidden.html" title="Solution 8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-16-hidden.html" title="Solution 9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-17-hidden.html" title="Solution 10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-4-hidden.html" title="Hint 11.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-18-hidden.html" title="Solution 11.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-19-hidden.html" title="Solution 12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-20-hidden.html" title="Solution 13.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-21-hidden.html" title="Solution 14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-22-hidden.html" title="Solution 15.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-5-hidden.html" title="Hint 16.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-23-hidden.html" title="Solution 16.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-24-hidden.html" title="Solution 17.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-25-hidden.html" title="Solution 18.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">1.3</span><span class="space"> </span><span class="title">Relations and Functions</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-31-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-32-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-33-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-34-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-35-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-36-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-37-hidden.html" title="Solution 7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-38-hidden.html" title="Solution 8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-39-hidden.html" title="Solution 9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-40-hidden.html" title="Solution 10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-6-hidden.html" title="Hint 11.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-41-hidden.html" title="Solution 11.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-42-hidden.html" title="Solution 12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-43-hidden.html" title="Solution 13.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-44-hidden.html" title="Solution 14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-45-hidden.html" title="Solution 15.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-7-hidden.html" title="Hint 16.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-46-hidden.html" title="Solution 17.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-47-hidden.html" title="Solution 18.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">19<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-48-hidden.html" title="Solution 19.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">20<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-49-hidden.html" title="Solution 20.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">2</span><span class="space"> </span><span class="title">Symbolic Logic and Proofs</span><br><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Logical Equivalences</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-51-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-52-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-53-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-54-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-55-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">2.2</span><span class="space"> </span><span class="title">Application: Set Equivalences</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-58-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-59-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-60-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-61-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-62-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">2.3</span><span class="space"> </span><span class="title">Propositional Functions and Quantifiers</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-63-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-64-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-65-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-66-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-67-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-68-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">2.4</span><span class="space"> </span><span class="title">Logical Arguments</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-70-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-71-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-72-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-73-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-8-hidden.html" title="Hint 7.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-9-hidden.html" title="Hint 8.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-74-hidden.html" title="Solution 8.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">2.5</span><span class="space"> </span><span class="title">An introduction to proofs</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-79-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-80-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-14-hidden.html" title="Hint 3.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-81-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-82-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-15-hidden.html" title="Hint 6.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-83-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-84-hidden.html" title="Solution 7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-85-hidden.html" title="Solution 8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-86-hidden.html" title="Solution 9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-87-hidden.html" title="Solution 10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-88-hidden.html" title="Solution 11.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-89-hidden.html" title="Solution 12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-16-hidden.html" title="Hint 13.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-90-hidden.html" title="Solution 13.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-91-hidden.html" title="Solution 14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Section 2.6: Chapter Review">
+<span class="codenumber">2.6</span><span class="space"> </span><span class="title">Chapter Review</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 2.6"><span class="title">Exercises</span></h4>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.1<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-92-hidden.html" title="Solution 2.6.1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.2<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-93-hidden.html" title="Solution 2.6.2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.3<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-94-hidden.html" title="Solution 2.6.3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.4<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-95-hidden.html" title="Solution 2.6.4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.5<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-96-hidden.html" title="Solution 2.6.5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.6<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-97-hidden.html" title="Solution 2.6.6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-98-hidden.html" title="Solution 2.6.7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.8<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-99-hidden.html" title="Solution 2.6.8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.9<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-100-hidden.html" title="Solution 2.6.9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.10<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-101-hidden.html" title="Solution 2.6.10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">3</span><span class="space"> </span><span class="title">Some Classic Number Theory</span><br><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Divisibility and Congruences</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-18-hidden.html" title="Hint 1.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-104-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-105-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-106-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-107-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-108-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-109-hidden.html" title="Solution 7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">3.2</span><span class="space"> </span><span class="title">Prime Numbers</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-114-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-115-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-19-hidden.html" title="Hint 3.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-116-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-20-hidden.html" title="Hint 4.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-117-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-21-hidden.html" title="Hint 5.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-118-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">3.3</span><span class="space"> </span><span class="title">GCDs and The Euclidean Algorithm</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-121-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-122-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-123-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-22-hidden.html" title="Hint 4.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-124-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">3.4</span><span class="space"> </span><span class="title">Multiplicative Inverses</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-130-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-131-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-132-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-133-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">3.5</span><span class="space"> </span><span class="title">Modular exponentiation</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-137-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Subsection: Basic Cipher Examples">
+<span class="codenumber">3.6</span><span class="space"> </span><span class="title">Application: Encryption</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Basic Cipher Examples</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises"><span class="title">Exercises</span></h4>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-138-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-139-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-140-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">4</span><span class="space"> </span><span class="title">Sequences, Recurrence, and Induction</span><br><span class="codenumber">4.1</span><span class="space"> </span><span class="title">Sequences and Series</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-141-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-142-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-143-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-144-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-145-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-146-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">4.2</span><span class="space"> </span><span class="title">Solving Recurrence Relations</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-148-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-149-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-150-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-151-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-152-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-153-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-154-hidden.html" title="Solution 7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-155-hidden.html" title="Solution 8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">4.3</span><span class="space"> </span><span class="title">Mathematical Induction</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-157-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-158-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-159-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-160-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-161-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-162-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-163-hidden.html" title="Solution 7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-23-hidden.html" title="Hint 8.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-164-hidden.html" title="Solution 9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-165-hidden.html" title="Solution 10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-166-hidden.html" title="Solution 11.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-24-hidden.html" title="Hint 12.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-167-hidden.html" title="Solution 13.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-168-hidden.html" title="Solution 14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-169-hidden.html" title="Solution 15.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-170-hidden.html" title="Solution 16.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-25-hidden.html" title="Hint 17.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-171-hidden.html" title="Solution 18.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">19<span class="period">.</span></span></h4>
+<div class="solutions">
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-26-hidden.html" title="Hint 19.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="solution-knowl original" data-knowl="./knowl/solution-172-hidden.html" title="Solution 19.1"><span class="type">Solution</span><span class="period">.</span></a>
+</div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">5</span><span class="space"> </span><span class="title">Counting Techniques</span><br><span class="codenumber">5.1</span><span class="space"> </span><span class="title">The Multiplicative and Additive Principles</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-174-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-175-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-176-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-177-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-178-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-27-hidden.html" title="Hint 7.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-179-hidden.html" title="Solution 9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-180-hidden.html" title="Solution 11.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-181-hidden.html" title="Solution 12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-182-hidden.html" title="Solution 14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">5.2</span><span class="space"> </span><span class="title">Permutations and Combinations</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-184-hidden.html" title="Solution 1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-185-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-186-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-187-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-188-hidden.html" title="Solution 7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">5.3</span><span class="space"> </span><span class="title">Combinatorial Proofs</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-31-hidden.html" title="Hint 1.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-194-hidden.html" title="Solution 2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-195-hidden.html" title="Solution 3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-196-hidden.html" title="Solution 4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-197-hidden.html" title="Solution 5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-198-hidden.html" title="Solution 6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-199-hidden.html" title="Solution 8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-200-hidden.html" title="Solution 9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-201-hidden.html" title="Solution 10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><h3 class="heading hide-type" title="Exercises">
+<span class="codenumber">5.4</span><span class="space"> </span><span class="title">Counting Fibonacci numbers with tiles</span><br><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-36-hidden.html" title="Hint 1.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-37-hidden.html" title="Hint 2.1"><span class="type">Hint</span><span class="period">.</span></a></div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="backmatter-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
+</script>
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.8.1</span><span class="period">.</span>
+</h4>
+<div class="para">After using the characteristic root method, we find the answer is <span class="process-math">\(a_n = 3\cdot 2^{n} + (-1)^{n+1}\text{.}\)</span> We can confirm our answer by comparing this explicit solution with the recursive version using Python!</div> <pre class="ptx-sagecell sagecell-sage" id="sage-14"><script type="text/x-sage">def f(n):
+    return 3*pow(2,n)+pow(-1, n+1)
+
+def recur(n):
+    if n==0:
+        return 2
+    elif n==1:
+        return 7
+    else:
+        return recur(n-1) + 2*recur(n-2)
+
+print("Using the explicit solution: " + str(list(map(f,range(0,10)))))
+print("\n")
+print("Recursive sequence: " + str(list(map(recur,range(0, 10)))))
+</script></pre>
+</div>
+<span class="incontext"><a href="section-solvingrecurrences.html#solution-147" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Euclidean Algorithm.</span>
+</h4>
+<aside class="aside aside-like"><h5 class="heading"><span class="title">2300+ years old.</span></h5>
+<div class="para">This is called the Euclidean Algorithm after Euclid of Alexandria because it was included in the book(s) of <em class="emphasis">The Elements</em> he wrote in around 300BCE. We don’t know much about Euclid, but <em class="emphasis">The Elements</em> influenced all future Greek, Arab, and Western mathematics.</div></aside> <div class="para logical">
+<div class="para">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be two positive integers where <span class="process-math">\(a \ge b\text{.}\)</span> If we apply the division algorithm recursively so that</div>
+<div class="displaymath process-math">
+\begin{gather*}
+a = bq_1 + r_1 \text{ where } 0 \le r_1 \lt b\\
+b = r_1q_2 + r_2 \text{ where } 0 \le r_2 \lt r_1\\
+r_1 = r_2q_3 + r_3 \text{ where } 0 \le r_3 \lt r_2\\
+r_2 = r_3q_4 + r_4 \text{ where } 0 \le r_4 \lt r_3\\
+\dots \\
+r_{n-2} = r_{n-1}q_{n-1} + r_n \text{ where } 0 \le r_n \lt r_{n-1}\\
+r_{n-1} = r_{n}q_{n} + 0 
+\end{gather*}
+</div>
+<div class="para">Then <span class="process-math">\(\gcd(a,b) = r_n\text{,}\)</span> the last non-zero remainder.</div>
+</div></article><span class="incontext"><a href="section-gcd-euclid.html#euclidean-algorithm" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">Here’s one way to approach the problem. Begin by showing we can do the basis, see if we can find a pattern, then make a formal proof:</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(\displaystyle 18 = 7\cdot2 + 4\cdot1\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 19 = 7\cdot1 + 4\cdot3\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 20 = 7\cdot0 + 4\cdot5\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 21 = 7\cdot3 + 4\cdot0\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 22 = 7\cdot2 + 4\cdot2\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 23 = 7\cdot1 + 4\cdot4\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 24 = 7\cdot0 + 4\cdot6\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 25 = 7\cdot3 + 4\cdot1\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 26 = 7\cdot2 + 4\cdot3\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 27 = 7\cdot1 + 4\cdot5\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle 28 = 7\cdot0 + 4\cdot7\)</span></div></li>
+</ul>
+<div class="para">Do you notice a pattern? Take a couple moments to think about it, then let’s do the proof.</div>
+</div> <article class="proof"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<div class="para">Basis step: We can form 18 cent postage using two 7 and one 4 cent stamp.</div> <div class="para logical">
+<div class="para">Inductive step: Assume that one can form postage for all values from 18 cents up to <span class="process-math">\(k\)</span> cents. Now we’re asked to form <span class="process-math">\(k+1\)</span> cents. we know that we can form <span class="process-math">\(k\)</span> cents, so, without loss of generality, let’s assume that it takes <span class="process-math">\(s\)</span> 7 cent stamps and <span class="process-math">\(t\)</span> 4 cent stamps. That is:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+k = 7s + 4t
+\end{equation*}
+</div>
+<div class="para">Now, if <span class="process-math">\(s \ge 1\text{,}\)</span> then we can do the following, adding one to both sides in two different ways:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+k+1 = 7s + 4t - 7 + 8
+\end{equation*}
+</div>
+<div class="para">Combining like terms we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+k+1 = 7(s-1) + 4(t+2)
+\end{equation*}
+</div>
+<div class="para">If, on the other hand, <span class="process-math">\(s=0\text{,}\)</span> then we need to add one in a different way:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+k+1 = 7s + 4t + 21 - 20 
+\end{equation*}
+</div>
+<div class="para">or, combining like terms:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+k+1 = 7(s+3) + 4(t-5)
+\end{equation*}
+</div>
+<div class="para">Thus, by inductive hypothesis, if we can form <span class="process-math">\(k\)</span> cents, I can form <span class="process-math">\(k+1\)</span> cents postage.</div>
+</div> <div class="para">Therefore, by mathematical induction, every postage cost greater than or equal to 18 can be formed using 4 and 7 cent stamps.</div></article>
+</div></body>
+</html>
