@@ -41,3 +41,4 @@ temp.org
 *.dep
 /generated-assets/
 .vscode/*
+/output/
