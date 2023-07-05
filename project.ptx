@@ -6,11 +6,11 @@
 -->
 <project>
   <targets>
-    <target name="html">
+    <target name="web">
       <format>html</format>
       <source>source/class-notes.ptx</source>
       <publication>publication/publication.ptx</publication>
-      <output-dir>output/html</output-dir>
+      <output-dir>output/web</output-dir>
     </target>
     <target name="latex">
       <format>latex</format>
@@ -18,11 +18,11 @@
       <publication>publication/publication.ptx</publication>
       <output-dir>output/latex</output-dir>
     </target>
-    <target name="pdf">
+    <target name="print">
       <format>pdf</format>
       <source>source/class-notes.ptx</source>
       <publication>publication/publication.ptx</publication>
-      <output-dir>output/pdf</output-dir>
+      <output-dir>output/print</output-dir>
     </target>
     <!-- To quickly build the html of a subset of your project, edit main-subset.ptx
         and run `pretext build subset` (or `view` with watch option) -->

@@ -5,10 +5,13 @@
   <!-- stored or created.  Directories are relative to the main -->
   <!-- source PreTeXt file                                      -->
   <source webwork-problems="../generated-assets/webwork/webwork-representations.ptx">
-    <directories external="../assets" generated="../generated-assets"/>
+    <directories external="../assets" generated="../generated-assets" />
 
     <!-- if you want the basic web version with videos and forums, use this-->
-    <version include="html video forums"/>
+    <!-- <version include="html video forums"/> -->
+    
+    <!-- no fora now.-->
+    <version include="html video" />
 
     <!-- if you want no videos and no forums, use this-->
     <!-- <version include="html"/> -->
@@ -31,11 +34,11 @@
     <!-- The next elements say how the levels deep to break up the    -->
     <!-- numbering of the respective elements. Can't be more than the -->
     <!-- @level on divisions above.                                   -->
-    <divisions level="2"/>
-    <blocks level="2"/>
-    <projects level="0"/>
-    <equations level="1"/>
-    <footnotes level="0"/>
+    <divisions level="2" />
+    <blocks level="2" />
+    <projects level="0" />
+    <equations level="1" />
+    <footnotes level="0" />
   </numbering>
 
     <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
@@ -43,23 +46,23 @@
     <!-- sided.  The asymptote/@links set to "yes" would produce      -->
     <!-- links the html version of asymptote graphics.                -->
   <latex print="yes" sides="one">
-    <asymptote links="no"/>
-    <cover front="BookCover.pdf"/>
+    <asymptote links="no" />
+    <cover front="BookCover.pdf" />
     <exercise>
-      <divisional solution="yes"/>
-      <divisional answer="no"/>
+      <divisional solution="yes" />
+      <divisional answer="no" />
     </exercise>
   </latex>
 
   <html>
-    <knowl remark="no" example="no" proof="no"/>
+    <knowl remark="no" example="no" proof="no" />
 
-    <css style="default" colors="brown_gold"/>
+    <css style="default" colors="brown_gold" />
 
-    <index-page ref="front-matter"/>
+    <index-page ref="front-matter" />
 
-    <search google-cx="015422183392601792159:vae7vvmmczm"/>
-    <video privacy="yes"/>
+    <search google-cx="015422183392601792159:vae7vvmmczm" />
+    <video privacy="yes" />
   </html>
 
   <epub>
