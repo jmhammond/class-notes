@@ -40,5 +40,4 @@ temp.org
 /.auctex-auto/
 *.dep
 /generated-assets/
-/output/
 .vscode/*
