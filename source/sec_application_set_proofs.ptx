@@ -29,7 +29,7 @@
           <li> Complement:
             <m>x \in A \setminus B  \iff x \in A \land x \not\in B</m>
           </li>
-          <li> Complement:
+          <li> Equality:
             <m>A = B</m> if and only if <m>A \subseteq B</m> and <m>B \subseteq A</m>.
           </li>
         </ol>
