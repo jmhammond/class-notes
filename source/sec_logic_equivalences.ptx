@@ -220,7 +220,7 @@
     </list>
 
     <p>
-      You'll notice that for those laws which have two different forms they look very similar, just with different operations and truth and false swapped. Not only does this mean you actually have half as much to memorize, there's a neat reason for this that we'll get into when we discuss Boolean Algebras in Discrete 2!
+      You'll notice that for those laws which have two different forms they look very similar, just with different operations and true and false swapped. Not only does this mean you actually have half as much to memorize, there's a neat reason for this that we'll get into when we discuss Boolean Algebras in Discrete 2!
     </p>
 
     <example xml:id="example-contradiction-logic">
