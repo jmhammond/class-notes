@@ -543,7 +543,7 @@ def encrypt():
         else:
             int_string += str(the_int)
 
-    half_num_digits = (ceil(math.log10(n))//2)
+    half_num_digits = (math.ceil(math.log10(n))//2)
     block_size = (half_num_digits-1)*2 if (int(half_num_digits*"25") &gt; n) else half_num_digits*2        
 
     # append the string with x's to fill the block size.
@@ -557,10 +557,10 @@ def encrypt():
     for block in blocks:
         cipher_blocks.append(pow(int(block), e, n))
 
-    print(cipher_blocks)
+    return cipher_blocks
 
 def decrypt():
-    half_num_digits = (ceil(math.log10(n))//2)
+    half_num_digits = (math.ceil(math.log10(n))//2)
     block_size = (half_num_digits-1)*2 if (int(half_num_digits*"25") &gt; n) else half_num_digits*2        
 
     plain_blocks = []
@@ -575,19 +575,19 @@ def decrypt():
     while ind &lt; len(plaintext_message):
         message += string.ascii_uppercase[ int(plaintext_message[ind:ind+2]) ]
         ind += 2
-    print(message) 
+    return message
 
 
 # ... pretend python has forward-declaration
 which_function = {"encrypt" : encrypt, "decrypt" : decrypt}
 
 try:
-    which_function[what_to_do]()
+    print(which_function[what_to_do]())
 except KeyError:
     print("Please set the variable what_to_do to either 'encrypt' or 'decrypt'.")
 except IndexError:
     print("There's a problem: I can't decrypt your message.")
-    print("You probably have the value of d wrong... \\nDouble check your computations of d, n, m, etc (d needs to be positive, for example)")
+    print("You probably have the value of d wrong... \nDouble check your computations of d, n, m, etc \n (d needs to be positive, for example)")
       </input>
     </sage>
 
