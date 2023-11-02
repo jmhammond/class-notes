@@ -1,1 +1,2 @@
-pretextbook == 1.6.0
+# <!-- Managed automatically by PreTeXt authoring tools -->
+pretext == 2.2.0

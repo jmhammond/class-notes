@@ -1,49 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    This file provides the overall configuration for your PreTeXt
-    project. To edit the content of your document, open `source/main.ptx`
-    (default location).
--->
-<project>
+<!-- Managed automatically by PreTeXt authoring tools -->
+<!-- (delete the above line to manage this file manually) -->
+<!-- This file, the project manifest, provides the overall configuration for your PreTeXt project. To edit the content of your document, open `source/main.ptx`. See https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manifest. -->
+<project ptx-version="2">
   <targets>
-    <target name="web">
-      <format>html</format>
-      <source>source/class-notes.ptx</source>
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/web</output-dir>
-    </target>
-    <target name="latex">
-      <format>latex</format>
-      <source>source/class-notes.ptx</source>
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/latex</output-dir>
-    </target>
-    <target name="print">
-      <format>pdf</format>
-      <source>source/class-notes.ptx</source>
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/print</output-dir>
-    </target>
-    <!-- To quickly build the html of a subset of your project, edit main-subset.ptx
-        and run `pretext build subset` (or `view` with watch option) -->
-    <!-- <target name="subset"> -->
-    <!--   <format>html</format> -->
-    <!--   <source>source/main-subset.ptx</source> -->
-    <!--   <publication>publication/publication.ptx</publication> -->
-    <!--   <output-dir>output/subset</output-dir> -->
-    <!--   <stringparam key="debug.skip-knowls" value="yes"/> -->
-    <!-- </target> -->
+    <target name="web" format="html" />
+    <target name="print" format="pdf" />
   </targets>
-  <executables>
-      <xelatex>xelatex</xelatex>
-      <pdfsvg>pdf2svg</pdfsvg>
-      <asy>asy</asy>
-      <sage>sage</sage>
-      <pdfpng>convert</pdfpng>
-      <pdfeps>pdftops</pdfeps>
-      <pdfcrop>pdf-crop-margins</pdfcrop>
-      <pageres>pageres</pageres>
-      <node>node</node>
-      <liblouis>file2brl</liblouis>
-    </executables>
 </project>
